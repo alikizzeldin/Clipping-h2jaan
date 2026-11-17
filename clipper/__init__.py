@@ -1,0 +1,1 @@
+"""Kick clips to YouTube."""

@@ -1,0 +1,41 @@
+# Which game to clip. Change this line (or set the CLIPPER_PROFILE repository
+# variable) to switch — e.g. to gta6 on launch day.
+profile: valorant
+
+profiles:
+  valorant:
+    kick_category: valorant        # the slug in kick.com/category/<slug>
+    label: Valorant                # how the game is written in titles
+    hashtags: [valorant, valorantclips, kick]
+    min_views: 20                  # Valorant is small on Kick; keep the bar low
+  gta6:
+    kick_category: grand-theft-auto-vi
+    label: GTA 6
+    hashtags: [gta6, gtavi, gta6clips, kick]
+    min_views: 300
+
+selection:
+  window: day                # Kick's "top clips" window: day | week | month | all
+  max_age_hours: 36
+  min_duration: 8
+  max_duration: 90
+  allow_mature: false
+  max_per_channel: 1         # per run
+  top_live_channels: 10      # also read the top clips of the biggest live channels
+  languages: []              # e.g. [English, Arabic]; empty = any language
+  drop_unknown_language: false
+  allow_channels: []         # if not empty, ONLY these channels are clipped
+  block_channels: []         # channels never to clip
+
+render:
+  layout: shorts             # shorts (1080x1920) | landscape (1920x1080)
+  zoom: 1.35                 # how much the gameplay is enlarged in the vertical frame
+  overlay_title: true
+
+publish:
+  privacy: private           # private | unlisted | public
+  max_per_run: 2
+  max_per_day: 6
+  title_template: "{title} | {streamer} {game}"
+  fallback_title_template: "{streamer} {game} clip"   # used when the clip title is junk
+  description_footer: ""     # e.g. a contact line for removal requests
