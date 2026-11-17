@@ -117,8 +117,9 @@ and can be dragged or spun).
   in the repository. If the dashboard cannot be reached, the last copy is
   used. Everything else stays in `config.yaml`.
 - **Run now, Test run, Check setup.** The dashboard holds no GitHub key, so
-  it leaves a request and the `Dashboard requests` workflow, which looks
-  every ten minutes, starts the run.
+  it leaves a request and the `Dashboard requests` workflow starts the run
+  the next time it looks (see "The timer" below). For a run this minute,
+  press **Run workflow** on the Clip workflow's page on GitHub.
 - **Hosting.** Vercel builds the site and its server functions from the
   `dashboard/` folder whenever something there changes on this branch;
   other commits, such as the agent saving its history, are skipped.
@@ -127,6 +128,21 @@ and can be dragged or spun).
 - **Run it locally:** `cd dashboard && npm install && npm run dev`, then
   sign in with `dev@gta6fied.local` / `dev` (a throwaway account that only
   exists on your machine; settings go to `dashboard/.data/`).
+
+## The timer
+
+Both workflows carry a `schedule`, but since this repository was created
+GitHub's scheduler has not started a single scheduled run for it (runs
+started by hand work). Until it does, the agent is driven from outside:
+every two hours a scheduled task on the owner's Claude account starts the
+`Dashboard requests` workflow with **regular** ticked. That workflow first
+starts any run asked for on the dashboard, then the agent's regular run.
+If GitHub's own scheduler wakes up, the regular run is not started twice.
+
+Anything that can start a GitHub workflow can take the timer's place: a
+person pressing **Run workflow** on `Dashboard requests` with *regular*
+ticked, or a timer service calling GitHub's API with a token that has
+Actions write access.
 
 ## Publishing through Buffer
 

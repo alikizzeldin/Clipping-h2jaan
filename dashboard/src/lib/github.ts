@@ -8,6 +8,8 @@ export type Run = {
   status: string;
   conclusion: string | null;
   event: string;
+  /** Who started it: GitHub's own schedule, the agent's timer, the dashboard, or someone by hand. */
+  origin: "schedule" | "timer" | "dashboard" | "hand";
   created_at: string;
   html_url: string;
 };
@@ -28,8 +30,9 @@ export async function recentRuns(): Promise<Run[]> {
     return [];
   }
   if (!res.ok) return [];
-  const runs = ((await res.json()).workflow_runs ?? []).map((r: Run) => ({
+  const runs = ((await res.json()).workflow_runs ?? []).map((r: Run & { display_title?: string }) => ({
     id: r.id, status: r.status, conclusion: r.conclusion, event: r.event, created_at: r.created_at, html_url: r.html_url,
+    origin: r.event === "schedule" ? "schedule" : /\(timer\)/.test(r.display_title ?? "") ? "timer" : /\(dashboard\)/.test(r.display_title ?? "") ? "dashboard" : "hand",
   }));
   sessionStorage.setItem("gta6fied.runs", JSON.stringify({ at: Date.now(), runs }));
   return runs;

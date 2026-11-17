@@ -1,15 +1,23 @@
 name: Dashboard requests
 
-# Starts a run when the owner presses "Run now", "Test run" or "Check setup"
-# on the dashboard. The dashboard holds no GitHub key, so it cannot start a
-# job itself; it leaves a request, and this small job looks for one every
-# ten minutes and starts the Clip workflow.
+# Starts runs of the Clip workflow:
+#  - the runs the owner asks for on the dashboard ("Run now", "Test run",
+#    "Check setup"). The dashboard holds no GitHub key, so it cannot start a
+#    job itself; it leaves a request, which this job picks up.
+#  - with "regular" ticked, also the agent's regular two-hourly run. That is
+#    how the outside timer drives the agent while GitHub's own scheduler is
+#    not starting scheduled runs for this repository.
 
 on:
   schedule:
     # Off the round minutes, when GitHub's scheduler is at its busiest.
     - cron: "4-59/10 * * * *"
   workflow_dispatch:
+    inputs:
+      regular:
+        description: Also start the agent's regular run (used by the timer)
+        type: boolean
+        default: false
 
 permissions:
   actions: write
@@ -29,28 +37,51 @@ jobs:
           sparse-checkout: config.yaml
           sparse-checkout-cone-mode: false
 
-      - name: Start the run the dashboard asked for
+      - name: Start the runs that are due
         env:
           GH_TOKEN: ${{ github.token }}
+          REGULAR: ${{ inputs.regular }}
         run: |
-          url=$(sed -nE 's/^dashboard_url:[[:space:]]*"?([^"#[:space:]]+).*/\1/p' config.yaml | head -1)
-          if [ -z "$url" ]; then echo "No dashboard_url in config.yaml."; exit 0; fi
-          body=$(curl -fsS -m 20 "${url%/}/api/control") || { echo "The dashboard could not be reached."; exit 0; }
-          kind=$(jq -r '.request.kind // empty' <<<"$body")
-          asked=$(jq -r '.request.requested_at // empty' <<<"$body")
-          if [ -z "$kind" ] || [ -z "$asked" ]; then echo "Nothing requested."; exit 0; fi
-          asked_s=$(date -u -d "$asked" +%s) || { echo "The request's time could not be read."; exit 0; }
-          if [ $(( $(date -u +%s) - asked_s )) -gt 7200 ]; then echo "The request is more than two hours old; ignoring it."; exit 0; fi
+          start() { gh workflow run clip.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" "$@"; }
+          newest() { gh run list --repo "$GITHUB_REPOSITORY" --workflow clip.yml --event "$1" --limit 1 --json createdAt --jq '.[0].createdAt // empty'; }
+          seconds() { date -u -d "$1" +%s; }
+          now=$(date -u +%s)
+          served=""
 
-          # A run started by hand or by this job after the request means it was served.
-          last=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow clip.yml --event workflow_dispatch --limit 1 --json createdAt --jq '.[0].createdAt // empty')
-          if [ -n "$last" ] && [ "$(date -u -d "$last" +%s)" -ge "$asked_s" ]; then echo "Already started."; exit 0; fi
+          # 1. A run asked for on the dashboard.
+          request() {
+            local url body kind asked asked_s last
+            url=$(sed -nE 's/^dashboard_url:[[:space:]]*"?([^"#[:space:]]+).*/\1/p' config.yaml | head -1)
+            if [ -z "$url" ]; then echo "No dashboard_url in config.yaml."; return 0; fi
+            body=$(curl -fsS -m 20 "${url%/}/api/control") || { echo "The dashboard could not be reached."; return 0; }
+            kind=$(jq -r '.request.kind // empty' <<<"$body")
+            asked=$(jq -r '.request.requested_at // empty' <<<"$body")
+            if [ -z "$kind" ] || [ -z "$asked" ]; then echo "Nothing requested on the dashboard."; return 0; fi
+            asked_s=$(seconds "$asked") || { echo "The request's time could not be read."; return 0; }
+            if [ $((now - asked_s)) -gt 7200 ]; then echo "The dashboard's request is more than two hours old; ignoring it."; return 0; fi
+            # A run started by hand or by this job after the request means it was served.
+            last=$(newest workflow_dispatch)
+            if [ -n "$last" ] && [ "$(seconds "$last")" -ge "$asked_s" ]; then echo "The dashboard's request was already started."; return 0; fi
+            case "$kind" in
+              run)   start -f dry_run=false -f started_by=dashboard ;;
+              test)  start -f dry_run=true -f started_by=dashboard ;;
+              setup) start -f dry_run=true -f check_setup=true -f started_by=dashboard ;;
+              *)     echo "Unknown kind of request."; return 0 ;;
+            esac
+            served="$kind"
+            echo "Started the '$kind' run requested on the dashboard at $asked." | tee -a "$GITHUB_STEP_SUMMARY"
+          }
+          request
 
-          case "$kind" in
-            run)   inputs=(-f dry_run=false) ;;
-            test)  inputs=(-f dry_run=true) ;;
-            setup) inputs=(-f dry_run=true -f check_setup=true) ;;
-            *)     echo "Unknown kind of request."; exit 0 ;;
-          esac
-          gh workflow run clip.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" "${inputs[@]}"
-          echo "Started the '$kind' run requested at $asked." | tee -a "$GITHUB_STEP_SUMMARY"
+          # 2. The agent's regular run, when the timer asks for it.
+          if [ "$REGULAR" = "true" ]; then
+            last=$(newest schedule)
+            if [ "$served" = "run" ]; then
+              echo "The run requested on the dashboard doubles as the regular one."
+            elif [ -n "$last" ] && [ $((now - $(seconds "$last"))) -lt 5400 ]; then
+              echo "GitHub's own scheduler started a run recently; not starting another."
+            else
+              start -f dry_run=false -f started_by=timer
+              echo "Started the regular run." | tee -a "$GITHUB_STEP_SUMMARY"
+            fi
+          fi

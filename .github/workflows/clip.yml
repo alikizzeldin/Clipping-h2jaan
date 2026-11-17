@@ -1,10 +1,14 @@
 name: Clip
+run-name: Clip${{ inputs.started_by && format(' ({0})', inputs.started_by) || '' }}
 
 on:
   schedule:
     # Every 2 hours, at 7 past the odd hours (UTC). Nothing is published
     # before publish.start_at in config.yaml. To pause, set the repository
-    # variable CLIPPER_PAUSED to "true".
+    # variable CLIPPER_PAUSED to "true" (or pause on the dashboard).
+    # GitHub's scheduler has not been starting these runs for this
+    # repository, so the same run is also started every two hours through
+    # the "Dashboard requests" workflow (see the README, "The timer").
     - cron: "7 1,3,5,7,9,11,13,15,17,19,21,23 * * *"
   workflow_dispatch:
     inputs:
@@ -26,6 +30,10 @@ on:
         default: ""
       limit:
         description: Clips this run (blank = config.yaml)
+        type: string
+        default: ""
+      started_by:
+        description: Leave blank. Filled in when the timer or the dashboard starts the run.
         type: string
         default: ""
 
@@ -119,7 +127,7 @@ jobs:
           retention-days: 3
 
       - name: Tell the owner if a scheduled run failed
-        if: failure() && github.event_name == 'schedule'
+        if: failure() && (github.event_name == 'schedule' || inputs.started_by == 'timer')
         env:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |

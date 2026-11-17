@@ -150,6 +150,8 @@ export function ActivityList({ items, compact: tight = false }: { items: Activit
   );
 }
 
+const RUN_ORIGIN: Record<Run["origin"], string> = { schedule: "on the timer", timer: "on the timer", dashboard: "from the dashboard", hand: "by hand" };
+
 export function RunsList({ runs, demo, limit = 5 }: { runs: Run[]; demo: boolean; limit?: number }) {
   if (!runs.length) return <Empty title={demo ? "Runs are hidden in demo mode" : "No runs to show"}>{demo ? "" : "Runs appear here once GitHub reports them."}</Empty>;
   return (
@@ -161,7 +163,7 @@ export function RunsList({ runs, demo, limit = 5 }: { runs: Run[]; demo: boolean
           <li key={r.id}>
             <a href={r.html_url} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-xl px-3 py-2 text-sm ring-1 ring-line/70 hover:ring-pink/40">
               <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${running ? "live-dot bg-gold" : good ? "bg-mint" : "bg-rose"}`} />
-              <span className="min-w-0 flex-1 truncate text-snow/90">{running ? "Running" : good ? "Completed" : "Failed"} · {r.event === "schedule" ? "scheduled" : "by hand"}</span>
+              <span className="min-w-0 flex-1 truncate text-snow/90">{running ? "Running" : good ? "Completed" : "Failed"} · {RUN_ORIGIN[r.origin] ?? "by hand"}</span>
               <time className="shrink-0 text-xs text-mist">{ago(r.created_at)}</time>
             </a>
           </li>
@@ -195,7 +197,7 @@ export function QuickActions({ stacked = false }: { stacked?: boolean }) {
     try {
       await requestRun(kind);
       forgetRuns();
-      toast(`${RUN_WORDS[kind]} is on its way. The agent picks requests up every few minutes.`);
+      toast(`${RUN_WORDS[kind]} is on its way. The agent starts it at its next check.`);
       await reload();
     } catch (error) {
       report(error, "Could not ask for the run.");
@@ -235,11 +237,9 @@ export function QuickActions({ stacked = false }: { stacked?: boolean }) {
       {waiting && (
         <p role="status" className={`mt-4 text-xs leading-relaxed text-mist ${stacked ? "text-center" : ""}`}>
           <span className="mr-2 inline-block h-2 w-2 rounded-full bg-gold align-middle live-dot" />
-          {RUN_WORDS[waiting.kind]} was requested {waiting.minutes < 1 ? "just now" : `${waiting.minutes} min ago`}. It starts within about ten minutes.{" "}
+          {RUN_WORDS[waiting.kind]} was requested {waiting.minutes < 1 ? "just now" : `${waiting.minutes} min ago`}. The agent starts it at its next check, within two hours at most.{" "}
           <button className="text-pink hover:underline" disabled={busy} onClick={withdraw}>Withdraw</button>
-          {waiting.minutes >= 20 && (
-            <> · Taking long? <a className="text-pink hover:underline" href={`${REPO_URL}/actions/workflows/${WORKFLOW}`} target="_blank" rel="noreferrer">Start it on GitHub</a></>
-          )}
+          {" · "}Need it this minute? <a className="text-pink hover:underline" href={`${REPO_URL}/actions/workflows/${WORKFLOW}`} target="_blank" rel="noreferrer">Start it on GitHub</a>
         </p>
       )}
     </>
