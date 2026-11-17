@@ -44,7 +44,8 @@ jobs:
     env:
       CLIPPER_PROFILE: ${{ inputs.profile || vars.CLIPPER_PROFILE }}
       CLIPPER_PRIVACY: ${{ vars.CLIPPER_PRIVACY }}
-      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      # The Buffer key, saved as a repository secret under either name.
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY || secrets.BUFFER }}
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}

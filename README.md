@@ -64,7 +64,7 @@ New repository secret**):
 
 | Name             | Value                                             |
 |------------------|---------------------------------------------------|
-| `BUFFER_API_KEY` | your key from [Buffer's developer page](https://developers.buffer.com/) |
+| `BUFFER_API_KEY` (or `BUFFER`) | your key from [Buffer's developer page](https://developers.buffer.com/) |
 
 To confirm the key works on GitHub without publishing anything: **Actions →
 Clip → Run workflow** with *check setup* ticked.
