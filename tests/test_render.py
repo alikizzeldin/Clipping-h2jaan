@@ -19,8 +19,8 @@ needs_ffmpeg = pytest.mark.skipif(shutil.which("ffmpeg") is None, reason="ffmpeg
 CHUNKS = chunk_words([Word("آه", 0.5, 0.9), Word("والله", 0.9, 1.4), Word("nice", 2.0, 2.5)])
 
 
-def white_pixels(img: Image.Image) -> int:
-    return int((np.asarray(img).min(axis=2) > 235).sum())
+def bright_pixels(img: Image.Image) -> int:
+    return int((np.asarray(img).min(axis=2) > 200).sum())
 
 
 def frame_at(video: Path, seconds: float, dest: Path) -> Image.Image:
@@ -31,11 +31,12 @@ def frame_at(video: Path, seconds: float, dest: Path) -> Image.Image:
 
 def test_frame_cuts_a_window_through_the_artwork(tmp_path):
     theme = load_settings(REPO / "config.yaml", "gta6").theme
-    window = shorts_window(1920, 1080, 1.35, theme.window_top, theme.window_inset)
+    window = shorts_window(1920, 1080, 1.0, theme.window_top, theme.window_inset)
     assert build_frame(tmp_path / "frame.png", theme, window) is True
     frame = Image.open(tmp_path / "frame.png")
     assert frame.size == (1080, 1920)
     alpha = frame.getchannel("A")
+    assert (window.w, window.h) == (972, 546)  # the whole 16:9 picture, uncropped
     assert alpha.getpixel((540, window.y + window.h // 2)) == 0  # gameplay shows through
     assert alpha.getpixel((540, 100)) == 255 and alpha.getpixel((540, window.bottom + 100)) == 255
     assert alpha.getpixel((window.x - 2, window.y + 300)) > 240  # the border is opaque
@@ -64,7 +65,7 @@ def test_themed_short_is_vertical_with_captions_burned_in(tmp_path, profile):
     box = (200, y - 70, 880, y + 70)
     silent = frame_at(out, 3.5, tmp_path / "silent.png").crop(box)
     spoken = frame_at(out, 1.0, tmp_path / "spoken.png").crop(box)
-    assert white_pixels(spoken) > white_pixels(silent) + 500  # caption text shows while spoken
+    assert bright_pixels(spoken) > bright_pixels(silent) + 500  # caption text shows while spoken
 
 
 @needs_ffmpeg

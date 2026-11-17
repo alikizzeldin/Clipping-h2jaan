@@ -38,8 +38,8 @@ def test_script_support_matches_the_bundled_fonts():
 
 def test_each_word_is_highlighted_in_turn_including_arabic():
     layout = TextLayout(1080, 1920, caption_y=1348, caption_size=118, highlight="#FF4FD8")
-    chunk = chunk_words(words(("آه", 3.9, 4.1), ("والله", 4.1, 4.4), ("احتمال", 4.4, 4.7)))
-    ass = build_ass(layout, chunk)
+    spoken = words(("آه", 3.9, 4.1), ("والله", 4.1, 4.4), ("احتمال", 4.4, 4.7))
+    ass = build_ass(layout, chunk_words(spoken, max_chars=16))
     captions = [line for line in ass.splitlines() if ",Caption," in line]
     assert len(captions) == 3  # one event per spoken word
     assert "0:00:03.90,0:00:04.10" in captions[0] and "0:00:04.10,0:00:04.40" in captions[1]
@@ -47,7 +47,35 @@ def test_each_word_is_highlighted_in_turn_including_arabic():
     assert captions[1].endswith("آه {\\1c&H00D84FFF}والله{\\1c&H00FFFFFF} احتمال")  # logical order
     assert "\\pos(540,1348)" in captions[0]
     assert "\\t(0,90" in captions[0] and "\\t(" not in captions[1]  # pops in once per caption
-    assert "Style: Caption,Cairo Black,118," in ass and ",-1\n" in ass  # auto text direction
+    assert "Style: Caption,Baloo Bhaijaan 2 ExtraBold,118," in ass
+    assert ",-1\n" in ass  # the style lets libass pick the text direction per line
+
+
+def neon_layout(strength):
+    return TextLayout(1080, 1920, 1225, 150, highlight="#35F2FF", glow="#FF2FD0",
+                      caption_style="neon", glow_strength=strength)
+
+
+def test_neon_captions_stack_glow_layers_and_light_the_spoken_word_differently():
+    chunk = chunk_words(words(("where", 0.2, 0.5), ("the", 0.5, 0.9)))
+    captions = [l for l in build_ass(neon_layout(0.3), chunk).splitlines() if ",Caption," in l]
+    assert len(captions) == 6  # two words x (wide glow, tight glow, core)
+    first_word = captions[:3]
+    pink, cyan = "&H00D02FFF", "&H00FFF235"
+    for layer in first_word:  # "where" is being spoken: cyan; "the" stays pink
+        assert layer.index(cyan) < layer.index("where") < layer.index(pink) < layer.index("the")
+    assert "\\1a&HFF&" in first_word[0] and "\\1a&HFF&" not in first_word[2]  # only the core is filled
+    assert [l.split(",")[0] for l in first_word] == ["Dialogue: 2", "Dialogue: 3", "Dialogue: 4"]
+
+
+def test_neon_backlight_strength_is_adjustable():
+    chunk = chunk_words(words(("hi", 0, 1)))
+    strong = build_ass(neon_layout(1.0), chunk)
+    light = build_ass(neon_layout(0.3), chunk)
+    none = build_ass(neon_layout(0), chunk)
+    assert "\\bord13.0\\blur20.0" in strong and "\\3a&H78&" in strong
+    assert "\\bord6.7\\blur10.2" in light and "\\3a&HD7&" in light  # smaller and fainter
+    assert none.count(",Caption,") == 1 and "blur20" not in none  # core only
 
 
 def test_label_and_title_only_appear_when_given_a_position():

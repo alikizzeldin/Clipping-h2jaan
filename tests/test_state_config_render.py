@@ -90,12 +90,21 @@ def test_start_time_is_read_in_its_own_time_zone():
     assert parse_start("") is None
 
 
-def test_shorts_window_geometry():
+def test_the_whole_picture_fits_the_window_by_default():
+    win = shorts_window(1920, 1080, 1.0)
+    assert (win.scaled_w, win.scaled_h) == (win.w, win.h) == (1032, 580)  # scaled, not cropped
+    assert (win.x, win.y, win.bottom) == (24, 420, 1000) and win.caption_y(1560) == 1280
+    framed = shorts_window(1920, 1080, 1.0, top=404, inset=54)
+    assert (framed.x, framed.y, framed.w, framed.h) == (54, 404, 972, 546)
+
+
+def test_zoom_enlarges_and_crops_the_sides_only():
     win = shorts_window(1920, 1080, 1.35)
-    assert (win.scaled_w, win.scaled_h, win.x, win.y, win.w, win.h) == (1458, 820, 24, 420, 1032, 820)
-    assert win.bottom == 1240 and win.caption_y(1560) == 1400
-    framed = shorts_window(1920, 1080, 1.35, top=374, inset=54)
-    assert (framed.x, framed.y, framed.w, framed.bottom) == (54, 374, 972, 1194)
-    vertical = shorts_window(1080, 1920, 1.35)  # already vertical: fitted by height
-    assert vertical.scaled_h == 1000 and vertical.w == vertical.scaled_w == 562
-    assert vertical.x == (1080 - 562) // 2
+    assert (win.scaled_w, win.scaled_h) == (1394, 784)
+    assert (win.w, win.h) == (1032, 784)  # full height kept, sides cropped to the window
+
+
+def test_vertical_sources_are_fitted_by_height():
+    win = shorts_window(1080, 1920, 1.0)
+    assert win.scaled_h == 1000 and win.w == win.scaled_w == 562
+    assert win.x == (1080 - 562) // 2

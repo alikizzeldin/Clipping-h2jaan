@@ -21,15 +21,17 @@ profiles:
 themes:
   gta6:
     background: assets/themes/gta6.png   # the GTA6FIED frame
-    window_top: 374                  # the gameplay sits at the top of the frame's dark panel
+    window_top: 404                  # the gameplay sits near the top of the frame's dark panel
     window_inset: 54
     caption_floor: 1500              # captions stay inside the panel, above the footer art
     radius: 10
     border_width: 3
     border: ["#FF2FD0", "#8A3CFF"]   # window border, left to right
-    glow: "#FF2FD0"                  # glow around the window
-    highlight: "#FF4FD8"             # the caption word being spoken
+    glow: "#FF2FD0"                  # glow around the window, and the neon captions
+    highlight: "#35F2FF"             # the caption word being spoken
     outline: "#170636"
+    caption_style: neon              # glowing neon-sign captions
+    caption_glow: 0.3                # how strong the light behind the letters is (0 to 1)
     show_label: false                # the frame already carries the logo
     show_title: false
   valorant:
@@ -54,7 +56,7 @@ selection:
 
 render:
   layout: shorts             # shorts (1080x1920) | landscape (1920x1080)
-  zoom: 1.35                 # how much the gameplay is enlarged in the vertical frame
+  zoom: 1.0                  # 1.0 shows the whole picture; higher enlarges it and crops the sides
   show_label: true           # the game name above the gameplay
   overlay_title: true        # the clip's title under the game name
 
@@ -65,8 +67,8 @@ captions:
   model: large-v3-turbo      # best for Arabic. Faster, less accurate: medium, small
   language: auto             # or force one, e.g. ar
   max_words: 3               # words on screen at once
-  max_chars: 16
-  size: 118
+  max_chars: 14
+  size: 150
 
 publish:
   via: buffer                # buffer (your Buffer account posts it) | youtube (own Google API project)

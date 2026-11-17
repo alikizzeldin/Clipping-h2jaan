@@ -36,6 +36,8 @@ class Theme:
     glow: str = ""  # colour of the glow around the window and the game label
     highlight: str = "#FFE14D"  # the caption word being spoken
     outline: str = "#000000"  # outline of the label and title text
+    caption_style: str = "outline"  # outline (white, black edge) | neon (glowing tubes)
+    caption_glow: float = 0.3  # neon backlight: 0 = none, 1 = strongest
     # Where things sit, in a 1080x1920 frame. Match these to the artwork.
     window_top: int = 420  # y where the gameplay starts
     window_inset: int = 24  # gap between the gameplay and the left/right edges
@@ -64,7 +66,7 @@ class Selection:
 @dataclass
 class Render:
     layout: str = "shorts"  # shorts (1080x1920) | landscape (1920x1080)
-    zoom: float = 1.35  # shorts: how far the gameplay is scaled past the frame width
+    zoom: float = 1.0  # shorts: 1.0 shows the whole picture; above that crops the sides
     show_label: bool = True  # the game name above the gameplay
     overlay_title: bool = True  # the clip's title under the game name
     crf: int = 20
@@ -79,8 +81,8 @@ class Captions:
     model: str = "large-v3-turbo"  # smaller and faster, less accurate: small, medium
     language: str = "auto"  # or a code such as ar / en to skip detection
     max_words: int = 3  # words shown at once
-    max_chars: int = 16
-    size: int = 118
+    max_chars: int = 14
+    size: int = 150
 
 
 @dataclass
@@ -187,6 +189,8 @@ def load_settings(path: str | Path = "config.yaml", profile: str | None = None) 
                 f"themes.{name}: colours must look like \"#FF3D9A\" and `border` needs two"
                 + (f" (got {bad[0]!r})" if bad else "")
             )
+        if theme.caption_style not in ("outline", "neon"):
+            raise ConfigError(f"themes.{name}: caption_style must be outline or neon")
     for name, prof in profiles.items():
         if prof.theme and prof.theme not in themes:
             raise ConfigError(f"profiles.{name}: theme '{prof.theme}' is not defined under `themes`")

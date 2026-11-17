@@ -15,7 +15,7 @@ from PIL import ImageFont
 from .speech import Word
 
 FONTS_DIR = Path(__file__).resolve().parent.parent / "assets" / "fonts"
-CAPTION_FONT = ("Cairo Black", "Cairo-Black.ttf")  # Arabic + Latin
+CAPTION_FONT = ("Baloo Bhaijaan 2 ExtraBold", "BalooBhaijaan2-ExtraBold.ttf")  # Arabic + Latin
 TITLE_FONT = ("Cairo", "Cairo-Bold.ttf")
 LABEL_FONT = ("Anton", "Anton-Regular.ttf")  # Latin display face for the game label
 
@@ -52,7 +52,7 @@ class Chunk:
         return " ".join(w.text for w in self.words)
 
 
-def chunk_words(words: list[Word], max_words: int = 3, max_chars: int = 16,
+def chunk_words(words: list[Word], max_words: int = 3, max_chars: int = 14,
                 max_gap: float = 0.6, hold: float = 0.3) -> list[Chunk]:
     """Group words into short captions, breaking on pauses."""
     groups: list[list[Word]] = []
@@ -117,6 +117,8 @@ class TextLayout:
     highlight: str = "#FFE14D"
     glow: str = ""
     outline: str = "#000000"
+    caption_style: str = "outline"  # outline | neon
+    glow_strength: float = 0.3  # neon only: 0 = no backlight, 1 = strongest
 
 
 def build_ass(layout: TextLayout, chunks: list[Chunk], *, label: str = "", title: str = "",
@@ -164,7 +166,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             f"{{\\an5\\pos({cx},{layout.title_y})\\fs{size}}}{text}"
         )
 
-    accent = ass_color(layout.highlight)
+    neon = layout.caption_style == "neon"
     for chunk in chunks:
         size = layout.caption_size
         full = chunk.text
@@ -176,13 +178,52 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             end = chunk.words[i + 1].start if i + 1 < len(chunk.words) else chunk.end
             if end <= start:
                 continue
-            parts = [
-                f"{{\\1c{accent}}}{_plain(w.text)}{{\\1c{white}}}" if j == i else _plain(w.text)
-                for j, w in enumerate(chunk.words)
-            ]
             pop = "\\fscx86\\fscy86\\t(0,90,\\fscx100\\fscy100)" if i == 0 else ""
-            events.append(
-                f"Dialogue: 2,{ass_time(start)},{ass_time(end)},Caption,,0,0,0,,"
-                f"{{{pos}{pop}}}{' '.join(parts)}"
-            )
+            times = f"{ass_time(start)},{ass_time(end)}"
+            texts = [_plain(w.text) for w in chunk.words]
+            if neon:
+                events += _neon_events(layout, times, pos + pop, texts, i)
+            else:
+                accent = ass_color(layout.highlight)
+                parts = [f"{{\\1c{accent}}}{t}{{\\1c{white}}}" if j == i else t
+                         for j, t in enumerate(texts)]
+                events.append(f"Dialogue: 2,{times},Caption,,0,0,0,,{{{pos}{pop}}}{' '.join(parts)}")
     return head + "\n".join(events) + "\n"
+
+
+def _tint(hex_rgb: str, amount: float = 0.88) -> str:
+    """The colour mixed most of the way to white: the hot core of a neon tube."""
+    value = hex_rgb.lstrip("#")
+    mixed = [round(int(value[i:i + 2], 16) + (255 - int(value[i:i + 2], 16)) * amount) for i in (0, 2, 4)]
+    return "#{:02X}{:02X}{:02X}".format(*mixed)
+
+
+def _neon_events(layout: TextLayout, times: str, block: str, texts: list[str], active: int) -> list[str]:
+    """Stacked copies of a caption: wide glow, tight glow, bright core.
+
+    Every word glows in the theme's glow colour; the word being spoken glows
+    in the highlight colour instead. `glow_strength` (0-1) sets how far and
+    how brightly the light spreads behind the letters.
+    """
+    tube, hot = layout.glow or "#FF2FD0", layout.highlight
+
+    def line(make_tags) -> str:
+        return " ".join(f"{{{make_tags(hot if j == active else tube)}}}{t}" for j, t in enumerate(texts))
+
+    g = max(0.0, min(1.0, layout.glow_strength))
+    core = ("\\bord1.5\\blur0.8\\shad0", lambda c: f"\\1c{ass_color(_tint(c))}\\3c{ass_color(c)}")
+    if g == 0:
+        layers = [core]
+    else:
+        wide = f"\\bord{4 + 9 * g:.1f}\\blur{6 + 14 * g:.1f}\\shad0"
+        tight = f"\\bord{2 + 3 * g:.1f}\\blur{2 + 5 * g:.1f}\\shad0"
+        wide_alpha, tight_alpha = 255 - int(135 * g), 255 - int(215 * g)
+        layers = [
+            (wide, lambda c: f"\\1a&HFF&\\3c{ass_color(c)}\\3a&H{wide_alpha:02X}&"),
+            (tight, lambda c: f"\\1a&HFF&\\3c{ass_color(c)}\\3a&H{tight_alpha:02X}&"),
+            core,
+        ]
+    return [
+        f"Dialogue: {2 + n},{times},Caption,,0,0,0,,{{{block}{shape}}}{line(tags)}"
+        for n, (shape, tags) in enumerate(layers)
+    ]

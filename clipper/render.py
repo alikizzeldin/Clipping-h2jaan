@@ -95,13 +95,17 @@ class Window:
 
 
 def shorts_window(width: int, height: int, zoom: float, top: int = 420, inset: int = 24) -> Window:
-    scaled_w = WIDTH * max(zoom, 1.0)
+    """Place the gameplay. At zoom 1.0 the whole picture fits the window's
+    width, so nothing is cut off; a larger zoom enlarges it and crops the sides.
+    """
+    room = _even(WIDTH - 2 * inset)
+    scaled_w = room * max(zoom, 1.0)
     scaled_h = scaled_w * height / width
     if scaled_h > WINDOW_MAX_HEIGHT:  # tall or vertical source: fit by height
         scaled_w *= WINDOW_MAX_HEIGHT / scaled_h
         scaled_h = WINDOW_MAX_HEIGHT
     sw, sh = _even(scaled_w), _even(scaled_h)
-    w = min(sw, _even(WIDTH - 2 * inset))
+    w = min(sw, room)
     return Window(sw, sh, (WIDTH - w) // 2, top, w, sh)
 
 
@@ -202,6 +206,7 @@ def render(
                 label_y=(header_mid - 50 if title else header_mid) if label else 0,
                 title_y=(header_mid + 78 if label else header_mid) if title else 0,
                 highlight=theme.highlight, glow=theme.glow, outline=theme.outline,
+                caption_style=theme.caption_style, glow_strength=theme.caption_glow,
             )
             gameplay = f"scale={win.scaled_w}:{win.scaled_h},crop={win.w}:{win.h}"
             if has_art:
@@ -219,7 +224,8 @@ def render(
         else:
             text = TextLayout(
                 1920, 1080, caption_y=940, caption_size=int(captions.size * 0.8),
-                highlight=theme.highlight, outline=theme.outline,
+                highlight=theme.highlight, glow=theme.glow, outline=theme.outline,
+                caption_style=theme.caption_style, glow_strength=theme.caption_glow,
             )
             graph = (
                 f"[0:v]{fps_cap}scale=1920:1080:force_original_aspect_ratio=decrease,"

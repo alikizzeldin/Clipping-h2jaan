@@ -27,10 +27,16 @@ Everything is tunable in [`config.yaml`](config.yaml).
   on it. GTA 6 uses `assets/themes/gta6.png`; replace the file to change the
   design (keep the dark panel in the same place, or adjust `window_top`,
   `window_inset` and `caption_floor`).
+- **Gameplay.** The whole picture is shown, scaled to fit the window; nothing
+  is cropped. (`render.zoom` above 1.0 enlarges it and crops the sides.)
 - **Captions.** What the streamer says, a few words at a time, with the word
-  being spoken highlighted. The language is detected per clip. Latin-script
-  languages and Arabic are drawn (Arabic right-to-left, properly joined);
-  clips in other scripts are published without captions.
+  being spoken highlighted. Themes choose `caption_style`: `neon` (glowing,
+  with `caption_glow` from 0 to 1 for how strong the light is) or `outline`.
+  The language is detected per clip. Latin-script languages and Arabic are
+  drawn (Arabic right-to-left, properly joined); clips in other scripts are
+  published without captions.
+- A 4-second sample of the GTA 6 frame is in
+  [`docs/sample-short.mp4`](docs/sample-short.mp4).
 - No streamer name or Kick link is drawn on the video. The YouTube title and
   description still credit the streamer and link the original clip; change
   `title_template` in `config.yaml` if you want a different title.
