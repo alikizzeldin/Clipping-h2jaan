@@ -43,6 +43,16 @@ def test_unconfirmed_lists_buffer_posts_until_their_outcome_is_known(tmp_path, m
     assert state.unconfirmed("buffer", since) == []
 
 
+def test_recent_uploads_are_listed_with_their_channel(tmp_path, make_clip, now):
+    state = State(tmp_path / "s.json")
+    state.add(make_clip(id="a", channel_slug="sxb"), "p1", "A", now - timedelta(hours=30))
+    state.add(make_clip(id="b", channel_slug="sxb"), "p2", "B", now - timedelta(hours=10))
+    state.add(make_clip(id="c", channel_slug="xqc"), "p3", "C", now - timedelta(hours=2))
+    assert state.recent(now - timedelta(hours=24)) == [
+        (now - timedelta(hours=10), "sxb"), (now - timedelta(hours=2), "xqc"),
+    ]
+
+
 def test_repo_config_loads_with_both_games_and_their_artwork():
     settings = load_settings(REPO / "config.yaml")
     assert set(settings.profiles) >= {"gta6", "valorant"}
@@ -67,6 +77,8 @@ def test_profile_and_privacy_can_come_from_environment(monkeypatch):
     ("publish:\n  start_at: tomorrow\n", "start_at"),
     ("publish:\n  start_at: '2026-11-18T13:00:00'\n", "offset"),
     ("themes:\n  t: {highlight: pink}\n", "colours"),
+    ("themes:\n  t: {caption_style: disco}\n", "caption_style"),
+    ("publish:\n  max_per_day: 3\n  featured_per_day: 4\n", "featured_per_day"),
 ])
 def test_config_mistakes_are_reported(tmp_path, extra, match):
     bad = tmp_path / "config.yaml"

@@ -37,6 +37,33 @@ def test_only_clips_made_after_the_start_time_qualify(make_clip, now):
     assert [c.id for c in chosen] == ["late"]
 
 
+def test_only_the_biggest_channels_are_used_when_asked(make_clip, now):
+    sel = Selection(top_channels_only=True)
+    big = {"streamer"}
+    assert reject_reason(make_clip(), PROFILE, sel, never, now, None, big) is None
+    small = make_clip(channel_slug="nobody")
+    assert reject_reason(small, PROFILE, sel, never, now, None, big) == "not one of the biggest channels"
+    assert reject_reason(small, PROFILE, Selection(), never, now, None, big) is None  # rule is off
+
+
+def test_featured_channels_skip_size_and_language_rules_and_have_their_own_view_bar(make_clip, now):
+    sel = Selection(top_channels_only=True, featured_channels=["SXB"], featured_min_views=20,
+                    languages=["English"], drop_unknown_language=True, allow_channels=["someone"])
+    fav = make_clip(channel_slug="sxb", views=25)
+    assert reject_reason(fav, PROFILE, sel, never, now, None, set()) is None
+    assert "too few views" in reject_reason(make_clip(channel_slug="sxb", views=10), PROFILE, sel, never, now)
+    # the other rules still apply to them
+    assert "other category" in reject_reason(make_clip(channel_slug="sxb", category_slug="irl"), PROFILE, sel, never, now)
+    assert "too long" in reject_reason(make_clip(channel_slug="sxb", duration=500), PROFILE, sel, never, now)
+    blocked = Selection(featured_channels=["sxb"], block_channels=["sxb"])
+    assert reject_reason(fav, PROFILE, blocked, never, now) == "channel blocked"
+
+
+def test_clips_with_slurs_in_the_title_are_never_used(make_clip, now):
+    assert reason(make_clip(title="n1gg4"), now) == "offensive title"
+    assert reason(make_clip(title="Night raid on the bigger heist"), now) is None
+
+
 def test_language_filter(make_clip, now):
     sel = Selection(languages=["English"])
     assert reason(make_clip(language="English (India)"), now, sel) is None

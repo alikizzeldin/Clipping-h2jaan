@@ -59,6 +59,9 @@ class Selection:
     top_live_channels: int = 10  # also pull clips from the biggest live channels
     languages: list[str] = field(default_factory=list)  # e.g. ["English"]; empty = any
     drop_unknown_language: bool = False
+    top_channels_only: bool = False  # use only the biggest live channels (and featured ones)
+    featured_channels: list[str] = field(default_factory=list)  # favourites, always followed
+    featured_min_views: int = 20  # their own, lower view bar
     allow_channels: list[str] = field(default_factory=list)  # if set, only these
     block_channels: list[str] = field(default_factory=list)
 
@@ -95,6 +98,9 @@ class Publish:
     privacy: str = "private"  # private | unlisted | public
     max_per_run: int = 2
     max_per_day: int = 6
+    featured_per_day: int = 0  # how many of the daily clips are reserved for featured channels
+    min_gap_hours: float = 0  # shortest time between two posts
+    fill_after_hours: float = 12  # a reserved slot opens to anyone after this long with no post
     category_id: str = "20"  # YouTube "Gaming"
     title_template: str = "{title} | {streamer} {game}"
     fallback_title_template: str = "{streamer} {game} clip"
@@ -226,6 +232,8 @@ def load_settings(path: str | Path = "config.yaml", profile: str | None = None) 
     if settings.publish.via == "buffer" and settings.render.layout != "shorts":
         raise ConfigError("Buffer only publishes vertical YouTube Shorts: use render.layout: shorts")
     parse_start(settings.publish.start_at)
+    if settings.publish.featured_per_day > settings.publish.max_per_day:
+        raise ConfigError("publish.featured_per_day can't be more than publish.max_per_day")
     if settings.selection.window not in ("day", "week", "month", "all"):
         raise ConfigError("selection.window must be day, week, month or all")
     return settings

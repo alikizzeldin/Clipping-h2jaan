@@ -251,6 +251,7 @@ def render(
             cmd += ["-t", f"{max_duration:.2f}"]
         cmd += [
             "-c:v", "libx264", "-preset", cfg.preset, "-crf", str(cfg.crf),
+            "-maxrate", "4500k", "-bufsize", "9000k",  # keeps a 2-minute clip well under 95 MB
             "-c:a", "aac", "-b:a", "160k", "-ac", "2",
             "-movflags", "+faststart", str(dest.resolve()),
         ]

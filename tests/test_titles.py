@@ -1,7 +1,7 @@
 import pytest
 
 from clipper.config import Profile, Publish
-from clipper.titles import MAX_TITLE, build_metadata, clean_title
+from clipper.titles import MAX_TITLE, build_metadata, clean_title, is_offensive
 
 PROFILE = Profile(kick_category="valorant", label="Valorant", hashtags=["valorant", "kick"])
 
@@ -49,3 +49,14 @@ def test_long_titles_fit_youtube_limit_and_keep_the_streamer(make_clip):
     meta = build_metadata(make_clip(title="word " * 60), PROFILE, Publish(), shorts=True)
     assert len(meta["title"]) <= MAX_TITLE
     assert meta["title"].endswith("| Streamer Valorant #shorts")
+
+
+@pytest.mark.parametrize("title", ["n1gg4", "NIGGA please", "niiiigga", "f4ggot", "n-i-g-g-a", "retarded play"])
+def test_slurs_are_caught_through_lookalike_spellings(title):
+    assert is_offensive(title)
+
+
+@pytest.mark.parametrize("title", ["good job unc", "Night raid", "snigger", "raccoon chase", "Nigeria RP",
+                                   "bigger heist", "bike ride", "تتت", ""])
+def test_ordinary_titles_are_not_flagged(title):
+    assert not is_offensive(title)

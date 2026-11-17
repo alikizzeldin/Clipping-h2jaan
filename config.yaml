@@ -13,7 +13,7 @@ profiles:
     kick_category: grand-theft-auto-vi
     label: GTA 6
     hashtags: [gta6, gtavi, gta6clips, kick]
-    min_views: 300
+    min_views: 150
     theme: gta6
 
 # The look of the vertical frame, one per game. `background` is a 1080x1920
@@ -45,13 +45,17 @@ selection:
   window: day                # Kick's "top clips" window: day | week | month | all
   max_age_hours: 36
   min_duration: 8
-  max_duration: 90
+  max_duration: 120
   allow_mature: false
   max_per_channel: 1         # per run
-  top_live_channels: 10      # also read the top clips of the biggest live channels
+  top_live_channels: 10      # how many of the biggest channels to follow
+  top_channels_only: true    # use clips only from the biggest channels (most live viewers
+                             # now, or most followers) and the featured ones
+  featured_channels: [sxb]   # favourites: always followed, with their own daily slots
+  featured_min_views: 20     # featured clips need only this many views
   languages: []              # e.g. [English, Arabic]; empty = any language
   drop_unknown_language: false
-  allow_channels: []         # if not empty, ONLY these channels are clipped
+  allow_channels: []         # if not empty, ONLY these channels (and featured ones) are clipped
   block_channels: []         # channels never to clip
 
 render:
@@ -78,8 +82,11 @@ publish:
   # first place GTA 6 unlocks.
   start_at: "2026-11-18T13:00:00+02:00"
   privacy: public            # private | unlisted | public
-  max_per_run: 1             # the schedule runs every 2 hours
-  max_per_day: 12
+  max_per_run: 1             # the schedule checks every 2 hours
+  max_per_day: 3             # clips per 24 hours
+  featured_per_day: 2        # ...of which this many are reserved for featured_channels
+  min_gap_hours: 7           # spread them out: at least this long between two posts
+  fill_after_hours: 12       # a reserved slot opens to anyone after this long with no post
   title_template: "{title} | {streamer} {game}"
   fallback_title_template: "{streamer} {game} clip"   # used when the clip title is junk
   description_footer: ""     # e.g. a contact line for removal requests

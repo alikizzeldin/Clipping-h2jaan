@@ -21,6 +21,20 @@ _NOISE = re.compile(r"\s*\|\s*clip\s*$", re.IGNORECASE)
 _COMMANDS = re.compile(r"(?<!\S)![\w-]+")
 
 
+# Slurs that must never reach a published title. Matched at the start of a
+# word, after undoing look-alike spellings ("n1gg4") and stretched letters.
+_SLURS = re.compile(
+    r"\b(n+i+g{2,}|n+i+g+r|f+a+g{2,}|f+a+g+o+t|r+e+t+a+r+d|k+i+k+e+s?\b|c+h+i+n+k+s?\b|t+r+a+n+n+(y|ies)\b)"
+)
+_LOOKALIKES = str.maketrans({"1": "i", "!": "i", "3": "e", "4": "a", "@": "a", "0": "o", "5": "s", "$": "s", "7": "t"})
+
+
+def is_offensive(title: str) -> bool:
+    """True if the title contains a slur, including look-alike spellings."""
+    plain = (title or "").lower().translate(_LOOKALIKES)
+    return bool(_SLURS.search(re.sub(r"[^a-z ]", "", plain)))
+
+
 def _is_mash(token: str) -> bool:
     """Keyboard mash: a long Latin token built from very few distinct letters."""
     if not token.isascii():

@@ -9,16 +9,32 @@ Set up for **GTA 6** (with a **Valorant** profile for testing).
 
 ## What a run does
 
-1. Reads Kick's "top clips" for the game, plus the top clips of the biggest
-   channels live in that game right now.
-2. Drops clips that are from another category, marked mature, too short or
-   long, too old, under the view bar, made before the start time, already
-   posted, or from a blocked channel.
-3. Ranks the rest by views with a discount for age, one clip per streamer per run.
-4. Downloads the best one, transcribes the speech with Whisper, renders the
+1. Reads Kick's "top clips" for the game, plus the clips of the biggest
+   channels and of your featured channels.
+2. Keeps only clips from the **biggest channels**: the ones with the most
+   live viewers right now, and the most-followed ones among the day's clips.
+   Featured channels are always included.
+3. Drops clips that are from another category, marked mature, have a slur in
+   the title, are too short or long, too old, under the view bar, made before
+   the start time, or already posted.
+4. Ranks the rest by views with a discount for age.
+5. Downloads the best one, transcribes the speech with Whisper, renders the
    Short, publishes it, and records it in `state/published.json`.
 
 Everything is tunable in [`config.yaml`](config.yaml).
+
+## How many, and from whom
+
+- `publish.max_per_day` clips go out per 24 hours (3), at least
+  `min_gap_hours` apart (7), so they are spread across the day.
+- `selection.featured_channels` (currently `sxb`) are favourites:
+  `publish.featured_per_day` (2) of the daily clips are reserved for them,
+  and their clips need only `featured_min_views` views.
+- The remaining slot goes to the best clip from the other big channels.
+- A reserved slot is not wasted: if nothing has been posted for
+  `fill_after_hours` (12), any qualifying clip may take it.
+- Featured clips still have to be in the game's category, so a featured
+  streamer who is not playing the game that day gets no clips.
 
 ## The look
 
@@ -65,15 +81,15 @@ How it works, and its limits:
   later. **The repository must be public** for this to work.
 - Buffer only publishes **vertical Shorts** to YouTube.
 - Buffer's free plan allows about 1,000 API requests per 30 days. The agent
-  uses two per published clip (one to post, one later to confirm), so 12
-  clips a day fits.
+  uses two per published clip (one to post, one later to confirm), far
+  below that at 3 clips a day.
 - Each run confirms the previous posts and reports any that Buffer could not
   publish in the run summary.
 
 ## Schedule
 
-The workflow runs every 2 hours and publishes one clip per run (up to
-`max_per_day`).
+The workflow checks every 2 hours and publishes at most one clip per check,
+within the daily limits above.
 
 - **Start time.** Nothing is published before `publish.start_at`, and only
   clips created after it are used. It is set to 18 Nov 2026 13:00 Palestine
@@ -115,7 +131,7 @@ python -m clipper --profile valorant run --dry-run   # render into out/, publish
   (`python -m clipper auth` creates the refresh token). It needs your own
   Google Cloud project, and Google keeps uploads from unaudited projects
   private.
-- **Twitch** is not wired in; clips are modelled source-neutrally so it can
-  be added as a second source.
+- **Twitch** is not wired in. Twitch offers no official way to download
+  other channels' clips; the only route is its private website API.
 - `tools/make_themes.cjs` regenerates the Valorant background (needs
   Playwright); the GTA 6 frame is supplied artwork.

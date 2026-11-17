@@ -147,6 +147,13 @@ class KickClient:
     def category(self, slug: str) -> dict[str, Any]:
         return self._get(f"/api/v1/subcategories/{slug}")
 
+    def followers(self, slug: str) -> int:
+        """How many followers a channel has (0 if it can't be read)."""
+        try:
+            return int(self._get(f"/api/v2/channels/{slug}").get("followers_count") or 0)
+        except (KickError, TypeError, ValueError):
+            return 0
+
     def live_channels(self, category_slug: str, limit: int = 30) -> list[LiveChannel]:
         """Channels live in a category right now, biggest first."""
         found: list[LiveChannel] = []

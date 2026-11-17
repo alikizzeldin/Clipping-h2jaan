@@ -7,6 +7,7 @@ from typing import Callable
 
 from .config import Profile, Selection
 from .models import Clip
+from .titles import is_offensive
 
 
 def score(clip: Clip, now: datetime | None = None) -> float:
@@ -21,30 +22,42 @@ def reject_reason(
     already_published: Callable[[str], bool],
     now: datetime | None = None,
     not_before: datetime | None = None,
+    big_channels: set[str] | None = None,
 ) -> str | None:
-    """Why this clip can't be used, or None if it qualifies."""
+    """Why this clip can't be used, or None if it qualifies.
+
+    Featured channels skip the size, language and allow-list rules and have
+    their own view bar; everything else applies to them too.
+    """
     slug = clip.channel_slug.lower()
+    featured = slug in {c.lower() for c in sel.featured_channels}
+    allowed = {c.lower() for c in sel.allow_channels}
     if already_published(clip.id):
         return "already published"
     if not_before and clip.created_at < not_before:
         return "made before the start time"
     if clip.category_slug != profile.kick_category:
         return f"other category ({clip.category_slug or 'none'})"
-    if sel.allow_channels and slug not in {c.lower() for c in sel.allow_channels}:
-        return "channel not on allow list"
     if slug in {c.lower() for c in sel.block_channels}:
         return "channel blocked"
+    if allowed and slug not in allowed and not featured:
+        return "channel not on allow list"
+    if (sel.top_channels_only and big_channels is not None and not featured
+            and slug not in big_channels and slug not in allowed):
+        return "not one of the biggest channels"
     if clip.is_mature and not sel.allow_mature:
         return "marked mature"
+    if is_offensive(clip.title):
+        return "offensive title"
     if clip.duration < sel.min_duration:
         return f"too short ({clip.duration:.0f}s)"
     if clip.duration > sel.max_duration:
         return f"too long ({clip.duration:.0f}s)"
-    if clip.views < profile.min_views:
+    if clip.views < (sel.featured_min_views if featured else profile.min_views):
         return f"too few views ({clip.views})"
     if clip.age_hours(now) > sel.max_age_hours:
         return f"too old ({clip.age_hours(now):.0f}h)"
-    if sel.languages:
+    if sel.languages and not featured:
         wanted = {lang.lower() for lang in sel.languages}
         if clip.language:
             # "English (India)" should match a wanted "English".
@@ -62,6 +75,7 @@ def rank(
     already_published: Callable[[str], bool],
     now: datetime | None = None,
     not_before: datetime | None = None,
+    big_channels: set[str] | None = None,
 ) -> tuple[list[Clip], list[tuple[Clip, str]]]:
     """Return (qualifying clips best-first, rejected clips with reasons).
 
@@ -78,7 +92,8 @@ def rank(
     accepted: list[Clip] = []
     rejected: list[tuple[Clip, str]] = []
     for clip in unique.values():
-        reason = reject_reason(clip, profile, sel, already_published, now, not_before)
+        reason = reject_reason(clip, profile, sel, already_published, now, not_before,
+                               big_channels)
         if reason:
             rejected.append((clip, reason))
         else:

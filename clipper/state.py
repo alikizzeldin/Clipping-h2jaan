@@ -53,6 +53,18 @@ class State:
                 found.append((when, clip_id, entry))
         return [(clip_id, entry) for _, clip_id, entry in sorted(found, key=lambda f: f[0])]
 
+    def recent(self, since: datetime) -> list[tuple[datetime, str]]:
+        """(time, channel) of everything published since `since`."""
+        found = []
+        for entry in self.published.values():
+            try:
+                when = datetime.fromisoformat(entry["uploaded_at"])
+            except (KeyError, ValueError):
+                continue
+            if when >= since:
+                found.append((when, str(entry.get("channel", ""))))
+        return sorted(found)
+
     def uploads_since(self, since: datetime) -> int:
         count = 0
         for entry in self.published.values():
