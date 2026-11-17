@@ -2,7 +2,21 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import { loadSnapshot, type Snapshot } from "./data";
 import { ownerKey, recentRuns, type Run } from "./github";
 
+export type Layout = "cinematic" | "showroom";
+
+function savedLayout(): Layout {
+  const asked = new URLSearchParams(location.search).get("layout");
+  if (asked === "showroom" || asked === "cinematic") return asked;
+  try {
+    return localStorage.getItem("gta6fied.layout") === "showroom" ? "showroom" : "cinematic";
+  } catch {
+    return "cinematic";
+  }
+}
+
 type Store = {
+  layout: Layout;
+  setLayout: (layout: Layout) => void;
   snap: Snapshot | null;
   runs: Run[];
   demo: boolean;
@@ -29,6 +43,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [demo, setDemoState] = useState(() => new URLSearchParams(location.search).has("demo"));
   const [hasKey, setHasKey] = useState(() => Boolean(ownerKey.get()));
   const [toasts, setToasts] = useState<Toast[]>([]);
+  const [layout, setLayoutState] = useState<Layout>(savedLayout);
 
   const reload = useCallback(async () => {
     setSnap(await loadSnapshot(demo));
@@ -49,6 +64,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo<Store>(
     () => ({
+      layout,
+      setLayout: (next) => {
+        setLayoutState(next);
+        try {
+          localStorage.setItem("gta6fied.layout", next);
+        } catch {
+          /* private window: the choice just won't be remembered */
+        }
+      },
       snap, runs, demo,
       setDemo: (on) => {
         setSnap(null);
@@ -58,7 +82,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       refreshKey: () => setHasKey(Boolean(ownerKey.get())),
       reload, toast,
     }),
-    [snap, runs, demo, hasKey, reload, toast],
+    [layout, snap, runs, demo, hasKey, reload, toast],
   );
 
   return (

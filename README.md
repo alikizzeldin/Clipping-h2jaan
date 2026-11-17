@@ -57,6 +57,28 @@ Everything is tunable in [`config.yaml`](config.yaml).
   description still credit the streamer and link the original clip; change
   `title_template` in `config.yaml` if you want a different title.
 
+## Admin dashboard
+
+A web dashboard in [`dashboard/`](dashboard) shows what the agent is doing:
+views, published clips, how the day's slots are filled, the agent's runs, and
+what it has learned. It has two layouts to choose from, **Cinematic** (a wide
+banner) and **Showroom** (the 3D logo in the centre, which follows the
+pointer and can be dragged or spun).
+
+- **Open it:** switch GitHub Pages on once (**Settings → Pages → Source:
+  GitHub Actions**). The `Dashboard` workflow then publishes it at
+  `https://<your-user>.github.io/<this-repo>/` on every change.
+- **Anyone can view it, only you can change things.** Saving settings,
+  editing learning rules and starting runs need a GitHub key with Contents
+  and Actions write access to this repository, pasted once on the Settings
+  page. It is kept in that browser only.
+- **What it changes.** Settings are saved to `control/settings.json` and
+  rules to `control/rules.json`; the agent reads both at the start of each
+  run. Everything else stays in `config.yaml`.
+- **Demo mode** (Settings, or add `?demo` to the address) fills it with
+  made-up numbers to preview the design.
+- **Run it locally:** `cd dashboard && npm install && npm run dev`.
+
 ## Publishing through Buffer
 
 Set one repository secret (**Settings → Secrets and variables → Actions →

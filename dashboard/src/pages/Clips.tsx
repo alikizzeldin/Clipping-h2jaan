@@ -3,15 +3,10 @@ import { ExternalLink, Eye, Scissors } from "lucide-react";
 import { useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Empty, PageTitle, Tag } from "../components/ui";
+import { thumb } from "../components/widgets";
 import type { Clip } from "../lib/data";
 import { compact, dateTime, duration } from "../lib/format";
 import { useStore } from "../lib/store";
-
-/** YouTube's own thumbnail for a published clip, when its link is known. */
-export function thumb(clip: Clip): string {
-  const match = clip.link?.match(/(?:v=|youtu\.be\/|shorts\/)([\w-]{6,})/);
-  return match ? `https://i.ytimg.com/vi/${match[1]}/hqdefault.jpg` : "";
-}
 
 function status(clip: Clip) {
   if (clip.status === "error") return <Tag tone="rose">Failed</Tag>;

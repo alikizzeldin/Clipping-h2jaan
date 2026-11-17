@@ -213,3 +213,38 @@ select.field option {
 @media (prefers-reduced-motion: reduce) {
   .logo-sweep::after, .ember, .live-dot { animation: none; }
 }
+
+/* ---- Showroom layout ---- */
+
+/* A neon ring drawn with a conic gradient, turning slowly on the floor. */
+@keyframes turn {
+  to { rotate: 360deg; }
+}
+.pedestal-ring {
+  border-radius: 999px;
+  background: conic-gradient(from 0deg, #ff2fd0, transparent 22%, #8a3cff 48%, transparent 70%, #ff8a3d 88%, #ff2fd0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 calc(100% - 6px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 calc(100% - 6px));
+  animation: turn 16s linear infinite;
+  filter: drop-shadow(0 0 14px rgb(255 47 208 / 0.9));
+}
+.pedestal-ring--back {
+  animation-duration: 24s;
+  animation-direction: reverse;
+  opacity: 0.7;
+}
+
+/* A short dash of light travelling along each beam toward the logo. */
+@keyframes travel {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+.beam-pulse {
+  stroke-dasharray: 26 974;
+  animation: travel 3.5s linear infinite;
+  filter: drop-shadow(0 0 6px #ff2fd0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pedestal-ring, .beam-pulse { animation: none; }
+}

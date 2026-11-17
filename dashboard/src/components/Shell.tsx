@@ -4,8 +4,9 @@ import { useState, type ReactNode } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { CHANNEL_NAME } from "../lib/config";
 import { useStore } from "../lib/store";
+import { LayoutSwitch } from "./LayoutSwitch";
 
-const NAV = [
+export const NAV = [
   { to: "/", label: "Dashboard", icon: Home },
   { to: "/clips", label: "Clips", icon: Clapperboard },
   { to: "/analytics", label: "Analytics", icon: BarChart3 },
@@ -13,7 +14,7 @@ const NAV = [
   { to: "/settings", label: "Settings", icon: Settings2 },
 ];
 
-function Wordmark() {
+export function Wordmark() {
   return (
     <div className="select-none leading-none">
       <span className="font-display text-3xl uppercase italic tracking-wide text-snow">gta</span>
@@ -86,6 +87,7 @@ export function Shell({ children }: { children: ReactNode }) {
           </form>
           <div className="ml-auto flex items-center gap-3">
             {demo && <span className="rounded-full bg-gold/15 px-3 py-1.5 text-[11px] font-bold uppercase tracking-widest text-gold ring-1 ring-gold/40">Demo data</span>}
+            <LayoutSwitch />
             <NavLink to="/clips?status=error" aria-label={`${alerts} failed clips`} className="relative grid h-11 w-11 place-items-center rounded-2xl ring-1 ring-line hover:ring-pink/50">
               <Bell className="h-[18px] w-[18px] text-snow" aria-hidden />
               {alerts > 0 && <span className="absolute right-2.5 top-2.5 h-2.5 w-2.5 rounded-full bg-rose ring-2 ring-night" />}
