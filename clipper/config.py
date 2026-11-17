@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import re
 from dataclasses import dataclass, field, fields
@@ -64,6 +65,8 @@ class Selection:
     featured_min_views: int = 20  # their own, lower view bar
     allow_channels: list[str] = field(default_factory=list)  # if set, only these
     block_channels: list[str] = field(default_factory=list)
+    require_gameplay: bool = False  # skip clips where no game is on screen
+    own_clips: bool = False  # also cut highlights from featured channels' streams itself
 
 
 @dataclass
@@ -86,12 +89,16 @@ class Captions:
     max_words: int = 3  # words shown at once
     max_chars: int = 14
     size: int = 150
+    english_subtitles: bool = False  # an English line under captions in another language
+    translate_model: str = "medium"  # Whisper model used for that translation
 
 
 @dataclass
 class Publish:
     via: str = "buffer"  # buffer (your Buffer account posts it) | youtube (own Google API project)
     buffer_channel_id: str = ""  # the Buffer channel to post to; see `python -m clipper channels`
+    buffer_organization_id: str = ""  # for reading view counts; looked up when left empty
+    paused: bool = False  # publish nothing (the dashboard's pause switch)
     start_at: str = ""  # e.g. "2026-11-18T13:00:00+02:00": publish nothing before this,
     #                     and only clips made after it
     media_prefix: str = "media"  # branch prefix for clips hosted for Buffer to fetch
@@ -117,8 +124,13 @@ class Settings:
     captions: Captions = field(default_factory=Captions)
     publish: Publish = field(default_factory=Publish)
     state_path: str = "state/published.json"
+    control_dir: str = "control"  # the dashboard's own files: settings.json, rules.json
     work_dir: str = "work"
     out_dir: str = "out"
+
+    def beside_state(self, name: str) -> Path:
+        """A file the agent keeps next to its publish history."""
+        return Path(self.state_path).parent / name
 
     @property
     def active(self) -> Profile:
@@ -146,6 +158,65 @@ def parse_start(value: str) -> datetime | None:
     if parsed.tzinfo is None:
         raise ConfigError("publish.start_at needs a UTC offset, e.g. +02:00")
     return parsed.astimezone(timezone.utc)
+
+
+def _read_json(path: Path) -> dict:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def _names(value: Any) -> list[str]:
+    return [str(v).strip().lower() for v in value if str(v).strip()] if isinstance(value, list) else []
+
+
+def apply_overrides(settings: "Settings", changes: dict) -> None:
+    """Apply the settings saved from the dashboard on top of config.yaml.
+
+    Only the listed settings can be changed this way, and odd values are
+    ignored rather than trusted: the file can be edited by hand.
+    """
+    sel, pub, cap = settings.selection, settings.publish, settings.captions
+
+    def number(key: str, low: float, high: float, whole: bool = True):
+        value = changes.get(key)
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            return None
+        value = min(high, max(low, value))
+        return int(value) if whole else float(value)
+
+    for key, target, attr in (
+        ("paused", pub, "paused"), ("top_channels_only", sel, "top_channels_only"),
+        ("require_gameplay", sel, "require_gameplay"), ("own_clips", sel, "own_clips"),
+        ("english_subtitles", cap, "english_subtitles"),
+    ):
+        if isinstance(changes.get(key), bool):
+            setattr(target, attr, changes[key])
+    if changes.get("privacy") in ("private", "unlisted", "public"):
+        pub.privacy = changes["privacy"]
+    for key, target, attr, low, high, whole in (
+        ("max_per_day", pub, "max_per_day", 1, 24, True),
+        ("featured_per_day", pub, "featured_per_day", 0, 24, True),
+        ("min_gap_hours", pub, "min_gap_hours", 0, 24, False),
+        ("featured_min_views", sel, "featured_min_views", 0, 10**7, True),
+        ("max_duration", sel, "max_duration", 15, 175, True),
+        ("min_views", settings.active, "min_views", 0, 10**7, True),
+    ):
+        value = number(key, low, high, whole)
+        if value is not None:
+            setattr(target, attr, value)
+    if "max_per_day" in changes or "featured_per_day" in changes:
+        pub.featured_per_day = min(pub.featured_per_day, pub.max_per_day)
+    for key, attr in (("featured_channels", "featured_channels"), ("block_channels", "block_channels")):
+        if isinstance(changes.get(key), list):
+            setattr(sel, attr, _names(changes[key]))
+    if isinstance(changes.get("languages"), list):
+        sel.languages = [str(v).strip() for v in changes["languages"] if str(v).strip()]
+    glow = number("caption_glow", 0, 1, whole=False)
+    if glow is not None and settings.active.theme in settings.themes:
+        settings.themes[settings.active.theme].caption_glow = glow
 
 
 def _build(cls: type, data: Any, where: str) -> Any:
@@ -216,9 +287,12 @@ def load_settings(path: str | Path = "config.yaml", profile: str | None = None) 
         captions=_build(Captions, raw.get("captions"), "captions"),
         publish=_build(Publish, raw.get("publish"), "publish"),
         state_path=raw.get("state_path", "state/published.json"),
+        control_dir=raw.get("control_dir", "control"),
         work_dir=raw.get("work_dir", "work"),
         out_dir=raw.get("out_dir", "out"),
     )
+
+    apply_overrides(settings, _read_json(Path(settings.control_dir) / "settings.json"))
 
     privacy = os.environ.get("CLIPPER_PRIVACY")
     if privacy:

@@ -10,18 +10,26 @@ Set up for **GTA 6** (with a **Valorant** profile for testing).
 ## What a run does
 
 1. Reads Kick's "top clips" for the game, plus the clips of the biggest
-   channels and of your featured channels.
+   channels and of your featured channels. For featured channels it can also
+   **cut its own clips**: it samples how fast the chat is moving across the
+   last two hours of their stream and cuts the 50 seconds around each spike.
 2. Keeps only clips from the **biggest channels**: the ones with the most
    live viewers right now, and the most-followed ones among the day's clips.
    Featured channels are always included.
 3. Drops clips that are from another category, marked mature, have a slur in
    the title, are too short or long, too old, under the view bar, made before
    the start time, or already posted.
-4. Ranks the rest by views with a discount for age.
-5. Downloads the best one, transcribes the speech with Whisper, renders the
-   Short, publishes it, and records it in `state/published.json`.
+4. Ranks the rest by views with a discount for age, adjusted by the rules it
+   has **learned** and the ones you taught it.
+5. For the best one: skips it if the **same moment** was already posted (many
+   viewers clip the same seconds) or if there is **no game on screen**.
+6. Transcribes the speech with Whisper, adds an **English line** under
+   captions in another language, and writes a title from what is said when
+   the viewer's title is junk.
+7. Renders the Short, publishes it, and records it under `state/`.
 
-Everything is tunable in [`config.yaml`](config.yaml).
+Everything is tunable in [`config.yaml`](config.yaml), and the main switches
+are also on the dashboard's Settings page.
 
 ## How many, and from whom
 
@@ -56,6 +64,31 @@ Everything is tunable in [`config.yaml`](config.yaml).
 - No streamer name or Kick link is drawn on the video. The YouTube title and
   description still credit the streamer and link the original clip; change
   `title_template` in `config.yaml` if you want a different title.
+
+## Learning from results
+
+Once a day the agent reads each published clip's view count from Buffer and
+compares groups of clips: by streamer, by length, by language. When a group's
+typical views clearly beat (or trail) the rest, it writes a rule that raises
+(or lowers) those clips' priority. It waits until 8 clips have been measured,
+and compares typical rather than average views so one viral clip can't
+mislead it.
+
+You stay in charge on the dashboard's **Learning** page: switch a learned
+rule off, remove it for good (it is never learned again), or teach rules of
+your own about a streamer, a clip length, a language, or a word in the title
+or speech. Learned rules live in `state/learned.json`; your choices in
+`control/rules.json`.
+
+## Alerts
+
+To get a message when a clip is published or something fails, add either or
+both as repository secrets:
+
+| Secret | What it is |
+|--------|------------|
+| `DISCORD_WEBHOOK_URL` | a webhook URL from a Discord channel's **Integrations → Webhooks** |
+| `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` | a bot made with @BotFather, and the chat it should write to |
 
 ## Admin dashboard
 
@@ -148,6 +181,9 @@ python -m clipper --profile valorant run --dry-run   # render into out/, publish
   be left out.
 - **Languages.** By default clips in any language are used. Set
   `selection.languages` (for example `[English, Arabic]`) to narrow it.
+- **Models are downloaded on first use.** Speech (about 3 GB for the two
+  Whisper models) and the gameplay check (about 0.6 GB) are cached between
+  runs on GitHub.
 - **Kick's clip feeds are unofficial.** Kick's public API has no clip
   endpoints, so the agent reads the feeds the website uses. If Kick changes
   them, discovery needs updating.

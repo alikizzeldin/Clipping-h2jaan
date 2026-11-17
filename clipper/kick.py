@@ -53,6 +53,12 @@ def _parse_time(value: str) -> datetime | None:
     return parsed.astimezone(timezone.utc)
 
 
+def _real_time(value: str) -> datetime | None:
+    """A timestamp, unless it is the year-1 placeholder Kick's feeds send."""
+    parsed = _parse_time(value)
+    return parsed if parsed and parsed.year > 2000 else None
+
+
 def parse_clip(raw: dict[str, Any]) -> Clip | None:
     """Turn one feed entry into a Clip, or None if it is unusable."""
     try:
@@ -83,6 +89,8 @@ def parse_clip(raw: dict[str, Any]) -> Clip | None:
             thumbnail_url=str(raw.get("thumbnail_url") or ""),
             is_mature=bool(raw.get("is_mature")),
             clipper_name=str(creator.get("username") or ""),
+            livestream_id=str(raw.get("livestream_id") or ""),
+            started_at=_real_time(str(raw.get("started_at") or "")),
         )
     except (KeyError, TypeError, ValueError):
         return None
@@ -146,6 +154,30 @@ class KickClient:
 
     def category(self, slug: str) -> dict[str, Any]:
         return self._get(f"/api/v1/subcategories/{slug}")
+
+    def clip_moment(self, clip_id: str) -> tuple[str, datetime | None]:
+        """(broadcast id, start time) of a clip. The feeds leave the time out;
+        the clip's own page has it."""
+        data = self._get(f"/api/v2/clips/{clip_id}")
+        raw = data.get("clip", data) if isinstance(data, dict) else {}
+        return str(raw.get("livestream_id") or ""), _real_time(str(raw.get("started_at") or ""))
+
+    def videos(self, slug: str) -> list[dict[str, Any]]:
+        """A channel's broadcasts, newest first, including the one that is live."""
+        data = self._get(f"/api/v2/channels/{slug}/videos")
+        return data if isinstance(data, list) else []
+
+    def chat_sample(self, channel_id: str, when: datetime) -> list[dict[str, Any]]:
+        """Up to 25 chat messages from the 5 seconds starting at `when`."""
+        data = self._get(f"/api/v2/channels/{channel_id}/messages",
+                         {"start_time": when.strftime("%Y-%m-%dT%H:%M:%S.000Z")})
+        return ((data or {}).get("data") or {}).get("messages") or []
+
+    def display_name(self, slug: str) -> str:
+        try:
+            return str((self._get(f"/api/v2/channels/{slug}").get("user") or {}).get("username") or slug)
+        except KickError:
+            return slug
 
     def followers(self, slug: str) -> int:
         """How many followers a channel has (0 if it can't be read)."""

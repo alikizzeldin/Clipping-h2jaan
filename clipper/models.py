@@ -24,6 +24,9 @@ class Clip:
     is_mature: bool = False
     clipper_name: str = ""  # the viewer who cut the clip
     language: str = ""  # filled in from live listings when known
+    livestream_id: str = ""  # which broadcast the clip is from
+    started_at: datetime | None = None  # when in that broadcast the clip begins
+    origin: str = "viewer"  # "viewer" = clipped by a viewer, "auto" = cut by the agent
 
     @property
     def url(self) -> str:

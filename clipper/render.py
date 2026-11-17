@@ -19,6 +19,7 @@ from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 from .config import Captions, Render, Theme
+from .speech import Line
 from .subtitles import FONTS_DIR, Chunk, TextLayout, build_ass
 
 log = logging.getLogger(__name__)
@@ -177,7 +178,7 @@ def build_frame(dest: Path, theme: Theme, window: Window) -> bool:
 def render(
     src: Path, dest: Path, cfg: Render, theme: Theme, captions: Captions, *,
     label: str = "", title: str = "", chunks: list[Chunk] | None = None,
-    max_duration: float | None = None,
+    translation: list[Line] | None = None, max_duration: float | None = None,
 ) -> Path:
     info = probe(src)
     dest.parent.mkdir(parents=True, exist_ok=True)
@@ -200,9 +201,12 @@ def render(
             cmd += ["-i", "frame.png"]
             inputs += 1
             header_mid = SAFE_TOP + (win.y - SAFE_TOP) // 2
+            # With a translated line underneath, the captions sit a little higher.
+            caption_y = win.caption_y(theme.caption_floor) - (55 if translation else 0)
             text = TextLayout(
                 WIDTH, HEIGHT,
-                caption_y=win.caption_y(theme.caption_floor), caption_size=captions.size,
+                caption_y=caption_y, caption_size=captions.size,
+                sub_y=caption_y + int(captions.size * 0.5) + 24 if translation else 0,
                 label_y=(header_mid - 50 if title else header_mid) if label else 0,
                 title_y=(header_mid + 78 if label else header_mid) if title else 0,
                 highlight=theme.highlight, glow=theme.glow, outline=theme.outline,
@@ -233,7 +237,8 @@ def render(
             )
 
         (tmp / "captions.ass").write_text(
-            build_ass(text, chunks, label=label, title=title, duration=info.duration),
+            build_ass(text, chunks, label=label, title=title, duration=info.duration,
+                      translation=translation),
             encoding="utf-8",
         )
         graph += "[framed]ass=captions.ass:fontsdir=fonts,format=yuv420p[v]"

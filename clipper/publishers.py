@@ -49,8 +49,8 @@ class YouTubePublisher:
         self.pub = pub
         self.client = YouTube(*(os.environ[name] for name in YT_ENV))
 
-    def prepare(self, state: State) -> list[str]:
-        return []
+    def prepare(self, state: State, report) -> None:
+        return None
 
     def publish(self, video: Path, clip: Clip, meta: dict) -> Published:
         try:
@@ -79,9 +79,12 @@ class BufferPublisher:
         self.client = Buffer(key, channel)
         self.host = GitMediaHost(repo, prefix=pub.media_prefix)
 
-    def prepare(self, state: State) -> list[str]:
-        """Housekeeping before a run: confirm earlier posts, drop old hosted clips."""
-        notes: list[str] = []
+    def prepare(self, state: State, report) -> None:
+        """Housekeeping before a run: confirm earlier posts, drop old hosted clips.
+
+        `report(kind, text, link)` is told about each post that went live or
+        that Buffer could not publish.
+        """
         now = datetime.now(timezone.utc)
         for clip_id, entry in state.unconfirmed("buffer", now - timedelta(days=2))[:5]:
             try:
@@ -91,17 +94,16 @@ class BufferPublisher:
                 break
             if info["status"] == "sent":
                 state.update(clip_id, status="sent", link=info["link"])
-                notes.append(f"- confirmed live: {info['link'] or entry['title']}")
+                report("info", f"Live on YouTube: “{entry['title']}”", info["link"])
             elif info["status"] == "error":
                 state.update(clip_id, status="error", error=info["error"])
-                notes.append(f"- Buffer could not publish \"{entry['title']}\": {info['error']}")
+                report("error", f"Buffer could not publish “{entry['title']}”: {info['error']}", "")
         try:
             removed = self.host.prune()
             if removed:
                 log.info("removed %d old hosted clip(s)", removed)
         except HostingError as exc:
             log.warning("could not tidy hosted clips: %s", exc)
-        return notes
 
     def publish(self, video: Path, clip: Clip, meta: dict) -> Published:
         try:

@@ -57,6 +57,9 @@ selection:
   drop_unknown_language: false
   allow_channels: []         # if not empty, ONLY these channels (and featured ones) are clipped
   block_channels: []         # channels never to clip
+  require_gameplay: true     # skip clips where no game is on screen (e.g. the streamer chatting)
+  own_clips: true            # for featured channels, also cut highlights from their streams:
+                             # moments where the chat suddenly speeds up
 
 render:
   layout: shorts             # shorts (1080x1920) | landscape (1920x1080)
@@ -73,10 +76,13 @@ captions:
   max_words: 3               # words on screen at once
   max_chars: 14
   size: 150
+  english_subtitles: true    # an English line under captions in another language
+  translate_model: medium    # the Whisper model that does that translation
 
 publish:
   via: buffer                # buffer (your Buffer account posts it) | youtube (own Google API project)
   buffer_channel_id: "6afc5738ece6dfde5ff77cea"   # "gta6fied clips" (YouTube) in Buffer
+  buffer_organization_id: "6afc570c4663bcc9aa9f5992"   # used to read view counts once a day
   # Nothing is published before this moment, and only clips made after it are
   # used. 13:00 on 18 Nov in Palestine is midnight 19 Nov in New Zealand, the
   # first place GTA 6 unlocks.

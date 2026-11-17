@@ -271,11 +271,11 @@ function demoSnapshot(): Snapshot {
     updated_at: new Date(now - 5 * hour).toISOString(), measured_clips: 11, needed_clips: 8,
     rules: [
       { id: "auto-channel-sxb", kind: "channel", target: "sxb", factor: 1.5, created_at: new Date(now - 30 * hour).toISOString(),
-        text: "Clips from sxb get more views than the rest", evidence: { clips: 6, avg_views: 291000, baseline: 168000 } },
+        text: "Clips from sxb usually get more views than the rest", evidence: { clips: 6, avg_views: 291000, baseline: 168000 } },
       { id: "auto-duration-under-30s", kind: "duration", target: "Under 30s", factor: 1.3, created_at: new Date(now - 30 * hour).toISOString(),
-        text: "Clips under 30 seconds get more views", evidence: { clips: 3, avg_views: 322000, baseline: 205000 } },
+        text: "Clips under 30 seconds usually get more views", evidence: { clips: 3, avg_views: 322000, baseline: 205000 } },
       { id: "auto-duration-over-60s", kind: "duration", target: "Over 60s", factor: 0.7, created_at: new Date(now - 6 * hour).toISOString(),
-        text: "Clips over a minute get fewer views", evidence: { clips: 3, avg_views: 96000, baseline: 205000 } },
+        text: "Clips over a minute usually get fewer views", evidence: { clips: 3, avg_views: 96000, baseline: 205000 } },
     ],
   };
   const rules: RulesControl = {

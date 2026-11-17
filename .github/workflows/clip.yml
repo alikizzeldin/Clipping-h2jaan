@@ -46,6 +46,10 @@ jobs:
       CLIPPER_PRIVACY: ${{ vars.CLIPPER_PRIVACY }}
       # The Buffer key, saved as a repository secret under either name.
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY || secrets.BUFFER }}
+      # Optional: where to send "clip published" and "something failed" messages.
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
@@ -85,7 +89,7 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.check_setup
         run: python -m clipper channels
 
-      - name: Keep the Whisper model between runs
+      - name: Keep the speech and vision models between runs
         if: steps.gate.outputs.go == 'true' && !inputs.check_setup
         uses: actions/cache@v4
         with:
@@ -109,6 +113,13 @@ jobs:
           name: rendered-clips
           path: out/*.mp4
           retention-days: 3
+
+      - name: Tell the owner if a scheduled run failed
+        if: failure() && github.event_name == 'schedule'
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python -m clipper notify "⚠️ The clipping agent's run failed. Details at $RUN_URL" || true
 
       - name: Save publish history
         if: always()

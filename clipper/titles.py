@@ -70,6 +70,27 @@ def clean_title(raw: str) -> str:
     return text
 
 
+def spoken_title(sentences: list[str]) -> str:
+    """The most quotable thing said in the clip, for when the viewer's title is junk.
+
+    Prefers a short complete sentence, and one with some punch (a question or
+    an exclamation) over a flat one.
+    """
+    best, best_score = "", 0.0
+    for raw in sentences:
+        text = re.sub(r"\s+", " ", raw or "").strip(" -–—")
+        text = re.sub(r"([!?؟.])\1+", r"\1", text)
+        words = text.split()
+        if not 3 <= len(words) <= 10 or len(text) > 70 or is_offensive(text):
+            continue
+        if len(set(w.lower() for w in words)) <= len(words) / 2:
+            continue  # "go go go go", "كمل كمل كمل"
+        score = 1.0 + (0.6 if text[-1:] in "!?؟" else 0) + (0.4 if 4 <= len(words) <= 7 else 0)
+        if score > best_score:
+            best, best_score = text.rstrip(".،,"), score
+    return best
+
+
 def _fit(text: str, limit: int) -> str:
     text = text.strip()
     if len(text) <= limit:
@@ -82,9 +103,17 @@ def _hashtag(word: str) -> str:
     return "#" + re.sub(r"[^\w]", "", word)
 
 
-def build_metadata(clip: Clip, profile: Profile, publish: Publish, shorts: bool) -> dict:
-    """Title, description and tags for one upload."""
+def build_metadata(clip: Clip, profile: Profile, publish: Publish, shorts: bool,
+                   sentences: list[str] | None = None) -> dict:
+    """Title, description and tags for one upload.
+
+    The viewer's own title is used when it is a real one; otherwise a line
+    from what is said in the clip (`sentences`), and only then a generic title.
+    """
     cleaned = clean_title(clip.title)
+    if not cleaned and sentences:
+        quote = spoken_title(sentences)
+        cleaned = f"“{quote}”" if quote else ""
     template = publish.title_template if cleaned else publish.fallback_title_template
     suffix = " #shorts" if shorts else ""
     base = template.format(title="{title}", streamer=clip.channel_name, game=profile.label)
@@ -100,8 +129,9 @@ def build_metadata(clip: Clip, profile: Profile, publish: Publish, shorts: bool)
         f"{clip.channel_name} playing {profile.label}, live on Kick.",
         "",
         f"Streamer: {clip.channel_url}",
-        f"Original clip: {clip.url}",
     ]
+    if clip.origin != "auto":  # the agent's own cuts have no clip page to link
+        lines.append(f"Original clip: {clip.url}")
     if clip.clipper_name:
         lines.append(f"Clipped by: {clip.clipper_name}")
     if publish.description_footer.strip():

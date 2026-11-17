@@ -15,15 +15,35 @@ class State:
     def __init__(self, path: str | Path):
         self.path = Path(path)
         self.published: dict[str, dict] = {}
+        self.skipped: dict[str, dict] = {}  # clips judged unusable, so they aren't fetched again
+        self.metrics_checked_at = ""
         if self.path.exists():
             data = json.loads(self.path.read_text(encoding="utf-8") or "{}")
             self.published = dict(data.get("published") or {})
+            self.skipped = dict(data.get("skipped") or {})
+            self.metrics_checked_at = str(data.get("metrics_checked_at") or "")
 
     def has(self, clip_id: str) -> bool:
-        return clip_id in self.published
+        """True if the clip was already published or already ruled out."""
+        return clip_id in self.published or clip_id in self.skipped
+
+    def skip(self, clip_id: str, reason: str, when: datetime | None = None) -> None:
+        when = when or datetime.now(timezone.utc)
+        self.skipped[clip_id] = {"reason": reason, "at": when.isoformat(timespec="seconds")}
+
+    def moments(self) -> list[tuple[str, float, float]]:
+        """(broadcast id, start as epoch seconds, length) of every published clip."""
+        found = []
+        for entry in self.published.values():
+            try:
+                start = datetime.fromisoformat(entry["started_at"]).timestamp()
+                found.append((str(entry["livestream_id"]), start, float(entry.get("duration") or 0)))
+            except (KeyError, TypeError, ValueError):
+                continue
+        return found
 
     def add(self, clip: Clip, video_id: str, title: str, when: datetime | None = None,
-            via: str = "youtube", link: str = "") -> None:
+            via: str = "youtube", link: str = "", extra: dict | None = None) -> None:
         when = when or datetime.now(timezone.utc)
         self.published[clip.id] = {
             "video_id": video_id,  # YouTube id, or Buffer's post id when via == "buffer"
@@ -34,6 +54,12 @@ class State:
             "source": clip.source,
             "category": clip.category_slug,
             "uploaded_at": when.isoformat(timespec="seconds"),
+            "duration": round(clip.duration),
+            "origin": clip.origin,
+            "kick_views": clip.views,
+            **({"livestream_id": clip.livestream_id} if clip.livestream_id else {}),
+            **({"started_at": clip.started_at.isoformat(timespec="seconds")} if clip.started_at else {}),
+            **(extra or {}),
         }
 
     def update(self, clip_id: str, **fields: str) -> None:
@@ -84,9 +110,14 @@ class State:
         self.published = dict(items[-KEEP:])
         self.path.parent.mkdir(parents=True, exist_ok=True)
         tmp = self.path.with_suffix(".tmp")
+        skipped = sorted(self.skipped.items(), key=lambda kv: kv[1].get("at", ""))
+        self.skipped = dict(skipped[-2000:])
         tmp.write_text(
-            json.dumps({"version": 1, "published": self.published}, indent=1, ensure_ascii=False)
-            + "\n",
+            json.dumps(
+                {"version": 1, "metrics_checked_at": self.metrics_checked_at,
+                 "published": self.published, "skipped": self.skipped},
+                indent=1, ensure_ascii=False,
+            ) + "\n",
             encoding="utf-8",
         )
         tmp.replace(self.path)

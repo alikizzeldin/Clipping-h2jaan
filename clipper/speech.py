@@ -42,6 +42,26 @@ class Word:
     end: float
 
 
+@dataclass(frozen=True)
+class Line:
+    """A sentence-sized piece of speech with its timing."""
+
+    text: str
+    start: float
+    end: float
+
+
+@dataclass(frozen=True)
+class Transcript:
+    words: list[Word]
+    language: str  # Whisper's code, e.g. "ar"
+    lines: list[Line]
+
+    @property
+    def text(self) -> str:
+        return " ".join(line.text for line in self.lines)
+
+
 def clean_word(raw: str) -> str:
     text = _DIACRITICS.sub("", raw).strip(_EDGE_PUNCT)
     text = re.sub(r"(.)\1{3,}", r"\1\1\1", text)  # "ايييييييي" -> "اييي"
@@ -73,6 +93,7 @@ class Transcriber:
     def __init__(self, cfg: Captions):
         self.cfg = cfg
         self._model = None
+        self._translator = None
 
     def _load(self):
         if self._model is None:
@@ -86,39 +107,35 @@ class Transcriber:
             self._model = WhisperModel(self.cfg.model, device="cpu", compute_type="int8")
         return self._model
 
-    def transcribe(self, path: Path) -> tuple[list[Word], str]:
-        """Return (spoken words in order, detected language code)."""
-        audio = load_audio(path)
-        if audio.size < SAMPLE_RATE:  # under a second of sound
-            return [], ""
-        language = None if self.cfg.language in ("", "auto") else self.cfg.language
+    def _run(self, model, audio, **options):
         try:
-            segments, info = self._load().transcribe(
-                audio,
-                language=language,
-                word_timestamps=True,
-                vad_filter=True,
-                beam_size=5,
-                condition_on_previous_text=False,
+            segments, info = model.transcribe(
+                audio, vad_filter=True, beam_size=5, condition_on_previous_text=False, **options,
             )
-            segments = list(segments)
-        except SpeechError:
-            raise
+            return list(segments), info
         except Exception as exc:  # model download, decoding, out of memory...
             raise SpeechError(f"transcription failed: {exc}") from exc
+
+    def transcribe(self, path: Path) -> Transcript:
+        """What is said in the clip: words with timings, sentences, and the language."""
+        audio = load_audio(path)
+        if audio.size < SAMPLE_RATE:  # under a second of sound
+            return Transcript([], "", [])
+        language = None if self.cfg.language in ("", "auto") else self.cfg.language
+        segments, info = self._run(self._load(), audio, language=language, word_timestamps=True)
 
         if language is None and info.language_probability < 0.5:
             # It could not even tell the language: game noise, not speech.
             log.info("no clear speech (language guess %s at %.0f%%)", info.language,
                      info.language_probability * 100)
-            return [], ""
+            return Transcript([], "", [])
 
         words: list[Word] = []
+        lines: list[Line] = []
         for seg in segments:
-            if seg.avg_logprob < -1.0 or seg.no_speech_prob > 0.8:
-                continue  # the model itself doubts these words
-            if seg.compression_ratio > 2.4 or is_hallucination(seg.text):
-                continue  # looping gibberish, or a stock phrase from its training data
+            if not _trustworthy(seg):
+                continue
+            lines.append(Line(seg.text.strip(), float(seg.start), float(seg.end)))
             for w in seg.words or []:
                 text = clean_word(w.word)
                 if not text:
@@ -126,4 +143,26 @@ class Transcriber:
                 start = float(w.start)
                 end = min(float(w.end), start + 1.5)  # a word stretched across a silence
                 words.append(Word(text, start, max(end, start + 0.05)))
-        return words, str(info.language or "")
+        return Transcript(words, str(info.language or ""), lines)
+
+    def translate(self, path: Path, language: str) -> list[Line]:
+        """The clip's speech in English, sentence by sentence.
+
+        Uses a second Whisper model: the fast transcription model was not
+        trained to translate.
+        """
+        if self._translator is None:
+            from faster_whisper import WhisperModel
+
+            log.info("loading Whisper model %s for translation", self.cfg.translate_model)
+            self._translator = WhisperModel(self.cfg.translate_model, device="cpu", compute_type="int8")
+        segments, _ = self._run(self._translator, load_audio(path), language=language or None, task="translate")
+        return [Line(seg.text.strip(), float(seg.start), float(seg.end)) for seg in segments
+                if _trustworthy(seg) and seg.text.strip()]
+
+
+def _trustworthy(seg) -> bool:
+    """False for segments Whisper itself doubts, loops, or stock phrases it invents."""
+    if seg.avg_logprob < -1.0 or seg.no_speech_prob > 0.8:
+        return False
+    return seg.compression_ratio <= 2.4 and not is_hallucination(seg.text)

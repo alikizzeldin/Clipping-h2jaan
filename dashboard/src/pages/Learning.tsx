@@ -133,7 +133,7 @@ export default function Learning() {
                           <p className="text-[15px] font-semibold text-snow">{ruleSentence(rule)}</p>
                           {rule.evidence && (
                             <p className="mt-1 text-xs leading-relaxed text-mist">
-                              {rule.evidence.clips} clips averaged <b className="text-snow">{compact(rule.evidence.avg_views)}</b> views, against {compact(rule.evidence.baseline)} for the rest · found {ago(rule.created_at)}
+                              {rule.evidence.clips} clips typically got <b className="text-snow">{compact(rule.evidence.avg_views)}</b> views, against {compact(rule.evidence.baseline)} for the rest · found {ago(rule.created_at)}
                             </p>
                           )}
                         </div>

@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from typing import Callable
 
 from .config import Profile, Selection
+from .learning import Rule, factor_for
 from .models import Clip
 from .titles import is_offensive
 
@@ -23,6 +24,7 @@ def reject_reason(
     now: datetime | None = None,
     not_before: datetime | None = None,
     big_channels: set[str] | None = None,
+    rules: list[Rule] | None = None,
 ) -> str | None:
     """Why this clip can't be used, or None if it qualifies.
 
@@ -49,6 +51,8 @@ def reject_reason(
         return "marked mature"
     if is_offensive(clip.title):
         return "offensive title"
+    if rules and factor_for(clip, rules) == 0:
+        return "ruled out by one of your rules"
     if clip.duration < sel.min_duration:
         return f"too short ({clip.duration:.0f}s)"
     if clip.duration > sel.max_duration:
@@ -76,11 +80,14 @@ def rank(
     now: datetime | None = None,
     not_before: datetime | None = None,
     big_channels: set[str] | None = None,
+    rules: list[Rule] | None = None,
+    cap_channels: bool = True,
 ) -> tuple[list[Clip], list[tuple[Clip, str]]]:
     """Return (qualifying clips best-first, rejected clips with reasons).
 
-    The qualifying list is capped per channel but otherwise uncapped: the
-    caller works down it until it has published enough.
+    The qualifying list is capped per channel (unless `cap_channels` is off)
+    but otherwise uncapped: the caller works down it until it has published
+    enough.
     """
     now = now or datetime.now(timezone.utc)
     unique: dict[str, Clip] = {}
@@ -93,13 +100,16 @@ def rank(
     rejected: list[tuple[Clip, str]] = []
     for clip in unique.values():
         reason = reject_reason(clip, profile, sel, already_published, now, not_before,
-                               big_channels)
+                               big_channels, rules)
         if reason:
             rejected.append((clip, reason))
         else:
             accepted.append(clip)
 
-    accepted.sort(key=lambda c: score(c, now), reverse=True)
+    # Learned and taught rules raise or lower a clip's place in the queue.
+    accepted.sort(key=lambda c: score(c, now) * factor_for(c, rules or []), reverse=True)
+    if not cap_channels:  # the caller applies the per-channel limit itself
+        return accepted, rejected
     per_channel: dict[str, int] = {}
     chosen: list[Clip] = []
     for clip in accepted:

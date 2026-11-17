@@ -1,8 +1,9 @@
-"""Command line: `python -m clipper discover | run | channels | auth`."""
+"""Command line: `python -m clipper discover | run | channels | notify | auth`."""
 
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 import os
 import shutil
@@ -13,18 +14,23 @@ from pathlib import Path
 
 from . import download as dl
 from . import render as rnd
+from .activity import Activity
 from .buffer import Buffer, BufferError
 from .config import ConfigError, Settings, load_settings
+from .highlights import HighlightError, cut_highlight, find_highlights
 from .hosting import GitMediaHost, HostingError
 from .kick import KickClient, KickError
+from .learning import active_rules, factor_for, language_name, learn, update_history
 from .models import Clip
-from .publishers import PublishError, PublishLimit, SetupError, make_publisher
+from .notify import Notifier
+from .publishers import BufferPublisher, PublishError, PublishLimit, SetupError, make_publisher
 from .quota import plan
 from .ranking import rank, score
-from .speech import SpeechError, Transcriber
+from .speech import Line, SpeechError, Transcriber, Transcript
 from .state import State
 from .subtitles import Chunk, chunk_words, drawable
 from .titles import build_metadata
+from .vision import GameplayJudge, VisionError
 from .youtube import YouTubeError, authorize
 
 log = logging.getLogger("clipper")
@@ -110,7 +116,8 @@ def cmd_discover(settings: Settings, args: argparse.Namespace) -> int:
     kick = KickClient()
     state = State(settings.state_path)
     clips, big = discover(settings, kick)
-    chosen, rejected = rank(clips, settings.active, settings.selection, state.has, big_channels=big)
+    rules = active_rules(Path(settings.control_dir) / "rules.json", settings.beside_state("learned.json"))
+    chosen, rejected = rank(clips, settings.active, settings.selection, state.has, big_channels=big, rules=rules)
     print(f"Profile {settings.profile} ({settings.active.kick_category}): "
           f"{len(chosen)} clips qualify, {len(rejected)} rejected\n")
     if settings.selection.top_channels_only:
@@ -123,18 +130,17 @@ def cmd_discover(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
-def _captions(transcriber: Transcriber, media: Path, settings: Settings) -> list[Chunk]:
-    """Spoken captions for one clip; empty when nobody speaks."""
-    words, language = transcriber.transcribe(media)
-    if not words:
+def _captions(transcript: Transcript, settings: Settings) -> list[Chunk]:
+    """Caption lines for what is said; empty when nobody speaks."""
+    if not transcript.words:
         log.info("no speech found, rendering without captions")
         return []
-    if not all(drawable(w.text) for w in words):
-        log.info("speech is in a script the caption font can't draw (%s), no captions", language)
+    if not all(drawable(w.text) for w in transcript.words):
+        log.info("speech is in a script the caption font can't draw (%s), no captions", transcript.language)
         return []
     cfg = settings.captions
-    chunks = chunk_words(words, cfg.max_words, cfg.max_chars)
-    log.info("captions: %d words in %d lines (%s)", len(words), len(chunks), language or "?")
+    chunks = chunk_words(transcript.words, cfg.max_words, cfg.max_chars)
+    log.info("captions: %d words in %d lines (%s)", len(transcript.words), len(chunks), transcript.language or "?")
     return chunks
 
 
@@ -147,15 +153,76 @@ def _summary(lines: list[str]) -> None:
             handle.write(text + "\n")
 
 
+def same_moment(clip: Clip, moments: list[tuple[str, float, float]]) -> bool:
+    """True if the clip overlaps a moment (broadcast, start, length) already used.
+
+    Several viewers often clip the same few seconds of a stream; each of those
+    clips has its own id, so they have to be matched by time.
+    """
+    if not clip.livestream_id or not clip.started_at:
+        return False
+    start = clip.started_at.timestamp()
+    end = start + clip.duration
+    for stream, other_start, other_length in moments:
+        if stream != clip.livestream_id:
+            continue
+        shared = min(end, other_start + other_length) - max(start, other_start)
+        if shared > 0.4 * min(clip.duration, other_length or clip.duration):
+            return True
+    return False
+
+
+def _study(settings: Settings, state: State, client: Buffer, activity: Activity, now: datetime) -> None:
+    """Once a day: read view counts, record history, and learn from the results."""
+    try:
+        last = datetime.fromisoformat(state.metrics_checked_at)
+    except ValueError:
+        last = None
+    if last and now - last < timedelta(hours=20):
+        return
+    try:
+        organization = settings.publish.buffer_organization_id or client.organization_id()
+        numbers = client.metrics(organization)
+    except BufferError as exc:
+        log.warning("could not read view counts: %s", exc)
+        return
+    state.metrics_checked_at = now.isoformat(timespec="seconds")
+    by_post = {entry.get("video_id"): clip_id for clip_id, entry in state.published.items()}
+    for post_id, values in numbers.items():
+        clip_id = by_post.get(post_id)
+        if clip_id:
+            link = values.pop("link", "")
+            state.update(clip_id, **values, **({"link": link, "status": "sent"} if link else {}))
+    update_history(settings.beside_state("history.json"), state.published, now)
+
+    learned_path = settings.beside_state("learned.json")
+    control = _read_json(Path(settings.control_dir) / "rules.json")
+    before = _read_json(learned_path).get("rules") or []
+    result = learn(state.published, set(control.get("dismissed") or []), now, previous=before)
+    learned_path.parent.mkdir(parents=True, exist_ok=True)
+    learned_path.write_text(json.dumps(result, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    known = {rule.get("id") for rule in before}
+    for rule in result["rules"]:
+        if rule["id"] not in known:
+            activity.add("learned", f"Learned: {rule['text'][0].lower()}{rule['text'][1:]}")
+    log.info("studied %d measured clips, %d rules", result["measured_clips"], len(result["rules"]))
+
+
 def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
-    profile, pub = settings.active, settings.publish
+    profile, pub, sel = settings.active, settings.publish, settings.selection
     shorts = settings.render.layout == "shorts"
     state = State(settings.state_path)
+    activity = Activity(settings.beside_state("activity.json"))
+    notifier = Notifier.from_env()
     now = datetime.now(timezone.utc)
     start = settings.start_time
+    live = not args.dry_run  # a live run publishes and keeps records; a dry run only renders
 
     publisher = None
-    if not args.dry_run:
+    if live:
+        if pub.paused:
+            _summary(["Paused from the dashboard: nothing was published."])
+            return 0
         if start and now < start:
             _summary([f"Not started yet: publishing begins at {pub.start_at}."])
             return 0
@@ -166,63 +233,129 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             return 2
 
     notes: list[str] = []
+
+    def report(kind: str, text: str, link: str = "") -> None:
+        activity.add(kind, text, link)
+        notes.append(f"- {text}{f' {link}' if link else ''}")
+        if kind == "error":
+            notifier.send(f"⚠️ {text}")
+
+    def finish(code: int, *lines: str) -> int:
+        if live:
+            state.save()
+            activity.save()
+        _summary([*lines, *notes])
+        return code
+
     if publisher:
-        notes = publisher.prepare(state)
-        state.save()
+        publisher.prepare(state, report)
+        if isinstance(publisher, BufferPublisher):
+            _study(settings, state, publisher.client, activity, now)
 
     budget = pub.max_per_run if args.limit is None else args.limit
-    featured = {c.lower() for c in settings.selection.featured_channels}
+    featured = {c.lower() for c in sel.featured_channels}
     day_ago = now - timedelta(hours=24)
     if publisher:  # skip the whole search when nothing may be posted yet
         _, why = plan([], featured, pub, state.recent(day_ago), now)
         if why != "no clip met the selection rules":
-            _summary([f"Nothing published: {why}.", *notes])
-            return 0
+            return finish(0, f"Nothing published: {why}.")
 
+    rules = active_rules(Path(settings.control_dir) / "rules.json", settings.beside_state("learned.json"))
+    kick = KickClient()
     try:
-        clips, big = discover(settings, KickClient())
+        clips, big = discover(settings, kick)
+        if sel.own_clips and featured:
+            clips += find_highlights(kick, sorted(featured), profile.kick_category, now)
     except KickError as exc:
         log.error("%s", exc)
-        return 1
+        report("error", f"The run stopped: {exc}")
+        return finish(1, "The run failed.")
     chosen, rejected = rank(
-        clips, profile, settings.selection, state.has,
+        clips, profile, sel, state.has,
         not_before=start if publisher else None,  # dry runs may use older clips
-        big_channels=big,
+        big_channels=big, rules=rules,
+        cap_channels=False,  # applied below to what is actually used, so that when a
+        # channel's best clip is dropped its next-best still gets a turn this run
     )
     log.info("%d clips qualify, %d rejected", len(chosen), len(rejected))
 
     work, out = Path(settings.work_dir), Path(settings.out_dir)
     transcriber = Transcriber(settings.captions) if settings.captions.enabled else None
+    judge = GameplayJudge() if sel.require_gameplay else None
     done: list[str] = []
     tried: set[str] = set()
     rendered: list[tuple[datetime, str]] = []  # dry runs: stands in for the publish history
+    used_moments = state.moments()
+    used_channels: dict[str, int] = {}
     failed = 0
+
+    def drop(clip: Clip, reason: str) -> None:
+        """Rule a clip out for good, so later runs don't fetch it again."""
+        log.info("skipping %s: %s", clip.id, reason)
+        if live:
+            state.skip(clip.id, reason)
+            activity.add("skipped", f"Skipped a clip from {clip.channel_slug}: {reason}")
+
     while len(done) < budget:
         uploads = state.recent(day_ago) if publisher else rendered
-        queue, why = plan([c for c in chosen if c.id not in tried], featured, pub, uploads, now,
-                          ignore_gap=publisher is None)
+        open_now = [c for c in chosen if c.id not in tried
+                    and used_channels.get(c.channel_slug, 0) < sel.max_per_channel]
+        queue, why = plan(open_now, featured, pub, uploads, now, ignore_gap=publisher is None)
         if not queue:
             if not done:
                 notes.append(f"Nothing {'published' if publisher else 'rendered'}: {why}.")
             break
         clip = queue[0]
         tried.add(clip.id)
-        meta = build_metadata(clip, profile, pub, shorts)
-        log.info("clip %s by %s (%d views, %s): %s", clip.id, clip.channel_slug, clip.views, why,
-                 meta["title"])
+
+        if clip.origin == "viewer" and not clip.started_at:
+            try:  # the feeds don't say when in the broadcast a clip is from
+                stream, began = kick.clip_moment(clip.id)
+                clip = replace(clip, livestream_id=stream or clip.livestream_id, started_at=began)
+            except KickError as exc:
+                log.debug("no timing for %s: %s", clip.id, exc)
+        if same_moment(clip, used_moments):
+            drop(clip, "the same moment was already posted")
+            continue
+
+        log.info("clip %s by %s (%d views, %s)", clip.id, clip.channel_slug, clip.views, why)
         try:
-            raw = dl.download(clip.media_url, work, clip.id)
-            chunks = _captions(transcriber, raw, settings) if transcriber else []
+            raw = cut_highlight(clip, work) if clip.origin == "auto" else dl.download(clip.media_url, work, clip.id)
+            if judge:
+                try:
+                    is_game, sureness = judge.is_gameplay(raw)
+                except VisionError as exc:
+                    log.warning("gameplay check unavailable, continuing without it: %s", exc)
+                    judge, is_game = None, True
+                if not is_game:
+                    drop(clip, f"no game on screen ({sureness:.0%} sure it is gameplay)")
+                    continue
+            transcript = transcriber.transcribe(raw) if transcriber else Transcript([], "", [])
+            if factor_for(clip, rules, transcript.text) == 0:
+                drop(clip, "ruled out by one of your rules")
+                continue
+            chunks = _captions(transcript, settings)
+            english: list[Line] = []
+            if (transcriber and chunks and settings.captions.english_subtitles
+                    and transcript.language not in ("", "en")):
+                try:
+                    english = transcriber.translate(raw, transcript.language)
+                except SpeechError as exc:
+                    log.warning("no English line for %s: %s", clip.id, exc)
+            meta = build_metadata(clip, profile, pub, shorts, [line.text for line in transcript.lines])
             video = rnd.render(
                 raw, out / f"{clip.id}.mp4", settings.render, settings.theme, settings.captions,
-                label=profile.label, title=meta["clean_title"], chunks=chunks,
-                max_duration=settings.selection.max_duration + 1,
+                label=profile.label, title=meta["clean_title"], chunks=chunks, translation=english,
+                max_duration=sel.max_duration + 1,
             )
-        except (dl.DownloadError, rnd.RenderError, SpeechError) as exc:
+        except (dl.DownloadError, rnd.RenderError, SpeechError, HighlightError) as exc:
             log.warning("skipping %s: %s", clip.id, exc)
             failed += 1
             continue
 
+        if clip.started_at and clip.livestream_id:
+            used_moments.append((clip.livestream_id, clip.started_at.timestamp(), clip.duration))
+        used_channels[clip.channel_slug] = used_channels.get(clip.channel_slug, 0) + 1
         if publisher is None:
             rendered.append((now, clip.channel_slug))
             done.append(f"- rendered `{video}` — {meta['title']}")
@@ -237,10 +370,14 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             break
         except PublishError as exc:
             log.error("%s", exc)
-            _summary([*done, f"Publishing failed: {exc}", *notes])
-            return 1
-        state.add(clip, result.ref, meta["title"], via=result.via, link=result.link)
+            report("error", f"Publishing “{meta['title']}” failed: {exc}")
+            return finish(1, *done)
+        state.add(clip, result.ref, meta["title"], via=result.via, link=result.link,
+                  extra={"language": language_name(transcript.language)} if transcript.language else None)
         state.save()  # after every upload, so a later crash can't cause a repost
+        by = "cut by the agent" if clip.origin == "auto" else f"from {clip.channel_slug}"
+        activity.add("published", f"Published “{meta['title']}” ({by})", result.link)
+        notifier.send(f"🎬 Published: {meta['title']}\n{result.link or 'Sent to Buffer; the YouTube link follows shortly.'}")
         where = result.link or f"sent to Buffer (post {result.ref})"
         done.append(f"- {where} ({pub.privacy}) — {meta['title']}")
         if not args.keep:
@@ -252,9 +389,28 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
     head = f"{verb} {len(done)} clip(s) for {profile.label}"
     if failed:
         head += f"; {failed} could not be processed"
-    _summary([head, *done, *notes])
-    # Every candidate failing points at a systemic problem (e.g. Kick blocking us).
-    return 1 if failed and not done else 0
+    if failed and not done:
+        # Every candidate failing points at a systemic problem (e.g. Kick blocking us).
+        report("error", f"{failed} clip(s) could not be processed and nothing was published")
+        return finish(1, head, *done)
+    return finish(0, head, *done)
+
+
+def _read_json(path: Path) -> dict:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def cmd_notify(args: argparse.Namespace) -> int:
+    """Send one message to the owner (used by the workflow when a run crashes)."""
+    notifier = Notifier.from_env()
+    if not notifier.enabled:
+        log.info("no notification channel is set up")
+        return 0
+    return 0 if notifier.send(args.message) else 1
 
 
 def _check_hosting(video: Path, name: str, prefix: str) -> str:
@@ -337,6 +493,9 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("channels", help="list the Buffer channels your API key can post to")
 
+    p_notify = sub.add_parser("notify", help="send a message to your Discord or Telegram")
+    p_notify.add_argument("message")
+
     args = parser.parse_args(argv)
     logging.basicConfig(
         level=logging.DEBUG if args.verbose else logging.INFO,
@@ -346,6 +505,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_auth(args)
     if args.command == "channels":
         return cmd_channels(args)
+    if args.command == "notify":
+        return cmd_notify(args)
     try:
         settings = load_settings(args.config, args.profile)
     except ConfigError as exc:

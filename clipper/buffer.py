@@ -33,6 +33,13 @@ query Status($input: PostInput!) {
   post(input: $input) { id status sentAt externalLink error { message } }
 }"""
 
+_METRICS = """
+query Metrics($input: PostsInput!) {
+  posts(first: 50, input: $input) {
+    edges { node { id externalLink metricsUpdatedAt metrics { type value } } }
+  }
+}"""
+
 _ORGS = "query Orgs { account { organizations { id name } } }"
 
 _CHANNELS = """
@@ -111,6 +118,37 @@ class Buffer:
             "link": str(post.get("externalLink") or ""),
             "error": str((post.get("error") or {}).get("message") or ""),
         }
+
+    def organization_id(self) -> str:
+        orgs = (self._gql(_ORGS).get("account") or {}).get("organizations") or []
+        if not orgs:
+            raise BufferError("the Buffer key has no organization")
+        return str(orgs[0]["id"])
+
+    def metrics(self, organization_id: str) -> dict[str, dict[str, Any]]:
+        """Views, likes and comments of the channel's latest 50 published posts,
+        by Buffer post id, in one request. Posts YouTube has not reported on
+        yet are left out."""
+        data = self._gql(_METRICS, {"input": {
+            "organizationId": organization_id,
+            "filter": {"status": ["sent"], "channelIds": [self.channel_id]},
+        }})
+        found: dict[str, dict[str, Any]] = {}
+        for edge in (data.get("posts") or {}).get("edges") or []:
+            node = edge.get("node") or {}
+            values = {m.get("type"): m.get("value") for m in node.get("metrics") or []}
+            views = values.get("views", values.get("impressions"))
+            # Until Buffer's daily read of YouTube has reached a post, its
+            # numbers are placeholders, not real zeros.
+            if views is None or not node.get("metricsUpdatedAt"):
+                continue
+            found[str(node.get("id"))] = {
+                "views": int(views),
+                "likes": int(values.get("reactions", values.get("likes", 0)) or 0),
+                "comments": int(values.get("comments", 0) or 0),
+                "link": str(node.get("externalLink") or ""),
+            }
+        return found
 
     def channels(self) -> list[dict[str, Any]]:
         """Every channel the key can post to (two or more requests; setup use only)."""

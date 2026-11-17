@@ -12,7 +12,7 @@ from pathlib import Path
 
 from PIL import ImageFont
 
-from .speech import Word
+from .speech import Line, Word
 
 FONTS_DIR = Path(__file__).resolve().parent.parent / "assets" / "fonts"
 CAPTION_FONT = ("Baloo Bhaijaan 2 ExtraBold", "BalooBhaijaan2-ExtraBold.ttf")  # Arabic + Latin
@@ -118,11 +118,32 @@ class TextLayout:
     glow: str = ""
     outline: str = "#000000"
     caption_style: str = "outline"  # outline | neon
+    sub_y: int = 0  # top of the translated line under the captions; 0 = none
     glow_strength: float = 0.3  # neon only: 0 = no backlight, 1 = strongest
 
 
+def wrap_lines(text: str, font_file: str, size: int, max_width: int, max_lines: int = 2) -> list[str]:
+    """Break text into at most `max_lines` lines that fit, ending with … if cut."""
+    lines: list[str] = []
+    current = ""
+    words = _plain(text).split()
+    for i, word in enumerate(words):
+        trial = f"{current} {word}".strip()
+        if not current or text_width(trial, font_file, size) <= max_width:
+            current = trial
+            continue
+        lines.append(current)
+        current = word
+        if len(lines) == max_lines:
+            lines[-1] = lines[-1].rstrip(" ,.") + "…"
+            return lines
+    if current:
+        lines.append(current)
+    return lines
+
+
 def build_ass(layout: TextLayout, chunks: list[Chunk], *, label: str = "", title: str = "",
-              duration: float = 0.0) -> str:
+              duration: float = 0.0, translation: list[Line] | None = None) -> str:
     """The full subtitle file for one clip."""
     w, h = layout.width, layout.height
     cx = w // 2
@@ -140,6 +161,7 @@ ScaledBorderAndShadow: yes
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Caption,{CAPTION_FONT[0]},{layout.caption_size},{white},{white},&H00000000,&H78000000,0,0,0,0,100,100,0,0,1,9,4,5,40,40,0,-1
 Style: Title,{TITLE_FONT[0]},60,{white},{white},{outline},&H96000000,-1,0,0,0,100,100,0,0,1,4,2,5,40,40,0,-1
+Style: Sub,{TITLE_FONT[0]},44,{white},{white},&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,3.5,1,8,40,40,0,-1
 Style: Label,{LABEL_FONT[0]},120,{white},{white},{outline},&H96000000,0,0,0,0,100,100,2,0,1,6,4,5,40,40,0,-1
 
 [Events]
@@ -165,6 +187,19 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             f"Dialogue: 1,{whole[0]},{whole[1]},Title,,0,0,0,,"
             f"{{\\an5\\pos({cx},{layout.title_y})\\fs{size}}}{text}"
         )
+
+    if layout.sub_y:
+        for i, line in enumerate(translation or []):
+            end = line.end
+            if i + 1 < len(translation):
+                end = min(end, translation[i + 1].start)  # never two translated lines at once
+            if end - line.start < 0.2:
+                continue
+            text = "\\N".join(wrap_lines(line.text, TITLE_FONT[1], 44, max_text - 60))
+            events.append(
+                f"Dialogue: 1,{ass_time(line.start)},{ass_time(end)},Sub,,0,0,0,,"
+                f"{{\\an8\\pos({cx},{layout.sub_y})}}{text}"
+            )
 
     neon = layout.caption_style == "neon"
     for chunk in chunks:
