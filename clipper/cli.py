@@ -1,4 +1,4 @@
-"""Command line: `python -m clipper discover | run | auth`."""
+"""Command line: `python -m clipper discover | run | channels | auth`."""
 
 from __future__ import annotations
 
@@ -8,21 +8,25 @@ import os
 import shutil
 import sys
 from dataclasses import replace
+from datetime import datetime, timezone
 from pathlib import Path
 
 from . import download as dl
 from . import render as rnd
+from .buffer import Buffer, BufferError
 from .config import ConfigError, Settings, load_settings
+from .hosting import GitMediaHost, HostingError
 from .kick import KickClient, KickError
 from .models import Clip
+from .publishers import PublishError, PublishLimit, SetupError, make_publisher
 from .ranking import rank, score
+from .speech import SpeechError, Transcriber
 from .state import State
+from .subtitles import Chunk, chunk_words, drawable
 from .titles import build_metadata
-from .youtube import QuotaExceeded, YouTube, YouTubeError, authorize
+from .youtube import YouTubeError, authorize
 
 log = logging.getLogger("clipper")
-
-YT_ENV = ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN")
 
 
 def discover(settings: Settings, kick: KickClient) -> list[Clip]:
@@ -91,6 +95,21 @@ def cmd_discover(settings: Settings, args: argparse.Namespace) -> int:
     return 0
 
 
+def _captions(transcriber: Transcriber, media: Path, settings: Settings) -> list[Chunk]:
+    """Spoken captions for one clip; empty when nobody speaks."""
+    words, language = transcriber.transcribe(media)
+    if not words:
+        log.info("no speech found, rendering without captions")
+        return []
+    if not all(drawable(w.text) for w in words):
+        log.info("speech is in a script the caption font can't draw (%s), no captions", language)
+        return []
+    cfg = settings.captions
+    chunks = chunk_words(words, cfg.max_words, cfg.max_chars)
+    log.info("captions: %d words in %d lines (%s)", len(words), len(chunks), language or "?")
+    return chunks
+
+
 def _summary(lines: list[str]) -> None:
     text = "\n".join(lines)
     print("\n" + text)
@@ -104,32 +123,44 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
     profile, pub = settings.active, settings.publish
     shorts = settings.render.layout == "shorts"
     state = State(settings.state_path)
+    now = datetime.now(timezone.utc)
+    start = settings.start_time
 
-    youtube = None
+    publisher = None
     if not args.dry_run:
-        missing = [name for name in YT_ENV if not os.environ.get(name)]
-        if missing:
-            log.error("missing %s — set them, or use --dry-run to render without uploading",
-                      ", ".join(missing))
+        if start and now < start:
+            _summary([f"Not started yet: publishing begins at {pub.start_at}."])
+            return 0
+        try:
+            publisher = make_publisher(pub)
+        except SetupError as exc:
+            log.error("%s — or use --dry-run to render without publishing", exc)
             return 2
-        youtube = YouTube(*(os.environ[name] for name in YT_ENV))
+
+    notes: list[str] = []
+    if publisher:
+        notes = publisher.prepare(state)
+        state.save()
 
     budget = pub.max_per_run if args.limit is None else args.limit
-    if not args.dry_run:
+    if publisher:
         budget = min(budget, pub.max_per_day - state.uploads_last_day())
     if budget <= 0:
-        _summary(["Nothing to do: the daily upload limit is already used up."])
+        _summary(["Nothing to do: the daily limit is already used up.", *notes])
         return 0
 
     try:
-        chosen, rejected = rank(discover(settings, KickClient()), profile, settings.selection,
-                                state.has)
+        chosen, rejected = rank(
+            discover(settings, KickClient()), profile, settings.selection, state.has,
+            not_before=start if publisher else None,  # dry runs may use older clips
+        )
     except KickError as exc:
         log.error("%s", exc)
         return 1
     log.info("%d clips qualify, %d rejected", len(chosen), len(rejected))
 
     work, out = Path(settings.work_dir), Path(settings.out_dir)
+    transcriber = Transcriber(settings.captions) if settings.captions.enabled else None
     done: list[str] = []
     failed = 0
     for clip in chosen:
@@ -140,49 +171,80 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
                  meta["title"])
         try:
             raw = dl.download(clip.media_url, work, clip.id)
+            chunks = _captions(transcriber, raw, settings) if transcriber else []
             video = rnd.render(
-                raw, out / f"{clip.channel_slug}-{clip.id}.mp4", settings.render,
-                title=meta["clean_title"], streamer=clip.channel_name,
-                channel_slug=clip.channel_slug,
+                raw, out / f"{clip.id}.mp4", settings.render, settings.theme, settings.captions,
+                label=profile.label, title=meta["clean_title"], chunks=chunks,
                 max_duration=settings.selection.max_duration + 1,
             )
-        except (dl.DownloadError, rnd.RenderError) as exc:
+        except (dl.DownloadError, rnd.RenderError, SpeechError) as exc:
             log.warning("skipping %s: %s", clip.id, exc)
             failed += 1
             continue
 
-        if youtube is None:
+        if publisher is None:
             done.append(f"- rendered `{video}` — {meta['title']}")
+            if args.check_hosting and len(done) == 1:
+                notes.append(_check_hosting(video, clip.id, pub.media_prefix))
             continue
         try:
-            video_id = youtube.upload(
-                video, title=meta["title"], description=meta["description"], tags=meta["tags"],
-                category_id=pub.category_id, privacy=pub.privacy,
-            )
-        except QuotaExceeded as exc:
+            result = publisher.publish(video, clip, meta)
+        except PublishLimit as exc:
             log.warning("stopping: %s", exc)
+            notes.append(f"Stopped early: {exc}")
             break
-        except YouTubeError as exc:
+        except PublishError as exc:
             log.error("%s", exc)
-            _summary(done + [f"Upload failed: {exc}"])
+            _summary([*done, f"Publishing failed: {exc}", *notes])
             return 1
-        state.add(clip, video_id, meta["title"])
+        state.add(clip, result.ref, meta["title"], via=result.via, link=result.link)
         state.save()  # after every upload, so a later crash can't cause a repost
-        done.append(f"- https://youtu.be/{video_id} ({pub.privacy}) — {meta['title']}")
+        where = result.link or f"sent to Buffer (post {result.ref})"
+        done.append(f"- {where} ({pub.privacy}) — {meta['title']}")
         if not args.keep:
             video.unlink(missing_ok=True)
 
     if not args.keep:
         shutil.rmtree(work, ignore_errors=True)
-    verb = "Rendered" if args.dry_run else "Published"
+    verb = "Published" if publisher else "Rendered"
     head = f"{verb} {len(done)} clip(s) for {profile.label}"
     if failed:
         head += f"; {failed} could not be processed"
     if not done and not chosen:
         head += " — no clip met the selection rules this run"
-    _summary([head, *done])
+    _summary([head, *done, *notes])
     # Every candidate failing points at a systemic problem (e.g. Kick blocking us).
     return 1 if failed and not done else 0
+
+
+def _check_hosting(video: Path, name: str, prefix: str) -> str:
+    """Dry-run check that a clip can be hosted publicly; leaves nothing behind."""
+    host = GitMediaHost(".", prefix=prefix)
+    try:
+        url, branch = host.upload(video, f"check-{name}")
+        try:
+            host.wait_until_public(url)
+        finally:
+            host.remove(branch)
+    except HostingError as exc:
+        return f"Hosting check FAILED: {exc}"
+    return "Hosting check passed: a clip was publicly reachable, then removed."
+
+
+def cmd_channels(args: argparse.Namespace) -> int:
+    key = os.environ.get("BUFFER_API_KEY", "")
+    if not key:
+        log.error("set BUFFER_API_KEY first")
+        return 2
+    try:
+        channels = Buffer(key, "").channels()
+    except BufferError as exc:
+        log.error("%s", exc)
+        return 1
+    for ch in channels:
+        state = " (disconnected)" if ch.get("isDisconnected") else ""
+        print(f"{ch['id']}  {ch['service']:<10} {ch['name']}{state}")
+    return 0
 
 
 def cmd_auth(args: argparse.Namespace) -> int:
@@ -212,9 +274,13 @@ def main(argv: list[str] | None = None) -> int:
     p_run.add_argument("--dry-run", action="store_true", help="render only, upload nothing")
     p_run.add_argument("--limit", type=int, help="clips to publish this run")
     p_run.add_argument("--keep", action="store_true", help="keep rendered files after upload")
+    p_run.add_argument("--check-hosting", action="store_true",
+                       help="with --dry-run: also test that a clip can be hosted publicly")
 
-    p_auth = sub.add_parser("auth", help="one-time YouTube sign-in to get a refresh token")
+    p_auth = sub.add_parser("auth", help="one-time YouTube sign-in (only for publish.via: youtube)")
     p_auth.add_argument("--port", type=int, default=8765)
+
+    sub.add_parser("channels", help="list the Buffer channels your API key can post to")
 
     args = parser.parse_args(argv)
     logging.basicConfig(
@@ -223,6 +289,8 @@ def main(argv: list[str] | None = None) -> int:
     )
     if args.command == "auth":
         return cmd_auth(args)
+    if args.command == "channels":
+        return cmd_channels(args)
     try:
         settings = load_settings(args.config, args.profile)
     except ConfigError as exc:

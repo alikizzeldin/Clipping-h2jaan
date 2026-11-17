@@ -2,15 +2,20 @@ name: Clip
 
 on:
   schedule:
-    # Every 3 hours. Scheduled runs do nothing until the repository variable
-    # CLIPPER_ENABLED is set to "true".
-    - cron: "23 */3 * * *"
+    # Every 2 hours, at 7 past the odd hours (UTC). Nothing is published
+    # before publish.start_at in config.yaml. To pause, set the repository
+    # variable CLIPPER_PAUSED to "true".
+    - cron: "7 1-23/2 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
-        description: Render only, upload nothing (videos are attached to the run)
+        description: Render only, publish nothing (videos are attached to the run)
         type: boolean
         default: true
+      check_hosting:
+        description: With dry run - also test that a clip can be hosted for Buffer
+        type: boolean
+        default: false
       profile:
         description: Game profile (blank = CLIPPER_PROFILE variable, then config.yaml)
         type: string
@@ -29,35 +34,62 @@ concurrency:
 
 jobs:
   clip:
-    if: github.event_name == 'workflow_dispatch' || vars.CLIPPER_ENABLED == 'true'
+    if: github.event_name == 'workflow_dispatch' || vars.CLIPPER_PAUSED != 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     env:
       CLIPPER_PROFILE: ${{ inputs.profile || vars.CLIPPER_PROFILE }}
       CLIPPER_PRIVACY: ${{ vars.CLIPPER_PRIVACY }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
       DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+      CHECK_HOSTING: ${{ github.event_name == 'workflow_dispatch' && inputs.check_hosting }}
       LIMIT: ${{ inputs.limit }}
+      HF_HUB_DISABLE_XET: "1"
     steps:
       - uses: actions/checkout@v4
 
+      - name: Has the start time passed?
+        id: gate
+        run: |
+          start=$(sed -nE 's/^[[:space:]]*start_at:[[:space:]]*"?([^"#[:space:]]+).*/\1/p' config.yaml | head -1)
+          if [ "$DRY_RUN" != "true" ] && [ -n "$start" ] && [ "$(date -u +%s)" -lt "$(date -u -d "$start" +%s)" ]; then
+            echo "Not started yet: publishing begins at $start." | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+        if: steps.gate.outputs.go == 'true'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
 
       - name: Install Python packages
+        if: steps.gate.outputs.go == 'true'
         run: pip install -r requirements.txt
 
+      - name: Keep the Whisper model between runs
+        if: steps.gate.outputs.go == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-${{ hashFiles('config.yaml') }}
+          restore-keys: whisper-
+
       - name: Find, render and publish clips
+        if: steps.gate.outputs.go == 'true'
         run: |
           args=()
           if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          if [ "$CHECK_HOSTING" = "true" ]; then args+=(--check-hosting); fi
           if [ -n "$LIMIT" ]; then args+=(--limit "$LIMIT"); fi
           python -m clipper run "${args[@]}"
 

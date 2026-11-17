@@ -1,13 +1,20 @@
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pytest
 
-from clipper.config import ConfigError, load_settings
-from clipper.render import drawable, shorts_geometry
+from clipper.config import ConfigError, load_settings, parse_start
+from clipper.render import REPO_ROOT, shorts_window
 from clipper.state import State
 
 REPO = Path(__file__).resolve().parent.parent
+MINIMAL = "profile: a\nprofiles:\n  a: {kick_category: x, label: X}\n"
+
+
+@pytest.fixture(autouse=True)
+def clean_env(monkeypatch):
+    monkeypatch.delenv("CLIPPER_PROFILE", raising=False)
+    monkeypatch.delenv("CLIPPER_PRIVACY", raising=False)
 
 
 def test_state_round_trip_and_daily_count(tmp_path, make_clip, now):
@@ -23,40 +30,72 @@ def test_state_round_trip_and_daily_count(tmp_path, make_clip, now):
     assert again.uploads_last_day(now) == 1
 
 
-def test_repo_config_loads_and_has_both_games(monkeypatch):
-    monkeypatch.delenv("CLIPPER_PROFILE", raising=False)
-    monkeypatch.delenv("CLIPPER_PRIVACY", raising=False)
+def test_unconfirmed_lists_buffer_posts_until_their_outcome_is_known(tmp_path, make_clip, now):
+    state = State(tmp_path / "s.json")
+    state.add(make_clip(id="a"), "post_a", "A", now - timedelta(hours=3), via="buffer")
+    state.add(make_clip(id="b"), "post_b", "B", now - timedelta(hours=1), via="buffer")
+    state.add(make_clip(id="c"), "ytid", "C", now, via="youtube", link="https://youtu.be/ytid")
+    state.add(make_clip(id="old"), "post_old", "Old", now - timedelta(days=5), via="buffer")
+    since = now - timedelta(days=2)
+    assert [clip_id for clip_id, _ in state.unconfirmed("buffer", since)] == ["a", "b"]
+    state.update("a", status="sent", link="https://youtube.com/shorts/x")
+    state.update("b", status="error", error="nope")
+    assert state.unconfirmed("buffer", since) == []
+
+
+def test_repo_config_loads_with_both_games_and_their_artwork():
     settings = load_settings(REPO / "config.yaml")
-    assert settings.profile == "valorant"
+    assert set(settings.profiles) >= {"gta6", "valorant"}
     assert settings.profiles["gta6"].kick_category == "grand-theft-auto-vi"
-    assert settings.publish.privacy == "private"
-    assert load_settings(REPO / "config.yaml", "gta6").active.label == "GTA 6"
+    for name in ("gta6", "valorant"):
+        theme = load_settings(REPO / "config.yaml", name).theme
+        assert (REPO_ROOT / theme.background).exists(), name
+    assert settings.start_time is None or settings.start_time.tzinfo is not None
 
 
 def test_profile_and_privacy_can_come_from_environment(monkeypatch):
-    monkeypatch.setenv("CLIPPER_PROFILE", "gta6")
-    monkeypatch.setenv("CLIPPER_PRIVACY", "public")
+    monkeypatch.setenv("CLIPPER_PROFILE", "valorant")
+    monkeypatch.setenv("CLIPPER_PRIVACY", "unlisted")
     settings = load_settings(REPO / "config.yaml")
-    assert settings.profile == "gta6" and settings.publish.privacy == "public"
+    assert settings.profile == "valorant" and settings.publish.privacy == "unlisted"
 
 
-def test_typos_in_config_are_reported(tmp_path, monkeypatch):
-    monkeypatch.delenv("CLIPPER_PROFILE", raising=False)
+@pytest.mark.parametrize("extra,match", [
+    ("selection:\n  min_veiws: 3\n", "min_veiws"),
+    ("publish:\n  via: tiktok\n", "buffer or youtube"),
+    ("publish:\n  via: buffer\nrender:\n  layout: landscape\n", "vertical"),
+    ("publish:\n  start_at: tomorrow\n", "start_at"),
+    ("publish:\n  start_at: '2026-11-18T13:00:00'\n", "offset"),
+    ("themes:\n  t: {highlight: pink}\n", "colours"),
+])
+def test_config_mistakes_are_reported(tmp_path, extra, match):
     bad = tmp_path / "config.yaml"
-    bad.write_text("profile: a\nprofiles:\n  a: {kick_category: x, label: X}\nselection:\n  min_veiws: 3\n")
-    with pytest.raises(ConfigError, match="min_veiws"):
+    bad.write_text(MINIMAL + extra)
+    with pytest.raises(ConfigError, match=match):
         load_settings(bad)
+
+
+def test_unknown_profile_and_theme_are_reported(tmp_path):
+    bad = tmp_path / "config.yaml"
     bad.write_text("profile: missing\nprofiles:\n  a: {kick_category: x, label: X}\n")
     with pytest.raises(ConfigError, match="not defined"):
         load_settings(bad)
+    bad.write_text("profile: a\nprofiles:\n  a: {kick_category: x, label: X, theme: nope}\n")
+    with pytest.raises(ConfigError, match="theme 'nope'"):
+        load_settings(bad)
 
 
-def test_shorts_geometry():
-    assert shorts_geometry(1920, 1080, 1.35) == (1458, 820, 1080, 820)
-    assert shorts_geometry(1920, 1080, 1.0) == (1080, 608, 1080, 608)
-    assert shorts_geometry(1080, 1920, 1.35) == (1080, 1920, 1080, 1920)  # already vertical
+def test_start_time_is_read_in_its_own_time_zone():
+    assert parse_start("2026-11-18T13:00:00+02:00") == datetime(2026, 11, 18, 11, tzinfo=timezone.utc)
+    assert parse_start("") is None
 
 
-def test_drawable_only_accepts_latin_text():
-    assert drawable("Waylay Ace 5k — clutch!")
-    assert not drawable("汗耐久") and not drawable("نذاله") and not drawable("")
+def test_shorts_window_geometry():
+    win = shorts_window(1920, 1080, 1.35)
+    assert (win.scaled_w, win.scaled_h, win.x, win.y, win.w, win.h) == (1458, 820, 24, 420, 1032, 820)
+    assert win.bottom == 1240 and win.caption_y(1560) == 1400
+    framed = shorts_window(1920, 1080, 1.35, top=374, inset=54)
+    assert (framed.x, framed.y, framed.w, framed.bottom) == (54, 374, 972, 1194)
+    vertical = shorts_window(1080, 1920, 1.35)  # already vertical: fitted by height
+    assert vertical.scaled_h == 1000 and vertical.w == vertical.scaled_w == 562
+    assert vertical.x == (1080 - 562) // 2

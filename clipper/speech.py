@@ -1,0 +1,129 @@
+"""Speech to text: what the streamer says, word by word, with timings.
+
+Uses Whisper through the `faster-whisper` package (CPU is enough). The spoken
+language is detected per clip unless one is forced in the config, so Arabic,
+English and the other languages Whisper knows all work.
+"""
+
+from __future__ import annotations
+
+import logging
+import re
+import subprocess
+from dataclasses import dataclass
+from pathlib import Path
+
+from .config import Captions
+
+log = logging.getLogger(__name__)
+
+SAMPLE_RATE = 16000
+
+# Whisper invents these over music, gunfire and silence; never show them.
+HALLUCINATIONS = (
+    "thanks for watching", "thank you for watching", "subscribe to", "like and subscribe",
+    "see you in the next video", "subtitles by", "amara.org", "transcribed by",
+    "ترجمة نانسي", "اشتركوا في القناة", "اشترك في القناة", "شكرا للمشاهدة",
+    "شكرا على المشاهدة", "ترجمة", "لا تنسوا الاشتراك",
+)
+
+_EDGE_PUNCT = " \t\n.,!?؟،؛:;\"“”«»()[]{}…—–-*~"
+_DIACRITICS = re.compile("[ً-ْٰـ]")  # Arabic tashkeel and tatweel
+
+
+class SpeechError(RuntimeError):
+    pass
+
+
+@dataclass(frozen=True)
+class Word:
+    text: str
+    start: float
+    end: float
+
+
+def clean_word(raw: str) -> str:
+    text = _DIACRITICS.sub("", raw).strip(_EDGE_PUNCT)
+    text = re.sub(r"(.)\1{3,}", r"\1\1\1", text)  # "ايييييييي" -> "اييي"
+    return re.sub(r"[{}\\<>]", "", text)
+
+
+def is_hallucination(text: str) -> bool:
+    lowered = text.lower()
+    return any(phrase in lowered for phrase in HALLUCINATIONS)
+
+
+def load_audio(path: Path):
+    """Decode any media file to 16 kHz mono float32 samples."""
+    import numpy as np
+
+    done = subprocess.run(
+        ["ffmpeg", "-v", "error", "-i", str(path), "-vn", "-f", "f32le", "-ac", "1",
+         "-ar", str(SAMPLE_RATE), "-"],
+        capture_output=True,
+    )
+    if done.returncode != 0:
+        raise SpeechError(f"could not read audio: {done.stderr.decode(errors='replace')[-200:]}")
+    return np.frombuffer(done.stdout, dtype=np.float32)
+
+
+class Transcriber:
+    """Loads the Whisper model once and reuses it for every clip in a run."""
+
+    def __init__(self, cfg: Captions):
+        self.cfg = cfg
+        self._model = None
+
+    def _load(self):
+        if self._model is None:
+            try:
+                from faster_whisper import WhisperModel
+            except ImportError as exc:
+                raise SpeechError(
+                    "captions need the faster-whisper package: pip install -r requirements.txt"
+                ) from exc
+            log.info("loading Whisper model %s", self.cfg.model)
+            self._model = WhisperModel(self.cfg.model, device="cpu", compute_type="int8")
+        return self._model
+
+    def transcribe(self, path: Path) -> tuple[list[Word], str]:
+        """Return (spoken words in order, detected language code)."""
+        audio = load_audio(path)
+        if audio.size < SAMPLE_RATE:  # under a second of sound
+            return [], ""
+        language = None if self.cfg.language in ("", "auto") else self.cfg.language
+        try:
+            segments, info = self._load().transcribe(
+                audio,
+                language=language,
+                word_timestamps=True,
+                vad_filter=True,
+                beam_size=5,
+                condition_on_previous_text=False,
+            )
+            segments = list(segments)
+        except SpeechError:
+            raise
+        except Exception as exc:  # model download, decoding, out of memory...
+            raise SpeechError(f"transcription failed: {exc}") from exc
+
+        if language is None and info.language_probability < 0.5:
+            # It could not even tell the language: game noise, not speech.
+            log.info("no clear speech (language guess %s at %.0f%%)", info.language,
+                     info.language_probability * 100)
+            return [], ""
+
+        words: list[Word] = []
+        for seg in segments:
+            if seg.avg_logprob < -1.0 or seg.no_speech_prob > 0.8:
+                continue  # the model itself doubts these words
+            if seg.compression_ratio > 2.4 or is_hallucination(seg.text):
+                continue  # looping gibberish, or a stock phrase from its training data
+            for w in seg.words or []:
+                text = clean_word(w.word)
+                if not text:
+                    continue
+                start = float(w.start)
+                end = min(float(w.end), start + 1.5)  # a word stretched across a silence
+                words.append(Word(text, start, max(end, start + 0.05)))
+        return words, str(info.language or "")

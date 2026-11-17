@@ -22,16 +22,36 @@ class State:
     def has(self, clip_id: str) -> bool:
         return clip_id in self.published
 
-    def add(self, clip: Clip, video_id: str, title: str, when: datetime | None = None) -> None:
+    def add(self, clip: Clip, video_id: str, title: str, when: datetime | None = None,
+            via: str = "youtube", link: str = "") -> None:
         when = when or datetime.now(timezone.utc)
         self.published[clip.id] = {
-            "video_id": video_id,
+            "video_id": video_id,  # YouTube id, or Buffer's post id when via == "buffer"
+            "via": via,
+            "link": link,
             "title": title,
             "channel": clip.channel_slug,
             "source": clip.source,
             "category": clip.category_slug,
             "uploaded_at": when.isoformat(timespec="seconds"),
         }
+
+    def update(self, clip_id: str, **fields: str) -> None:
+        self.published[clip_id].update(fields)
+
+    def unconfirmed(self, via: str, since: datetime) -> list[tuple[str, dict]]:
+        """Recent posts handed to `via` whose outcome isn't recorded yet, oldest first."""
+        found = []
+        for clip_id, entry in self.published.items():
+            if entry.get("via") != via or entry.get("link") or entry.get("status"):
+                continue
+            try:
+                when = datetime.fromisoformat(entry["uploaded_at"])
+            except (KeyError, ValueError):
+                continue
+            if when >= since:
+                found.append((when, clip_id, entry))
+        return [(clip_id, entry) for _, clip_id, entry in sorted(found, key=lambda f: f[0])]
 
     def uploads_since(self, since: datetime) -> int:
         count = 0

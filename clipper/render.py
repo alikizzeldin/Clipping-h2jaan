@@ -1,39 +1,32 @@
 """Re-cut a downloaded clip into the upload format with ffmpeg.
 
-`shorts` puts the gameplay, zoomed, over a blurred copy of itself in a
-1080x1920 frame, with the clip title above and the streamer credit below.
-`landscape` keeps 1920x1080 and adds a small credit in the corner.
-Text is drawn with Pillow into a transparent overlay so no ffmpeg text
-escaping is involved.
+`shorts` (1080x1920) shows the gameplay in a framed window on a themed
+background, with the game label and clip title above it and the spoken
+captions below it. Without a theme the background is a blurred copy of the
+clip. `landscape` keeps 1920x1080 and only adds captions.
 """
 
 from __future__ import annotations
 
 import json
 import logging
+import shutil
 import subprocess
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
-from .config import Render
+from .config import Captions, Render, Theme
+from .subtitles import FONTS_DIR, Chunk, TextLayout, build_ass
 
 log = logging.getLogger(__name__)
 
-KICK_GREEN = (83, 252, 24, 255)
-WHITE = (255, 255, 255, 255)
-BLACK = (0, 0, 0, 255)
-
-FONT_CANDIDATES = [
-    "/usr/share/fonts/opentype/inter/InterDisplay-ExtraBold.otf",
-    "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf",
-    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
-    "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
-    "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
-    "C:/Windows/Fonts/arialbd.ttf",
-]
+REPO_ROOT = Path(__file__).resolve().parent.parent
+WIDTH, HEIGHT = 1080, 1920
+SAFE_TOP = 150  # YouTube's own header covers what is above this
+WINDOW_MAX_HEIGHT = 1000
 
 
 class RenderError(RuntimeError):
@@ -80,145 +73,183 @@ def _even(value: float) -> int:
     return max(2, int(round(value / 2)) * 2)
 
 
-def _font(size: int, font_path: str = "") -> ImageFont.FreeTypeFont:
-    for candidate in [font_path, *FONT_CANDIDATES]:
-        if candidate and Path(candidate).exists():
-            try:
-                return ImageFont.truetype(candidate, size)
-            except OSError:
-                continue
-    return ImageFont.load_default(size)
+@dataclass(frozen=True)
+class Window:
+    """Where the gameplay sits in the vertical frame."""
+
+    scaled_w: int  # the clip is scaled to this size...
+    scaled_h: int
+    x: int  # ...then centre-cropped to the window at this position
+    y: int
+    w: int
+    h: int
+
+    @property
+    def bottom(self) -> int:
+        return self.y + self.h
+
+    def caption_y(self, floor: int) -> int:
+        """Vertical centre of the captions: midway between the gameplay and `floor`."""
+        middle = self.bottom + (floor - self.bottom) // 2
+        return max(self.bottom + 80, min(middle, floor - 60))
 
 
-def drawable(text: str) -> bool:
-    """True if the bundled Latin fonts can draw this text (no CJK, Arabic, emoji...)."""
-    return bool(text) and all(ord(ch) < 0x250 or ch in "‘’“”–—…" for ch in text)
-
-
-def _wrap(draw: ImageDraw.ImageDraw, text: str, font, max_width: int, max_lines: int) -> list[str]:
-    lines: list[str] = []
-    current = ""
-    for word in text.split():
-        trial = f"{current} {word}".strip()
-        if draw.textlength(trial, font=font) <= max_width or not current:
-            current = trial
-        else:
-            lines.append(current)
-            current = word
-    if current:
-        lines.append(current)
-    if len(lines) > max_lines:
-        lines = lines[:max_lines]
-        lines[-1] = lines[-1].rstrip(" .,") + "…"
-    return lines
-
-
-def _text(draw, xy, text, font, fill, anchor="ma", stroke=4):
-    draw.text(xy, text, font=font, fill=fill, anchor=anchor, stroke_width=stroke, stroke_fill=BLACK)
-
-
-def shorts_overlay(
-    path: Path, title: str, streamer: str, channel_slug: str, fg_top: int, fg_bottom: int,
-    font_path: str = "",
-) -> Path:
-    """Transparent 1080x1920 layer: title above the gameplay, credit below it."""
-    img = Image.new("RGBA", (1080, 1920), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
-
-    if drawable(title) and fg_top >= 220:
-        size = 68
-        while size >= 44:
-            font = _font(size, font_path)
-            lines = _wrap(draw, title, font, 980, 3)
-            line_h = int(size * 1.2)
-            if len(lines) * line_h <= fg_top - 150 or size == 44:
-                break
-            size -= 6
-        y = fg_top - 50 - len(lines) * line_h
-        for line in lines:
-            _text(draw, (540, y), line, font, WHITE, stroke=5)
-            y += line_h
-
-    if 1920 - fg_bottom >= 200:
-        name = streamer if drawable(streamer) else channel_slug
-        name_font = _font(64, font_path)
-        while draw.textlength(name, font=name_font) > 980 and name_font.size > 36:
-            name_font = _font(name_font.size - 4, font_path)
-        _text(draw, (540, fg_bottom + 44), name, name_font, WHITE, stroke=5)
-        _text(draw, (540, fg_bottom + 44 + 84), f"kick.com/{channel_slug}", _font(42, font_path),
-              KICK_GREEN, stroke=4)
-
-    img.save(path)
-    return path
-
-
-def landscape_overlay(path: Path, channel_slug: str, font_path: str = "") -> Path:
-    img = Image.new("RGBA", (1920, 1080), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
-    _text(draw, (40, 1040), f"kick.com/{channel_slug}", _font(40, font_path), KICK_GREEN,
-          anchor="ls", stroke=4)
-    img.save(path)
-    return path
-
-
-def shorts_geometry(width: int, height: int, zoom: float) -> tuple[int, int, int, int]:
-    """(scaled w, scaled h, cropped w, cropped h) of the gameplay inside 1080x1920."""
-    scaled_w = 1080 * max(zoom, 1.0)
+def shorts_window(width: int, height: int, zoom: float, top: int = 420, inset: int = 24) -> Window:
+    scaled_w = WIDTH * max(zoom, 1.0)
     scaled_h = scaled_w * height / width
-    if scaled_h > 1920:  # already-vertical source: fit by height instead
-        scaled_h = 1920
-        scaled_w = scaled_h * width / height
+    if scaled_h > WINDOW_MAX_HEIGHT:  # tall or vertical source: fit by height
+        scaled_w *= WINDOW_MAX_HEIGHT / scaled_h
+        scaled_h = WINDOW_MAX_HEIGHT
     sw, sh = _even(scaled_w), _even(scaled_h)
-    return sw, sh, min(sw, 1080), min(sh, 1920)
+    w = min(sw, _even(WIDTH - 2 * inset))
+    return Window(sw, sh, (WIDTH - w) // 2, top, w, sh)
+
+
+def _rgb(hex_color: str) -> tuple[int, int, int]:
+    value = hex_color.lstrip("#")
+    return int(value[0:2], 16), int(value[2:4], 16), int(value[4:6], 16)
+
+
+def _rounded_mask(box: tuple[int, int, int, int], radius: int) -> Image.Image:
+    """Antialiased rounded-rectangle mask the size of the frame."""
+    scale = 2
+    big = Image.new("L", (WIDTH * scale, HEIGHT * scale), 0)
+    ImageDraw.Draw(big).rounded_rectangle([v * scale for v in box], radius * scale, fill=255)
+    return big.resize((WIDTH, HEIGHT), Image.LANCZOS)
+
+
+def _resolve(path: str) -> Path | None:
+    if not path:
+        return None
+    candidate = Path(path)
+    if not candidate.is_absolute():
+        candidate = REPO_ROOT / candidate
+    return candidate if candidate.exists() else None
+
+
+def build_frame(dest: Path, theme: Theme, window: Window) -> bool:
+    """Write the layer that sits over the gameplay: background art with the
+    window cut out, plus the window's border and glow.
+
+    Returns True if the layer has opaque background art (so the caller does
+    not need to supply a background of its own).
+    """
+    art = _resolve(theme.background)
+    if art:
+        frame = Image.open(art).convert("RGBA").resize((WIDTH, HEIGHT), Image.LANCZOS)
+        radius = theme.radius
+    else:
+        frame = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
+        radius = 0  # a blurred-video background can't hide square corners
+
+    border_w = max(0, theme.border_width)
+    inner = (window.x, window.y, window.x + window.w, window.bottom)
+    outer = (inner[0] - border_w, inner[1] - border_w, inner[2] + border_w, inner[3] + border_w)
+    hole = _rounded_mask(inner, radius)
+    ring = ImageChops.subtract(_rounded_mask(outer, radius + border_w if radius else 0), hole)
+
+    if theme.glow:
+        halo = _rounded_mask(outer, radius + border_w).filter(ImageFilter.GaussianBlur(22))
+        glow = Image.new("RGBA", (WIDTH, HEIGHT), (*_rgb(theme.glow), 0))
+        glow.putalpha(halo.point(lambda v: int(v * 0.85)))
+        frame = Image.alpha_composite(frame, glow)
+
+    first, second = (theme.border + theme.border)[:2] if theme.border else ("#FFFFFF", "#FFFFFF")
+    ramp = Image.linear_gradient("L").rotate(90, expand=True).resize((WIDTH, HEIGHT))
+    border = Image.composite(
+        Image.new("RGB", (WIDTH, HEIGHT), _rgb(second)), Image.new("RGB", (WIDTH, HEIGHT), _rgb(first)),
+        ramp,
+    ).convert("RGBA")
+    border.putalpha(ring)
+    frame = Image.alpha_composite(frame, border)
+
+    # Punch the window through everything, so the gameplay shows.
+    alpha = ImageChops.subtract(frame.getchannel("A"), hole)
+    frame.putalpha(alpha)
+    frame.save(dest)
+    return art is not None
 
 
 def render(
-    src: Path, dest: Path, cfg: Render, *, title: str, streamer: str, channel_slug: str,
+    src: Path, dest: Path, cfg: Render, theme: Theme, captions: Captions, *,
+    label: str = "", title: str = "", chunks: list[Chunk] | None = None,
     max_duration: float | None = None,
 ) -> Path:
     info = probe(src)
     dest.parent.mkdir(parents=True, exist_ok=True)
-    overlay = dest.with_suffix(".overlay.png")
+    chunks = chunks or []
     fps_cap = "fps=60," if info.fps > 61 else ""
+    label = label if cfg.show_label and theme.show_label else ""
+    title = title if cfg.overlay_title and theme.show_title else ""
 
-    if cfg.layout == "shorts":
-        sw, sh, cw, ch = shorts_geometry(info.width, info.height, cfg.zoom)
-        top = (1920 - ch) // 2
-        shorts_overlay(overlay, title if cfg.overlay_title else "", streamer, channel_slug,
-                       top, top + ch, cfg.font_path)
-        graph = (
-            f"[0:v]{fps_cap}split=2[bgsrc][fgsrc];"
-            "[bgsrc]scale=270:480:force_original_aspect_ratio=increase,crop=270:480,"
-            "boxblur=10:2,scale=1080:1920,eq=brightness=-0.14:saturation=1.15[bg];"
-            f"[fgsrc]scale={sw}:{sh},crop={cw}:{ch}[fg];"
-            f"[bg][fg]overlay=(W-w)/2:{top}[base];"
-            "[base][1:v]overlay=0:0,format=yuv420p[v]"
-        )
-    else:
-        landscape_overlay(overlay, channel_slug, cfg.font_path)
-        graph = (
-            f"[0:v]{fps_cap}scale=1920:1080:force_original_aspect_ratio=decrease,"
-            "pad=1920:1080:(ow-iw)/2:(oh-ih)/2[base];"
-            "[base][1:v]overlay=0:0,format=yuv420p[v]"
-        )
+    with tempfile.TemporaryDirectory(prefix="clipper-") as tmp_name:
+        tmp = Path(tmp_name)
+        # ffmpeg runs inside this folder so the subtitle filter needs no path escaping.
+        shutil.copytree(FONTS_DIR, tmp / "fonts")
+        cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(src.resolve())]
+        inputs = 1
 
-    cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(src), "-i", str(overlay)]
-    if info.has_audio:
-        graph += ";[0:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]"
-    else:
-        cmd += ["-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo"]
-    cmd += ["-filter_complex", graph, "-map", "[v]", "-map", "[a]" if info.has_audio else "2:a"]
-    if not info.has_audio:
-        cmd += ["-shortest"]
-    if max_duration:
-        cmd += ["-t", f"{max_duration:.2f}"]
-    cmd += [
-        "-c:v", "libx264", "-preset", cfg.preset, "-crf", str(cfg.crf),
-        "-c:a", "aac", "-b:a", "160k", "-ac", "2",
-        "-movflags", "+faststart", str(dest),
-    ]
-    done = subprocess.run(cmd, capture_output=True, text=True)
-    overlay.unlink(missing_ok=True)
+        if cfg.layout == "shorts":
+            win = shorts_window(info.width, info.height, cfg.zoom, theme.window_top,
+                                theme.window_inset)
+            has_art = build_frame(tmp / "frame.png", theme, win)
+            cmd += ["-i", "frame.png"]
+            inputs += 1
+            header_mid = SAFE_TOP + (win.y - SAFE_TOP) // 2
+            text = TextLayout(
+                WIDTH, HEIGHT,
+                caption_y=win.caption_y(theme.caption_floor), caption_size=captions.size,
+                label_y=(header_mid - 50 if title else header_mid) if label else 0,
+                title_y=(header_mid + 78 if label else header_mid) if title else 0,
+                highlight=theme.highlight, glow=theme.glow, outline=theme.outline,
+            )
+            gameplay = f"scale={win.scaled_w}:{win.scaled_h},crop={win.w}:{win.h}"
+            if has_art:
+                graph = (
+                    f"[0:v]{fps_cap}{gameplay},pad={WIDTH}:{HEIGHT}:{win.x}:{win.y}:black[placed];"
+                )
+            else:
+                graph = (
+                    f"[0:v]{fps_cap}split=2[bgsrc][fgsrc];"
+                    "[bgsrc]scale=270:480:force_original_aspect_ratio=increase,crop=270:480,"
+                    f"boxblur=10:2,scale={WIDTH}:{HEIGHT},eq=brightness=-0.14:saturation=1.15[bg];"
+                    f"[fgsrc]{gameplay}[fg];[bg][fg]overlay={win.x}:{win.y}[placed];"
+                )
+            graph += "[placed][1:v]overlay=0:0[framed];"
+        else:
+            text = TextLayout(
+                1920, 1080, caption_y=940, caption_size=int(captions.size * 0.8),
+                highlight=theme.highlight, outline=theme.outline,
+            )
+            graph = (
+                f"[0:v]{fps_cap}scale=1920:1080:force_original_aspect_ratio=decrease,"
+                "pad=1920:1080:(ow-iw)/2:(oh-ih)/2[framed];"
+            )
+
+        (tmp / "captions.ass").write_text(
+            build_ass(text, chunks, label=label, title=title, duration=info.duration),
+            encoding="utf-8",
+        )
+        graph += "[framed]ass=captions.ass:fontsdir=fonts,format=yuv420p[v]"
+
+        if info.has_audio:
+            graph += ";[0:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]"
+            audio_map = "[a]"
+        else:
+            cmd += ["-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo"]
+            audio_map = f"{inputs}:a"
+        cmd += ["-filter_complex", graph, "-map", "[v]", "-map", audio_map]
+        if not info.has_audio:
+            cmd += ["-shortest"]
+        if max_duration:
+            cmd += ["-t", f"{max_duration:.2f}"]
+        cmd += [
+            "-c:v", "libx264", "-preset", cfg.preset, "-crf", str(cfg.crf),
+            "-c:a", "aac", "-b:a", "160k", "-ac", "2",
+            "-movflags", "+faststart", str(dest.resolve()),
+        ]
+        done = subprocess.run(cmd, capture_output=True, text=True, cwd=tmp)
+
     if done.returncode != 0 or not dest.exists():
         raise RenderError(f"ffmpeg failed: {done.stderr.strip()[-500:]}")
     return dest

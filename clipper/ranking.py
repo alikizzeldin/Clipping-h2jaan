@@ -20,11 +20,14 @@ def reject_reason(
     sel: Selection,
     already_published: Callable[[str], bool],
     now: datetime | None = None,
+    not_before: datetime | None = None,
 ) -> str | None:
     """Why this clip can't be used, or None if it qualifies."""
     slug = clip.channel_slug.lower()
     if already_published(clip.id):
         return "already published"
+    if not_before and clip.created_at < not_before:
+        return "made before the start time"
     if clip.category_slug != profile.kick_category:
         return f"other category ({clip.category_slug or 'none'})"
     if sel.allow_channels and slug not in {c.lower() for c in sel.allow_channels}:
@@ -58,6 +61,7 @@ def rank(
     sel: Selection,
     already_published: Callable[[str], bool],
     now: datetime | None = None,
+    not_before: datetime | None = None,
 ) -> tuple[list[Clip], list[tuple[Clip, str]]]:
     """Return (qualifying clips best-first, rejected clips with reasons).
 
@@ -74,7 +78,7 @@ def rank(
     accepted: list[Clip] = []
     rejected: list[tuple[Clip, str]] = []
     for clip in unique.values():
-        reason = reject_reason(clip, profile, sel, already_published, now)
+        reason = reject_reason(clip, profile, sel, already_published, now, not_before)
         if reason:
             rejected.append((clip, reason))
         else:

@@ -1,0 +1,133 @@
+"""The two ways a rendered clip reaches YouTube: through Buffer, or directly."""
+
+from __future__ import annotations
+
+import logging
+import os
+from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+from .buffer import Buffer, BufferError, BufferLimit
+from .config import Publish
+from .hosting import GitMediaHost, HostingError
+from .models import Clip
+from .state import State
+from .youtube import QuotaExceeded, YouTube, YouTubeError
+
+log = logging.getLogger(__name__)
+
+YT_ENV = ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN")
+
+
+class PublishError(RuntimeError):
+    """This clip could not be published."""
+
+
+class PublishLimit(PublishError):
+    """Nothing more can be published for now; stop the run."""
+
+
+class SetupError(RuntimeError):
+    """A secret or setting is missing."""
+
+
+@dataclass(frozen=True)
+class Published:
+    ref: str  # YouTube video id, or Buffer post id
+    link: str  # YouTube URL when already known
+    via: str
+
+
+class YouTubePublisher:
+    via = "youtube"
+
+    def __init__(self, pub: Publish):
+        missing = [name for name in YT_ENV if not os.environ.get(name)]
+        if missing:
+            raise SetupError(f"missing {', '.join(missing)}")
+        self.pub = pub
+        self.client = YouTube(*(os.environ[name] for name in YT_ENV))
+
+    def prepare(self, state: State) -> list[str]:
+        return []
+
+    def publish(self, video: Path, clip: Clip, meta: dict) -> Published:
+        try:
+            video_id = self.client.upload(
+                video, title=meta["title"], description=meta["description"], tags=meta["tags"],
+                category_id=self.pub.category_id, privacy=self.pub.privacy,
+            )
+        except QuotaExceeded as exc:
+            raise PublishLimit(str(exc)) from exc
+        except YouTubeError as exc:
+            raise PublishError(str(exc)) from exc
+        return Published(video_id, f"https://youtu.be/{video_id}", self.via)
+
+
+class BufferPublisher:
+    via = "buffer"
+
+    def __init__(self, pub: Publish, repo: str | Path = "."):
+        key = os.environ.get("BUFFER_API_KEY", "")
+        channel = os.environ.get("BUFFER_CHANNEL_ID") or pub.buffer_channel_id
+        if not key:
+            raise SetupError("missing BUFFER_API_KEY (add it as a repository secret)")
+        if not channel:
+            raise SetupError("no Buffer channel set: fill in publish.buffer_channel_id")
+        self.pub = pub
+        self.client = Buffer(key, channel)
+        self.host = GitMediaHost(repo, prefix=pub.media_prefix)
+
+    def prepare(self, state: State) -> list[str]:
+        """Housekeeping before a run: confirm earlier posts, drop old hosted clips."""
+        notes: list[str] = []
+        now = datetime.now(timezone.utc)
+        for clip_id, entry in state.unconfirmed("buffer", now - timedelta(days=2))[:5]:
+            try:
+                info = self.client.post_status(entry["video_id"])
+            except BufferError as exc:
+                log.warning("could not check an earlier post: %s", exc)
+                break
+            if info["status"] == "sent":
+                state.update(clip_id, status="sent", link=info["link"])
+                notes.append(f"- confirmed live: {info['link'] or entry['title']}")
+            elif info["status"] == "error":
+                state.update(clip_id, status="error", error=info["error"])
+                notes.append(f"- Buffer could not publish \"{entry['title']}\": {info['error']}")
+        try:
+            removed = self.host.prune()
+            if removed:
+                log.info("removed %d old hosted clip(s)", removed)
+        except HostingError as exc:
+            log.warning("could not tidy hosted clips: %s", exc)
+        return notes
+
+    def publish(self, video: Path, clip: Clip, meta: dict) -> Published:
+        try:
+            url, branch = self.host.upload(video, clip.id)
+            self.host.wait_until_public(url)
+        except HostingError as exc:
+            raise PublishError(str(exc)) from exc
+        try:
+            post_id = self.client.publish_video(
+                url, title=meta["title"], description=meta["description"],
+                privacy=self.pub.privacy, category_id=self.pub.category_id,
+            )
+        except BufferLimit as exc:
+            self._discard(branch)
+            raise PublishLimit(str(exc)) from exc
+        except BufferError as exc:
+            self._discard(branch)
+            raise PublishError(str(exc)) from exc
+        return Published(post_id, "", self.via)
+
+    def _discard(self, branch: str) -> None:
+        try:
+            self.host.remove(branch)
+        except HostingError:
+            pass
+
+
+def make_publisher(pub: Publish, repo: str | Path = "."):
+    return BufferPublisher(pub, repo) if pub.via == "buffer" else YouTubePublisher(pub)

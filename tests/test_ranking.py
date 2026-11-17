@@ -27,6 +27,16 @@ def test_each_rule_rejects(make_clip, now):
     assert "allow list" in reason(make_clip(), now, Selection(allow_channels=["other"]))
 
 
+def test_only_clips_made_after_the_start_time_qualify(make_clip, now):
+    start = now - timedelta(hours=2)
+    before = make_clip(created_at=now - timedelta(hours=3))
+    after = make_clip(created_at=now - timedelta(hours=1))
+    assert reject_reason(before, PROFILE, Selection(), never, now, start) == "made before the start time"
+    assert reject_reason(after, PROFILE, Selection(), never, now, start) is None
+    chosen, _ = rank([before, make_clip(id="late", created_at=now)], PROFILE, Selection(), never, now, start)
+    assert [c.id for c in chosen] == ["late"]
+
+
 def test_language_filter(make_clip, now):
     sel = Selection(languages=["English"])
     assert reason(make_clip(language="English (India)"), now, sel) is None

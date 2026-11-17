@@ -1,6 +1,6 @@
-# Which game to clip. Change this line (or set the CLIPPER_PROFILE repository
-# variable) to switch — e.g. to gta6 on launch day.
-profile: valorant
+# Which game to clip: gta6 or valorant (the CLIPPER_PROFILE repository variable
+# overrides this).
+profile: gta6
 
 profiles:
   valorant:
@@ -8,11 +8,36 @@ profiles:
     label: Valorant                # how the game is written in titles
     hashtags: [valorant, valorantclips, kick]
     min_views: 20                  # Valorant is small on Kick; keep the bar low
+    theme: valorant
   gta6:
     kick_category: grand-theft-auto-vi
     label: GTA 6
     hashtags: [gta6, gtavi, gta6clips, kick]
     min_views: 300
+    theme: gta6
+
+# The look of the vertical frame, one per game. `background` is a 1080x1920
+# image you can replace with your own; the gameplay window is cut out of it.
+themes:
+  gta6:
+    background: assets/themes/gta6.png   # the GTA6FIED frame
+    window_top: 374                  # the gameplay sits at the top of the frame's dark panel
+    window_inset: 54
+    caption_floor: 1500              # captions stay inside the panel, above the footer art
+    radius: 10
+    border_width: 3
+    border: ["#FF2FD0", "#8A3CFF"]   # window border, left to right
+    glow: "#FF2FD0"                  # glow around the window
+    highlight: "#FF4FD8"             # the caption word being spoken
+    outline: "#170636"
+    show_label: false                # the frame already carries the logo
+    show_title: false
+  valorant:
+    background: assets/themes/valorant.png
+    border: ["#FF4655", "#ECE8E1"]
+    glow: ""
+    highlight: "#FF4655"
+    outline: "#0F1923"
 
 selection:
   window: day                # Kick's "top clips" window: day | week | month | all
@@ -30,12 +55,29 @@ selection:
 render:
   layout: shorts             # shorts (1080x1920) | landscape (1920x1080)
   zoom: 1.35                 # how much the gameplay is enlarged in the vertical frame
-  overlay_title: true
+  show_label: true           # the game name above the gameplay
+  overlay_title: true        # the clip's title under the game name
+
+# Captions of what the streamer says, transcribed with Whisper. The language
+# is detected per clip; Arabic and English are both drawn correctly.
+captions:
+  enabled: true
+  model: large-v3-turbo      # best for Arabic. Faster, less accurate: medium, small
+  language: auto             # or force one, e.g. ar
+  max_words: 3               # words on screen at once
+  max_chars: 16
+  size: 118
 
 publish:
-  privacy: private           # private | unlisted | public
-  max_per_run: 2
-  max_per_day: 6
+  via: buffer                # buffer (your Buffer account posts it) | youtube (own Google API project)
+  buffer_channel_id: "6afc5738ece6dfde5ff77cea"   # "gta6fied clips" (YouTube) in Buffer
+  # Nothing is published before this moment, and only clips made after it are
+  # used. 13:00 on 18 Nov in Palestine is midnight 19 Nov in New Zealand, the
+  # first place GTA 6 unlocks.
+  start_at: "2026-11-18T13:00:00+02:00"
+  privacy: public            # private | unlisted | public
+  max_per_run: 1             # the schedule runs every 2 hours
+  max_per_day: 12
   title_template: "{title} | {streamer} {game}"
   fallback_title_template: "{streamer} {game} clip"   # used when the clip title is junk
   description_footer: ""     # e.g. a contact line for removal requests

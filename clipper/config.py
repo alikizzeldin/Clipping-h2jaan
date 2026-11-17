@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass, field, fields
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -22,6 +24,26 @@ class Profile:
     label: str  # how the game is written in titles, e.g. "GTA 6"
     hashtags: list[str] = field(default_factory=list)
     min_views: int = 50
+    theme: str = ""  # a name from `themes:`; empty = blurred-video background
+
+
+@dataclass
+class Theme:
+    """The look of the vertical frame around the gameplay."""
+
+    background: str = ""  # 1080x1920 image; empty = blurred copy of the clip
+    border: list[str] = field(default_factory=lambda: ["#FFFFFF", "#C9C9C9"])  # left, right
+    glow: str = ""  # colour of the glow around the window and the game label
+    highlight: str = "#FFE14D"  # the caption word being spoken
+    outline: str = "#000000"  # outline of the label and title text
+    # Where things sit, in a 1080x1920 frame. Match these to the artwork.
+    window_top: int = 420  # y where the gameplay starts
+    window_inset: int = 24  # gap between the gameplay and the left/right edges
+    caption_floor: int = 1560  # captions stay above this line
+    radius: int = 30  # corner rounding of the gameplay window
+    border_width: int = 6  # 0 = no border around the gameplay
+    show_label: bool = True  # draw the game name (turn off when the artwork has a logo)
+    show_title: bool = True  # draw the clip's title under it
 
 
 @dataclass
@@ -43,14 +65,31 @@ class Selection:
 class Render:
     layout: str = "shorts"  # shorts (1080x1920) | landscape (1920x1080)
     zoom: float = 1.35  # shorts: how far the gameplay is scaled past the frame width
-    overlay_title: bool = True
-    font_path: str = ""
+    show_label: bool = True  # the game name above the gameplay
+    overlay_title: bool = True  # the clip's title under the game name
     crf: int = 20
     preset: str = "veryfast"
 
 
 @dataclass
+class Captions:
+    """Spoken-word captions, transcribed with Whisper."""
+
+    enabled: bool = True
+    model: str = "large-v3-turbo"  # smaller and faster, less accurate: small, medium
+    language: str = "auto"  # or a code such as ar / en to skip detection
+    max_words: int = 3  # words shown at once
+    max_chars: int = 16
+    size: int = 118
+
+
+@dataclass
 class Publish:
+    via: str = "buffer"  # buffer (your Buffer account posts it) | youtube (own Google API project)
+    buffer_channel_id: str = ""  # the Buffer channel to post to; see `python -m clipper channels`
+    start_at: str = ""  # e.g. "2026-11-18T13:00:00+02:00": publish nothing before this,
+    #                     and only clips made after it
+    media_prefix: str = "media"  # branch prefix for clips hosted for Buffer to fetch
     privacy: str = "private"  # private | unlisted | public
     max_per_run: int = 2
     max_per_day: int = 6
@@ -64,8 +103,10 @@ class Publish:
 class Settings:
     profile: str
     profiles: dict[str, Profile]
+    themes: dict[str, Theme] = field(default_factory=dict)
     selection: Selection = field(default_factory=Selection)
     render: Render = field(default_factory=Render)
+    captions: Captions = field(default_factory=Captions)
     publish: Publish = field(default_factory=Publish)
     state_path: str = "state/published.json"
     work_dir: str = "work"
@@ -74,6 +115,29 @@ class Settings:
     @property
     def active(self) -> Profile:
         return self.profiles[self.profile]
+
+    @property
+    def theme(self) -> Theme:
+        return self.themes.get(self.active.theme) or Theme()
+
+    @property
+    def start_time(self) -> datetime | None:
+        """`publish.start_at` as an aware datetime, or None when unset."""
+        return parse_start(self.publish.start_at)
+
+
+def parse_start(value: str) -> datetime | None:
+    if not str(value or "").strip():
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).strip().replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise ConfigError(
+            f"publish.start_at '{value}' is not a time like 2026-11-18T13:00:00+02:00"
+        ) from exc
+    if parsed.tzinfo is None:
+        raise ConfigError("publish.start_at needs a UTC offset, e.g. +02:00")
+    return parsed.astimezone(timezone.utc)
 
 
 def _build(cls: type, data: Any, where: str) -> Any:
@@ -111,6 +175,22 @@ def load_settings(path: str | Path = "config.yaml", profile: str | None = None) 
         name: _build(Profile, body, f"profiles.{name}") for name, body in profiles_raw.items()
     }
 
+    themes_raw = raw.get("themes") or {}
+    if not isinstance(themes_raw, dict):
+        raise ConfigError("`themes` must be a mapping")
+    themes = {name: _build(Theme, body, f"themes.{name}") for name, body in themes_raw.items()}
+    for name, theme in themes.items():
+        colors = [*theme.border, theme.highlight, theme.outline] + ([theme.glow] if theme.glow else [])
+        bad = [c for c in colors if not re.fullmatch(r"#[0-9a-fA-F]{6}", str(c))]
+        if bad or len(theme.border) != 2:
+            raise ConfigError(
+                f"themes.{name}: colours must look like \"#FF3D9A\" and `border` needs two"
+                + (f" (got {bad[0]!r})" if bad else "")
+            )
+    for name, prof in profiles.items():
+        if prof.theme and prof.theme not in themes:
+            raise ConfigError(f"profiles.{name}: theme '{prof.theme}' is not defined under `themes`")
+
     chosen = profile or os.environ.get("CLIPPER_PROFILE") or raw.get("profile")
     if not chosen:
         raise ConfigError("no profile selected: set `profile:` in config.yaml")
@@ -120,8 +200,10 @@ def load_settings(path: str | Path = "config.yaml", profile: str | None = None) 
     settings = Settings(
         profile=chosen,
         profiles=profiles,
+        themes=themes,
         selection=_build(Selection, raw.get("selection"), "selection"),
         render=_build(Render, raw.get("render"), "render"),
+        captions=_build(Captions, raw.get("captions"), "captions"),
         publish=_build(Publish, raw.get("publish"), "publish"),
         state_path=raw.get("state_path", "state/published.json"),
         work_dir=raw.get("work_dir", "work"),
@@ -135,6 +217,11 @@ def load_settings(path: str | Path = "config.yaml", profile: str | None = None) 
         raise ConfigError("publish.privacy must be private, unlisted or public")
     if settings.render.layout not in ("shorts", "landscape"):
         raise ConfigError("render.layout must be shorts or landscape")
+    if settings.publish.via not in ("buffer", "youtube"):
+        raise ConfigError("publish.via must be buffer or youtube")
+    if settings.publish.via == "buffer" and settings.render.layout != "shorts":
+        raise ConfigError("Buffer only publishes vertical YouTube Shorts: use render.layout: shorts")
+    parse_start(settings.publish.start_at)
     if settings.selection.window not in ("day", "week", "month", "all"):
         raise ConfigError("selection.window must be day, week, month or all")
     return settings
