@@ -85,6 +85,10 @@ jobs:
         if: steps.gate.outputs.go == 'true'
         run: pip install -r requirements.txt
 
+      - name: Fetch the owner's settings from the dashboard
+        if: steps.gate.outputs.go == 'true'
+        run: python -m clipper pull-control
+
       - name: Check the Buffer connection
         if: github.event_name == 'workflow_dispatch' && inputs.check_setup
         run: python -m clipper channels
@@ -124,11 +128,11 @@ jobs:
       - name: Save publish history
         if: always()
         run: |
-          if [ -n "$(git status --porcelain state)" ]; then
+          if [ -n "$(git status --porcelain state control)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add state
-            git commit -m "Record published clips"
+            git add state control
+            git commit -m "Record published clips and dashboard settings"
             git pull --rebase
             git push
           fi

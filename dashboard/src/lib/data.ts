@@ -1,7 +1,9 @@
-// Everything the dashboard knows comes from files the agent keeps in the
-// repository (state/…), the user's own choices (control/…), and config.yaml.
+// What the dashboard knows: files the agent keeps in the repository
+// (state/…), config.yaml, and the owner's own choices, which the dashboard's
+// server stores.
 
 import { parse as parseYaml } from "yaml";
+import { getControl, type Control, type RunRequest } from "./api";
 import { FILES } from "./config";
 
 export type Clip = {
@@ -78,6 +80,7 @@ export type Snapshot = {
   history: HistoryPoint[];
   overrides: Overrides;
   settings: Effective;
+  request: RunRequest | null; // a run the owner asked for that has not started yet
   loadedAt: number;
 };
 
@@ -142,15 +145,17 @@ export function effective(configYaml: string, overrides: Overrides): Effective {
 
 export async function loadSnapshot(demo: boolean): Promise<Snapshot> {
   if (demo) return demoSnapshot();
-  const [state, activity, learned, rules, history, overrides, yaml] = await Promise.all([
+  const noControl: Control = { settings: {}, rules: EMPTY_RULES, request: null, updated_at: null };
+  const [state, activity, learned, history, control, yaml] = await Promise.all([
     getJson<{ published?: Record<string, Omit<Clip, "id">> }>("state/published.json", {}),
     getJson<Activity[]>("state/activity.json", []),
     getJson<Learned>("state/learned.json", { rules: [] }),
-    getJson<RulesControl>("control/rules.json", EMPTY_RULES),
     getJson<HistoryPoint[]>("state/history.json", []),
-    getJson<Overrides>("control/settings.json", {}),
+    getControl().catch(() => noControl),
     getText("config.yaml"),
   ]);
+  const rules = control.rules;
+  const overrides = control.settings;
   const clips = Object.entries(state.published ?? {})
     .map(([id, c]) => ({ id, ...c }))
     .sort((a, b) => b.uploaded_at.localeCompare(a.uploaded_at));
@@ -163,6 +168,7 @@ export async function loadSnapshot(demo: boolean): Promise<Snapshot> {
     history: Array.isArray(history) ? history : [],
     overrides,
     settings: effective(yaml, overrides),
+    request: control.request,
     loadedAt: Date.now(),
   };
 }
@@ -294,5 +300,5 @@ function demoSnapshot(): Snapshot {
   const settings = effective("", overrides);
   settings.featured_channels = ["sxb"];
   settings.start_at = new Date(now - 14 * 24 * hour).toISOString();
-  return { demo: true, clips, activity, learned, rules, history, overrides, settings, loadedAt: now };
+  return { demo: true, clips, activity, learned, rules, history, overrides, settings, request: null, loadedAt: now };
 }

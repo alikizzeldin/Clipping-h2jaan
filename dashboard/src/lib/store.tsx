@@ -1,8 +1,11 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { ApiError, getSession, signOut as apiSignOut } from "./api";
 import { loadSnapshot, type Snapshot } from "./data";
-import { ownerKey, recentRuns, type Run } from "./github";
+import { recentRuns, type Run } from "./github";
 
 export type Layout = "cinematic" | "showroom";
+/** "checking" until the server has said whether this browser is signed in. */
+export type Auth = "checking" | "out" | "in";
 
 function savedLayout(): Layout {
   const asked = new URLSearchParams(location.search).get("layout");
@@ -15,14 +18,23 @@ function savedLayout(): Layout {
 }
 
 type Store = {
+  auth: Auth;
+  email: string;
+  /** False when the server has no account set up yet. */
+  ready: boolean;
+  /** Called by the sign-in page once the server has accepted the password. */
+  enter: (email: string) => void;
+  /** True when this visit came through the sign-in page (rather than an existing session). */
+  arrived: boolean;
+  signOut: () => Promise<void>;
+  /** Show a failed save's message, and return to the sign-in page if the session has ended. */
+  report: (error: unknown, fallback: string) => void;
   layout: Layout;
   setLayout: (layout: Layout) => void;
   snap: Snapshot | null;
   runs: Run[];
   demo: boolean;
   setDemo: (on: boolean) => void;
-  hasKey: boolean;
-  refreshKey: () => void;
   reload: () => Promise<void>;
   toast: (text: string, tone?: "ok" | "bad") => void;
 };
@@ -38,12 +50,25 @@ export function useStore(): Store {
 type Toast = { id: number; text: string; tone: "ok" | "bad" };
 
 export function StoreProvider({ children }: { children: ReactNode }) {
+  const [auth, setAuth] = useState<Auth>("checking");
+  const [email, setEmail] = useState("");
+  const [ready, setReady] = useState(true);
+  const [arrived, setArrived] = useState(false);
   const [snap, setSnap] = useState<Snapshot | null>(null);
   const [runs, setRuns] = useState<Run[]>([]);
   const [demo, setDemoState] = useState(() => new URLSearchParams(location.search).has("demo"));
-  const [hasKey, setHasKey] = useState(() => Boolean(ownerKey.get()));
   const [toasts, setToasts] = useState<Toast[]>([]);
   const [layout, setLayoutState] = useState<Layout>(savedLayout);
+
+  useEffect(() => {
+    getSession()
+      .then((session) => {
+        setReady(session.ready);
+        setEmail(session.email ?? "");
+        setAuth(session.signedIn ? "in" : "out");
+      })
+      .catch(() => setAuth("out"));
+  }, []);
 
   const reload = useCallback(async () => {
     setSnap(await loadSnapshot(demo));
@@ -51,10 +76,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, [demo]);
 
   useEffect(() => {
+    if (auth !== "in") return;
     reload();
     const timer = setInterval(reload, 5 * 60 * 1000);
     return () => clearInterval(timer);
-  }, [reload]);
+  }, [auth, reload]);
 
   const toast = useCallback((text: string, tone: "ok" | "bad" = "ok") => {
     const id = Date.now() + Math.random();
@@ -62,8 +88,33 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setTimeout(() => setToasts((list) => list.filter((t) => t.id !== id)), 5200);
   }, []);
 
+  const leave = useCallback(() => {
+    setArrived(false);
+    setAuth("out");
+    setSnap(null);
+    setRuns([]);
+  }, []);
+
   const value = useMemo<Store>(
     () => ({
+      auth, email, ready,
+      arrived,
+      enter: (who) => {
+        setEmail(who);
+        setArrived(true);
+        setAuth("in");
+      },
+      signOut: async () => {
+        await apiSignOut().catch(() => undefined);
+        leave();
+      },
+      report: (error, fallback) => {
+        if (error instanceof ApiError && error.status === 401) {
+          leave();
+          return;
+        }
+        toast(error instanceof ApiError ? error.message : fallback, "bad");
+      },
       layout,
       setLayout: (next) => {
         setLayoutState(next);
@@ -78,11 +129,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         setSnap(null);
         setDemoState(on);
       },
-      hasKey,
-      refreshKey: () => setHasKey(Boolean(ownerKey.get())),
       reload, toast,
     }),
-    [layout, snap, runs, demo, hasKey, reload, toast],
+    [auth, email, ready, arrived, layout, snap, runs, demo, reload, toast, leave],
   );
 
   return (

@@ -12,11 +12,15 @@ from dataclasses import replace
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import yaml
+
 from . import download as dl
 from . import render as rnd
 from .activity import Activity
 from .buffer import Buffer, BufferError
 from .config import ConfigError, Settings, load_settings
+from .control import ControlError
+from .control import pull as pull_control
 from .highlights import HighlightError, cut_highlight, find_highlights
 from .hosting import GitMediaHost, HostingError
 from .kick import KickClient, KickError
@@ -429,6 +433,26 @@ def _check_hosting(video: Path, name: str, prefix: str) -> str:
     return "Hosting check passed: a clip was publicly reachable, then removed."
 
 
+def cmd_pull_control(args: argparse.Namespace) -> int:
+    """Copy the owner's dashboard settings into control/. Never fails a run."""
+    try:
+        raw = yaml.safe_load(Path(args.config).read_text(encoding="utf-8")) or {}
+    except (OSError, yaml.YAMLError) as exc:
+        log.warning("could not read %s: %s", args.config, exc)
+        return 0
+    url = os.environ.get("CLIPPER_DASHBOARD") or raw.get("dashboard_url")
+    if not url:
+        log.info("no dashboard_url in the config; using the settings already here")
+        return 0
+    try:
+        changed = pull_control(url, raw.get("control_dir", "control"))
+    except ControlError as exc:
+        log.warning("%s; using the settings already here", exc)
+        return 0
+    log.info("dashboard settings: %s", f"updated {' and '.join(changed)}" if changed else "no change")
+    return 0
+
+
 def cmd_channels(args: argparse.Namespace) -> int:
     """List the Buffer channels the key can post to, and check the configured one."""
     key = os.environ.get("BUFFER_API_KEY", "")
@@ -494,6 +518,7 @@ def main(argv: list[str] | None = None) -> int:
     p_auth.add_argument("--port", type=int, default=8765)
 
     sub.add_parser("channels", help="list the Buffer channels your API key can post to")
+    sub.add_parser("pull-control", help="fetch the owner's settings and rules from the dashboard")
 
     p_notify = sub.add_parser("notify", help="send a message to your Discord or Telegram")
     p_notify.add_argument("message")
@@ -509,6 +534,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_channels(args)
     if args.command == "notify":
         return cmd_notify(args)
+    if args.command == "pull-control":
+        return cmd_pull_control(args)
     try:
         settings = load_settings(args.config, args.profile)
     except ConfigError as exc:

@@ -92,28 +92,41 @@ both as repository secrets:
 
 ## Admin dashboard
 
-A web dashboard in [`dashboard/`](dashboard) shows what the agent is doing:
+A private web dashboard in [`dashboard/`](dashboard), live at
+<https://gta6fied-dashboard.vercel.app>, shows what the agent is doing:
 views, published clips, how the day's slots are filled, the agent's runs, and
 what it has learned. It has two layouts to choose from, **Cinematic** (a wide
-banner) and **Showroom** (the 3D logo in the centre, which follows the
-pointer and can be dragged or spun).
+banner) and **Showroom** (the logo in the centre, which follows the pointer
+and can be dragged or spun).
 
-- **Open it:** <https://gta6fied-dashboard.vercel.app>. It is hosted on
-  Vercel, which rebuilds it whenever something under `dashboard/` changes
-  on this branch (other commits, such as the agent saving its history, are
-  skipped). GitHub Pages works too: switch it on once (**Settings → Pages →
-  Source: GitHub Actions**) and the `Dashboard` workflow publishes it at
-  `https://<your-user>.github.io/<this-repo>/`.
-- **Anyone can view it, only you can change things.** Saving settings,
-  editing learning rules and starting runs need a GitHub key with Contents
-  and Actions write access to this repository, pasted once on the Settings
-  page. It is kept in that browser only.
-- **What it changes.** Settings are saved to `control/settings.json` and
-  rules to `control/rules.json`; the agent reads both at the start of each
-  run. Everything else stays in `config.yaml`.
+- **Signing in.** The dashboard opens on a sign-in page (with the logo as a
+  real 3D model). There is one account, the owner's. Its email, a salted
+  hash of its password and the secret that signs sessions are kept in the
+  hosting project's settings (`ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`,
+  `SESSION_SECRET`), never in this repository. A device stays signed in for
+  30 days.
+- **Changing the password.** Make a new hash with
+  `node -e "import('./dashboard/api/_lib/auth.js').then(a => console.log(a.hashPassword(process.argv[1])))" 'the new password'`
+  and put it in `ADMIN_PASSWORD_HASH` on Vercel, then redeploy. Every
+  session signed with the old password ends.
+- **What it changes.** Settings and learning rules are saved by the
+  dashboard's server (`dashboard/api/`, storage: the project's private
+  Vercel Blob store). The agent fetches them at the start of each run
+  (`python -m clipper pull-control`, from `dashboard_url` in `config.yaml`)
+  into `control/settings.json` and `control/rules.json`, and keeps a copy
+  in the repository. If the dashboard cannot be reached, the last copy is
+  used. Everything else stays in `config.yaml`.
+- **Run now, Test run, Check setup.** The dashboard holds no GitHub key, so
+  it leaves a request and the `Dashboard requests` workflow, which looks
+  every ten minutes, starts the run.
+- **Hosting.** Vercel builds the site and its server functions from the
+  `dashboard/` folder whenever something there changes on this branch;
+  other commits, such as the agent saving its history, are skipped.
 - **Demo mode** (Settings, or add `?demo` to the address) fills it with
   made-up numbers to preview the design.
-- **Run it locally:** `cd dashboard && npm install && npm run dev`.
+- **Run it locally:** `cd dashboard && npm install && npm run dev`, then
+  sign in with `dev@gta6fied.local` / `dev` (a throwaway account that only
+  exists on your machine; settings go to `dashboard/.data/`).
 
 ## Publishing through Buffer
 

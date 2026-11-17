@@ -1,11 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { BrainCircuit, GraduationCap, Lightbulb, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Empty, PageTitle, Panel, Tag, Toggle } from "../components/ui";
 import { ruleSentence, type Rule, type RuleKind, type RulesControl } from "../lib/data";
 import { ago, compact } from "../lib/format";
-import { GitHubError, saveJson } from "../lib/github";
+import { saveRules } from "../lib/api";
 import { useStore } from "../lib/store";
 
 const KINDS: { value: RuleKind; label: string; placeholder: string }[] = [
@@ -29,7 +28,7 @@ function effectTag(factor: number) {
 }
 
 export default function Learning() {
-  const { snap, hasKey, demo, reload, toast } = useStore();
+  const { snap, demo, reload, report, toast } = useStore();
   const [local, setLocal] = useState<RulesControl | null>(null);
   const [saving, setSaving] = useState(false);
   const [kind, setKind] = useState<RuleKind>("channel");
@@ -42,19 +41,19 @@ export default function Learning() {
   const learned = snap.learned.rules.filter((r) => !control.dismissed.includes(r.id));
   const measured = snap.learned.measured_clips ?? 0;
   const needed = snap.learned.needed_clips ?? 8;
-  const canSave = demo || hasKey;
 
-  async function commit(next: RulesControl, message: string, done: string) {
+  async function commit(next: RulesControl, done: string) {
     setLocal(next);
     if (demo) return toast("Demo mode: the change is shown but not saved.");
     setSaving(true);
     try {
-      await saveJson("control/rules.json", next, message);
+      await saveRules(next);
       toast(done);
       await reload();
+      setLocal(null);
     } catch (error) {
       setLocal(null);
-      toast(error instanceof GitHubError ? error.message : "Could not save the change.", "bad");
+      report(error, "Could not save the change.");
     } finally {
       setSaving(false);
     }
@@ -63,24 +62,22 @@ export default function Learning() {
   const toggle = (rule: Rule, on: boolean) =>
     commit(
       { ...control, disabled: on ? control.disabled.filter((id) => id !== rule.id) : [...control.disabled, rule.id] },
-      `${on ? "Turn on" : "Turn off"} a learned rule from the dashboard`,
       on ? "Rule switched on. The agent uses it from its next run." : "Rule switched off. The agent ignores it from its next run.",
     );
   const forget = (rule: Rule) =>
     commit(
       { ...control, dismissed: [...control.dismissed, rule.id], disabled: control.disabled.filter((id) => id !== rule.id) },
-      "Remove a learned rule from the dashboard",
       "Removed. The agent will not learn this one again.",
     );
   const removeManual = (rule: Rule) =>
-    commit({ ...control, manual: control.manual.filter((r) => r.id !== rule.id) }, "Remove a taught rule from the dashboard", "Rule removed.");
+    commit({ ...control, manual: control.manual.filter((r) => r.id !== rule.id) }, "Rule removed.");
   const teach = () => {
     const value = (kind === "duration" ? target || LENGTHS[0] : target).trim();
     if (!value) return toast("Say what the rule is about first.", "bad");
     const rule: Rule = { id: `manual-${Date.now()}`, kind, target: kind === "channel" ? value.toLowerCase() : value, factor, note: note.trim() || undefined, created_at: new Date().toISOString() };
     setTarget("");
     setNote("");
-    return commit({ ...control, manual: [...control.manual, rule] }, "Teach the agent a rule from the dashboard", "Taught. The agent applies it from its next run.");
+    return commit({ ...control, manual: [...control.manual, rule] }, "Taught. The agent applies it from its next run.");
   };
 
   return (
@@ -109,12 +106,6 @@ export default function Learning() {
         </div>
       </Panel>
 
-      {!canSave && (
-        <p className="mb-6 rounded-2xl bg-gold/10 px-5 py-3.5 text-sm text-gold ring-1 ring-gold/30">
-          You can read everything here. To change rules, <Link to="/settings" className="font-semibold underline">add your owner key in Settings</Link>.
-        </p>
-      )}
-
       <div className="grid gap-6 xl:grid-cols-[1.25fr_1fr]">
         <Panel title="What the agent has learned" icon={<Lightbulb className="h-5 w-5 text-gold" />} index={1}>
           {learned.length === 0 ? (
@@ -140,8 +131,8 @@ export default function Learning() {
                         {effectTag(rule.factor)}
                       </div>
                       <div className="mt-2 flex items-center justify-between gap-3 border-t border-line/50 pt-2">
-                        <Toggle on={on} onChange={(v) => toggle(rule, v)} label={on ? "In use" : "Switched off"} disabled={saving || !canSave} />
-                        <button className="btn btn-ghost !px-3 !py-2 text-xs" disabled={saving || !canSave} onClick={() => forget(rule)}>
+                        <Toggle on={on} onChange={(v) => toggle(rule, v)} label={on ? "In use" : "Switched off"} disabled={saving} />
+                        <button className="btn btn-ghost !px-3 !py-2 text-xs" disabled={saving} onClick={() => forget(rule)}>
                           <Trash2 className="h-3.5 w-3.5" aria-hidden /> This is wrong, remove it
                         </button>
                       </div>
@@ -182,7 +173,7 @@ export default function Learning() {
                 Note to yourself (optional)
                 <input className="field mt-1.5" dir="auto" value={note} onChange={(e) => setNote(e.target.value)} placeholder="Why you added it" />
               </label>
-              <button className="btn btn-primary w-full" disabled={saving || !canSave} onClick={teach}><Plus className="h-4 w-4" aria-hidden /> Teach the agent</button>
+              <button className="btn btn-primary w-full" disabled={saving} onClick={teach}><Plus className="h-4 w-4" aria-hidden /> Teach the agent</button>
             </div>
           </Panel>
 
@@ -199,7 +190,7 @@ export default function Learning() {
                     </div>
                     <div className="flex shrink-0 items-center gap-2">
                       {effectTag(rule.factor)}
-                      <button aria-label={`Remove rule: ${ruleSentence(rule)}`} className="grid h-8 w-8 place-items-center rounded-lg text-mist hover:bg-rose/15 hover:text-rose" disabled={saving || !canSave} onClick={() => removeManual(rule)}>
+                      <button aria-label={`Remove rule: ${ruleSentence(rule)}`} className="grid h-8 w-8 place-items-center rounded-lg text-mist hover:bg-rose/15 hover:text-rose" disabled={saving} onClick={() => removeManual(rule)}>
                         <Trash2 className="h-4 w-4" aria-hidden />
                       </button>
                     </div>

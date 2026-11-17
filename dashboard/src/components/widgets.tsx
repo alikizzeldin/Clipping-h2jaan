@@ -3,12 +3,13 @@
 import { motion } from "framer-motion";
 import { Bolt, CircleAlert, ExternalLink, FlaskConical, MonitorPlay, Play, Rocket, ShieldCheck, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { YOUTUBE_URL } from "../lib/config";
 import { insights, type Activity, type Clip, type HistoryPoint, type Snapshot } from "../lib/data";
 import { ago, compact, shortDate, until } from "../lib/format";
-import { GitHubError, startRun, type Run } from "../lib/github";
+import { cancelRun, requestRun, type RunKind } from "../lib/api";
+import { REPO_URL, WORKFLOW } from "../lib/config";
+import { forgetRuns, type Run } from "../lib/github";
 import { useStore } from "../lib/store";
 import { Empty, Tag } from "./ui";
 
@@ -170,33 +171,75 @@ export function RunsList({ runs, demo, limit = 5 }: { runs: Run[]; demo: boolean
   );
 }
 
+const RUN_WORDS: Record<RunKind, string> = { run: "A run", test: "A test run", setup: "A setup check" };
+
+/** The run the owner asked for, while the agent has not started it yet. */
+export function waitingRun(snap: Snapshot | null, runs: Run[], now: number) {
+  const request = snap?.request;
+  if (!request) return null;
+  const asked = new Date(request.requested_at).getTime();
+  if (!Number.isFinite(asked) || now - asked > 2 * 60 * 60 * 1000) return null;
+  const started = runs.some((r) => r.event === "workflow_dispatch" && new Date(r.created_at).getTime() >= asked);
+  return started ? null : { ...request, minutes: Math.max(0, Math.floor((now - asked) / 60000)) };
+}
+
 export function QuickActions({ stacked = false }: { stacked?: boolean }) {
-  const { hasKey, demo, toast } = useStore();
+  const { snap, runs, demo, reload, report, toast } = useStore();
+  const now = useNow(20000);
   const [busy, setBusy] = useState(false);
-  async function run(kind: "live" | "dry" | "check") {
+  const waiting = waitingRun(snap, runs, now);
+
+  async function ask(kind: RunKind) {
     if (demo) return toast("Demo mode: nothing was started.");
     setBusy(true);
     try {
-      await startRun({ dry_run: kind !== "live", check_setup: kind === "check" });
-      toast(kind === "live" ? "Run started. It appears under the agent's runs in a moment." : kind === "dry" ? "Test run started. It renders a clip without publishing." : "Setup check started.");
+      await requestRun(kind);
+      forgetRuns();
+      toast(`${RUN_WORDS[kind]} is on its way. The agent picks requests up every few minutes.`);
+      await reload();
     } catch (error) {
-      toast(error instanceof GitHubError ? error.message : "Could not start the run.", "bad");
+      report(error, "Could not ask for the run.");
     } finally {
       setBusy(false);
     }
   }
-  const off = !hasKey || busy;
+
+  async function withdraw() {
+    setBusy(true);
+    try {
+      await cancelRun();
+      await reload();
+    } catch (error) {
+      report(error, "Could not withdraw the request.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  // While a request is waiting, look for its run more often than the usual refresh.
+  useEffect(() => {
+    if (!waiting) return;
+    const timer = setInterval(() => { forgetRuns(); reload(); }, 60000);
+    return () => clearInterval(timer);
+  }, [waiting?.id, reload]);
+
+  const off = busy || Boolean(waiting);
   return (
     <>
       <div className={stacked ? "flex flex-wrap justify-center gap-3" : "grid grid-cols-2 gap-3"}>
-        <button className="btn btn-primary" disabled={off} onClick={() => run("live")}><Play className="h-4 w-4" aria-hidden /> Run now</button>
-        <button className="btn btn-ghost" disabled={off} onClick={() => run("dry")}><FlaskConical className="h-4 w-4" aria-hidden /> Test run</button>
-        <button className="btn btn-ghost" disabled={off} onClick={() => run("check")}><ShieldCheck className="h-4 w-4" aria-hidden /> Check setup</button>
+        <button className="btn btn-primary" disabled={off} onClick={() => ask("run")}><Play className="h-4 w-4" aria-hidden /> Run now</button>
+        <button className="btn btn-ghost" disabled={off} onClick={() => ask("test")}><FlaskConical className="h-4 w-4" aria-hidden /> Test run</button>
+        <button className="btn btn-ghost" disabled={off} onClick={() => ask("setup")}><ShieldCheck className="h-4 w-4" aria-hidden /> Check setup</button>
         <a className="btn btn-ghost" href={YOUTUBE_URL} target="_blank" rel="noreferrer"><MonitorPlay className="h-4 w-4" aria-hidden /> Channel</a>
       </div>
-      {!hasKey && (
-        <p className={`mt-4 text-xs leading-relaxed text-mist ${stacked ? "text-center" : ""}`}>
-          Starting runs needs your owner key. <Link to="/settings" className="text-pink hover:underline">Add it in Settings</Link>.
+      {waiting && (
+        <p role="status" className={`mt-4 text-xs leading-relaxed text-mist ${stacked ? "text-center" : ""}`}>
+          <span className="mr-2 inline-block h-2 w-2 rounded-full bg-gold align-middle live-dot" />
+          {RUN_WORDS[waiting.kind]} was requested {waiting.minutes < 1 ? "just now" : `${waiting.minutes} min ago`}. It starts within about ten minutes.{" "}
+          <button className="text-pink hover:underline" disabled={busy} onClick={withdraw}>Withdraw</button>
+          {waiting.minutes >= 20 && (
+            <> · Taking long? <a className="text-pink hover:underline" href={`${REPO_URL}/actions/workflows/${WORKFLOW}`} target="_blank" rel="noreferrer">Start it on GitHub</a></>
+          )}
         </p>
       )}
     </>

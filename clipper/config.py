@@ -128,6 +128,7 @@ class Settings:
     publish: Publish = field(default_factory=Publish)
     state_path: str = "state/published.json"
     control_dir: str = "control"  # the dashboard's own files: settings.json, rules.json
+    dashboard_url: str = ""  # where the owner's settings and rules are fetched from before a run
     work_dir: str = "work"
     out_dir: str = "out"
 
@@ -301,6 +302,7 @@ def load_settings(path: str | Path = "config.yaml", profile: str | None = None) 
         publish=_build(Publish, raw.get("publish"), "publish"),
         state_path=raw.get("state_path", "state/published.json"),
         control_dir=raw.get("control_dir", "control"),
+        dashboard_url=str(raw.get("dashboard_url") or ""),
         work_dir=raw.get("work_dir", "work"),
         out_dir=raw.get("out_dir", "out"),
     )

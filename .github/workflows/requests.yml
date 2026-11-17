@@ -1,0 +1,55 @@
+name: Dashboard requests
+
+# Starts a run when the owner presses "Run now", "Test run" or "Check setup"
+# on the dashboard. The dashboard holds no GitHub key, so it cannot start a
+# job itself; it leaves a request, and this small job looks for one every
+# ten minutes and starts the Clip workflow.
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: dashboard-requests
+  cancel-in-progress: false
+
+jobs:
+  look:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: config.yaml
+          sparse-checkout-cone-mode: false
+
+      - name: Start the run the dashboard asked for
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          url=$(sed -nE 's/^dashboard_url:[[:space:]]*"?([^"#[:space:]]+).*/\1/p' config.yaml | head -1)
+          if [ -z "$url" ]; then echo "No dashboard_url in config.yaml."; exit 0; fi
+          body=$(curl -fsS -m 20 "${url%/}/api/control") || { echo "The dashboard could not be reached."; exit 0; }
+          kind=$(jq -r '.request.kind // empty' <<<"$body")
+          asked=$(jq -r '.request.requested_at // empty' <<<"$body")
+          if [ -z "$kind" ] || [ -z "$asked" ]; then echo "Nothing requested."; exit 0; fi
+          asked_s=$(date -u -d "$asked" +%s) || { echo "The request's time could not be read."; exit 0; }
+          if [ $(( $(date -u +%s) - asked_s )) -gt 7200 ]; then echo "The request is more than two hours old; ignoring it."; exit 0; fi
+
+          # A run started by hand or by this job after the request means it was served.
+          last=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow clip.yml --event workflow_dispatch --limit 1 --json createdAt --jq '.[0].createdAt // empty')
+          if [ -n "$last" ] && [ "$(date -u -d "$last" +%s)" -ge "$asked_s" ]; then echo "Already started."; exit 0; fi
+
+          case "$kind" in
+            run)   inputs=(-f dry_run=false) ;;
+            test)  inputs=(-f dry_run=true) ;;
+            setup) inputs=(-f dry_run=true -f check_setup=true) ;;
+            *)     echo "Unknown kind of request."; exit 0 ;;
+          esac
+          gh workflow run clip.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" "${inputs[@]}"
+          echo "Started the '$kind' run requested at $asked." | tee -a "$GITHUB_STEP_SUMMARY"

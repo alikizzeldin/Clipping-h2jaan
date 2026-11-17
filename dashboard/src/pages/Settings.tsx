@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { Captions, KeyRound, ListFilter, Rocket, Save, Undo2, X } from "lucide-react";
+import { Captions, ListFilter, LogOut, Rocket, Save, ShieldCheck, Undo2, X } from "lucide-react";
 import { useEffect, useMemo, useState, type KeyboardEvent } from "react";
 import { PageTitle, Panel, Tag, Toggle } from "../components/ui";
-import { REPO_URL } from "../lib/config";
 import type { Effective, Overrides } from "../lib/data";
-import { GitHubError, ownerKey, saveJson, verifyKey } from "../lib/github";
+import { saveSettings } from "../lib/api";
 import { useStore } from "../lib/store";
 
 // The settings the dashboard may change; everything else stays in config.yaml.
@@ -62,9 +61,8 @@ function NumberField({ label, hint, value, onChange, min, max, step = 1, suffix 
 }
 
 export default function Settings() {
-  const { snap, hasKey, refreshKey, demo, setDemo, reload, toast } = useStore();
+  const { snap, email, signOut, report, demo, setDemo, reload, toast } = useStore();
   const [form, setForm] = useState<Effective | null>(null);
-  const [keyDraft, setKeyDraft] = useState("");
   const [busy, setBusy] = useState("");
 
   useEffect(() => {
@@ -86,11 +84,11 @@ export default function Settings() {
     for (const key of changed) (next as Record<string, unknown>)[key] = form[key];
     setBusy("save");
     try {
-      await saveJson("control/settings.json", next, "Update the agent's settings from the dashboard");
+      await saveSettings(next);
       toast("Saved. The agent uses the new settings from its next run.");
       await reload();
     } catch (error) {
-      toast(error instanceof GitHubError ? error.message : "Could not save the settings.", "bad");
+      report(error, "Could not save the settings.");
     } finally {
       setBusy("");
     }
@@ -100,26 +98,11 @@ export default function Settings() {
     if (demo) return toast("Demo mode: settings are not saved.");
     setBusy("reset");
     try {
-      await saveJson("control/settings.json", {}, "Reset the dashboard's settings to the config file");
+      await saveSettings({});
       toast("Reset. The agent is back on the values in config.yaml.");
       await reload();
     } catch (error) {
-      toast(error instanceof GitHubError ? error.message : "Could not reset the settings.", "bad");
-    } finally {
-      setBusy("");
-    }
-  }
-
-  async function storeKey() {
-    setBusy("key");
-    try {
-      const repo = await verifyKey(keyDraft.trim());
-      ownerKey.set(keyDraft);
-      setKeyDraft("");
-      refreshKey();
-      toast(`Key accepted for ${repo}. You can now save changes from this device.`);
-    } catch (error) {
-      toast(error instanceof GitHubError ? error.message : "Could not check the key.", "bad");
+      report(error, "Could not reset the settings.");
     } finally {
       setBusy("");
     }
@@ -132,41 +115,22 @@ export default function Settings() {
       <PageTitle kicker="Tune the machine" title="Settings">
         <div className="flex items-center gap-3">
           {changed.length > 0 && <Tag tone="gold">{changed.length} unsaved change{changed.length === 1 ? "" : "s"}</Tag>}
-          <button className="btn btn-ghost" disabled={busy !== "" || (!hasKey && !demo) || overridden === 0} onClick={reset}><Undo2 className="h-4 w-4" aria-hidden /> Reset</button>
-          <button className="btn btn-primary" disabled={busy !== "" || changed.length === 0 || (!hasKey && !demo)} onClick={save}><Save className="h-4 w-4" aria-hidden /> Save changes</button>
+          <button className="btn btn-ghost" disabled={busy !== "" || overridden === 0} onClick={reset}><Undo2 className="h-4 w-4" aria-hidden /> Reset</button>
+          <button className="btn btn-primary" disabled={busy !== "" || changed.length === 0} onClick={save}><Save className="h-4 w-4" aria-hidden /> Save changes</button>
         </div>
       </PageTitle>
 
       <div className="grid gap-6 xl:grid-cols-2">
-        <Panel title="Owner key" icon={<KeyRound className="h-5 w-5 text-gold" />} index={0} className="xl:col-span-2">
-          <div className="grid gap-5 lg:grid-cols-[1.2fr_1fr]">
+        <Panel title="Your account" icon={<ShieldCheck className="h-5 w-5 text-mint" />} index={0} className="xl:col-span-2">
+          <div className="flex flex-wrap items-center justify-between gap-5">
             <div className="text-sm leading-relaxed text-mist">
-              <p>
-                Anyone can open this dashboard and look. Changing settings, teaching rules and starting runs is for you only, so those
-                need a GitHub key that can write to <a className="text-pink hover:underline" href={REPO_URL} target="_blank" rel="noreferrer">the agent's repository</a>.
-                The key stays in this browser and is sent only to GitHub.
+              <p>Signed in as <b className="text-snow" dir="ltr">{email || "the owner"}</b>.</p>
+              <p className="mt-1 max-w-2xl">
+                This dashboard is private: nothing can be seen or changed without signing in. What you save here is kept on the
+                dashboard's server and picked up by the agent at the start of its next run. This device stays signed in for 30 days.
               </p>
-              <ol className="mt-3 list-decimal space-y-1 pl-5">
-                <li>On GitHub open <b className="text-snow">Settings → Developer settings → Fine-grained tokens → Generate new token</b>.</li>
-                <li>Repository access: <b className="text-snow">Only select repositories</b>, and pick this one.</li>
-                <li>Permissions: <b className="text-snow">Contents</b> and <b className="text-snow">Actions</b>, both Read and write.</li>
-                <li>Generate it and paste it here.</li>
-              </ol>
             </div>
-            <div>
-              {hasKey ? (
-                <div className="rounded-2xl p-4 ring-1 ring-mint/40">
-                  <Tag tone="mint">Key saved on this device</Tag>
-                  <p className="mt-3 text-sm text-mist">You can save changes and start runs.</p>
-                  <button className="btn btn-ghost mt-4" onClick={() => { ownerKey.set(""); refreshKey(); toast("Key removed from this device."); }}>Remove the key</button>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  <input type="password" className="field" autoComplete="off" aria-label="Owner key" placeholder="github_pat_…" value={keyDraft} onChange={(e) => setKeyDraft(e.target.value)} />
-                  <button className="btn btn-primary w-full" disabled={busy !== "" || keyDraft.trim().length < 20} onClick={storeKey}><KeyRound className="h-4 w-4" aria-hidden /> Check and save the key</button>
-                </div>
-              )}
-            </div>
+            <button className="btn btn-ghost" onClick={() => signOut()}><LogOut className="h-4 w-4" aria-hidden /> Sign out</button>
           </div>
         </Panel>
 

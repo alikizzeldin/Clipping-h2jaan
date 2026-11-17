@@ -2,6 +2,11 @@
 # overrides this).
 profile: gta6
 
+# The admin dashboard. Before each run the agent fetches the settings and
+# learning rules the owner saved there (into control/), and a small scheduled
+# job starts the runs the owner asks for.
+dashboard_url: https://gta6fied-dashboard.vercel.app
+
 profiles:
   valorant:
     kick_category: valorant        # the slug in kick.com/category/<slug>
