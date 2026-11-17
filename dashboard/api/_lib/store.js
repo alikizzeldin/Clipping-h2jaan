@@ -65,35 +65,46 @@ function normalise(doc) {
   };
 }
 
-const localFile = () => process.env.CONTROL_FILE ?? "";
+// Storage: the project's private Vercel Blob store, or, while developing,
+// files next to CONTROL_FILE.
+const localFile = (name) => (process.env.CONTROL_FILE ? path.join(path.dirname(process.env.CONTROL_FILE), name) : "");
 
-export async function readControl() {
+/** A stored JSON document, or null when there is none yet. */
+export async function readJson(name) {
   if (process.env.BLOB_READ_WRITE_TOKEN) {
     // useCache: false reads the stored copy itself, so a change shows at once.
-    const found = await get(NAME, { access: "private", useCache: false });
-    if (!found || found.statusCode !== 200) return empty();
-    return normalise(await new Response(found.stream).json());
+    const found = await get(name, { access: "private", useCache: false });
+    if (!found || found.statusCode !== 200) return null;
+    return await new Response(found.stream).json();
   }
-  if (localFile()) {
+  if (localFile(name)) {
     try {
-      return normalise(JSON.parse(await fs.readFile(localFile(), "utf8")));
+      return JSON.parse(await fs.readFile(localFile(name), "utf8"));
     } catch {
-      return empty();
+      return null;
     }
   }
   throw new HttpError(503, "The dashboard's storage is not connected.");
 }
 
-export async function writeControl(doc) {
-  const next = { ...normalise(doc), updated_at: new Date().toISOString() };
-  const body = JSON.stringify(next, null, 1);
+export async function writeJson(name, value) {
+  const body = JSON.stringify(value, null, 1);
   if (process.env.BLOB_READ_WRITE_TOKEN) {
-    await put(NAME, body, { access: "private", allowOverwrite: true, addRandomSuffix: false, contentType: "application/json" });
-  } else if (localFile()) {
-    await fs.mkdir(path.dirname(localFile()), { recursive: true });
-    await fs.writeFile(localFile(), body);
+    await put(name, body, { access: "private", allowOverwrite: true, addRandomSuffix: false, contentType: "application/json" });
+  } else if (localFile(name)) {
+    await fs.mkdir(path.dirname(localFile(name)), { recursive: true });
+    await fs.writeFile(localFile(name), body);
   } else {
     throw new HttpError(503, "The dashboard's storage is not connected.");
   }
+}
+
+export async function readControl() {
+  return normalise(await readJson(NAME));
+}
+
+export async function writeControl(doc) {
+  const next = { ...normalise(doc), updated_at: new Date().toISOString() };
+  await writeJson(NAME, next);
   return next;
 }
