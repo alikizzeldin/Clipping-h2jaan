@@ -161,6 +161,23 @@ class Transcriber:
                 if _trustworthy(seg) and seg.text.strip()]
 
 
+def tidy_translation(lines: list[Line], words: list[Word]) -> list[Line]:
+    """Keep only translated lines that can be trusted on screen.
+
+    Over music and street noise the translator invents sentences and gets
+    stuck repeating one. A line is kept only where the transcript also heard
+    speech, and the whole translation is dropped if it keeps repeating itself.
+    """
+    spoken = [line for line in lines
+              if any(line.start - 0.6 <= word.start <= line.end + 0.6 for word in words)]
+    if len(spoken) >= 3:
+        texts = [line.text.strip().lower() for line in spoken]
+        most_common = max(texts.count(text) for text in set(texts))
+        if most_common >= 3 or most_common > len(texts) / 3:
+            return []
+    return spoken
+
+
 def _trustworthy(seg) -> bool:
     """False for segments Whisper itself doubts, loops, or stock phrases it invents."""
     if seg.avg_logprob < -1.0 or seg.no_speech_prob > 0.8:

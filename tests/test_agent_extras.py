@@ -14,7 +14,7 @@ from clipper.kick import parse_clip
 from clipper.learning import Rule
 from clipper.notify import Notifier
 from clipper.ranking import rank, reject_reason
-from clipper.speech import Line, Word
+from clipper.speech import Line, Word, tidy_translation
 from clipper.state import State
 from clipper.subtitles import TextLayout, build_ass, chunk_words, wrap_lines
 from clipper.titles import build_metadata, spoken_title
@@ -193,14 +193,24 @@ def test_the_english_line_sits_under_the_captions_one_at_a_time():
     subs = [line for line in ass.splitlines() if ",Sub," in line]
     assert len(subs) == 2  # the 0.1-second line is dropped
     assert "0:00:00.40,0:00:02.00" in subs[0] and subs[0].endswith("{\\an8\\pos(540,1269)}Oh, I swear")  # ends when the next begins
-    assert "Style: Sub,Cairo,44," in ass
+    assert "Style: Sub,Cairo,56," in ass
     assert ",Sub," not in build_ass(TextLayout(1080, 1920, 1170, 150), captions, translation=english)  # no room set aside
 
 
+def test_translated_lines_must_match_real_speech_and_not_loop():
+    heard = [Word("آه", 1.0, 1.4), Word("والله", 5.0, 5.5)]
+    lines = [Line("Oh I swear", 0.8, 2.0), Line("made up over music", 2.5, 4.0), Line("it might be", 4.8, 6.0)]
+    assert [l.text for l in tidy_translation(lines, heard)] == ["Oh I swear", "it might be"]
+    stuck = [Line("I'm sorry, I'm sorry", t, t + 2) for t in range(0, 20, 2)]
+    talking = [Word("كلمة", t + 0.5, t + 0.9) for t in range(0, 20, 2)]
+    assert tidy_translation(stuck, talking) == []  # the translator looping on one sentence
+    assert tidy_translation(lines, []) == []
+
+
 def test_long_translations_wrap_to_two_lines():
-    lines = wrap_lines("word " * 60, "Cairo-Bold.ttf", 44, 900)
+    lines = wrap_lines("word " * 60, "Cairo-Bold.ttf", 56, 900)
     assert len(lines) == 2 and lines[1].endswith("…")
-    assert wrap_lines("short one", "Cairo-Bold.ttf", 44, 900) == ["short one"]
+    assert wrap_lines("short one", "Cairo-Bold.ttf", 56, 900) == ["short one"]
 
 
 # ----------------------------------------------------------------- view counts

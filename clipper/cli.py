@@ -26,7 +26,7 @@ from .notify import Notifier
 from .publishers import BufferPublisher, PublishError, PublishLimit, SetupError, make_publisher
 from .quota import plan
 from .ranking import rank, score
-from .speech import Line, SpeechError, Transcriber, Transcript
+from .speech import Line, SpeechError, Transcriber, Transcript, tidy_translation
 from .state import State
 from .subtitles import Chunk, chunk_words, drawable
 from .titles import build_metadata
@@ -265,7 +265,8 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
     try:
         clips, big = discover(settings, kick)
         if sel.own_clips and featured:
-            clips += find_highlights(kick, sorted(featured), profile.kick_category, now)
+            clips += find_highlights(kick, sorted(featured), profile.kick_category, now,
+                                     not_before=settings.channel_starts if publisher else None)
     except KickError as exc:
         log.error("%s", exc)
         report("error", f"The run stopped: {exc}")
@@ -274,6 +275,7 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         clips, profile, sel, state.has,
         not_before=start if publisher else None,  # dry runs may use older clips
         big_channels=big, rules=rules,
+        channel_starts=settings.channel_starts if publisher else None,
         cap_channels=False,  # applied below to what is actually used, so that when a
         # channel's best clip is dropped its next-best still gets a turn this run
     )
@@ -339,7 +341,7 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             if (transcriber and chunks and settings.captions.english_subtitles
                     and transcript.language not in ("", "en")):
                 try:
-                    english = transcriber.translate(raw, transcript.language)
+                    english = tidy_translation(transcriber.translate(raw, transcript.language), transcript.words)
                 except SpeechError as exc:
                     log.warning("no English line for %s: %s", clip.id, exc)
             meta = build_metadata(clip, profile, pub, shorts, [line.text for line in transcript.lines])

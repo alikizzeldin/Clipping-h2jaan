@@ -74,20 +74,28 @@ def find_peaks(samples: list[tuple[datetime, float]], top: int = MAX_CUTS, apart
 
 
 def find_highlights(kick: KickClient, channels: list[str], category: str, now: datetime | None = None,
-                    lookback_hours: float = LOOKBACK_HOURS) -> list[Clip]:
-    """Candidate clips cut from the recent broadcasts of `channels`."""
+                    lookback_hours: float = LOOKBACK_HOURS,
+                    not_before: dict[str, datetime] | None = None) -> list[Clip]:
+    """Candidate clips cut from the recent broadcasts of `channels`.
+
+    `not_before` gives channels a start time: nothing earlier is examined.
+    """
     now = now or datetime.now(timezone.utc)
     found: list[Clip] = []
     for slug in channels:
+        start = (not_before or {}).get(slug.lower())
+        if start and now <= start:
+            continue
         try:
-            found += _channel_highlights(kick, slug, category, now, lookback_hours)
+            found += _channel_highlights(kick, slug, category, now, lookback_hours, start)
         except (KickError, HighlightError) as exc:
             log.warning("no own clips from %s this run: %s", slug, exc)
     return found
 
 
-def _channel_highlights(kick: KickClient, slug: str, category: str, now: datetime, lookback_hours: float) -> list[Clip]:
-    since = now - timedelta(hours=lookback_hours)
+def _channel_highlights(kick: KickClient, slug: str, category: str, now: datetime, lookback_hours: float,
+                        start: datetime | None = None) -> list[Clip]:
+    since = max(now - timedelta(hours=lookback_hours), start or now - timedelta(days=365))
     until = now - timedelta(seconds=90)  # the newest seconds are not in the recording yet
     for video in kick.videos(slug):
         began = _parse_time(str(video.get("start_time") or video.get("created_at") or ""))

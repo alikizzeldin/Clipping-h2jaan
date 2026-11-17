@@ -202,11 +202,11 @@ def render(
             inputs += 1
             header_mid = SAFE_TOP + (win.y - SAFE_TOP) // 2
             # With a translated line underneath, the captions sit a little higher.
-            caption_y = win.caption_y(theme.caption_floor) - (55 if translation else 0)
+            caption_y = win.caption_y(theme.caption_floor) - (80 if translation else 0)
             text = TextLayout(
                 WIDTH, HEIGHT,
                 caption_y=caption_y, caption_size=captions.size,
-                sub_y=caption_y + int(captions.size * 0.5) + 24 if translation else 0,
+                sub_y=caption_y + int(captions.size * 0.5) + 18 if translation else 0,
                 label_y=(header_mid - 50 if title else header_mid) if label else 0,
                 title_y=(header_mid + 78 if label else header_mid) if title else 0,
                 highlight=theme.highlight, glow=theme.glow, outline=theme.outline,

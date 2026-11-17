@@ -64,6 +64,16 @@ def test_clips_with_slurs_in_the_title_are_never_used(make_clip, now):
     assert reason(make_clip(title="Night raid on the bigger heist"), now) is None
 
 
+def test_a_channel_can_start_later_than_the_rest(make_clip, now):
+    starts = {"sxb": now - timedelta(hours=1)}
+    early = make_clip(channel_slug="sxb", created_at=now - timedelta(hours=3))
+    late = make_clip(channel_slug="sxb", created_at=now - timedelta(minutes=10))
+    other = make_clip(channel_slug="xqc", created_at=now - timedelta(hours=3))
+    why = lambda c: reject_reason(c, PROFILE, Selection(), never, now, None, None, None, starts)  # noqa: E731
+    assert why(early) == "made before this channel's start time"
+    assert why(late) is None and why(other) is None
+
+
 def test_language_filter(make_clip, now):
     sel = Selection(languages=["English"])
     assert reason(make_clip(language="English (India)"), now, sel) is None

@@ -79,6 +79,8 @@ def test_profile_and_privacy_can_come_from_environment(monkeypatch):
     ("themes:\n  t: {highlight: pink}\n", "colours"),
     ("themes:\n  t: {caption_style: disco}\n", "caption_style"),
     ("publish:\n  max_per_day: 3\n  featured_per_day: 4\n", "featured_per_day"),
+    ("selection:\n  channel_start: {sxb: midnight}\n", "channel_start.sxb"),
+    ("selection:\n  channel_start: [sxb]\n", "channel_start"),
 ])
 def test_config_mistakes_are_reported(tmp_path, extra, match):
     bad = tmp_path / "config.yaml"
@@ -95,6 +97,12 @@ def test_unknown_profile_and_theme_are_reported(tmp_path):
     bad.write_text("profile: a\nprofiles:\n  a: {kick_category: x, label: X, theme: nope}\n")
     with pytest.raises(ConfigError, match="theme 'nope'"):
         load_settings(bad)
+
+
+def test_channel_start_times_are_read_with_their_time_zone(tmp_path):
+    config = tmp_path / "config.yaml"
+    config.write_text(MINIMAL + 'selection:\n  channel_start: {SXB: "2026-11-19T00:00:00+03:00"}\n')
+    assert load_settings(config).channel_starts == {"sxb": datetime(2026, 11, 18, 21, tzinfo=timezone.utc)}
 
 
 def test_start_time_is_read_in_its_own_time_zone():

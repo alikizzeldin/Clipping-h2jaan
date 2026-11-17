@@ -53,6 +53,10 @@ selection:
                              # now, or most followers) and the featured ones
   featured_channels: [sxb]   # favourites: always followed, with their own daily slots
   featured_min_views: 20     # featured clips need only this many views
+  # SXB plays from the Saudi unlock (midnight at the start of 19 Nov, Saudi time),
+  # not the earlier New Zealand one, so nothing of his from before then is used.
+  channel_start:
+    sxb: "2026-11-19T00:00:00+03:00"
   languages: []              # e.g. [English, Arabic]; empty = any language
   drop_unknown_language: false
   allow_channels: []         # if not empty, ONLY these channels (and featured ones) are clipped

@@ -18,6 +18,7 @@ FONTS_DIR = Path(__file__).resolve().parent.parent / "assets" / "fonts"
 CAPTION_FONT = ("Baloo Bhaijaan 2 ExtraBold", "BalooBhaijaan2-ExtraBold.ttf")  # Arabic + Latin
 TITLE_FONT = ("Cairo", "Cairo-Bold.ttf")
 LABEL_FONT = ("Anton", "Anton-Regular.ttf")  # Latin display face for the game label
+SUB_SIZE = 56  # the translated line under the captions
 
 _ARABIC = ((0x0600, 0x06FF), (0x0750, 0x077F), (0xFB50, 0xFDFF), (0xFE70, 0xFEFF))
 
@@ -161,7 +162,7 @@ ScaledBorderAndShadow: yes
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Caption,{CAPTION_FONT[0]},{layout.caption_size},{white},{white},&H00000000,&H78000000,0,0,0,0,100,100,0,0,1,9,4,5,40,40,0,-1
 Style: Title,{TITLE_FONT[0]},60,{white},{white},{outline},&H96000000,-1,0,0,0,100,100,0,0,1,4,2,5,40,40,0,-1
-Style: Sub,{TITLE_FONT[0]},44,{white},{white},&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,3.5,1,8,40,40,0,-1
+Style: Sub,{TITLE_FONT[0]},{SUB_SIZE},{white},{white},&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,4,2,8,40,40,0,-1
 Style: Label,{LABEL_FONT[0]},120,{white},{white},{outline},&H96000000,0,0,0,0,100,100,2,0,1,6,4,5,40,40,0,-1
 
 [Events]
@@ -195,7 +196,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 end = min(end, translation[i + 1].start)  # never two translated lines at once
             if end - line.start < 0.2:
                 continue
-            text = "\\N".join(wrap_lines(line.text, TITLE_FONT[1], 44, max_text - 60))
+            text = "\\N".join(wrap_lines(line.text, TITLE_FONT[1], SUB_SIZE, max_text - 40))
             events.append(
                 f"Dialogue: 1,{ass_time(line.start)},{ass_time(end)},Sub,,0,0,0,,"
                 f"{{\\an8\\pos({cx},{layout.sub_y})}}{text}"

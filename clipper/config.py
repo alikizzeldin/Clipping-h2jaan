@@ -63,6 +63,9 @@ class Selection:
     top_channels_only: bool = False  # use only the biggest live channels (and featured ones)
     featured_channels: list[str] = field(default_factory=list)  # favourites, always followed
     featured_min_views: int = 20  # their own, lower view bar
+    # Channels that start later than everyone else: no clip of theirs made
+    # before this time is used, e.g. {sxb: "2026-11-19T00:00:00+03:00"}.
+    channel_start: dict[str, str] = field(default_factory=dict)
     allow_channels: list[str] = field(default_factory=list)  # if set, only these
     block_channels: list[str] = field(default_factory=list)
     require_gameplay: bool = False  # skip clips where no game is on screen
@@ -145,18 +148,28 @@ class Settings:
         """`publish.start_at` as an aware datetime, or None when unset."""
         return parse_start(self.publish.start_at)
 
+    @property
+    def channel_starts(self) -> dict[str, datetime]:
+        """`selection.channel_start` as {channel: aware datetime}."""
+        found = {}
+        for channel, value in (self.selection.channel_start or {}).items():
+            when = parse_start(str(value), f"selection.channel_start.{channel}")
+            if when:
+                found[str(channel).lower()] = when
+        return found
 
-def parse_start(value: str) -> datetime | None:
+
+def parse_start(value: str, name: str = "publish.start_at") -> datetime | None:
     if not str(value or "").strip():
         return None
     try:
         parsed = datetime.fromisoformat(str(value).strip().replace("Z", "+00:00"))
     except ValueError as exc:
         raise ConfigError(
-            f"publish.start_at '{value}' is not a time like 2026-11-18T13:00:00+02:00"
+            f"{name} '{value}' is not a time like 2026-11-18T13:00:00+02:00"
         ) from exc
     if parsed.tzinfo is None:
-        raise ConfigError("publish.start_at needs a UTC offset, e.g. +02:00")
+        raise ConfigError(f"{name} needs a UTC offset, e.g. +02:00")
     return parsed.astimezone(timezone.utc)
 
 
@@ -306,6 +319,9 @@ def load_settings(path: str | Path = "config.yaml", profile: str | None = None) 
     if settings.publish.via == "buffer" and settings.render.layout != "shorts":
         raise ConfigError("Buffer only publishes vertical YouTube Shorts: use render.layout: shorts")
     parse_start(settings.publish.start_at)
+    if not isinstance(settings.selection.channel_start, dict):
+        raise ConfigError("selection.channel_start must map channel names to start times")
+    settings.channel_starts  # reports any start time that can't be read
     if settings.publish.featured_per_day > settings.publish.max_per_day:
         raise ConfigError("publish.featured_per_day can't be more than publish.max_per_day")
     if settings.selection.window not in ("day", "week", "month", "all"):
