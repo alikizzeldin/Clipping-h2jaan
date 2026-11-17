@@ -98,9 +98,12 @@ what it has learned. It has two layouts to choose from, **Cinematic** (a wide
 banner) and **Showroom** (the 3D logo in the centre, which follows the
 pointer and can be dragged or spun).
 
-- **Open it:** switch GitHub Pages on once (**Settings → Pages → Source:
-  GitHub Actions**). The `Dashboard` workflow then publishes it at
-  `https://<your-user>.github.io/<this-repo>/` on every change.
+- **Open it:** <https://gta6fied-dashboard.vercel.app>. It is hosted on
+  Vercel, which rebuilds it whenever something under `dashboard/` changes
+  on this branch (other commits, such as the agent saving its history, are
+  skipped). GitHub Pages works too: switch it on once (**Settings → Pages →
+  Source: GitHub Actions**) and the `Dashboard` workflow publishes it at
+  `https://<your-user>.github.io/<this-repo>/`.
 - **Anyone can view it, only you can change things.** Saving settings,
   editing learning rules and starting runs need a GitHub key with Contents
   and Actions write access to this repository, pasted once on the Settings
