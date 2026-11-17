@@ -137,11 +137,14 @@ export default function Showroom() {
           <motion.p initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-center text-sm text-snow/70">
             Welcome back, <span className="font-semibold text-snow">{CHANNEL_NAME}</span>
           </motion.p>
-          <div className="mx-auto h-[360px] w-full max-w-[760px] sm:h-[460px] xl:h-[min(52dvh,560px)]">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.4 }} className="mt-1.5 hidden items-center justify-center gap-2 text-[11px] uppercase tracking-[0.25em] text-mist sm:flex">
+            <Hand className="h-3.5 w-3.5" aria-hidden /> Drag the logo to turn it · double-click to spin
+          </motion.p>
+          <div className="mx-auto h-[360px] w-full max-w-[760px] sm:h-[460px] xl:h-[min(46dvh,540px)]">
             <Logo3D lean={hover ? (hover.side === "left" ? -1 : 1) : 0} />
           </div>
 
-          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 0.7 }} className="relative z-10 mt-1 flex flex-col items-center text-center">
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 0.7 }} className="relative z-10 mt-4 flex flex-col items-center text-center">
             {state.kind === "armed" && (
               <>
                 <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-pink neon-text"><Rocket className="h-4 w-4" aria-hidden /> Launch in</p>
@@ -161,9 +164,6 @@ export default function Showroom() {
               </>
             )}
             <div className="mt-5"><QuickActions stacked /></div>
-            <p className="mt-4 flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-mist">
-              <Hand className="h-3.5 w-3.5" aria-hidden /> Drag the logo to turn it · double-click to spin
-            </p>
           </motion.div>
         </div>
 
