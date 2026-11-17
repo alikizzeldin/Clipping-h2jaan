@@ -65,9 +65,12 @@ export default function Settings() {
   const [form, setForm] = useState<Effective | null>(null);
   const [busy, setBusy] = useState("");
 
+  // The form follows what is saved, but a routine refresh that brings back the
+  // same values must not wipe what the owner is in the middle of changing.
+  const saved = snap ? JSON.stringify(snap.settings) : "";
   useEffect(() => {
     if (snap) setForm(snap.settings);
-  }, [snap]);
+  }, [saved]);
 
   const changed = useMemo(() => {
     if (!snap || !form) return [] as Key[];
