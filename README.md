@@ -66,6 +66,9 @@ New repository secret**):
 |------------------|---------------------------------------------------|
 | `BUFFER_API_KEY` | your key from [Buffer's developer page](https://developers.buffer.com/) |
 
+To confirm the key works on GitHub without publishing anything: **Actions →
+Clip → Run workflow** with *check setup* ticked.
+
 `publish.buffer_channel_id` in `config.yaml` says which Buffer channel gets
 the videos. To list the channels a key can post to:
 

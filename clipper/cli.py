@@ -272,18 +272,33 @@ def _check_hosting(video: Path, name: str, prefix: str) -> str:
 
 
 def cmd_channels(args: argparse.Namespace) -> int:
+    """List the Buffer channels the key can post to, and check the configured one."""
     key = os.environ.get("BUFFER_API_KEY", "")
     if not key:
-        log.error("set BUFFER_API_KEY first")
+        log.error("BUFFER_API_KEY is not set (add it as a repository secret)")
         return 2
     try:
         channels = Buffer(key, "").channels()
     except BufferError as exc:
         log.error("%s", exc)
         return 1
+    try:
+        wanted = load_settings(args.config, args.profile).publish.buffer_channel_id
+    except ConfigError:
+        wanted = ""
     for ch in channels:
-        state = " (disconnected)" if ch.get("isDisconnected") else ""
-        print(f"{ch['id']}  {ch['service']:<10} {ch['name']}{state}")
+        marks = " (disconnected)" if ch.get("isDisconnected") else ""
+        marks += "  <- the channel set in config.yaml" if ch["id"] == wanted else ""
+        print(f"{ch['id']}  {ch['service']:<10} {ch['name']}{marks}")
+    target = next((ch for ch in channels if ch["id"] == wanted), None)
+    if wanted and not target:
+        log.error("the channel set in config.yaml (%s) is not one this key can post to", wanted)
+        return 1
+    if target and target.get("isDisconnected"):
+        log.error("the configured channel is disconnected in Buffer; reconnect it there")
+        return 1
+    if target:
+        _summary([f"Buffer is connected: the key works and can post to \"{target['name']}\"."])
     return 0
 
 

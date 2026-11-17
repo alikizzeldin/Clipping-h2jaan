@@ -16,6 +16,10 @@ on:
         description: With dry run - also test that a clip can be hosted for Buffer
         type: boolean
         default: false
+      check_setup:
+        description: Only check that the Buffer key works (renders and publishes nothing)
+        type: boolean
+        default: false
       profile:
         description: Game profile (blank = CLIPPER_PROFILE variable, then config.yaml)
         type: string
@@ -76,8 +80,12 @@ jobs:
         if: steps.gate.outputs.go == 'true'
         run: pip install -r requirements.txt
 
+      - name: Check the Buffer connection
+        if: github.event_name == 'workflow_dispatch' && inputs.check_setup
+        run: python -m clipper channels
+
       - name: Keep the Whisper model between runs
-        if: steps.gate.outputs.go == 'true'
+        if: steps.gate.outputs.go == 'true' && !inputs.check_setup
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
@@ -85,7 +93,7 @@ jobs:
           restore-keys: whisper-
 
       - name: Find, render and publish clips
-        if: steps.gate.outputs.go == 'true'
+        if: steps.gate.outputs.go == 'true' && !inputs.check_setup
         run: |
           args=()
           if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
