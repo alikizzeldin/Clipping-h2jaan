@@ -79,6 +79,11 @@ class State:
                 found.append((when, clip_id, entry))
         return [(clip_id, entry) for _, clip_id, entry in sorted(found, key=lambda f: f[0])]
 
+    def recent_hooks(self, count: int = 6) -> list[str]:
+        """The title hooks of the last `count` uploads, newest first."""
+        entries = sorted(self.published.values(), key=lambda e: str(e.get("uploaded_at", "")), reverse=True)
+        return [str(e["hook"]) for e in entries[:count] if e.get("hook")]
+
     def recent(self, since: datetime) -> list[tuple[datetime, str]]:
         """(time, channel) of everything published since `since` under the daily plan.
 

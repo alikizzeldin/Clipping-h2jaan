@@ -112,8 +112,6 @@ class Publish:
     min_gap_hours: float = 0  # shortest time between two posts
     fill_after_hours: float = 12  # a reserved slot opens to anyone after this long with no post
     category_id: str = "20"  # YouTube "Gaming"
-    title_template: str = "{title} | {streamer} {game}"
-    fallback_title_template: str = "{streamer} {game} clip"
     description_footer: str = ""
 
 

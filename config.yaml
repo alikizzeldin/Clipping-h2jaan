@@ -102,6 +102,4 @@ publish:
   featured_per_day: 2        # ...of which this many are reserved for featured_channels
   min_gap_hours: 7           # spread them out: at least this long between two posts
   fill_after_hours: 12       # a reserved slot opens to anyone after this long with no post
-  title_template: "{title} | {streamer} {game}"
-  fallback_title_template: "{streamer} {game} clip"   # used when the clip title is junk
   description_footer: ""     # e.g. a contact line for removal requests

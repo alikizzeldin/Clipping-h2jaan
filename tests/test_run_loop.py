@@ -106,7 +106,8 @@ def test_a_featured_clip_is_published_and_everything_is_recorded(world):
     assert saved["video_id"] == "post_fav" and saved["via"] == "buffer" and saved["channel"] == "sxb"
     assert saved["livestream_id"] == "s1" and "started_at" in saved and saved["origin"] == "viewer"
     activity = read("activity.json")
-    assert activity[0]["type"] == "published" and "Title fav" in activity[0]["text"]
+    assert activity[0]["type"] == "published" and "SXB" in activity[0]["text"] and " | " in activity[0]["text"]
+    assert saved["hook"] and saved["title"].startswith("SXB") or "SXB" in saved["title"]  # English, then Arabic
 
 
 def test_posts_are_spaced_and_other_channels_get_their_slot(world):

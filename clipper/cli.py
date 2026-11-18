@@ -313,6 +313,7 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
     tried: set[str] = set()
     rendered: list[tuple[datetime, str]] = []  # dry runs: stands in for the publish history
     used_moments = state.moments()
+    recent_hooks = state.recent_hooks()  # so titles don't repeat the last few
     used_channels: dict[str, int] = {}
     failed = 0
 
@@ -372,10 +373,10 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
                     english = tidy_translation(transcriber.translate(raw, transcript.language), transcript.words)
                 except SpeechError as exc:
                     log.warning("no English line for %s: %s", clip.id, exc)
-            # A title is quoted from what is said: in Arabic or English as spoken,
-            # otherwise from the English translation, which more viewers can read.
-            spoken = english if english and transcript.language not in ("ar", "en") else transcript.lines
-            meta = build_metadata(clip, profile, pub, shorts, [line.text for line in spoken])
+            # The title's hook can follow what is said; that is read in English.
+            said = transcript.lines if transcript.language == "en" else english
+            meta = build_metadata(clip, profile, pub, shorts, launch_at=start,
+                                  words=" ".join(line.text for line in said), avoid=recent_hooks)
             video = rnd.render(
                 raw, out / f"{clip.id}.mp4", settings.render, settings.theme, settings.captions,
                 label=profile.label, title=meta["clean_title"], chunks=chunks, translation=english,
@@ -389,6 +390,7 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         if clip.started_at and clip.livestream_id:
             used_moments.append((clip.livestream_id, clip.started_at.timestamp(), clip.duration))
         used_channels[clip.channel_slug] = used_channels.get(clip.channel_slug, 0) + 1
+        recent_hooks.insert(0, meta["hook"])
         if publisher is None:
             rendered.append((now, clip.channel_slug))
             done.append(f"- rendered `{video}` — {meta['title']}")
@@ -406,6 +408,7 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             report("error", f"Publishing “{meta['title']}” failed: {exc}")
             return finish(1, *done)
         extra = {"language": language_name(transcript.language)} if transcript.language else {}
+        extra["hook"] = meta["hook"]
         if burst:
             extra["burst"] = True
         state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra or None)

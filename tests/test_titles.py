@@ -31,24 +31,28 @@ def test_real_titles_are_kept_and_tidied(raw, expected):
 
 def test_metadata_credits_the_streamer(make_clip):
     meta = build_metadata(make_clip(clipper_name="viewer1"), PROFILE, Publish(), shorts=True)
-    assert meta["title"] == "Insane 1v5 clutch | Streamer Valorant #shorts"
+    english, arabic = meta["title"].removesuffix(" #shorts").split(" | ")
+    assert "Streamer" in english and "Valorant" in english
+    assert "Streamer" in arabic and any("\u0600" <= ch <= "\u06ff" for ch in arabic)
+    assert meta["title"].endswith(" #shorts") and meta["hook"]
     assert "https://kick.com/streamer" in meta["description"]
     assert "https://kick.com/streamer/clips/clip_1" in meta["description"]
     assert "Clipped by: viewer1" in meta["description"]
+    assert "Clip title: Insane 1v5 clutch" in meta["description"]  # the viewer's own title is kept here
     assert "#valorant" in meta["description"] and "#shorts" in meta["description"]
     assert "Valorant" in meta["tags"] and "Streamer" in meta["tags"]
 
 
-def test_junk_title_uses_the_fallback(make_clip):
+def test_a_junk_viewer_title_is_left_out(make_clip):
     meta = build_metadata(make_clip(title="kkkkkkk"), PROFILE, Publish(), shorts=False)
-    assert meta["title"] == "Streamer Valorant clip"
-    assert meta["clean_title"] == ""
+    assert "kkkkkkk" not in meta["title"] and "kkkkkkk" not in meta["description"]
+    assert not meta["title"].endswith("#shorts")
 
 
-def test_long_titles_fit_youtube_limit_and_keep_the_streamer(make_clip):
-    meta = build_metadata(make_clip(title="word " * 60), PROFILE, Publish(), shorts=True)
+def test_long_names_still_fit_youtube_limit_in_both_languages(make_clip):
+    meta = build_metadata(make_clip(channel_name="AVeryVeryLongStreamerNameIndeed_TTV"), PROFILE, Publish(), shorts=True)
     assert len(meta["title"]) <= MAX_TITLE
-    assert meta["title"].endswith("| Streamer Valorant #shorts")
+    assert " | " in meta["title"] and any("\u0600" <= ch <= "\u06ff" for ch in meta["title"])
 
 
 @pytest.mark.parametrize("title", ["n1gg4", "NIGGA please", "niiiigga", "f4ggot", "n-i-g-g-a", "retarded play"])

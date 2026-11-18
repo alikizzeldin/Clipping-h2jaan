@@ -17,7 +17,7 @@ from clipper.ranking import rank, reject_reason
 from clipper.speech import Line, Word, tidy_translation
 from clipper.state import State
 from clipper.subtitles import TextLayout, build_ass, chunk_words, wrap_lines
-from clipper.titles import build_metadata, spoken_title
+from clipper.titles import build_metadata
 
 PROFILE = Profile(kick_category="valorant", label="Valorant", min_views=50)
 
@@ -159,24 +159,6 @@ def test_a_missing_or_broken_settings_file_changes_nothing(tmp_path, monkeypatch
 
 
 # ------------------------------------------------------------ titles from speech
-
-def test_the_most_quotable_line_becomes_the_title():
-    assert spoken_title(["5-11 I am primary on the car", "Do we know where the primary suspect is he was in dark colour clothes red helmet",
-                         "I am aiming for the bushes!", "AHHHHH!"]) == "I am aiming for the bushes!"
-    assert spoken_title(["شو درع يا هبل؟ هذو جواته أغراض", "واحد الله", "كمل كمل كمل كمل"]) == "شو درع يا هبل؟ هذو جواته أغراض"
-    assert spoken_title(["ok", "go go go go", ""]) == ""
-    assert spoken_title(["you absolute n1gg4 what was that"]) == ""
-
-
-def test_junk_viewer_titles_are_replaced_by_what_was_said(make_clip):
-    lines = ["I am aiming for the bushes!"]
-    junk = build_metadata(make_clip(title="kkkkkkk"), PROFILE, Publish(), True, lines)
-    assert junk["title"] == "“I am aiming for the bushes!” | Streamer Valorant #shorts"
-    good = build_metadata(make_clip(title="Insane 1v5 clutch"), PROFILE, Publish(), True, lines)
-    assert good["title"].startswith("Insane 1v5 clutch")  # a real viewer title wins
-    silent = build_metadata(make_clip(title="kkkkkkk"), PROFILE, Publish(), True, [])
-    assert silent["title"] == "Streamer Valorant clip #shorts"
-
 
 def test_the_agents_own_cuts_link_the_streamer_but_no_clip_page(make_clip):
     meta = build_metadata(make_clip(id="auto_1_2", origin="auto", title=""), PROFILE, Publish(), True)

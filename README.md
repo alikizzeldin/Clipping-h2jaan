@@ -24,8 +24,8 @@ Set up for **GTA 6** (with a **Valorant** profile for testing).
 5. For the best one: skips it if the **same moment** was already posted (many
    viewers clip the same seconds) or if there is **no game on screen**.
 6. Transcribes the speech with Whisper, adds an **English line** under
-   captions in another language, and writes a title from what is said when
-   the viewer's title is junk.
+   captions in another language, and titles it with a hook in English, then
+   Arabic (for example "xQc's first minutes in GTA 6 😳 | أول دقائق xQc في GTA 6 😳").
 7. Renders the Short, publishes it, and records it under `state/`.
 
 Everything is tunable in [`config.yaml`](config.yaml), and the main switches
@@ -62,8 +62,9 @@ are also on the dashboard's Settings page.
 - A 4-second sample of the GTA 6 frame is in
   [`docs/sample-short.mp4`](docs/sample-short.mp4).
 - No streamer name or Kick link is drawn on the video. The YouTube title and
-  description still credit the streamer and link the original clip; change
-  `title_template` in `config.yaml` if you want a different title.
+  description still credit the streamer and link the original clip. Titles
+  are hooks in English, then Arabic; the hooks are listed in
+  `clipper/hooks.py`.
 
 ## Learning from results
 
