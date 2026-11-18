@@ -145,7 +145,8 @@ class BufferPublisher:
             self._discard(branch)
             raise PublishLimit(str(exc)) from exc
         except BufferError as exc:
-            self._discard(branch)
+            if not str(exc).startswith("could not reach Buffer"):
+                self._discard(branch)  # after a timeout Buffer may still fetch the file
             raise PublishError(str(exc)) from exc
         self.last_url = url
         return Published(post_id, "", self.via)

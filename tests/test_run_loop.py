@@ -173,6 +173,22 @@ def test_a_publishing_failure_is_reported_and_logged(world):
     assert run() == 1
     assert read("activity.json")[0]["type"] == "error" and "Buffer said no" in read("activity.json")[0]["text"]
     assert "fav" not in read("published.json")["published"]
+    assert "publishing failed" in read("published.json")["skipped"]["fav"]["reason"]  # never retried
+
+
+def test_one_failed_publish_does_not_end_the_batch(world, monkeypatch):
+    setup, read, _ = world
+
+    class Flaky(FakePublisher):
+        def publish(self, video, clip, meta):
+            if clip.id == "a":
+                raise PublishError("could not reach Buffer: read timed out")
+            return super().publish(video, clip, meta)
+
+    monkeypatch.setattr(cli, "find_highlights", lambda *a, **k: [])
+    publisher, run = setup([clip("a", "big", 900, stream="s2"), clip("b", "other", 800, stream="s3")], publisher=Flaky())
+    assert run("--burst", "2") == 0
+    assert publisher.sent == ["b"]
 
 
 def test_the_pause_switch_stops_publishing(world):

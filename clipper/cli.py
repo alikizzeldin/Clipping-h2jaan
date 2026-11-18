@@ -45,6 +45,7 @@ BURST_WORKERS = 8  # channels examined side by side
 SCENE_DAYS = 2  # a scene posted within this many days is not posted again
 MONTH_WINDOW, DAY_WINDOW = 2592000, 86400  # Buffer's allowance windows, in seconds
 DAY_RESERVE = 60  # extra batches leave at least this many of Buffer's daily requests
+MAX_PUBLISH_FAILURES = 2  # failed publishes in a row before a run gives up
 
 
 def discover(settings: Settings, kick: KickClient) -> tuple[list[Clip], set[str]]:
@@ -334,6 +335,7 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
     recent_hooks = state.recent_hooks()  # so titles don't repeat the last few
     used_channels: dict[str, int] = {}
     failed = 0
+    publish_failures = 0  # in a row; one bad clip or a timeout must not end the run
 
     def drop(clip: Clip, reason: str) -> None:
         """Rule a clip out for good, so later runs don't fetch it again."""
@@ -439,7 +441,13 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         except PublishError as exc:
             log.error("%s", exc)
             report("error", f"Publishing “{meta['title']}” failed: {exc}")
-            return finish(1, *done)
+            # Never try this clip again: after a timeout it may have gone out anyway.
+            state.skip(clip.id, f"publishing failed: {str(exc)[:160]}")
+            publish_failures += 1
+            if publish_failures >= MAX_PUBLISH_FAILURES:  # something is wrong beyond one clip
+                return finish(1, *done)
+            continue
+        publish_failures = 0
         extra = {"language": language_name(transcript.language)} if transcript.language else {}
         extra["hook"] = meta["hook"]
         if scene:
@@ -463,6 +471,8 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
     head = f"{verb} {len(done)} clip(s) for {profile.label}"
     if failed:
         head += f"; {failed} could not be processed"
+    if publish_failures and not done:
+        return finish(1, head, *done)
     if failed and not done:
         # Every candidate failing points at a systemic problem (e.g. Kick blocking us).
         report("error", f"{failed} clip(s) could not be processed and nothing was published")
