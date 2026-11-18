@@ -114,6 +114,7 @@ export function PlanSlots({ snap }: { snap: Snapshot }) {
       </div>
       <p className="mt-3 text-xs leading-relaxed text-mist">
         {reservedCount} slot{reservedCount === 1 ? " is" : "s are"} kept for {name ?? "featured streamers"}; the rest go to the biggest other channels.
+        {info.todayBurst > 0 && <> Plus {info.todayBurst} launch clip{info.todayBurst === 1 ? "" : "s"} outside the plan.</>}
       </p>
     </div>
   );

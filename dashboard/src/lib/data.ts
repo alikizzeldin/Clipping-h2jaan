@@ -20,6 +20,7 @@ export type Clip = {
   duration?: number;
   language?: string;
   origin?: "viewer" | "auto";
+  burst?: boolean; // part of a one-off launch push, outside the daily plan
   views?: number;
   likes?: number;
   comments?: number;
@@ -204,10 +205,13 @@ export function insights(snap: Snapshot) {
   const totalViews = live.reduce((sum, c) => sum + (c.views ?? 0), 0);
   const measured = live.filter((c) => c.views !== undefined);
   const dayAgo = Date.now() - 24 * 3600 * 1000;
-  const today = live.filter((c) => new Date(c.uploaded_at).getTime() >= dayAgo);
+  const recent = live.filter((c) => new Date(c.uploaded_at).getTime() >= dayAgo);
+  // The daily plan (and its spacing) counts only regular posts; a launch burst is extra.
+  const today = recent.filter((c) => !c.burst);
   const featured = new Set(snap.settings.featured_channels.map((c) => c.toLowerCase()));
   const top = [...measured].sort((a, b) => (b.views ?? 0) - (a.views ?? 0))[0];
-  const lastUpload = live[0] ? new Date(live[0].uploaded_at).getTime() : 0;
+  const regular = live.filter((c) => !c.burst);
+  const lastUpload = regular[0] ? new Date(regular[0].uploaded_at).getTime() : 0;
   const nextSlot = lastUpload ? lastUpload + snap.settings.min_gap_hours * 3600 * 1000 : 0;
   return {
     totalViews,
@@ -216,6 +220,7 @@ export function insights(snap: Snapshot) {
     avgViews: measured.length ? totalViews / measured.length : 0,
     failed: snap.clips.filter((c) => c.status === "error").length,
     today: today.length,
+    todayBurst: recent.length - today.length,
     todayFeatured: today.filter((c) => featured.has(c.channel.toLowerCase())).length,
     featuredShare: live.filter((c) => featured.has(c.channel.toLowerCase())).length,
     top,
