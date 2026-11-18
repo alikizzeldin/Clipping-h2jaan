@@ -23,6 +23,9 @@ export type Clip = {
   burst?: boolean; // part of a one-off launch push, outside the daily plan
   instagram?: string; // Buffer's post id when the clip was also posted to Instagram
   instagram_at?: string;
+  instagram_status?: "sent" | "error" | string;
+  instagram_link?: string;
+  instagram_error?: string;
   views?: number;
   likes?: number;
   comments?: number;

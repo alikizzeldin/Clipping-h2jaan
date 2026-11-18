@@ -117,3 +117,28 @@ def test_a_reel_goes_to_the_instagram_channel():
     assert sent["channelId"] == "insta" and sent["text"].startswith("Hook")
     assert sent["metadata"] == {"instagram": {"type": "reel", "shouldShareToFeed": True}}
     assert sent["assets"][0]["video"]["url"] == "https://host/clip.mp4" and sent["mode"] == "shareNow"
+
+
+def test_instagram_posts_are_confirmed_on_a_later_run(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+
+    from clipper.config import Publish
+    from clipper.publishers import BufferPublisher
+    from clipper.state import State
+
+    monkeypatch.setenv("BUFFER_API_KEY", "key")
+    publisher = BufferPublisher(Publish(buffer_channel_id="yt", instagram_channel_id="ig"), tmp_path)
+    answers = {"ig_ok": {"status": "sent", "link": "https://instagram.com/reel/x", "error": ""},
+               "ig_bad": {"status": "error", "link": "", "error": "Instagram needs a business account"}}
+    monkeypatch.setattr(publisher.client, "post_status", lambda post_id: answers[post_id])
+    monkeypatch.setattr(publisher.host, "prune", lambda: 0)
+    state = State(tmp_path / "published.json")
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    for clip_id, post in (("a", "ig_ok"), ("b", "ig_bad")):
+        state.published[clip_id] = {"video_id": f"yt_{clip_id}", "via": "buffer", "status": "sent", "title": clip_id,
+                                    "uploaded_at": now, "instagram": post, "instagram_at": now}
+    seen = []
+    publisher.prepare(state, lambda kind, text, link="": seen.append(kind))
+    assert state.published["a"]["instagram_status"] == "sent" and state.published["a"]["instagram_link"].endswith("/x")
+    assert state.published["b"]["instagram_status"] == "error" and "business" in state.published["b"]["instagram_error"]
+    assert seen == ["info", "error"]

@@ -82,7 +82,11 @@ export default function Clips() {
                 <div className="absolute left-3 top-3 flex gap-2">
                   {status(clip)}
                   {clip.origin === "auto" && <Tag tone="aqua"><Scissors className="h-3 w-3" aria-hidden /> Agent cut</Tag>}
-                  {clip.instagram && <Tag tone="rose"><InstagramIcon className="h-3 w-3" /> Instagram</Tag>}
+                  {clip.instagram && (
+                    <Tag tone={clip.instagram_status === "error" ? "gold" : "rose"}>
+                      <InstagramIcon className="h-3 w-3" /> {clip.instagram_status === "error" ? "Instagram failed" : "Instagram"}
+                    </Tag>
+                  )}
                 </div>
                 {clip.duration ? <span className="absolute bottom-3 right-3 rounded-md bg-night/80 px-2 py-0.5 text-xs font-semibold tabular-nums">{duration(clip.duration)}</span> : null}
               </div>
@@ -90,12 +94,16 @@ export default function Clips() {
                 <h3 dir="auto" className="line-clamp-2 min-h-[2.75rem] text-[15px] font-semibold leading-snug text-snow">{clip.title}</h3>
                 <p className="mt-1 text-xs text-mist">{clip.channel}{clip.language ? ` · ${clip.language}` : ""} · {dateTime(clip.uploaded_at)}</p>
                 {clip.status === "error" && clip.error && <p className="mt-2 text-xs leading-relaxed text-rose">{clip.error}</p>}
+                {clip.instagram_status === "error" && clip.instagram_error && <p className="mt-2 text-xs leading-relaxed text-gold">Instagram: {clip.instagram_error}</p>}
                 <div className="mt-3 flex items-center justify-between">
                   <span className="flex items-center gap-1.5 text-sm text-snow">
                     <Eye className="h-4 w-4 text-pink" aria-hidden />
                     {clip.views === undefined ? <span className="text-mist">Views not counted yet</span> : <><b className="font-display text-lg tracking-wide">{compact(clip.views)}</b> views</>}
                   </span>
-                  {clip.link && <a href={clip.link} target="_blank" rel="noreferrer" aria-label={`Open ${clip.title} on YouTube`} className="text-mist hover:text-pink"><ExternalLink className="h-4 w-4" aria-hidden /></a>}
+                  <span className="flex items-center gap-3">
+                    {clip.instagram_link && <a href={clip.instagram_link} target="_blank" rel="noreferrer" aria-label={`Open ${clip.title} on Instagram`} className="text-mist hover:text-pink"><InstagramIcon /></a>}
+                    {clip.link && <a href={clip.link} target="_blank" rel="noreferrer" aria-label={`Open ${clip.title} on YouTube`} className="text-mist hover:text-pink"><ExternalLink className="h-4 w-4" aria-hidden /></a>}
+                  </span>
                 </div>
               </div>
             </motion.article>

@@ -99,12 +99,33 @@ class BufferPublisher:
             elif info["status"] == "error":
                 state.update(clip_id, status="error", error=info["error"])
                 report("error", f"Buffer could not publish “{entry['title']}”: {info['error']}", "")
+        self._confirm_instagram(state, report, now)
         try:
             removed = self.host.prune()
             if removed:
                 log.info("removed %d old hosted clip(s)", removed)
         except HostingError as exc:
             log.warning("could not tidy hosted clips: %s", exc)
+
+    def _confirm_instagram(self, state: State, report, now: datetime) -> None:
+        """Check the Instagram posts that have no result yet (a few per run)."""
+        waiting = [
+            (clip_id, entry) for clip_id, entry in state.published.items()
+            if entry.get("instagram") and not entry.get("instagram_status")
+            and entry.get("instagram_at", "") >= (now - timedelta(days=2)).isoformat()
+        ][:4]
+        for clip_id, entry in waiting:
+            try:
+                info = self.client.post_status(entry["instagram"])
+            except BufferError as exc:
+                log.warning("could not check an Instagram post: %s", exc)
+                return
+            if info["status"] == "sent":
+                state.update(clip_id, instagram_status="sent", instagram_link=info["link"])
+                report("info", f"Live on Instagram: “{entry['title']}”", info["link"])
+            elif info["status"] == "error":
+                state.update(clip_id, instagram_status="error", instagram_error=info["error"])
+                report("error", f"Instagram did not publish “{entry['title']}”: {info['error']}", "")
 
     def publish(self, video: Path, clip: Clip, meta: dict) -> Published:
         try:
