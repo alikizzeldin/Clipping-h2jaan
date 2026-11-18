@@ -11,13 +11,14 @@ profiles:
   valorant:
     kick_category: valorant        # the slug in kick.com/category/<slug>
     label: Valorant                # how the game is written in titles
-    hashtags: [valorant, valorantclips, kick]
+    hashtags: [Valorant, ValorantClips, ValorantHighlights, ValorantShorts, ValorantMoments, Riot, FPS, فالورانت, فالورانت_عرب]
     min_views: 20                  # Valorant is small on Kick; keep the bar low
     theme: valorant
   gta6:
     kick_category: grand-theft-auto-vi
     label: GTA 6
-    hashtags: [gta6, gtavi, gta6clips, kick]
+    # The description's 10 keywords are these 9 plus the streamer's name.
+    hashtags: [GTA6, GTAVI, GrandTheftAuto6, GTA6Gameplay, GTA6Clips, GTA6Shorts, ViceCity, قراند6, جي_تي_اي_6]
     min_views: 150
     theme: gta6
 
@@ -102,6 +103,10 @@ publish:
   featured_per_day: 2        # ...of which this many are reserved for featured_channels
   min_gap_hours: 7           # spread them out: at least this long between two posts
   fill_after_hours: 12       # a reserved slot opens to anyone after this long with no post
+  # Instagram "gta6fied", in the same Buffer account: the first 3 clips of every
+  # 24 hours are also posted there as Reels. Empty the id to stop.
+  instagram_channel_id: 6afd94b2ece6dfde5f0a06e7
+  instagram_per_day: 3
   # Launch day: every run until midnight (Palestine time) also posts up to 8 extra
   # clips, mostly the agent's own cuts from the biggest streams, outside the
   # daily plan. It stops early to keep 300 of Buffer's 1,000 monthly requests.

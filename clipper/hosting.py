@@ -99,6 +99,19 @@ class GitMediaHost:
             "is the repository public?"
         )
 
+    def find(self, name: str) -> str:
+        """The public URL of an already hosted clip (see `upload`), or "" when it is gone."""
+        safe = re.sub(r"[^A-Za-z0-9._-]", "_", name)
+        listing = _git(self.repo, "ls-remote", "--heads", self.remote, f"refs/heads/{self.prefix}/*-{safe}")
+        hosted = sorted(
+            (ref, commit) for commit, ref in (line.split("\t") for line in listing.splitlines() if "\t" in line)
+            if ref.endswith(f"-{safe}")
+        )
+        if not hosted:
+            return ""
+        commit = hosted[-1][1]  # the newest upload of that clip
+        return f"https://raw.githubusercontent.com/{repo_slug(self.repo)}/{commit}/{safe}.mp4"
+
     def remove(self, branch: str) -> None:
         _git(self.repo, "push", "--quiet", self.remote, "--delete", f"refs/heads/{branch}")
 
@@ -118,3 +131,4 @@ class GitMediaHost:
             except HostingError as exc:
                 log.warning("could not delete %s: %s", branch, exc)
         return len(old)
+

@@ -78,6 +78,7 @@ class BufferPublisher:
         self.pub = pub
         self.client = Buffer(key, channel)
         self.host = GitMediaHost(repo, prefix=pub.media_prefix)
+        self.last_url = ""  # where the last published clip is hosted, for Instagram
 
     def prepare(self, state: State, report) -> None:
         """Housekeeping before a run: confirm earlier posts, drop old hosted clips.
@@ -122,7 +123,19 @@ class BufferPublisher:
         except BufferError as exc:
             self._discard(branch)
             raise PublishError(str(exc)) from exc
+        self.last_url = url
         return Published(post_id, "", self.via)
+
+    def to_instagram(self, url: str, caption: str) -> str:
+        """Post an already hosted clip to the Instagram channel as a Reel; returns Buffer's post id."""
+        if not self.pub.instagram_channel_id:
+            raise PublishError("no Instagram channel is set (publish.instagram_channel_id)")
+        try:
+            return self.client.publish_reel(url, channel_id=self.pub.instagram_channel_id, caption=caption)
+        except BufferLimit as exc:
+            raise PublishLimit(str(exc)) from exc
+        except BufferError as exc:
+            raise PublishError(str(exc)) from exc
 
     def _discard(self, branch: str) -> None:
         try:

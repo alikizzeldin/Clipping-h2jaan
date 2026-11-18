@@ -102,8 +102,8 @@ class Buffer:
 
     def publish_video(self, video_url: str, *, title: str, description: str,
                       privacy: str = "public", category_id: str = "20") -> str:
-        """Send a video to the channel right away; returns Buffer's post id."""
-        data = self._gql(_CREATE, {"input": {
+        """Send a video to the YouTube channel right away; returns Buffer's post id."""
+        return self._create({
             "channelId": self.channel_id,
             "text": description,
             "schedulingType": "automatic",
@@ -115,7 +115,21 @@ class Buffer:
                 "privacy": privacy,
                 "madeForKids": False,
             }},
-        }})
+        })
+
+    def publish_reel(self, video_url: str, *, channel_id: str, caption: str) -> str:
+        """Send a video to an Instagram channel as a Reel (also shown on the profile grid)."""
+        return self._create({
+            "channelId": channel_id,
+            "text": caption,
+            "schedulingType": "automatic",
+            "mode": "shareNow",
+            "assets": [{"video": {"url": video_url, "metadata": {"thumbnailOffset": 3000}}}],
+            "metadata": {"instagram": {"type": "reel", "shouldShareToFeed": True}},
+        })
+
+    def _create(self, post: dict[str, Any]) -> str:
+        data = self._gql(_CREATE, {"input": post})
         result = data.get("createPost") or {}
         kind = result.get("__typename", "")
         if kind == "PostActionSuccess":

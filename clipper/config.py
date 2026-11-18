@@ -23,7 +23,7 @@ class Profile:
 
     kick_category: str
     label: str  # how the game is written in titles, e.g. "GTA 6"
-    hashtags: list[str] = field(default_factory=list)
+    hashtags: list[str] = field(default_factory=list)  # with the streamer: the description's 10 keywords
     min_views: int = 50
     theme: str = ""  # a name from `themes:`; empty = blurred-video background
 
@@ -113,6 +113,10 @@ class Publish:
     fill_after_hours: float = 12  # a reserved slot opens to anyone after this long with no post
     category_id: str = "20"  # YouTube "Gaming"
     description_footer: str = ""
+    # Instagram, connected to the same Buffer organization: the first
+    # `instagram_per_day` clips of every 24 hours are also posted there as Reels.
+    instagram_channel_id: str = ""  # empty = YouTube only
+    instagram_per_day: int = 3
     # Extra batches: until this time, every run also posts up to `burst_per_run`
     # clips outside the daily plan (e.g. on launch day). Empty = off.
     burst_until: str = ""

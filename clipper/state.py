@@ -111,6 +111,17 @@ class State:
                 continue
         return counts
 
+    def instagram_since(self, since: datetime) -> int:
+        """How many clips were also posted to Instagram since `since`."""
+        count = 0
+        for entry in self.published.values():
+            try:
+                if entry.get("instagram") and datetime.fromisoformat(entry["instagram_at"]) >= since:
+                    count += 1
+            except (KeyError, ValueError):
+                continue
+        return count
+
     def recent_hooks(self, count: int = 6) -> list[str]:
         """The title hooks of the last `count` uploads, newest first."""
         entries = sorted(self.published.values(), key=lambda e: str(e.get("uploaded_at", "")), reverse=True)

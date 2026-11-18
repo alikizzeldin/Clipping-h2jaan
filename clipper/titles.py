@@ -19,6 +19,8 @@ from .models import Clip
 MAX_TITLE = 100  # YouTube's limit
 MAX_DESCRIPTION = 4900
 MAX_TAG_CHARS = 450  # YouTube allows 500 across all tags; leave headroom
+MAX_CAPTION = 2200  # Instagram's caption limit
+KEYWORDS = 10  # hashtags in every description: the game's keywords and the streamer
 
 _NOISE = re.compile(r"\s*\|\s*clip\s*$", re.IGNORECASE)
 _COMMANDS = re.compile(r"(?<!\S)![\w-]+")
@@ -105,9 +107,9 @@ def build_metadata(clip: Clip, profile: Profile, publish: Publish, shorts: bool,
     title = _fit(title, MAX_TITLE - len(suffix)) + suffix
     viewer_title = clean_title(clip.title)
 
-    hashtags = [_hashtag(h) for h in profile.hashtags if h]
-    if shorts:
-        hashtags.append("#shorts")
+    keywords = list(dict.fromkeys(tag for tag in (_hashtag(h) for h in [*profile.hashtags, clip.channel_name] if h)
+                                  if len(tag) > 1))[:KEYWORDS]
+    hashtags = keywords + (["#shorts"] if shorts else [])
     lines = [
         f"{clip.channel_name} playing {profile.label}, live on Kick.",
         "",
@@ -136,4 +138,10 @@ def build_metadata(clip: Clip, profile: Profile, publish: Publish, shorts: bool,
         tags.append(tag)
         used += len(tag) + 1
 
-    return {"title": title, "description": description, "tags": tags, "clean_title": english, "hook": hook.key}
+    caption = "\n".join([
+        f"{english} | {arabic}", "",
+        f"🎮 {clip.channel_name} live on Kick: {clip.channel_url}", "",
+        " ".join(keywords),
+    ])[:MAX_CAPTION]
+    return {"title": title, "description": description, "tags": tags, "clean_title": english, "hook": hook.key,
+            "keywords": keywords, "caption": caption}

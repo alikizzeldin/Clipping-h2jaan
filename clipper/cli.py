@@ -347,7 +347,7 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         open_now = [c for c in chosen if c.id not in tried
                     and used_channels.get(c.channel_slug, 0) < sel.max_per_channel]
         if burst:
-            queue, why = open_now, "the launch burst"
+            queue, why = open_now, "an extra batch"
         else:
             queue, why = plan(open_now, featured, pub, uploads, now, ignore_gap=publisher is None)
         if not queue:
@@ -448,11 +448,12 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             extra["burst"] = True
         state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra or None)
         state.save()  # after every upload, so a later crash can't cause a repost
+        insta = _to_instagram(publisher, state, clip.id, meta["caption"], now, pub, report)
         by = "cut by the agent" if clip.origin == "auto" else f"from {clip.channel_slug}"
         activity.add("published", f"Published “{meta['title']}” ({by})", result.link)
         notifier.send(f"🎬 Published: {meta['title']}\n{result.link or 'Sent to Buffer; the YouTube link follows shortly.'}")
         where = result.link or f"sent to Buffer (post {result.ref})"
-        done.append(f"- {where} ({pub.privacy}) — {meta['title']}")
+        done.append(f"- {where} ({pub.privacy}) — {meta['title']}{' + Instagram' if insta else ''}")
         if not args.keep:
             video.unlink(missing_ok=True)
 
@@ -467,6 +468,85 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         report("error", f"{failed} clip(s) could not be processed and nothing was published")
         return finish(1, head, *done)
     return finish(0, head, *done)
+
+
+def _to_instagram(publisher, state: State, clip_id: str, caption: str, now: datetime, pub, report,
+                  url: str = "") -> bool:
+    """Also post a clip to Instagram, while today's Instagram share is not used up."""
+    if not isinstance(publisher, BufferPublisher) or not pub.instagram_channel_id or pub.instagram_per_day <= 0:
+        return False
+    if state.instagram_since(now - timedelta(hours=24)) >= pub.instagram_per_day:
+        return False
+    url = url or publisher.last_url
+    if not url:
+        return False
+    try:
+        post_id = publisher.to_instagram(url, caption)
+    except PublishError as exc:  # Instagram trouble must not stop YouTube posting
+        report("error", f"Instagram did not take a clip: {exc}")
+        return False
+    state.update(clip_id, instagram=post_id, instagram_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+    state.save()
+    return True
+
+
+def cmd_instagram(settings: Settings, args: argparse.Namespace) -> int:
+    """Post clips that are already on YouTube to Instagram too (e.g. the launch batch)."""
+    pub, profile = settings.publish, settings.active
+    state = State(settings.state_path)
+    activity = Activity(settings.beside_state("activity.json"))
+    try:
+        publisher = make_publisher(pub)
+    except SetupError as exc:
+        log.error("%s", exc)
+        return 2
+    if not isinstance(publisher, BufferPublisher) or not pub.instagram_channel_id:
+        log.error("Instagram needs publish.via: buffer and publish.instagram_channel_id")
+        return 2
+    kick = KickClient()
+    lines, used = [], state.recent_hooks()
+    for clip_id in args.clips:
+        entry = state.published.get(clip_id)
+        if not entry:
+            lines.append(f"- {clip_id}: not in the publish history")
+            continue
+        if entry.get("instagram"):
+            lines.append(f"- {clip_id}: already on Instagram")
+            continue
+        url = publisher.host.find(clip_id)
+        if not url:
+            lines.append(f"- {clip_id}: its video is no longer hosted (kept for 24 hours)")
+            continue
+        slug = str(entry.get("channel", ""))
+        try:
+            name = kick.display_name(slug) or slug
+        except KickError:
+            name = slug
+        started = entry.get("started_at")
+        clip = Clip(
+            id=clip_id, source="kick", title="", channel_slug=slug, channel_name=name,
+            category_slug=str(entry.get("category", "")), category_name="", views=0, likes=0,
+            duration=float(entry.get("duration") or 0), created_at=datetime.fromisoformat(entry["uploaded_at"]),
+            media_url="", started_at=datetime.fromisoformat(started) if started else None,
+            origin=str(entry.get("origin", "viewer")),
+        )
+        meta = build_metadata(clip, profile, pub, False, launch_at=settings.start_time, avoid=used)
+        used.insert(0, meta["hook"])
+        try:
+            post_id = publisher.to_instagram(url, meta["caption"])
+        except PublishLimit as exc:
+            lines.append(f"- stopped: {exc}")
+            break
+        except PublishError as exc:
+            lines.append(f"- {clip_id}: Instagram did not take it: {exc}")
+            continue
+        state.update(clip_id, instagram=post_id, instagram_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+        state.save()
+        activity.add("published", f"Posted to Instagram: “{meta['clean_title']}”")
+        lines.append(f"- {clip_id}: sent to Instagram (post {post_id}) — {meta['clean_title']}")
+    activity.save()
+    _summary([f"Instagram: {sum('sent to Instagram' in line for line in lines)} of {len(args.clips)} clip(s) sent", *lines])
+    return 0 if any("sent to Instagram" in line for line in lines) or not args.clips else 1
 
 
 def _read_json(path: Path) -> dict:
@@ -589,6 +669,8 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("channels", help="list the Buffer channels your API key can post to")
     sub.add_parser("pull-control", help="fetch the owner's settings and rules from the dashboard")
+    p_insta = sub.add_parser("instagram", help="post clips already on YouTube to Instagram too")
+    p_insta.add_argument("clips", nargs="+", help="clip ids from the publish history")
 
     p_notify = sub.add_parser("notify", help="send a message to your Discord or Telegram")
     p_notify.add_argument("message")
@@ -611,6 +693,8 @@ def main(argv: list[str] | None = None) -> int:
     except ConfigError as exc:
         log.error("%s", exc)
         return 2
+    if args.command == "instagram":
+        return cmd_instagram(settings, args)
     if args.command == "run" and args.dry_run:
         args.keep = True
     return cmd_discover(settings, args) if args.command == "discover" else cmd_run(settings, args)

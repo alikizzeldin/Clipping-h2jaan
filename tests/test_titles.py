@@ -64,3 +64,18 @@ def test_slurs_are_caught_through_lookalike_spellings(title):
                                    "bigger heist", "bike ride", "تتت", ""])
 def test_ordinary_titles_are_not_flagged(title):
     assert not is_offensive(title)
+
+
+def test_ten_keywords_and_an_instagram_caption(make_clip):
+    from clipper.config import Profile
+
+    gta = Profile(kick_category="gta", label="GTA 6",
+                  hashtags=["GTA6", "GTAVI", "GrandTheftAuto6", "GTA6Gameplay", "GTA6Clips", "GTA6Shorts",
+                            "ViceCity", "قراند6", "جي_تي_اي_6"])
+    meta = build_metadata(make_clip(channel_name="xQc"), gta, Publish(), shorts=True)
+    assert len(meta["keywords"]) == 10 and meta["keywords"][-1] == "#xQc" and "#قراند6" in meta["keywords"]
+    last = meta["description"].splitlines()[-1].split()
+    assert last == [*meta["keywords"], "#shorts"]
+    caption = meta["caption"]
+    assert caption.splitlines()[0] == meta["title"].removesuffix(" #shorts")  # English | Arabic
+    assert "https://kick.com/streamer" in caption and caption.splitlines()[-1] == " ".join(meta["keywords"])

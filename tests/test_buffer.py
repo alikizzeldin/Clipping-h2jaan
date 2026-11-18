@@ -93,3 +93,27 @@ def test_the_remaining_allowance_is_read_from_buffers_headers():
     assert client.remaining == {900: 98, 86400: 598, 2592000: 912}
     client._note_allowance({})  # a response without the headers changes nothing
     assert client.remaining[2592000] == 912
+
+
+def test_a_reel_goes_to_the_instagram_channel():
+    from clipper.buffer import Buffer
+
+    sent = {}
+
+    class Resp:
+        status_code = 200
+        headers = {}
+
+        def json(self):
+            return {"data": {"createPost": {"__typename": "PostActionSuccess", "post": {"id": "ig1"}}}}
+
+    class Session:
+        def post(self, url, headers, json, timeout):
+            sent.update(json["variables"]["input"])
+            return Resp()
+
+    client = Buffer("key", "youtube-channel", session=Session())
+    assert client.publish_reel("https://host/clip.mp4", channel_id="insta", caption="Hook | خطاف\n\n#GTA6") == "ig1"
+    assert sent["channelId"] == "insta" and sent["text"].startswith("Hook")
+    assert sent["metadata"] == {"instagram": {"type": "reel", "shouldShareToFeed": True}}
+    assert sent["assets"][0]["video"]["url"] == "https://host/clip.mp4" and sent["mode"] == "shareNow"

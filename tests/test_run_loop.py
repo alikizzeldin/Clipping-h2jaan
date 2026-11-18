@@ -247,3 +247,40 @@ def test_extra_batches_run_on_their_own_until_the_set_time(world, tmp_path, monk
     assert run() == 0
     assert publisher.sent == ["a", "b"]  # both now, despite the 7-hour spacing
     assert all(entry.get("burst") for entry in read("published.json")["published"].values())
+
+
+
+def test_the_first_clips_of_the_day_also_go_to_instagram(world, tmp_path, monkeypatch):
+    setup, read, _ = world
+
+    class Client:
+        remaining = {}
+
+        def organization_id(self):
+            return "org"
+
+        def metrics(self, organization):
+            return {}
+
+    class Both(FakePublisher):
+        last_url = "https://host/clip.mp4"
+
+        def __init__(self):
+            super().__init__()
+            self.reels = []
+            self.client = Client()
+
+        def to_instagram(self, url, caption):
+            self.reels.append(caption.splitlines()[0])
+            return f"ig{len(self.reels)}"
+
+    monkeypatch.setattr(cli, "BufferPublisher", Both)
+    entries = [clip("a", "big", 900, stream="s2"), clip("b", "other", 800, stream="s3"), clip("c", "third", 700, stream="s4")]
+    publisher, run = setup(entries, publisher=Both())
+    monkeypatch.setattr(cli, "find_highlights", lambda *a, **k: [])
+    config = tmp_path / "config.yaml"
+    config.write_text(config.read_text().replace("privacy: public}", "privacy: public, instagram_channel_id: insta, instagram_per_day: 2}"))
+    assert run("--burst", "3") == 0
+    assert publisher.sent == ["a", "b", "c"] and len(publisher.reels) == 2  # Instagram's share for the day is 2
+    published = read("published.json")["published"]
+    assert published["a"]["instagram"] == "ig1" and published["b"]["instagram"] == "ig2" and "instagram" not in published["c"]
