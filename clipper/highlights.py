@@ -96,6 +96,9 @@ def find_highlights(kick: KickClient, channels: list[str], category: str, now: d
         except (KickError, HighlightError) as exc:
             log.warning("no own clips from %s this run: %s", slug, exc)
             return []
+        except Exception as exc:  # one channel's odd data must not stop the whole run
+            log.warning("no own clips from %s this run (%s: %s)", slug, type(exc).__name__, exc)
+            return []
 
     if connect is None or workers <= 1 or len(channels) <= 1:
         return [cut for slug in channels for cut in one(slug, kick)]

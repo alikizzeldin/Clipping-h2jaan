@@ -34,14 +34,17 @@ from .speech import Line, SpeechError, Transcriber, Transcript, tidy_translation
 from .state import State
 from .subtitles import Chunk, chunk_words, drawable
 from .titles import build_metadata
-from .vision import GameplayJudge, VisionError
+from .vision import GameplayJudge, VisionError, same_scene
 from .youtube import YouTubeError, authorize
 
 log = logging.getLogger("clipper")
 
 
-BURST_CHANNELS = 12  # how many of the biggest live channels a burst cuts highlights from
-BURST_WORKERS = 6  # channels examined side by side
+BURST_CHANNELS = 16  # how many of the biggest live channels the agent cuts highlights from
+BURST_WORKERS = 8  # channels examined side by side
+SCENE_DAYS = 2  # a scene posted within this many days is not posted again
+MONTH_WINDOW, DAY_WINDOW = 2592000, 86400  # Buffer's allowance windows, in seconds
+DAY_RESERVE = 60  # extra batches leave at least this many of Buffer's daily requests
 
 
 def discover(settings: Settings, kick: KickClient) -> tuple[list[Clip], set[str]]:
@@ -261,15 +264,17 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             _study(settings, state, publisher.client, activity, now)
 
     burst = max(0, getattr(args, "burst", 0) or 0)
+    if not burst and publisher and settings.burst_until and now < settings.burst_until:
+        burst = pub.burst_per_run  # an extra batch every run until then (e.g. launch day)
     budget = burst or (pub.max_per_run if args.limit is None else args.limit)
     featured = {c.lower() for c in sel.featured_channels}
     day_ago = now - timedelta(hours=24)
     if burst:
-        # A one-off push (e.g. on launch day): up to `burst` clips now, from the
-        # biggest live channels, outside the daily plan. The usual checks still
-        # apply, one clip per channel, and nothing from before the start time.
+        # An extra batch (e.g. on launch day): up to `burst` clips now, outside the
+        # daily plan. The usual checks still apply, one clip per channel, and
+        # nothing from before the start time.
         profile = replace(profile, min_views=min(profile.min_views, sel.featured_min_views))
-        log.info("launch burst: up to %d clips, outside the daily plan", burst)
+        log.info("extra batch: up to %d clips, outside the daily plan", burst)
     elif publisher:  # skip the whole search when nothing may be posted yet
         _, why = plan([], featured, pub, state.recent(day_ago), now)
         if why != "no clip met the selection rules":
@@ -282,15 +287,17 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         if sel.own_clips and featured:
             clips += find_highlights(kick, sorted(featured), profile.kick_category, now,
                                      not_before=settings.channel_starts if publisher else None)
-        if burst:
+        if sel.own_clips or burst:
+            # The agent's own cuts from the biggest live streams come first; viewer
+            # clips fill in when there aren't enough.
             blocked = {c.lower() for c in sel.block_channels}
             live_now = [ch.slug.lower() for ch in kick.live_channels(profile.kick_category, BURST_CHANNELS + 10)]
             targets = [slug for slug in dict.fromkeys(live_now)
                        if slug not in blocked and slug not in featured][:BURST_CHANNELS]
-            log.info("launch burst: cutting highlights from %s", ", ".join(targets) or "nobody")
+            log.info("cutting highlights from %s", ", ".join(targets) or "nobody")
             big |= set(targets)
             clips += find_highlights(kick, targets, profile.kick_category, now,
-                                     not_before={slug: start for slug in targets} if start else None,
+                                     not_before={slug: start for slug in targets} if start and publisher else None,
                                      connect=KickClient, workers=BURST_WORKERS)
     except KickError as exc:
         log.error("%s", exc)
@@ -305,10 +312,21 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         # channel's best clip is dropped its next-best still gets a turn this run
     )
     log.info("%d clips qualify, %d rejected", len(chosen), len(rejected))
+    # The agent's own cuts before viewer clips; in an extra batch, featured
+    # streamers first and then the streamers posted least today, for more
+    # different reactions.
+    posted_today = state.posted_by_channel(day_ago)
+    chosen.sort(key=lambda c: (
+        (c.channel_slug.lower() not in featured) if burst else 0,
+        posted_today.get(c.channel_slug.lower(), 0) if burst else 0,
+        c.origin != "auto",
+    ))  # a stable sort: within each group the ranking's order stays
 
     work, out = Path(settings.work_dir), Path(settings.out_dir)
     transcriber = Transcriber(settings.captions) if settings.captions.enabled else None
-    judge = GameplayJudge() if sel.require_gameplay else None
+    vision: GameplayJudge | None = GameplayJudge()  # gameplay check and scene comparison
+    state.forget_scenes(now - timedelta(days=SCENE_DAYS))
+    recent_scenes = state.recent_scenes(now - timedelta(days=SCENE_DAYS))
     done: list[str] = []
     tried: set[str] = set()
     rendered: list[tuple[datetime, str]] = []  # dry runs: stands in for the publish history
@@ -352,14 +370,21 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         log.info("clip %s by %s (%d views, %s)", clip.id, clip.channel_slug, clip.views, why)
         try:
             raw = cut_highlight(clip, work) if clip.origin == "auto" else dl.download(clip.media_url, work, clip.id)
-            if judge:
+            scene = ""
+            if vision:
                 try:
-                    is_game, sureness = judge.is_gameplay(raw)
+                    if sel.require_gameplay:
+                        is_game, sureness = vision.is_gameplay(raw)
+                        if not is_game:
+                            drop(clip, f"no game on screen ({sureness:.0%} sure it is gameplay)")
+                            continue
+                    scene = vision.fingerprint(raw)
                 except VisionError as exc:
-                    log.warning("gameplay check unavailable, continuing without it: %s", exc)
-                    judge, is_game = None, True
-                if not is_game:
-                    drop(clip, f"no game on screen ({sureness:.0%} sure it is gameplay)")
+                    log.warning("vision checks unavailable, continuing without them: %s", exc)
+                    vision = None
+                alike = same_scene(scene, recent_scenes) if scene else 0.0
+                if alike:
+                    drop(clip, f"the same scene was posted recently ({alike:.0%} alike)")
                     continue
             transcript = transcriber.transcribe(raw) if transcriber else Transcript([], "", [])
             if factor_for(clip, rules, transcript.text) == 0:
@@ -391,12 +416,20 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             used_moments.append((clip.livestream_id, clip.started_at.timestamp(), clip.duration))
         used_channels[clip.channel_slug] = used_channels.get(clip.channel_slug, 0) + 1
         recent_hooks.insert(0, meta["hook"])
+        if scene:
+            recent_scenes.append(scene)
         if publisher is None:
             rendered.append((now, clip.channel_slug))
             done.append(f"- rendered `{video}` — {meta['title']}")
             if args.check_hosting and len(done) == 1:
                 notes.append(_check_hosting(video, clip.id, pub.media_prefix))
             continue
+        if burst and isinstance(publisher, BufferPublisher):
+            left = publisher.client.remaining
+            if left.get(MONTH_WINDOW, 10**9) < pub.buffer_reserve or left.get(DAY_WINDOW, 10**9) < DAY_RESERVE:
+                notes.append(f"Stopped the extra batch to keep Buffer's allowance for the regular posts "
+                             f"({left.get(MONTH_WINDOW, '?')} requests left this month, {left.get(DAY_WINDOW, '?')} today).")
+                break
         try:
             result = publisher.publish(video, clip, meta)
         except PublishLimit as exc:
@@ -409,6 +442,8 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             return finish(1, *done)
         extra = {"language": language_name(transcript.language)} if transcript.language else {}
         extra["hook"] = meta["hook"]
+        if scene:
+            extra["scene"] = scene
         if burst:
             extra["burst"] = True
         state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra or None)

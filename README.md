@@ -130,6 +130,24 @@ and can be dragged or spun).
   sign in with `dev@gta6fied.local` / `dev` (a throwaway account that only
   exists on your machine; settings go to `dashboard/.data/`).
 
+## Extra batches and the agent's own clips
+
+The agent cuts its own clips first: in every run it samples the chat of the
+16 biggest live streams in the game, cuts the moments where the chat
+suddenly speeds up, and uses viewer-made clips only when its own cuts run
+short. A clip whose scene looks like one posted in the last two days (the
+same cutscene from another streamer, say) is skipped.
+
+Until `publish.burst_until` (launch day), every run also posts up to
+`publish.burst_per_run` extra clips outside the daily plan, featured
+streamers first, then the streamers posted least that day. For a one-off
+batch, run the Clip workflow with **burst** set to a number.
+
+Buffer's free plan allows 600 API requests a day but only 1,000 in 30 days
+for one channel, and each post costs about two. Extra batches stop when
+fewer than `publish.buffer_reserve` (300) of the 30-day requests are left,
+so the regular posts never run out.
+
 ## The timer
 
 Both workflows carry a `schedule`, but since this repository was created

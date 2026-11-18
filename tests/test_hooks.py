@@ -53,3 +53,25 @@ def test_the_arabic_lines_name_the_streamer_and_game():
         assert "xQc" in english and "GTA 6" in english
         assert "xQc" in arabic and "GTA 6" in arabic
         assert any("؀" <= ch <= "ۿ" for ch in arabic)
+
+
+def test_scene_likeness_tells_the_same_scene_from_a_different_one():
+    import base64
+
+    import numpy as np
+
+    from clipper.vision import same_scene, scene_likeness
+
+    def fp(*dirs):
+        rows = []
+        for d in dirs:
+            v = np.zeros(512, dtype=np.float32)
+            v[d] = 1.0
+            rows.append(v)
+        return base64.b64encode(np.round(np.stack(rows) * 127).astype(np.int8).tobytes()).decode()
+
+    assert scene_likeness(fp(1, 2, 3), fp(3, 2, 1)) > 0.99
+    assert scene_likeness(fp(1, 2, 3), fp(7, 8, 9)) < 0.01
+    assert same_scene(fp(1, 2, 3), [fp(7, 8, 9), fp(1, 2, 3)]) > 0.99
+    assert same_scene(fp(1, 2, 3), [fp(7, 8, 9)]) == 0.0
+    assert scene_likeness("", fp(1)) == 0.0

@@ -54,6 +54,19 @@ class FakeKick:
         return found.livestream_id, self.entries[found]
 
 
+class FakeVision:
+    """Everything is gameplay; scenes are told apart by the clip's file name."""
+
+    def __init__(self, scenes=None):
+        self.scenes = scenes or {}
+
+    def is_gameplay(self, path):
+        return True, 0.99
+
+    def fingerprint(self, path):
+        return self.scenes.get(path.stem, "")
+
+
 class FakePublisher:
     def __init__(self, fail=False):
         self.sent, self.fail = [], fail
@@ -81,8 +94,7 @@ def world(tmp_path, monkeypatch):
         monkeypatch.setattr(cli, "make_publisher", lambda pub: publisher)
         monkeypatch.setattr(cli.dl, "download", lambda url, work, name: _touch(tmp_path / "work" / f"{name}.ts"))
         monkeypatch.setattr(cli.rnd, "render", lambda raw, dest, *a, **k: _touch(dest))
-        if judge:
-            monkeypatch.setattr(cli, "GameplayJudge", lambda: judge)
+        monkeypatch.setattr(cli, "GameplayJudge", lambda: judge or FakeVision())
         return publisher, lambda *args: cli.main(["--config", str(config), "run", *args])
 
     def read(name):
@@ -137,7 +149,7 @@ def test_a_second_clip_of_the_same_moment_is_skipped_for_good(world):
 def test_clips_without_gameplay_are_skipped(world):
     setup, read, _ = world
 
-    class Judge:
+    class Judge(FakeVision):
         def is_gameplay(self, path):
             return ("talk" not in path.name), 0.12 if "talk" in path.name else 0.97
 
@@ -190,3 +202,48 @@ def test_a_launch_burst_posts_many_now_without_using_up_the_daily_plan(world, mo
     assert run() == 0
     assert publisher.sent[-1] == "d"
     assert "burst" not in read("published.json")["published"]["d"]
+
+
+def _scene(*values):
+    """A fingerprint whose frames all point along the given 512-number directions."""
+    import base64
+
+    import numpy as np
+
+    frames = []
+    for value in values:
+        vec = np.zeros(512, dtype=np.float32)
+        vec[value] = 1.0
+        frames.append(vec)
+    return base64.b64encode(np.round(np.stack(frames) * 127).astype(np.int8).tobytes()).decode()
+
+
+def test_own_cuts_come_first_and_a_scene_already_posted_is_skipped(world, monkeypatch):
+    setup, read, _ = world
+    viewer = clip("viewer", "big", 900, stream="s2")
+    own_a = clip("auto_1_a", "big", 60, stream="s3", origin="auto")
+    own_b = clip("auto_2_b", "other", 50, stream="s4", origin="auto")
+    own_c = clip("auto_3_c", "third", 40, stream="s5", origin="auto")
+    monkeypatch.setattr(cli, "cut_highlight", lambda c, work: _touch(work / f"{c.id}.ts"))
+    vision = FakeVision({"auto_1_a": _scene(1, 2), "auto_2_b": _scene(1, 2), "auto_3_c": _scene(7, 8)})
+    publisher, run = setup([viewer], judge=vision)
+    monkeypatch.setattr(cli, "find_highlights", lambda kick, channels, *a, **k: [own_a[0], own_b[0], own_c[0]])
+    assert run("--burst", "3") == 0
+    # The agent's cuts go before the viewer clip, despite fewer "views"; the
+    # second cut shows the same scene as the first, so it is left out.
+    assert publisher.sent[:2] == ["auto_1_a", "auto_3_c"]
+    assert "same scene" in read("published.json")["skipped"]["auto_2_b"]["reason"]
+    assert read("published.json")["published"]["auto_1_a"]["scene"]
+
+
+def test_extra_batches_run_on_their_own_until_the_set_time(world, tmp_path, monkeypatch):
+    setup, read, _ = world
+    entries = [clip("a", "big", 900, stream="s2"), clip("b", "other", 800, stream="s3")]
+    publisher, run = setup(entries, gap=7)
+    monkeypatch.setattr(cli, "find_highlights", lambda *a, **k: [])
+    config = tmp_path / "config.yaml"
+    later = (datetime.now(timezone.utc) + timedelta(hours=3)).isoformat()
+    config.write_text(config.read_text().replace("privacy: public}", f"privacy: public, burst_until: '{later}', burst_per_run: 5}}"))
+    assert run() == 0
+    assert publisher.sent == ["a", "b"]  # both now, despite the 7-hour spacing
+    assert all(entry.get("burst") for entry in read("published.json")["published"].values())

@@ -11,6 +11,7 @@ makes one request per published clip and one later to confirm it.
 from __future__ import annotations
 
 import logging
+import re
 from typing import Any
 
 import requests
@@ -61,6 +62,19 @@ class Buffer:
         self.api_key = api_key
         self.channel_id = channel_id
         self.session = session or requests.Session()
+        # Requests left in each of Buffer's windows, by window length in seconds
+        # (900, 86400, 2592000), as Buffer last reported them.
+        self.remaining: dict[int, int] = {}
+
+    def _note_allowance(self, headers) -> None:
+        """Read Buffer's RateLimit headers: '"600-in-1day";r=598;t=86397, …'."""
+        try:
+            windows = dict(re.findall(r'"([^"]+)"[^,]*?;\s*w=(\d+)', headers.get("RateLimit-Policy") or ""))
+            for name, left in re.findall(r'"([^"]+)"[^,]*?;\s*r=(\d+)', headers.get("RateLimit") or ""):
+                if name in windows:
+                    self.remaining[int(windows[name])] = int(left)
+        except (TypeError, ValueError):
+            pass
 
     def _gql(self, query: str, variables: dict[str, Any] | None = None) -> dict[str, Any]:
         try:
@@ -72,6 +86,7 @@ class Buffer:
             )
         except requests.RequestException as exc:
             raise BufferError(f"could not reach Buffer: {exc}") from exc
+        self._note_allowance(getattr(resp, "headers", None) or {})
         if resp.status_code == 429:
             raise BufferLimit("Buffer's API rate limit is used up for now")
         if resp.status_code in (401, 403):

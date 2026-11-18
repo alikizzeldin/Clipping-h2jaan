@@ -102,4 +102,10 @@ publish:
   featured_per_day: 2        # ...of which this many are reserved for featured_channels
   min_gap_hours: 7           # spread them out: at least this long between two posts
   fill_after_hours: 12       # a reserved slot opens to anyone after this long with no post
+  # Launch day: every run until midnight (Palestine time) also posts up to 8 extra
+  # clips, mostly the agent's own cuts from the biggest streams, outside the
+  # daily plan. It stops early to keep 300 of Buffer's 1,000 monthly requests.
+  burst_until: "2026-11-19T00:00:00+02:00"
+  burst_per_run: 8
+  buffer_reserve: 300
   description_footer: ""     # e.g. a contact line for removal requests

@@ -8,6 +8,7 @@ with descriptions of gameplay and of people on camera.
 
 from __future__ import annotations
 
+import base64
 import io
 import logging
 import subprocess
@@ -32,6 +33,12 @@ NOT_GAME = (
     "a webcam video of a person talking",
     "a vlog filmed with a phone camera",
 )
+# Two clips whose scene fingerprints match this closely show the same scene.
+# Measured on launch-day clips of several streamers: the same scene from two
+# streams scored 0.76-0.91 and different scenes 0.57-0.81, so this only
+# catches near-copies and lets borderline pairs through.
+SAME_SCENE = 0.88
+SCENE_FRAMES = 8
 _MEAN = (0.48145466, 0.4578275, 0.40821073)
 _STD = (0.26862954, 0.26130258, 0.27577711)
 
@@ -110,21 +117,44 @@ class GameplayJudge:
         names = [o.name for o in session.get_outputs()]
         return outputs[names.index(name)] if name in names else outputs[0]
 
-    def score(self, path: Path) -> float:
-        """0..1: how sure the model is that the clip shows gameplay."""
+    def _embed(self, images: list):
+        """One unit-length CLIP vector per image."""
         import numpy as np
         from PIL import Image
 
         self._load()
         batch = []
-        for image in frames(path):
+        for image in images:
             scale = 224 / min(image.size)
             image = image.resize((max(224, round(image.width * scale)), max(224, round(image.height * scale))), Image.BICUBIC)
             left, top = (image.width - 224) // 2, (image.height - 224) // 2
             pixels = np.asarray(image.crop((left, top, left + 224, top + 224)), dtype=np.float32) / 255.0
             batch.append(((pixels - _MEAN) / _STD).transpose(2, 0, 1))
         feats = self._named(self._vision, self._vision.run(None, {"pixel_values": np.stack(batch).astype(np.float32)}), "image_embeds")
-        feats = feats / np.linalg.norm(feats, axis=1, keepdims=True)
+        return feats / np.linalg.norm(feats, axis=1, keepdims=True)
+
+    def fingerprint(self, path: Path) -> str:
+        """What the clip shows, for comparing scenes (see `same_scene`). "" if unreadable.
+
+        Dark, faded and flat frames are left out: loading screens look alike
+        whatever comes after them.
+        """
+        import numpy as np
+
+        try:
+            stills = [im for im in frames(path, SCENE_FRAMES) if _has_detail(im)]
+        except VisionError:
+            return ""
+        if not stills:
+            return ""
+        feats = self._embed(stills)
+        return base64.b64encode(np.clip(np.round(feats * 127), -127, 127).astype(np.int8).tobytes()).decode("ascii")
+
+    def score(self, path: Path) -> float:
+        """0..1: how sure the model is that the clip shows gameplay."""
+        import numpy as np
+
+        feats = self._embed(frames(path))
         logits = 100.0 * feats @ self._text_features.T
         probs = np.exp(logits - logits.max(axis=1, keepdims=True))
         probs /= probs.sum(axis=1, keepdims=True)
@@ -133,3 +163,43 @@ class GameplayJudge:
     def is_gameplay(self, path: Path, threshold: float = 0.5) -> tuple[bool, float]:
         value = self.score(path)
         return value >= threshold, value
+
+
+def _has_detail(image) -> bool:
+    """False for black, faded or flat frames."""
+    import numpy as np
+
+    gray = np.asarray(image.convert("L"), dtype=np.float32)
+    return gray.std() >= 22 and gray.mean() >= 25
+
+
+def _decode(fingerprint: str):
+    import numpy as np
+
+    raw = np.frombuffer(base64.b64decode(fingerprint), dtype=np.int8).astype(np.float32)
+    if not raw.size or raw.size % 512:
+        return None
+    feats = raw.reshape(-1, 512)
+    return feats / np.maximum(np.linalg.norm(feats, axis=1, keepdims=True), 1e-6)
+
+
+def scene_likeness(a: str, b: str) -> float:
+    """0..1: how much two clips' footage looks alike (their three best-matched frames)."""
+    import numpy as np
+
+    first, second = (_decode(a) if a else None), (_decode(b) if b else None)
+    if first is None or second is None:
+        return 0.0
+    pairs = first @ second.T
+
+    def one_way(rows):
+        best = np.sort(rows.max(axis=1))
+        return float(best[-3:].mean())
+
+    return max(one_way(pairs), one_way(pairs.T))
+
+
+def same_scene(fingerprint: str, others: list[str], limit: float = SAME_SCENE) -> float:
+    """The closest likeness to any of `others` if it reaches `limit`, else 0."""
+    best = max((scene_likeness(fingerprint, other) for other in others if other), default=0.0)
+    return best if best >= limit else 0.0

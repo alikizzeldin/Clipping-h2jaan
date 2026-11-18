@@ -113,6 +113,13 @@ class Publish:
     fill_after_hours: float = 12  # a reserved slot opens to anyone after this long with no post
     category_id: str = "20"  # YouTube "Gaming"
     description_footer: str = ""
+    # Extra batches: until this time, every run also posts up to `burst_per_run`
+    # clips outside the daily plan (e.g. on launch day). Empty = off.
+    burst_until: str = ""
+    burst_per_run: int = 8
+    # Extra batches stop when Buffer has fewer requests than this left in its
+    # 30-day allowance, so the regular posts never run out.
+    buffer_reserve: int = 300
 
 
 @dataclass
@@ -146,6 +153,10 @@ class Settings:
     def start_time(self) -> datetime | None:
         """`publish.start_at` as an aware datetime, or None when unset."""
         return parse_start(self.publish.start_at)
+
+    @property
+    def burst_until(self) -> datetime | None:
+        return parse_start(self.publish.burst_until, "publish.burst_until")
 
     @property
     def channel_starts(self) -> dict[str, datetime]:

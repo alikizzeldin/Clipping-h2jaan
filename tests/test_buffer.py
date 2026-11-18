@@ -79,3 +79,17 @@ def test_post_status_reports_link_or_error():
     ))
     assert client.post_status("p") == {"status": "sent", "link": "https://youtube.com/shorts/x", "error": ""}
     assert client.post_status("p") == {"status": "error", "link": "", "error": "fetch failed"}
+
+
+def test_the_remaining_allowance_is_read_from_buffers_headers():
+    from clipper.buffer import Buffer
+
+    client = Buffer("key", "chan")
+    client._note_allowance({
+        "RateLimit": '"150-in-15min";r=98;t=897, "600-in-1day";r=598;t=86397, "1000-in-30days";r=912;t=696980',
+        "RateLimit-Policy": '"150-in-15min";q=150;w=900;pk=:Zj:, "600-in-1day";q=600;w=86400;pk=:Zj:, '
+                            '"1000-in-30days";q=1000;w=2592000;pk=:Zj:',
+    })
+    assert client.remaining == {900: 98, 86400: 598, 2592000: 912}
+    client._note_allowance({})  # a response without the headers changes nothing
+    assert client.remaining[2592000] == 912

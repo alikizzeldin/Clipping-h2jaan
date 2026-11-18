@@ -79,6 +79,38 @@ class State:
                 found.append((when, clip_id, entry))
         return [(clip_id, entry) for _, clip_id, entry in sorted(found, key=lambda f: f[0])]
 
+    def recent_scenes(self, since: datetime) -> list[str]:
+        """Scene fingerprints of the clips published since `since`."""
+        found = []
+        for entry in self.published.values():
+            try:
+                if entry.get("scene") and datetime.fromisoformat(entry["uploaded_at"]) >= since:
+                    found.append(str(entry["scene"]))
+            except (KeyError, ValueError):
+                continue
+        return found
+
+    def forget_scenes(self, before: datetime) -> None:
+        """Drop the fingerprints of older clips; they are only compared for a few days."""
+        for entry in self.published.values():
+            try:
+                if "scene" in entry and datetime.fromisoformat(entry["uploaded_at"]) < before:
+                    del entry["scene"]
+            except (KeyError, ValueError):
+                continue
+
+    def posted_by_channel(self, since: datetime) -> dict[str, int]:
+        """How many clips each channel has had published since `since` (extra batches included)."""
+        counts: dict[str, int] = {}
+        for entry in self.published.values():
+            try:
+                if datetime.fromisoformat(entry["uploaded_at"]) >= since:
+                    channel = str(entry.get("channel", "")).lower()
+                    counts[channel] = counts.get(channel, 0) + 1
+            except (KeyError, ValueError):
+                continue
+        return counts
+
     def recent_hooks(self, count: int = 6) -> list[str]:
         """The title hooks of the last `count` uploads, newest first."""
         entries = sorted(self.published.values(), key=lambda e: str(e.get("uploaded_at", "")), reverse=True)
