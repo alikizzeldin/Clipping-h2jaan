@@ -8,9 +8,10 @@ import { YOUTUBE_URL } from "../lib/config";
 import { insights, type Activity, type Clip, type HistoryPoint, type Snapshot } from "../lib/data";
 import { ago, compact, shortDate, until } from "../lib/format";
 import { cancelRun, requestRun, type RunKind } from "../lib/api";
-import { REPO_URL, WORKFLOW } from "../lib/config";
+import { INSTAGRAM_URL, REPO_URL, WORKFLOW } from "../lib/config";
 import { forgetRuns, type Run } from "../lib/github";
 import { useStore } from "../lib/store";
+import { InstagramIcon } from "./InstagramIcon";
 import { Empty, Tag } from "./ui";
 
 export function useNow(everyMs = 1000) {
@@ -116,6 +117,12 @@ export function PlanSlots({ snap }: { snap: Snapshot }) {
         {reservedCount} slot{reservedCount === 1 ? " is" : "s are"} kept for {name ?? "featured streamers"}; the rest go to the biggest other channels.
         {info.todayBurst > 0 && <> Plus {info.todayBurst} launch clip{info.todayBurst === 1 ? "" : "s"} outside the plan.</>}
       </p>
+      {snap.settings.instagram_connected && snap.settings.instagram_per_day > 0 && (
+        <p className="mt-2 flex items-center gap-2 text-xs text-mist">
+          <InstagramIcon className="h-3.5 w-3.5 text-pink" />
+          Instagram: <span className="text-snow">{info.instagramToday} of {snap.settings.instagram_per_day}</span> in the last 24 hours
+        </p>
+      )}
     </div>
   );
 }
@@ -234,6 +241,9 @@ export function QuickActions({ stacked = false }: { stacked?: boolean }) {
         <button className="btn btn-ghost" disabled={off} onClick={() => ask("test")}><FlaskConical className="h-4 w-4" aria-hidden /> Test run</button>
         <button className="btn btn-ghost" disabled={off} onClick={() => ask("setup")}><ShieldCheck className="h-4 w-4" aria-hidden /> Check setup</button>
         <a className="btn btn-ghost" href={YOUTUBE_URL} target="_blank" rel="noreferrer"><MonitorPlay className="h-4 w-4" aria-hidden /> Channel</a>
+        {snap?.settings.instagram_connected && (
+          <a className="btn btn-ghost" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><InstagramIcon /> Instagram</a>
+        )}
       </div>
       {waiting && (
         <p role="status" className={`mt-4 text-xs leading-relaxed text-mist ${stacked ? "text-center" : ""}`}>

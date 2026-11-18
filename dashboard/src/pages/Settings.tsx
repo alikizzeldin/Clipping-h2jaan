@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
-import { Captions, ListFilter, LogOut, Rocket, Save, ShieldCheck, Undo2, X } from "lucide-react";
+import { Captions, ExternalLink, ListFilter, LogOut, MonitorPlay, Rocket, Save, Share2, ShieldCheck, Undo2, X } from "lucide-react";
 import { useEffect, useMemo, useState, type KeyboardEvent } from "react";
+import { InstagramIcon } from "../components/InstagramIcon";
 import { PageTitle, Panel, Tag, Toggle } from "../components/ui";
+import { INSTAGRAM_NAME, INSTAGRAM_URL, YOUTUBE_URL } from "../lib/config";
+import { insights } from "../lib/data";
 import type { Effective, Overrides } from "../lib/data";
 import { saveSettings } from "../lib/api";
 import { useStore } from "../lib/store";
@@ -10,7 +13,7 @@ import { useStore } from "../lib/store";
 const EDITABLE = [
   "paused", "privacy", "max_per_day", "featured_per_day", "min_gap_hours", "featured_channels", "block_channels",
   "languages", "min_views", "featured_min_views", "max_duration", "top_channels_only", "require_gameplay",
-  "english_subtitles", "own_clips", "caption_glow",
+  "english_subtitles", "own_clips", "caption_glow", "instagram_per_day",
 ] as const;
 type Key = (typeof EDITABLE)[number];
 
@@ -137,7 +140,41 @@ export default function Settings() {
           </div>
         </Panel>
 
-        <Panel title="Publishing" icon={<Rocket className="h-5 w-5" />} index={1}>
+        <Panel title="Where clips go" icon={<Share2 className="h-5 w-5 text-aqua" />} index={1} className="xl:col-span-2">
+          <p className="mb-4 text-sm leading-relaxed text-mist">Both accounts are connected through your Buffer account; the agent posts to them through Buffer.</p>
+          <div className="grid gap-4 lg:grid-cols-2">
+            <div className="rounded-2xl p-4 ring-1 ring-line">
+              <div className="flex items-center justify-between gap-3">
+                <p className="flex items-center gap-2.5 text-[15px] font-semibold text-snow"><MonitorPlay className="h-5 w-5 text-pink" aria-hidden /> YouTube Shorts</p>
+                <Tag tone="mint">Connected</Tag>
+              </div>
+              <p className="mt-2 text-xs leading-relaxed text-mist">Every clip goes here, {form.max_per_day} a day on the regular plan.</p>
+              <a className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-pink hover:underline" href={YOUTUBE_URL} target="_blank" rel="noreferrer">Open the channel <ExternalLink className="h-3.5 w-3.5" aria-hidden /></a>
+            </div>
+            <div className="rounded-2xl p-4 ring-1 ring-line">
+              <div className="flex items-center justify-between gap-3">
+                <p className="flex items-center gap-2.5 text-[15px] font-semibold text-snow"><InstagramIcon className="h-5 w-5 text-pink" /> Instagram Reels</p>
+                {snap.settings.instagram_connected
+                  ? <Tag tone={form.instagram_per_day > 0 ? "mint" : "gold"}>{form.instagram_per_day > 0 ? "Connected" : "Connected, off"}</Tag>
+                  : <Tag tone="gold">Not connected</Tag>}
+              </div>
+              {snap.settings.instagram_connected ? (
+                <>
+                  <NumberField
+                    label="Reels per day" hint="The first clips of every 24 hours are also posted to Instagram. 0 turns Instagram off."
+                    value={form.instagram_per_day} onChange={(v) => set("instagram_per_day", v)} min={0} max={24}
+                  />
+                  <p className="text-xs text-mist">{insights(snap).instagramTotal} clip{insights(snap).instagramTotal === 1 ? "" : "s"} posted to Instagram so far.</p>
+                  <a className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-pink hover:underline" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">Open {INSTAGRAM_NAME} <ExternalLink className="h-3.5 w-3.5" aria-hidden /></a>
+                </>
+              ) : (
+                <p className="mt-2 text-xs leading-relaxed text-mist">Connect Instagram in Buffer, then set <code>publish.instagram_channel_id</code> in config.yaml.</p>
+              )}
+            </div>
+          </div>
+        </Panel>
+
+        <Panel title="Publishing" icon={<Rocket className="h-5 w-5" />} index={2}>
           <div className="divide-y divide-line/50">
             <Toggle on={form.paused} onChange={(v) => set("paused", v)} label="Pause the agent" hint="Scheduled runs keep checking in but publish nothing." />
             <label className="flex items-start justify-between gap-4 py-2.5">
@@ -152,7 +189,7 @@ export default function Settings() {
           </div>
         </Panel>
 
-        <Panel title="Which clips" icon={<ListFilter className="h-5 w-5" />} index={2}>
+        <Panel title="Which clips" icon={<ListFilter className="h-5 w-5" />} index={3}>
           <div className="divide-y divide-line/50">
             <Chips label="Featured streamers" hint="Always followed, with their own daily slots." values={form.featured_channels} onChange={(v) => set("featured_channels", v)} placeholder="Add a Kick channel" />
             <Chips label="Blocked streamers" hint="Never clipped." values={form.block_channels} onChange={(v) => set("block_channels", v)} placeholder="Add a Kick channel" />
@@ -165,7 +202,7 @@ export default function Settings() {
           </div>
         </Panel>
 
-        <Panel title="Captions" icon={<Captions className="h-5 w-5" />} index={3}>
+        <Panel title="Captions" icon={<Captions className="h-5 w-5" />} index={4}>
           <div className="divide-y divide-line/50">
             <Toggle on={form.english_subtitles} onChange={(v) => set("english_subtitles", v)} label="English line under Arabic captions" hint="Translates what is said so non-Arabic viewers can follow." />
             <label className="block py-2.5">
@@ -181,7 +218,7 @@ export default function Settings() {
           </div>
         </Panel>
 
-        <Panel title="This device" index={4}>
+        <Panel title="This device" index={5}>
           <Toggle on={demo} onChange={setDemo} label="Demo mode" hint="Fills the dashboard with made-up numbers so you can see the design before real clips exist. Nothing is saved while it is on." />
           <p className="mt-3 text-xs leading-relaxed text-mist">
             {overridden > 0 ? `${overridden} setting${overridden === 1 ? " is" : "s are"} currently changed from the dashboard; the rest come from config.yaml.` : "All settings currently come from config.yaml in the repository."}

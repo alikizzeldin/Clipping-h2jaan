@@ -13,7 +13,7 @@ const NAME = "control.json";
 const SETTINGS = new Set([
   "paused", "privacy", "max_per_day", "featured_per_day", "min_gap_hours", "featured_channels", "block_channels",
   "languages", "min_views", "featured_min_views", "max_duration", "top_channels_only", "require_gameplay",
-  "english_subtitles", "own_clips", "caption_glow",
+  "english_subtitles", "own_clips", "caption_glow", "instagram_per_day",
 ]);
 const RULE_KINDS = new Set(["channel", "duration", "language", "keyword"]);
 export const RUN_KINDS = new Set(["run", "test", "setup"]);

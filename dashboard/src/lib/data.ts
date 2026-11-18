@@ -21,6 +21,8 @@ export type Clip = {
   language?: string;
   origin?: "viewer" | "auto";
   burst?: boolean; // part of a one-off launch push, outside the daily plan
+  instagram?: string; // Buffer's post id when the clip was also posted to Instagram
+  instagram_at?: string;
   views?: number;
   likes?: number;
   comments?: number;
@@ -68,9 +70,16 @@ export type Overrides = Partial<{
   english_subtitles: boolean;
   own_clips: boolean;
   caption_glow: number;
+  instagram_per_day: number;
 }>;
 
-export type Effective = Required<Overrides> & { start_at: string; game: string };
+export type Effective = Required<Overrides> & {
+  start_at: string;
+  game: string;
+  instagram_connected: boolean; // an Instagram channel is set in config.yaml
+  burst_until: string; // extra batches run until then
+  burst_per_run: number;
+};
 
 export type Snapshot = {
   demo: boolean;
@@ -139,9 +148,17 @@ export function effective(configYaml: string, overrides: Overrides): Effective {
     english_subtitles: cap.english_subtitles ?? true,
     own_clips: sel.own_clips ?? false,
     caption_glow: theme.caption_glow ?? 0.3,
+    instagram_per_day: pub.instagram_per_day ?? 3,
     start_at: pub.start_at ?? "",
+    instagram_connected: Boolean(pub.instagram_channel_id),
+    burst_until: pub.burst_until ?? "",
+    burst_per_run: pub.burst_per_run ?? 8,
   };
-  return { ...base, ...overrides, game: base.game, start_at: base.start_at } as Effective;
+  return {
+    ...base, ...overrides,
+    game: base.game, start_at: base.start_at, instagram_connected: base.instagram_connected,
+    burst_until: base.burst_until, burst_per_run: base.burst_per_run,
+  } as Effective;
 }
 
 export async function loadSnapshot(demo: boolean): Promise<Snapshot> {
@@ -221,6 +238,8 @@ export function insights(snap: Snapshot) {
     failed: snap.clips.filter((c) => c.status === "error").length,
     today: today.length,
     todayBurst: recent.length - today.length,
+    instagramToday: live.filter((c) => c.instagram && c.instagram_at && new Date(c.instagram_at).getTime() >= dayAgo).length,
+    instagramTotal: live.filter((c) => c.instagram).length,
     todayFeatured: today.filter((c) => featured.has(c.channel.toLowerCase())).length,
     featuredShare: live.filter((c) => featured.has(c.channel.toLowerCase())).length,
     top,
@@ -271,6 +290,7 @@ function demoSnapshot(): Snapshot {
       duration: durationS, language: channel === "sxb" ? "Arabic" : "English",
       origin: i % 5 === 1 ? "auto" : "viewer", views: i === 0 ? undefined : views,
       likes: Math.round(views * 0.06), comments: Math.round(views * 0.004),
+      ...(i < 5 && i !== 3 ? { instagram: `demo_ig_${i}`, instagram_at: new Date(now - (i * 8 + 3) * hour).toISOString() } : {}),
     };
   });
   const history: HistoryPoint[] = Array.from({ length: 14 }, (_, i) => ({

@@ -12,3 +12,5 @@ export const FILES = import.meta.env.DEV
 export const WORKFLOW = "clip.yml";
 export const CHANNEL_NAME = "GTA6Fied";
 export const YOUTUBE_URL = "https://www.youtube.com/channel/UCY5Lk9NykFVnoUeXMJVH7RA";
+export const INSTAGRAM_URL = "https://www.instagram.com/gta6fied/";
+export const INSTAGRAM_NAME = "@gta6fied";

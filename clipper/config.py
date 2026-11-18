@@ -230,6 +230,7 @@ def apply_overrides(settings: "Settings", changes: dict) -> None:
         ("featured_min_views", sel, "featured_min_views", 0, 10**7, True),
         ("max_duration", sel, "max_duration", 15, 175, True),
         ("min_views", settings.active, "min_views", 0, 10**7, True),
+        ("instagram_per_day", pub, "instagram_per_day", 0, 24, True),
     ):
         value = number(key, low, high, whole)
         if value is not None:

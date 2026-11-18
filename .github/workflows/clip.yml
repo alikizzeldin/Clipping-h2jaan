@@ -95,7 +95,7 @@ jobs:
           cache: pip
 
       - name: Install ffmpeg
-        if: steps.gate.outputs.go == 'true'
+        if: steps.gate.outputs.go == 'true' && inputs.instagram == ''
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
 
       - name: Install Python packages

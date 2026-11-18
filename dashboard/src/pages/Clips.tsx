@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Eye, Scissors } from "lucide-react";
 import { useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
+import { InstagramIcon } from "../components/InstagramIcon";
 import { Empty, PageTitle, Tag } from "../components/ui";
 import { thumb } from "../components/widgets";
 import type { Clip } from "../lib/data";
@@ -81,6 +82,7 @@ export default function Clips() {
                 <div className="absolute left-3 top-3 flex gap-2">
                   {status(clip)}
                   {clip.origin === "auto" && <Tag tone="aqua"><Scissors className="h-3 w-3" aria-hidden /> Agent cut</Tag>}
+                  {clip.instagram && <Tag tone="rose"><InstagramIcon className="h-3 w-3" /> Instagram</Tag>}
                 </div>
                 {clip.duration ? <span className="absolute bottom-3 right-3 rounded-md bg-night/80 px-2 py-0.5 text-xs font-semibold tabular-nums">{duration(clip.duration)}</span> : null}
               </div>

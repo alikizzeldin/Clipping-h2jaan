@@ -128,3 +128,16 @@ def test_vertical_sources_are_fitted_by_height():
     win = shorts_window(1080, 1920, 1.0)
     assert win.scaled_h == 1000 and win.w == win.scaled_w == 562
     assert win.x == (1080 - 562) // 2
+
+
+def test_the_dashboard_can_change_instagrams_daily_share(tmp_path):
+    from clipper.config import apply_overrides, load_settings
+
+    settings = load_settings("config.yaml")
+    assert settings.publish.instagram_per_day == 3
+    apply_overrides(settings, {"instagram_per_day": 0})
+    assert settings.publish.instagram_per_day == 0
+    apply_overrides(settings, {"instagram_per_day": 99})
+    assert settings.publish.instagram_per_day == 24
+    apply_overrides(settings, {"instagram_per_day": "lots"})
+    assert settings.publish.instagram_per_day == 24
