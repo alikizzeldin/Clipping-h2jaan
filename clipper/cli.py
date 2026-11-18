@@ -681,6 +681,8 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("channels", help="list the Buffer channels your API key can post to")
     sub.add_parser("pull-control", help="fetch the owner's settings and rules from the dashboard")
+    p_merge = sub.add_parser("merge-state", help="merge records saved in a folder into this checkout's")
+    p_merge.add_argument("folder", help="a folder holding this run's state/ and control/ files")
     p_insta = sub.add_parser("instagram", help="post clips already on YouTube to Instagram too")
     p_insta.add_argument("clips", nargs="+", help="clip ids from the publish history")
 
@@ -700,6 +702,12 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_notify(args)
     if args.command == "pull-control":
         return cmd_pull_control(args)
+    if args.command == "merge-state":
+        from .statesync import merge_into
+
+        for rel in merge_into(Path(args.folder), Path(".")):
+            log.info("merged %s", rel)
+        return 0
     try:
         settings = load_settings(args.config, args.profile)
     except ConfigError as exc:

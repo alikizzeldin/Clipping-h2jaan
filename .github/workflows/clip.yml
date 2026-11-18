@@ -47,6 +47,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: clip
@@ -75,12 +76,33 @@ jobs:
       BURST: ${{ inputs.burst }}
       HF_HUB_DISABLE_XET: "1"
     steps:
+      # The branch as it is now, not as it was when this run was queued: a run
+      # that waited behind another must see what that one posted.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Skip if the timer already ran this slot
+        id: twin
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          last=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow clip.yml --event workflow_dispatch --limit 5 \
+                 --json createdAt,displayTitle --jq '[.[] | select(.displayTitle | test("timer"))][0].createdAt // empty')
+          if [ -n "$last" ] && [ $(( $(date -u +%s) - $(date -u -d "$last" +%s) )) -lt 6000 ]; then
+            echo "The timer already started this slot's run; nothing to do." | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Has the start time passed?
         id: gate
         run: |
           start=$(sed -nE 's/^[[:space:]]*start_at:[[:space:]]*"?([^"#[:space:]]+).*/\1/p' config.yaml | head -1)
+          if [ "${{ steps.twin.outputs.skip }}" = "true" ]; then
+            echo "go=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           if [ "$DRY_RUN" != "true" ] && [ -n "$start" ] && [ "$(date -u +%s)" -lt "$(date -u -d "$start" +%s)" ]; then
             echo "Not started yet: publishing begins at $start." | tee -a "$GITHUB_STEP_SUMMARY"
             echo "go=false" >> "$GITHUB_OUTPUT"
@@ -165,11 +187,22 @@ jobs:
       - name: Save publish history
         if: always()
         run: |
-          if [ -n "$(git status --porcelain state control)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain state control)" ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Keep this run's records aside, take the newest saved version, and
+          # merge them in by meaning (no git conflicts, nothing lost).
+          ours="$RUNNER_TEMP/ours"
+          rm -rf "$ours" && mkdir -p "$ours" && cp -r state control "$ours"/ 2>/dev/null || true
+          for attempt in 1 2 3 4; do
+            git fetch -q origin "$GITHUB_REF_NAME"
+            git reset -q --hard "origin/$GITHUB_REF_NAME"
+            python -m clipper merge-state "$ours"
             git add state control
-            git commit -m "Record published clips and dashboard settings"
-            git pull --rebase
-            git push
-          fi
+            git diff --cached --quiet && exit 0
+            git commit -q -m "Record published clips and dashboard settings"
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            echo "Someone saved meanwhile (try $attempt); merging again."
+            sleep $((attempt * 5))
+          done
+          exit 1
