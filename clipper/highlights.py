@@ -18,9 +18,11 @@ import logging
 import re
 import statistics
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import Callable
 from urllib.parse import urljoin
 
 import requests
@@ -75,22 +77,31 @@ def find_peaks(samples: list[tuple[datetime, float]], top: int = MAX_CUTS, apart
 
 def find_highlights(kick: KickClient, channels: list[str], category: str, now: datetime | None = None,
                     lookback_hours: float = LOOKBACK_HOURS,
-                    not_before: dict[str, datetime] | None = None) -> list[Clip]:
+                    not_before: dict[str, datetime] | None = None,
+                    connect: Callable[[], KickClient] | None = None, workers: int = 1) -> list[Clip]:
     """Candidate clips cut from the recent broadcasts of `channels`.
 
     `not_before` gives channels a start time: nothing earlier is examined.
+    With `connect` and several `workers`, channels are examined side by side,
+    each over its own connection (sampling a chat takes a minute or more).
     """
     now = now or datetime.now(timezone.utc)
-    found: list[Clip] = []
-    for slug in channels:
+
+    def one(slug: str, client: KickClient) -> list[Clip]:
         start = (not_before or {}).get(slug.lower())
         if start and now <= start:
-            continue
+            return []
         try:
-            found += _channel_highlights(kick, slug, category, now, lookback_hours, start)
+            return _channel_highlights(client, slug, category, now, lookback_hours, start)
         except (KickError, HighlightError) as exc:
             log.warning("no own clips from %s this run: %s", slug, exc)
-    return found
+            return []
+
+    if connect is None or workers <= 1 or len(channels) <= 1:
+        return [cut for slug in channels for cut in one(slug, kick)]
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        results = list(pool.map(lambda slug: one(slug, connect()), channels))
+    return [cut for found in results for cut in found]
 
 
 def _channel_highlights(kick: KickClient, slug: str, category: str, now: datetime, lookback_hours: float,

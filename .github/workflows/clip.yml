@@ -32,6 +32,10 @@ on:
         description: Clips this run (blank = config.yaml)
         type: string
         default: ""
+      burst:
+        description: One-off - publish this many clips now from the biggest live channels, outside the daily plan
+        type: string
+        default: ""
       started_by:
         description: Leave blank. Filled in when the timer or the dashboard starts the run.
         type: string
@@ -48,7 +52,7 @@ jobs:
   clip:
     if: github.event_name == 'workflow_dispatch' || vars.CLIPPER_PAUSED != 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 75
     env:
       CLIPPER_PROFILE: ${{ inputs.profile || vars.CLIPPER_PROFILE }}
       CLIPPER_PRIVACY: ${{ vars.CLIPPER_PRIVACY }}
@@ -64,6 +68,7 @@ jobs:
       DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
       CHECK_HOSTING: ${{ github.event_name == 'workflow_dispatch' && inputs.check_hosting }}
       LIMIT: ${{ inputs.limit }}
+      BURST: ${{ inputs.burst }}
       HF_HUB_DISABLE_XET: "1"
     steps:
       - uses: actions/checkout@v4
@@ -116,6 +121,7 @@ jobs:
           if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
           if [ "$CHECK_HOSTING" = "true" ]; then args+=(--check-hosting); fi
           if [ -n "$LIMIT" ]; then args+=(--limit "$LIMIT"); fi
+          if [ -n "$BURST" ]; then args+=(--burst "$BURST"); fi
           python -m clipper run "${args[@]}"
 
       - name: Attach rendered videos (dry runs)

@@ -40,6 +40,10 @@ from .youtube import YouTubeError, authorize
 log = logging.getLogger("clipper")
 
 
+BURST_CHANNELS = 12  # how many of the biggest live channels a burst cuts highlights from
+BURST_WORKERS = 6  # channels examined side by side
+
+
 def discover(settings: Settings, kick: KickClient) -> tuple[list[Clip], set[str]]:
     """Collect candidate clips and name the biggest channels.
 
@@ -256,10 +260,17 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         if isinstance(publisher, BufferPublisher):
             _study(settings, state, publisher.client, activity, now)
 
-    budget = pub.max_per_run if args.limit is None else args.limit
+    burst = max(0, getattr(args, "burst", 0) or 0)
+    budget = burst or (pub.max_per_run if args.limit is None else args.limit)
     featured = {c.lower() for c in sel.featured_channels}
     day_ago = now - timedelta(hours=24)
-    if publisher:  # skip the whole search when nothing may be posted yet
+    if burst:
+        # A one-off push (e.g. on launch day): up to `burst` clips now, from the
+        # biggest live channels, outside the daily plan. The usual checks still
+        # apply, one clip per channel, and nothing from before the start time.
+        profile = replace(profile, min_views=min(profile.min_views, sel.featured_min_views))
+        log.info("launch burst: up to %d clips, outside the daily plan", burst)
+    elif publisher:  # skip the whole search when nothing may be posted yet
         _, why = plan([], featured, pub, state.recent(day_ago), now)
         if why != "no clip met the selection rules":
             return finish(0, f"Nothing published: {why}.")
@@ -271,6 +282,16 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         if sel.own_clips and featured:
             clips += find_highlights(kick, sorted(featured), profile.kick_category, now,
                                      not_before=settings.channel_starts if publisher else None)
+        if burst:
+            blocked = {c.lower() for c in sel.block_channels}
+            live_now = [ch.slug.lower() for ch in kick.live_channels(profile.kick_category, BURST_CHANNELS + 10)]
+            targets = [slug for slug in dict.fromkeys(live_now)
+                       if slug not in blocked and slug not in featured][:BURST_CHANNELS]
+            log.info("launch burst: cutting highlights from %s", ", ".join(targets) or "nobody")
+            big |= set(targets)
+            clips += find_highlights(kick, targets, profile.kick_category, now,
+                                     not_before={slug: start for slug in targets} if start else None,
+                                     connect=KickClient, workers=BURST_WORKERS)
     except KickError as exc:
         log.error("%s", exc)
         report("error", f"The run stopped: {exc}")
@@ -306,7 +327,10 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         uploads = state.recent(day_ago) if publisher else rendered
         open_now = [c for c in chosen if c.id not in tried
                     and used_channels.get(c.channel_slug, 0) < sel.max_per_channel]
-        queue, why = plan(open_now, featured, pub, uploads, now, ignore_gap=publisher is None)
+        if burst:
+            queue, why = open_now, "the launch burst"
+        else:
+            queue, why = plan(open_now, featured, pub, uploads, now, ignore_gap=publisher is None)
         if not queue:
             if not done:
                 notes.append(f"Nothing {'published' if publisher else 'rendered'}: {why}.")
@@ -348,7 +372,10 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
                     english = tidy_translation(transcriber.translate(raw, transcript.language), transcript.words)
                 except SpeechError as exc:
                     log.warning("no English line for %s: %s", clip.id, exc)
-            meta = build_metadata(clip, profile, pub, shorts, [line.text for line in transcript.lines])
+            # A title is quoted from what is said: in Arabic or English as spoken,
+            # otherwise from the English translation, which more viewers can read.
+            spoken = english if english and transcript.language not in ("ar", "en") else transcript.lines
+            meta = build_metadata(clip, profile, pub, shorts, [line.text for line in spoken])
             video = rnd.render(
                 raw, out / f"{clip.id}.mp4", settings.render, settings.theme, settings.captions,
                 label=profile.label, title=meta["clean_title"], chunks=chunks, translation=english,
@@ -378,8 +405,10 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             log.error("%s", exc)
             report("error", f"Publishing “{meta['title']}” failed: {exc}")
             return finish(1, *done)
-        state.add(clip, result.ref, meta["title"], via=result.via, link=result.link,
-                  extra={"language": language_name(transcript.language)} if transcript.language else None)
+        extra = {"language": language_name(transcript.language)} if transcript.language else {}
+        if burst:
+            extra["burst"] = True
+        state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra or None)
         state.save()  # after every upload, so a later crash can't cause a repost
         by = "cut by the agent" if clip.origin == "auto" else f"from {clip.channel_slug}"
         activity.add("published", f"Published “{meta['title']}” ({by})", result.link)
@@ -511,6 +540,9 @@ def main(argv: list[str] | None = None) -> int:
     p_run.add_argument("--dry-run", action="store_true", help="render only, upload nothing")
     p_run.add_argument("--limit", type=int, help="clips to publish this run")
     p_run.add_argument("--keep", action="store_true", help="keep rendered files after upload")
+    p_run.add_argument("--burst", type=int, default=0, metavar="N",
+                       help="one-off: publish up to N clips now from the biggest live channels, "
+                            "outside the daily plan (e.g. on launch day)")
     p_run.add_argument("--check-hosting", action="store_true",
                        help="with --dry-run: also test that a clip can be hosted publicly")
 

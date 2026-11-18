@@ -80,9 +80,15 @@ class State:
         return [(clip_id, entry) for _, clip_id, entry in sorted(found, key=lambda f: f[0])]
 
     def recent(self, since: datetime) -> list[tuple[datetime, str]]:
-        """(time, channel) of everything published since `since`."""
+        """(time, channel) of everything published since `since` under the daily plan.
+
+        Clips from a one-off launch burst are left out: they were extra, and
+        must not use up the day's regular slots (such as a featured streamer's).
+        """
         found = []
         for entry in self.published.values():
+            if entry.get("burst"):
+                continue
             try:
                 when = datetime.fromisoformat(entry["uploaded_at"])
             except (KeyError, ValueError):

@@ -168,3 +168,24 @@ def test_the_pause_switch_stops_publishing(world):
     (root / "control").mkdir()
     (root / "control" / "settings.json").write_text('{"paused": true}')
     assert run() == 0 and publisher.sent == []
+
+
+def test_a_launch_burst_posts_many_now_without_using_up_the_daily_plan(world, monkeypatch):
+    setup, read, _ = world
+    entries = [clip("a", "big", 900, stream="s2"), clip("b", "other", 800, stream="s3"),
+               clip("c", "third", 700, stream="s4"), clip("d", "big", 600, stream="s2", minute=30),
+               clip("tiny", "fourth", 8, stream="s5")]
+    publisher, run = setup(entries, gap=7)
+    asked = {}
+    monkeypatch.setattr(cli, "find_highlights", lambda kick, channels, *a, **k: asked.setdefault("channels", channels) and [])
+    assert run("--burst", "8") == 0
+    # One clip per channel, at once, ignoring the daily limit and the spacing;
+    # the burst's lower bar lets a small channel's clip in too.
+    assert publisher.sent == ["a", "b", "c", "tiny"]
+    assert asked["channels"] == ["big"]  # highlights are cut from the biggest live channels
+    published = read("published.json")["published"]
+    assert all(entry["burst"] for entry in published.values())
+    # The burst did not use up the day: the regular plan still posts afterwards.
+    assert run() == 0
+    assert publisher.sent[-1] == "d"
+    assert "burst" not in read("published.json")["published"]["d"]
