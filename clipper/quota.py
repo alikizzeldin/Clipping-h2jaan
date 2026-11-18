@@ -1,5 +1,5 @@
-"""Whose turn it is: the daily limit, spacing between posts, and reserved slots
-for featured channels."""
+"""Whose turn it is: the daily limit, spacing between posts, and each featured
+streamer's daily share."""
 
 from __future__ import annotations
 
@@ -21,10 +21,11 @@ def plan(
 
     `candidates` are the qualifying clips, best first. `uploads` are the
     (time, channel) of everything published in the last 24 hours. Of the
-    `max_per_day` daily clips, `featured_per_day` are reserved for the
-    featured channels and the rest for everyone else. A reserved slot that
-    its owner can't fill is opened to anyone once nothing has been posted
-    for `fill_after_hours`.
+    `max_per_day` daily clips, each featured streamer has `featured_per_day`
+    of its own, and the rest go to everyone else. Featured streamers who are
+    behind go first, the one with the fewest posts that day before the
+    others. A held slot that its streamer can't fill is opened to anyone
+    once nothing has been posted for `fill_after_hours`.
     """
     total = len(uploads)
     if total >= pub.max_per_day:
@@ -34,21 +35,28 @@ def plan(
     if not ignore_gap and idle is not None and idle < pub.min_gap_hours:
         return [], f"the next clip is due in {pub.min_gap_hours - idle:.1f} hours"
 
-    reserved = min(pub.featured_per_day, pub.max_per_day) if featured else 0
-    featured_done = sum(1 for _, channel in uploads if channel.lower() in featured)
-    featured_left = reserved - featured_done
+    each = pub.featured_per_day if featured else 0
+    reserved = min(each * len(featured), pub.max_per_day)
+    posted: dict[str, int] = {}
+    for _, channel in uploads:
+        posted[channel.lower()] = posted.get(channel.lower(), 0) + 1
+    featured_done = sum(min(posted.get(name, 0), each) for name in featured)
     others_left = (pub.max_per_day - reserved) - (total - featured_done)
-    favourites = [c for c in candidates if c.channel_slug.lower() in featured]
+    behind = {name for name in featured if posted.get(name, 0) < each}
+
+    # Stable sort: among streamers equally far along, the ranking's order stays.
+    favourites = sorted((c for c in candidates if c.channel_slug.lower() in behind),
+                        key=lambda c: posted.get(c.channel_slug.lower(), 0))
     others = [c for c in candidates if c.channel_slug.lower() not in featured]
 
-    if featured_left > 0 and favourites:
+    if favourites:
         return favourites, "a featured channel's slot"
     if others_left > 0 and others:
         return others, "an open slot"
-    if candidates and (idle is None or idle >= pub.fill_after_hours):
-        return candidates, "a reserved slot nobody had filled"
+    if others and (idle is None or idle >= pub.fill_after_hours):
+        return others, "a held slot nobody had filled"
     if not candidates:
         return [], "no clip met the selection rules"
-    if featured_left > 0:
-        return [], "the remaining slots are held for a featured channel's next clip"
+    if behind:
+        return [], f"the remaining slots are held for {', '.join(sorted(behind))}"
     return [], "the remaining slots are held for other channels"

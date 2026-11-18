@@ -183,15 +183,15 @@ export default function Settings() {
                 <option value="public">Public</option><option value="unlisted">Unlisted</option><option value="private">Private</option>
               </select>
             </label>
-            <NumberField label="Clips per day" value={form.max_per_day} onChange={(v) => { set("max_per_day", v); if (form.featured_per_day > v) setForm((f) => f && { ...f, max_per_day: v, featured_per_day: v }); }} min={1} max={12} />
-            <NumberField label="Reserved for featured streamers" hint="Of the daily clips, this many are kept for the featured streamers below." value={form.featured_per_day} onChange={(v) => set("featured_per_day", Math.min(v, form.max_per_day))} min={0} max={form.max_per_day} />
+            <NumberField label="Clips per day" value={form.max_per_day} onChange={(v) => setForm((f) => f && { ...f, max_per_day: v, featured_per_day: Math.min(f.featured_per_day, Math.floor(v / Math.max(1, f.featured_channels.length))) })} min={1} max={24} />
+            <NumberField label="Clips per featured streamer" hint="Each featured streamer gets this many of the daily clips; the rest go to the biggest other channels." value={form.featured_per_day} onChange={(v) => set("featured_per_day", Math.min(v, Math.floor(form.max_per_day / Math.max(1, form.featured_channels.length))))} min={0} max={Math.floor(form.max_per_day / Math.max(1, form.featured_channels.length))} />
             <NumberField label="Time between posts" hint="Spreads the clips across the day." value={form.min_gap_hours} onChange={(v) => set("min_gap_hours", v)} min={0} max={24} step={0.5} suffix="hours" />
           </div>
         </Panel>
 
         <Panel title="Which clips" icon={<ListFilter className="h-5 w-5" />} index={3}>
           <div className="divide-y divide-line/50">
-            <Chips label="Featured streamers" hint="Always followed, with their own daily slots." values={form.featured_channels} onChange={(v) => set("featured_channels", v)} placeholder="Add a Kick channel" />
+            <Chips label="Featured streamers" hint="Always followed, each with their own daily clips." values={form.featured_channels} onChange={(v) => set("featured_channels", v)} placeholder="Add a Kick channel" />
             <Chips label="Blocked streamers" hint="Never clipped." values={form.block_channels} onChange={(v) => set("block_channels", v)} placeholder="Add a Kick channel" />
             <Toggle on={form.top_channels_only} onChange={(v) => set("top_channels_only", v)} label="Biggest channels only" hint="Besides featured streamers, use only the channels with the most viewers or followers." />
             <Toggle on={form.require_gameplay} onChange={(v) => set("require_gameplay", v)} label="Gameplay only" hint="Skip clips where no game is on screen." />

@@ -61,7 +61,9 @@ def reject_reason(
         return f"too short ({clip.duration:.0f}s)"
     if clip.duration > sel.max_duration:
         return f"too long ({clip.duration:.0f}s)"
-    if clip.views < (sel.featured_min_views if featured else profile.min_views):
+    if clip.views < (sel.featured_min_views if featured else profile.min_views) and not (featured and clip.origin == "auto"):
+        # A featured streamer's own cuts need no bar: their chat spikes are
+        # measured against their own chat, however small it is.
         return f"too few views ({clip.views})"
     if clip.age_hours(now) > sel.max_age_hours:
         return f"too old ({clip.age_hours(now):.0f}h)"

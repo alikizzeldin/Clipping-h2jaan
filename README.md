@@ -33,14 +33,15 @@ are also on the dashboard's Settings page.
 
 ## How many, and from whom
 
-- `publish.max_per_day` clips go out per 24 hours (3), at least
-  `min_gap_hours` apart (7), so they are spread across the day.
-- `selection.featured_channels` (currently `sxb`) are favourites:
-  `publish.featured_per_day` (2) of the daily clips are reserved for them,
-  and their clips need only `featured_min_views` views.
-- The remaining slot goes to the best clip from the other big channels.
-- A reserved slot is not wasted: if nothing has been posted for
-  `fill_after_hours` (12), any qualifying clip may take it.
+- `publish.max_per_day` clips go out per 24 hours (12), at least
+  `min_gap_hours` apart (1.5), one per run, so they are spread across the day.
+- `selection.featured_channels` (currently `maherco`, `alimousa96` and `xqc`)
+  are favourites: each gets `publish.featured_per_day` (3) of the daily
+  clips, the one with the fewest posts that day first, and their clips need
+  only `featured_min_views` views (their own cuts need none).
+- The remaining 3 go to the best clips from the other big channels.
+- A held slot is not wasted: if nothing has been posted for
+  `fill_after_hours` (5), a clip from another big channel may take it.
 - Featured clips still have to be in the game's category, so a featured
   streamer who is not playing the game that day gets no clips.
 

@@ -244,6 +244,11 @@ export function insights(snap: Snapshot) {
     instagramToday: live.filter((c) => c.instagram && c.instagram_at && new Date(c.instagram_at).getTime() >= dayAgo).length,
     instagramTotal: live.filter((c) => c.instagram).length,
     todayFeatured: today.filter((c) => featured.has(c.channel.toLowerCase())).length,
+    todayByChannel: today.reduce<Record<string, number>>((all, c) => {
+      const key = c.channel.toLowerCase();
+      all[key] = (all[key] ?? 0) + 1;
+      return all;
+    }, {}),
     featuredShare: live.filter((c) => featured.has(c.channel.toLowerCase())).length,
     top,
     nextSlot,

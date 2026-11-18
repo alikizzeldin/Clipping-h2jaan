@@ -108,7 +108,7 @@ class Publish:
     privacy: str = "private"  # private | unlisted | public
     max_per_run: int = 2
     max_per_day: int = 6
-    featured_per_day: int = 0  # how many of the daily clips are reserved for featured channels
+    featured_per_day: int = 0  # daily clips reserved for EACH featured channel
     min_gap_hours: float = 0  # shortest time between two posts
     fill_after_hours: float = 12  # a reserved slot opens to anyone after this long with no post
     category_id: str = "20"  # YouTube "Gaming"
@@ -236,7 +236,8 @@ def apply_overrides(settings: "Settings", changes: dict) -> None:
         if value is not None:
             setattr(target, attr, value)
     if "max_per_day" in changes or "featured_per_day" in changes:
-        pub.featured_per_day = min(pub.featured_per_day, pub.max_per_day)
+        # Each featured streamer's share: together they can't take more than the day.
+        pub.featured_per_day = min(pub.featured_per_day, pub.max_per_day // max(1, len(sel.featured_channels)))
     for key, attr in (("featured_channels", "featured_channels"), ("block_channels", "block_channels")):
         if isinstance(changes.get(key), list):
             setattr(sel, attr, _names(changes[key]))

@@ -92,29 +92,38 @@ export function StatusChip({ snap, runs }: { snap: Snapshot; runs: Run[] }) {
 /** The day's slots: which are reserved for the featured streamer, which are filled. */
 export function PlanSlots({ snap }: { snap: Snapshot }) {
   const info = insights(snap);
-  const name = snap.settings.featured_channels[0];
-  const reservedCount = Math.min(snap.settings.featured_per_day, snap.settings.max_per_day);
+  const featured = snap.settings.featured_channels.map((c) => c.toLowerCase());
+  const each = featured.length ? snap.settings.featured_per_day : 0;
+  const reserved = Math.min(each * featured.length, snap.settings.max_per_day);
+  const counted = (name: string) => Math.min(info.todayByChannel[name] ?? 0, each);
+  const othersPosted = info.today - featured.reduce((sum, name) => sum + counted(name), 0);
+  const rows = [
+    ...featured.map((name) => ({ name, slots: each, filled: counted(name), star: true })),
+    { name: "Top streamers", slots: snap.settings.max_per_day - reserved, filled: Math.min(othersPosted, snap.settings.max_per_day - reserved), star: false },
+  ].filter((row) => row.slots > 0);
   return (
     <div>
       <p className="mb-3 flex items-center justify-between text-xs uppercase tracking-widest text-mist">
         Last 24 hours <span className="normal-case tracking-normal text-snow">{info.today} of {snap.settings.max_per_day} clips posted</span>
       </p>
-      <div className="flex gap-2.5">
-        {Array.from({ length: snap.settings.max_per_day }, (_, i) => {
-          const reserved = i < reservedCount;
-          const filled = reserved ? i < info.todayFeatured : i - reservedCount < info.today - info.todayFeatured;
-          return (
-            <motion.div
-              key={i} initial={{ scaleX: 0.4, opacity: 0 }} whileInView={{ scaleX: 1, opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 * i }}
-              className={`h-11 min-w-0 flex-1 truncate rounded-xl px-3 text-[11px] font-semibold uppercase leading-[2.75rem] tracking-wider ring-1 ${filled ? "bg-gradient-to-r from-violet to-pink text-snow ring-pink/60 shadow-[0_0_24px_-6px_rgb(255_47_208/0.9)]" : "text-mist ring-line"}`}
-            >
-              {reserved ? (name ?? "Featured") : "Open"}
-            </motion.div>
-          );
-        })}
-      </div>
+      <ul className="space-y-2">
+        {rows.map((row, r) => (
+          <li key={row.name} className="flex items-center gap-3">
+            <span className={`w-28 shrink-0 truncate text-xs font-semibold uppercase tracking-wider ${row.star ? "text-snow" : "text-mist"}`}>{row.name}</span>
+            <span className="flex flex-1 gap-1.5">
+              {Array.from({ length: row.slots }, (_, i) => (
+                <motion.span
+                  key={i} initial={{ scaleX: 0.3, opacity: 0 }} whileInView={{ scaleX: 1, opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.05 * (r * 3 + i) }}
+                  className={`h-7 min-w-0 flex-1 rounded-lg ring-1 ${i < row.filled ? "bg-gradient-to-r from-violet to-pink ring-pink/60 shadow-[0_0_18px_-6px_rgb(255_47_208/0.9)]" : "ring-line"}`}
+                />
+              ))}
+            </span>
+            <span className="w-8 shrink-0 text-right text-xs tabular-nums text-mist">{row.filled}/{row.slots}</span>
+          </li>
+        ))}
+      </ul>
       <p className="mt-3 text-xs leading-relaxed text-mist">
-        {reservedCount} slot{reservedCount === 1 ? " is" : "s are"} kept for {name ?? "featured streamers"}; the rest go to the biggest other channels.
+        {featured.length ? `${each} a day for each featured streamer; the rest go to the biggest other channels.` : "All slots go to the biggest channels."}
         {info.todayBurst > 0 && <> Plus {info.todayBurst} launch clip{info.todayBurst === 1 ? "" : "s"} outside the plan.</>}
       </p>
       {snap.settings.instagram_connected && snap.settings.instagram_per_day > 0 && (

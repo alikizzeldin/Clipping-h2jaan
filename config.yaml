@@ -57,12 +57,10 @@ selection:
   top_live_channels: 10      # how many of the biggest channels to follow
   top_channels_only: true    # use clips only from the biggest channels (most live viewers
                              # now, or most followers) and the featured ones
-  featured_channels: [sxb]   # favourites: always followed, with their own daily slots
-  featured_min_views: 20     # featured clips need only this many views
-  # SXB plays from the Saudi unlock (midnight at the start of 19 Nov, Saudi time),
-  # not the earlier New Zealand one, so nothing of his from before then is used.
-  channel_start:
-    sxb: "2026-11-19T00:00:00+03:00"
+  featured_channels: [maherco, alimousa96, xqc]   # favourites: each gets publish.featured_per_day slots a day
+  featured_min_views: 20     # featured viewer clips need only this many views
+  # A featured streamer can be given a later start, e.g. sxb: "2026-11-19T00:00:00+03:00".
+  channel_start: {}
   languages: []              # e.g. [English, Arabic]; empty = any language
   drop_unknown_language: false
   allow_channels: []         # if not empty, ONLY these channels (and featured ones) are clipped
@@ -98,11 +96,12 @@ publish:
   # first place GTA 6 unlocks.
   start_at: "2026-11-18T13:00:00+02:00"
   privacy: public            # private | unlisted | public
-  max_per_run: 1             # the schedule checks every 2 hours
-  max_per_day: 3             # clips per 24 hours
-  featured_per_day: 2        # ...of which this many are reserved for featured_channels
-  min_gap_hours: 7           # spread them out: at least this long between two posts
-  fill_after_hours: 12       # a reserved slot opens to anyone after this long with no post
+  max_per_run: 1             # the schedule runs every 2 hours: 12 runs, 12 clips a day
+  max_per_day: 12            # clips per 24 hours:
+  featured_per_day: 3        # ...3 for EACH featured streamer (maherco, alimousa96, xqc),
+  #                            and the other 3 for the biggest other channels
+  min_gap_hours: 1.5         # spread them out: at least this long between two posts
+  fill_after_hours: 5        # if nothing went out for this long, any good clip takes a held slot
   # Instagram "gta6fied", in the same Buffer account: the first 3 clips of every
   # 24 hours are also posted there as Reels. Empty the id to stop.
   instagram_channel_id: 6afd94b2ece6dfde5f0a06e7
