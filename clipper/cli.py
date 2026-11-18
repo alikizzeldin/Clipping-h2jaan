@@ -485,7 +485,8 @@ def _to_instagram(publisher, state: State, clip_id: str, caption: str, now: date
     except PublishError as exc:  # Instagram trouble must not stop YouTube posting
         report("error", f"Instagram did not take a clip: {exc}")
         return False
-    state.update(clip_id, instagram=post_id, instagram_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+    state.update(clip_id, instagram=post_id, instagram_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                 instagram_title=caption.splitlines()[0])
     state.save()
     return True
 
@@ -540,7 +541,8 @@ def cmd_instagram(settings: Settings, args: argparse.Namespace) -> int:
         except PublishError as exc:
             lines.append(f"- {clip_id}: Instagram did not take it: {exc}")
             continue
-        state.update(clip_id, instagram=post_id, instagram_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+        state.update(clip_id, instagram=post_id, instagram_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                     instagram_title=meta["caption"].splitlines()[0])
         state.save()
         activity.add("published", f"Posted to Instagram: “{meta['clean_title']}”")
         lines.append(f"- {clip_id}: sent to Instagram (post {post_id}) — {meta['clean_title']}")

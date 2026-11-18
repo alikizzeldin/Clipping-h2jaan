@@ -18,6 +18,7 @@ from .youtube import QuotaExceeded, YouTube, YouTubeError
 log = logging.getLogger(__name__)
 
 YT_ENV = ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN")
+CONFIRM_PER_RUN = 12  # earlier posts whose result is checked at the start of a run
 
 
 class PublishError(RuntimeError):
@@ -87,7 +88,9 @@ class BufferPublisher:
         that Buffer could not publish.
         """
         now = datetime.now(timezone.utc)
-        for clip_id, entry in state.unconfirmed("buffer", now - timedelta(days=2))[:5]:
+        # Enough per run to keep up with extra batches (8 posts a run); each post
+        # is normally checked once, so this costs no more requests overall.
+        for clip_id, entry in state.unconfirmed("buffer", now - timedelta(days=2))[:CONFIRM_PER_RUN]:
             try:
                 info = self.client.post_status(entry["video_id"])
             except BufferError as exc:
@@ -113,7 +116,7 @@ class BufferPublisher:
             (clip_id, entry) for clip_id, entry in state.published.items()
             if entry.get("instagram") and not entry.get("instagram_status")
             and entry.get("instagram_at", "") >= (now - timedelta(days=2)).isoformat()
-        ][:4]
+        ][:CONFIRM_PER_RUN]
         for clip_id, entry in waiting:
             try:
                 info = self.client.post_status(entry["instagram"])
@@ -122,10 +125,10 @@ class BufferPublisher:
                 return
             if info["status"] == "sent":
                 state.update(clip_id, instagram_status="sent", instagram_link=info["link"])
-                report("info", f"Live on Instagram: “{entry['title']}”", info["link"])
+                report("info", f"Live on Instagram: “{entry.get('instagram_title') or entry['title']}”", info["link"])
             elif info["status"] == "error":
                 state.update(clip_id, instagram_status="error", instagram_error=info["error"])
-                report("error", f"Instagram did not publish “{entry['title']}”: {info['error']}", "")
+                report("error", f"Instagram did not publish “{entry.get('instagram_title') or entry['title']}”: {info['error']}", "")
 
     def publish(self, video: Path, clip: Clip, meta: dict) -> Published:
         try:
