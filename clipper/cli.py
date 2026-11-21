@@ -675,7 +675,7 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
         return 0
     extra = {"kind": "reel", "episode": int(plan["episode"]), "topic": plan.get("topic", ""),
              "rating": plan.get("rating", {}).get("score"), "hook": "reel"}
-    if result is None and pub.reels_wait_for_youtube:
+    if result is None and (pub.reels_wait_for_youtube or plan.get("wait_for_youtube")):
         extra.update(status="youtube_pending", youtube_after=wait_for_youtube.isoformat(timespec="seconds"))
         state.add(clip, "", meta["title"], via="buffer", extra=extra)
         notes.append(f"- YouTube: waits for a free slot after {wait_for_youtube:%H:%M} UTC (its daily limit is used up)")
