@@ -128,6 +128,11 @@ class Publish:
     # gets about 2). Reels post to Instagram at once and wait for a free YouTube
     # slot instead of failing. 0 = no limit (after verifying the channel).
     youtube_per_day: int = 2
+    # Buffer counts those per calendar day in the channel's time zone; this is
+    # when that day starts, in UTC (seen in the publish history: about 19:00).
+    youtube_day_start: str = "19:00"
+    # False: clips go to Instagram alone, leaving YouTube's few daily posts to the reels.
+    clips_to_youtube: bool = True
 
 
 @dataclass

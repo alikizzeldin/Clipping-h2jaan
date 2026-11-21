@@ -31,17 +31,30 @@ If a folder is not published yet:
 - If it has no `queued_at` in `reels/episodes/<folder>/status.json`, start the
   workflow for it (step 8), write `{"queued_at": "<now ISO>"}` there, commit,
   push, and stop for this wake-up.
-- If its record in `state/published.json` has `"status": "youtube_pending"`
-  (it went to Instagram while YouTube's daily limit was used up) and its
-  `youtube_after` time has passed, start the workflow for it again: it now
-  posts the reel to YouTube only. Only the OLDEST such reel per wake-up
-  (YouTube takes about 2 uploads a day; two at once would collide), then
-  carry on.
 - If it was queued over 2 hours ago and still is not published, read that
   workflow run's log (GitHub tools: list the runs of `reel.yml`, then the job
   log), fix the cause in the plan if it is the plan's fault, and start it once
   more. If it fails twice, write `"failed": "<reason>"` in status.json, skip it,
   and carry on with a new reel.
+
+### YouTube catch-up, and whether to make a new reel
+
+Buffer's free plan takes only 2 YouTube posts a day (its day starts about
+19:00 UTC). Clips go to Instagram only; YouTube's 2 posts are for reels. A reel
+made when both are used goes to Instagram at once and waits for YouTube
+(`"status": "youtube_pending"` in `state/published.json`).
+
+```bash
+python -m clipper youtube-slots     # free now? when does Buffer's next day start? who waits?
+```
+
+1. While a slot is free and a reel waits: start the workflow for the OLDEST
+   waiting reel (it now posts to YouTube only), wait until that run has
+   finished (check it with the GitHub tools every 2 minutes), pull, and run
+   `youtube-slots` again. One at a time: two at once could take the same slot.
+2. Then make a new reel (steps 2–8) ONLY if a YouTube slot is still free.
+   If none is, make no reel this wake-up (it would only join YouTube's
+   waiting line): say so in the report and stop.
 
 ## 2. Research what players want right now
 

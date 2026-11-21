@@ -74,16 +74,21 @@ def test_sample_reel_json_is_valid():
     assert data["scenes"][0]["type"] == "hook"
 
 
-def test_youtube_slot_frees_24_hours_after_the_older_of_two_uploads(tmp_path):
+def test_youtube_slots_follow_buffers_calendar_day(tmp_path):
     state = State(tmp_path / "published.json")
-    now = datetime(2026, 11, 21, 3, 0, tzinfo=timezone.utc)
-    assert state.youtube_free_at(now, 2) is None
-    state.add(_clip("a"), "p1", "t", when=datetime(2026, 11, 20, 19, 21, tzinfo=timezone.utc), via="buffer")
-    state.add(_clip("b"), "p2", "t", when=datetime(2026, 11, 20, 21, 21, tzinfo=timezone.utc), via="buffer")
-    state.add(_clip("c"), "p3", "t", when=datetime(2026, 11, 20, 23, 0, tzinfo=timezone.utc), via="buffer",
+    utc = timezone.utc
+    now = datetime(2026, 11, 21, 3, 0, tzinfo=utc)
+    assert state.youtube_free_at(now, 2, "19:00") is None
+    state.add(_clip("a"), "p1", "t", when=datetime(2026, 11, 20, 19, 21, tzinfo=utc), via="buffer")
+    state.add(_clip("b"), "p2", "t", when=datetime(2026, 11, 20, 21, 21, tzinfo=utc), via="buffer")
+    state.add(_clip("c"), "p3", "t", when=datetime(2026, 11, 20, 23, 0, tzinfo=utc), via="buffer",
               extra={"status": "error", "error": "The daily posting limit for this channel has been reached!"})
-    assert state.youtube_free_at(now, 2) == datetime(2026, 11, 21, 19, 24, tzinfo=timezone.utc)
-    assert state.youtube_free_at(now, 3) is None  # refused uploads don't count
-    assert state.youtube_free_at(now, 0) is None  # no limit after verifying the channel
-    later = datetime(2026, 11, 21, 19, 30, tzinfo=timezone.utc)
-    assert state.youtube_free_at(later, 2) is None
+    state.add(_clip("d"), "p4", "t", when=datetime(2026, 11, 21, 1, 0, tzinfo=utc), via="buffer",
+              extra={"status": "instagram_only"})
+    # Buffer's day began at 19:00 UTC on the 20th and already has its 2 posts.
+    assert state.youtube_free_at(now, 2, "19:00") == datetime(2026, 11, 21, 19, 2, tzinfo=utc)
+    assert state.youtube_free_at(now, 3, "19:00") is None  # refused and Instagram-only posts don't count
+    assert state.youtube_free_at(now, 0, "19:00") is None  # no limit on a paid plan
+    # A new Buffer day starts at 19:00 on the 21st: both slots are free again.
+    assert state.youtube_free_at(datetime(2026, 11, 21, 19, 30, tzinfo=utc), 2, "19:00") is None
+    assert state.youtube_free_at(datetime(2026, 11, 21, 18, 59, tzinfo=utc), 2, "19:00") is not None

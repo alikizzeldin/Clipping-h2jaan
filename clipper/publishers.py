@@ -151,6 +151,16 @@ class BufferPublisher:
         self.last_url = url
         return Published(post_id, "", self.via)
 
+    def instagram_only(self, video: Path, clip: Clip, caption: str) -> Published:
+        """Host the video and post it to Instagram alone (not YouTube)."""
+        try:
+            url, _ = self.host.upload(video, clip.id)
+            self.host.wait_until_public(url)
+        except HostingError as exc:
+            raise PublishError(str(exc)) from exc
+        self.last_url = url
+        return Published(self.to_instagram(url, caption), "", "instagram")
+
     def to_instagram(self, url: str, caption: str) -> str:
         """Post an already hosted clip to the Instagram channel as a Reel; returns Buffer's post id."""
         if not self.pub.instagram_channel_id:

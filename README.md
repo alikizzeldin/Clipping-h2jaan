@@ -36,6 +36,11 @@ are also on the dashboard's Settings page.
 - `publish.max_per_day` clips go out per 24 hours (2), at least
   `min_gap_hours` apart (6), one per run, so they are spread across the day.
   Two motion-graphics reels a day come on top (see "Reels" below).
+- Buffer's free plan takes only 2 YouTube posts per channel per day (its day
+  starts about 19:00 UTC, `publish.youtube_day_start`). Those go to the
+  reels: clips go to Instagram only (`publish.clips_to_youtube: false`), and a
+  reel that finds both used goes to Instagram at once and to YouTube on the
+  next day (`python -m clipper youtube-slots` shows where things stand).
 - `selection.featured_channels` (currently `maherco`, `alimousa96` and `xqc`)
   have their streams searched for highlights every run. With
   `publish.featured_per_day` above 0, each gets that many reserved clips a

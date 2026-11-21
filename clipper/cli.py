@@ -432,8 +432,15 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
                 notes.append(f"Stopped the extra batch to keep Buffer's allowance for the regular posts "
                              f"({left.get(MONTH_WINDOW, '?')} requests left this month, {left.get(DAY_WINDOW, '?')} today).")
                 break
+        # Buffer's free plan takes 2 YouTube posts a day; those go to the reels,
+        # so clips can be set to go to Instagram alone (publish.clips_to_youtube).
+        instagram_only = (not pub.clips_to_youtube and isinstance(publisher, BufferPublisher)
+                          and bool(pub.instagram_channel_id))
         try:
-            result = publisher.publish(video, clip, meta)
+            if instagram_only:
+                result = publisher.instagram_only(video, clip, meta["caption"])
+            else:
+                result = publisher.publish(video, clip, meta)
         except PublishLimit as exc:
             log.warning("stopping: %s", exc)
             notes.append(f"Stopped early: {exc}")
@@ -454,10 +461,22 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
             extra["scene"] = scene
         if burst:
             extra["burst"] = True
+        by = "cut by the agent" if clip.origin == "auto" else f"from {clip.channel_slug}"
+        if instagram_only:
+            extra.update(status="instagram_only", instagram=result.ref,
+                         instagram_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                         instagram_title=meta["clean_title"])
+            state.add(clip, result.ref, meta["title"], via="buffer", extra=extra)
+            state.save()
+            activity.add("published", f"Posted to Instagram: “{meta['clean_title']}” ({by})")
+            notifier.send(f"🎬 On Instagram: {meta['clean_title']}")
+            done.append(f"- sent to Instagram (post {result.ref}) — {meta['clean_title']}")
+            if not args.keep:
+                video.unlink(missing_ok=True)
+            continue
         state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra or None)
         state.save()  # after every upload, so a later crash can't cause a repost
         insta = _to_instagram(publisher, state, clip.id, meta["caption"], now, pub, report)
-        by = "cut by the agent" if clip.origin == "auto" else f"from {clip.channel_slug}"
         activity.add("published", f"Published “{meta['title']}” ({by})", result.link)
         notifier.send(f"🎬 Published: {meta['title']}\n{result.link or 'Sent to Buffer; the YouTube link follows shortly.'}")
         where = result.link or f"sent to Buffer (post {result.ref})"
@@ -584,7 +603,7 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
         if not (entry.get("status") == "youtube_pending" or (limited and not entry.get("youtube_retried"))):
             _summary([f"{rid} is already published; nothing to do."])
             return 0
-        free = state.youtube_free_at(now, pub.youtube_per_day)
+        free = state.youtube_free_at(now, pub.youtube_per_day, pub.youtube_day_start)
         if free:
             _summary([f"{rid} is on Instagram and waits for YouTube: the next upload fits after {free:%H:%M} UTC."])
             return 0
@@ -622,7 +641,7 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
     notes = []
     stamp = now.isoformat(timespec="seconds")
     wait_for_youtube = (not youtube_only and isinstance(publisher, BufferPublisher) and pub.instagram_channel_id
-                        and state.youtube_free_at(now, pub.youtube_per_day))
+                        and state.youtube_free_at(now, pub.youtube_per_day, pub.youtube_day_start))
     try:
         if wait_for_youtube:
             # YouTube's daily limit is used up: Instagram now, YouTube when a slot frees.
@@ -675,6 +694,26 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
     if not args.keep:
         video.unlink(missing_ok=True)
     _summary([f"Published reel {rid}", *notes])
+    return 0
+
+
+def cmd_youtube_slots(settings: Settings) -> int:
+    """How many YouTube posts Buffer still takes today, and when its next day starts."""
+    pub = settings.publish
+    state = State(settings.state_path)
+    now = datetime.now(timezone.utc)
+    if pub.youtube_per_day <= 0:
+        print("YouTube: no daily limit set")
+        return 0
+    free = state.youtube_free_at(now, pub.youtube_per_day, pub.youtube_day_start)
+    waiting = sorted(cid for cid, e in state.published.items() if e.get("status") == "youtube_pending")
+    hour, minute = (int(v) for v in pub.youtube_day_start.split(":"))
+    start = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if start <= now:
+        start += timedelta(days=1)
+    print(f"YouTube slot free now: {'no, next at ' + free.strftime('%Y-%m-%d %H:%M UTC') if free else 'yes'}")
+    print(f"Buffer's next day starts: {start:%Y-%m-%d %H:%M UTC} ({pub.youtube_per_day} posts a day)")
+    print(f"Reels waiting for YouTube: {', '.join(waiting) or 'none'}")
     return 0
 
 
@@ -820,6 +859,8 @@ def main(argv: list[str] | None = None) -> int:
     p_reel.add_argument("--concurrency", type=int)
     p_reel.add_argument("--keep", action="store_true", help="keep the rendered video after publishing")
 
+    sub.add_parser("youtube-slots", help="how many YouTube posts Buffer still takes today")
+
     p_notify = sub.add_parser("notify", help="send a message to your Discord or Telegram")
     p_notify.add_argument("message")
 
@@ -851,6 +892,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_instagram(settings, args)
     if args.command == "reel":
         return cmd_reel(settings, args)
+    if args.command == "youtube-slots":
+        return cmd_youtube_slots(settings)
     if args.command == "run" and args.dry_run:
         args.keep = True
     return cmd_discover(settings, args) if args.command == "discover" else cmd_run(settings, args)
