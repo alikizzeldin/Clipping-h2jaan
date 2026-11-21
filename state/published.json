@@ -1246,14 +1246,14 @@
    "topic": "UFO abduction east of Port Gellhorn after 2 AM; hidden trophy The Truth Is Out There",
    "rating": 8.4,
    "hook": "reel",
-   "status": "",
+   "status": "error",
    "youtube_after": "",
    "instagram": "6b010b61d9cbb430a115b979",
    "instagram_at": "2026-11-21T03:09:31+00:00",
    "instagram_title": "GTA 6 has a HIDDEN UFO 👽 and it can take you",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/Df_O4rclaUQ/",
-   "error": "",
+   "error": "The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
    "youtube_at": "2026-11-21T19:00:56+00:00",
    "youtube_retried": "2026-11-21T19:00:56+00:00"
   },
@@ -1274,14 +1274,14 @@
    "topic": "Chapter 1 money is wiped at Chapter 2: move it to BuckMe Family Savings before Tourist Trap; then sell tracker-free cars to Moses",
    "rating": 8.6,
    "hook": "reel",
-   "status": "",
+   "status": "error",
    "youtube_after": "",
    "instagram": "6b010bc0dd205ed779b557d6",
    "instagram_at": "2026-11-21T03:11:07+00:00",
    "instagram_title": "Your GTA 6 money is about to VANISH 😱 (do this now)",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/Df_O-6ejEbv/",
-   "error": "",
+   "error": "The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
    "youtube_at": "2026-11-21T19:07:40+00:00",
    "youtube_retried": "2026-11-21T19:07:40+00:00"
   },
@@ -1378,7 +1378,9 @@
    "status": "instagram_only",
    "instagram": "6b02059ccc364169c104bd7e",
    "instagram_at": "2026-11-21T20:57:10+00:00",
-   "instagram_title": "GTA 6 at 60 FPS on PS5? 🤯 (even a FREE way)"
+   "instagram_title": "GTA 6 at 60 FPS on PS5? 🤯 (even a FREE way)",
+   "instagram_status": "sent",
+   "instagram_link": "https://www.instagram.com/reel/DgBJD4Aku8s/"
   },
   "reel_008": {
    "video_id": "",
@@ -1400,7 +1402,9 @@
    "status": "instagram_only",
    "instagram": "6b02219ec72676f5e9e86746",
    "instagram_at": "2026-11-21T22:56:40+00:00",
-   "instagram_title": "GTA 6's BIGFOOT isn't what you think 😳"
+   "instagram_title": "GTA 6's BIGFOOT isn't what you think 😳",
+   "instagram_status": "sent",
+   "instagram_link": "https://www.instagram.com/reel/DgBWqX4FQiu/"
   }
  },
  "skipped": {
