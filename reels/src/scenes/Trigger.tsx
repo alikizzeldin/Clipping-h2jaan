@@ -42,7 +42,7 @@ export const Trigger: React.FC<{s: TriggerScene}> = ({s}) => {
           color: '#06060F', background: C.green, padding: '6px 12px', borderRadius: 6, letterSpacing: 2, opacity: ease(frame, 22, 32),
         }}
       >
-        CONTACT
+        {s.contact ?? 'CONTACT'}
       </div>
       {s.tagText ? (
         <div

@@ -75,7 +75,7 @@ export const Scan: React.FC<{s: ScanScene}> = ({s}) => {
           opacity: interpolate(frame % 30, [0, 15, 30], [1, 0.4, 1], clamp) * ease(frame, 10, 20),
         }}
       >
-        ● SCANNING VEHICLE…
+        {s.hud ?? '● SCANNING VEHICLE…'}
       </div>
     </AbsoluteFill>
   );

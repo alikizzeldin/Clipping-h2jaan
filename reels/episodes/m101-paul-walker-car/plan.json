@@ -1,0 +1,456 @@
+{
+ "manual": true,
+ "episode": 101,
+ "kind": "secret",
+ "topic": "Paul Walker / Fast & Furious tribute car: a bright green tuner (in-game Maibatsu '97 Penumbra FF) in a villa garage on Vespucci Island (Rialto Islands, west of Vice Beach); open the trunk and a snake jumps out (Toy Story nod)",
+ "title": {
+  "en": "GTA 6 hid PAUL WALKER'S car 💚 (don't open the trunk)",
+  "ar": "سيارة بول ووكر مخفية في GTA 6 💚"
+ },
+ "summary": "GTA 6 hides a tribute to Paul Walker: a bright green tuner like Brian's Eclipse from the first Fast & Furious, in a villa garage on Vespucci Island in the Rialto Islands, just west of Vice Beach. Break the lock to get in. Then open the trunk: a snake jumps out, a Toy Story joke.",
+ "summary_ar": "في GTA 6 تحية لبول ووكر: سيارة خضراء مثل سيارة براين في أول فلم Fast & Furious، داخل كراج فيلا في جزيرة فسبوتشي غرب فايس بيتش. اكسر القفل وادخل… وافتح الشنطة: تطلع لك أفعى، نكتة من Toy Story.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "PaulWalker",
+  "FastAndFurious",
+  "GTA6EasterEggs",
+  "GTAVI",
+  "ViceCity",
+  "GTA6Cars",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 9,
+  "confidence": 8,
+  "score": 8.4
+ },
+ "sources": [
+  "https://www.jalopnik.com/2322396/gta-6-grand-theft-auto-paul-walker-fast-and-furious-toyota-supra-turbo-tribute/",
+  "https://insider-gaming.com/paul-walker-gta-6-easter-egg/",
+  "https://alcasthq.com/gta-6-paul-walker-car/",
+  "https://www.theclick.gg/gta-6-paul-walker-car-location/",
+  "https://www.gfinityesports.com/article/gta-6-how-to-find-the-fast-furious-1995-mitsubishi-eclipse",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-paul-walker-car-location-how-to-get/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 38.5,
+     "dur": 4.9,
+     "x": 1150
+    }
+   ]
+  },
+  "city": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 97,
+     "dur": 5.1,
+     "x": 660
+    }
+   ]
+  },
+  "garage": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 6.0,
+     "dur": 1.7,
+     "x": 900
+    },
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 15.0,
+     "dur": 1.8,
+     "x": 700
+    }
+   ]
+  },
+  "inside": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 30.2,
+     "dur": 6.1,
+     "x": 600
+    }
+   ]
+  },
+  "trunk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 43.0,
+     "dur": 4.1,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 11,
+     "dur": 4.4,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "stills": {
+  "car.png": {
+   "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+   "channel": "affiwillcarry",
+   "at": 50.5,
+   "crop": [
+    1220,
+    380,
+    20,
+    690
+   ],
+   "width": 1040
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 98,
+  "seed": 31,
+  "drop": 4.78,
+  "break": 19.32,
+  "back": 20.62,
+  "outro": 23.4
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "duration": 27.8,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.78,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6 HID",
+    "title": [
+     "PAUL WALKER'S",
+     "CAR"
+    ],
+    "color": "green",
+    "tag": "…and a surprise.",
+    "tagAt": 2.64,
+    "ar": "سيارة بول ووكر مخفية في GTA 6… وشنطتها فيها مفاجأة"
+   },
+   {
+    "type": "location",
+    "from": 4.78,
+    "to": 9.82,
+    "broll": {
+     "src": "city",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "LOCATION",
+    "place": "VICE BEACH",
+    "target": "VESPUCCI ISLAND",
+    "direction": "WEST",
+    "region": "RIALTO ISLANDS · VICE CITY",
+    "ar": "جزيرة فسبوتشي في جزر ريالتو… غرب فايس بيتش"
+   },
+   {
+    "type": "scan",
+    "from": 9.82,
+    "to": 13.3,
+    "broll": {
+     "src": "garage",
+     "grade": "cold",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "02",
+    "label": "THE GARAGE",
+    "target": {
+     "x": 540,
+     "y": 860,
+     "w": 760,
+     "h": 620
+    },
+    "checks": [
+     {
+      "text": "THE VILLA",
+      "at": 0.4
+     },
+     {
+      "text": "PRIVATE GARAGE",
+      "at": 1.22
+     },
+     {
+      "text": "BREAK THE LOCK",
+      "at": 2.28
+     }
+    ],
+    "hud": "● BREAKING THE LOCK…",
+    "ar": "لقى الفيلا اللي فيها كراج خاص… واكسر القفل"
+   },
+   {
+    "type": "proof",
+    "from": 13.3,
+    "to": 19.32,
+    "broll": {
+     "src": "inside",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 3
+    },
+    "step": "03",
+    "label": "INSIDE",
+    "proof": {
+     "src": "car.png",
+     "at": 0.2,
+     "caption": "REAL IN-GAME FOOTAGE",
+     "highlights": [
+      {
+       "x": 0.5,
+       "y": 17,
+       "w": 26,
+       "h": 24,
+       "color": "gold"
+      },
+      {
+       "x": 67,
+       "y": 46,
+       "w": 19,
+       "h": 16
+      }
+     ]
+    },
+    "title": "BRIAN'S ECLIPSE",
+    "sub": "a tribute to the first Fast & Furious",
+    "titleAt": 3.12,
+    "ar": "سيارة خضراء… تحية لسيارة براين من أول Fast & Furious"
+   },
+   {
+    "type": "reveal",
+    "from": 19.32,
+    "to": 23.4,
+    "captions": false,
+    "broll": {
+     "src": "trunk",
+     "grade": "green",
+     "dim": 0.3,
+     "blur": 4,
+     "zoom": [
+      1.1,
+      1.22
+     ]
+    },
+    "pre": "OPEN THE TRUNK…",
+    "slamAt": 1.3,
+    "icon": "snake",
+    "color": "green",
+    "lines": [
+     {
+      "text": "A SNAKE",
+      "at": 1.44,
+      "color": "green",
+      "size": 200
+     },
+     {
+      "text": "JUMPS OUT!",
+      "at": 1.72,
+      "size": 150
+     },
+     {
+      "text": "“SNAKE IN MY BOOT!”",
+      "at": 2.88,
+      "color": "gold",
+      "size": 84
+     }
+    ],
+    "ar": "افتح الشنطة… وتطلع لك أفعى! حركة من Toy Story"
+   },
+   {
+    "type": "cta",
+    "from": 23.4,
+    "to": 27.8,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRET FILES SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.45,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.58,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.7,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 5.5,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.0,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.75,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 10.0,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.2,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.04,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.1,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.5,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.24,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.6,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.85,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.25,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.42,
+    "volume": 0.45
+   },
+   {
+    "src": "trophy.wav",
+    "at": 16.45,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.25,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 19.4,
+    "volume": 0.3
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.62,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 20.65,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.02,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 22.2,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.32,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.42,
+    "volume": 0.5
+   }
+  ]
+ }
+}

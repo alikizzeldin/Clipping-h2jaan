@@ -1,0 +1,479 @@
+{
+ "manual": true,
+ "episode": 103,
+ "kind": "hidden-feature",
+ "topic": "4 GTA 6 settings to change: subtitles (Mission Only by default, set to all dialogue in the UI tab), Camera Bob (10 → 3-5), Motion Blur under Display (0-1), Camera Shake off in the Camera tab",
+ "title": {
+  "en": "Change these 4 GTA 6 settings NOW ⚙️ (#1 fixes every chase)",
+  "ar": "غيّر هالـ4 إعدادات في GTA 6 الحين ⚙️"
+ },
+ "summary": "4 GTA 6 settings to change first: subtitles only show in missions, so set them to all dialogue in the UI tab; drop Camera Bob from 10 to 3-5; slide Motion Blur (Display) to 0 or 1; and turn Camera Shake off in the Camera tab so chases are far easier to follow.",
+ "summary_ar": "4 إعدادات غيّرها أول ما تبدأ GTA 6: الترجمة تطلع بس في المهمات فخلّها لكل الحوارات من قائمة UI، نزّل Camera Bob من 10 إلى 3-5، حط Motion Blur على 0 أو 1، وطفّي Camera Shake من قائمة الكاميرا عشان المطاردات تصير أوضح.",
+ "keywords": [
+  "GTA6",
+  "GTA6Settings",
+  "GTA6Tips",
+  "GTA6HiddenFeatures",
+  "GTAVI",
+  "GTA6Guide",
+  "PS5",
+  "XboxSeriesX",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.2
+ },
+ "sources": [
+  "https://www.keengamer.com/articles/guides/best-gta-6-settings-to-change-first-motion-blur-aim-and-ps5-pro/",
+  "https://www.redbull.com/int-en/gta-6-best-settings-ps5-xbox",
+  "https://space4games.com/en/games-en/gta-6-best-settings-guide/",
+  "https://allthings.how/gta-6-accessibility-options/",
+  "https://www.igeeksblog.com/best-gta-6-settings/",
+  "https://outputlag.com/guides/gta-6-best-settings-controls/",
+  "https://support.rockstargames.com/articles/4jUHNdP22SmaKSF8DWqhXC/how-to-change-grand-theft-auto-vi-settings"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 15.0,
+     "dur": 5.2,
+     "x": 900
+    }
+   ]
+  },
+  "talk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 8.5,
+     "dur": 2.9,
+     "x": 700
+    },
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 12.5,
+     "dur": 3.0,
+     "x": 650
+    }
+   ]
+  },
+  "walk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 1.5,
+     "dur": 4.1,
+     "x": 700
+    }
+   ]
+  },
+  "race": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 8.0,
+     "dur": 4.5,
+     "x": 600
+    }
+   ]
+  },
+  "shoot": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 1.0,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  },
+  "chase": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 20.0,
+     "dur": 2.3,
+     "x": 1000
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 24,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 116,
+  "seed": 41,
+  "drop": 5.06,
+  "break": 22.6,
+  "back": 23.34,
+  "outro": 25.6
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "duration": 29.4,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 5.06,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "DO THIS NOW",
+    "kicker": "CHANGE THESE GTA 6",
+    "title": [
+     "4",
+     "SETTINGS"
+    ],
+    "color": "pink",
+    "tag": "#1 changes chases.",
+    "tagAt": 3.0,
+    "ar": "4 إعدادات غيّرها الحين… ورقم 1 يغيّر كل مطاردة"
+   },
+   {
+    "type": "setting",
+    "from": 5.06,
+    "to": 10.94,
+    "broll": {
+     "src": "talk",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 1
+    },
+    "rank": "4",
+    "label": "CHANGE THIS",
+    "tabs": [
+     "DISPLAY",
+     "CAMERA",
+     "UI",
+     "AUDIO"
+    ],
+    "tab": "UI",
+    "name": "Subtitles",
+    "kind": "option",
+    "fromValue": "MISSIONS ONLY",
+    "toValue": "ALL DIALOGUE",
+    "changeAt": 4.58,
+    "title": "SUBTITLES",
+    "chip": "DEFAULT",
+    "ar": "الترجمة تطلع بس في المهمات… خلّها لكل الحوارات"
+   },
+   {
+    "type": "setting",
+    "from": 10.94,
+    "to": 14.98,
+    "broll": {
+     "src": "walk",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 1
+    },
+    "rank": "3",
+    "label": "CHANGE THIS",
+    "tabs": [
+     "DISPLAY",
+     "CAMERA",
+     "UI",
+     "AUDIO"
+    ],
+    "tab": "CAMERA",
+    "name": "Camera Bob",
+    "kind": "slider",
+    "fromValue": "10",
+    "toValue": "3-5",
+    "max": 10,
+    "changeAt": 2.34,
+    "title": "CAMERA BOB",
+    "chip": "DEFAULT: 10",
+    "ar": "اهتزاز الكاميرا وانت تمشي على 10… نزّله لـ3 إلى 5"
+   },
+   {
+    "type": "setting",
+    "from": 14.98,
+    "to": 19.46,
+    "broll": {
+     "src": "race",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 1
+    },
+    "rank": "2",
+    "label": "CHANGE THIS",
+    "tabs": [
+     "DISPLAY",
+     "CAMERA",
+     "UI",
+     "AUDIO"
+    ],
+    "tab": "DISPLAY",
+    "name": "Motion Blur",
+    "kind": "slider",
+    "fromValue": "3",
+    "toValue": "0-1",
+    "max": 10,
+    "changeAt": 2.48,
+    "title": "MOTION BLUR",
+    "chip": "DEFAULT: 3",
+    "ar": "تمويه الحركة من Display… حطه على 0 أو 1"
+   },
+   {
+    "type": "setting",
+    "from": 19.46,
+    "to": 23.34,
+    "broll": {
+     "src": "shoot",
+     "grade": "cold",
+     "dim": 0.35,
+     "blur": 1
+    },
+    "rank": "1",
+    "label": "THE BIG ONE",
+    "tabs": [
+     "DISPLAY",
+     "CAMERA",
+     "UI",
+     "AUDIO"
+    ],
+    "tab": "CAMERA",
+    "name": "Camera Shake",
+    "kind": "toggle",
+    "fromValue": "ON",
+    "toValue": "OFF",
+    "changeAt": 2.66,
+    "title": "CAMERA SHAKE",
+    "chip": "DEFAULT: ON",
+    "ar": "اهتزاز الشاشة من قائمة الكاميرا… طفّه"
+   },
+   {
+    "type": "reveal",
+    "from": 23.34,
+    "to": 25.6,
+    "captions": false,
+    "broll": {
+     "src": "chase",
+     "grade": "warm",
+     "dim": 0.25,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "",
+    "slamAt": 0.05,
+    "color": "pink",
+    "lines": [
+     {
+      "text": "CHASES",
+      "at": 0.05,
+      "color": "pink",
+      "size": 230
+     },
+     {
+      "text": "WAY EASIER",
+      "at": 0.45,
+      "size": 170
+     },
+     {
+      "text": "TO FOLLOW",
+      "at": 1.25,
+      "color": "green",
+      "size": 150
+     }
+    ],
+    "ar": "والمطاردات تصير أوضح بكثير"
+   },
+   {
+    "type": "cta",
+    "from": 25.6,
+    "to": 29.4,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE HIDDEN FEATURES SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.62,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.94,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.95,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.0,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 5.3,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.0,
+    "volume": 0.3
+   },
+   {
+    "src": "ping.wav",
+    "at": 9.64,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.88,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.2,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.28,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.5,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.7,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.92,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.25,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 17.46,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.66,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.4,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 19.7,
+    "volume": 0.3
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.12,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 22.14,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.28,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.36,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 23.4,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.6,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.52,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.62,
+    "volume": 0.5
+   }
+  ]
+ }
+}

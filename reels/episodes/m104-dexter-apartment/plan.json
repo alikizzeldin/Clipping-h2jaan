@@ -1,0 +1,419 @@
+{
+ "manual": true,
+ "episode": 104,
+ "kind": "easter-egg",
+ "topic": "Dexter Easter egg: Trinity Apartments on Washington Island (Vice Beach, Vice City); you can't go inside, a boat like Dexter's Slice of Life is docked by it, and the roof has a knife, a syringe and more of his tools",
+ "title": {
+  "en": "GTA 6 hid DEXTER'S apartment 🔪 (check the roof)",
+  "ar": "شقة دكستر مخفية في GTA 6 🔪"
+ },
+ "summary": "GTA 6 has a Dexter Easter egg: a waterfront block called Trinity Apartments on Washington Island in Vice City. You can't go inside, but a boat like Dexter's Slice of Life sits on the water, and up on the roof you'll find a knife, a syringe and more of his tools.",
+ "summary_ar": "في GTA 6 إشارة لمسلسل دكستر: عمارة على البحر اسمها Trinity Apartments في جزيرة واشنطن بفايس سيتي. ما تقدر تدخلها، بس فيه قارب يشبه قارب دكستر، وعلى السطح سكين وحقنة وباقي أدواته.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEggs",
+  "Dexter",
+  "DexterMorgan",
+  "GTA6Secrets",
+  "GTAVI",
+  "ViceCity",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 6,
+  "confidence": 8,
+  "score": 7.4
+ },
+ "sources": [
+  "https://www.thewrap.com/culture-lifestyle/culture/gta-6-dexter-morgan-apartment-easter-egg/",
+  "https://gamerant.com/gta-6-where-find-dexter-morgans-apartment-secret-easter-egg-trinity/",
+  "https://bloody-disgusting.com/video-games/3976301/grand-theft-auto-vi-contains-a-dexter-easter-egg/",
+  "https://www.keengamer.com/articles/guides/gta-6-dexter-easter-egg-apartment-location-and-clues/",
+  "https://www.aol.com/articles/yes-dexter-morgan-gta-6-005901000.html",
+  "https://www.gamespot.com/articles/how-to-find-dexter-morgans-apartment-in-gta-6/",
+  "https://www.dreadcentral.com/news/598306/theres-a-dexter-easter-egg-in-gta-vi-because-of-course-there-is/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 66,
+     "dur": 3.5,
+     "x": 800
+    }
+   ]
+  },
+  "walk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7QBJDMN1VY7V8T20BK39CAC/playlist.m3u8",
+     "channel": "rraenee",
+     "start": 8.0,
+     "dur": 3.3,
+     "x": 500
+    }
+   ]
+  },
+  "block": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7QBJDMN1VY7V8T20BK39CAC/playlist.m3u8",
+     "channel": "rraenee",
+     "start": 11.5,
+     "dur": 2.6,
+     "x": 300
+    },
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 56,
+     "dur": 2.6,
+     "x": 600
+    }
+   ]
+  },
+  "boats": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 65.5,
+     "dur": 5.9,
+     "x": 850
+    }
+   ]
+  },
+  "roof": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 24,
+     "dur": 4.2,
+     "x": 600,
+     "slow": 1.34
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 19,
+     "dur": 3.9,
+     "x": 800
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 92,
+  "seed": 43,
+  "drop": 3.94,
+  "break": 17.52,
+  "back": 20.26,
+  "outro": 23.04
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 26.8,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.4,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6 HID",
+    "title": [
+     "DEXTER'S",
+     "APARTMENT"
+    ],
+    "color": "red",
+    "tag": "…and his kill kit.",
+    "tagAt": 2.08,
+    "ar": "شقة دكستر مخفية في اللعبة… ومعها أدواته"
+   },
+   {
+    "type": "location",
+    "from": 3.4,
+    "to": 6.66,
+    "broll": {
+     "src": "walk",
+     "grade": "cold",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "LOCATION",
+    "place": "VICE CITY",
+    "target": "WASHINGTON ISLAND",
+    "direction": "DRIVE",
+    "region": "VICE BEACH · VICE CITY",
+    "ar": "روح جزيرة واشنطن في فايس سيتي"
+   },
+   {
+    "type": "scan",
+    "from": 6.66,
+    "to": 11.74,
+    "broll": {
+     "src": "block",
+     "grade": "warm",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "02",
+    "label": "THE BUILDING",
+    "target": {
+     "x": 540,
+     "y": 930,
+     "w": 780,
+     "h": 540
+    },
+    "checks": [
+     {
+      "text": "WATERFRONT BLOCK",
+      "at": 0.46
+     },
+     {
+      "text": "TRINITY APARTMENTS",
+      "at": 1.68
+     },
+     {
+      "text": "DEXTER FANS KNOW IT",
+      "at": 3.22
+     }
+    ],
+    "hud": "● CHECKING THE NAME…",
+    "ar": "اسمها Trinity Apartments… وجمهور دكستر يعرفونه"
+   },
+   {
+    "type": "trigger",
+    "from": 11.74,
+    "to": 17.52,
+    "captions": false,
+    "broll": {
+     "src": "boats",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.12
+     ]
+    },
+    "step": "03",
+    "label": "CHECK THE WATER",
+    "title": "A BOAT LIKE DEXTER'S",
+    "sub": "Slice of Life",
+    "target": {
+     "x": 690,
+     "y": 1120,
+     "w": 420,
+     "h": 420
+    },
+    "tagText": "SLICE OF LIFE LOOKALIKE",
+    "contact": "MATCH",
+    "ar": "ما تقدر تدخل… بس شوف البحر: قارب يشبه قارب دكستر"
+   },
+   {
+    "type": "reveal",
+    "from": 17.52,
+    "to": 23.04,
+    "captions": false,
+    "broll": {
+     "src": "roof",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 3,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "HEAD UP TO THE ROOF…",
+    "slamAt": 2.74,
+    "icon": "knife",
+    "color": "red",
+    "lines": [
+     {
+      "text": "A KNIFE",
+      "at": 2.86,
+      "color": "red",
+      "size": 190
+     },
+     {
+      "text": "A SYRINGE",
+      "at": 3.52,
+      "size": 170
+     },
+     {
+      "text": "HIS KILL KIT",
+      "at": 4.18,
+      "color": "gold",
+      "size": 130
+     }
+    ],
+    "ar": "على السطح: سكين… حقنة… وباقي أدواته"
+   },
+   {
+    "type": "cta",
+    "from": 23.04,
+    "to": 26.8,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.4,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.7,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.02,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.34,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.6,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 6.9,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 7.12,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 8.34,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 9.88,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.68,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 12.0,
+    "volume": 0.25
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.8,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 14.5,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.46,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 18.4,
+    "volume": 0.3
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.26,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 20.3,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.04,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.7,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.98,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.06,
+    "volume": 0.5
+   }
+  ]
+ }
+}

@@ -1,0 +1,509 @@
+{
+ "manual": true,
+ "episode": 102,
+ "kind": "money",
+ "topic": "Free garage + free car from Boobie's apartment: laptop in the bedroom, password Muffins-Queen-15, WhatUp chat from Unknown leads to a locked garage next to Auntie's Place in La Perle, keypad code 92665 unlocks Vanessa's Growler",
+ "title": {
+  "en": "GTA 6 has a FREE garage AND a free car 🔑 (secret code)",
+  "ar": "كراج وسيارة مجانية في GTA 6 🔑"
+ },
+ "summary": "Rockstar hid a free garage and a free car in GTA 6. In Boobie's apartment, open the bedroom laptop: the password is Muffins-Queen-15. Read the WhatUp chat from Unknown, go to the locked garage next to Auntie's Place in La Perle and enter 92665: Vanessa's Growler is yours.",
+ "summary_ar": "روكستار خبّت كراج وسيارة مجانية في GTA 6. في شقة بوبي افتح لابتوب غرفة النوم، الباسوورد Muffins-Queen-15. اقرأ رسالة Unknown في WhatUp، وروح للكراج المقفل جنب Auntie's Place في La Perle واكتب 92665… وسيارة فانيسا Growler صارت لك.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Secrets",
+  "GTA6Tips",
+  "GTA6Codes",
+  "GTAVI",
+  "ViceCity",
+  "GTA6Guide",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 9,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.9
+ },
+ "sources": [
+  "https://gamerant.com/gta-6-apartment-laptop-password-lapere-garage-growler-location/",
+  "https://showgamer.com/en/guides/8111-gta-6-parol-ot-noutbuka-bubi-i-kod-garazha-s-besplatnoy-growler",
+  "https://game8.co/games/GTA-6/archives/638887",
+  "https://game8.co/games/GTA-6/archives/638531",
+  "https://gamerhour.net/locations/gta-6-aunties-garage-in-la-perle-location-and-garage-code-get-venessas-growler/",
+  "https://outputlag.com/guides/gta-6-safe-garage-codes/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/03/clip_01M7R4ZW8RV8VTVEDCFHCQFCD3/playlist.m3u8",
+     "channel": "vajs",
+     "start": 6.0,
+     "dur": 4.4,
+     "x": 700
+    }
+   ]
+  },
+  "bedroom": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/03/clip_01M7R4ZW8RV8VTVEDCFHCQFCD3/playlist.m3u8",
+     "channel": "vajs",
+     "start": 63.8,
+     "dur": 3.5,
+     "x": 1000
+    }
+   ]
+  },
+  "hall": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/03/clip_01M7R4ZW8RV8VTVEDCFHCQFCD3/playlist.m3u8",
+     "channel": "vajs",
+     "start": 47.5,
+     "dur": 5.0,
+     "x": 900
+    }
+   ]
+  },
+  "door": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 2.0,
+     "dur": 3.0,
+     "x": 700
+    }
+   ]
+  },
+  "street": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 15.0,
+     "dur": 4.4,
+     "x": 900
+    }
+   ]
+  },
+  "porch": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 19.0,
+     "dur": 2.8,
+     "x": 700
+    }
+   ]
+  },
+  "drive": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 21.0,
+     "dur": 2.1,
+     "x": 1000
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 4,
+     "dur": 3.9,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 108,
+  "seed": 37,
+  "drop": 4.3,
+  "break": 19.92,
+  "back": 22.62,
+  "outro": 24.62
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 28.4,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.3,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "ROCKSTAR HID A",
+    "title": [
+     "FREE",
+     "GARAGE"
+    ],
+    "color": "gold",
+    "tag": "…and a free car.",
+    "tagAt": 2.68,
+    "ar": "كراج مجاني وسيارة مجانية مخفية في GTA 6"
+   },
+   {
+    "type": "scan",
+    "from": 4.3,
+    "to": 7.72,
+    "broll": {
+     "src": "bedroom",
+     "grade": "night",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "THE APARTMENT",
+    "target": {
+     "x": 540,
+     "y": 900,
+     "w": 800,
+     "h": 560
+    },
+    "checks": [
+     {
+      "text": "BOOBIE'S APARTMENT",
+      "at": 0.2
+     },
+     {
+      "text": "THE LAPTOP",
+      "at": 1.9
+     },
+     {
+      "text": "IN THE BEDROOM",
+      "at": 2.66
+     }
+    ],
+    "hud": "● SEARCHING THE ROOM…",
+    "ar": "في شقة بوبي… افتح اللابتوب اللي في غرفة النوم"
+   },
+   {
+    "type": "code",
+    "from": 7.72,
+    "to": 12.62,
+    "broll": {
+     "src": "hall",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 6
+    },
+    "step": "02",
+    "label": "THE PASSWORD",
+    "device": "laptop",
+    "prompt": "PASSWORD",
+    "code": "MUFFINS-QUEEN-15",
+    "typeAt": 3.06,
+    "typeEnd": 4.4,
+    "doneAt": 4.62,
+    "done": "ACCESS GRANTED",
+    "note": "THE CLUES ARE ALL AROUND THE ROOM",
+    "ar": "الباسوورد: Muffins-Queen-15"
+   },
+   {
+    "type": "chat",
+    "from": 12.62,
+    "to": 15.58,
+    "broll": {
+     "src": "door",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 5
+    },
+    "step": "03",
+    "label": "READ THE CHAT",
+    "app": "WhatUp",
+    "contact": "Unknown",
+    "messages": [
+     {
+      "text": "A GARAGE IN LA PERLE",
+      "icon": "pin",
+      "at": 1.54
+     },
+     {
+      "text": "ITS DOOR CODE",
+      "icon": "key",
+      "at": 2.02
+     }
+    ],
+    "ar": "افتح WhatUp واقرأ الرسالة من Unknown"
+   },
+   {
+    "type": "location",
+    "from": 15.58,
+    "to": 19.92,
+    "broll": {
+     "src": "street",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "04",
+    "label": "THE GARAGE",
+    "place": "LA PERLE",
+    "target": "AUNTIE'S PLACE",
+    "direction": "GARAGE",
+    "region": "LOCKED GARAGE · NEXT DOOR",
+    "ar": "توديك لكراج مقفل في La Perle"
+   },
+   {
+    "type": "code",
+    "from": 19.92,
+    "to": 22.62,
+    "broll": {
+     "src": "porch",
+     "grade": "cold",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "step": "05",
+    "label": "ENTER THE CODE",
+    "device": "keypad",
+    "prompt": "",
+    "code": "92665",
+    "typeAt": 0.34,
+    "typeEnd": 1.75,
+    "doneAt": 2.0,
+    "done": "UNLOCKED",
+    "ar": "اكتب الكود 92665…"
+   },
+   {
+    "type": "reward",
+    "from": 22.62,
+    "to": 24.62,
+    "broll": {
+     "src": "drive",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "rewardAt": 0.05,
+    "label": "FREE CAR + FREE GARAGE",
+    "name": "Vanessa's Growler",
+    "tier": "STANDOUT CAR · FREE",
+    "ar": "وسيارة فانيسا Growler صارت لك!"
+   },
+   {
+    "type": "cta",
+    "from": 24.62,
+    "to": 28.4,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "A NEW MONEY FILE SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.8,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.62,
+    "volume": 0.45
+   },
+   {
+    "src": "coins.wav",
+    "at": 3.3,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.24,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 4.5,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 4.5,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 6.2,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 6.96,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.65,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.78,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.12,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.46,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.8,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.12,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 12.34,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.55,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 14.16,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 14.64,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.5,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 17.8,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.85,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 20.26,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 20.69,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 21.02,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 21.34,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 21.67,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.92,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 21.94,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.62,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 22.9,
+    "volume": 0.6
+   },
+   {
+    "src": "cash.wav",
+    "at": 23.0,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.55,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.64,
+    "volume": 0.5
+   }
+  ]
+ }
+}
