@@ -700,7 +700,8 @@ def cmd_channels(args: argparse.Namespace) -> int:
         log.error("BUFFER_API_KEY is not set (add it as a repository secret)")
         return 2
     try:
-        channels = Buffer(key, "").channels()
+        client = Buffer(key, "")
+        channels = client.channels()
     except BufferError as exc:
         log.error("%s", exc)
         return 1
@@ -719,8 +720,15 @@ def cmd_channels(args: argparse.Namespace) -> int:
     if target and target.get("isDisconnected"):
         log.error("the configured channel is disconnected in Buffer; reconnect it there")
         return 1
+    left = client.remaining
+    allowance = []
+    for window, label in ((900, "the next 15 minutes"), (86400, "today (rolling 24 hours)"), (2592000, "this month (rolling 30 days)")):
+        if window in left:
+            allowance.append(f"- {left[window]} API requests left for {label}")
     if target:
-        _summary([f"Buffer is connected: the key works and can post to \"{target['name']}\"."])
+        _summary([f"Buffer is connected: the key works and can post to \"{target['name']}\".", *allowance])
+    elif allowance:
+        _summary(allowance)
     return 0
 
 
