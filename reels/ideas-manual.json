@@ -146,5 +146,146 @@
     "why_not": "busted rules disputed; overlaps episode 002's money warning"
    }
   ]
+ },
+ {
+  "date": "2026-11-21",
+  "wake_up": "20:23 UTC (m106–m109)",
+  "ideas": [
+   {
+    "idea": "Steal a Rhino tank and a P-996 Lazer at Mile Zero Air Station (stunt jump over the fence, jets north, tanks south, Challenging Tank trophy)",
+    "format": "SECRET FILE",
+    "demand": 9,
+    "payoff": 9,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 8,
+    "score": 8.2,
+    "chosen": "m106-steal-tank-jet",
+    "sources": [
+     "https://www.militarytimes.com/off-duty/movies-video-games/2026/11/19/how-to-steal-a-fighter-jet-and-battle-tank-in-gta-6/",
+     "https://www.destructoid.com/how-to-steal-a-fighter-jet-from-the-military-base-in-gta-6/",
+     "https://www.bgr.com/2321153/gta-6-how-to-get-into-military-base-mile-zero-guide/",
+     "https://outputlag.com/guides/gta-6-military-base-tank-jet/",
+     "https://www.theclick.gg/gta-6-military-tank-location/",
+     "https://www.gadgetbridge.com/how-to-enter-the-mile-zero-air-station-in-gta-6-find-this-military-base-location-to-get-jets-tanks-and-helicopters/",
+     "https://www.trueachievements.com/a677817/challenging-tank-achievement",
+     "https://www.playstationinfo.de/en/2026/11/19/stealing-a-gta-6-tank-rhino-location-military-base-and-trophy/"
+    ]
+   },
+   {
+    "idea": "NEWS Nov 20: Take-Two says GTA VI made $3.79B in its first 24 hours, the biggest entertainment launch ever (GTA V: about $800M)",
+    "format": "GTA 6 NEWS",
+    "demand": 9,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 9,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.7,
+    "chosen": "m107-record-launch",
+    "sources": [
+     "https://www.foxbusiness.com/entertainment/grand-theft-auto-vi-shatters-entertainment-records-staggering-3-79b-debut",
+     "https://finance.yahoo.com/media-advertising/articles/two-set-shatter-sales-records-162847652.html",
+     "https://www.storyboard18.com/amp/gaming-news/gta-vi-records-3-79-billion-in-first-day-sales-becomes-biggest-entertainment-launch-115221.htm",
+     "https://www.thenews.com.pk/latest/1424506-gta-6-launch-sales-hit-record-379-billion-in-24-hours-smashing-all-time-entertainment-benchmarks",
+     "https://www.nacionale.com/en/articles/when-will-rockstar-reveal-gta-6-sales-official-numbers-records-to-beat-gta-5",
+     "https://www.sec.gov/Archives/edgar/data/0000946581/000110465913070819/a13-20938_1ex99d1.htm"
+    ]
+   },
+   {
+    "idea": "No mission replay + no saving mid-mission: 15 manual slots + 1 autosave, save before every chapter finale",
+    "format": "DON'T MISS",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.4,
+    "chosen": "m108-no-mission-replay",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-is-there-mission-replay/",
+     "https://www.gamesradar.com/games/grand-theft-auto/gta-6-replay-missions-how-to/",
+     "https://www.engadget.com/2321965/you-wont-find-this-fan-favorite-feature-in-gta-6/",
+     "https://metaforge.app/gta-6/can-you-replay-missions-gta-6",
+     "https://www.talkesport.com/gta-6/gta-6-replay-missions-manual-save/",
+     "https://gta-zone.com/news/how-to-save-in-gta-6/",
+     "https://www.gtabites.com/news/how-to-save-gta-6",
+     "https://www.ibtimes.com.au/gta-6-how-save-game-manual-autosave-1878933",
+     "https://www.dexerto.com/wikis/gta-6/how-to-save/"
+    ]
+   },
+   {
+    "idea": "Cops are off the minimap; Focus (L3 + R3) reveals nearby officers through walls; break line of sight, then slip away",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 7,
+    "score": 7.3,
+    "chosen": "m109-focus-cops",
+    "sources": [
+     "https://www.player.one/gta-6-removing-police-markers-minimap-during-chases-164450",
+     "https://vgtimes.com/gaming-news/167694-rockstar-explains-gta-6s-tougher-police-chases.html",
+     "https://games.gg/news/gta-6-police-smarter-memory-radar/",
+     "https://www.gtabase.com/articles/gta-6/gta-6-focus-ability-explained-how-it-works-what-it-does",
+     "https://gamerant.com/gta-6-focus-unlock-upgrade-guide/",
+     "https://mobalytics.gg/gamebase/guides/grand-theft-auto-6-how-to-lose-cops",
+     "https://www.gtaboom.com/how-to-lose-the-cops-in-gta-6-every-way-to-shake-the-police-4ff9",
+     "https://gamerant.com/gta-6-features-police-wanted-heat-systems-how-work/"
+    ]
+   },
+   {
+    "idea": "Free legendary guns in the Permit Keys (Assassin Nipper .38 in a spy-boat hatch, Smuggler Gorse 425 by a wrecked boat)",
+    "format": "SECRET FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 6,
+    "score": 6.8,
+    "why_not": "guides still disagree on which island the shotgun is on"
+   },
+   {
+    "idea": "Fair Game trophy: the Snapmatic Buck for Bret (Chapter 2 hunting)",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 6,
+    "score": 6.7,
+    "why_not": "the buck's location directions are inconsistent between guides"
+   },
+   {
+    "idea": "GTA 6 leads The Game Awards 2026 with 8 nominations",
+    "format": "GTA 6 NEWS",
+    "demand": 7,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 8,
+    "score": 6.0,
+    "why_not": "announced before launch, older than 48 hours"
+   },
+   {
+    "idea": "Tommy Vercetti / Vice City references (Ocean View Hotel, Vercetti Estate revolvers)",
+    "format": "EASTER EGG",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 4,
+    "confidence": 5,
+    "score": 5.8,
+    "why_not": "mostly promo material and fan theories; Rockstar has not confirmed the in-game references"
+   }
+  ]
  }
 ]

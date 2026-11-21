@@ -1,0 +1,374 @@
+{
+ "manual": true,
+ "episode": 108,
+ "kind": "warning",
+ "topic": "GTA 6 has no mission replay (unlike GTA 5) and you can't save mid-mission; there are 15 manual save slots plus one autosave, so save to a fresh slot before every chapter finale (and at the start and end of each chapter)",
+ "title": {
+  "en": "GTA 6 has NO mission replay ⚠️ (save before it's too late)",
+  "ar": "GTA 6 ما فيها إعادة للمهمات ⚠️"
+ },
+ "summary": "GTA 6 has no mission replay: unlike GTA 5, once a story mission is done you can't play it again, and you can't save in the middle of one. You get 15 manual save slots plus one autosave, so save to a fresh slot before every chapter finale, and at the start and end of each chapter.",
+ "summary_ar": "GTA 6 ما فيها إعادة للمهمات: عكس الجزء الخامس، المهمة إذا خلصت ما تقدر تلعبها مرة ثانية، وما تقدر تحفظ في نصها. عندك 15 خانة حفظ يدوي وحفظ تلقائي واحد، فاحفظ في خانة جديدة قبل كل نهاية فصل، وفي بداية ونهاية كل فصل.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Warning",
+  "GTA6Guide",
+  "GTAVI",
+  "GTA6Missions",
+  "Leonida",
+  "ViceCity",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.4
+ },
+ "sources": [
+  "https://www.powerpyx.com/gta-6-is-there-mission-replay/",
+  "https://www.gamesradar.com/games/grand-theft-auto/gta-6-replay-missions-how-to/",
+  "https://www.engadget.com/2321965/you-wont-find-this-fan-favorite-feature-in-gta-6/",
+  "https://metaforge.app/gta-6/can-you-replay-missions-gta-6",
+  "https://www.talkesport.com/gta-6/gta-6-replay-missions-manual-save/",
+  "https://gta-zone.com/news/how-to-save-in-gta-6/",
+  "https://www.gtabites.com/news/how-to-save-gta-6",
+  "https://www.ibtimes.com.au/gta-6-how-save-game-manual-autosave-1878933",
+  "https://www.dexerto.com/wikis/gta-6/how-to-save/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 24.4,
+     "dur": 4.6,
+     "x": 700
+    }
+   ]
+  },
+  "menu": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7R0QK1J4DQEYC9MC3GJW9M8/playlist.m3u8",
+     "channel": "djmariio",
+     "start": 64.0,
+     "dur": 7.4,
+     "x": 1250
+    }
+   ]
+  },
+  "saves": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 18.0,
+     "dur": 7.7,
+     "x": 1200
+    }
+   ]
+  },
+  "house": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 2.0,
+     "dur": 4.4,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 11,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 96,
+  "seed": 59,
+  "drop": 4.78,
+  "break": 19.7,
+  "back": 20.25,
+  "outro": 24.06
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "duration": 27.8,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.78,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "GTA 6 HAS NO",
+    "title": [
+     "MISSION",
+     "REPLAY"
+    ],
+    "color": "red",
+    "tag": "…so save first.",
+    "tagAt": 2.52,
+    "ar": "ما فيه إعادة للمهمات… احفظ قبل لا يفوت الأوان"
+   },
+   {
+    "type": "list",
+    "from": 4.78,
+    "to": 12.08,
+    "broll": {
+     "src": "menu",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 9
+    },
+    "chip": "WARNING",
+    "label": "STORY MISSIONS",
+    "cardAt": 0.2,
+    "arAt": 1.0,
+    "items": [
+     {
+      "text": "GTA 5: REPLAY",
+      "status": "YES",
+      "ok": true,
+      "at": 0.3,
+      "icon": "save"
+     },
+     {
+      "text": "GTA 6: REPLAY",
+      "status": "NO",
+      "ok": false,
+      "at": 3.68,
+      "icon": "save"
+     },
+     {
+      "text": "SAVE MID-MISSION",
+      "status": "NO",
+      "ok": false,
+      "at": 5.26,
+      "icon": "save"
+     }
+    ],
+    "ar": "عكس الجزء الخامس… ما تقدر تعيد المهمة ولا تحفظ في نصها"
+   },
+   {
+    "type": "saves",
+    "from": 12.08,
+    "to": 19.7,
+    "broll": {
+     "src": "saves",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 9
+    },
+    "step": "01",
+    "label": "SAVE GAME",
+    "title": "SAVE GAME",
+    "slots": 15,
+    "slot": 4,
+    "countAt": 0.32,
+    "saveAt": 5.9,
+    "usedText": "SAVED",
+    "savedText": "BEFORE FINALE",
+    "autoText": "only one slot",
+    "ar": "15 خانة حفظ يدوي + حفظ تلقائي واحد… احفظ قبل كل نهاية فصل"
+   },
+   {
+    "type": "reveal",
+    "from": 19.7,
+    "to": 24.06,
+    "captions": false,
+    "broll": {
+     "src": "house",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3,
+     "zoom": [
+      1.06,
+      1.18
+     ]
+    },
+    "pre": "DO IT…",
+    "slamAt": 0.55,
+    "color": "green",
+    "lines": [
+     {
+      "text": "START",
+      "at": 0.6,
+      "size": 170
+     },
+     {
+      "text": "+ END",
+      "at": 1.14,
+      "size": 170
+     },
+     {
+      "text": "OF EVERY CHAPTER",
+      "at": 1.7,
+      "size": 90
+     },
+     {
+      "text": "ALWAYS GO BACK",
+      "at": 2.94,
+      "color": "green",
+      "size": 120
+     }
+    ],
+    "ar": "احفظ في بداية ونهاية كل فصل… وتقدر ترجع دايم"
+   },
+   {
+    "type": "cta",
+    "from": 24.06,
+    "to": 27.8,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE DON'T-MISS TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 1.4,
+    "volume": 0.45
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.7,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.46,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.72,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.1,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 8.46,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 10.04,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.0,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.4,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.8,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.2,
+    "volume": 0.35
+   },
+   {
+    "src": "ping.wav",
+    "at": 15.02,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 17.98,
+    "volume": 0.6
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.99,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.64,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.3,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.84,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 22.64,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.98,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.08,
+    "volume": 0.5
+   }
+  ]
+ }
+}

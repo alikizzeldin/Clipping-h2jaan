@@ -1,0 +1,438 @@
+{
+ "manual": true,
+ "episode": 109,
+ "kind": "hidden-feature",
+ "topic": "Police are off the GTA 6 minimap (Rockstar); click L3 + R3 for Focus, which reveals nearby officers even through walls; break line of sight (wall, tunnel, corner), then use Focus to find the gap and slip away",
+ "title": {
+  "en": "Cops are GONE from your GTA 6 radar 🚔 (here's how to see them)",
+  "ar": "الشرطة اختفت من رادار GTA 6 🚔"
+ },
+ "summary": "Rockstar took police off the GTA 6 minimap, so in a chase you're flying blind, unless you click both sticks (L3 + R3) for Focus. It reveals nearby officers, even through walls. Break line of sight first (a wall, a tunnel or a corner), then use Focus to spot the gap and slip away.",
+ "summary_ar": "روكستار شالت الشرطة من الخريطة الصغيرة في GTA 6، فأنت في المطاردة تمشي أعمى… إلا إذا ضغطت العصاتين L3 + R3 وشغلت Focus: يكشف الشرطة القريبة حتى ورا الجدران. اكسر خط النظر أول، وبعدها Focus عشان تلقى الفتحة وتهرب.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6HiddenFeatures",
+  "GTA6Police",
+  "GTA6Focus",
+  "GTAVI",
+  "GTA6Guide",
+  "ViceCity",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 5,
+  "confidence": 7,
+  "score": 7.3
+ },
+ "sources": [
+  "https://www.player.one/gta-6-removing-police-markers-minimap-during-chases-164450",
+  "https://vgtimes.com/gaming-news/167694-rockstar-explains-gta-6s-tougher-police-chases.html",
+  "https://games.gg/news/gta-6-police-smarter-memory-radar/",
+  "https://www.gtabase.com/articles/gta-6/gta-6-focus-ability-explained-how-it-works-what-it-does",
+  "https://gamerant.com/gta-6-focus-unlock-upgrade-guide/",
+  "https://mobalytics.gg/gamebase/guides/grand-theft-auto-6-how-to-lose-cops",
+  "https://www.gtaboom.com/how-to-lose-the-cops-in-gta-6-every-way-to-shake-the-police-4ff9",
+  "https://gamerant.com/gta-6-features-police-wanted-heat-systems-how-work/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 20.5,
+     "dur": 5.2,
+     "x": 600
+    }
+   ]
+  },
+  "heli": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 0.0,
+     "dur": 4.6,
+     "x": 700
+    }
+   ]
+  },
+  "sticks": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 1.0,
+     "dur": 4.8,
+     "x": 700
+    }
+   ]
+  },
+  "raid": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 5.0,
+     "dur": 3.5,
+     "x": 700
+    }
+   ]
+  },
+  "hide": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 24.0,
+     "dur": 5.3,
+     "x": 900
+    }
+   ]
+  },
+  "slip": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 13.5,
+     "dur": 2.9,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 14,
+     "dur": 3.9,
+     "x": 650
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 120,
+  "seed": 61,
+  "drop": 5.1,
+  "break": 22.4,
+  "back": 22.84,
+  "outro": 25.62
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "duration": 29.4,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 5.1,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "COPS GONE FROM",
+    "title": [
+     "YOUR",
+     "RADAR"
+    ],
+    "color": "red",
+    "tag": "…here's the trick.",
+    "tagAt": 2.88,
+    "ar": "الشرطة اختفت من الرادار… بس فيه طريقة تشوفهم"
+   },
+   {
+    "type": "radar",
+    "from": 5.1,
+    "to": 9.6,
+    "broll": {
+     "src": "heli",
+     "grade": "cold",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "step": "01",
+    "label": "THE MINIMAP",
+    "hideAt": 0.88,
+    "introText": "POLICE ON THE MAP?",
+    "hiddenText": "NOT IN GTA 6",
+    "foundText": "",
+    "ar": "روكستار شالت الشرطة من الخريطة… وانت في المطاردة تمشي أعمى"
+   },
+   {
+    "type": "control",
+    "from": 9.6,
+    "to": 14.28,
+    "broll": {
+     "src": "sticks",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "rank": "",
+    "label": "",
+    "title": "That's Focus",
+    "button": "L3R3",
+    "taps": "hold",
+    "pressAt": 1.86,
+    "chip": "XBOX: LS + RS",
+    "ar": "اضغط العصاتين مع بعض L3 + R3… هذا هو الـFocus"
+   },
+   {
+    "type": "radar",
+    "from": 14.28,
+    "to": 17.66,
+    "broll": {
+     "src": "raid",
+     "grade": "cold",
+     "dim": 0.3,
+     "blur": 2,
+     "zoom": [
+      1.06,
+      1.14
+     ]
+    },
+    "step": "02",
+    "label": "FOCUS",
+    "hideAt": 0,
+    "pulseAt": 0.12,
+    "introText": "",
+    "hiddenText": "",
+    "foundText": "EVEN THROUGH WALLS",
+    "ar": "يكشف الشرطة القريبة… حتى ورا الجدران"
+   },
+   {
+    "type": "scan",
+    "from": 17.66,
+    "to": 22.84,
+    "broll": {
+     "src": "hide",
+     "grade": "warm",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "03",
+    "label": "LOSE THEM",
+    "target": {
+     "x": 540,
+     "y": 860,
+     "w": 760,
+     "h": 600
+    },
+    "checks": [
+     {
+      "text": "BREAK LINE OF SIGHT",
+      "at": 0.3
+     },
+     {
+      "text": "WALL · TUNNEL · CORNER",
+      "at": 2.02
+     }
+    ],
+    "hud": "● HIDING FROM THE COPS…",
+    "ar": "اكسر خط النظر أول: ورا جدار، داخل نفق أو عند زاوية"
+   },
+   {
+    "type": "reveal",
+    "from": 22.84,
+    "to": 25.62,
+    "captions": false,
+    "broll": {
+     "src": "slip",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 2,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "THEN…",
+    "slamAt": 0.36,
+    "color": "pink",
+    "lines": [
+     {
+      "text": "FOCUS",
+      "at": 0.36,
+      "color": "pink",
+      "size": 220
+     },
+     {
+      "text": "FIND THE GAP",
+      "at": 0.9,
+      "size": 140
+     },
+     {
+      "text": "SLIP AWAY",
+      "at": 1.78,
+      "color": "green",
+      "size": 150
+     }
+    ],
+    "ar": "وبعدها Focus… لقى الفتحة واهرب"
+   },
+   {
+    "type": "cta",
+    "from": 25.62,
+    "to": 29.4,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE HIDDEN FEATURES SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.5,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.98,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.02,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.82,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.04,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 5.98,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 6.0,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.54,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.46,
+    "volume": 0.6
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.02,
+    "volume": 0.6
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.4,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.22,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 14.4,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.2,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.6,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.96,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 19.68,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.78,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.2,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 23.22,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.62,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.56,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.66,
+    "volume": 0.5
+   }
+  ]
+ }
+}

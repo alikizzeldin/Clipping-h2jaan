@@ -123,10 +123,10 @@ export type CashScene = Base & {
 
 export type ControlScene = Base & {
   type: 'control';
-  rank: string; // "4" … "1": a countdown, best last
+  rank: string; // "4" … "1": a countdown, best last ("" hides the rank)
   label: string; // e.g. "HIDDEN CONTROL"
   title: string;
-  button: 'TRIANGLE' | 'R3' | 'DPAD_LEFT';
+  button: 'TRIANGLE' | 'R3' | 'DPAD_LEFT' | 'L3R3'; // L3R3: both sticks clicked together
   taps: 1 | 2 | 'hold';
   pressAt: number; // seconds into the scene, on the word that names the input
   chip?: string; // e.g. "XBOX: Y"
@@ -303,12 +303,58 @@ export type AltScene = Base & {
   ar?: string;
 };
 
+export type CompareScene = Base & {
+  type: 'compare';
+  step: string;
+  label: string;
+  bars: {label: string; sub?: string; value: number; display: string; at: number; color?: string}[];
+  result?: {text: string; at: number};
+  ar?: string;
+};
+
+export type SavesScene = Base & {
+  type: 'saves';
+  step: string;
+  label: string;
+  title: string; // "SAVE GAME"
+  slots: number; // 15
+  slot: number; // the slot that gets saved (0-based)
+  countAt: number;
+  saveAt: number;
+  usedText: string; // label on the slots before it, e.g. "CHAPTER 1"
+  savedText: string; // e.g. "BEFORE THE FINALE"
+  autoText: string;
+  ar?: string;
+};
+
+export type HeadlineScene = Base & {
+  type: 'headline';
+  tag: string; // "BREAKING NEWS"
+  source: string;
+  date: string;
+  headline: string;
+  typeAt: number;
+  ar?: string;
+};
+
+export type RadarScene = Base & {
+  type: 'radar';
+  step: string;
+  label: string;
+  hideAt: number; // the police blips vanish
+  pulseAt?: number; // a Focus pulse finds them again
+  introText: string;
+  hiddenText: string;
+  foundText: string;
+  ar?: string;
+};
+
 export type Scene =
   | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
-  | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene;
+  | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

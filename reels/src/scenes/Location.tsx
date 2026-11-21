@@ -77,8 +77,8 @@ export const Location: React.FC<{s: LocationScene}> = ({s}) => {
             <text x={200} y={49} textAnchor="middle" fill="#fff" fontFamily={F.brand} fontWeight={800} fontSize={30}>{s.target}</text>
           </g>
           <g opacity={ease(frame, 30, 44)}>
-            <text x={560} y={690} fill={C.green} fontFamily={F.display} fontSize={88}>{s.direction}</text>
-            <path d={`M${560 + s.direction.length * 46} 660 l 90 0 m -30 -26 l 30 26 l -30 26`} stroke={C.green} strokeWidth={9} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+            <text x={560} y={690} fill={C.green} fontFamily={F.display} fontSize={s.direction.length > 6 ? 64 : 88}>{s.direction}</text>
+            <path d={`M${560 + s.direction.length * (s.direction.length > 6 ? 34 : 46)} ${s.direction.length > 6 ? 668 : 660} l 90 0 m -30 -26 l 30 26 l -30 26`} stroke={C.green} strokeWidth={9} fill="none" strokeLinecap="round" strokeLinejoin="round" />
           </g>
           {s.region ? (
             <text x={40} y={720} fill="rgba(255,255,255,0.32)" fontFamily={F.mono} fontWeight={700} fontSize={26} letterSpacing={8}>{s.region}</text>

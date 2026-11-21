@@ -1,0 +1,464 @@
+{
+ "manual": true,
+ "episode": 106,
+ "kind": "secret",
+ "topic": "Steal a Rhino tank and a P-996 Lazer fighter jet at Mile Zero Air Station (military base at Leonida's southwest edge, open from Chapter 1): stunt jump on the southeast side over the fence, jets in the north, tanks in the south; drive the tank and fire it for the Challenging Tank trophy",
+ "title": {
+  "en": "You can steal a TANK in GTA 6 🪖 (and a fighter jet)",
+  "ar": "تقدر تسرق دبابة في GTA 6 🪖"
+ },
+ "summary": "GTA 6 lets you steal a tank and a fighter jet. Go to Mile Zero Air Station, the military base at Leonida's southwest edge (open from Chapter 1). Skip the gate: the southeast stunt jump throws you over the fence. Jets are in the north, Rhino tanks in the south. Drive a Rhino and fire the cannon for the Challenging Tank trophy.",
+ "summary_ar": "GTA 6 تخليك تسرق دبابة وطيارة مقاتلة. روح قاعدة Mile Zero الجوية جنوب غرب ليونيدا (مفتوحة من الفصل الأول). القفزة من الجهة الجنوبية الشرقية ترميك فوق السياج. الطيارات في الشمال والدبابات في الجنوب. سوق الدبابة واضرب بالمدفع وتطلع لك كأس Challenging Tank.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "GTA6Tank",
+  "GTA6Trophies",
+  "MileZero",
+  "GTAVI",
+  "Leonida",
+  "GTA6Tips",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 9,
+  "retention": 8,
+  "fresh": 7,
+  "visual": 6,
+  "confidence": 8,
+  "score": 8.2
+ },
+ "sources": [
+  "https://www.militarytimes.com/off-duty/movies-video-games/2026/11/19/how-to-steal-a-fighter-jet-and-battle-tank-in-gta-6/",
+  "https://www.destructoid.com/how-to-steal-a-fighter-jet-from-the-military-base-in-gta-6/",
+  "https://www.bgr.com/2321153/gta-6-how-to-get-into-military-base-mile-zero-guide/",
+  "https://outputlag.com/guides/gta-6-military-base-tank-jet/",
+  "https://www.theclick.gg/gta-6-military-tank-location/",
+  "https://www.gadgetbridge.com/how-to-enter-the-mile-zero-air-station-in-gta-6-find-this-military-base-location-to-get-jets-tanks-and-helicopters/",
+  "https://www.trueachievements.com/a677817/challenging-tank-achievement",
+  "https://www.playstationinfo.de/en/2026/11/19/stealing-a-gta-6-tank-rhino-location-military-base-and-trophy/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.5,
+     "dur": 3.8,
+     "x": 600
+    }
+   ]
+  },
+  "map": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 4.5,
+     "dur": 5.3,
+     "x": 700
+    }
+   ]
+  },
+  "open": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 14.0,
+     "dur": 2.0,
+     "x": 650
+    }
+   ]
+  },
+  "jump": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 3.5,
+     "dur": 5.2,
+     "x": 700
+    }
+   ]
+  },
+  "base": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 22.0,
+     "dur": 4.0,
+     "x": 700
+    }
+   ]
+  },
+  "drive": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 9.5,
+     "dur": 3.0,
+     "x": 650
+    }
+   ]
+  },
+  "trophy": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 9.0,
+     "dur": 3.1,
+     "x": 700
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 5.0,
+     "dur": 3.9,
+     "x": 900
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 104,
+  "seed": 47,
+  "drop": 3.68,
+  "break": 19.9,
+  "back": 21.7,
+  "outro": 25.78
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "duration": 29.6,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.68,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "YOU CAN STEAL A",
+    "title": [
+     "TANK"
+    ],
+    "color": "green",
+    "tag": "…and a fighter jet.",
+    "tagAt": 2.08,
+    "ar": "تقدر تسرق دبابة… وطيارة مقاتلة"
+   },
+   {
+    "type": "location",
+    "from": 3.68,
+    "to": 9.0,
+    "broll": {
+     "src": "map",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "LOCATION",
+    "place": "VICE CITY",
+    "target": "MILE ZERO",
+    "direction": "SOUTHWEST",
+    "region": "MILE ZERO AIR STATION · MILITARY BASE",
+    "ar": "قاعدة Mile Zero الجوية… جنوب غرب ليونيدا"
+   },
+   {
+    "type": "reveal",
+    "from": 9.0,
+    "to": 10.86,
+    "captions": false,
+    "broll": {
+     "src": "open",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 2
+    },
+    "pre": "IT'S OPEN FROM…",
+    "slamAt": 0.98,
+    "color": "green",
+    "lines": [
+     {
+      "text": "CHAPTER 1",
+      "at": 1.0,
+      "color": "green",
+      "size": 210
+     }
+    ],
+    "ar": "مفتوحة من الفصل الأول"
+   },
+   {
+    "type": "trigger",
+    "from": 10.86,
+    "to": 15.98,
+    "broll": {
+     "src": "jump",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.12
+     ]
+    },
+    "step": "02",
+    "label": "SKIP THE GATE",
+    "title": "STUNT JUMP",
+    "sub": "southeast side",
+    "target": {
+     "x": 540,
+     "y": 1000,
+     "w": 460,
+     "h": 380
+    },
+    "tagText": "OVER THE FENCE",
+    "contact": "STUNT JUMP",
+    "ar": "لا تدخل من البوابة: القفزة الجنوبية الشرقية ترميك فوق السياج"
+   },
+   {
+    "type": "scan",
+    "from": 15.98,
+    "to": 19.9,
+    "broll": {
+     "src": "base",
+     "grade": "warm",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "03",
+    "label": "THE BASE",
+    "target": {
+     "x": 540,
+     "y": 860,
+     "w": 800,
+     "h": 600
+    },
+    "checks": [
+     {
+      "text": "NORTH: FIGHTER JETS",
+      "at": 0.3
+     },
+     {
+      "text": "SOUTH: RHINO TANKS",
+      "at": 2.18
+     }
+    ],
+    "hud": "● SCANNING THE BASE…",
+    "ar": "الطيارات المقاتلة في الشمال… والدبابات في الجنوب"
+   },
+   {
+    "type": "reveal",
+    "from": 19.9,
+    "to": 22.78,
+    "captions": false,
+    "broll": {
+     "src": "drive",
+     "grade": "cold",
+     "dim": 0.3,
+     "blur": 3,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "GRAB A RHINO…",
+    "slamAt": 1.2,
+    "color": "green",
+    "lines": [
+     {
+      "text": "DRIVE IT.",
+      "at": 1.2,
+      "size": 190
+     },
+     {
+      "text": "FIRE THE CANNON.",
+      "at": 1.8,
+      "color": "green",
+      "size": 120
+     }
+    ],
+    "ar": "خذ دبابة Rhino… سوقها واضرب بالمدفع"
+   },
+   {
+    "type": "reward",
+    "from": 22.78,
+    "to": 25.78,
+    "broll": {
+     "src": "trophy",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "later": "SECRET TROPHY",
+    "rewardAt": 1.66,
+    "label": "TROPHY UNLOCKED",
+    "name": "Challenging Tank",
+    "tier": "BRONZE",
+    "ar": "وتطلع لك كأس سرية!"
+   },
+   {
+    "type": "cta",
+    "from": 25.78,
+    "to": 29.6,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRET FILES SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.72,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.02,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.6,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.9,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.95,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 10.0,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.8,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 11.2,
+    "volume": 0.25
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.94,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.92,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 16.1,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.28,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.16,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.85,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.1,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 21.12,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.7,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.72,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 24.44,
+    "volume": 0.65
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.46,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.7,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.8,
+    "volume": 0.5
+   }
+  ]
+ }
+}

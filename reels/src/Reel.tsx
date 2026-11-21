@@ -23,6 +23,7 @@ import {Code} from './scenes/Code';
 import {Reveal} from './scenes/Reveal';
 import {Proof} from './scenes/Proof';
 import {Chat} from './scenes/Chat';
+import {Compare, Headline, Radar, Saves} from './scenes/Manual2';
 import {Alt, Boost, Chain, Consoles, FgApp} from './scenes/Fps';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
@@ -56,6 +57,10 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'reveal': return <Reveal s={s} />;
     case 'proof': return <Proof s={s} />;
     case 'chat': return <Chat s={s} />;
+    case 'compare': return <Compare s={s} />;
+    case 'saves': return <Saves s={s} />;
+    case 'radar': return <Radar s={s} />;
+    case 'headline': return <Headline s={s} />;
   }
 };
 

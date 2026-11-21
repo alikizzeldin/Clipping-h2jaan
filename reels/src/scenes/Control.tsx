@@ -28,6 +28,17 @@ const Button: React.FC<{kind: ControlScene['button']; pressed: number; size: num
           <text x={100} y={116} textAnchor="middle" fill="#fff" fontFamily={F.display} fontSize={48}>R3</text>
         </>
       ) : null}
+      {kind === 'L3R3' ? (
+        <>
+          {ring(C.pink)}
+          {[[-38, 'L3'], [38, 'R3']].map(([dx, label]) => (
+            <g key={label as string}>
+              <circle cx={100 + (dx as number)} cy={100} r={34} fill="rgba(255,46,136,0.15)" stroke={C.pink} strokeWidth={6} />
+              <text x={100 + (dx as number)} y={112} textAnchor="middle" fill="#fff" fontFamily={F.display} fontSize={32}>{label}</text>
+            </g>
+          ))}
+        </>
+      ) : null}
       {kind === 'DPAD_LEFT' ? (
         <>
           {ring(C.orange)}
@@ -102,6 +113,7 @@ export const Control: React.FC<{s: ControlScene}> = ({s}) => {
         <Background broll={s.broll} />
       </SceneIn>
       <Flash at={0} length={6} strength={0.35} />
+      {s.rank ? (
       <div style={{position: 'absolute', top: 270, left: 60, display: 'flex', alignItems: 'flex-end', gap: 18,
         transform: `scale(${interpolate(rank, [0, 1], [1.8, 1])})`, transformOrigin: 'left bottom', opacity: Math.min(1, rank * 2)}}>
         <div style={{fontFamily: F.display, fontSize: 200, lineHeight: 0.85, background: `linear-gradient(180deg, #fff, ${C.pink})`,
@@ -111,6 +123,7 @@ export const Control: React.FC<{s: ControlScene}> = ({s}) => {
         <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 26, letterSpacing: 5, color: '#fff', marginBottom: 18,
           background: 'rgba(0,0,0,0.55)', padding: '6px 12px', borderRadius: 6}}>{s.label}</div>
       </div>
+      ) : null}
       <div style={{position: 'absolute', top: 560, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center',
         opacity: Math.min(1, card * 1.5), transform: `scale(${0.7 + 0.3 * card})`}}>
         {s.flip ? <FlipCar flip={flip} /> : (

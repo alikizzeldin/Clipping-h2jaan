@@ -1,0 +1,428 @@
+{
+ "manual": true,
+ "episode": 107,
+ "kind": "news",
+ "topic": "News (Nov 20, 2026): Take-Two says GTA VI made $3.79 billion in its first 24 hours, the biggest entertainment launch ever; GTA V made about $800 million on day one in 2013 (nearly 5x)",
+ "title": {
+  "en": "BREAKING: GTA 6 just made HISTORY 💰 ($3.79 BILLION in 1 day)",
+  "ar": "عاجل: GTA 6 دخلت التاريخ 💰"
+ },
+ "summary": "On November 20, 2026, Take-Two said GTA 6 made $3.79 billion in its first 24 hours, which it calls the biggest entertainment launch ever, bigger than any movie, album or game. GTA 5 made about $800 million on its first day in 2013, so GTA 6 did nearly five times that in one day.",
+ "summary_ar": "في 20 نوفمبر 2026 قالت Take-Two إن GTA 6 جابت 3.79 مليار دولار في أول 24 ساعة، وتسميه أكبر إطلاق ترفيهي في التاريخ. الجزء الخامس جاب حوالي 800 مليون في يومه الأول سنة 2013، يعني السادس تقريبًا 5 أضعاف في يوم واحد.",
+ "keywords": [
+  "GTA6",
+  "GTA6News",
+  "GTAVI",
+  "RockstarGames",
+  "TakeTwo",
+  "GTA6Sales",
+  "GamingNews",
+  "Record",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 9,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.7
+ },
+ "sources": [
+  "https://www.foxbusiness.com/entertainment/grand-theft-auto-vi-shatters-entertainment-records-staggering-3-79b-debut",
+  "https://finance.yahoo.com/media-advertising/articles/two-set-shatter-sales-records-162847652.html",
+  "https://www.storyboard18.com/amp/gaming-news/gta-vi-records-3-79-billion-in-first-day-sales-becomes-biggest-entertainment-launch-115221.htm",
+  "https://www.thenews.com.pk/latest/1424506-gta-6-launch-sales-hit-record-379-billion-in-24-hours-smashing-all-time-entertainment-benchmarks",
+  "https://www.nacionale.com/en/articles/when-will-rockstar-reveal-gta-6-sales-official-numbers-records-to-beat-gta-5",
+  "https://www.sec.gov/Archives/edgar/data/0000946581/000110465913070819/a13-20938_1ex99d1.htm"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 9.0,
+     "dur": 5.4,
+     "x": 900
+    }
+   ]
+  },
+  "news": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 96.0,
+     "dur": 3.5,
+     "x": 660
+    }
+   ]
+  },
+  "money": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 5.0,
+     "dur": 4.7,
+     "x": 900
+    }
+   ]
+  },
+  "sky": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 16.5,
+     "dur": 5.9,
+     "x": 1000
+    }
+   ]
+  },
+  "city": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 99.5,
+     "dur": 3.9,
+     "x": 660
+    },
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 84.0,
+     "dur": 3.9,
+     "x": 660
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 20,
+     "dur": 3.9,
+     "x": 800
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 112,
+  "seed": 53,
+  "drop": 5.32,
+  "break": 13.34,
+  "back": 14.2,
+  "outro": 26.98
+ },
+ "reel": {
+  "series": "GTA 6 NEWS",
+  "duration": 30.8,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 5.32,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "BREAKING",
+    "kicker": "GTA 6 JUST MADE",
+    "title": [
+     "HISTORY"
+    ],
+    "color": "gold",
+    "tag": "GTA 5 can't keep up.",
+    "tagAt": 2.52,
+    "ar": "اللعبة دخلت التاريخ… والجزء الخامس ما يقدر يلحقها"
+   },
+   {
+    "type": "headline",
+    "from": 5.32,
+    "to": 8.7,
+    "broll": {
+     "src": "news",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 4
+    },
+    "tag": "BREAKING NEWS",
+    "source": "TAKE-TWO INTERACTIVE",
+    "date": "NOV 20, 2026",
+    "headline": "GTA VI's first 24 hours: a new record",
+    "typeAt": 0.3,
+    "ar": "إعلان Take-Two في 20 نوفمبر"
+   },
+   {
+    "type": "cash",
+    "from": 8.7,
+    "to": 13.34,
+    "captions": false,
+    "broll": {
+     "src": "money",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "FIRST 24 HOURS",
+    "amount": "$3.79B",
+    "per": "IN ONE DAY",
+    "amountAt": 0.12,
+    "ar": "3.79 مليار دولار في أول 24 ساعة"
+   },
+   {
+    "type": "reveal",
+    "from": 13.34,
+    "to": 19.2,
+    "captions": false,
+    "broll": {
+     "src": "sky",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 2,
+     "zoom": [
+      1.06,
+      1.18
+     ]
+    },
+    "pre": "TAKE-TWO SAYS…",
+    "slamAt": 0.84,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "BIGGEST",
+      "at": 0.86,
+      "color": "gold",
+      "size": 180
+     },
+     {
+      "text": "ENTERTAINMENT LAUNCH",
+      "at": 1.14,
+      "size": 104
+     },
+     {
+      "text": "EVER",
+      "at": 2.18,
+      "color": "gold",
+      "size": 200
+     },
+     {
+      "text": "MOVIES · ALBUMS · GAMES",
+      "at": 3.64,
+      "size": 64
+     }
+    ],
+    "ar": "أكبر إطلاق ترفيهي في التاريخ… أكبر من أي فلم أو ألبوم أو لعبة"
+   },
+   {
+    "type": "compare",
+    "from": 19.2,
+    "to": 26.98,
+    "broll": {
+     "src": "city",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 3
+    },
+    "step": "DAY ONE",
+    "label": "GTA V VS GTA VI",
+    "bars": [
+     {
+      "label": "GTA V",
+      "sub": "2013",
+      "value": 0.8,
+      "display": "$800M",
+      "at": 2.28,
+      "color": "pink"
+     },
+     {
+      "label": "GTA VI",
+      "sub": "2026",
+      "value": 3.79,
+      "display": "$3.79B",
+      "at": 3.98,
+      "color": "green"
+     }
+    ],
+    "result": {
+     "text": "NEARLY 5X",
+     "at": 5.44
+    },
+    "ar": "اليوم الأول للجزء الخامس: 800 مليون… والسادس تقريبًا 5 أضعاف"
+   },
+   {
+    "type": "cta",
+    "from": 26.98,
+    "to": 30.8,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "All the GTA 6 news",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم أخبار GTA 6",
+    "next": "BREAKING GTA 6 NEWS DAILY"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 0.3,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.0,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.46,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.25,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.6,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 6.0,
+    "volume": 0.3
+   },
+   {
+    "src": "tick.wav",
+    "at": 6.6,
+    "volume": 0.3
+   },
+   {
+    "src": "tick.wav",
+    "at": 7.2,
+    "volume": 0.3
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.64,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 8.82,
+    "volume": 0.7
+   },
+   {
+    "src": "impact.wav",
+    "at": 8.82,
+    "volume": 0.4
+   },
+   {
+    "src": "coins.wav",
+    "at": 9.0,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.28,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.18,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 14.2,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 15.52,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 16.98,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.12,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 21.48,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 21.9,
+    "volume": 0.3
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.18,
+    "volume": 0.55
+   },
+   {
+    "src": "cash.wav",
+    "at": 23.2,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.64,
+    "volume": 0.6
+   },
+   {
+    "src": "trophy.wav",
+    "at": 24.66,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 26.9,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 27.0,
+    "volume": 0.5
+   }
+  ]
+ }
+}
