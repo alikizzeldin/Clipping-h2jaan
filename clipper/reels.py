@@ -382,7 +382,7 @@ def metadata(plan: dict, keywords: list[str]) -> dict:
         lines.append("Gameplay footage: " + ", ".join(f"kick.com/{c}" for c in credits))
     media_credits = list(dict.fromkeys(spec["credit"] for spec in (plan.get("media") or {}).values() if spec.get("credit")))
     if media_credits:
-        lines.append("Old footage and photos: " + "; ".join(media_credits))
+        lines.append("Also shown: " + "; ".join(media_credits))
     if plan.get("sources"):
         lines.append("Checked against: " + ", ".join(re.sub(r"^https?://(www\.)?", "", s).split("/")[0] for s in plan["sources"][:4]))
     lines += ["", "New GTA 6 secret every day. Follow for more!", "", " ".join(tags + ["#shorts"])]
