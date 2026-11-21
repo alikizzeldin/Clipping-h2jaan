@@ -1,0 +1,1 @@
+kokoro-onnx>=0.4      # the free narrator voice (when the ElevenLabs allowance is used up)

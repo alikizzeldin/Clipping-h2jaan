@@ -119,3 +119,9 @@ publish:
   youtube_per_day: 2
   youtube_day_start: "19:00"     # UTC
   clips_to_youtube: false        # clips go to Instagram only
+  # For now the channel posts only reels (4 a day: secrets, news, Easter eggs):
+  # the clip runs post nothing, but still check and measure earlier posts.
+  clips_enabled: false
+  # More reels a day than YouTube posts: the first 2 of Buffer's day go to
+  # YouTube and Instagram, the rest to Instagram only.
+  reels_wait_for_youtube: false

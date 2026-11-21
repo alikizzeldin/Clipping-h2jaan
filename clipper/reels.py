@@ -43,7 +43,10 @@ class ReelError(RuntimeError):
 
 
 def words(alignment: dict) -> list[dict]:
-    """Word timings from ElevenLabs' character timings."""
+    """Word timings: from ElevenLabs' character timings, or given directly ({"words": [...]})."""
+    if "words" in alignment:
+        return [{"text": w["text"], "start": round(float(w["start"]), 3), "end": round(float(w["end"]), 3)}
+                for w in alignment["words"]]
     chars = alignment["characters"]
     starts = alignment["character_start_times_seconds"]
     ends = alignment["character_end_times_seconds"]

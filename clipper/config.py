@@ -133,6 +133,12 @@ class Publish:
     youtube_day_start: str = "19:00"
     # False: clips go to Instagram alone, leaving YouTube's few daily posts to the reels.
     clips_to_youtube: bool = True
+    # False: the clip runs post no clips (they still check and measure earlier posts).
+    clips_enabled: bool = True
+    # A reel that finds the day's YouTube posts used: True = it waits for the next
+    # day's slot; False = it goes to Instagram only (no backlog when there are
+    # more reels a day than YouTube posts).
+    reels_wait_for_youtube: bool = False
 
 
 @dataclass

@@ -263,6 +263,9 @@ def cmd_run(settings: Settings, args: argparse.Namespace) -> int:
         publisher.prepare(state, report)
         if isinstance(publisher, BufferPublisher):
             _study(settings, state, publisher.client, activity, now)
+        if not pub.clips_enabled and not getattr(args, "burst", 0):
+            # Earlier posts (reels included) were still checked and measured above.
+            return finish(0, "Clips are switched off (publish.clips_enabled); earlier posts were checked.")
 
     burst = max(0, getattr(args, "burst", 0) or 0)
     if not burst and publisher and settings.burst_until and now < settings.burst_until:
@@ -670,10 +673,14 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
         return 0
     extra = {"kind": "reel", "episode": int(plan["episode"]), "topic": plan.get("topic", ""),
              "rating": plan.get("rating", {}).get("score"), "hook": "reel"}
-    if result is None:
+    if result is None and pub.reels_wait_for_youtube:
         extra.update(status="youtube_pending", youtube_after=wait_for_youtube.isoformat(timespec="seconds"))
         state.add(clip, "", meta["title"], via="buffer", extra=extra)
         notes.append(f"- YouTube: waits for a free slot after {wait_for_youtube:%H:%M} UTC (its daily limit is used up)")
+    elif result is None:
+        extra.update(status="instagram_only")
+        state.add(clip, "", meta["title"], via="buffer", extra=extra)
+        notes.append("- YouTube: skipped, today's 2 YouTube posts are used (Instagram only)")
     else:
         state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra)
         notes.append(f"- YouTube: {result.link or f'sent to Buffer (post {result.ref})'} — {meta['title']}")
