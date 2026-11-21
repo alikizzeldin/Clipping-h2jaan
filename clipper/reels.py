@@ -78,8 +78,63 @@ def load_plan(folder: Path) -> dict:
     return plan
 
 
+def is_manual(plan: dict) -> bool:
+    """A reel the owner posts by hand (TikTok, Facebook…): saved with its texts, not posted."""
+    return bool(plan.get("manual"))
+
+
 def episode_id(plan: dict) -> str:
-    return f"reel_{int(plan['episode']):03d}"
+    return f"{'manual' if is_manual(plan) else 'reel'}_{int(plan['episode']):03d}"
+
+
+def cover(video: Path, dest: Path, at: float = 2.2) -> Path:
+    """A still from the hook (big title on screen) to show on the dashboard."""
+    _run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-ss", str(at), "-i", str(video), "-frames:v", "1",
+          "-vf", "scale=540:-2", "-q:v", "3", str(dest)])
+    return dest
+
+
+def load_manual(path: Path) -> dict:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        data = {}
+    return {"version": 1, "items": dict(data.get("items") or {})}
+
+
+def add_manual(path: Path, record: dict) -> None:
+    data = load_manual(path)
+    data["items"][record["id"]] = record
+    # Keep the last 200; the videos themselves are hosted for a few days.
+    items = sorted(data["items"].items(), key=lambda kv: kv[1].get("created_at", ""))[-200:]
+    data["items"] = dict(items)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
+def manual_record(plan: dict, meta: dict, video_url: str, cover_url: str, duration: float, hosted_until: str) -> dict:
+    """Everything the owner needs to post a reel by hand, for the dashboard's Manual publish page."""
+    hashtags = " ".join(["#" + t for t in meta["tags"]] + ["#shorts", "#gaming"])
+    return {
+        "id": episode_id(plan),
+        "episode": int(plan["episode"]),
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "hosted_until": hosted_until,
+        "series": plan["reel"].get("series", "SECRET FILE"),
+        "kind": plan.get("kind", ""),
+        "topic": plan.get("topic", ""),
+        "rating": (plan.get("rating") or {}).get("score"),
+        "title": meta["title"],
+        "title_en": plan["title"]["en"],
+        "title_ar": plan["title"].get("ar", ""),
+        "caption": meta["caption"],
+        "description": meta["description"],
+        "hashtags": hashtags,
+        "video_url": video_url,
+        "cover_url": cover_url,
+        "duration": round(duration, 1),
+        "sources": plan.get("sources", []),
+    }
 
 
 def _run(cmd: list[str], cwd: Path | None = None) -> None:

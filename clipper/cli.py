@@ -593,6 +593,8 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
     except reels.ReelError as exc:
         log.error("%s", exc)
         return 2
+    if reels.is_manual(plan) and not args.stills:
+        return _manual_reel(settings, plan, folder, args)
     pub = settings.publish
     state = State(settings.state_path)
     activity = Activity(settings.beside_state("activity.json"))
@@ -701,6 +703,54 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
     if not args.keep:
         video.unlink(missing_ok=True)
     _summary([f"Published reel {rid}", *notes])
+    return 0
+
+
+MANUAL_KEEP_HOURS = 96  # hand-posted reels stay downloadable this long
+
+
+def _manual_reel(settings: Settings, plan: dict, folder: Path, args: argparse.Namespace) -> int:
+    """Render a reel for the owner to post by hand: host the video and a cover,
+    and record its title, caption, description and hashtags for the dashboard."""
+    from . import reels
+
+    rid = reels.episode_id(plan)
+    store = Path(settings.state_path).parent / "manual.json"
+    if not args.dry_run and rid in reels.load_manual(store)["items"]:
+        _summary([f"{rid} is already on the Manual publish page; nothing to do."])
+        return 0
+    try:
+        props = reels.build(folder, Path(args.cache), preset="medium")
+        video = reels.render(props, Path(args.out) / f"{rid}.mp4", args.concurrency)
+    except reels.ReelError as exc:
+        log.error("%s", exc)
+        _summary([f"Reel {rid} could not be made: {exc}"])
+        return 1
+    meta = reels.metadata(plan, list(settings.active.hashtags))
+    if args.dry_run:
+        _summary([f"Rendered `{video}` ({video.stat().st_size >> 20} MB) — {meta['title']}"])
+        return 0
+    host = GitMediaHost(".", prefix="manual", keep_hours=MANUAL_KEEP_HOURS)
+    try:
+        removed = host.prune()
+        if removed:
+            log.info("removed %d old hand-posted reel file(s)", removed)
+        video_url, _ = host.upload(video, rid)
+        host.wait_until_public(video_url)
+        cover_url, _ = host.upload(reels.cover(video, video.with_suffix(".jpg")), f"{rid}-cover")
+    except HostingError as exc:
+        log.error("%s", exc)
+        _summary([f"Reel {rid} could not be saved for the dashboard: {exc}"])
+        return 1
+    duration = float(json.loads(props.read_text(encoding="utf-8"))["duration"])
+    until = (datetime.now(timezone.utc) + timedelta(hours=MANUAL_KEEP_HOURS)).isoformat(timespec="seconds")
+    reels.add_manual(store, reels.manual_record(plan, meta, video_url, cover_url, duration, until))
+    activity = Activity(settings.beside_state("activity.json"))
+    activity.add("info", f"Ready to post by hand: “{meta['clean_title']}”")
+    activity.save()
+    if not args.keep:
+        video.unlink(missing_ok=True)
+    _summary([f"{rid} is on the dashboard's Manual publish page — {meta['title']}", f"- video: {video_url}"])
     return 0
 
 

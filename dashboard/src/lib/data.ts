@@ -84,9 +84,32 @@ export type Effective = Required<Overrides> & {
   burst_per_run: number;
 };
 
+/** A reel made for the owner to post by hand (state/manual.json). */
+export type ManualReel = {
+  id: string;
+  episode: number;
+  created_at: string;
+  hosted_until: string; // the video can be downloaded until then
+  series: string;
+  kind: string;
+  topic: string;
+  rating?: number;
+  title: string; // "English | Arabic #shorts", ready for YouTube
+  title_en: string;
+  title_ar: string;
+  caption: string; // Instagram / TikTok / Facebook
+  description: string; // YouTube
+  hashtags: string;
+  video_url: string;
+  cover_url: string;
+  duration: number;
+  sources: string[];
+};
+
 export type Snapshot = {
   demo: boolean;
   clips: Clip[];
+  manual: ManualReel[];
   activity: Activity[];
   learned: Learned;
   rules: RulesControl;
@@ -167,14 +190,16 @@ export function effective(configYaml: string, overrides: Overrides): Effective {
 export async function loadSnapshot(demo: boolean): Promise<Snapshot> {
   if (demo) return demoSnapshot();
   const noControl: Control = { settings: {}, rules: EMPTY_RULES, request: null, updated_at: null };
-  const [state, activity, learned, history, control, yaml] = await Promise.all([
+  const [state, activity, learned, history, control, yaml, manualFile] = await Promise.all([
     getJson<{ published?: Record<string, Omit<Clip, "id">> }>("state/published.json", {}),
     getJson<Activity[]>("state/activity.json", []),
     getJson<Learned>("state/learned.json", { rules: [] }),
     getJson<HistoryPoint[]>("state/history.json", []),
     getControl().catch(() => noControl),
     getText("config.yaml"),
+    getJson<{ items?: Record<string, ManualReel> }>("state/manual.json", {}),
   ]);
+  const manual = Object.values(manualFile.items ?? {}).sort((a, b) => b.created_at.localeCompare(a.created_at));
   const rules = control.rules;
   const overrides = control.settings;
   const clips = Object.entries(state.published ?? {})
@@ -183,6 +208,7 @@ export async function loadSnapshot(demo: boolean): Promise<Snapshot> {
   return {
     demo: false,
     clips,
+    manual,
     activity: Array.isArray(activity) ? activity : [],
     learned: { ...learned, rules: learned.rules ?? [] },
     rules: { ...EMPTY_RULES, ...rules },
@@ -333,5 +359,5 @@ function demoSnapshot(): Snapshot {
   const settings = effective("", overrides);
   settings.featured_channels = ["sxb"];
   settings.start_at = new Date(now - 14 * 24 * hour).toISOString();
-  return { demo: true, clips, activity, learned, rules, history, overrides, settings, request: null, loadedAt: now };
+  return { demo: true, clips, manual: [], activity, learned, rules, history, overrides, settings, request: null, loadedAt: now };
 }

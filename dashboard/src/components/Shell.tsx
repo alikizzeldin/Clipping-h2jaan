@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { BarChart3, Bell, BrainCircuit, Clapperboard, Crown, Home, Search, Settings2 } from "lucide-react";
+import { BarChart3, Bell, BrainCircuit, Clapperboard, Crown, Home, Search, Send, Settings2 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { CHANNEL_NAME } from "../lib/config";
@@ -9,6 +9,7 @@ import { LayoutSwitch } from "./LayoutSwitch";
 export const NAV = [
   { to: "/", label: "Dashboard", icon: Home },
   { to: "/clips", label: "Clips", icon: Clapperboard },
+  { to: "/manual", label: "Manual", icon: Send },
   { to: "/analytics", label: "Analytics", icon: BarChart3 },
   { to: "/learning", label: "Learning", icon: BrainCircuit },
   { to: "/settings", label: "Settings", icon: Settings2 },

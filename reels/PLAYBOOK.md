@@ -30,7 +30,10 @@ Then re-read this file from disk: it may have changed since your last wake-up.
 
 Every folder in `reels/episodes/` is one reel. A reel is published when
 `state/published.json` has an entry `reel_NNN` (NNN = its episode number).
-If a folder is not published yet:
+Folders starting with `m` (m101, m102…) are the manual studio's reels for the
+owner to post by hand (`reels/MANUAL.md`): leave them alone, and don't repeat
+their topics either. Your own episodes are numbered 1–99.
+If one of your folders is not published yet:
 
 - If it has no `queued_at` in `reels/episodes/<folder>/status.json`, start the
   workflow for it (step 8), write `{"queued_at": "<now ISO>"}` there, commit,

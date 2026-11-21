@@ -60,11 +60,20 @@ def merge_history(theirs: list, ours: list) -> list:
     return [days[d] for d in sorted(d for d in days if d)]
 
 
+def merge_manual(theirs: dict, ours: dict) -> dict:
+    """Reels for posting by hand: every run's records together (several run side by side)."""
+    items = dict((theirs or {}).get("items") or {})
+    items.update((ours or {}).get("items") or {})
+    ordered = sorted(items.items(), key=lambda kv: kv[1].get("created_at", ""))[-200:]
+    return {"version": 1, "items": dict(ordered)}
+
+
 def merge_into(ours_dir: Path, repo: Path) -> list[str]:
     """Merge the records saved in `ours_dir` into the checkout at `repo` (which
     holds the newest saved version). Returns the files written."""
     written = []
     rules = {
+        "state/manual.json": (merge_manual, {}),
         "state/published.json": (merge_published, {}),
         "state/activity.json": (merge_activity, []),
         "state/history.json": (merge_history, []),

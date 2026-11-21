@@ -8,6 +8,7 @@ import Analytics from "./pages/Analytics";
 import Clips from "./pages/Clips";
 import Dashboard from "./pages/Dashboard";
 import Learning from "./pages/Learning";
+import Manual from "./pages/Manual";
 import Settings from "./pages/Settings";
 import Showroom from "./pages/Showroom";
 
@@ -34,6 +35,7 @@ function Rooms() {
       <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/clips" element={<Clips />} />
+        <Route path="/manual" element={<Manual />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/learning" element={<Learning />} />
         <Route path="/settings" element={<Settings />} />

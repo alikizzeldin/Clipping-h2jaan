@@ -92,3 +92,18 @@ def test_youtube_slots_follow_buffers_calendar_day(tmp_path):
     # A new Buffer day starts at 19:00 on the 21st: both slots are free again.
     assert state.youtube_free_at(datetime(2026, 11, 21, 19, 30, tzinfo=utc), 2, "19:00") is None
     assert state.youtube_free_at(datetime(2026, 11, 21, 18, 59, tzinfo=utc), 2, "19:00") is not None
+
+
+def test_manual_reels_are_kept_apart_and_merge(tmp_path):
+    from clipper.statesync import merge_manual
+
+    plan = {"episode": 101, "manual": True, "title": {"en": "x"}}
+    assert reels.is_manual(plan) and reels.episode_id(plan) == "manual_101"
+    path = tmp_path / "manual.json"
+    reels.add_manual(path, {"id": "manual_101", "created_at": "2026-11-21T10:00:00+00:00"})
+    reels.add_manual(path, {"id": "manual_102", "created_at": "2026-11-21T11:00:00+00:00"})
+    assert list(reels.load_manual(path)["items"]) == ["manual_101", "manual_102"]
+    # Two runs side by side each add their own reel: both survive the merge.
+    theirs = {"items": {"manual_101": {"id": "manual_101", "created_at": "1"}, "manual_103": {"id": "manual_103", "created_at": "3"}}}
+    ours = {"items": {"manual_101": {"id": "manual_101", "created_at": "1"}, "manual_104": {"id": "manual_104", "created_at": "4"}}}
+    assert list(merge_manual(theirs, ours)["items"]) == ["manual_101", "manual_103", "manual_104"]
