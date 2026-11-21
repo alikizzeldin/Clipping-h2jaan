@@ -1,0 +1,27 @@
+{
+  "name": "gta6fied-reels",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Motion-graphics reels (GTA 6 secrets, tips and news) rendered with Remotion",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.540",
+    "@remotion/fonts": "4.0.540",
+    "@remotion/media-utils": "4.0.540",
+    "@remotion/paths": "4.0.540",
+    "@remotion/shapes": "4.0.540",
+    "@remotion/transitions": "4.0.540",
+    "@remotion/noise": "4.0.540",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.540"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}
