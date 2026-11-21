@@ -1,0 +1,452 @@
+{
+ "episode": 8,
+ "kind": "secret",
+ "topic": "Bigfoot (the Skunk Ape) side quest: read the flyer in a Hamlet bar (Skeeter's), call Kirk, search the swamp at night, find three tree effigies, reach Mr. Mangrove; twist: he was a man who went missing ten years ago, changed by the swamp; shoot him for $10,000 or spare him",
+ "title": {
+  "en": "GTA 6's BIGFOOT isn't what you think 😳",
+  "ar": "بيغ فوت في GTA 6 مو اللي تتوقعه 😳"
+ },
+ "summary": "Bigfoot is in GTA 6, but there's a twist. Read the Skunk Ape flyer in a bar in Hamlet and call Kirk. He sends you into the swamp at night, then to three tree effigies that lead to Mr. Mangrove. The catch: Mangrove was a man who went missing ten years ago, changed by the swamp. Shoot him for $10,000, or spare him.",
+ "summary_ar": "بيغ فوت موجود في GTA 6… بس فيه مفاجأة. اقرأ إعلان الـ Skunk Ape في بار بهاملت واتصل بكيرك. يرسلك للمستنقع بالليل، وبعدها لثلاث تماثيل بالأشجار توصلك لمستر مانغروف. والمفاجأة: مانغروف كان رجل مفقود من عشر سنين والمستنقع غيّره. اقتله وتاخذ 10 آلاف دولار… أو اتركه.",
+ "keywords": [
+  "GTA6",
+  "GTA6Bigfoot",
+  "SkunkApe",
+  "GTA6Secrets",
+  "GTAVI",
+  "GTA6EasterEgg",
+  "Leonida",
+  "MrMangrove",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 9,
+  "retention": 9,
+  "fresh": 7,
+  "visual": 6,
+  "confidence": 8,
+  "score": 8.4
+ },
+ "sources": [
+  "https://gamerant.com/gta-6-bigfoot-location-where-to-find/",
+  "https://www.gamesradar.com/games/grand-theft-auto/gta-6-bigfoot-skunk-ape-mr-mangrove/",
+  "https://www.gtabase.com/gta-6/strangers/help-kirk-find-mr-mangrove",
+  "https://metaforge.app/gta-6/gta-6-skunk-ape-bigfoot-mr-mangrove",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-skunk-ape-mission-guide/",
+  "https://www.nexzyapp.com/games/grand-theft-auto-vi/guide/skunk-apeology-101",
+  "https://showgamer.com/en/guides/8069-kogo-zastrelit-v-gta-6-mistera-mangrova-ili-kirka-i-chto-vybrat"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/b6/clip_01M7V77K453AEC9ZM251P9PJHJ/playlist.m3u8",
+     "channel": "cliffsavage",
+     "start": 21.0,
+     "dur": 3.6,
+     "x": 700
+    }
+   ]
+  },
+  "bar": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/07/clip_01M7R3KP9EH51T9YH58XMZACZQ/playlist.m3u8",
+     "channel": "carryminati",
+     "start": 139.0,
+     "dur": 4.1,
+     "x": 1000
+    }
+   ]
+  },
+  "night": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 45.2,
+     "dur": 2.4,
+     "x": 560
+    }
+   ]
+  },
+  "road": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 13.0,
+     "dur": 3.7,
+     "x": 200
+    }
+   ]
+  },
+  "shack": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 4.4,
+     "dur": 6.4,
+     "x": 460,
+     "slow": 1.0
+    }
+   ]
+  },
+  "dark": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/07/clip_01M7R3KP9EH51T9YH58XMZACZQ/playlist.m3u8",
+     "channel": "carryminati",
+     "start": 171.4,
+     "dur": 3.0,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 88,
+  "seed": 71,
+  "drop": 3.36,
+  "break": 13.12,
+  "back": 15.36,
+  "outro": 22.32
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "episode": 8,
+  "duration": 25.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.36,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6'S",
+    "title": [
+     "BIGFOOT"
+    ],
+    "color": "green",
+    "tag": "…isn't what you think.",
+    "tagAt": 1.9,
+    "ar": "بيغ فوت في GTA 6… مو اللي تتوقعه"
+   },
+   {
+    "type": "location",
+    "from": 3.36,
+    "to": 7.28,
+    "broll": {
+     "src": "bar",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "THE FLYER",
+    "place": "HAMLET",
+    "target": "SKEETER'S BAR",
+    "direction": "CALL",
+    "region": "READ THE SKUNK APE FLYER",
+    "ar": "اقرأ إعلان الـ Skunk Ape في بار بهاملت… واتصل بكيرك"
+   },
+   {
+    "type": "trigger",
+    "from": 7.28,
+    "to": 9.44,
+    "broll": {
+     "src": "night",
+     "grade": "night",
+     "dim": 0.1,
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "step": "02",
+    "label": "AT NIGHT",
+    "title": "INTO THE SWAMP",
+    "sub": "at night",
+    "target": {
+     "x": 430,
+     "y": 1280,
+     "w": 460,
+     "h": 380
+    },
+    "contact": "SWAMP",
+    "tagText": "NIGHT ONLY",
+    "ar": "يرسلك للمستنقع بالليل"
+   },
+   {
+    "type": "scan",
+    "from": 9.44,
+    "to": 13.12,
+    "broll": {
+     "src": "road",
+     "grade": "cold",
+     "dim": 0.15,
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "03",
+    "label": "TREE EFFIGIES",
+    "target": {
+     "x": 540,
+     "y": 980,
+     "w": 760,
+     "h": 820
+    },
+    "checks": [
+     {
+      "text": "FIND 3 TREE EFFIGIES",
+      "at": 0.64
+     },
+     {
+      "text": "THEY LEAD TO MR. MANGROVE",
+      "at": 2.32
+     }
+    ],
+    "hud": "● TRACKING MR. MANGROVE…",
+    "ar": "دوّر على 3 تماثيل بالأشجار… توصلك لمستر مانغروف"
+   },
+   {
+    "type": "twist",
+    "from": 13.12,
+    "to": 19.32,
+    "captions": false,
+    "broll": {
+     "src": "shack",
+     "grade": "night",
+     "blur": 3,
+     "zoom": [
+      1.1,
+      1.25
+     ]
+    },
+    "pre": "NOW THE TWIST…",
+    "slamAt": 2.22,
+    "lines": [
+     {
+      "text": "HE WAS A MAN",
+      "at": 2.24,
+      "size": 150
+     },
+     {
+      "text": "MISSING",
+      "at": 2.8,
+      "color": "red",
+      "size": 200
+     },
+     {
+      "text": "10 YEARS",
+      "at": 3.24,
+      "color": "gold",
+      "size": 170
+     },
+     {
+      "text": "CHANGED BY THE SWAMP",
+      "at": 5.1,
+      "color": "green",
+      "size": 84
+     }
+    ],
+    "ar": "مانغروف كان رجل مفقود من 10 سنين… والمستنقع غيّره"
+   },
+   {
+    "type": "cash",
+    "from": 19.32,
+    "to": 22.32,
+    "captions": false,
+    "broll": {
+     "src": "dark",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "SHOOT HIM",
+    "amount": "$10,000",
+    "per": "paid by Kirk",
+    "amountAt": 0.5,
+    "repeat": "OR SPARE HIM",
+    "repeatAt": 1.78,
+    "ar": "اقتله وتاخذ 10 آلاف… أو اتركه"
+   },
+   {
+    "type": "cta",
+    "from": 22.32,
+    "to": 25.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "SECRET FILE #009 · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.08,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.3,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.2,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.4,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.22,
+    "volume": 0.5
+   },
+   {
+    "src": "glitch.wav",
+    "at": 8.62,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.38,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 9.6,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.08,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.76,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.05,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 13.4,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 15.34,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 15.38,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 15.92,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.36,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 18.22,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.26,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 19.82,
+    "volume": 0.7
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.82,
+    "volume": 0.35
+   },
+   {
+    "src": "coins.wav",
+    "at": 19.94,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.08,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.25,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.34,
+    "volume": 0.5
+   }
+  ]
+ }
+}
