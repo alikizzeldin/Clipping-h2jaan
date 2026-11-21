@@ -141,6 +141,14 @@ It uses the series narrator (ElevenLabs) while the month's allowance lasts,
 then the free Kokoro voice, and prints every word with its start time: scene
 times follow those. It says which engine it used: mention it in the report.
 
+If it says `engine: kokoro` because the main key's allowance is used up, try
+the SPARE ElevenLabs key first (same narrator): commit and push the folder with
+its script.txt, start workflow `voice.yml` with input `episode` = the folder
+name, wait for it (check every minute; it takes about a minute), then pull: it
+commits voice.mp3 and alignment.json for you. Print the word times with
+`python -c "import json;from clipper.reels import words;print(' | '.join(f'{w[\"start\"]:.2f} {w[\"text\"]}' for w in words(json.load(open('reels/episodes/NNN-slug/alignment.json')))))"`.
+If that run fails (no spare key, or its allowance is gone too), keep Kokoro.
+
 ## 6. Footage
 
 ```bash
