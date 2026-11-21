@@ -1,467 +1,737 @@
 {
- "episode": 5,
- "kind": "secret",
- "topic": "GTA cheats through the years (Vice City R1 R2 L1 R2, San Andreas HESOYAM, GTA 4 Niko's phone, GTA 5 1-999-BUZZOFF) to GTA 6's 61 cheats: phone + L1/R1 + D-pad, locked until the story is beaten, trophies and saving off",
- "title": {
-  "en": "From HESOYAM to GTA 6 cheats 🎮 (there's a catch)",
-  "ar": "من HESOYAM إلى غش GTA 6 🎮"
- },
- "summary": "Vice City's R1, R2, L1, R2… San Andreas' HESOYAM… Niko's phone in GTA 4… 1-999-BUZZOFF in GTA 5. Now GTA 6 has 61 cheats: hold L1 and R1 on your phone and type the code on the D-pad. The catch: they're locked until you beat the story, and using one turns off trophies and saving.",
- "summary_ar": "من فايس سيتي وسان أندرياس لجوال نيكو و1-999-BUZZOFF… والحين GTA 6 فيها 61 غش: اضغط L1 و R1 بالجوال واكتب الكود بالأسهم. بس الغش مقفل لين تختم القصة، واستخدامه يوقف الكؤوس والحفظ.",
- "keywords": [
-  "GTA6",
-  "GTA6Cheats",
-  "GTA",
-  "GTA5",
-  "GTASanAndreas",
-  "GTAViceCity",
-  "RockstarGames",
-  "GTAVI",
-  "GTA6Shorts",
-  "Gaming"
- ],
- "rating": {
-  "demand": 10,
-  "payoff": 9,
-  "retention": 9,
-  "fresh": 9,
-  "visual": 9,
-  "confidence": 8,
-  "score": 9.1
- },
- "sources": [
-  "https://tbreak.com/gta-6-cheats-locked-until-main-story/",
-  "https://www.vice.com/en/article/gta-6-cheat-codes-explained/",
-  "https://www.redbull.com/int-en/gta-6-cheat-codes",
-  "https://www.gamesradar.com/games/grand-theft-auto/gta-6-cheats/",
-  "https://leonidaverse.com/en/codex/gta-6-cheats",
-  "https://www.gamesradar.com/gta-vice-city-cheats",
-  "https://www.pcgamer.com/gta-5-cheats"
- ],
- "footage": {
-  "heli": {
-   "parts": [
-    {
-     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
-     "channel": "rdjavi",
-     "start": 0,
-     "dur": 4.0,
-     "x": 700
-    }
-   ]
+  "episode": 5,
+  "kind": "secret",
+  "topic": "GTA cheats through the years (Vice City R1 R2 L1 R2, San Andreas HESOYAM, GTA 4 Niko's phone, GTA 5 1-999-BUZZOFF) to GTA 6's 61 cheats: phone + L1/R1 + D-pad, locked until the story is beaten, trophies and saving off",
+  "title": {
+    "en": "From HESOYAM to GTA 6 cheats 🎮 (there's a catch)",
+    "ar": "من HESOYAM إلى غش GTA 6 🎮"
   },
-  "drive": {
-   "parts": [
-    {
-     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
-     "channel": "affiwillcarry",
-     "start": 84,
-     "dur": 5.9,
-     "x": 660
-    }
-   ]
+  "summary": "Vice City's R1, R2, L1, R2… San Andreas' HESOYAM… Niko's phone in GTA 4… 1-999-BUZZOFF in GTA 5. Now GTA 6 has 61 cheats: hold L1 and R1 on your phone and type the code on the D-pad. The catch: they're locked until you beat the story, and using one turns off trophies and saving.",
+  "summary_ar": "من فايس سيتي وسان أندرياس لجوال نيكو و1-999-BUZZOFF… والحين GTA 6 فيها 61 غش: اضغط L1 و R1 بالجوال واكتب الكود بالأسهم. بس الغش مقفل لين تختم القصة، واستخدامه يوقف الكؤوس والحفظ.",
+  "keywords": [
+    "GTA6",
+    "GTA6Cheats",
+    "GTA",
+    "GTA5",
+    "GTASanAndreas",
+    "GTAViceCity",
+    "RockstarGames",
+    "GTAVI",
+    "GTA6Shorts",
+    "Gaming"
+  ],
+  "rating": {
+    "demand": 10,
+    "payoff": 9,
+    "retention": 9,
+    "fresh": 9,
+    "visual": 9,
+    "confidence": 8,
+    "score": 9.1
   },
-  "dark": {
-   "parts": [
-    {
-     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
-     "channel": "xqc",
-     "start": 6,
-     "dur": 3.5,
-     "x": 1100
+  "sources": [
+    "https://tbreak.com/gta-6-cheats-locked-until-main-story/",
+    "https://www.vice.com/en/article/gta-6-cheat-codes-explained/",
+    "https://www.redbull.com/int-en/gta-6-cheat-codes",
+    "https://www.gamesradar.com/games/grand-theft-auto/gta-6-cheats/",
+    "https://leonidaverse.com/en/codex/gta-6-cheats",
+    "https://www.gamesradar.com/gta-vice-city-cheats",
+    "https://www.pcgamer.com/gta-5-cheats"
+  ],
+  "footage": {
+    "heli": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+          "channel": "rdjavi",
+          "start": 0,
+          "dur": 4.0,
+          "x": 700
+        }
+      ]
+    },
+    "drive": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+          "channel": "affiwillcarry",
+          "start": 84,
+          "dur": 5.9,
+          "x": 660
+        }
+      ]
+    },
+    "dark": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+          "channel": "xqc",
+          "start": 6,
+          "dur": 3.5,
+          "x": 1100
+        }
+      ]
+    },
+    "wasted": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+          "channel": "xqc",
+          "start": 28,
+          "dur": 3.4,
+          "x": 700
+        }
+      ]
+    },
+    "night": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+          "channel": "affiwillcarry",
+          "start": 96,
+          "dur": 5.0,
+          "x": 660
+        }
+      ]
+    },
+    "plane": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+          "channel": "paulinholokobr",
+          "start": 0,
+          "dur": 3.0,
+          "x": 660
+        }
+      ]
     }
-   ]
   },
-  "wasted": {
-   "parts": [
-    {
-     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
-     "channel": "xqc",
-     "start": 28,
-     "dur": 3.4,
-     "x": 700
-    }
-   ]
+  "music": {
+    "style": "mystery",
+    "bpm": 96,
+    "seed": 41,
+    "drop": 16.13,
+    "break": 25.49,
+    "back": 26.16,
+    "outro": 31.85
   },
-  "night": {
-   "parts": [
-    {
-     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
-     "channel": "affiwillcarry",
-     "start": 96,
-     "dur": 5.0,
-     "x": 660
-    }
-   ]
-  },
-  "plane": {
-   "parts": [
-    {
-     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
-     "channel": "paulinholokobr",
-     "start": 0,
-     "dur": 3.0,
-     "x": 660
-    }
-   ]
-  }
- },
- "music": {
-  "style": "mystery",
-  "bpm": 96,
-  "seed": 41,
-  "drop": 16.13,
-  "break": 25.49,
-  "back": 26.16,
-  "outro": 31.85
- },
- "reel": {
-  "series": "SECRET FILE",
-  "duration": 39.2,
-  "musicVolume": 0.4,
-  "scenes": [
-   {
-    "type": "era",
-    "from": 0,
-    "to": 16.13,
-    "captions": false,
-    "eras": [
-     {
-      "game": "Vice City",
-      "year": "2002",
-      "look": "vc",
-      "at": 0.35,
-      "kind": "buttons",
-      "cheat": "R1 R2 L1 R2 ← ↓ → ↑ ← ↓ → ↑",
-      "beats": [
-       1.68,
-       2.64,
-       3.76,
-       4.78
-      ],
-      "note": "ALL THE WEAPONS"
-     },
-     {
-      "game": "San Andreas",
-      "year": "2004",
-      "look": "sa",
-      "at": 6.12,
-      "kind": "typed",
-      "cheat": "HESOYAM",
-      "note": "HEALTH · ARMOR · $250K"
-     },
-     {
-      "game": "GTA IV",
-      "year": "2008",
-      "look": "iv",
-      "at": 9.33,
-      "kind": "dial",
-      "cheat": "362-555-0100",
-      "note": "DIALED ON NIKO'S PHONE"
-     },
-     {
-      "game": "GTA V",
-      "year": "2013",
-      "look": "v",
-      "at": 12.15,
-      "kind": "dial",
-      "cheat": "1-999-BUZZOFF",
-      "note": "A BUZZARD FROM THE SKY"
-     }
-    ],
-    "ar": "من فايس سيتي لسان أندرياس… كل جيل له غشّه"
-   },
-   {
-    "type": "stat",
-    "from": 16.13,
-    "to": 19.85,
-    "captions": false,
-    "broll": {
-     "src": "heli",
-     "grade": "warm",
-     "dim": 0.35,
-     "blur": 2
-    },
-    "kicker": "AND NOW… GTA 6 HAS",
-    "value": 61,
-    "countAt": 2.2,
-    "label": "CHEATS",
-    "sub": "STORY MODE ONLY",
-    "ar": "والحين… GTA 6 فيها 61 غش"
-   },
-   {
-    "type": "combo",
-    "from": 19.85,
-    "to": 25.49,
-    "broll": {
-     "src": "drive",
-     "grade": "night",
-     "dim": 0.5,
-     "blur": 3
-    },
-    "label": "ENTER A CHEAT",
-    "phoneAt": 0.64,
-    "holdAt": 1.43,
-    "typeAt": 3.81,
-    "sequence": [
-     "↑",
-     "→",
-     "↓",
-     "←",
-     "↑",
-     "↓"
-    ],
-    "xbox": "LB + RB",
-    "title": "Type the code on the D-pad",
-    "ar": "طلّع الجوال، اضغط L1 و R1 واكتب الكود بالأسهم"
-   },
-   {
-    "type": "twist",
-    "from": 25.49,
-    "to": 28.69,
-    "captions": false,
-    "broll": {
-     "src": "dark",
-     "grade": "cold",
-     "dim": 0.3,
-     "blur": 4
-    },
-    "pre": "BUT…",
-    "slamAt": 0.67,
-    "lines": [
-     {
-      "text": "LOCKED",
-      "at": 0.67,
-      "color": "red",
-      "size": 240
-     },
-     {
-      "text": "UNTIL YOU BEAT",
-      "at": 1.61,
-      "size": 120
-     },
-     {
-      "text": "THE STORY",
-      "at": 2.2,
-      "color": "pink",
-      "size": 170
-     }
-    ],
-    "ar": "بس… مقفلة لين تختم القصة كاملة"
-   },
-   {
-    "type": "list",
-    "from": 28.69,
-    "to": 31.85,
-    "broll": {
-     "src": "wasted",
-     "grade": "none",
-     "dim": 0.45,
-     "blur": 3
-    },
-    "chip": "WARNING",
-    "label": "USE ONE AND…",
-    "cardAt": 0.2,
-    "arAt": 0.5,
-    "items": [
-     {
-      "text": "TROPHIES",
-      "status": "OFF",
-      "ok": false,
-      "at": 1.69,
-      "icon": "trophy"
-     },
-     {
-      "text": "SAVING",
-      "status": "OFF",
-      "ok": false,
-      "at": 2.26,
-      "icon": "save"
-     }
-    ],
-    "ar": "واستخدامه يوقف الكؤوس والحفظ"
-   },
-   {
-    "type": "era",
-    "from": 31.85,
-    "to": 36.6,
-    "captions": false,
-    "broll": {
-     "src": "night",
-     "grade": "night",
-     "dim": 0.45,
-     "blur": 3
-    },
-    "eras": [],
-    "recap": {
-     "at": 0.2,
-     "lines": [
+  "reel": {
+    "series": "SECRET FILE",
+    "duration": 39.2,
+    "musicVolume": 0.4,
+    "scenes": [
       {
-       "text": "Some things never change…",
-       "at": 0.6
+        "type": "era",
+        "from": 0,
+        "to": 16.13,
+        "captions": false,
+        "eras": [
+          {
+            "game": "Vice City",
+            "year": "2002",
+            "look": "vc",
+            "at": 0.35,
+            "kind": "buttons",
+            "cheat": "R1 R2 L1 R2 ← ↓ → ↑ ← ↓ → ↑",
+            "beats": [
+              1.68,
+              2.64,
+              3.76,
+              4.78
+            ],
+            "note": "ALL THE WEAPONS",
+            "media": [
+              {
+                "src": "vc_drive.mp4",
+                "at": 0.35,
+                "kind": "video"
+              },
+              {
+                "src": "vc_cheetah.mp4",
+                "at": 3.3,
+                "kind": "video"
+              }
+            ],
+            "photos": [
+              {
+                "src": "vc_cover.jpg",
+                "at": 0.6,
+                "x": 590,
+                "y": 1106,
+                "w": 430,
+                "rot": 5,
+                "caption": "2002"
+              },
+              {
+                "src": "vc_paper.jpg",
+                "at": 1.68,
+                "x": 60,
+                "y": 1090,
+                "w": 500,
+                "rot": -5,
+                "caption": "written by hand"
+              }
+            ]
+          },
+          {
+            "game": "San Andreas",
+            "year": "2004",
+            "look": "sa",
+            "at": 6.12,
+            "kind": "typed",
+            "cheat": "HESOYAM",
+            "note": "HEALTH · ARMOR · $250K",
+            "beats": [
+              7.12
+            ],
+            "media": [
+              {
+                "src": "sa_grove.mp4",
+                "at": 6.12,
+                "kind": "video"
+              },
+              {
+                "src": "sa_activated.jpg",
+                "at": 7.35,
+                "kind": "image",
+                "zoom": [
+                  1.0,
+                  1.1
+                ],
+                "flash": true
+              }
+            ],
+            "photos": [
+              {
+                "src": "sa_notebook.jpg",
+                "at": 6.35,
+                "x": 60,
+                "y": 1096,
+                "w": 470,
+                "rot": -5,
+                "caption": "GTA SA notebook"
+              },
+              {
+                "src": "sa_diary.jpg",
+                "at": 7.9,
+                "x": 560,
+                "y": 1102,
+                "w": 460,
+                "rot": 6,
+                "caption": "the diary page"
+              }
+            ]
+          },
+          {
+            "game": "GTA IV",
+            "year": "2008",
+            "look": "iv",
+            "at": 9.33,
+            "kind": "dial",
+            "cheat": "362-555-0100",
+            "note": "DIALED ON NIKO'S PHONE",
+            "beats": [
+              10.62
+            ],
+            "done": 11.85,
+            "media": [
+              {
+                "src": "iv_street.mp4",
+                "at": 9.33,
+                "kind": "video"
+              },
+              {
+                "src": "iv_phone.mp4",
+                "at": 10.5,
+                "kind": "video"
+              }
+            ]
+          },
+          {
+            "game": "GTA V",
+            "year": "2013",
+            "look": "v",
+            "at": 12.15,
+            "kind": "dial",
+            "cheat": "1-999-BUZZOFF",
+            "note": "A BUZZARD FROM THE SKY",
+            "beats": [
+              13.69
+            ],
+            "done": 14.45,
+            "media": [
+              {
+                "src": "v_spawn.mp4",
+                "at": 12.15,
+                "kind": "video"
+              },
+              {
+                "src": "v_fly.mp4",
+                "at": 15.15,
+                "kind": "video"
+              }
+            ]
+          }
+        ],
+        "ar": "من فايس سيتي لسان أندرياس… كل جيل له غشّه"
       },
       {
-       "text": "cheats just got harder to earn",
-       "at": 2.6,
-       "color": "pink"
+        "type": "stat",
+        "from": 16.13,
+        "to": 19.85,
+        "captions": false,
+        "broll": {
+          "src": "heli",
+          "grade": "warm",
+          "dim": 0.35,
+          "blur": 2
+        },
+        "kicker": "AND NOW… GTA 6 HAS",
+        "value": 61,
+        "countAt": 2.2,
+        "label": "CHEATS",
+        "sub": "STORY MODE ONLY",
+        "ar": "والحين… GTA 6 فيها 61 غش"
+      },
+      {
+        "type": "combo",
+        "from": 19.85,
+        "to": 25.49,
+        "broll": {
+          "src": "drive",
+          "grade": "night",
+          "dim": 0.5,
+          "blur": 3
+        },
+        "label": "ENTER A CHEAT",
+        "phoneAt": 0.64,
+        "holdAt": 1.43,
+        "typeAt": 3.81,
+        "sequence": [
+          "↑",
+          "→",
+          "↓",
+          "←",
+          "↑",
+          "↓"
+        ],
+        "xbox": "LB + RB",
+        "title": "Type the code on the D-pad",
+        "ar": "طلّع الجوال، اضغط L1 و R1 واكتب الكود بالأسهم"
+      },
+      {
+        "type": "twist",
+        "from": 25.49,
+        "to": 28.69,
+        "captions": false,
+        "broll": {
+          "src": "dark",
+          "grade": "cold",
+          "dim": 0.3,
+          "blur": 4
+        },
+        "pre": "BUT…",
+        "slamAt": 0.67,
+        "lines": [
+          {
+            "text": "LOCKED",
+            "at": 0.67,
+            "color": "red",
+            "size": 240
+          },
+          {
+            "text": "UNTIL YOU BEAT",
+            "at": 1.61,
+            "size": 120
+          },
+          {
+            "text": "THE STORY",
+            "at": 2.2,
+            "color": "pink",
+            "size": 170
+          }
+        ],
+        "ar": "بس… مقفلة لين تختم القصة كاملة"
+      },
+      {
+        "type": "list",
+        "from": 28.69,
+        "to": 31.85,
+        "broll": {
+          "src": "wasted",
+          "grade": "none",
+          "dim": 0.45,
+          "blur": 3
+        },
+        "chip": "WARNING",
+        "label": "USE ONE AND…",
+        "cardAt": 0.2,
+        "arAt": 0.5,
+        "items": [
+          {
+            "text": "TROPHIES",
+            "status": "OFF",
+            "ok": false,
+            "at": 1.69,
+            "icon": "trophy"
+          },
+          {
+            "text": "SAVING",
+            "status": "OFF",
+            "ok": false,
+            "at": 2.26,
+            "icon": "save"
+          }
+        ],
+        "ar": "واستخدامه يوقف الكؤوس والحفظ"
+      },
+      {
+        "type": "era",
+        "from": 31.85,
+        "to": 36.6,
+        "captions": false,
+        "broll": {
+          "src": "night",
+          "grade": "night",
+          "dim": 0.45,
+          "blur": 3
+        },
+        "eras": [],
+        "recap": {
+          "at": 0.2,
+          "lines": [
+            {
+              "text": "Some things never change…",
+              "at": 0.6
+            },
+            {
+              "text": "cheats just got harder to earn",
+              "at": 2.6,
+              "color": "pink"
+            }
+          ]
+        },
+        "ar": "أشياء ما تتغير… بس الغش صار أصعب"
+      },
+      {
+        "type": "cta",
+        "captions": false,
+        "broll": {
+          "src": "plane",
+          "grade": "warm",
+          "dim": 0.25
+        },
+        "line1": "A new GTA 6 secret",
+        "line2": "every day",
+        "button": "FOLLOW @GTA6FIED",
+        "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+        "next": "SAVE THIS FOR LATER",
+        "from": 36.6,
+        "to": 39.2
       }
-     ]
+    ],
+    "sfx": [
+      {
+        "src": "glitch.wav",
+        "at": 0.3,
+        "volume": 0.4
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 0.6,
+        "volume": 0.3
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 1.66,
+        "volume": 0.35
+      },
+      {
+        "src": "tick.wav",
+        "at": 1.68,
+        "volume": 0.55
+      },
+      {
+        "src": "tick.wav",
+        "at": 2.64,
+        "volume": 0.55
+      },
+      {
+        "src": "tick.wav",
+        "at": 3.76,
+        "volume": 0.55
+      },
+      {
+        "src": "tick.wav",
+        "at": 4.78,
+        "volume": 0.55
+      },
+      {
+        "src": "glitch.wav",
+        "at": 6.08,
+        "volume": 0.4
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 6.33,
+        "volume": 0.3
+      },
+      {
+        "src": "ping.wav",
+        "at": 7.4,
+        "volume": 0.5
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 7.88,
+        "volume": 0.3
+      },
+      {
+        "src": "glitch.wav",
+        "at": 9.3,
+        "volume": 0.4
+      },
+      {
+        "src": "ping.wav",
+        "at": 11.85,
+        "volume": 0.5
+      },
+      {
+        "src": "glitch.wav",
+        "at": 12.1,
+        "volume": 0.4
+      },
+      {
+        "src": "riser.wav",
+        "at": 13.1,
+        "volume": 0.3
+      },
+      {
+        "src": "ping.wav",
+        "at": 14.45,
+        "volume": 0.5
+      },
+      {
+        "src": "impact.wav",
+        "at": 14.5,
+        "volume": 0.4
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 16.05,
+        "volume": 0.5
+      },
+      {
+        "src": "impact.wav",
+        "at": 16.13,
+        "volume": 0.65
+      },
+      {
+        "src": "impact.wav",
+        "at": 18.33,
+        "volume": 0.5
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 19.8,
+        "volume": 0.45
+      },
+      {
+        "src": "tick.wav",
+        "at": 21.28,
+        "volume": 0.6
+      },
+      {
+        "src": "tick.wav",
+        "at": 23.66,
+        "volume": 0.5
+      },
+      {
+        "src": "tick.wav",
+        "at": 24.06,
+        "volume": 0.5
+      },
+      {
+        "src": "glitch.wav",
+        "at": 25.49,
+        "volume": 0.35
+      },
+      {
+        "src": "impact.wav",
+        "at": 26.16,
+        "volume": 0.6
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 28.62,
+        "volume": 0.45
+      },
+      {
+        "src": "error.wav",
+        "at": 30.4,
+        "volume": 0.4
+      },
+      {
+        "src": "error.wav",
+        "at": 30.98,
+        "volume": 0.4
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 31.8,
+        "volume": 0.4
+      },
+      {
+        "src": "trophy.wav",
+        "at": 34.47,
+        "volume": 0.55
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 36.52,
+        "volume": 0.5
+      },
+      {
+        "src": "impact.wav",
+        "at": 36.62,
+        "volume": 0.45
+      }
+    ]
+  },
+  "media": {
+    "vc_drive.mp4": {
+      "url": "https://archive.org/download/grand-theft-auto-vice-city-play-station-2-pal-gameplay-walkthrough-mission-recor/Grand%20Theft%20Auto%20Vice%20City%20PlayStation%202%20PAL%20Gameplay%20(Walkthrough%20Mission%20Recorded%20By%20www.chilloutgames.co.uk).mp4",
+      "start": 86.8,
+      "dur": 3.1,
+      "crop": [
+        424,
+        318,
+        24,
+        16
+      ],
+      "width": 760,
+      "credit": "Vice City PS2 gameplay: chilloutgames.co.uk (Archive.org)"
     },
-    "ar": "أشياء ما تتغير… بس الغش صار أصعب"
-   },
-   {
-    "type": "cta",
-    "captions": false,
-    "broll": {
-     "src": "plane",
-     "grade": "warm",
-     "dim": 0.25
+    "vc_cheetah.mp4": {
+      "url": "https://archive.org/download/grand-theft-auto-vice-city-play-station-2-pal-gameplay-walkthrough-mission-recor/Grand%20Theft%20Auto%20Vice%20City%20PlayStation%202%20PAL%20Gameplay%20(Walkthrough%20Mission%20Recorded%20By%20www.chilloutgames.co.uk).mp4",
+      "start": 228.0,
+      "dur": 3.0,
+      "crop": [
+        424,
+        318,
+        24,
+        16
+      ],
+      "width": 760,
+      "credit": "Vice City PS2 gameplay: chilloutgames.co.uk (Archive.org)"
     },
-    "line1": "A new GTA 6 secret",
-    "line2": "every day",
-    "button": "FOLLOW @GTA6FIED",
-    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
-    "next": "SAVE THIS FOR LATER",
-    "from": 36.6,
-    "to": 39.2
-   }
-  ],
-  "sfx": [
-   {
-    "src": "glitch.wav",
-    "at": 0.3,
-    "volume": 0.4
-   },
-   {
-    "src": "tick.wav",
-    "at": 1.68,
-    "volume": 0.55
-   },
-   {
-    "src": "tick.wav",
-    "at": 2.64,
-    "volume": 0.55
-   },
-   {
-    "src": "tick.wav",
-    "at": 3.76,
-    "volume": 0.55
-   },
-   {
-    "src": "tick.wav",
-    "at": 4.78,
-    "volume": 0.55
-   },
-   {
-    "src": "glitch.wav",
-    "at": 6.08,
-    "volume": 0.4
-   },
-   {
-    "src": "ping.wav",
-    "at": 7.7,
-    "volume": 0.5
-   },
-   {
-    "src": "glitch.wav",
-    "at": 9.3,
-    "volume": 0.4
-   },
-   {
-    "src": "glitch.wav",
-    "at": 12.1,
-    "volume": 0.4
-   },
-   {
-    "src": "ping.wav",
-    "at": 14.0,
-    "volume": 0.45
-   },
-   {
-    "src": "riser.wav",
-    "at": 13.1,
-    "volume": 0.3
-   },
-   {
-    "src": "impact.wav",
-    "at": 16.13,
-    "volume": 0.65
-   },
-   {
-    "src": "whoosh.wav",
-    "at": 16.05,
-    "volume": 0.5
-   },
-   {
-    "src": "impact.wav",
-    "at": 18.33,
-    "volume": 0.5
-   },
-   {
-    "src": "whoosh.wav",
-    "at": 19.8,
-    "volume": 0.45
-   },
-   {
-    "src": "tick.wav",
-    "at": 21.28,
-    "volume": 0.6
-   },
-   {
-    "src": "tick.wav",
-    "at": 23.66,
-    "volume": 0.5
-   },
-   {
-    "src": "tick.wav",
-    "at": 24.06,
-    "volume": 0.5
-   },
-   {
-    "src": "glitch.wav",
-    "at": 25.49,
-    "volume": 0.35
-   },
-   {
-    "src": "impact.wav",
-    "at": 26.16,
-    "volume": 0.6
-   },
-   {
-    "src": "whoosh.wav",
-    "at": 28.62,
-    "volume": 0.45
-   },
-   {
-    "src": "error.wav",
-    "at": 30.4,
-    "volume": 0.4
-   },
-   {
-    "src": "error.wav",
-    "at": 30.98,
-    "volume": 0.4
-   },
-   {
-    "src": "whoosh.wav",
-    "at": 31.8,
-    "volume": 0.4
-   },
-   {
-    "src": "trophy.wav",
-    "at": 34.47,
-    "volume": 0.55
-   },
-   {
-    "src": "whoosh.wav",
-    "at": 36.52,
-    "volume": 0.5
-   },
-   {
-    "src": "impact.wav",
-    "at": 36.62,
-    "volume": 0.45
-   }
-  ]
- }
+    "vc_cover.jpg": {
+      "url": "https://i.redd.it/tjqrde05seke1.jpeg",
+      "crop": [
+        452,
+        339,
+        0,
+        200
+      ],
+      "width": 452,
+      "credit": "Vice City cover (Rockstar Games), photo shared by u/Glad_Masterpiece6508 on Reddit"
+    },
+    "vc_paper.jpg": {
+      "url": "https://i.redd.it/a8whhjqa6b0h1.jpeg",
+      "crop": [
+        2400,
+        1800,
+        100,
+        450
+      ],
+      "width": 900,
+      "credit": "handwritten cheat sheets shared on Reddit by u/overlord-07, u/FewChallenge4510 and u/sbsoneji"
+    },
+    "sa_grove.mp4": {
+      "url": "https://archive.org/download/g4tv.com-video8999/ch5001gtasanandreas_G4480_flv.mp4",
+      "start": 44.3,
+      "dur": 1.5,
+      "crop": [
+        440,
+        330,
+        30,
+        50
+      ],
+      "width": 760,
+      "credit": "San Andreas and GTA IV cheat footage: G4TV's Cheat! (Archive.org)"
+    },
+    "sa_activated.jpg": {
+      "url": "https://i.redd.it/mszq7v5dprqb1.jpg",
+      "crop": [
+        746,
+        560,
+        0,
+        0
+      ],
+      "width": 760,
+      "credit": "San Andreas screenshot shared by u/CurrentNet5516 on Reddit"
+    },
+    "sa_notebook.jpg": {
+      "url": "https://i.redd.it/feqxdmd96xve1.jpeg",
+      "crop": [
+        479,
+        359,
+        0,
+        40
+      ],
+      "width": 479,
+      "credit": "handwritten cheat sheets shared on Reddit by u/overlord-07, u/FewChallenge4510 and u/sbsoneji"
+    },
+    "sa_diary.jpg": {
+      "url": "https://i.redd.it/t20mx2agk64e1.jpeg",
+      "crop": [
+        2849,
+        2137,
+        0,
+        900
+      ],
+      "width": 900,
+      "credit": "handwritten cheat sheets shared on Reddit by u/overlord-07, u/FewChallenge4510 and u/sbsoneji"
+    },
+    "iv_street.mp4": {
+      "url": "https://archive.org/download/g4tv.com-video21634/xp20080507_cheat_gtacodes_flv.mp4",
+      "start": 39.0,
+      "dur": 1.4,
+      "crop": [
+        512,
+        288,
+        30,
+        56
+      ],
+      "width": 960,
+      "credit": "San Andreas and GTA IV cheat footage: G4TV's Cheat! (Archive.org)"
+    },
+    "iv_phone.mp4": {
+      "url": "https://archive.org/download/g4tv.com-video21634/xp20080507_cheat_gtacodes_flv.mp4",
+      "start": 37.25,
+      "dur": 1.9,
+      "crop": [
+        512,
+        288,
+        30,
+        56
+      ],
+      "width": 960,
+      "credit": "San Andreas and GTA IV cheat footage: G4TV's Cheat! (Archive.org)"
+    },
+    "v_spawn.mp4": {
+      "url": "https://archive.org/download/GTAVPS4Cheats10GrandTheftAutoVCheatsYouMustTry/GTA%20V%20PS4%20Cheats%2010%20Grand%20Theft%20Auto%20V%20Cheats%20You%20Must%20Try.mp4",
+      "start": 312.75,
+      "dur": 3.2,
+      "width": 960,
+      "credit": "GTA V cheat footage (Archive.org)"
+    },
+    "v_fly.mp4": {
+      "url": "https://archive.org/download/GTAVPS4Cheats10GrandTheftAutoVCheatsYouMustTry/GTA%20V%20PS4%20Cheats%2010%20Grand%20Theft%20Auto%20V%20Cheats%20You%20Must%20Try.mp4",
+      "start": 329.0,
+      "dur": 1.3,
+      "width": 960,
+      "credit": "GTA V cheat footage (Archive.org)"
+    }
+  }
 }

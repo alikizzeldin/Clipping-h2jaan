@@ -220,6 +220,30 @@ def cut_still(spec: dict, dest: Path, cache: Path) -> Path:
     return dest
 
 
+def cut_media(spec: dict, dest: Path, cache: Path, preset: str = "medium") -> Path:
+    """Old-game footage or a photo from the web, trimmed and cropped for a card on screen.
+
+    spec: {"url", "crop": [w, h, x, y] in the source's own pixels, "width", and for
+    video "start" and "dur"}. A dest ending in .mp4 is cut as silent video; anything
+    else is saved as one still image.
+    """
+    src = source(spec["url"], cache)
+    vf = []
+    if spec.get("crop"):
+        cw, ch, x, y = (int(v) for v in spec["crop"])
+        vf.append(f"crop={cw}:{ch}:{x}:{y}")
+    vf.append(f"scale={int(spec.get('width', 960))}:-2:flags=lanczos")
+    if dest.suffix == ".mp4":
+        vf.append(f"fps={FPS}")
+        _run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-ss", str(spec.get("start", 0)), "-i", str(src),
+              "-t", str(spec["dur"]), "-vf", ",".join(vf), "-an", "-c:v", "libx264", "-preset", preset, "-crf", "18",
+              "-pix_fmt", "yuv420p", str(dest)])
+    else:
+        _run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(src), "-frames:v", "1",
+              "-vf", ",".join(vf + ["unsharp=5:5:0.5"]), str(dest)])
+    return dest
+
+
 def _loudnorm(src: Path, dest: Path, target: float) -> None:
     _run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(src), "-af",
           f"loudnorm=I={target}:TP=-1.5:LRA=11,aresample=44100", "-ar", "44100", str(dest)])
@@ -240,6 +264,9 @@ def build(folder: Path, cache: Path, preset: str = "medium") -> Path:
         cut_shot(spec["parts"], stage / f"{name}.mp4", cache, preset)
     for name, spec in (plan.get("stills") or {}).items():
         cut_still(spec, stage / name, cache)
+    for name, spec in (plan.get("media") or {}).items():
+        log.info("preparing %s", name)
+        cut_media(spec, stage / name, cache, preset)
     for extra in folder.glob("*.png"):
         shutil.copy(extra, stage / extra.name)
 
@@ -272,6 +299,9 @@ def build(folder: Path, cache: Path, preset: str = "medium") -> Path:
             scene["broll"]["src"] = local(scene["broll"]["src"])
         if scene.get("proof"):
             scene["proof"]["src"] = local(scene["proof"]["src"])
+        for era in scene.get("eras") or []:
+            for item in [*(era.get("media") or []), *(era.get("photos") or [])]:
+                item["src"] = local(item["src"])
     for fx in reel.get("sfx", []):
         if not fx["src"].startswith(SHARED_PREFIXES):
             fx["src"] = f"sfx/{fx['src']}"
@@ -346,6 +376,9 @@ def metadata(plan: dict, keywords: list[str]) -> dict:
         lines += [plan["summary_ar"], ""]
     if credits:
         lines.append("Gameplay footage: " + ", ".join(f"kick.com/{c}" for c in credits))
+    media_credits = list(dict.fromkeys(spec["credit"] for spec in (plan.get("media") or {}).values() if spec.get("credit")))
+    if media_credits:
+        lines.append("Old footage and photos: " + "; ".join(media_credits))
     if plan.get("sources"):
         lines.append("Checked against: " + ", ".join(re.sub(r"^https?://(www\.)?", "", s).split("/")[0] for s in plan["sources"][:4]))
     lines += ["", "New GTA 6 secret every day. Follow for more!", "", " ".join(tags + ["#shorts"])]

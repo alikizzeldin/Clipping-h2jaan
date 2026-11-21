@@ -143,6 +143,12 @@ export type Era = {
   kind: 'buttons' | 'typed' | 'dial';
   note?: string; // small caption, e.g. "ALL WEAPONS"
   beats?: number[]; // seconds in the scene when each spoken button appears
+  // Real footage/photos of the old game, played inside the TV one after another (scene seconds).
+  // With media, the cheat shows on a strip under the TV (or on a phone for "dial").
+  media?: {src: string; at: number; kind: 'video' | 'image'; startFrom?: number; zoom?: [number, number]; flash?: boolean}[];
+  // Photos people posted (cheats written on paper…): taped cards under the TV.
+  photos?: {src: string; at: number; x: number; y: number; w: number; rot: number; caption?: string}[];
+  done?: number; // dial: seconds in the scene when the call goes through ("Cheat activated")
 };
 export type EraScene = Base & {
   type: 'era';

@@ -9,6 +9,7 @@ const faces = [
   {family: 'Inter', url: 'fonts/Inter.ttf', weight: '100 900'},
   {family: 'Tajawal', url: 'fonts/Tajawal-ExtraBold.ttf', weight: '800'},
   {family: 'Cairo', url: 'fonts/Cairo-Bold.ttf', weight: '700'},
+  {family: 'Permanent Marker', url: 'fonts/PermanentMarker.woff2'},
 ];
 
 export const fontsLoaded = Promise.all(

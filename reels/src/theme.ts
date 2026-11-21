@@ -16,6 +16,7 @@ export const F = {
   brand: 'Unbounded, sans-serif',
   mono: '"JetBrains Mono", monospace',
   arabic: 'Tajawal, Cairo, sans-serif',
+  hand: '"Permanent Marker", cursive',
   body: 'Inter, sans-serif',
 };
 
