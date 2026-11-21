@@ -561,6 +561,87 @@ def cmd_instagram(settings: Settings, args: argparse.Namespace) -> int:
     return 0 if any("sent to Instagram" in line for line in lines) or not args.clips else 1
 
 
+def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
+    """Build, render and (unless --dry-run) publish one motion-graphics reel."""
+    from . import reels
+
+    folder = Path(args.episode)
+    try:
+        plan = reels.load_plan(folder)
+    except reels.ReelError as exc:
+        log.error("%s", exc)
+        return 2
+    pub = settings.publish
+    state = State(settings.state_path)
+    activity = Activity(settings.beside_state("activity.json"))
+    rid = reels.episode_id(plan)
+    live = not args.dry_run
+    if live and rid in state.published:
+        _summary([f"{rid} is already published; nothing to do."])
+        return 0
+    if live and pub.paused:
+        _summary(["Paused from the dashboard: the reel was not published."])
+        return 0
+    publisher = None
+    if live:
+        try:
+            publisher = make_publisher(pub)
+        except SetupError as exc:
+            log.error("%s", exc)
+            return 2
+
+    cache = Path(args.cache)
+    try:
+        props = reels.build(folder, cache, preset="veryfast" if args.stills else "medium")
+        if args.stills:
+            sheet = reels.stills(props, [int(f) for f in args.stills.split(",")], Path(args.out) / f"{rid}-stills.jpg")
+            _summary([f"Layout check for {rid}: {sheet}"])
+            return 0
+        video = reels.render(props, Path(args.out) / f"{rid}.mp4", args.concurrency)
+    except reels.ReelError as exc:
+        log.error("%s", exc)
+        _summary([f"Reel {rid} could not be made: {exc}"])
+        return 1
+    reel_props = json.loads(props.read_text(encoding="utf-8"))
+    meta = reels.metadata(plan, list(settings.active.hashtags))
+    if publisher is None:
+        _summary([f"Rendered `{video}` ({video.stat().st_size >> 20} MB) — {meta['title']}"])
+        return 0
+
+    clip = reels.reel_clip(plan, float(reel_props["duration"]))
+    notes = []
+    try:
+        result = publisher.publish(video, clip, meta)
+    except PublishError as exc:
+        log.error("%s", exc)
+        activity.add("error", f"Publishing reel “{meta['clean_title']}” failed: {exc}")
+        activity.save()
+        _summary([f"Publishing {rid} failed: {exc}"])
+        return 1
+    extra = {"kind": "reel", "episode": int(plan["episode"]), "topic": plan.get("topic", ""),
+             "rating": plan.get("rating", {}).get("score"), "hook": "reel"}
+    state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra)
+    state.save()
+    activity.add("published", f"Published reel “{meta['clean_title']}”", result.link)
+    notes.append(f"- YouTube: {result.link or f'sent to Buffer (post {result.ref})'} — {meta['title']}")
+    if isinstance(publisher, BufferPublisher) and pub.instagram_channel_id and publisher.last_url:
+        try:
+            post_id = publisher.to_instagram(publisher.last_url, meta["caption"])
+            state.update(clip.id, instagram=post_id, instagram_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                         instagram_title=meta["clean_title"])
+            notes.append(f"- Instagram: sent (post {post_id})")
+        except PublishError as exc:
+            activity.add("error", f"Instagram did not take reel “{meta['clean_title']}”: {exc}")
+            notes.append(f"- Instagram failed: {exc}")
+    state.save()
+    activity.save()
+    Notifier.from_env().send(f"🎬 New reel: {meta['title']}")
+    if not args.keep:
+        video.unlink(missing_ok=True)
+    _summary([f"Published reel {rid}", *notes])
+    return 0
+
+
 def _read_json(path: Path) -> dict:
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -686,6 +767,15 @@ def main(argv: list[str] | None = None) -> int:
     p_insta = sub.add_parser("instagram", help="post clips already on YouTube to Instagram too")
     p_insta.add_argument("clips", nargs="+", help="clip ids from the publish history")
 
+    p_reel = sub.add_parser("reel", help="build, render and publish a motion-graphics reel (reels/episodes/...)")
+    p_reel.add_argument("episode", help="the episode folder, e.g. reels/episodes/002-chapter-1-money")
+    p_reel.add_argument("--dry-run", action="store_true", help="render only, publish nothing")
+    p_reel.add_argument("--stills", help="only render these frames (comma-separated) into one image, to check the layout")
+    p_reel.add_argument("--out", default="out/reels")
+    p_reel.add_argument("--cache", default=os.path.expanduser("~/.cache/gta6fied/kick"))
+    p_reel.add_argument("--concurrency", type=int)
+    p_reel.add_argument("--keep", action="store_true", help="keep the rendered video after publishing")
+
     p_notify = sub.add_parser("notify", help="send a message to your Discord or Telegram")
     p_notify.add_argument("message")
 
@@ -715,6 +805,8 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     if args.command == "instagram":
         return cmd_instagram(settings, args)
+    if args.command == "reel":
+        return cmd_reel(settings, args)
     if args.command == "run" and args.dry_run:
         args.keep = True
     return cmd_discover(settings, args) if args.command == "discover" else cmd_run(settings, args)

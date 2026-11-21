@@ -1,0 +1,382 @@
+{
+ "episode": 1,
+ "kind": "secret",
+ "topic": "UFO abduction east of Port Gellhorn after 2 AM; hidden trophy The Truth Is Out There",
+ "title": {
+  "en": "GTA 6 has a HIDDEN UFO 👽 and it can take you",
+  "ar": "صحن طائر مخفي في GTA 6 👽"
+ },
+ "summary": "Go to the dirt road east of Port Gellhorn, near the Starlet Motel, after 2 AM in-game. A woman in a beam of light asks you to get her car… and the UFO comes back for you. You wake up 3 days later with the secret trophy The Truth Is Out There.",
+ "summary_ar": "روح للطريق الترابي شرق بورت جيلهورن قرب موتيل ستارليت بعد الساعة 2 فجرًا بوقت اللعبة… والصحن الطائر بيخطفك وتاخذ كأس سري.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "GTA6UFO",
+  "GTA6EasterEggs",
+  "GTAVI",
+  "GTA6Tips",
+  "Leonida",
+  "ViceCity",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 9,
+  "fresh": 8,
+  "visual": 7,
+  "confidence": 8,
+  "score": 8.4
+ },
+ "sources": [
+  "https://gamerant.com/gta-6-ufo-aliens-location-truth-is-out-there-trophy/",
+  "https://beebom.com/gta-6-ufo-location-trophy-guide/",
+  "https://games.gg/grand-theft-auto-vi/guides/where-to-find-the-ufo-in-gta-6/",
+  "https://gta-zone.com/news/gta-6-easter-eggs/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 4,
+     "dur": 5,
+     "x": 1050
+    }
+   ]
+  },
+  "road": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 20.5,
+     "dur": 4.5,
+     "x": 900
+    }
+   ]
+  },
+  "night": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 8,
+     "dur": 3.5,
+     "x": 1100
+    }
+   ]
+  },
+  "woman": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 0,
+     "dur": 4,
+     "x": 560
+    }
+   ]
+  },
+  "beam": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 6,
+     "dur": 4.2,
+     "x": 1100
+    }
+   ]
+  },
+  "bed": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/b6/clip_01M7V77K453AEC9ZM251P9PJHJ/playlist.m3u8",
+     "channel": "cliffsavage",
+     "start": 22.6,
+     "dur": 5.3,
+     "x": 600
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 6,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 100,
+  "seed": 7,
+  "drop": 4.62,
+  "break": 15.2,
+  "back": 16.48,
+  "outro": 23.84
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "episode": 1,
+  "duration": 29.0,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.62,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6 HAS A",
+    "title": [
+     "HIDDEN",
+     "UFO"
+    ],
+    "color": "green",
+    "tag": "…and it can take you.",
+    "tagAt": 3.0,
+    "ar": "صحن طائر مخفي في GTA 6 ويقدر يخطفك",
+    "ufo": true
+   },
+   {
+    "type": "location",
+    "from": 4.62,
+    "to": 8.8,
+    "broll": {
+     "src": "road",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "LOCATION",
+    "place": "PORT GELLHORN",
+    "target": "STARLET MOTEL",
+    "direction": "EAST",
+    "region": "KELLY COUNTY · DIRT ROAD",
+    "ar": "شرق بورت جيلهورن، قرب موتيل ستارليت"
+   },
+   {
+    "type": "time",
+    "from": 8.8,
+    "to": 11.76,
+    "broll": {
+     "src": "night",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "step": "02",
+    "label": "TIME",
+    "times": [
+     "01:58",
+     "01:59",
+     "02:00"
+    ],
+    "suffix": "AM",
+    "note": "IN-GAME TIME",
+    "ar": "بعد الساعة 2 فجرًا بوقت اللعبة"
+   },
+   {
+    "type": "trigger",
+    "from": 11.76,
+    "to": 15.2,
+    "broll": {
+     "src": "woman",
+     "grade": "cold",
+     "zoom": [
+      1.04,
+      1.12
+     ]
+    },
+    "step": "03",
+    "label": "THE TRIGGER",
+    "title": "A WOMAN IN A BEAM OF LIGHT",
+    "sub": "asks you to get her car",
+    "target": {
+     "x": 330,
+     "y": 1090,
+     "w": 420,
+     "h": 860
+    },
+    "tagText": "SHE ASKS FOR HER CAR",
+    "ar": "امرأة داخل شعاع ضوء تطلب منك تجيب سيارتها"
+   },
+   {
+    "type": "twist",
+    "from": 15.2,
+    "to": 18.96,
+    "captions": false,
+    "broll": {
+     "src": "beam",
+     "grade": "green",
+     "blur": 3,
+     "zoom": [
+      1.1,
+      1.25
+     ]
+    },
+    "pre": "GO GET IT…",
+    "slamAt": 1.27,
+    "lines": [
+     {
+      "text": "THE UFO",
+      "at": 1.28,
+      "color": "green",
+      "size": 230
+     },
+     {
+      "text": "COMES BACK",
+      "at": 1.84,
+      "size": 160
+     },
+     {
+      "text": "FOR YOU.",
+      "at": 2.4,
+      "color": "pink",
+      "size": 190
+     }
+    ],
+    "ar": "والصحن الطائر يرجع… ويخطفك أنت!",
+    "ufo": true
+   },
+   {
+    "type": "reward",
+    "from": 18.96,
+    "to": 23.84,
+    "broll": {
+     "src": "bed",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "later": "3 DAYS LATER",
+    "rewardAt": 2.25,
+    "label": "SECRET TROPHY UNLOCKED",
+    "name": "The Truth Is Out There",
+    "tier": "BRONZE · HIDDEN",
+    "ar": "تصحى بعد 3 أيام… ومعك كأس سري"
+   },
+   {
+    "type": "cta",
+    "from": 23.84,
+    "to": 29.0,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "SECRET FILE #002 · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.15,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.82,
+    "volume": 0.35
+   },
+   {
+    "src": "ufo.wav",
+    "at": 2.2,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.45,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.65,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 9.1,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 9.5,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.62,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 13.4,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 15.2,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.45,
+    "volume": 0.55
+   },
+   {
+    "src": "ufo.wav",
+    "at": 16.5,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.85,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 21.2,
+    "volume": 0.8
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.7,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.86,
+    "volume": 0.55
+   }
+  ]
+ }
+}

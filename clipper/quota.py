@@ -36,6 +36,8 @@ def plan(
         return [], f"the next clip is due in {pub.min_gap_hours - idle:.1f} hours"
 
     each = pub.featured_per_day if featured else 0
+    if each <= 0:
+        featured = set()  # no reserved slots: featured streamers compete like everyone else
     reserved = min(each * len(featured), pub.max_per_day)
     posted: dict[str, int] = {}
     for _, channel in uploads:

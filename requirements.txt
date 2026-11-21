@@ -6,3 +6,5 @@ faster-whisper>=1.1
 onnxruntime>=1.17
 tokenizers>=0.15
 huggingface_hub>=0.23
+scipy>=1.11            # reels: the music composer
+soundfile>=0.12        # reels: writing the music

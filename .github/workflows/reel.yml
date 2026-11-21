@@ -1,0 +1,119 @@
+name: Reel
+run-name: Reel ${{ inputs.episode }}${{ inputs.dry_run && ' (dry run)' || '' }}
+
+# Renders one motion-graphics reel from its plan (reels/episodes/<episode>/)
+# and posts it through Buffer to YouTube and Instagram. The "Reels studio"
+# Claude session writes the plans and starts this workflow twice a day (see
+# reels/PLAYBOOK.md); it can also be started by hand from the Actions tab.
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: Episode folder under reels/episodes (e.g. 002-chapter-1-money)
+        required: true
+        type: string
+      dry_run:
+        description: Render only, publish nothing (the video is attached to the run)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: clip  # shares the publish history with the clip runs; one writer at a time
+  cancel-in-progress: false
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    env:
+      CLIPPER_PRIVACY: ${{ vars.CLIPPER_PRIVACY }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY || secrets.BUFFER }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      EPISODE: ${{ inputs.episode }}
+      DRY_RUN: ${{ inputs.dry_run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Check the episode
+        run: |
+          case "$EPISODE" in */*|*..*|"") echo "Give the folder name only, e.g. 002-chapter-1-money"; exit 1;; esac
+          test -f "reels/episodes/$EPISODE/plan.json" || { echo "No plan at reels/episodes/$EPISODE"; exit 1; }
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: reels/package-lock.json
+
+      - name: Install ffmpeg
+        run: |
+          if command -v ffmpeg >/dev/null; then ffmpeg -version | head -1; exit 0; fi
+          for attempt in 1 2 3; do
+            if timeout 180 sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=20 update -qq \
+               && timeout 300 sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=20 install -y -qq ffmpeg; then
+              exit 0
+            fi
+            echo "Installing ffmpeg timed out or failed (try $attempt); trying again."
+          done
+          exit 1
+
+      - name: Install packages
+        run: |
+          pip install -r requirements.txt
+          cd reels && npm ci --no-audit --no-fund && npx remotion browser ensure
+
+      - name: Fetch the owner's settings from the dashboard
+        run: python -m clipper pull-control
+
+      - name: Render and publish the reel
+        run: |
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run --keep); fi
+          python -m clipper reel "reels/episodes/$EPISODE" "${args[@]}"
+
+      - name: Attach the video (dry runs)
+        if: always() && hashFiles('out/reels/*.mp4') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: reel-${{ inputs.episode }}
+          path: out/reels/*.mp4
+          retention-days: 5
+
+      - name: Tell the owner if it failed
+        if: failure() && !inputs.dry_run
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python -m clipper notify "⚠️ The reel ${{ inputs.episode }} failed. Details at $RUN_URL" || true
+
+      - name: Save publish history
+        if: always() && !inputs.dry_run
+        run: |
+          if [ -z "$(git status --porcelain state control)" ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          ours="$RUNNER_TEMP/ours"
+          rm -rf "$ours" && mkdir -p "$ours" && cp -r state control "$ours"/ 2>/dev/null || true
+          for attempt in 1 2 3 4; do
+            git fetch -q origin "$GITHUB_REF_NAME"
+            git reset -q --hard "origin/$GITHUB_REF_NAME"
+            python -m clipper merge-state "$ours"
+            git add state control
+            git diff --cached --quiet && exit 0
+            git commit -q -m "Record published clips and dashboard settings"
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            echo "Someone saved meanwhile (try $attempt); merging again."
+            sleep $((attempt * 5))
+          done
+          exit 1

@@ -115,6 +115,8 @@ class State:
         """How many clips were also posted to Instagram since `since`."""
         count = 0
         for entry in self.published.values():
+            if entry.get("kind") == "reel":  # reels always go to Instagram, outside the clips' share
+                continue
             try:
                 if entry.get("instagram") and datetime.fromisoformat(entry["instagram_at"]) >= since:
                     count += 1
@@ -132,10 +134,11 @@ class State:
 
         Clips from a one-off launch burst are left out: they were extra, and
         must not use up the day's regular slots (such as a featured streamer's).
+        Reels are left out too: they have their own schedule.
         """
         found = []
         for entry in self.published.values():
-            if entry.get("burst"):
+            if entry.get("burst") or entry.get("kind") == "reel":
                 continue
             try:
                 when = datetime.fromisoformat(entry["uploaded_at"])

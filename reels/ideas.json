@@ -1,0 +1,12 @@
+[
+ {
+  "date": "2026-11-21",
+  "ideas": [
+   {"idea": "UFO abduction east of Port Gellhorn after 2 AM, hidden trophy The Truth Is Out There", "demand": 9, "payoff": 9, "fresh": 8, "visual": 7, "confidence": 8, "score": 8.4, "chosen": "001-hidden-ufo"},
+   {"idea": "Chapter 1 money is wiped at Chapter 2 (save it in Family Savings) + sell tracker-free cars to Moses", "demand": 9, "payoff": 9, "fresh": 9, "visual": 8, "confidence": 8, "score": 8.6, "chosen": "002-chapter-1-money"},
+   {"idea": "Painted egg nest on the radio tower, secret cutscene", "demand": 8, "payoff": 6, "fresh": 8, "visual": 6, "confidence": 6, "score": 6.9, "why_not": "sources disagree on where the tower is"},
+   {"idea": "Skunk Ape (Bigfoot) near Cottonmouth Lake", "demand": 8, "payoff": 7, "fresh": 7, "visual": 5, "confidence": 5, "score": 6.6, "why_not": "needs more confirmation"},
+   {"idea": "Jet-ski dog and the island of dogs", "demand": 7, "payoff": 6, "fresh": 8, "visual": 5, "confidence": 4, "score": 6.1, "why_not": "rumour"}
+  ]
+ }
+]
