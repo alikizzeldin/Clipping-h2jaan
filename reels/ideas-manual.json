@@ -1,1 +1,150 @@
-[]
+[
+ {
+  "date": "2026-11-21",
+  "wake_up": "first manual batch (m101–m104)",
+  "ideas": [
+   {
+    "idea": "Paul Walker tribute car (green Maibatsu '97 Penumbra FF) in a villa garage on Vespucci Island; snake in the trunk (Toy Story nod)",
+    "format": "SECRET FILE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 9,
+    "confidence": 8,
+    "score": 8.4,
+    "chosen": "m101-paul-walker-car",
+    "sources": [
+     "https://www.jalopnik.com/2322396/gta-6-grand-theft-auto-paul-walker-fast-and-furious-toyota-supra-turbo-tribute/",
+     "https://insider-gaming.com/paul-walker-gta-6-easter-egg/",
+     "https://alcasthq.com/gta-6-paul-walker-car/",
+     "https://www.theclick.gg/gta-6-paul-walker-car-location/",
+     "https://www.gfinityesports.com/article/gta-6-how-to-find-the-fast-furious-1995-mitsubishi-eclipse",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-paul-walker-car-location-how-to-get/"
+    ]
+   },
+   {
+    "idea": "Free garage + free car: Boobie's bedroom laptop (Muffins-Queen-15) → WhatUp chat → La Perle garage code 92665 → Vanessa's Growler",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 9,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.9,
+    "chosen": "m102-free-garage-car",
+    "sources": [
+     "https://gamerant.com/gta-6-apartment-laptop-password-lapere-garage-growler-location/",
+     "https://showgamer.com/en/guides/8111-gta-6-parol-ot-noutbuka-bubi-i-kod-garazha-s-besplatnoy-growler",
+     "https://game8.co/games/GTA-6/archives/638887",
+     "https://game8.co/games/GTA-6/archives/638531",
+     "https://gamerhour.net/locations/gta-6-aunties-garage-in-la-perle-location-and-garage-code-get-venessas-growler/",
+     "https://outputlag.com/guides/gta-6-safe-garage-codes/"
+    ]
+   },
+   {
+    "idea": "4 settings to change: subtitles to all dialogue, Camera Bob 10 → 3-5, Motion Blur 0-1, Camera Shake off",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.2,
+    "chosen": "m103-settings-to-change",
+    "sources": [
+     "https://www.keengamer.com/articles/guides/best-gta-6-settings-to-change-first-motion-blur-aim-and-ps5-pro/",
+     "https://www.redbull.com/int-en/gta-6-best-settings-ps5-xbox",
+     "https://space4games.com/en/games-en/gta-6-best-settings-guide/",
+     "https://allthings.how/gta-6-accessibility-options/",
+     "https://www.igeeksblog.com/best-gta-6-settings/",
+     "https://outputlag.com/guides/gta-6-best-settings-controls/",
+     "https://support.rockstargames.com/articles/4jUHNdP22SmaKSF8DWqhXC/how-to-change-grand-theft-auto-vi-settings"
+    ]
+   },
+   {
+    "idea": "Dexter's apartment: Trinity Apartments on Washington Island, Slice of Life lookalike boat, knife and syringe on the roof",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 6,
+    "confidence": 8,
+    "score": 7.4,
+    "chosen": "m104-dexter-apartment",
+    "sources": [
+     "https://www.thewrap.com/culture-lifestyle/culture/gta-6-dexter-morgan-apartment-easter-egg/",
+     "https://gamerant.com/gta-6-where-find-dexter-morgans-apartment-secret-easter-egg-trinity/",
+     "https://bloody-disgusting.com/video-games/3976301/grand-theft-auto-vi-contains-a-dexter-easter-egg/",
+     "https://www.keengamer.com/articles/guides/gta-6-dexter-easter-egg-apartment-location-and-clues/",
+     "https://www.aol.com/articles/yes-dexter-morgan-gta-6-005901000.html",
+     "https://www.gamespot.com/articles/how-to-find-dexter-morgans-apartment-in-gta-6/",
+     "https://www.dreadcentral.com/news/598306/theres-a-dexter-easter-egg-in-gta-vi-because-of-course-there-is/"
+    ]
+   },
+   {
+    "idea": "Kenton's treasure dives after Island Dreams (7 sets, sell to Kenton)",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.0,
+    "why_not": "passes, but payouts disagree between guides; the other four are stronger (keep for a later batch)"
+   },
+   {
+    "idea": "Bigfoot / Skunk Ape near Cottonmouth Lake + Kirk's Skunk Apeology missions",
+    "format": "SECRET FILE",
+    "demand": 9,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 5,
+    "score": 6.8,
+    "why_not": "flyer location ($500 vs $1,000 reward) and spawn spot still disagree; spawn is random"
+   },
+   {
+    "idea": "Painted egg nest on a radio tower, throw it for a secret cutscene",
+    "format": "EASTER EGG",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 6,
+    "score": 6.3,
+    "why_not": "the tower's location still disputed between sources"
+   },
+   {
+    "idea": "Missable trailer cash in Gone Fishing (Chapter 1)",
+    "format": "DON'T MISS",
+    "demand": 6,
+    "payoff": 4,
+    "retention": 5,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 7,
+    "score": 5.5,
+    "why_not": "tiny payout (about $80) and amounts disagree"
+   },
+   {
+    "idea": "Wasted or Busted takes all the cash you carry",
+    "format": "DON'T MISS",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 7,
+    "score": 6.9,
+    "why_not": "busted rules disputed; overlaps episode 002's money warning"
+   }
+  ]
+ }
+]
