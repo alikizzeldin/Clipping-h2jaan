@@ -7,12 +7,14 @@ and posts ONE reel.** The reels are the channel's best content: be accurate, be
 interesting, and make every frame look high-end. Examples to match: episodes 001
 (hidden UFO) and 002 (Chapter 1 money) under `reels/episodes/`.
 
-Work in `/home/user/Clipping-h2jaan` on branch `ccr-cceae731-x5d03t`.
+Work in the repository's checkout (normally `/home/user/Clipping-h2jaan`) on
+branch `ccr-cceae731-x5d03t`.
 
 ## 0. Get ready (every wake-up)
 
 ```bash
-cd /home/user/Clipping-h2jaan
+cd "$(git rev-parse --show-toplevel 2>/dev/null || echo /home/user/Clipping-h2jaan)"
+git checkout -q ccr-cceae731-x5d03t 2>/dev/null || git checkout -q -b ccr-cceae731-x5d03t origin/ccr-cceae731-x5d03t
 git fetch -q origin ccr-cceae731-x5d03t && git merge -q --no-edit origin/ccr-cceae731-x5d03t
 pip install -q -r requirements.txt
 (cd reels && npm ci --no-audit --no-fund >/dev/null)
