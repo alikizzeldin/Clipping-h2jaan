@@ -152,8 +152,8 @@ export const Combo: React.FC<{s: ComboScene}> = ({s}) => {
             opacity: frame >= typeAt + i * 12 ? 1 : 0.15}}>{a}</div>
         ))}
       </div>
-      <div style={{position: 'absolute', top: 1110, left: 60, right: 60, textAlign: 'center', fontFamily: F.display, fontSize: 92, color: '#fff', lineHeight: 1,
-        textTransform: 'uppercase', opacity: ease(frame, typeAt, typeAt + 10), WebkitTextStroke: '8px #000', paintOrder: 'stroke fill'}}>{s.title}</div>
+      <div style={{position: 'absolute', top: 1110, left: 40, right: 40, textAlign: 'center', fontFamily: F.display, fontSize: Math.min(92, Math.floor(960 / (s.title.length * 0.5))), color: '#fff', lineHeight: 1,
+        whiteSpace: 'nowrap', textTransform: 'uppercase', opacity: ease(frame, typeAt, typeAt + 10), WebkitTextStroke: '8px #000', paintOrder: 'stroke fill'}}>{s.title}</div>
       <Arabic text={s.ar} delay={typeAt + 8} top={1230} size={52} />
     </AbsoluteFill>
   );
