@@ -85,7 +85,7 @@ export type ListScene = Base & {
   label: string;
   fromLabel?: string; // e.g. "CHAPTER 1"
   toLabel?: string; // e.g. "CHAPTER 2"
-  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save'}[];
+  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save' | 'ticket' | 'boat'}[];
   ar?: string;
   arAt?: number;
   cardAt?: number; // when the list card rises (leave the footage clear until then)

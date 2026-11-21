@@ -1230,7 +1230,7 @@
    "comments": 0
   },
   "reel_001": {
-   "video_id": "",
+   "video_id": "6b01eb89d864a011056af4f9",
    "via": "buffer",
    "link": "",
    "title": "GTA 6 has a HIDDEN UFO 👽 and it can take you | صحن طائر مخفي في GTA 6 👽 #shorts",
@@ -1246,16 +1246,19 @@
    "topic": "UFO abduction east of Port Gellhorn after 2 AM; hidden trophy The Truth Is Out There",
    "rating": 8.4,
    "hook": "reel",
-   "status": "youtube_pending",
-   "youtube_after": "2026-11-21T19:24:26+00:00",
+   "status": "",
+   "youtube_after": "",
    "instagram": "6b010b61d9cbb430a115b979",
    "instagram_at": "2026-11-21T03:09:31+00:00",
    "instagram_title": "GTA 6 has a HIDDEN UFO 👽 and it can take you",
    "instagram_status": "sent",
-   "instagram_link": "https://www.instagram.com/reel/Df_O4rclaUQ/"
+   "instagram_link": "https://www.instagram.com/reel/Df_O4rclaUQ/",
+   "error": "",
+   "youtube_at": "2026-11-21T19:00:56+00:00",
+   "youtube_retried": "2026-11-21T19:00:56+00:00"
   },
   "reel_002": {
-   "video_id": "",
+   "video_id": "6b01ed5dd864a011056bc6cc",
    "via": "buffer",
    "link": "",
    "title": "Your GTA 6 money is about to VANISH 😱 (do this now) | فلوسك في GTA 6 راح تختفي 😱 #shorts",
@@ -1271,13 +1274,16 @@
    "topic": "Chapter 1 money is wiped at Chapter 2: move it to BuckMe Family Savings before Tourist Trap; then sell tracker-free cars to Moses",
    "rating": 8.6,
    "hook": "reel",
-   "status": "youtube_pending",
-   "youtube_after": "2026-11-21T19:24:26+00:00",
+   "status": "",
+   "youtube_after": "",
    "instagram": "6b010bc0dd205ed779b557d6",
    "instagram_at": "2026-11-21T03:11:07+00:00",
    "instagram_title": "Your GTA 6 money is about to VANISH 😱 (do this now)",
    "instagram_status": "sent",
-   "instagram_link": "https://www.instagram.com/reel/Df_O-6ejEbv/"
+   "instagram_link": "https://www.instagram.com/reel/Df_O-6ejEbv/",
+   "error": "",
+   "youtube_at": "2026-11-21T19:07:40+00:00",
+   "youtube_retried": "2026-11-21T19:07:40+00:00"
   },
   "reel_003": {
    "video_id": "",
@@ -1302,6 +1308,28 @@
    "instagram_title": "GTA 6 never tells you these 4 controls 🎮 (#1 saves your car)",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgAmmReDCM6/"
+  },
+  "reel_006": {
+   "video_id": "",
+   "via": "buffer",
+   "link": "",
+   "title": "GTA 6 was HIDING in a 2021 game 👀 (check the garage) | GTA 6 كانت مخبّاة في لعبة من 2021 👀 #shorts",
+   "channel": "gta6fied",
+   "source": "reel",
+   "category": "grand-theft-auto-vi",
+   "uploaded_at": "2026-11-21T19:19:11+00:00",
+   "duration": 30,
+   "origin": "reel",
+   "kick_views": 0,
+   "kind": "reel",
+   "episode": 6,
+   "topic": "The house photo in a UFO bar in the 2021 San Andreas remaster is a real GTA 6 house in Belville; its garage holds notes from someone who thinks they're trapped in a video game, can't leave the state and plans to escape by boat; only 'J' and 'L' are immune",
+   "rating": 8.5,
+   "hook": "reel",
+   "status": "instagram_only",
+   "instagram": "6b01eeb0846b0ee90730e07b",
+   "instagram_at": "2026-11-21T19:19:22+00:00",
+   "instagram_title": "GTA 6 was HIDING in a 2021 game 👀 (check the garage)"
   }
  },
  "skipped": {

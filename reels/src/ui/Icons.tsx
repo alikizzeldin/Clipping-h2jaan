@@ -53,6 +53,19 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
           <path d="M36 62 H44" {...common} />
         </>
       ) : null}
+      {name === 'ticket' ? (
+        <>
+          <path d="M10 24 H70 V36 C64 36 62 40 62 40 C62 40 64 44 70 44 V56 H10 V44 C16 44 18 40 18 40 C18 40 16 36 10 36 Z" {...common} />
+          <path d="M46 26 V54" {...common} strokeDasharray="4 6" />
+        </>
+      ) : null}
+      {name === 'boat' ? (
+        <>
+          <path d="M8 50 H72 L62 64 H18 Z" {...common} />
+          <path d="M38 50 V12 L60 44 H38" {...common} />
+          <path d="M8 72 Q18 66 28 72 T48 72 T68 72" {...common} />
+        </>
+      ) : null}
     </svg>
   );
 };

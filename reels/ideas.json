@@ -107,5 +107,128 @@
     "why_not": "only one source so far"
    }
   ]
+ },
+ {
+  "date": "2026-11-21",
+  "wake_up": "18:41 UTC",
+  "ideas": [
+   {
+    "idea": "The house photo hidden in a UFO bar in the 2021 San Andreas remaster is a real GTA 6 house in Belville; its garage holds notes from someone who thinks they're trapped in a video game (can't leave the state, plotting to escape by boat; only 'J' and 'L' are immune)",
+    "format": "EASTER EGG",
+    "demand": 9,
+    "payoff": 9,
+    "retention": 9,
+    "fresh": 8,
+    "visual": 6,
+    "confidence": 8,
+    "chosen": "006-belville-house",
+    "sources": [
+     "https://www.dexerto.com/gta/gta-6-screenshot-hidden-in-san-andreas-back-in-2021-was-real-and-the-house-has-a-dark-secret-3429837/",
+     "https://kotaku.com/turns-out-gta-san-andreas-remastered-was-teasing-gta-6-back-in-2021-2000758132",
+     "https://games.gg/news/gta-6-belville-house-2021-image/",
+     "https://vgtimes.com/gaming-news/175127-gta-6-house-photo-hidden-in-san-andreas-was-real-and-its-garage-has-a-dark-secret.html",
+     "https://www.a90skid.com/gta-6-fan-identifies-belville-house-with-a-conspiracy-easter-egg-in-its-garage/",
+     "https://www.theclick.gg/gta-6-belville-house-location/"
+    ],
+    "note": "Left out: the 'number six' on the walls (one source only) and any claim that Rockstar planned it in 2021 (unconfirmed).",
+    "score": 8.5
+   },
+   {
+    "idea": "Leonida's banknotes show Red Dead presidents (Waxman on the $10, Hardin on the $1) from RDR2's cigarette cards",
+    "format": "EASTER EGG",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 4,
+    "visual": 6,
+    "confidence": 8,
+    "why_not": "known since the May 2025 screenshots; weak end payoff",
+    "sources": [
+     "https://www.gtaboom.com/GTA_6_Currency_Detail_Reveals_Secret_Red_Dead_Redemption_2_Connection",
+     "https://www.4gamers.com.tw/news/detail/71659/gta6-cash-seem-to-depict-the-same-presidents-from-rdr2s-cigarette-cards"
+    ],
+    "score": 6.3
+   },
+   {
+    "idea": "Auto-drive: set a waypoint and let the car drive itself (speed with L2/R2)",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 6,
+    "why_not": "guides disagree on the buttons and on whether a setting must be changed first",
+    "sources": [
+     "https://beebom.com/how-to-auto-drive-in-gta-6/",
+     "https://www.playnews.gg/en/guides/gta-6-auto-drive-how-to-activate-and-use-it-to-explore-leonida",
+     "https://xboxplay.games/gta-6/gta-6-how-to-auto-drive-use-autopilot-controls-77416"
+    ],
+    "score": 6.4
+   },
+   {
+    "idea": "Free early weapons (Assassin Nipper .38 in a Permit Keys shipwreck hatch, Duke 556 + Type 9 in a South Vice-Dale warehouse)",
+    "format": "SECRET FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 5,
+    "why_not": "guides disagree on several locations",
+    "sources": [
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-secret-weapons-locations-unlocks/",
+     "https://www.noobfeed.com/articles/gta-6-early-game-guns"
+    ],
+    "score": 6.8
+   },
+   {
+    "idea": "Bank your cash: you lose what you carry when you die (carry limit about $20,000 early on)",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 4,
+    "visual": 6,
+    "confidence": 7,
+    "why_not": "too close to episode 002's money warning; the carry limit figure is disputed",
+    "sources": [
+     "https://alcasthq.com/?p=87653",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-money-guide-best-ways-to-make-money-early/"
+    ],
+    "score": 6.0
+   },
+   {
+    "idea": "Positive Mental Attitude: the one potentially missable trophy (first meditation, Chapter 1)",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 6,
+    "why_not": "guides say 'potentially' missable and disagree on what is required (already rejected earlier today)",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-grand-theft-auto-vi/",
+     "https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/"
+    ],
+    "score": 6.3
+   },
+   {
+    "idea": "GTA 6's record launch ($3.8B reported)",
+    "format": "GTA 6 NEWS",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 9,
+    "visual": 5,
+    "confidence": 5,
+    "why_not": "no official Rockstar/Take-Two figure found; figures differ between reports",
+    "sources": [
+     "https://tech.yahoo.com/gaming/breaking-news/live/gta-6-live-updates-record-38-billion-launch-viral-clips-and-the-secrets-players-are-finding-in-leonida-163038757.html"
+    ],
+    "score": 6.4
+   }
+  ]
  }
 ]
