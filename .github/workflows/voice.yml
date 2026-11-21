@@ -1,0 +1,70 @@
+name: Voice
+run-name: Voice ${{ inputs.episode }} (spare ElevenLabs key)
+
+# Speaks an episode's script.txt with the SPARE ElevenLabs key (repository
+# secret ELEVENLABS_SPARE_KEY) and commits voice.mp3 + alignment.json to the
+# episode folder. The Reels studio starts it when this month's allowance on
+# the main key (the one the Claude environment sends) is used up — see step 5
+# of reels/PLAYBOOK.md.
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: Episode folder under reels/episodes (e.g. 008-some-topic)
+        required: true
+        type: string
+      model:
+        description: ElevenLabs model (eleven_v4, or eleven_v3 for [emotion] tags)
+        type: string
+        default: eleven_v4
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voice-${{ inputs.episode }}
+  cancel-in-progress: false
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_SPARE_KEY }}
+      EPISODE: ${{ inputs.episode }}
+      MODEL: ${{ inputs.model }}
+      BRANCH: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Check the episode and the key
+        run: |
+          case "$EPISODE" in */*|*..*|"") echo "Give the folder name only, e.g. 008-some-topic"; exit 1;; esac
+          case "$MODEL" in eleven_v4|eleven_v3|eleven_multilingual_v2) ;; *) echo "Unknown model $MODEL"; exit 1;; esac
+          test -f "reels/episodes/$EPISODE/script.txt" || { echo "No script at reels/episodes/$EPISODE"; exit 1; }
+          test -n "$ELEVENLABS_API_KEY" || { echo "Add the repository secret ELEVENLABS_SPARE_KEY first"; exit 1; }
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -q -r requirements.txt
+
+      - name: Speak
+        run: python reels/tools/voice.py "reels/episodes/$EPISODE" --engine elevenlabs --model "$MODEL"
+
+      - name: Commit the voice
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "reels/episodes/$EPISODE/voice.mp3" "reels/episodes/$EPISODE/alignment.json"
+          git commit -q -m "Voice for $EPISODE (spare ElevenLabs key)" || { echo "Nothing changed"; exit 0; }
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin "$BRANCH" && git push -q origin "HEAD:$BRANCH" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
