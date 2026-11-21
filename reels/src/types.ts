@@ -300,6 +300,8 @@ export type AltScene = Base & {
   answer: string;
   answerAt: number;
   chips: {text: string; at: number; tone: 'good' | 'warn' | 'bad'}[];
+  shot?: string; // a real screenshot of the app, shown in the window
+  shotUntil?: number; // after this, the window shows the streamed game instead
   ar?: string;
 };
 

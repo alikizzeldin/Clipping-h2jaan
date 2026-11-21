@@ -298,15 +298,22 @@ export const Alt: React.FC<{s: AltScene}> = ({s}) => {
               stroke={i < bars ? BLUE : '#444'} strokeWidth={3.5} fill="none" />)}
             <circle cx={17} cy={22} r={3} fill={BLUE} />
           </svg>
-          <div style={{fontFamily: F.mono, fontWeight: 700, fontSize: 22, color: 'rgba(255,255,255,0.8)'}}>STREAMING FROM YOUR PS5…</div>
+          <div style={{fontFamily: F.mono, fontWeight: 700, fontSize: 22, color: 'rgba(255,255,255,0.8)'}}>
+            {s.shot && frame < sec(s.shotUntil ?? 999) ? s.answer : 'STREAMING FROM YOUR PS5…'}</div>
         </div>
         <div style={{position: 'absolute', top: 54, left: 0, right: 0, bottom: 0}}>
           <div style={{position: 'absolute', inset: 0, filter: 'blur(1.5px) saturate(0.9)'}}><Background broll={s.broll} /></div>
+          {s.shot && frame < sec(s.shotUntil ?? 999) ? (
+            <div style={{position: 'absolute', inset: 0, overflow: 'hidden', background: '#000'}}>
+              <Img src={staticFile(s.shot)} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'left top',
+                transform: `scale(${interpolate(frame, [sec(s.answerAt), sec(s.shotUntil ?? 10)], [1.0, 1.12], clamp)})`, transformOrigin: '30% 30%'}} />
+            </div>
+          ) : null}
         </div>
         <div style={{position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center', fontFamily: F.display, fontSize: 130, lineHeight: 1, color: '#fff',
           WebkitTextStroke: '9px #000', paintOrder: 'stroke fill'}}>{s.answer}</div>
       </div>
-      <div style={{position: 'absolute', top: 1030, left: 60, right: 60, display: 'flex', justifyContent: 'center', gap: 18}}>
+      <div style={{position: 'absolute', top: 1030, left: 50, right: 50, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 16}}>
         {s.chips.map((c, i) => {
           const p = pop(frame, sec(c.at) - 2, 10, 0.5, 230);
           return (
@@ -316,7 +323,7 @@ export const Alt: React.FC<{s: AltScene}> = ({s}) => {
           );
         })}
       </div>
-      <Arabic text={s.ar} delay={sec(s.answerAt) + 6} top={1170} size={54} />
+      <Arabic text={s.ar} delay={sec(s.answerAt) + 6} top={s.chips.length > 4 ? 1330 : 1170} size={50} />
     </AbsoluteFill>
   );
 };
