@@ -641,5 +641,6 @@
         "volume": 0.4
       }
     ]
-  }
+  },
+  "wait_for_youtube": true
 }
