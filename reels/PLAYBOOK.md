@@ -33,6 +33,8 @@ Every folder in `reels/episodes/` is one reel. A reel is published when
 Folders starting with `m` (m101, m102…) are the manual studio's reels for the
 owner to post by hand (`reels/MANUAL.md`): leave them alone, and don't repeat
 their topics either. Your own episodes are numbered 1–99.
+A folder whose `status.json` has `"hold"` is waiting for the owner's approval:
+never post it, and don't reuse its topic.
 If one of your folders is not published yet:
 
 - If it has no `queued_at` in `reels/episodes/<folder>/status.json`, start the

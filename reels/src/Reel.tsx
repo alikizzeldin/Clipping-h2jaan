@@ -16,6 +16,8 @@ import {Phone} from './scenes/Phone';
 import {Scan} from './scenes/Scan';
 import {Cash} from './scenes/Cash';
 import {Control} from './scenes/Control';
+import {Era} from './scenes/Era';
+import {Combo, Dial, Menu, Stat} from './scenes/Cheats';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 
@@ -33,6 +35,11 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'scan': return <Scan s={s} />;
     case 'cash': return <Cash s={s} />;
     case 'control': return <Control s={s} />;
+    case 'era': return <Era s={s} />;
+    case 'dial': return <Dial s={s} />;
+    case 'stat': return <Stat s={s} />;
+    case 'combo': return <Combo s={s} />;
+    case 'menu': return <Menu s={s} />;
   }
 };
 

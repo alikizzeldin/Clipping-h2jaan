@@ -64,7 +64,16 @@ def words(alignment: dict) -> list[dict]:
         last = b
     if cur:
         out.append({"text": cur, "start": round(first, 3), "end": round(last, 3)})
-    return out
+    # ElevenLabs v3 emotion tags ("[softly, nostalgic]") are directions, not words: never caption them.
+    spoken, in_tag = [], False
+    for w in out:
+        if w["text"].startswith("["):
+            in_tag = True
+        if not in_tag:
+            spoken.append(w)
+        if w["text"].endswith("]"):
+            in_tag = False
+    return spoken
 
 
 def load_plan(folder: Path) -> dict:

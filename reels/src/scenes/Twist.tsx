@@ -27,11 +27,13 @@ export const Twist: React.FC<{s: TwistScene}> = ({s}) => {
         </AbsoluteFill>
       ) : (
         <>
-          <Beam x={540} top={430} bottom={1920} topWidth={200} bottomWidth={1100} opacity={ufo * 0.85} />
-          <Particles x={100} y={500} w={880} h={1400} count={70} seed="twist" speed={2.2} />
-          <div style={{position: 'absolute', left: 540 - 260, top: 230 + Math.sin(frame / 7) * 12, transform: `scale(${0.6 + 0.4 * ufo})`, opacity: ufo}}>
-            <Ufo width={520} />
-          </div>
+          {s.ufo ? <Beam x={540} top={430} bottom={1920} topWidth={200} bottomWidth={1100} opacity={ufo * 0.85} /> : null}
+          <Particles x={100} y={500} w={880} h={1400} count={70} seed="twist" speed={2.2} color={s.ufo ? C.green : C.pink} />
+          {s.ufo ? (
+            <div style={{position: 'absolute', left: 540 - 260, top: 230 + Math.sin(frame / 7) * 12, transform: `scale(${0.6 + 0.4 * ufo})`, opacity: ufo}}>
+              <Ufo width={520} />
+            </div>
+          ) : null}
           <div style={{position: 'absolute', top: 700, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6}}>
             {s.lines.map((line, i) => {
               const at = sec(line.at);

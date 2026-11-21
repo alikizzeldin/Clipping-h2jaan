@@ -84,7 +84,7 @@ export type ListScene = Base & {
   label: string;
   fromLabel?: string; // e.g. "CHAPTER 1"
   toLabel?: string; // e.g. "CHAPTER 2"
-  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone'}[];
+  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save'}[];
   ar?: string;
   arAt?: number;
   cardAt?: number; // when the list card rises (leave the footage clear until then)
@@ -132,9 +132,66 @@ export type ControlScene = Base & {
   ar?: string;
 };
 
+export type Era = {
+  game: string; // "VICE CITY"
+  year: string; // "2002"
+  look: 'vc' | 'sa' | 'iv' | 'v';
+  at: number; // seconds into the scene
+  cheat: string; // what is shown: buttons ("R1 R2 L1 R2 ← ↓ → ↑"), a word, or a number
+  kind: 'buttons' | 'typed' | 'dial';
+  note?: string; // small caption, e.g. "ALL WEAPONS"
+  beats?: number[]; // seconds in the scene when each spoken button appears
+};
+export type EraScene = Base & {
+  type: 'era';
+  eras: Era[];
+  recap?: {at: number; lines: {text: string; at: number; color?: string}[]}; // the closing look back
+  ar?: string;
+};
+export type DialScene = Base & {
+  type: 'dial';
+  kicker: string;
+  number: string;
+  typeFrom: number;
+  failAt: number;
+  stamp: string;
+  title: string[];
+  ar?: string;
+};
+export type StatScene = Base & {
+  type: 'stat';
+  kicker: string;
+  value: number;
+  countAt: number;
+  label: string;
+  sub?: string;
+  ar?: string;
+};
+export type ComboScene = Base & {
+  type: 'combo';
+  label: string;
+  phoneAt: number;
+  holdAt: number;
+  typeAt: number;
+  sequence: string[]; // D-pad presses shown, e.g. ["↑", "→", "↓", "←"]
+  xbox: string; // "LB + RB"
+  title: string;
+  ar?: string;
+};
+export type MenuScene = Base & {
+  type: 'menu';
+  menu: string; // "PROGRESS"
+  tab: string; // "CHEATS"
+  revealAt: number;
+  unlockAt: number;
+  note?: string;
+  ar?: string;
+};
+
 export type Scene =
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
-  | ListScene | PhoneScene | ScanScene | CashScene | ControlScene;
+  | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
+  | EraScene | DialScene | StatScene | ComboScene | MenuScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

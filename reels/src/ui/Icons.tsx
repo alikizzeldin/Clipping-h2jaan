@@ -33,6 +33,20 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
           <circle cx="56" cy="60" r="7" {...common} />
         </>
       ) : null}
+      {name === 'trophy' ? (
+        <>
+          <path d="M24 12 H56 V34 C56 46 48 52 40 52 C32 52 24 46 24 34 Z" {...common} />
+          <path d="M24 18 H12 C12 30 18 36 26 36 M56 18 H68 C68 30 62 36 54 36" {...common} />
+          <path d="M40 52 V62 M28 68 H52" {...common} />
+        </>
+      ) : null}
+      {name === 'save' ? (
+        <>
+          <path d="M12 12 H58 L68 22 V68 H12 Z" {...common} />
+          <rect x="24" y="12" width="28" height="18" {...common} />
+          <rect x="22" y="44" width="36" height="24" {...common} />
+        </>
+      ) : null}
       {name === 'phone' ? (
         <>
           <rect x="22" y="8" width="36" height="64" rx="8" {...common} />
