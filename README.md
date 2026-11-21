@@ -33,13 +33,13 @@ are also on the dashboard's Settings page.
 
 ## How many, and from whom
 
-- `publish.max_per_day` clips go out per 24 hours (12), at least
-  `min_gap_hours` apart (1.5), one per run, so they are spread across the day.
+- `publish.max_per_day` clips go out per 24 hours (2), at least
+  `min_gap_hours` apart (6), one per run, so they are spread across the day.
+  Two motion-graphics reels a day come on top (see "Reels" below).
 - `selection.featured_channels` (currently `maherco`, `alimousa96` and `xqc`)
-  are favourites: each gets `publish.featured_per_day` (3) of the daily
-  clips, the one with the fewest posts that day first, and their clips need
-  only `featured_min_views` views (their own cuts need none).
-- The remaining 3 go to the best clips from the other big channels.
+  have their streams searched for highlights every run. With
+  `publish.featured_per_day` above 0, each gets that many reserved clips a
+  day; at 0 (now) there are no reserved slots and the best clip wins.
 - A held slot is not wasted: if nothing has been posted for
   `fill_after_hours` (5), a clip from another big channel may take it.
 - Featured clips still have to be in the game's category, so a featured
@@ -148,6 +148,23 @@ Buffer's free plan allows 600 API requests a day but only 1,000 in 30 days
 for one channel, and each post costs about two. Extra batches stop when
 fewer than `publish.buffer_reserve` (300) of the 30-day requests are left,
 so the regular posts never run out.
+
+## Reels (GTA 6 secrets, money tricks and tips)
+
+Twice a day (13:41 and 19:41 UTC) a scheduled task on the owner's Claude
+account wakes the "GTA6Fied Reels studio" session. It follows
+`reels/PLAYBOOK.md`: it researches what players want, rates the ideas
+(`reels/ideas.json`), checks every fact against two sources, writes the
+script, makes the narration with ElevenLabs, picks gameplay shots from
+the day's Kick clips, checks the layout from rendered frames, and commits
+a small plan to `reels/episodes/NNN-topic/`. It then starts the **Reel**
+workflow, which renders the plan with Remotion (`reels/src`) and posts it
+through Buffer to YouTube and Instagram.
+
+To make or re-post one by hand: Actions → Reel → Run workflow, with the
+episode folder's name (tick *dry run* to only render it; the video is
+attached to the run). To stop the reels, disable the scheduled task in
+Claude, or press Pause on the dashboard (which stops all posting).
 
 ## The timer
 
