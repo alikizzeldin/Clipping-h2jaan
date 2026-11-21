@@ -124,6 +124,10 @@ class Publish:
     # Extra batches stop when Buffer has fewer requests than this left in its
     # 30-day allowance, so the regular posts never run out.
     buffer_reserve: int = 300
+    # How many uploads YouTube takes per rolling 24 hours (an unverified channel
+    # gets about 2). Reels post to Instagram at once and wait for a free YouTube
+    # slot instead of failing. 0 = no limit (after verifying the channel).
+    youtube_per_day: int = 2
 
 
 @dataclass

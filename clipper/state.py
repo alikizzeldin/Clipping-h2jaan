@@ -124,6 +124,31 @@ class State:
                 continue
         return count
 
+    def youtube_free_at(self, now: datetime, per_day: int) -> datetime | None:
+        """When YouTube will take another upload: None means now.
+
+        Counts what went to YouTube (or is on its way) in the last 24 hours;
+        uploads YouTube refused don't count. With `per_day` uploads in that
+        window, the next one fits once the oldest of them is 24 hours old.
+        """
+        if per_day <= 0:
+            return None
+        since = now - timedelta(hours=24)
+        times = []
+        for entry in self.published.values():
+            if entry.get("via") != "buffer" or entry.get("status") in ("error", "youtube_pending"):
+                continue
+            try:
+                when = datetime.fromisoformat(entry.get("youtube_at") or entry["uploaded_at"])
+            except (KeyError, ValueError):
+                continue
+            if when >= since:
+                times.append(when)
+        if len(times) < per_day:
+            return None
+        times.sort()
+        return times[len(times) - per_day] + timedelta(hours=24, minutes=3)
+
     def recent_hooks(self, count: int = 6) -> list[str]:
         """The title hooks of the last `count` uploads, newest first."""
         entries = sorted(self.published.values(), key=lambda e: str(e.get("uploaded_at", "")), reverse=True)

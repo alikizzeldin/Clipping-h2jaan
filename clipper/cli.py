@@ -576,9 +576,19 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
     activity = Activity(settings.beside_state("activity.json"))
     rid = reels.episode_id(plan)
     live = not args.dry_run
-    if live and rid in state.published:
-        _summary([f"{rid} is already published; nothing to do."])
-        return 0
+    now = datetime.now(timezone.utc)
+    entry = state.published.get(rid)
+    youtube_only = False  # the reel is on Instagram already and waited for a YouTube slot
+    if live and entry:
+        limited = entry.get("status") == "error" and "limit" in str(entry.get("error", "")).lower()
+        if not (entry.get("status") == "youtube_pending" or (limited and not entry.get("youtube_retried"))):
+            _summary([f"{rid} is already published; nothing to do."])
+            return 0
+        free = state.youtube_free_at(now, pub.youtube_per_day)
+        if free:
+            _summary([f"{rid} is on Instagram and waits for YouTube: the next upload fits after {free:%H:%M} UTC."])
+            return 0
+        youtube_only = True
     if live and pub.paused:
         _summary(["Paused from the dashboard: the reel was not published."])
         return 0
@@ -610,20 +620,46 @@ def cmd_reel(settings: Settings, args: argparse.Namespace) -> int:
 
     clip = reels.reel_clip(plan, float(reel_props["duration"]))
     notes = []
+    stamp = now.isoformat(timespec="seconds")
+    wait_for_youtube = (not youtube_only and isinstance(publisher, BufferPublisher) and pub.instagram_channel_id
+                        and state.youtube_free_at(now, pub.youtube_per_day))
     try:
-        result = publisher.publish(video, clip, meta)
+        if wait_for_youtube:
+            # YouTube's daily limit is used up: Instagram now, YouTube when a slot frees.
+            try:
+                url, _ = publisher.host.upload(video, clip.id)
+                publisher.host.wait_until_public(url)
+            except HostingError as exc:
+                raise PublishError(str(exc)) from exc
+            publisher.last_url = url
+            result = None
+        else:
+            result = publisher.publish(video, clip, meta)
     except PublishError as exc:
         log.error("%s", exc)
         activity.add("error", f"Publishing reel “{meta['clean_title']}” failed: {exc}")
         activity.save()
         _summary([f"Publishing {rid} failed: {exc}"])
         return 1
+    if youtube_only:
+        state.update(rid, video_id=result.ref, status="", error="", link=result.link, youtube_at=stamp,
+                     youtube_retried=stamp, youtube_after="")
+        state.save()
+        activity.add("published", f"Reel “{meta['clean_title']}” sent to YouTube", result.link)
+        activity.save()
+        _summary([f"{rid}: sent to YouTube (it was already on Instagram) — {meta['title']}"])
+        return 0
     extra = {"kind": "reel", "episode": int(plan["episode"]), "topic": plan.get("topic", ""),
              "rating": plan.get("rating", {}).get("score"), "hook": "reel"}
-    state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra)
+    if result is None:
+        extra.update(status="youtube_pending", youtube_after=wait_for_youtube.isoformat(timespec="seconds"))
+        state.add(clip, "", meta["title"], via="buffer", extra=extra)
+        notes.append(f"- YouTube: waits for a free slot after {wait_for_youtube:%H:%M} UTC (its daily limit is used up)")
+    else:
+        state.add(clip, result.ref, meta["title"], via=result.via, link=result.link, extra=extra)
+        notes.append(f"- YouTube: {result.link or f'sent to Buffer (post {result.ref})'} — {meta['title']}")
     state.save()
-    activity.add("published", f"Published reel “{meta['clean_title']}”", result.link)
-    notes.append(f"- YouTube: {result.link or f'sent to Buffer (post {result.ref})'} — {meta['title']}")
+    activity.add("published", f"Published reel “{meta['clean_title']}”", result.link if result else "")
     if isinstance(publisher, BufferPublisher) and pub.instagram_channel_id and publisher.last_url:
         try:
             post_id = publisher.to_instagram(publisher.last_url, meta["caption"])

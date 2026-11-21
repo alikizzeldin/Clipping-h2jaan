@@ -112,3 +112,7 @@ publish:
   burst_per_run: 8
   buffer_reserve: 300
   description_footer: ""     # e.g. a contact line for removal requests
+  # YouTube takes only about 2 uploads per rolling 24 hours from an unverified
+  # channel. Reels then go to Instagram at once and to YouTube when a slot
+  # frees up. Set to 0 once the channel is verified (youtube.com/verify).
+  youtube_per_day: 2

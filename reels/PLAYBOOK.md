@@ -31,6 +31,10 @@ If a folder is not published yet:
 - If it has no `queued_at` in `reels/episodes/<folder>/status.json`, start the
   workflow for it (step 8), write `{"queued_at": "<now ISO>"}` there, commit,
   push, and stop for this wake-up.
+- If its record in `state/published.json` has `"status": "youtube_pending"`
+  (it went to Instagram while YouTube's daily limit was used up) and its
+  `youtube_after` time has passed, start the workflow for it again: it now
+  posts the reel to YouTube only. Do this for every such reel, then carry on.
 - If it was queued over 2 hours ago and still is not published, read that
   workflow run's log (GitHub tools: list the runs of `reel.yml`, then the job
   log), fix the cause in the plan if it is the plan's fault, and start it once

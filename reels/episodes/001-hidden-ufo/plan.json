@@ -95,9 +95,10 @@
     {
      "url": "https://clips.kick.com/clips/b6/clip_01M7V77K453AEC9ZM251P9PJHJ/playlist.m3u8",
      "channel": "cliffsavage",
-     "start": 22.6,
-     "dur": 5.3,
-     "x": 600
+     "start": 24.8,
+     "dur": 3.25,
+     "x": 600,
+     "slow": 1.5
     }
    ]
   },

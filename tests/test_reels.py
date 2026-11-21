@@ -72,3 +72,18 @@ def test_without_reserved_slots_featured_streamers_still_compete():
 def test_sample_reel_json_is_valid():
     data = json.loads((ROOT / "reels" / "public" / "sample" / "reel.json").read_text())
     assert data["scenes"][0]["type"] == "hook"
+
+
+def test_youtube_slot_frees_24_hours_after_the_older_of_two_uploads(tmp_path):
+    state = State(tmp_path / "published.json")
+    now = datetime(2026, 11, 21, 3, 0, tzinfo=timezone.utc)
+    assert state.youtube_free_at(now, 2) is None
+    state.add(_clip("a"), "p1", "t", when=datetime(2026, 11, 20, 19, 21, tzinfo=timezone.utc), via="buffer")
+    state.add(_clip("b"), "p2", "t", when=datetime(2026, 11, 20, 21, 21, tzinfo=timezone.utc), via="buffer")
+    state.add(_clip("c"), "p3", "t", when=datetime(2026, 11, 20, 23, 0, tzinfo=timezone.utc), via="buffer",
+              extra={"status": "error", "error": "The daily posting limit for this channel has been reached!"})
+    assert state.youtube_free_at(now, 2) == datetime(2026, 11, 21, 19, 24, tzinfo=timezone.utc)
+    assert state.youtube_free_at(now, 3) is None  # refused uploads don't count
+    assert state.youtube_free_at(now, 0) is None  # no limit after verifying the channel
+    later = datetime(2026, 11, 21, 19, 30, tzinfo=timezone.utc)
+    assert state.youtube_free_at(later, 2) is None
