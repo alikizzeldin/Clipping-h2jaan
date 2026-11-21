@@ -21,6 +21,7 @@ export type HookScene = Base & {
   tagAt?: number;
   ar?: string;
   ufo?: boolean;
+  counter?: {from: number; to: number; at: number}; // a balance that drains (money hooks)
 };
 export type LocationScene = Base & {
   type: 'location';
@@ -77,7 +78,50 @@ export type CtaScene = Base & {
   next?: string;
 };
 
-export type Scene = HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene;
+export type ListScene = Base & {
+  type: 'list';
+  chip: string;
+  label: string;
+  fromLabel?: string; // e.g. "CHAPTER 1"
+  toLabel?: string; // e.g. "CHAPTER 2"
+  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone'}[];
+  ar?: string;
+  arAt?: number;
+  cardAt?: number; // when the list card rises (leave the footage clear until then)
+};
+export type PhoneScene = Base & {
+  type: 'phone';
+  app: string;
+  notice: {title: string; text: string; at: number};
+  source: {label: string; amount: number};
+  target: {label: string; amount: number};
+  moveAt: number;
+  done: string;
+  ar?: string;
+};
+export type ScanScene = Base & {
+  type: 'scan';
+  step: string;
+  label: string;
+  target: {x: number; y: number; w: number; h: number};
+  checks: {text: string; at: number}[];
+  ar?: string;
+};
+export type CashScene = Base & {
+  type: 'cash';
+  proof?: {src: string; at: number; until: number; highlights: {y: number; h: number; color?: string}[]; caption: string};
+  title: string;
+  amount: string;
+  per: string;
+  amountAt: number;
+  repeat?: string;
+  repeatAt?: number;
+  ar?: string;
+};
+
+export type Scene =
+  | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
+  | ListScene | PhoneScene | ScanScene | CashScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

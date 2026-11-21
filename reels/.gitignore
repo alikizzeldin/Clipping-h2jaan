@@ -3,3 +3,6 @@ out/
 public/sample/*.mp4
 public/sample/*.wav
 public/sample/*.mp3
+public/ep*/*.mp4
+public/ep*/*.wav
+public/ep*/*.mp3

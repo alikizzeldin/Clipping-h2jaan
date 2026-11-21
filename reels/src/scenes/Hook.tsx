@@ -7,6 +7,30 @@ import {Beam, Ufo} from '../ui/Ufo';
 import {C, F, accent} from '../theme';
 import {HookScene} from '../types';
 
+// A balance that counts down to nothing, turning red and glitching as it goes.
+const Counter: React.FC<{c: {from: number; to: number; at: number}}> = ({c}) => {
+  const frame = useCurrentFrame();
+  const start = sec(c.at) - 14;
+  const p = interpolate(frame, [start, start + 16], [0, 1], clamp);
+  const value = Math.round(c.from + (c.to - c.from) * p * p);
+  const enter = pop(frame, 2, 12, 0.5, 180);
+  const red = p > 0;
+  const glitch = red ? (frame % 3 === 0 ? 1 : 0.4) * Math.max(0, 1 - Math.max(0, p - 0.9) * 10) : 0;
+  const tone = red ? C.red : C.green;
+  return (
+    <div
+      style={{
+        position: 'absolute', top: 440, left: 0, right: 0, display: 'flex', justifyContent: 'center',
+        opacity: Math.min(1, enter * 1.5), transform: `scale(${0.7 + 0.3 * enter})`,
+      }}
+    >
+      <div style={{padding: '10px 36px', borderRadius: 24, background: 'rgba(0,0,0,0.55)', border: `3px solid ${tone}`, boxShadow: `0 0 40px ${tone}66`}}>
+        <GlitchText text={'$' + value.toLocaleString('en-US')} size={150} color={tone} glitch={glitch} />
+      </div>
+    </div>
+  );
+};
+
 export const Hook: React.FC<{s: HookScene; t0: number; words: {text: string; start: number}[]}> = ({s, t0, words}) => {
   const frame = useCurrentFrame();
   const color = accent(s.color);
@@ -23,7 +47,8 @@ export const Hook: React.FC<{s: HookScene; t0: number; words: {text: string; sta
   const ufoX = interpolate(ufoIn, [0, 1], [1250, 540]);
   const ufoY = interpolate(ufoIn, [0, 1], [-80, 330]) + Math.sin(frame / 9) * 10;
   const ufoTilt = interpolate(ufoIn, [0, 1], [-18, 0]) + Math.sin(frame / 13) * 3;
-  const stampOut = ease(frame, tagAt - 30, tagAt - 18);
+  const stampOut = s.counter ? 0 : ease(frame, tagAt - 30, tagAt - 18);
+  const shift = s.counter ? 200 : 0; // room for the counter above the headline
   return (
     <AbsoluteFill>
       <Background broll={s.broll} shake={frame < 12 ? 14 : 3} />
@@ -35,18 +60,19 @@ export const Hook: React.FC<{s: HookScene; t0: number; words: {text: string; sta
         </>
       ) : null}
       <div style={{opacity: 1 - stampOut}}>
-        <Stamp text={s.stamp} delay={6} top={300} />
+        <Stamp text={s.stamp} delay={6} top={s.counter ? 250 : 300} />
       </div>
+      {s.counter ? <Counter c={s.counter} /> : null}
       <div
         style={{
-          position: 'absolute', top: 500, left: 0, right: 0, textAlign: 'center', fontFamily: F.brand, fontWeight: 800,
+          position: 'absolute', top: 500 + shift, left: 60, right: 60, textAlign: 'center', fontFamily: F.brand, fontWeight: 800,
           fontSize: 54, letterSpacing: 10, color: '#fff', opacity: kickerIn, transform: `translateY(${(1 - kickerIn) * 30}px)`,
           textShadow: '0 4px 20px rgba(0,0,0,0.8)',
         }}
       >
         {s.kicker}
       </div>
-      <div style={{position: 'absolute', top: 580, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <div style={{position: 'absolute', top: 580 + shift + (s.kicker.length > 18 ? 70 : 0), left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         {lines.map(({word, at}, i) => {
           const p = pop(frame, at, 10, 0.55, 200);
           const last = i === lines.length - 1;

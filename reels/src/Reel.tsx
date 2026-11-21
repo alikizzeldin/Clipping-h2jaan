@@ -11,6 +11,10 @@ import {Reward} from './scenes/Reward';
 import {Time} from './scenes/Time';
 import {Trigger} from './scenes/Trigger';
 import {Twist} from './scenes/Twist';
+import {List} from './scenes/List';
+import {Phone} from './scenes/Phone';
+import {Scan} from './scenes/Scan';
+import {Cash} from './scenes/Cash';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 
@@ -23,6 +27,10 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'twist': return <Twist s={s} />;
     case 'reward': return <Reward s={s} />;
     case 'cta': return <Cta s={s} />;
+    case 'list': return <List s={s} />;
+    case 'phone': return <Phone s={s} />;
+    case 'scan': return <Scan s={s} />;
+    case 'cash': return <Cash s={s} />;
   }
 };
 
@@ -45,7 +53,11 @@ export const Reel: React.FC<ReelProps> = (props) => {
       <Audio src={staticFile(props.voice)} />
       <Audio
         src={staticFile(props.music)}
-        volume={(f) => interpolate(f, [0, 6, sec(voiceEnd), sec(voiceEnd) + 12, total - 20, total], [0, base, base, base * 1.7, base * 1.7, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+        volume={(f) => {
+          // The music sits under the voice, swells once the voice ends, and fades out.
+          const end = Math.min(sec(voiceEnd), total - 34);
+          return interpolate(f, [0, 6, end, end + 12, total - 20, total], [0, base, base, base * 1.7, base * 1.7, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+        }}
       />
       {sfx.map((x, i) => (
         <Sequence key={`sfx${i}`} from={Math.max(0, Math.round(x.at * FPS))}>

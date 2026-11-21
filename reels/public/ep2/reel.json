@@ -1,0 +1,728 @@
+{
+ "series": "SECRET FILE",
+ "episode": 2,
+ "duration": 31.0,
+ "voice": "ep2/voice.wav",
+ "music": "ep2/music.wav",
+ "musicVolume": 0.42,
+ "words": [
+  {
+   "text": "Your",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "text": "GTA",
+   "start": 0.32,
+   "end": 0.72
+  },
+  {
+   "text": "6",
+   "start": 0.88,
+   "end": 1.12
+  },
+  {
+   "text": "money",
+   "start": 1.2,
+   "end": 1.44
+  },
+  {
+   "text": "is",
+   "start": 1.48,
+   "end": 1.52
+  },
+  {
+   "text": "about",
+   "start": 1.6,
+   "end": 1.92
+  },
+  {
+   "text": "to",
+   "start": 2.0,
+   "end": 2.08
+  },
+  {
+   "text": "vanish.",
+   "start": 2.24,
+   "end": 2.8
+  },
+  {
+   "text": "When",
+   "start": 3.2,
+   "end": 3.28
+  },
+  {
+   "text": "Chapter",
+   "start": 3.36,
+   "end": 3.68
+  },
+  {
+   "text": "1",
+   "start": 3.76,
+   "end": 3.92
+  },
+  {
+   "text": "ends,",
+   "start": 4.0,
+   "end": 4.56
+  },
+  {
+   "text": "the",
+   "start": 4.64,
+   "end": 4.68
+  },
+  {
+   "text": "game",
+   "start": 4.72,
+   "end": 4.96
+  },
+  {
+   "text": "wipes",
+   "start": 5.12,
+   "end": 5.36
+  },
+  {
+   "text": "your",
+   "start": 5.44,
+   "end": 5.52
+  },
+  {
+   "text": "cash…",
+   "start": 5.76,
+   "end": 6.4
+  },
+  {
+   "text": "and",
+   "start": 6.52,
+   "end": 6.64
+  },
+  {
+   "text": "the",
+   "start": 6.68,
+   "end": 6.72
+  },
+  {
+   "text": "stash",
+   "start": 6.8,
+   "end": 7.12
+  },
+  {
+   "text": "in",
+   "start": 7.16,
+   "end": 7.2
+  },
+  {
+   "text": "Jason's",
+   "start": 7.28,
+   "end": 7.6
+  },
+  {
+   "text": "house.",
+   "start": 7.68,
+   "end": 8.08
+  },
+  {
+   "text": "Only",
+   "start": 8.56,
+   "end": 8.88
+  },
+  {
+   "text": "your",
+   "start": 8.96,
+   "end": 9.04
+  },
+  {
+   "text": "BuckMe",
+   "start": 9.12,
+   "end": 9.44
+  },
+  {
+   "text": "Family",
+   "start": 9.52,
+   "end": 9.84
+  },
+  {
+   "text": "Savings",
+   "start": 9.92,
+   "end": 10.32
+  },
+  {
+   "text": "carries",
+   "start": 10.4,
+   "end": 10.64
+  },
+  {
+   "text": "over.",
+   "start": 10.72,
+   "end": 11.44
+  },
+  {
+   "text": "So",
+   "start": 11.52,
+   "end": 11.6
+  },
+  {
+   "text": "before",
+   "start": 11.76,
+   "end": 11.92
+  },
+  {
+   "text": "you",
+   "start": 12.0,
+   "end": 12.08
+  },
+  {
+   "text": "start",
+   "start": 12.2,
+   "end": 12.32
+  },
+  {
+   "text": "the",
+   "start": 12.36,
+   "end": 12.4
+  },
+  {
+   "text": "mission",
+   "start": 12.48,
+   "end": 12.72
+  },
+  {
+   "text": "Tourist",
+   "start": 12.88,
+   "end": 13.2
+  },
+  {
+   "text": "Trap,",
+   "start": 13.28,
+   "end": 13.84
+  },
+  {
+   "text": "move",
+   "start": 13.92,
+   "end": 14.24
+  },
+  {
+   "text": "everything",
+   "start": 14.32,
+   "end": 14.72
+  },
+  {
+   "text": "into",
+   "start": 14.8,
+   "end": 14.88
+  },
+  {
+   "text": "Family",
+   "start": 14.96,
+   "end": 15.2
+  },
+  {
+   "text": "Savings.",
+   "start": 15.28,
+   "end": 16.16
+  },
+  {
+   "text": "Then",
+   "start": 16.24,
+   "end": 16.32
+  },
+  {
+   "text": "in",
+   "start": 16.4,
+   "end": 16.48
+  },
+  {
+   "text": "Chapter",
+   "start": 16.56,
+   "end": 16.8
+  },
+  {
+   "text": "2,",
+   "start": 16.96,
+   "end": 17.44
+  },
+  {
+   "text": "rebuild",
+   "start": 17.52,
+   "end": 17.92
+  },
+  {
+   "text": "fast:",
+   "start": 18.0,
+   "end": 18.88
+  },
+  {
+   "text": "steal",
+   "start": 18.96,
+   "end": 19.2
+  },
+  {
+   "text": "cars",
+   "start": 19.28,
+   "end": 19.52
+  },
+  {
+   "text": "with",
+   "start": 19.6,
+   "end": 19.76
+  },
+  {
+   "text": "no",
+   "start": 19.84,
+   "end": 19.92
+  },
+  {
+   "text": "tracker,",
+   "start": 20.0,
+   "end": 20.72
+  },
+  {
+   "text": "scan",
+   "start": 20.88,
+   "end": 21.04
+  },
+  {
+   "text": "them",
+   "start": 21.12,
+   "end": 21.2
+  },
+  {
+   "text": "on",
+   "start": 21.24,
+   "end": 21.28
+  },
+  {
+   "text": "your",
+   "start": 21.36,
+   "end": 21.44
+  },
+  {
+   "text": "phone",
+   "start": 21.52,
+   "end": 21.6
+  },
+  {
+   "text": "first,",
+   "start": 21.76,
+   "end": 22.4
+  },
+  {
+   "text": "and",
+   "start": 22.48,
+   "end": 22.56
+  },
+  {
+   "text": "sell",
+   "start": 22.72,
+   "end": 22.88
+  },
+  {
+   "text": "them",
+   "start": 22.96,
+   "end": 23.04
+  },
+  {
+   "text": "to",
+   "start": 23.08,
+   "end": 23.12
+  },
+  {
+   "text": "Moses",
+   "start": 23.2,
+   "end": 23.6
+  },
+  {
+   "text": "for",
+   "start": 23.64,
+   "end": 23.68
+  },
+  {
+   "text": "a",
+   "start": 23.76,
+   "end": 23.84
+  },
+  {
+   "text": "thousand",
+   "start": 23.92,
+   "end": 24.24
+  },
+  {
+   "text": "dollars",
+   "start": 24.32,
+   "end": 24.64
+  },
+  {
+   "text": "or",
+   "start": 24.72,
+   "end": 24.8
+  },
+  {
+   "text": "more",
+   "start": 24.92,
+   "end": 25.04
+  },
+  {
+   "text": "each.",
+   "start": 25.12,
+   "end": 25.6
+  },
+  {
+   "text": "Repeat.",
+   "start": 25.84,
+   "end": 26.88
+  },
+  {
+   "text": "Follow",
+   "start": 26.96,
+   "end": 27.2
+  },
+  {
+   "text": "for",
+   "start": 27.28,
+   "end": 27.36
+  },
+  {
+   "text": "a",
+   "start": 27.44,
+   "end": 27.52
+  },
+  {
+   "text": "new",
+   "start": 27.6,
+   "end": 27.68
+  },
+  {
+   "text": "GTA",
+   "start": 27.84,
+   "end": 28.32
+  },
+  {
+   "text": "6",
+   "start": 28.4,
+   "end": 28.56
+  },
+  {
+   "text": "secret",
+   "start": 28.64,
+   "end": 29.04
+  },
+  {
+   "text": "every",
+   "start": 29.12,
+   "end": 29.44
+  },
+  {
+   "text": "day.",
+   "start": 29.56,
+   "end": 29.92
+  }
+ ],
+ "scenes": [
+  {
+   "type": "hook",
+   "from": 0,
+   "to": 3.2,
+   "captions": false,
+   "broll": {
+    "src": "ep2/hook.mp4",
+    "grade": "warm",
+    "dim": 0.15,
+    "zoom": [
+     1.05,
+     1.2
+    ]
+   },
+   "stamp": "WARNING",
+   "kicker": "YOUR GTA 6 MONEY IS ABOUT TO",
+   "title": [
+    "VANISH"
+   ],
+   "color": "red",
+   "tagAt": 1.6,
+   "counter": {
+    "from": 24800,
+    "to": 0,
+    "at": 2.24
+   },
+   "ar": "فلوسك في GTA 6 راح تختفي!"
+  },
+  {
+   "type": "list",
+   "from": 3.2,
+   "to": 11.52,
+   "broll": {
+    "src": "ep2/house.mp4",
+    "grade": "none",
+    "dim": 0.1,
+    "zoom": [
+     1.02,
+     1.1
+    ]
+   },
+   "chip": "WARNING",
+   "label": "WHEN CHAPTER 1 ENDS",
+   "fromLabel": "CHAPTER 1",
+   "toLabel": "CHAPTER 2",
+   "cardAt": 2.2,
+   "arAt": 2.6,
+   "items": [
+    {
+     "text": "YOUR CASH",
+     "status": "WIPED",
+     "ok": false,
+     "at": 2.56,
+     "icon": "cash"
+    },
+    {
+     "text": "JASON'S HOUSE STASH",
+     "status": "WIPED",
+     "ok": false,
+     "at": 3.6,
+     "icon": "house"
+    },
+    {
+     "text": "BUCKME FAMILY SAVINGS",
+     "status": "SAFE",
+     "ok": true,
+     "at": 6.32,
+     "icon": "bank"
+    }
+   ],
+   "ar": "نهاية الفصل الأول تمسح الكاش والمخبأ في بيت جيسون… والتوفير العائلي بس يبقى"
+  },
+  {
+   "type": "phone",
+   "from": 11.52,
+   "to": 16.24,
+   "captions": false,
+   "broll": {
+    "src": "ep2/room.mp4",
+    "grade": "night",
+    "dim": 0.45,
+    "blur": 6
+   },
+   "app": "BuckMe",
+   "notice": {
+    "title": "MISSION · TOURIST TRAP",
+    "text": "Do this BEFORE you start it",
+    "at": 1.36
+   },
+   "source": {
+    "label": "CASH",
+    "amount": 24800
+   },
+   "target": {
+    "label": "FAMILY SAVINGS",
+    "amount": 0
+   },
+   "moveAt": 2.4,
+   "done": "MONEY SAFE",
+   "ar": "حوّل كل فلوسك للتوفير العائلي قبل مهمة Tourist Trap"
+  },
+  {
+   "type": "scan",
+   "from": 16.24,
+   "to": 22.48,
+   "broll": {
+    "src": "ep2/scan.mp4",
+    "grade": "cold",
+    "zoom": [
+     1.03,
+     1.1
+    ]
+   },
+   "step": "CHAPTER 2",
+   "label": "REBUILD FAST",
+   "target": {
+    "x": 560,
+    "y": 980,
+    "w": 820,
+    "h": 760
+   },
+   "checks": [
+    {
+     "text": "STEAL A CAR",
+     "at": 2.72
+    },
+    {
+     "text": "NO TRACKER",
+     "at": 3.76
+    },
+    {
+     "text": "SCAN IT ON YOUR PHONE",
+     "at": 4.64
+    }
+   ],
+   "ar": "الفصل الثاني: اسرق سيارة بدون جهاز تتبع وافحصها بجوالك أول"
+  },
+  {
+   "type": "cash",
+   "from": 22.48,
+   "to": 26.96,
+   "captions": false,
+   "broll": {
+    "src": "ep2/garage.mp4",
+    "grade": "green",
+    "dim": 0.35,
+    "blur": 2
+   },
+   "proof": {
+    "src": "ep2/wainK.png",
+    "at": 0.0,
+    "until": 1.5,
+    "caption": "REAL IN-GAME PHONE SCAN",
+    "highlights": [
+     {
+      "y": 55,
+      "h": 13
+     },
+     {
+      "y": 69,
+      "h": 13,
+      "color": "gold"
+     }
+    ]
+   },
+   "title": "SELL TO MOSES",
+   "amount": "$1,000+",
+   "per": "each car",
+   "amountAt": 1.5,
+   "repeat": "REPEAT",
+   "repeatAt": 3.36,
+   "ar": "وبيعها لموسى بألف دولار أو أكثر… وكرر!"
+  },
+  {
+   "type": "cta",
+   "from": 26.96,
+   "to": 31.0,
+   "captions": false,
+   "broll": {
+    "src": "sample/plane.mp4",
+    "grade": "warm",
+    "dim": 0.25
+   },
+   "line1": "A new GTA 6 secret",
+   "line2": "every day",
+   "button": "FOLLOW @GTA6FIED",
+   "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+   "next": "SECRET FILE #003 · TOMORROW"
+  }
+ ],
+ "sfx": [
+  {
+   "src": "sfx/impact.wav",
+   "at": 0.0,
+   "volume": 0.55
+  },
+  {
+   "src": "sfx/glitch.wav",
+   "at": 0.1,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/error.wav",
+   "at": 1.8,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/whoosh.wav",
+   "at": 3.1,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/error.wav",
+   "at": 5.95,
+   "volume": 0.4
+  },
+  {
+   "src": "sfx/error.wav",
+   "at": 7.0,
+   "volume": 0.4
+  },
+  {
+   "src": "sfx/ping.wav",
+   "at": 9.72,
+   "volume": 0.55
+  },
+  {
+   "src": "sfx/whoosh.wav",
+   "at": 11.45,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/ping.wav",
+   "at": 12.85,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/coins.wav",
+   "at": 13.92,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/cash.wav",
+   "at": 14.85,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/whoosh.wav",
+   "at": 16.15,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/scan.wav",
+   "at": 16.6,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/tick.wav",
+   "at": 18.95,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/tick.wav",
+   "at": 19.99,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/tick.wav",
+   "at": 20.87,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/whoosh.wav",
+   "at": 22.4,
+   "volume": 0.5
+  },
+  {
+   "src": "sfx/cash.wav",
+   "at": 23.98,
+   "volume": 0.7
+  },
+  {
+   "src": "sfx/impact.wav",
+   "at": 23.98,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/coins.wav",
+   "at": 24.1,
+   "volume": 0.45
+  },
+  {
+   "src": "sfx/whoosh.wav",
+   "at": 25.8,
+   "volume": 0.4
+  },
+  {
+   "src": "sfx/whoosh.wav",
+   "at": 26.88,
+   "volume": 0.55
+  },
+  {
+   "src": "sfx/impact.wav",
+   "at": 26.98,
+   "volume": 0.5
+  }
+ ]
+}

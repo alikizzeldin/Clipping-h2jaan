@@ -18,7 +18,7 @@ export const StepLabel: React.FC<{step: string; label: string; delay?: number; t
             padding: '6px 14px', borderRadius: 6, letterSpacing: 2,
           }}
         >
-          STEP {step}
+          {/^\d/.test(step) ? `STEP ${step}` : step}
         </div>
         <div style={{fontFamily: F.mono, fontWeight: 700, fontSize: 28, color: '#fff', letterSpacing: 6}}>{label}</div>
       </div>

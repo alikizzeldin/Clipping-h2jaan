@@ -16,8 +16,13 @@ from scipy.signal import butter, fftconvolve, sosfilt
 SR = 44100
 BPM = 100
 BEAT = 60 / BPM
-# D minor: Dm, Bb, Gm, A (the A major chord keeps the tension of a mystery)
-CHORDS = [(50, 53, 57), (46, 50, 53), (43, 46, 50), (45, 49, 52)]
+PROGRESSIONS = {
+    # D minor: Dm, Bb, Gm, A (the A major chord keeps the tension of a mystery)
+    "mystery": [(50, 53, 57), (46, 50, 53), (43, 46, 50), (45, 49, 52)],
+    # F minor: Fm, Db, Ab, Eb (i-VI-III-VII, the confident "money" loop)
+    "money": [(53, 56, 60), (49, 53, 56), (44, 48, 51), (51, 55, 58)],
+}
+CHORDS = PROGRESSIONS["mystery"]
 
 
 def hz(note: float) -> float:
@@ -151,7 +156,27 @@ def delay(mono, seconds, feedback=0.38, mix=0.35):
     return out + echo * mix
 
 
-def compose(length, drop, brk, back, outro, seed=7):
+def bells(chords, start, end, length, bar):
+    """A bright bell motif on top of the groove (used by the money style)."""
+    n = int(length * SR)
+    out = np.zeros(n)
+    pattern = [2, 1, 0, 1, 2, 0, 1, 2]
+    t, k = start, 0
+    while t < min(end, length):
+        chord = chords[int((t - start) // bar) % len(chords)]
+        note = chord[pattern[k % len(pattern)]] + 24
+        m = int(0.9 * SR)
+        tt = np.arange(m) / SR
+        tone = (np.sin(2 * np.pi * hz(note) * tt) + 0.35 * np.sin(2 * np.pi * hz(note) * 2.01 * tt)) * np.exp(-tt * 5)
+        place(out, tone * 0.11, t)
+        t += BEAT / 2 * (3 if k % 4 == 3 else 1)
+        k += 1
+    return out
+
+
+def compose(length, drop, brk, back, outro, seed=7, style="mystery"):
+    global CHORDS
+    CHORDS = PROGRESSIONS[style]
     np.random.seed(seed)
     n = int(length * SR)
     drums, bass, arp = np.zeros(n), np.zeros(n), np.zeros(n)
@@ -208,10 +233,14 @@ def compose(length, drop, brk, back, outro, seed=7):
             duck[i: i + m] = np.minimum(duck[i: i + m], 0.35 + 0.65 * np.linspace(0, 1, m) ** 0.6)
         t += BEAT
 
-    lead = theremin([69, 74, 72, 69, 65, 64], [0.3, 1.5, 2.4, 3.0, 3.6, 4.1], length)
-    lead *= (np.arange(n) / SR < drop + 0.2)
-    lead2 = theremin([74, 77, 76], [brk, brk + 0.5, brk + 0.9], length)
-    lead2 *= ((np.arange(n) / SR >= brk) & (np.arange(n) / SR < back + 0.3))
+    if style == "mystery":
+        lead = theremin([69, 74, 72, 69, 65, 64], [0.3, 1.5, 2.4, 3.0, 3.6, 4.1], length)
+        lead *= (np.arange(n) / SR < drop + 0.2)
+        lead2 = theremin([74, 77, 76], [brk, brk + 0.5, brk + 0.9], length)
+        lead2 *= ((np.arange(n) / SR >= brk) & (np.arange(n) / SR < back + 0.3))
+    else:
+        lead = bells(CHORDS, 0.0, drop, length, bar) * 0.8
+        lead2 = bells(CHORDS, back, outro, length, bar)
 
     arp = delay(arp, BEAT * 0.75)
     music = pads * duck
@@ -237,10 +266,14 @@ def main():
     p.add_argument("--back", type=float, default=16.5)
     p.add_argument("--outro", type=float, default=24)
     p.add_argument("--seed", type=int, default=7)
+    p.add_argument("--style", choices=sorted(PROGRESSIONS), default="mystery")
+    p.add_argument("--bpm", type=float, default=100)
     a = p.parse_args()
+    global BEAT
+    BEAT = 60 / a.bpm
     import soundfile as sf
 
-    music = compose(a.length, a.drop, a.brk, a.back, a.outro, a.seed)
+    music = compose(a.length, a.drop, a.brk, a.back, a.outro, a.seed, a.style)
     sf.write(a.out, music.T, SR, subtype="PCM_16")
 
 
