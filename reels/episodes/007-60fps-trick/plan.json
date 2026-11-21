@@ -1,0 +1,582 @@
+{
+  "episode": 7,
+  "kind": "hidden-feature",
+  "topic": "GTA 6 at 60 FPS on console with a capture card, a PC and Lossless Scaling frame generation (or Remote Play)",
+  "title": {
+    "en": "GTA 6 at 60 FPS on PS5? 🤯 (the $7 trick)",
+    "ar": "GTA 6 على 60 فريم؟ 🤯 (حيلة بـ 7$)"
+  },
+  "summary": "GTA 6 runs at 30 FPS on every console, even PS5 Pro. With a capture card, a PC and Lossless Scaling ($6.99 on Steam) you can make it look like 60: turn off HDCP on the PS5 (Settings › System › HDMI), show the capture feed at 30 FPS, then set Frame Generation to LSFG, Fixed, 2. It looks smoother but still feels like 30 in your hands. No capture card? PS Remote Play works too, with more lag.",
+  "summary_ar": "GTA 6 تشتغل على 30 فريم في كل الأجهزة، حتى PS5 Pro. بكابتشر كارد وكمبيوتر وبرنامج Lossless Scaling (بـ 6.99$ على ستيم) تقدر تخليها تبان 60: طفّي HDCP في البلايستيشن، اعرض البث على 30 فريم، وبعدين فعّل Frame Generation على LSFG و Fixed و2. الصورة أنعم بس الإحساس بالتحكم يظل 30. ما عندك كابتشر كارد؟ Remote Play يشتغل بس فيه تأخير أكثر.",
+  "keywords": [
+    "GTA6",
+    "GTA6PS5",
+    "PS5",
+    "LosslessScaling",
+    "FrameGeneration",
+    "60FPS",
+    "GTAVI",
+    "PS5Pro",
+    "GTA6Tips",
+    "Gaming"
+  ],
+  "rating": {
+    "demand": 9,
+    "payoff": 9,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 8,
+    "confidence": 8,
+    "score": 8.6
+  },
+  "sources": [
+    "https://www.vice.com/en/article/gta-6-ps5-pro-framerate-explained/",
+    "https://www.neoteo.com/en/gta-6-ps5-pro-performance-30-fps-no-60-fps",
+    "https://github.com/CelduinX/gta6-frame-generation",
+    "https://www.elgato.com/us/en/explorer/products/capture/how-to-play-gta-6-at-60-fps-on-ps5-and-xbox/",
+    "https://help.elgato.com/hc/en-us/articles/360040482032",
+    "https://store.steampowered.com/app/993090/Lossless_Scaling/",
+    "https://gamerant.com/gta-6-60-fps-guide-pc-frame-generation/",
+    "https://promptowy.com/en/gta-6/gta-6-60-fps/"
+  ],
+  "footage": {
+    "drive": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+          "channel": "affiwillcarry",
+          "start": 84,
+          "dur": 5.6,
+          "x": 660
+        }
+      ]
+    },
+    "city": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+          "channel": "xqc",
+          "start": 4,
+          "dur": 5.4,
+          "x": 1050
+        }
+      ]
+    },
+    "heli": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+          "channel": "rdjavi",
+          "start": 0,
+          "dur": 3.4,
+          "x": 700
+        }
+      ]
+    },
+    "dark": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+          "channel": "xqc",
+          "start": 6,
+          "dur": 5.4,
+          "x": 1100
+        }
+      ]
+    },
+    "night": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+          "channel": "affiwillcarry",
+          "start": 96,
+          "dur": 5.0,
+          "x": 660
+        }
+      ]
+    },
+    "wild": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+          "channel": "rdjavi",
+          "start": 4,
+          "dur": 3.6,
+          "x": 1000
+        }
+      ]
+    },
+    "plane": {
+      "parts": [
+        {
+          "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+          "channel": "paulinholokobr",
+          "start": 0,
+          "dur": 3.0,
+          "x": 660
+        }
+      ]
+    }
+  },
+  "media": {
+    "ls_app.jpg": {
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/993090/b1ab376a9effb952ed919ec750d13f991fe1db74/ss_b1ab376a9effb952ed919ec750d13f991fe1db74.1920x1080.jpg",
+      "width": 1280,
+      "credit": "Lossless Scaling screenshot: THS (Steam store page)"
+    }
+  },
+  "music": {
+    "style": "money",
+    "bpm": 112,
+    "seed": 23,
+    "drop": 2.8,
+    "break": 29.0,
+    "back": 29.52,
+    "outro": 35.84
+  },
+  "reel": {
+    "series": "HIDDEN FEATURE",
+    "duration": 38.6,
+    "musicVolume": 0.4,
+    "scenes": [
+      {
+        "type": "hook",
+        "from": 0,
+        "to": 2.8,
+        "captions": false,
+        "broll": {
+          "src": "drive",
+          "grade": "cold",
+          "dim": 0.2,
+          "zoom": [
+            1.05,
+            1.2
+          ]
+        },
+        "stamp": "30 FPS",
+        "kicker": "GTA 6 ON CONSOLE IS",
+        "title": [
+          "STUCK AT",
+          "30 FPS"
+        ],
+        "color": "red",
+        "tagAt": 1.76,
+        "ar": "GTA 6 عالقة على 30 فريم!"
+      },
+      {
+        "type": "consoles",
+        "from": 2.8,
+        "to": 6.32,
+        "captions": false,
+        "broll": {
+          "src": "city",
+          "grade": "night",
+          "dim": 0.2
+        },
+        "title": "ON EVERY CONSOLE",
+        "value": "30",
+        "items": [
+          {
+            "name": "PS5",
+            "at": 0.32
+          },
+          {
+            "name": "XBOX SERIES X|S",
+            "at": 0.76
+          },
+          {
+            "name": "PS5 PRO",
+            "at": 2.0,
+            "hot": true
+          }
+        ],
+        "ar": "على كل جهاز… حتى PS5 Pro"
+      },
+      {
+        "type": "stat",
+        "from": 6.32,
+        "to": 9.12,
+        "captions": false,
+        "broll": {
+          "src": "heli",
+          "grade": "warm",
+          "dim": 0.25
+        },
+        "kicker": "BUT IT CAN LOOK LIKE",
+        "value": 60,
+        "countAt": 1.5,
+        "label": "FPS",
+        "sub": "NO NEW CONSOLE",
+        "ar": "بس فيه حيلة تخليها تبان 60"
+      },
+      {
+        "type": "chain",
+        "from": 9.12,
+        "to": 12.64,
+        "captions": false,
+        "broll": {
+          "src": "dark",
+          "grade": "night",
+          "dim": 0.3,
+          "blur": 3
+        },
+        "step": "STEP 1",
+        "label": "CONNECT IT",
+        "devices": [
+          {
+            "name": "PS5",
+            "sub": "YOUR CONSOLE",
+            "at": 0.4,
+            "icon": "console"
+          },
+          {
+            "name": "Capture card",
+            "sub": "HDMI IN · USB OUT",
+            "at": 1.56,
+            "icon": "capture"
+          },
+          {
+            "name": "PC",
+            "sub": "WITH A DECENT GPU",
+            "at": 2.56,
+            "icon": "pc"
+          }
+        ],
+        "links": [
+          "HDMI",
+          "USB"
+        ],
+        "title": "CONSOLE → CARD → PC",
+        "ar": "وصّل البلايستيشن بكابتشر كارد وبعدها بالكمبيوتر"
+      },
+      {
+        "type": "setting",
+        "from": 12.64,
+        "to": 15.84,
+        "captions": false,
+        "broll": {
+          "src": "night",
+          "grade": "night",
+          "dim": 0.35,
+          "blur": 4
+        },
+        "rank": "2",
+        "label": "SYSTEM › HDMI",
+        "tabs": [
+          "SYSTEM",
+          "HDMI"
+        ],
+        "tab": "HDMI",
+        "name": "Enable HDCP",
+        "kind": "toggle",
+        "fromValue": "ON",
+        "toValue": "OFF",
+        "changeAt": 0.8,
+        "title": "HDCP OFF",
+        "ar": "طفّي HDCP من إعدادات الـ HDMI"
+      },
+      {
+        "type": "fgapp",
+        "from": 15.84,
+        "to": 25.92,
+        "captions": false,
+        "broll": {
+          "src": "drive",
+          "grade": "none",
+          "startFrom": 1
+        },
+        "step": "STEP 3",
+        "label": "FRAME GENERATION",
+        "capture": {
+          "at": 0.88,
+          "title": "Capture · PS5 · 1080p",
+          "fps": "30"
+        },
+        "app": {
+          "at": 2.8,
+          "src": "ls_app.jpg",
+          "name": "LOSSLESS SCALING",
+          "price": "$6.99",
+          "priceAt": 4.2
+        },
+        "rows": [
+          {
+            "label": "Type",
+            "from": "Off",
+            "value": "LSFG 3.1",
+            "at": 7.04
+          },
+          {
+            "label": "Mode",
+            "from": "Adaptive",
+            "value": "Fixed",
+            "at": 8.24
+          },
+          {
+            "label": "Multiplier",
+            "from": "–",
+            "value": "2",
+            "at": 8.96
+          }
+        ],
+        "scaleAt": 9.6,
+        "ar": "افتح Lossless Scaling وفعّل توليد الإطارات ×2"
+      },
+      {
+        "type": "boost",
+        "from": 25.92,
+        "to": 29.0,
+        "captions": false,
+        "broll": {
+          "src": "wild",
+          "grade": "warm",
+          "dim": 0.1
+        },
+        "fromAt": 0.24,
+        "toAt": 1.52,
+        "caption": "EVERY OTHER FRAME IS GENERATED",
+        "ar": "الـ 30 صارت 60!",
+        "fromValue": "30",
+        "toValue": "60"
+      },
+      {
+        "type": "twist",
+        "from": 29.0,
+        "to": 31.92,
+        "captions": false,
+        "broll": {
+          "src": "dark",
+          "grade": "cold",
+          "dim": 0.3,
+          "blur": 4
+        },
+        "pre": "BUT…",
+        "slamAt": 0.52,
+        "lines": [
+          {
+            "text": "STILL FEELS",
+            "at": 0.52,
+            "size": 150
+          },
+          {
+            "text": "LIKE 30",
+            "at": 1.4,
+            "color": "red",
+            "size": 240
+          },
+          {
+            "text": "IN YOUR HANDS",
+            "at": 1.8,
+            "size": 110
+          }
+        ],
+        "ar": "بس الإحساس بالتحكم يظل 30"
+      },
+      {
+        "type": "alt",
+        "from": 31.92,
+        "to": 35.84,
+        "captions": false,
+        "broll": {
+          "src": "city",
+          "grade": "night",
+          "dim": 0.2
+        },
+        "question": "NO CAPTURE CARD?",
+        "answer": "REMOTE PLAY",
+        "answerAt": 1.36,
+        "chips": [
+          {
+            "text": "WORKS",
+            "at": 2.36,
+            "tone": "good"
+          },
+          {
+            "text": "1080p MAX",
+            "at": 2.76,
+            "tone": "warn"
+          },
+          {
+            "text": "MORE LAG",
+            "at": 3.16,
+            "tone": "bad"
+          }
+        ],
+        "ar": "ما عندك كابتشر كارد؟ جرّب Remote Play"
+      },
+      {
+        "type": "cta",
+        "from": 35.84,
+        "to": 38.6,
+        "captions": false,
+        "broll": {
+          "src": "plane",
+          "grade": "warm",
+          "dim": 0.25
+        },
+        "line1": "A new GTA 6 trick",
+        "line2": "every day",
+        "button": "FOLLOW @GTA6FIED",
+        "ar": "تابعنا… كل يوم حيلة جديدة في GTA 6",
+        "next": "SAVE THIS FOR LATER"
+      }
+    ],
+    "sfx": [
+      {
+        "src": "glitch.wav",
+        "at": 0.05,
+        "volume": 0.4
+      },
+      {
+        "src": "impact.wav",
+        "at": 1.76,
+        "volume": 0.55
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 2.78,
+        "volume": 0.4
+      },
+      {
+        "src": "tick.wav",
+        "at": 3.12,
+        "volume": 0.5
+      },
+      {
+        "src": "tick.wav",
+        "at": 3.56,
+        "volume": 0.5
+      },
+      {
+        "src": "impact.wav",
+        "at": 4.8,
+        "volume": 0.55
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 6.3,
+        "volume": 0.4
+      },
+      {
+        "src": "riser.wav",
+        "at": 6.9,
+        "volume": 0.3
+      },
+      {
+        "src": "impact.wav",
+        "at": 8.12,
+        "volume": 0.6
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 9.1,
+        "volume": 0.4
+      },
+      {
+        "src": "ping.wav",
+        "at": 9.52,
+        "volume": 0.45
+      },
+      {
+        "src": "ping.wav",
+        "at": 10.68,
+        "volume": 0.45
+      },
+      {
+        "src": "ping.wav",
+        "at": 11.68,
+        "volume": 0.45
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 12.62,
+        "volume": 0.4
+      },
+      {
+        "src": "glitch.wav",
+        "at": 13.44,
+        "volume": 0.45
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 15.82,
+        "volume": 0.4
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 18.64,
+        "volume": 0.4
+      },
+      {
+        "src": "cash.wav",
+        "at": 20.04,
+        "volume": 0.45
+      },
+      {
+        "src": "tick.wav",
+        "at": 22.88,
+        "volume": 0.5
+      },
+      {
+        "src": "tick.wav",
+        "at": 24.08,
+        "volume": 0.5
+      },
+      {
+        "src": "tick.wav",
+        "at": 24.8,
+        "volume": 0.5
+      },
+      {
+        "src": "ping.wav",
+        "at": 25.44,
+        "volume": 0.5
+      },
+      {
+        "src": "riser.wav",
+        "at": 25.9,
+        "volume": 0.3
+      },
+      {
+        "src": "impact.wav",
+        "at": 27.44,
+        "volume": 0.7
+      },
+      {
+        "src": "glitch.wav",
+        "at": 28.98,
+        "volume": 0.45
+      },
+      {
+        "src": "impact.wav",
+        "at": 29.52,
+        "volume": 0.5
+      },
+      {
+        "src": "error.wav",
+        "at": 30.4,
+        "volume": 0.45
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 31.9,
+        "volume": 0.4
+      },
+      {
+        "src": "ping.wav",
+        "at": 34.28,
+        "volume": 0.45
+      },
+      {
+        "src": "error.wav",
+        "at": 35.08,
+        "volume": 0.4
+      },
+      {
+        "src": "whoosh.wav",
+        "at": 35.82,
+        "volume": 0.4
+      }
+    ]
+  }
+}

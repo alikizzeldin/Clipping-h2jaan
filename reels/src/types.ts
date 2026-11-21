@@ -258,7 +258,53 @@ export type ChatScene = Base & {
   ar?: string;
 };
 
+// ---- the 60 FPS reel: consoles, a cable chain, the frame-gen app, 30 → 60, and a fallback ----
+export type ConsolesScene = Base & {
+  type: 'consoles';
+  title: string; // "EVERY CONSOLE"
+  value: string; // "30"
+  items: {name: string; at: number; hot?: boolean}[];
+  ar?: string;
+};
+export type ChainScene = Base & {
+  type: 'chain';
+  step: string;
+  label: string;
+  devices: {name: string; sub?: string; at: number; icon: 'console' | 'capture' | 'pc'}[];
+  links: string[]; // cable labels between devices, e.g. ["HDMI", "USB"]
+  title: string;
+  ar?: string;
+};
+export type AppScene = Base & {
+  type: 'fgapp';
+  step: string;
+  label: string;
+  capture: {at: number; title: string; fps: string}; // the capture viewer window
+  app: {at: number; src: string; name: string; price: string; priceAt: number}; // the real app screenshot
+  rows: {label: string; from: string; value: string; at: number}[];
+  scaleAt: number;
+  ar?: string;
+};
+export type BoostScene = Base & {
+  type: 'boost';
+  fromValue: string;
+  toValue: string;
+  fromAt: number;
+  toAt: number;
+  caption: string;
+  ar?: string;
+};
+export type AltScene = Base & {
+  type: 'alt';
+  question: string;
+  answer: string;
+  answerAt: number;
+  chips: {text: string; at: number; tone: 'good' | 'warn' | 'bad'}[];
+  ar?: string;
+};
+
 export type Scene =
+  | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene

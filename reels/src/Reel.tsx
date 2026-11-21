@@ -23,6 +23,7 @@ import {Code} from './scenes/Code';
 import {Reveal} from './scenes/Reveal';
 import {Proof} from './scenes/Proof';
 import {Chat} from './scenes/Chat';
+import {Alt, Boost, Chain, Consoles, FgApp} from './scenes/Fps';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 
@@ -41,6 +42,11 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'cash': return <Cash s={s} />;
     case 'control': return <Control s={s} />;
     case 'era': return <Era s={s} />;
+    case 'consoles': return <Consoles s={s} />;
+    case 'chain': return <Chain s={s} />;
+    case 'fgapp': return <FgApp s={s} />;
+    case 'boost': return <Boost s={s} />;
+    case 'alt': return <Alt s={s} />;
     case 'dial': return <Dial s={s} />;
     case 'stat': return <Stat s={s} />;
     case 'combo': return <Combo s={s} />;
