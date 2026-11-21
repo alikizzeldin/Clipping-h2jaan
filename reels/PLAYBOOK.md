@@ -34,7 +34,9 @@ If a folder is not published yet:
 - If its record in `state/published.json` has `"status": "youtube_pending"`
   (it went to Instagram while YouTube's daily limit was used up) and its
   `youtube_after` time has passed, start the workflow for it again: it now
-  posts the reel to YouTube only. Do this for every such reel, then carry on.
+  posts the reel to YouTube only. Only the OLDEST such reel per wake-up
+  (YouTube takes about 2 uploads a day; two at once would collide), then
+  carry on.
 - If it was queued over 2 hours ago and still is not published, read that
   workflow run's log (GitHub tools: list the runs of `reel.yml`, then the job
   log), fix the cause in the plan if it is the plan's fault, and start it once
