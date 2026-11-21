@@ -21,7 +21,10 @@ permissions:
   contents: write
 
 concurrency:
-  group: clip  # shares the publish history with the clip runs; one writer at a time
+  # Reels queue on their own: GitHub keeps only one waiting run per group, so
+  # sharing the clip runs' group could drop a reel. The publish history is
+  # merged by meaning when saved, so parallel runs lose nothing.
+  group: reel-${{ inputs.episode }}
   cancel-in-progress: false
 
 jobs:
