@@ -2,11 +2,110 @@
  {
   "date": "2026-11-21",
   "ideas": [
-   {"idea": "UFO abduction east of Port Gellhorn after 2 AM, hidden trophy The Truth Is Out There", "demand": 9, "payoff": 9, "fresh": 8, "visual": 7, "confidence": 8, "score": 8.4, "chosen": "001-hidden-ufo"},
-   {"idea": "Chapter 1 money is wiped at Chapter 2 (save it in Family Savings) + sell tracker-free cars to Moses", "demand": 9, "payoff": 9, "fresh": 9, "visual": 8, "confidence": 8, "score": 8.6, "chosen": "002-chapter-1-money"},
-   {"idea": "Painted egg nest on the radio tower, secret cutscene", "demand": 8, "payoff": 6, "fresh": 8, "visual": 6, "confidence": 6, "score": 6.9, "why_not": "sources disagree on where the tower is"},
-   {"idea": "Skunk Ape (Bigfoot) near Cottonmouth Lake", "demand": 8, "payoff": 7, "fresh": 7, "visual": 5, "confidence": 5, "score": 6.6, "why_not": "needs more confirmation"},
-   {"idea": "Jet-ski dog and the island of dogs", "demand": 7, "payoff": 6, "fresh": 8, "visual": 5, "confidence": 4, "score": 6.1, "why_not": "rumour"}
+   {
+    "idea": "UFO abduction east of Port Gellhorn after 2 AM, hidden trophy The Truth Is Out There",
+    "demand": 9,
+    "payoff": 9,
+    "fresh": 8,
+    "visual": 7,
+    "confidence": 8,
+    "score": 8.4,
+    "chosen": "001-hidden-ufo"
+   },
+   {
+    "idea": "Chapter 1 money is wiped at Chapter 2 (save it in Family Savings) + sell tracker-free cars to Moses",
+    "demand": 9,
+    "payoff": 9,
+    "fresh": 9,
+    "visual": 8,
+    "confidence": 8,
+    "score": 8.6,
+    "chosen": "002-chapter-1-money"
+   },
+   {
+    "idea": "Painted egg nest on the radio tower, secret cutscene",
+    "demand": 8,
+    "payoff": 6,
+    "fresh": 8,
+    "visual": 6,
+    "confidence": 6,
+    "score": 6.9,
+    "why_not": "sources disagree on where the tower is"
+   },
+   {
+    "idea": "Skunk Ape (Bigfoot) near Cottonmouth Lake",
+    "demand": 8,
+    "payoff": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.6,
+    "why_not": "needs more confirmation"
+   },
+   {
+    "idea": "Jet-ski dog and the island of dogs",
+    "demand": 7,
+    "payoff": 6,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 4,
+    "score": 6.1,
+    "why_not": "rumour"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-21",
+  "wake_up": "15:40 UTC (first reel of the 4-a-day plan)",
+  "ideas": [
+   {
+    "idea": "4 hidden controls GTA 6 never tells you (#1 saves your car)",
+    "format": "HIDDEN FEATURE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 7,
+    "confidence": 8,
+    "score": 8.2,
+    "chosen": "003-hidden-controls"
+   },
+   {
+    "idea": "GTA 6 made about $2.36B on day one (estimate)",
+    "format": "GTA 6 NEWS",
+    "demand": 8,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 9,
+    "visual": 5,
+    "confidence": 6,
+    "score": 6.3,
+    "why_not": "an estimate, not official figures"
+   },
+   {
+    "idea": "Missable meditation trophy on Jason's balcony",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.3,
+    "why_not": "sources disagree whether that spot is required"
+   },
+   {
+    "idea": "Boobie's laptop puzzle: a free garage and car (Chapter 4, missable)",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 5,
+    "score": 6.6,
+    "why_not": "only one source so far"
+   }
   ]
  }
 ]

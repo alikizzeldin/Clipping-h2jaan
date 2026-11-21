@@ -166,7 +166,9 @@ naming a footage shot): `hook` (stamp + kicker + giant title; `ufo` or `counter`
 extras), `list` (wiped/safe checklist), `location` (map, route and pin), `time`
 (rolling clock), `trigger` (light beam + target brackets), `scan` (HUD scan + check
 rows), `phone` (banking app transfer), `twist` (blackout then slam), `reward`
-(trophy card), `cash` (in-game proof card then a big payout), `cta` (logo + follow).
+(trophy card), `cash` (in-game proof card then a big payout), `control` (a countdown item: big
+rank number + an animated controller button pressed on the word, or a car flipping back over),
+`cta` (logo + follow).
 Mix them to fit the story; new scene types may be added in `reels/src/scenes/`.
 
 Timing: a scene starts when the narrator starts its sentence; titles land on the

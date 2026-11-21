@@ -119,9 +119,22 @@ export type CashScene = Base & {
   ar?: string;
 };
 
+export type ControlScene = Base & {
+  type: 'control';
+  rank: string; // "4" … "1": a countdown, best last
+  label: string; // e.g. "HIDDEN CONTROL"
+  title: string;
+  button: 'TRIANGLE' | 'R3' | 'DPAD_LEFT';
+  taps: 1 | 2 | 'hold';
+  pressAt: number; // seconds into the scene, on the word that names the input
+  chip?: string; // e.g. "XBOX: Y"
+  flip?: boolean; // draw a car rolling back onto its wheels instead of a button
+  ar?: string;
+};
+
 export type Scene =
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
-  | ListScene | PhoneScene | ScanScene | CashScene;
+  | ListScene | PhoneScene | ScanScene | CashScene | ControlScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

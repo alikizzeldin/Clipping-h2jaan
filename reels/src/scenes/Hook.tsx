@@ -79,7 +79,8 @@ export const Hook: React.FC<{s: HookScene; t0: number; words: {text: string; sta
           const glitch = interpolate(frame, [at, at + 10], [1, 0], clamp) + (frame % 23 === 0 ? 0.6 : 0);
           return (
             <div key={i} style={{opacity: Math.min(1, p * 2), transform: `scale(${interpolate(p, [0, 1], [1.8, 1])})`}}>
-              <GlitchText text={word} size={last ? 330 : 230} color={last ? color : '#fff'} glitch={frame >= at ? glitch : 0} />
+              <GlitchText text={word} size={Math.min(last ? 330 : 230, Math.floor(960 / (word.length * 0.47)))}
+                color={last ? color : '#fff'} glitch={frame >= at ? glitch : 0} />
             </div>
           );
         })}
