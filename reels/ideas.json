@@ -558,5 +558,109 @@
     "score": 5.1
    }
   ]
+ },
+ {
+  "date": "2026-11-22",
+  "wake_up": "18:41 UTC",
+  "ideas": [
+   {
+    "idea": "Talking parrot stash: at Three Sheets Liquor (Key Lento) clear the fenced exotic-animal yard out back; the parrot's hint points to a generator; the cash (over $1,300) is in the vent beside it",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 7,
+    "chosen": "011-parrot-stash",
+    "sources": [
+     "https://www.gtaboom.com/gta-6-early-money-the-three-sheets-liquor-parrot-stash-555d",
+     "https://techwiser.com/gta-6-talking-parrot-location/",
+     "https://www.newsminimalist.com/articles/gta-6-players-can-find-hidden-cash-with-a-talking-parrot-65295c13",
+     "https://finalboss.io/gta-6-shirleys-rum-early-money",
+     "https://gta6.house/library/businesses/three-sheets-liquor",
+     "https://playday.one/2026/11/19/gta-6-talking-parrot-hidden-cash/"
+    ],
+    "note": "'Over $1,300' because guides say over $1,300 or over $2,000; the vent's exact side differs, so the reel only says 'next to' the generator. Shirley's rum errand (manual reel m111) is not mentioned.",
+    "score": 7.6
+   },
+   {
+    "idea": "Gold gun icons mark unique weapon variants: pick one up once and it's yours for good (Jason and Lucia); no mods; swap at an Ammu-Nation locker",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 8,
+    "why_not": "just under the gate (6.9): useful, but no strong ending",
+    "sources": [
+     "https://www.g2a.com/news/gta-6-news/gta-6-full-weapons-guide/",
+     "https://www.gamesradar.com/games/grand-theft-auto/how-to-remove-guns-from-trunk-recover-weapons-ammu-nation-gta-6/",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-secret-weapons-locations-unlocks/"
+    ],
+    "score": 6.9
+   },
+   {
+    "idea": "Mount Chiliad callback in a Donnie phone call",
+    "format": "EASTER EGG",
+    "demand": 7,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 3,
+    "confidence": 7,
+    "why_not": "only a voice line, nothing to show (manual studio rejected it too)",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-gta-5-mount-chiliad-mystery-easter-egg-802897-20261120"
+    ],
+    "score": 5.7
+   },
+   {
+    "idea": "Fastest car in GTA 6",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 3,
+    "why_not": "no tested top speeds yet; lists are estimates or GTA 5 data",
+    "sources": [
+     "https://www.gtabase.com/articles/gta-6/gta-6-fastest-cars-ranked-list-by-top-speed"
+    ],
+    "score": 6.0
+   },
+   {
+    "idea": "Hidden trophy 'Bad Luck, I Guess' ('Second time's the charm')",
+    "format": "DON'T MISS",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 4,
+    "why_not": "unlock method unconfirmed; story trophy",
+    "sources": [
+     "https://www.gamerguides.com/grand-theft-auto-vi/achievements/20854"
+    ],
+    "score": 5.3
+   },
+   {
+    "idea": "Your mechanic can bring repairs to you",
+    "format": "HIDDEN FEATURE",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 4,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 5,
+    "why_not": "one source only",
+    "sources": [
+     "https://www.digit.in/features/gaming/gta-6-6-gameplay-tricks-that-can-make-your-time-in-leonida-easier.html"
+    ],
+    "score": 5.1
+   }
+  ]
  }
 ]

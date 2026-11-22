@@ -1,0 +1,462 @@
+{
+ "episode": 11,
+ "kind": "money",
+ "topic": "Talking parrot stash at Three Sheets Liquor (Key Lento): early in the story, clear the fenced animal yard behind the store, find the talking parrot, its hint points to a generator, and the vent next to it holds over $1,300 in cash",
+ "title": {
+  "en": "This GTA 6 PARROT knows a secret 🦜 (it pays)",
+  "ar": "ببغاء في GTA 6 يعرف سر 🦜"
+ },
+ "summary": "A talking parrot in GTA 6 leads you to hidden cash. Early in the story, go to Three Sheets Liquor in Key Lento and clear out the fenced animal yard behind the store. Find the talking parrot and listen: his hint points to a generator. Check the vent right next to it for over $1,300 in cash.",
+ "summary_ar": "في GTA 6 ببغاء يتكلم ويدلّك على فلوس مخبّاة. بداية القصة روح Three Sheets Liquor في Key Lento ونظّف الحوش المسوّر ورا المحل. لاقِ الببغاء واسمع تلميحه: يدلّك على المولّد. افتح فتحة التهوية جنبه… وفيها أكثر من 1300 دولار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Secrets",
+  "GTA6Tips",
+  "GTAVI",
+  "KeyLento",
+  "GTA6Parrot",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 5,
+  "confidence": 7,
+  "score": 7.6
+ },
+ "sources": [
+  "https://www.gtaboom.com/gta-6-early-money-the-three-sheets-liquor-parrot-stash-555d",
+  "https://techwiser.com/gta-6-talking-parrot-location/",
+  "https://www.newsminimalist.com/articles/gta-6-players-can-find-hidden-cash-with-a-talking-parrot-65295c13",
+  "https://finalboss.io/gta-6-shirleys-rum-early-money",
+  "https://gta6.house/library/businesses/three-sheets-liquor",
+  "https://playday.one/2026/11/19/gta-6-talking-parrot-hidden-cash/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 9.2,
+     "dur": 3.2,
+     "x": 650
+    }
+   ]
+  },
+  "car": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 53.4,
+     "dur": 2.6,
+     "x": 700
+    }
+   ]
+  },
+  "town": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7QBJDMN1VY7V8T20BK39CAC/playlist.m3u8",
+     "channel": "rraenee",
+     "start": 8.0,
+     "dur": 3.9,
+     "x": 340
+    }
+   ]
+  },
+  "yard": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7QBJDMN1VY7V8T20BK39CAC/playlist.m3u8",
+     "channel": "rraenee",
+     "start": 12.6,
+     "dur": 3.1,
+     "x": 300
+    }
+   ]
+  },
+  "inside": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 6.4,
+     "dur": 4.7,
+     "x": 440
+    }
+   ]
+  },
+  "vent": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/03/clip_01M7R4ZW8RV8VTVEDCFHCQFCD3/playlist.m3u8",
+     "channel": "vajs",
+     "start": 19.3,
+     "dur": 2.7,
+     "x": 300
+    }
+   ]
+  },
+  "cash": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 76.4,
+     "dur": 3.2,
+     "x": 850
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 92,
+  "seed": 101,
+  "drop": 2.96,
+  "break": 16.96,
+  "back": 18.96,
+  "outro": 22.72
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "episode": 11,
+  "duration": 26.3,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 2.96,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "THIS GTA 6 PARROT",
+    "title": [
+     "KNOWS A",
+     "SECRET"
+    ],
+    "color": "green",
+    "tag": "…and it pays.",
+    "tagAt": 2.4,
+    "ar": "ببغاء في GTA 6 يعرف سر… ويدفع!"
+   },
+   {
+    "type": "reveal",
+    "from": 2.96,
+    "to": 5.44,
+    "captions": false,
+    "broll": {
+     "src": "car",
+     "grade": "night",
+     "dim": 0.2,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "LISTEN CLOSELY…",
+    "slamAt": 1.42,
+    "color": "green",
+    "lines": [
+     {
+      "text": "IT PAYS.",
+      "at": 1.44,
+      "color": "green",
+      "size": 240
+     }
+    ],
+    "ar": "اسمع زين… تراه يدفع"
+   },
+   {
+    "type": "location",
+    "from": 5.44,
+    "to": 9.28,
+    "broll": {
+     "src": "town",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "THE STORE",
+    "place": "KEY LENTO",
+    "target": "THREE SHEETS",
+    "direction": "GO",
+    "region": "EARLY IN THE STORY",
+    "ar": "من بداية القصة: روح محل «ثري شيتس» في كي لينتو"
+   },
+   {
+    "type": "trigger",
+    "from": 9.28,
+    "to": 12.32,
+    "broll": {
+     "src": "yard",
+     "grade": "warm",
+     "dim": 0.1,
+     "zoom": [
+      1.03,
+      1.12
+     ]
+    },
+    "step": "02",
+    "label": "OUT BACK",
+    "title": "THE ANIMAL YARD",
+    "sub": "fenced, behind the store",
+    "target": {
+     "x": 500,
+     "y": 1050,
+     "w": 700,
+     "h": 500
+    },
+    "contact": "YARD",
+    "tagText": "CLEAR IT OUT",
+    "ar": "نظّف الحوش المسوّر ورا المحل"
+   },
+   {
+    "type": "scan",
+    "from": 12.32,
+    "to": 16.96,
+    "broll": {
+     "src": "inside",
+     "grade": "cold",
+     "dim": 0.15,
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "03",
+    "label": "THE PARROT",
+    "target": {
+     "x": 540,
+     "y": 900,
+     "w": 760,
+     "h": 760
+    },
+    "checks": [
+     {
+      "text": "TALKING PARROT",
+      "at": 0.8
+     },
+     {
+      "text": "HINT: THE GENERATOR",
+      "at": 3.52
+     }
+    ],
+    "hud": "● LISTENING…",
+    "ar": "لاقِ الببغاء… وتلميحه يدلّك على المولّد"
+   },
+   {
+    "type": "trigger",
+    "from": 16.96,
+    "to": 19.6,
+    "broll": {
+     "src": "vent",
+     "grade": "night",
+     "dim": 0.1,
+     "zoom": [
+      1.04,
+      1.12
+     ]
+    },
+    "step": "04",
+    "label": "THE VENT",
+    "title": "CHECK THE VENT",
+    "sub": "next to the generator",
+    "target": {
+     "x": 540,
+     "y": 950,
+     "w": 600,
+     "h": 500
+    },
+    "contact": "VENT",
+    "tagText": "NEXT TO THE GENERATOR",
+    "ar": "افتح فتحة التهوية جنب المولّد"
+   },
+   {
+    "type": "cash",
+    "from": 19.6,
+    "to": 22.72,
+    "captions": false,
+    "broll": {
+     "src": "cash",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "INSIDE THE VENT",
+    "amount": "$1,300+",
+    "per": "in cash",
+    "amountAt": 0.72,
+    "ar": "وفيها أكثر من 1300 دولار كاش"
+   },
+   {
+    "type": "cta",
+    "from": 22.72,
+    "to": 26.3,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MONEY FILE #012 · SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.38,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 2.06,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.9,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 3.0,
+    "volume": 0.4
+   },
+   {
+    "src": "cash.wav",
+    "at": 4.38,
+    "volume": 0.6
+   },
+   {
+    "src": "impact.wav",
+    "at": 4.38,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.38,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.64,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.22,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.0,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.26,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 12.5,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.12,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.84,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.9,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 17.36,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.54,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 20.3,
+    "volume": 0.7
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.3,
+    "volume": 0.35
+   },
+   {
+    "src": "coins.wav",
+    "at": 20.44,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.65,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.74,
+    "volume": 0.5
+   }
+  ]
+ }
+}
