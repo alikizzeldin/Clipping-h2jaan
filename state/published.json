@@ -1500,7 +1500,11 @@
    "hook": "reel",
    "instagram": "6b03729f846b0ee907c3e2b7",
    "instagram_at": "2026-11-22T22:54:33+00:00",
-   "instagram_title": "GTA 6 hides a mission in a TOILET 🚽 (the reward is permanent)"
+   "instagram_title": "GTA 6 hides a mission in a TOILET 🚽 (the reward is permanent)",
+   "status": "error",
+   "error": "The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
+   "instagram_status": "sent",
+   "instagram_link": "https://www.instagram.com/reel/DgD7NjIDF9E/"
   }
  },
  "skipped": {
