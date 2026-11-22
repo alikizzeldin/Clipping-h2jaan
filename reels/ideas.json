@@ -453,5 +453,110 @@
     "score": 6.5
    }
   ]
+ },
+ {
+  "date": "2026-11-22",
+  "wake_up": "12:41 UTC",
+  "ideas": [
+   {
+    "idea": "Secret radio station hosted by Kodak Black ('The Sniper of La Perle'): scan its 4 posters with your phone in La Perle and Crosstown (Vice City) to unlock it on the radio; a second secret station (The Vault) needs one poster in the nightclub of the same name",
+    "format": "HIDDEN FEATURE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 6,
+    "confidence": 8,
+    "chosen": "010-secret-radio",
+    "sources": [
+     "https://www.vice.com/en/article/gta-6-players-discover-secret-radio-station-hosted-by-florida-rap-star-kodak-black/",
+     "https://game8.co/games/GTA-6/archives/639190",
+     "https://www.gamingbible.com/news/gta-6-how-to-unlock-secret-radio-stations-790145-20261122",
+     "https://www.hotnewhiphop.com/1016816-kodak-black-gta-vi-unlock-guide",
+     "https://theleonida.com/news/gta-6-secret-radio-station-kodak-black-sniper-of-la-perle",
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6-radio-songs/"
+    ],
+    "note": "Left out: the playlist length (22 vs 13 tracks), the exact poster shops (one guide only) and the Vault station's host (disputed).",
+    "score": 8.1
+   },
+   {
+    "idea": "Weird Al Yankovic is DJ Al on Vice City FM and voices the Burger Shot ads",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 9,
+    "why_not": "revealed on 19 Nov and widely covered; the payoff is mild",
+    "sources": [
+     "https://www.avclub.com/weird-al-yankovic-radio-dj-grand-theft-auto-iv-gta",
+     "https://www.pcgamer.com/games/grand-theft-auto/yes-youre-hearing-weird-al-yankovic-hosting-a-radio-station-in-gta-6/",
+     "https://kotaku.com/yes-thats-weird-al-hosting-a-radio-station-in-gta-6-2000758140"
+    ],
+    "score": 6.9
+   },
+   {
+    "idea": "Skeeter's bar in Hamlet may be a South Park nod",
+    "format": "EASTER EGG",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 4,
+    "why_not": "players 'think' so; unconfirmed",
+    "sources": [
+     "https://gamerant.com/gta-6-south-park-easter-egg/",
+     "https://gaminghq.eu/2026/11/22/gta-6-south-park-easter-egg-discovered/"
+    ],
+    "score": 5.3
+   },
+   {
+    "idea": "Players report PS5 crashes mid-session",
+    "format": "GTA 6 NEWS",
+    "demand": 7,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 8,
+    "visual": 3,
+    "confidence": 5,
+    "why_not": "no official word or fix; nothing to pay off",
+    "sources": [
+     "https://tech.yahoo.com/gaming/breaking-news/live/gta-6-release-live-updates-reviews-memes-and-more-as-gamers-explore-and-react-to-leonida-after-13-long-years-230554192.html"
+    ],
+    "score": 5.2
+   },
+   {
+    "idea": "GTA 6's collections: 18 cards, 89 phone scans, 8 exploration entries",
+    "format": "DON'T MISS",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 5,
+    "why_not": "counts differ wildly between guides (250 vs ~3,000)",
+    "sources": [
+     "https://mobalytics.gg/gamebase/guides/grand-theft-auto-6-all-collectibles"
+    ],
+    "score": 5.3
+   },
+   {
+    "idea": "32 (or 39) Strangers & Freaks quests across 10 characters",
+    "format": "SECRET FILE",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 4,
+    "why_not": "guides disagree on the count; no reward list",
+    "sources": [
+     "https://www.gtabase.com/side-missions/gta-6/strangers/"
+    ],
+    "score": 5.1
+   }
+  ]
  }
 ]

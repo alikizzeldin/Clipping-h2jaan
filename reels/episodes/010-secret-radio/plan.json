@@ -1,0 +1,471 @@
+{
+ "episode": 10,
+ "kind": "feature",
+ "topic": "Secret radio station hosted by Kodak Black ('The Sniper of La Perle'): scan its 4 posters with your phone in two Vice City neighborhoods (La Perle, Crosstown) to unlock it on the radio; a second secret station needs one poster inside a nightclub (The Vault)",
+ "title": {
+  "en": "GTA 6 has a SECRET radio station 📻 (guess who hosts it)",
+  "ar": "محطة راديو سرية في GTA 6 📻"
+ },
+ "summary": "GTA 6 has a secret radio station that isn't on your dial, hosted by a Florida rap star. Find its four posters across two Vice City neighborhoods (La Perle and Crosstown) and scan each one with your phone: the station unlocks on your radio. The host is Kodak Black. A second secret station needs just one poster, inside a nightclub.",
+ "summary_ar": "في GTA 6 محطة راديو سرية مو موجودة بالقائمة، ويقدّمها رابر من فلوريدا. دوّر على 4 بوسترات في حيّين بفايس سيتي (La Perle و Crosstown) وصوّرها بجوالك: تنفتح المحطة بالراديو. والمقدّم؟ كوداك بلاك. ومحطة سرية ثانية تحتاج بوستر واحد بس داخل نادي ليلي.",
+ "keywords": [
+  "GTA6",
+  "GTA6Radio",
+  "KodakBlack",
+  "GTA6Secrets",
+  "GTAVI",
+  "ViceCity",
+  "GTA6Tips",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 6,
+  "confidence": 8,
+  "score": 8.1
+ },
+ "sources": [
+  "https://www.vice.com/en/article/gta-6-players-discover-secret-radio-station-hosted-by-florida-rap-star-kodak-black/",
+  "https://game8.co/games/GTA-6/archives/639190",
+  "https://www.gamingbible.com/news/gta-6-how-to-unlock-secret-radio-stations-790145-20261122",
+  "https://www.hotnewhiphop.com/1016816-kodak-black-gta-vi-unlock-guide",
+  "https://theleonida.com/news/gta-6-secret-radio-station-kodak-black-sniper-of-la-perle",
+  "https://www.pcgamer.com/games/grand-theft-auto/gta-6-radio-songs/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.4,
+     "dur": 3.2,
+     "x": 900
+    }
+   ]
+  },
+  "street": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 109.4,
+     "dur": 3.9,
+     "x": 720
+    }
+   ]
+  },
+  "city": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 85.6,
+     "dur": 4.5,
+     "x": 700
+    }
+   ]
+  },
+  "murals": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 122.6,
+     "dur": 3.4,
+     "x": 470
+    }
+   ]
+  },
+  "drive": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 165.4,
+     "dur": 2.2,
+     "x": 720
+    }
+   ]
+  },
+  "club": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/07/clip_01M7R3KP9EH51T9YH58XMZACZQ/playlist.m3u8",
+     "channel": "carryminati",
+     "start": 141.8,
+     "dur": 4.7,
+     "x": 1000
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 96,
+  "seed": 97,
+  "drop": 3.04,
+  "break": 16.44,
+  "back": 17.36,
+  "outro": 23.28
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "episode": 10,
+  "duration": 26.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.04,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "HIDDEN",
+    "kicker": "GTA 6 HAS A SECRET",
+    "title": [
+     "RADIO",
+     "STATION"
+    ],
+    "color": "pink",
+    "tag": "…guess who hosts it.",
+    "tagAt": 2.4,
+    "ar": "محطة راديو سرية في GTA 6… خمّن مين يقدّمها"
+   },
+   {
+    "type": "twist",
+    "from": 3.04,
+    "to": 6.8,
+    "captions": false,
+    "broll": {
+     "src": "street",
+     "grade": "night",
+     "blur": 3,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "NOT ON YOUR DIAL…",
+    "slamAt": 1.66,
+    "lines": [
+     {
+      "text": "HOSTED BY A",
+      "at": 1.68,
+      "size": 110
+     },
+     {
+      "text": "FLORIDA",
+      "at": 1.9,
+      "color": "gold",
+      "size": 210
+     },
+     {
+      "text": "RAP STAR",
+      "at": 2.4,
+      "color": "pink",
+      "size": 190
+     }
+    ],
+    "ar": "مو موجودة بالقائمة… ويقدّمها رابر من فلوريدا"
+   },
+   {
+    "type": "location",
+    "from": 6.8,
+    "to": 11.12,
+    "broll": {
+     "src": "city",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "FIND 4 POSTERS",
+    "place": "VICE CITY",
+    "target": "LA PERLE",
+    "direction": "SCAN",
+    "region": "LA PERLE + CROSSTOWN",
+    "ar": "روح فايس سيتي ودوّر على 4 بوسترات في حيّين"
+   },
+   {
+    "type": "scan",
+    "from": 11.12,
+    "to": 14.4,
+    "broll": {
+     "src": "murals",
+     "grade": "warm",
+     "dim": 0.15,
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "02",
+    "label": "SCAN THEM",
+    "target": {
+     "x": 540,
+     "y": 900,
+     "w": 800,
+     "h": 520
+    },
+    "checks": [
+     {
+      "text": "SCAN WITH YOUR PHONE",
+      "at": 0.3
+     },
+     {
+      "text": "POSTER 1 · 2 · 3",
+      "at": 1.1
+     },
+     {
+      "text": "ALL 4 SCANNED",
+      "at": 2.48
+     }
+    ],
+    "hud": "● SCANNING POSTER…",
+    "ar": "صوّر كل بوستر بجوالك"
+   },
+   {
+    "type": "menu",
+    "from": 14.4,
+    "to": 16.44,
+    "captions": false,
+    "broll": {
+     "src": "drive",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 5
+    },
+    "menu": "RADIO",
+    "tab": "SECRET",
+    "revealAt": 0.15,
+    "unlockAt": 0.48,
+    "note": "THE SNIPER OF LA PERLE",
+    "ar": "وتنفتح المحطة بالراديو"
+   },
+   {
+    "type": "reveal",
+    "from": 16.44,
+    "to": 18.72,
+    "captions": false,
+    "broll": {
+     "src": "club",
+     "grade": "night",
+     "dim": 0.2,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "THE HOST?",
+    "slamAt": 0.9,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "KODAK",
+      "at": 0.92,
+      "color": "gold",
+      "size": 250
+     },
+     {
+      "text": "BLACK",
+      "at": 1.32,
+      "size": 230
+     }
+    ],
+    "ar": "والمقدّم؟ كوداك بلاك"
+   },
+   {
+    "type": "trigger",
+    "from": 18.72,
+    "to": 23.28,
+    "broll": {
+     "src": "club",
+     "grade": "warm",
+     "dim": 0.1,
+     "zoom": [
+      1.03,
+      1.12
+     ]
+    },
+    "step": "03",
+    "label": "BONUS",
+    "title": "SECRET STATION #2",
+    "sub": "one poster",
+    "target": {
+     "x": 520,
+     "y": 1000,
+     "w": 600,
+     "h": 520
+    },
+    "contact": "THE VAULT",
+    "tagText": "SECRET STATION #2 · 1 POSTER",
+    "ar": "ومحطة سرية ثانية… بوستر واحد داخل نادي ليلي"
+   },
+   {
+    "type": "cta",
+    "from": 23.28,
+    "to": 26.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRETS TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.82,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.98,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 3.3,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 4.7,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 4.74,
+    "volume": 0.3
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.74,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 9.0,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.06,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 11.3,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.42,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.22,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.6,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.34,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 14.88,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.38,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.34,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 17.38,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.76,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.66,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 21.16,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.21,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.3,
+    "volume": 0.5
+   }
+  ]
+ }
+}
