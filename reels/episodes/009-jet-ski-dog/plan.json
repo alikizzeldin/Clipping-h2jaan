@@ -1,0 +1,460 @@
+{
+ "episode": 9,
+ "kind": "secret",
+ "topic": "Cool Dog (Lucky Dog): get stranded in open water, wait a few minutes, a dog on a jet ski rescues you; stay on until he stops; he takes you to an island full of dogs and digs up a wallet with about $1,200",
+ "title": {
+  "en": "GTA 6 has a SECRET jet ski dog 🐶 (and he pays you)",
+  "ar": "كلب سري على جت سكي في GTA 6 🐶"
+ },
+ "summary": "GTA 6 has a secret jet ski dog. Take a boat into open water, jump off and swim away, then wait a few minutes. A dog rides up on a jet ski: climb on and stay on until he fully stops. He takes you to an island full of dogs and digs up a wallet with about $1,200.",
+ "summary_ar": "في GTA 6 كلب سري يركب جت سكي. خذ قارب للبحر المفتوح، نط منه وابعد سباحة، واستنى كم دقيقة. يجيك كلب على جت سكي: اركب وراه ولا تنزل لين يوقف. ياخذك لجزيرة مليانة كلاب ويطلع لك محفظة فيها حوالي 1200 دولار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "JetSkiDog",
+  "CoolDog",
+  "GTAVI",
+  "GTA6EasterEgg",
+  "GTA6Money",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 9,
+  "fresh": 7,
+  "visual": 5,
+  "confidence": 8,
+  "score": 8.1
+ },
+ "sources": [
+  "https://www.gfinityesports.com/article/gta-6-how-to-find-cool-dog-lucky-dog",
+  "https://beebom.com/gta-6-jet-ski-dog/",
+  "https://insider-gaming.com/how-to-find-lucky-dog-in-gta-6-secret-jet-ski-dog-location/",
+  "https://games.gg/grand-theft-auto-vi/guides/how-to-find-lucky-dog-grand-theft-auto-6/",
+  "https://guided.news/en/news/gta-6-my-boat-sinks-dog-jet-ski-1218-dollars/",
+  "https://www.wikigtavi.com/guides/gta-6-cool-dog-jet-ski-dog-island",
+  "https://xboxplay.games/gta-6/gta-6-how-to-find-the-cool-jet-ski-dog-easter-egg-77454"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7b/clip_01M7VRW5RA71X4HP9C6P4KQ7KT/playlist.m3u8",
+     "channel": "paymoneywubby",
+     "start": 27.8,
+     "dur": 3.2,
+     "x": 760
+    }
+   ]
+  },
+  "boat": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 56.6,
+     "dur": 3.3,
+     "x": 760
+    },
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 17.3,
+     "dur": 3.3,
+     "x": 700
+    }
+   ]
+  },
+  "wait": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 66.0,
+     "dur": 4.7,
+     "x": 860
+    }
+   ]
+  },
+  "ride": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 69.4,
+     "dur": 2.6,
+     "x": 820
+    }
+   ]
+  },
+  "island": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/b6/clip_01M7V77K453AEC9ZM251P9PJHJ/playlist.m3u8",
+     "channel": "cliffsavage",
+     "start": 20.2,
+     "dur": 3.5,
+     "x": 700
+    }
+   ]
+  },
+  "wallet": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7QBJDMN1VY7V8T20BK39CAC/playlist.m3u8",
+     "channel": "rraenee",
+     "start": 1.6,
+     "dur": 3.4,
+     "x": 600
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 104,
+  "seed": 83,
+  "drop": 3.12,
+  "break": 9.68,
+  "back": 12.3,
+  "outro": 23.52
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "episode": 9,
+  "duration": 27.2,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.12,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "GTA 6 HAS A SECRET",
+    "title": [
+     "JET SKI",
+     "DOG"
+    ],
+    "color": "gold",
+    "tag": "…and he pays you.",
+    "tagAt": 2.6,
+    "ar": "كلب سري على جت سكي… ويدفع لك!"
+   },
+   {
+    "type": "list",
+    "from": 3.12,
+    "to": 9.68,
+    "broll": {
+     "src": "boat",
+     "grade": "warm",
+     "dim": 0.12,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "STEP 1",
+    "label": "GET LOST AT SEA",
+    "cardAt": 2.3,
+    "arAt": 2.6,
+    "items": [
+     {
+      "text": "TAKE A BOAT OUT",
+      "status": "OPEN WATER",
+      "ok": true,
+      "at": 3.0,
+      "icon": "boat"
+     },
+     {
+      "text": "JUMP OFF",
+      "status": "GO",
+      "ok": true,
+      "at": 4.52,
+      "icon": "boat"
+     },
+     {
+      "text": "SWIM AWAY",
+      "status": "GO",
+      "ok": true,
+      "at": 5.36,
+      "icon": "wave"
+     }
+    ],
+    "ar": "خذ قارب للبحر المفتوح… نط منه وابعد سباحة"
+   },
+   {
+    "type": "reveal",
+    "from": 9.68,
+    "to": 14.28,
+    "captions": false,
+    "broll": {
+     "src": "wait",
+     "grade": "cold",
+     "dim": 0.2,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.18
+     ]
+    },
+    "pre": "WAIT A FEW MINUTES…",
+    "slamAt": 2.6,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "A DOG",
+      "at": 2.64,
+      "color": "gold",
+      "size": 230
+     },
+     {
+      "text": "ON A JET SKI",
+      "at": 3.6,
+      "size": 150
+     }
+    ],
+    "ar": "تسمع نباح… وكلب جاي على جت سكي!"
+   },
+   {
+    "type": "trigger",
+    "from": 14.28,
+    "to": 16.8,
+    "broll": {
+     "src": "ride",
+     "grade": "warm",
+     "dim": 0.1,
+     "zoom": [
+      1.03,
+      1.12
+     ]
+    },
+    "step": "02",
+    "label": "STAY ON",
+    "title": "STAY ON",
+    "sub": "until he fully stops",
+    "target": {
+     "x": 520,
+     "y": 900,
+     "w": 520,
+     "h": 420
+    },
+    "contact": "JET SKI",
+    "tagText": "DON'T JUMP OFF",
+    "ar": "اركب وراه… ولا تنزل لين يوقف"
+   },
+   {
+    "type": "location",
+    "from": 16.8,
+    "to": 20.2,
+    "broll": {
+     "src": "island",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "03",
+    "label": "THE ISLAND",
+    "place": "OPEN SEA",
+    "target": "DOG ISLAND",
+    "direction": "RIDE",
+    "region": "THE SPOT CAN VARY",
+    "ar": "ياخذك لجزيرة مليانة كلاب"
+   },
+   {
+    "type": "cash",
+    "from": 20.2,
+    "to": 23.52,
+    "captions": false,
+    "broll": {
+     "src": "wallet",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "HE DIGS UP A WALLET",
+    "amount": "$1,200",
+    "per": "about · free cash",
+    "amountAt": 1.7,
+    "ar": "ويطلع لك محفظة… فيها حوالي 1200 دولار"
+   },
+   {
+    "type": "cta",
+    "from": 23.52,
+    "to": 27.2,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "SECRET FILE #010 · SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 2.42,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.06,
+    "volume": 0.5
+   },
+   {
+    "src": "coins.wav",
+    "at": 4.7,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.4,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.12,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.64,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.48,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.62,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.0,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.6,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.2,
+    "volume": 0.4
+   },
+   {
+    "src": "riser.wav",
+    "at": 10.9,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.28,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 12.32,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.28,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.22,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 16.2,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.74,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.0,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.14,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 21.9,
+    "volume": 0.7
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.9,
+    "volume": 0.35
+   },
+   {
+    "src": "coins.wav",
+    "at": 22.02,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.45,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.54,
+    "volume": 0.5
+   }
+  ]
+ }
+}

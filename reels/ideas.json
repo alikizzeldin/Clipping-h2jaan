@@ -353,5 +353,105 @@
     "score": 7.0
    }
   ]
+ },
+ {
+  "date": "2026-11-22",
+  "wake_up": "08:42 UTC",
+  "ideas": [
+   {
+    "idea": "Cool Dog (Lucky Dog): get stranded in open water, wait a few minutes, a dog on a jet ski rescues you; stay on until he stops; he takes you to an island full of dogs and digs up a wallet with about $1,200",
+    "format": "SECRET FILE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 9,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "chosen": "009-jet-ski-dog",
+    "sources": [
+     "https://www.gfinityesports.com/article/gta-6-how-to-find-cool-dog-lucky-dog",
+     "https://beebom.com/gta-6-jet-ski-dog/",
+     "https://insider-gaming.com/how-to-find-lucky-dog-in-gta-6-secret-jet-ski-dog-location/",
+     "https://games.gg/grand-theft-auto-vi/guides/how-to-find-lucky-dog-grand-theft-auto-6/",
+     "https://guided.news/en/news/gta-6-my-boat-sinks-dog-jet-ski-1218-dollars/",
+     "https://www.wikigtavi.com/guides/gta-6-cool-dog-jet-ski-dog-island",
+     "https://xboxplay.games/gta-6/gta-6-how-to-find-the-cool-jet-ski-dog-easter-egg-77454"
+    ],
+    "note": "Left out: the exact bay (guides name Gambit Bay, Partridge Bay or Bobcat Key), the exact wait time, the sunglasses and whether it repeats. 'About $1,200' because one report says $1,218.",
+    "score": 8.1
+   },
+   {
+    "idea": "A Mount Chiliad-style mural symbol in GTA 6",
+    "format": "EASTER EGG",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 3,
+    "visual": 4,
+    "confidence": 4,
+    "why_not": "fan analysis of a 2025 trailer; nothing confirmed in the game",
+    "sources": [
+     "https://finalboss.io/gta-6-teases-mount-chiliad-mystery-classic-gta"
+    ],
+    "score": 5.0
+   },
+   {
+    "idea": "A ghost Easter egg like GTA 5's Mount Gordo ghost",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 2,
+    "why_not": "no GTA 6 ghost found; results are GTA Online and GTA 5",
+    "sources": [],
+    "score": 5.9
+   },
+   {
+    "idea": "Take-Two: 32.5 million copies sold before launch, $3.79B on day one",
+    "format": "GTA 6 NEWS",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 5,
+    "visual": 4,
+    "confidence": 9,
+    "why_not": "manual reel m107 already covers the record launch",
+    "sources": [
+     "https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records",
+     "https://www.forbes.com/sites/antoniopequenoiv/2026/11/20/gta-6-raked-in-38-billion-sales-on-first-day-the-largest-entertainment-launch-ever/"
+    ],
+    "score": 6.5
+   },
+   {
+    "idea": "No PC version yet: Take-Two says news will come from Rockstar",
+    "format": "GTA 6 NEWS",
+    "demand": 8,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 5,
+    "visual": 3,
+    "confidence": 8,
+    "why_not": "a non-answer: nothing to reveal at the end",
+    "sources": [
+     "https://www.tweaktown.com/news/114580/grand-theft-auto-6-pc-and-physical-disc-news-will-come-from-rockstar-confirms-take-two/index.html"
+    ],
+    "score": 5.6
+   },
+   {
+    "idea": "Pilot Pete air drops pay up to $20,000 (Chapter 4)",
+    "format": "MONEY FILE",
+    "demand": 7,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 5,
+    "why_not": "payouts differ between guides ($10k-$20k)",
+    "sources": [],
+    "score": 6.5
+   }
+  ]
  }
 ]

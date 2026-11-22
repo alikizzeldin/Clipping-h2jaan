@@ -66,6 +66,13 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
           <path d="M8 72 Q18 66 28 72 T48 72 T68 72" {...common} />
         </>
       ) : null}
+      {name === 'wave' ? (
+        <>
+          <path d="M8 30 Q18 22 28 30 T48 30 T68 30" {...common} />
+          <path d="M8 46 Q18 38 28 46 T48 46 T68 46" {...common} />
+          <path d="M8 62 Q18 54 28 62 T48 62 T68 62" {...common} />
+        </>
+      ) : null}
     </svg>
   );
 };
