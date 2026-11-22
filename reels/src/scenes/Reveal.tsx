@@ -56,6 +56,20 @@ const Knife: React.FC<{p: number; frame: number}> = ({p, frame}) => {
   );
 };
 
+// A cowboy hat that drops in and settles with a little bounce.
+const Hat: React.FC<{p: number; frame: number}> = ({p, frame}) => {
+  const y = interpolate(p, [0, 1], [-260, 0]);
+  const tilt = Math.sin(frame / 10) * 3;
+  return (
+    <svg width={520} height={300} viewBox="0 0 520 300" style={{overflow: 'visible', transform: `translateY(${y}px) rotate(${tilt}deg)`}}>
+      <ellipse cx={260} cy={220} rx={250} ry={52} fill="#5a3b22" stroke="#2a1a0e" strokeWidth={6} />
+      <path d="M150 215 C 150 120, 175 60, 225 60 C 245 60, 250 80, 260 80 C 270 80, 275 60, 295 60 C 345 60, 370 120, 370 215 Z" fill="#6e4a2b" stroke="#2a1a0e" strokeWidth={6} />
+      <path d="M152 185 C 220 200, 300 200, 368 185 L 370 210 C 300 226, 220 226, 150 210 Z" fill="#2d1c10" />
+      <path d="M360 192 q 26 18 10 46 M360 192 q 34 6 34 40" stroke="#c9a46a" strokeWidth={6} fill="none" strokeLinecap="round" />
+    </svg>
+  );
+};
+
 // The payoff: a line typed in the dark, then a slam with big words (no UFO; see Twist for that).
 export const Reveal: React.FC<{s: RevealScene}> = ({s}) => {
   const frame = useCurrentFrame();
@@ -82,7 +96,7 @@ export const Reveal: React.FC<{s: RevealScene}> = ({s}) => {
           <Particles x={100} y={500} w={880} h={1300} count={50} seed="reveal" speed={2} color={color} />
           {s.icon ? (
             <div style={{position: 'absolute', top: 300, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: Math.min(1, icon * 2)}}>
-              {s.icon === 'snake' ? <Snake p={icon} frame={frame} /> : <Knife p={icon} frame={frame} />}
+              {s.icon === 'snake' ? <Snake p={icon} frame={frame} /> : s.icon === 'hat' ? <Hat p={icon} frame={frame} /> : <Knife p={icon} frame={frame} />}
             </div>
           ) : null}
           <div style={{position: 'absolute', top: s.icon ? 720 : 640, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18}}>

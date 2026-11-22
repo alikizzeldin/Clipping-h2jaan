@@ -1,0 +1,385 @@
+{
+ "manual": true,
+ "episode": 111,
+ "kind": "warning",
+ "topic": "Shirley's Penumbra: Jason's neighbor Shirley (Key Lento) has two optional Chapter 1 favors, Get Shirley's Rum then Steal the Scooter (Peggy's); do both and she lets you use her Penumbra; both are gone for good once Tourist Trap starts",
+ "title": {
+  "en": "GTA 6's free sports car DISAPPEARS forever ⚠️ (do this in Chapter 1)",
+  "ar": "سيارة رياضية مجانية في GTA 6 تختفي للأبد ⚠️"
+ },
+ "summary": "Jason's neighbor Shirley in Key Lento has two optional Chapter 1 favors: get Shirley's rum, then (when she calls you over again) steal her neighbor Peggy's scooter. Do both and Shirley lets you use her Penumbra whenever you want. Both favors are gone for good once Tourist Trap starts, so do them first.",
+ "summary_ar": "جارة جيسون شيرلي في كي لينتو عندها مهمتين اختياريتين في الفصل الأول: جيب لها الرم، وبعدها اسرق سكوتر جارتها بيغي. سوّهم الاثنين وتخليك تستخدم سيارتها Penumbra متى ما تبي. المهمتين تختفي للأبد إذا بدأت Tourist Trap، فسوّهم قبلها.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Missable",
+  "GTA6Cars",
+  "GTAVI",
+  "GTA6Guide",
+  "KeyLento",
+  "Chapter1",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 7,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 7,
+  "score": 7.2
+ },
+ "sources": [
+  "https://space4games.com/en/games-en/gta-6-shirleys-car-free-guide/",
+  "https://www.keengamer.com/articles/guides/gta-6-chapter-1-guide-all-missables-and-things-to-do-before-tourist-trap/",
+  "https://game8.co/games/GTA-6/archives/638596",
+  "https://metaforge.app/gta-6/gta-6-steal-the-scooter",
+  "https://showgamer.com/en/guides/7940-kak-ukrast-skuter-peggi-v-gta-6-i-ne-popastsya-policii-zadanie-shirli",
+  "https://gta6.wiki.fextralife.com/Steal_the_Scooter"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 2.0,
+     "dur": 5.7,
+     "x": 900
+    }
+   ]
+  },
+  "porch": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 18.5,
+     "dur": 4.4,
+     "x": 700
+    }
+   ]
+  },
+  "door": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 1.5,
+     "dur": 5.8,
+     "x": 700
+    }
+   ]
+  },
+  "road": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 12.0,
+     "dur": 4.1,
+     "x": 1000
+    }
+   ]
+  },
+  "garden": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 8.0,
+     "dur": 5.2,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 3.9,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 100,
+  "seed": 71,
+  "drop": 5.62,
+  "break": 19.64,
+  "back": 20.64,
+  "outro": 24.8
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "duration": 28.6,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 5.62,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "GTA 6 HIDES A FREE",
+    "title": [
+     "SPORTS",
+     "CAR"
+    ],
+    "color": "pink",
+    "tag": "…that disappears.",
+    "tagAt": 3.54,
+    "ar": "سيارة رياضية مجانية في الفصل الأول… بس تختفي للأبد"
+   },
+   {
+    "type": "location",
+    "from": 5.62,
+    "to": 9.92,
+    "broll": {
+     "src": "porch",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "KEY LENTO",
+    "place": "JASON'S HOUSE",
+    "target": "SHIRLEY'S HOUSE",
+    "direction": "NEXT DOOR",
+    "region": "JASON'S NEIGHBOR · CHAPTER 1",
+    "ar": "جارة جيسون شيرلي في كي لينتو… عندها مهمتين اختياريتين"
+   },
+   {
+    "type": "list",
+    "from": 9.92,
+    "to": 15.62,
+    "broll": {
+     "src": "door",
+     "grade": "warm",
+     "dim": 0.35,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "OPTIONAL",
+    "label": "SHIRLEY'S 2 FAVORS",
+    "cardAt": 0.1,
+    "arAt": 0.8,
+    "items": [
+     {
+      "text": "GET SHIRLEY'S RUM",
+      "status": "1ST",
+      "ok": true,
+      "at": 0.24,
+      "icon": "ticket"
+     },
+     {
+      "text": "STEAL PEGGY'S SCOOTER",
+      "status": "2ND",
+      "ok": true,
+      "at": 3.6,
+      "icon": "car"
+     }
+    ],
+    "ar": "أول شي جيب لها الرم… بعدين اسرق سكوتر جارتها بيغي"
+   },
+   {
+    "type": "reward",
+    "from": 15.62,
+    "to": 19.64,
+    "broll": {
+     "src": "road",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "later": "BOTH DONE?",
+    "rewardAt": 2.0,
+    "label": "YOURS TO USE",
+    "name": "Shirley's Penumbra",
+    "tier": "WHENEVER YOU WANT",
+    "ar": "سوّهم الاثنين… وتخليك تسوق سيارتها Penumbra"
+   },
+   {
+    "type": "reveal",
+    "from": 19.64,
+    "to": 24.8,
+    "captions": false,
+    "broll": {
+     "src": "garden",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 3,
+     "zoom": [
+      1.06,
+      1.16
+     ]
+    },
+    "pre": "BUT…",
+    "slamAt": 1.0,
+    "color": "red",
+    "lines": [
+     {
+      "text": "GONE FOREVER",
+      "at": 1.0,
+      "color": "red",
+      "size": 160
+     },
+     {
+      "text": "ONCE TOURIST TRAP",
+      "at": 2.06,
+      "size": 100
+     },
+     {
+      "text": "STARTS",
+      "at": 2.76,
+      "color": "red",
+      "size": 150
+     },
+     {
+      "text": "DO THEM FIRST",
+      "at": 3.84,
+      "color": "green",
+      "size": 110
+     }
+    ],
+    "ar": "المهمتين تختفي للأبد إذا بدأت Tourist Trap… سوّهم أول"
+   },
+   {
+    "type": "cta",
+    "from": 24.8,
+    "to": 28.6,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE DON'T-MISS TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.66,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.02,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.48,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.56,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.9,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.86,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.16,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.52,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.56,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 17.62,
+    "volume": 0.6
+   },
+   {
+    "src": "cash.wav",
+    "at": 17.7,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.58,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.64,
+    "volume": 0.6
+   },
+   {
+    "src": "error.wav",
+    "at": 20.66,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.4,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 23.48,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.72,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.82,
+    "volume": 0.5
+   }
+  ]
+ }
+}

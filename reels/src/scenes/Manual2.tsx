@@ -4,7 +4,7 @@ import {Background} from '../ui/Background';
 import {clamp, ease, pop, sec} from '../ui/motion';
 import {Arabic, Flash, Particles, SceneIn, StepLabel} from '../ui/Pieces';
 import {C, F, accent} from '../theme';
-import {CompareScene, HeadlineScene, RadarScene, SavesScene} from '../types';
+import {CompareScene, HeadlineScene, HeatScene, RadarScene, SavesScene} from '../types';
 
 // ------------------------------------------------------------------ compare
 // Two (or more) bars that grow on the narrator's words, then a big multiplier slams in.
@@ -209,6 +209,71 @@ export const Headline: React.FC<{s: HeadlineScene}> = ({s}) => {
         </div>
       </div>
       <Arabic text={s.ar} delay={t0 + 20} top={1080} size={54} />
+    </AbsoluteFill>
+  );
+};
+
+// ------------------------------------------------------------------ heat
+// The wanted stars and the heat icons under them: each lights up red, then clears to green.
+const HeatGlyph: React.FC<{icon: HeatScene['icons'][number]['icon']; color: string}> = ({icon, color}) => {
+  const c = {fill: 'none', stroke: color, strokeWidth: 7, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const};
+  return (
+    <svg width={96} height={96} viewBox="0 0 100 100">
+      {icon === 'outfit' ? (<><path d="M50 18 a8 8 0 1 1 8 8 L50 34" {...c} /><path d="M50 34 L12 62 H88 Z" {...c} /></>) : null}
+      {icon === 'face' ? (<><circle cx={50} cy={46} r={26} {...c} /><circle cx={41} cy={42} r={3} fill={color} /><circle cx={59} cy={42} r={3} fill={color} /><path d="M40 58 Q50 64 60 58" {...c} /><path d="M24 30 Q50 6 76 30" {...c} /></>) : null}
+      {icon === 'car' ? (<><path d="M14 62 L20 44 Q22 38 30 38 H70 Q78 38 80 44 L86 62 V72 H14 Z" {...c} /><circle cx={30} cy={72} r={7} {...c} /><circle cx={70} cy={72} r={7} {...c} /></>) : null}
+      {icon === 'weapon' ? (<><path d="M14 36 H86 V48 H46 L40 74 H26 L30 48 H14 Z" {...c} /></>) : null}
+      {icon === 'cctv' ? (<><path d="M14 30 L70 44 L66 60 L12 46 Z" {...c} /><path d="M66 52 L80 56 V78 M70 78 H90" {...c} /></>) : null}
+    </svg>
+  );
+};
+
+export const Heat: React.FC<{s: HeatScene}> = ({s}) => {
+  const frame = useCurrentFrame();
+  const stars = pop(frame, 3, 12, 0.6, 180);
+  const blink = Math.floor(frame / 8) % 2 === 0;
+  const allClear = s.icons.every((ic) => ic.clearAt !== undefined && frame >= sec(ic.clearAt));
+  return (
+    <AbsoluteFill>
+      <SceneIn><Background broll={s.broll} /></SceneIn>
+      <AbsoluteFill style={{background: 'rgba(5,4,14,0.45)'}} />
+      <StepLabel step={s.step} label={s.label} />
+      <div style={{position: 'absolute', top: 420, left: 0, right: 0, display: 'flex', justifyContent: 'center', gap: 26, transform: `scale(${0.7 + 0.3 * stars})`,
+        opacity: Math.min(1, stars * 1.5)}}>
+        {Array.from({length: s.stars}).map((_, i) => (
+          <svg key={i} width={120} height={120} viewBox="0 0 100 100">
+            <path d="M50 6 L62 38 L96 38 L68 58 L79 92 L50 71 L21 92 L32 58 L4 38 L38 38 Z" fill={allClear ? 'rgba(255,255,255,0.18)' : blink ? C.gold : '#b98a2c'}
+              stroke="#000" strokeWidth={4} style={{filter: allClear ? 'none' : `drop-shadow(0 0 18px ${C.gold})`}} />
+          </svg>
+        ))}
+      </div>
+      <div style={{position: 'absolute', top: 600, left: 40, right: 40, display: 'flex', justifyContent: 'center', gap: 18}}>
+        {s.icons.map((ic, i) => {
+          const at = sec(ic.at);
+          const shown = pop(frame, at, 10, 0.5, 220);
+          const cleared = ic.clearAt !== undefined && frame >= sec(ic.clearAt);
+          const tick = ic.clearAt !== undefined ? pop(frame, sec(ic.clearAt), 9, 0.5, 240) : 0;
+          const tone = cleared ? C.green : C.red;
+          return (
+            <div key={i} style={{width: 182, height: 236, borderRadius: 26, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10,
+              background: cleared ? 'rgba(20,60,20,0.85)' : frame >= at ? 'rgba(60,8,16,0.88)' : 'rgba(255,255,255,0.06)',
+              border: `4px solid ${frame >= at ? tone : 'rgba(255,255,255,0.15)'}`, boxShadow: frame >= at ? `0 0 ${cleared ? 30 : 20 + 14 * (blink ? 1 : 0)}px ${tone}aa` : 'none',
+              transform: `scale(${frame >= at ? 0.85 + 0.15 * shown : 0.85})`, opacity: frame >= at ? 1 : 0.35, position: 'relative'}}>
+              <HeatGlyph icon={ic.icon} color={frame >= at ? (cleared ? C.green : '#fff') : 'rgba(255,255,255,0.4)'} />
+              <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 24, letterSpacing: 2, color: '#fff'}}>{ic.label}</div>
+              {cleared ? (
+                <div style={{position: 'absolute', top: -18, right: -14, width: 56, height: 56, borderRadius: 28, background: C.green, display: 'flex', alignItems: 'center',
+                  justifyContent: 'center', transform: `scale(${tick})`, boxShadow: `0 0 20px ${C.green}`}}>
+                  <svg width={32} height={32} viewBox="0 0 30 30"><path d="M5 16 L12 23 L25 8" stroke="#06060F" strokeWidth={5} fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                </div>
+              ) : null}
+            </div>
+          );
+        })}
+      </div>
+      <div style={{position: 'absolute', top: 900, left: 60, right: 60, textAlign: 'center', fontFamily: F.display, fontSize: 96, lineHeight: 1.05, textTransform: 'uppercase',
+        color: allClear ? C.green : '#fff', WebkitTextStroke: '8px #000', paintOrder: 'stroke fill', opacity: ease(frame, 8, 18)}}>{allClear && s.doneTitle ? s.doneTitle : s.title}</div>
+      <Arabic text={s.ar} delay={16} top={1040} size={52} />
     </AbsoluteFill>
   );
 };

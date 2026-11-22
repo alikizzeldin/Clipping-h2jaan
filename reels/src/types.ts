@@ -232,7 +232,7 @@ export type RevealScene = Base & {
   pre: string; // typed in the dark first
   slamAt: number;
   lines: {text: string; at: number; color?: string; size?: number}[];
-  icon?: 'snake' | 'knife';
+  icon?: 'snake' | 'knife' | 'hat';
   color?: string; // flash and glow colour
   ar?: string;
 };
@@ -339,6 +339,17 @@ export type HeadlineScene = Base & {
   ar?: string;
 };
 
+export type HeatScene = Base & {
+  type: 'heat';
+  step: string;
+  label: string;
+  stars: number;
+  icons: {icon: 'outfit' | 'face' | 'car' | 'weapon' | 'cctv'; label: string; at: number; clearAt?: number}[];
+  title: string;
+  doneTitle?: string; // shown once every icon is cleared
+  ar?: string;
+};
+
 export type RadarScene = Base & {
   type: 'radar';
   step: string;
@@ -356,7 +367,7 @@ export type Scene =
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
-  | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene;
+  | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

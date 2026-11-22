@@ -287,5 +287,157 @@
     "why_not": "mostly promo material and fan theories; Rockstar has not confirmed the in-game references"
    }
   ]
+ },
+ {
+  "date": "2026-11-22",
+  "wake_up": "04:23 UTC (m110–m113)",
+  "ideas": [
+   {
+    "idea": "Your one free car registration (Moses, Chapter 2, free respray too): don't waste it on a junker",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 6,
+    "confidence": 8,
+    "score": 7.8,
+    "chosen": "m110-free-registration",
+    "sources": [
+     "https://outputlag.com/guides/gta-6-moses-mission/",
+     "https://metaforge.app/gta-6/gta-6-moses-walkthrough",
+     "https://www.keengamer.com/articles/guides/gta-vi-how-to-register-personal-cars-and-vehicles/",
+     "https://www.g2a.com/news/gta-6-news/gta-6-vehicle-registration-guide/",
+     "https://techwiser.com/gta-6-register-cars/",
+     "https://outputlag.com/guides/gta-6-keep-register-cars/",
+     "https://www.technerdiness.com/gta/how-to-register-cars-in-gta-6/",
+     "https://www.gametruth.com/guides/gta-6-best-early-cars/",
+     "https://game8.co/games/GTA-6/archives/639138"
+    ]
+   },
+   {
+    "idea": "Shirley's Penumbra: two optional Chapter 1 favors (rum, Peggy's scooter), gone once Tourist Trap starts",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.2,
+    "chosen": "m111-shirleys-car",
+    "sources": [
+     "https://space4games.com/en/games-en/gta-6-shirleys-car-free-guide/",
+     "https://www.keengamer.com/articles/guides/gta-6-chapter-1-guide-all-missables-and-things-to-do-before-tourist-trap/",
+     "https://game8.co/games/GTA-6/archives/638596",
+     "https://metaforge.app/gta-6/gta-6-steal-the-scooter",
+     "https://showgamer.com/en/guides/7940-kak-ukrast-skuter-peggi-v-gta-6-i-ne-popastsya-policii-zadanie-shirli",
+     "https://gta6.wiki.fextralife.com/Steal_the_Scooter"
+    ]
+   },
+   {
+    "idea": "Heat icons under the wanted stars (outfit, look, car) and how to clear each one",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.4,
+    "chosen": "m112-heat-icons",
+    "sources": [
+     "https://www.gtaboom.com/how-to-lose-heat-in-gta-6-by-swapping-outfits-from-your-trunk-bfb7",
+     "https://www.gtabase.com/articles/gta-6/gta-6-wanted-level-explained-police-system-guide",
+     "https://www.gamesradar.com/games/grand-theft-auto/gta-6-wanted-levels-heat/",
+     "https://space4games.com/en/games-en/gta-6-lower-wanted-level-guide/",
+     "https://screenrant.com/gta-6-escape-cops-clear-heat-wanted-system/",
+     "https://www.sportskeeda.com/gta/gta-6-wanted-system-explained-what-icons-mean",
+     "https://gamerant.com/gta-6-all-heat-icons-explained-lose-avoid/"
+    ]
+   },
+   {
+    "idea": "Arthur Morgan twice: a copy of his hat at a Port Gellhorn yard sale + a tiny Arthur riding a chihuahua at Frontier Adventure Golf",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.4,
+    "chosen": "m113-arthur-morgan",
+    "sources": [
+     "https://www.forbes.com/sites/paultassi/2026/11/21/where-to-find-arthur-morgans-red-dead-cowboy-hat-in-gta-6/",
+     "https://www.thegamer.com/gta-6-arthur-morgan-red-dead-redemption-2-easter-egg-hat-unlock/",
+     "https://game8.co/games/GTA-6/archives/639186",
+     "https://gamerant.com/gta-6-arthur-morgan-hat-location/",
+     "https://www.gfinityesports.com/article/gta-6-how-to-find-arthur-morgans-hat-red-dead-redemption-2-easter-egg",
+     "https://gamerant.com/gta-6-where-find-tiny-arthur-morgan-riding-dog-chihuahua-easter-egg/",
+     "https://holdtoreset.com/where-to-find-the-arthur-morgan-on-a-dog-easter-egg-in-gta-6/",
+     "https://wikigames.net/grand-theft-auto-vi-tiny-doll-of-arthur-morgan/"
+    ]
+   },
+   {
+    "idea": "Meteorite on Mount Kalaga you can sell",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 5,
+    "score": 6.5,
+    "why_not": "guides disagree on where on the mountain it is and where to sell it"
+   },
+   {
+    "idea": "Fishing doesn't pay (catch and release) but is the fastest way to raise Focus",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.9,
+    "why_not": "the Focus gain per fish comes from one guide"
+   },
+   {
+    "idea": "GTA 5's protagonists discussed in the true-crime podcast Final Act",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 8,
+    "visual": 3,
+    "confidence": 7,
+    "score": 6.8,
+    "why_not": "audio only, hard to show; Trevor's voice not confirmed"
+   },
+   {
+    "idea": "GTA 6 leak hacker pleaded guilty (sentencing 23 Nov)",
+    "format": "GTA 6 NEWS",
+    "demand": 7,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 3,
+    "confidence": 8,
+    "score": 5.9,
+    "why_not": "the plea was 16 Nov (over 48 hours); sentencing is tomorrow"
+   },
+   {
+    "idea": "Pilot Pete air drops pay up to $20,000 (Chapter 4)",
+    "format": "MONEY FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 6,
+    "score": 6.7,
+    "why_not": "payouts differ between guides ($10k-$20k, $12k)"
+   }
+  ]
  }
 ]

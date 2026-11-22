@@ -1,0 +1,384 @@
+{
+ "manual": true,
+ "episode": 112,
+ "kind": "hidden-feature",
+ "topic": "Heat icons under the wanted stars show what police can identify (outfit, appearance, vehicle; also visible weapon, partner, CCTV); clear them: spare outfit from your car's trunk, change hat or hairstyle, respray at Pay 'n' Spray or switch cars",
+ "title": {
+  "en": "GTA 6 cops REMEMBER your outfit 👕 (here's how to vanish)",
+  "ar": "شرطة GTA 6 تتذكر لبسك 👕"
+ },
+ "summary": "The heat icons under GTA 6's wanted stars show what the police know about you: your outfit, your look and your car. Clear them one by one: change into a spare outfit from your car's trunk, swap your hat or hairstyle, then respray the car at a Pay 'n' Spray or switch cars. Clear every icon before they spot you again.",
+ "summary_ar": "الأيقونات تحت نجوم المطلوب في GTA 6 توريك وش تعرف عنك الشرطة: لبسك، شكلك وسيارتك. امسحها وحدة وحدة: البس لبس احتياطي من شنطة سيارتك، بدّل القبعة أو تسريحة الشعر، ورش السيارة في Pay 'n' Spray أو بدّلها. امسح كل الأيقونات قبل لا يشوفونك مرة ثانية.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Police",
+  "GTA6Wanted",
+  "GTA6HiddenFeatures",
+  "GTAVI",
+  "GTA6Guide",
+  "ViceCity",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.4
+ },
+ "sources": [
+  "https://www.gtaboom.com/how-to-lose-heat-in-gta-6-by-swapping-outfits-from-your-trunk-bfb7",
+  "https://www.gtabase.com/articles/gta-6/gta-6-wanted-level-explained-police-system-guide",
+  "https://www.gamesradar.com/games/grand-theft-auto/gta-6-wanted-levels-heat/",
+  "https://space4games.com/en/games-en/gta-6-lower-wanted-level-guide/",
+  "https://screenrant.com/gta-6-escape-cops-clear-heat-wanted-system/",
+  "https://www.sportskeeda.com/gta/gta-6-wanted-system-explained-what-icons-mean",
+  "https://gamerant.com/gta-6-all-heat-icons-explained-lose-avoid/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 20.5,
+     "dur": 4.4,
+     "x": 600
+    }
+   ]
+  },
+  "heli": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 0.0,
+     "dur": 6.5,
+     "x": 700
+    }
+   ]
+  },
+  "clear": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 13.0,
+     "dur": 5.2,
+     "x": 1000
+    },
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 84.0,
+     "dur": 5.3,
+     "x": 660
+    }
+   ]
+  },
+  "chase": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 25.0,
+     "dur": 3.1,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 25.5,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 118,
+  "seed": 73,
+  "drop": 4.36,
+  "break": 20.9,
+  "back": 21.2,
+  "outro": 24.22
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "duration": 28.0,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.36,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WANTED",
+    "kicker": "COPS REMEMBER",
+    "title": [
+     "YOUR",
+     "OUTFIT"
+    ],
+    "color": "red",
+    "tag": "How to vanish:",
+    "tagAt": 2.88,
+    "ar": "الشرطة تتذكر لبسك… وهذي طريقة تختفي"
+   },
+   {
+    "type": "heat",
+    "from": 4.36,
+    "to": 10.78,
+    "broll": {
+     "src": "heli",
+     "grade": "cold",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "UNDER THE STARS",
+    "stars": 3,
+    "icons": [
+     {
+      "icon": "outfit",
+      "label": "OUTFIT",
+      "at": 4.44
+     },
+     {
+      "icon": "face",
+      "label": "LOOK",
+      "at": 5.16
+     },
+     {
+      "icon": "car",
+      "label": "CAR",
+      "at": 5.58
+     }
+    ],
+    "title": "HEAT ICONS",
+    "ar": "الأيقونات تحت النجوم: لبسك، شكلك، سيارتك"
+   },
+   {
+    "type": "heat",
+    "from": 10.78,
+    "to": 21.2,
+    "broll": {
+     "src": "clear",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 2
+    },
+    "step": "02",
+    "label": "CLEAR THEM",
+    "stars": 3,
+    "icons": [
+     {
+      "icon": "outfit",
+      "label": "OUTFIT",
+      "at": 0,
+      "clearAt": 2.68
+     },
+     {
+      "icon": "face",
+      "label": "LOOK",
+      "at": 0,
+      "clearAt": 5.64
+     },
+     {
+      "icon": "car",
+      "label": "CAR",
+      "at": 0,
+      "clearAt": 7.9
+     }
+    ],
+    "title": "ONE BY ONE",
+    "doneTitle": "ALL CLEAR",
+    "ar": "لبس احتياطي من شنطة السيارة، بدّل القبعة أو الشعر، ورش السيارة"
+   },
+   {
+    "type": "reveal",
+    "from": 21.2,
+    "to": 24.22,
+    "captions": false,
+    "broll": {
+     "src": "chase",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 2,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "",
+    "slamAt": 0.05,
+    "color": "green",
+    "lines": [
+     {
+      "text": "CLEAR",
+      "at": 0.05,
+      "color": "green",
+      "size": 200
+     },
+     {
+      "text": "EVERY ICON",
+      "at": 0.3,
+      "size": 150
+     },
+     {
+      "text": "BEFORE THEY SPOT YOU",
+      "at": 1.78,
+      "color": "red",
+      "size": 84
+     }
+    ],
+    "ar": "امسح كل الأيقونات قبل لا يشوفونك"
+   },
+   {
+    "type": "cta",
+    "from": 24.22,
+    "to": 28.0,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE HIDDEN FEATURES SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.98,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.78,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.0,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.82,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.3,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 4.6,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 8.8,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 9.52,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 9.94,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.72,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.46,
+    "volume": 0.55
+   },
+   {
+    "src": "ping.wav",
+    "at": 16.42,
+    "volume": 0.55
+   },
+   {
+    "src": "ping.wav",
+    "at": 18.68,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 18.7,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.14,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.22,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 21.25,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.98,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.14,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.24,
+    "volume": 0.5
+   }
+  ]
+ }
+}

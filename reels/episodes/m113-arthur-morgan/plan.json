@@ -1,0 +1,427 @@
+{
+ "manual": true,
+ "episode": 113,
+ "kind": "easter-egg",
+ "topic": "Red Dead nods: a cowboy hat copying Arthur Morgan's (rope knot) at a yard sale in south Port Gellhorn from Chapter 2 (sale not always running), and a tiny Arthur Morgan riding a chihuahua at Frontier Adventure Golf in Waning Sands",
+ "title": {
+  "en": "Rockstar hid ARTHUR MORGAN in GTA 6 🤠 (twice)",
+  "ar": "روكستار خبّت آرثر مورغن في GTA 6 🤠"
+ },
+ "summary": "Rockstar hid Arthur Morgan in GTA 6 twice. From Chapter 2, a yard sale in the south of Port Gellhorn sells a cowboy hat that copies Arthur's, right down to the rope knot (if the yard is empty, come back later). And at Frontier Adventure Golf in Waning Sands, a chihuahua roams the course with a tiny Arthur Morgan riding it.",
+ "summary_ar": "روكستار خبّت آرثر مورغن في GTA 6 مرتين. من الفصل الثاني، ساحة بيع في جنوب بورت جيلهورن تبيع قبعة كاوبوي نسخة من قبعة آرثر حتى عقدة الحبل (إذا الساحة فاضية ارجع بعدين). وفي Frontier Adventure Golf في Waning Sands فيه كلب شيواوا راكب عليه آرثر مورغن صغير.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEggs",
+  "ArthurMorgan",
+  "RDR2",
+  "RedDeadRedemption2",
+  "GTAVI",
+  "GTA6Secrets",
+  "Rockstar",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.4
+ },
+ "sources": [
+  "https://www.forbes.com/sites/paultassi/2026/11/21/where-to-find-arthur-morgans-red-dead-cowboy-hat-in-gta-6/",
+  "https://www.thegamer.com/gta-6-arthur-morgan-red-dead-redemption-2-easter-egg-hat-unlock/",
+  "https://game8.co/games/GTA-6/archives/639186",
+  "https://gamerant.com/gta-6-arthur-morgan-hat-location/",
+  "https://www.gfinityesports.com/article/gta-6-how-to-find-arthur-morgans-hat-red-dead-redemption-2-easter-egg",
+  "https://gamerant.com/gta-6-where-find-tiny-arthur-morgan-riding-dog-chihuahua-easter-egg/",
+  "https://holdtoreset.com/where-to-find-the-arthur-morgan-on-a-dog-easter-egg-in-gta-6/",
+  "https://wikigames.net/grand-theft-auto-vi-tiny-doll-of-arthur-morgan/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 25.5,
+     "dur": 3.7,
+     "x": 700
+    }
+   ]
+  },
+  "street": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 1.0,
+     "dur": 5.5,
+     "x": 900
+    }
+   ]
+  },
+  "garden": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 8.0,
+     "dur": 7.3,
+     "x": 700
+    }
+   ]
+  },
+  "drive": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 8.0,
+     "dur": 3.7,
+     "x": 800
+    }
+   ]
+  },
+  "golf": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7QBJDMN1VY7V8T20BK39CAC/playlist.m3u8",
+     "channel": "rraenee",
+     "start": 9.0,
+     "dur": 2.9,
+     "x": 500
+    }
+   ]
+  },
+  "toy": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 13.0,
+     "dur": 2.5,
+     "x": 1000
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 17.0,
+     "dur": 3.8,
+     "x": 1000
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 90,
+  "seed": 79,
+  "drop": 3.64,
+  "break": 9.14,
+  "back": 9.76,
+  "outro": 25.42
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 29.2,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.64,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "ROCKSTAR HID",
+    "title": [
+     "ARTHUR",
+     "MORGAN"
+    ],
+    "color": "gold",
+    "tag": "…twice.",
+    "tagAt": 2.5,
+    "ar": "روكستار خبّت آرثر مورغن في اللعبة… مرتين"
+   },
+   {
+    "type": "location",
+    "from": 3.64,
+    "to": 9.14,
+    "broll": {
+     "src": "street",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "THE HAT",
+    "place": "CHAPTER 2",
+    "target": "PORT GELLHORN",
+    "direction": "SOUTH",
+    "region": "ROADSIDE YARD SALE",
+    "ar": "في الفصل الثاني: ساحة بيع في جنوب بورت جيلهورن"
+   },
+   {
+    "type": "reveal",
+    "from": 9.14,
+    "to": 16.42,
+    "captions": false,
+    "broll": {
+     "src": "garden",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3,
+     "zoom": [
+      1.06,
+      1.16
+     ]
+    },
+    "pre": "IT SELLS…",
+    "slamAt": 0.62,
+    "icon": "hat",
+    "color": "gold",
+    "lines": [
+     {
+      "text": "A COPY OF",
+      "at": 0.62,
+      "size": 110
+     },
+     {
+      "text": "ARTHUR'S HAT",
+      "at": 1.86,
+      "color": "gold",
+      "size": 160
+     },
+     {
+      "text": "ROPE KNOT & ALL",
+      "at": 3.76,
+      "size": 96
+     },
+     {
+      "text": "EMPTY? COME BACK LATER",
+      "at": 4.66,
+      "size": 76
+     }
+    ],
+    "ar": "قبعة كاوبوي نسخة من قبعة آرثر… حتى عقدة الحبل"
+   },
+   {
+    "type": "location",
+    "from": 16.42,
+    "to": 20.1,
+    "broll": {
+     "src": "drive",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "02",
+    "label": "THE TOY",
+    "place": "PORT GELLHORN",
+    "target": "FRONTIER GOLF",
+    "direction": "DRIVE",
+    "region": "WANING SANDS · ADVENTURE GOLF",
+    "ar": "روح Frontier Adventure Golf في Waning Sands"
+   },
+   {
+    "type": "scan",
+    "from": 20.1,
+    "to": 22.98,
+    "broll": {
+     "src": "golf",
+     "grade": "warm",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "03",
+    "label": "ADVENTURE GOLF",
+    "target": {
+     "x": 540,
+     "y": 880,
+     "w": 760,
+     "h": 560
+    },
+    "checks": [
+     {
+      "text": "WALK IN",
+      "at": 0.1
+     },
+     {
+      "text": "WATCH THE CHIHUAHUA",
+      "at": 1.02
+     }
+    ],
+    "hud": "● TRACKING THE CHIHUAHUA…",
+    "ar": "ادخل وراقب كلب الشيواوا"
+   },
+   {
+    "type": "reward",
+    "from": 22.98,
+    "to": 25.42,
+    "broll": {
+     "src": "toy",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "rewardAt": 0.18,
+    "label": "RED DEAD NOD",
+    "name": "Tiny Arthur Morgan",
+    "tier": "RIDING A CHIHUAHUA",
+    "ar": "آرثر مورغن صغير راكب على الشيواوا"
+   },
+   {
+    "type": "cta",
+    "from": 25.42,
+    "to": 29.2,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.74,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.02,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.44,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.58,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.9,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.08,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 9.76,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 9.78,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 11.0,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 12.9,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.8,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.36,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 18.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.04,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 20.2,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 20.2,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 21.12,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.98,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 23.16,
+    "volume": 0.65
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.34,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.44,
+    "volume": 0.5
+   }
+  ]
+ }
+}

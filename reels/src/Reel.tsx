@@ -23,7 +23,7 @@ import {Code} from './scenes/Code';
 import {Reveal} from './scenes/Reveal';
 import {Proof} from './scenes/Proof';
 import {Chat} from './scenes/Chat';
-import {Compare, Headline, Radar, Saves} from './scenes/Manual2';
+import {Compare, Headline, Heat, Radar, Saves} from './scenes/Manual2';
 import {Alt, Boost, Chain, Consoles, FgApp} from './scenes/Fps';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
@@ -61,6 +61,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'saves': return <Saves s={s} />;
     case 'radar': return <Radar s={s} />;
     case 'headline': return <Headline s={s} />;
+    case 'heat': return <Heat s={s} />;
   }
 };
 
