@@ -1,0 +1,490 @@
+{
+ "episode": 12,
+ "kind": "secret",
+ "topic": "The Final Flush: scan a QR poster that warns you not to flush with your phone, reply TRUTH to the text, meet Dr. Merle at Frank's Waffles in Vice City; his plan involves a tracker, a toilet and a sewage plant; finishing it raises max stamina for good",
+ "title": {
+  "en": "GTA 6 hides a mission in a TOILET 🚽 (the reward is permanent)",
+  "ar": "مهمة سرية في حمّام GTA 6 🚽"
+ },
+ "summary": "GTA 6 hides a mission in a toilet, and its reward lasts forever. Find a QR code poster that warns you not to flush, scan it with your phone and reply TRUTH to the text. Meet Dr. Merle at Frank's Waffles in Vice City: his plan involves a tracker, a toilet and a sewage plant. Finish it and your max stamina goes up for good.",
+ "summary_ar": "في GTA 6 مهمة سرية تبدأ من حمّام، وجائزتها دائمة. لاقِ بوستر فيه QR يحذّرك لا تسحب السيفون، صوّره بجوالك ورد على الرسالة بكلمة TRUTH. قابل دكتور ميرل في Frank's Waffles بفايس سيتي: خطته فيها جهاز تتبّع وحمّام ومحطة صرف صحي. خلّصها وتزيد قدرة تحمّلك للأبد.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "TheFinalFlush",
+  "GTA6Tips",
+  "GTAVI",
+  "GTA6Missions",
+  "ViceCity",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.7
+ },
+ "sources": [
+  "https://www.powerpyx.com/gta-6-the-final-flush-meet-at-franks-waffles-walkthrough",
+  "https://gamerant.com/gta-6-the-final-flush-quest-dr-merle-increase-stamina/",
+  "https://www.dexerto.com/wikis/gta-6/easter-eggs/dont-flush-qr-code-easter-egg/",
+  "https://outputlag.com/guides/gta-6-the-final-flush-mission/",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-the-final-flush-mission-how-to-get-max-stamina/",
+  "https://www.sportskeeda.com/gta/gta-6-walkthrough-how-complete-no-flushers-side-mission",
+  "https://holdtoreset.com/gta-6-the-final-flush-guide/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/b6/clip_01M7V77K453AEC9ZM251P9PJHJ/playlist.m3u8",
+     "channel": "cliffsavage",
+     "start": 21.0,
+     "dur": 3.4,
+     "x": 700
+    }
+   ]
+  },
+  "dark": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/03/clip_01M7R4ZW8RV8VTVEDCFHCQFCD3/playlist.m3u8",
+     "channel": "vajs",
+     "start": 21.0,
+     "dur": 2.8,
+     "x": 300
+    }
+   ]
+  },
+  "wall": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 122.6,
+     "dur": 3.6,
+     "x": 470
+    }
+   ]
+  },
+  "walk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 9.2,
+     "dur": 3.9,
+     "x": 650
+    }
+   ]
+  },
+  "city": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 85.6,
+     "dur": 3.6,
+     "x": 700
+    }
+   ]
+  },
+  "pipes": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 60.6,
+     "dur": 3.7,
+     "x": 600
+    }
+   ]
+  },
+  "deck": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 14.0,
+     "dur": 3.2,
+     "x": 600
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 100,
+  "seed": 113,
+  "drop": 1.58,
+  "break": 3.12,
+  "back": 4.14,
+  "outro": 23.28
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "episode": 12,
+  "duration": 26.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.12,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6 HIDES A",
+    "title": [
+     "MISSION",
+     "IN A TOILET"
+    ],
+    "color": "teal",
+    "tag": "…forever reward.",
+    "tagAt": 2.4,
+    "ar": "مهمة سرية في GTA 6… تبدأ من حمّام!"
+   },
+   {
+    "type": "twist",
+    "from": 3.12,
+    "to": 5.76,
+    "captions": false,
+    "broll": {
+     "src": "dark",
+     "grade": "night",
+     "blur": 3,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "THE REWARD…",
+    "slamAt": 1.02,
+    "lines": [
+     {
+      "text": "LASTS",
+      "at": 1.04,
+      "size": 200
+     },
+     {
+      "text": "FOREVER",
+      "at": 1.42,
+      "color": "gold",
+      "size": 230
+     }
+    ],
+    "ar": "وجائزتها تبقى معك للأبد"
+   },
+   {
+    "type": "trigger",
+    "from": 5.76,
+    "to": 9.28,
+    "broll": {
+     "src": "wall",
+     "grade": "warm",
+     "dim": 0.1,
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "THE POSTER",
+    "title": "QR CODE POSTER",
+    "sub": "warns you not to flush",
+    "target": {
+     "x": 300,
+     "y": 860,
+     "w": 520,
+     "h": 560
+    },
+    "contact": "QR CODE",
+    "tagText": "IT WARNS: DON'T FLUSH",
+    "ar": "دوّر على بوستر فيه QR يحذّرك لا تسحب السيفون"
+   },
+   {
+    "type": "scan",
+    "from": 9.28,
+    "to": 13.12,
+    "broll": {
+     "src": "walk",
+     "grade": "cold",
+     "dim": 0.15,
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "02",
+    "label": "SCAN + REPLY",
+    "target": {
+     "x": 540,
+     "y": 900,
+     "w": 760,
+     "h": 760
+    },
+    "checks": [
+     {
+      "text": "QR CODE SCANNED",
+      "at": 0.84
+     },
+     {
+      "text": "REPLY: TRUTH",
+      "at": 2.08
+     }
+    ],
+    "hud": "● WAITING FOR A TEXT…",
+    "ar": "صوّره بجوالك… ورد بكلمة TRUTH"
+   },
+   {
+    "type": "location",
+    "from": 13.12,
+    "to": 16.6,
+    "broll": {
+     "src": "city",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "03",
+    "label": "THE MEETING",
+    "place": "VICE CITY",
+    "target": "FRANK'S WAFFLES",
+    "direction": "MEET",
+    "region": "DR. MERLE IS WAITING",
+    "ar": "قابل دكتور ميرل في مطعم فرانكس وافلز"
+   },
+   {
+    "type": "list",
+    "from": 16.6,
+    "to": 20.16,
+    "broll": {
+     "src": "pipes",
+     "grade": "cold",
+     "dim": 0.15,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "HIS PLAN",
+    "label": "DR. MERLE",
+    "cardAt": 0.15,
+    "arAt": 0.8,
+    "items": [
+     {
+      "text": "A TRACKER",
+      "status": "1",
+      "ok": true,
+      "at": 0.68,
+      "icon": "phone"
+     },
+     {
+      "text": "A TOILET",
+      "status": "2",
+      "ok": true,
+      "at": 1.48,
+      "icon": "wave"
+     },
+     {
+      "text": "A SEWAGE PLANT",
+      "status": "3",
+      "ok": true,
+      "at": 2.36,
+      "icon": "bank"
+     }
+    ],
+    "ar": "خطته: جهاز تتبّع… حمّام… ومحطة صرف صحي"
+   },
+   {
+    "type": "reward",
+    "from": 20.16,
+    "to": 23.28,
+    "captions": false,
+    "broll": {
+     "src": "deck",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "later": "MISSION COMPLETE",
+    "rewardAt": 1.28,
+    "label": "PERMANENT REWARD",
+    "name": "Max Stamina Up",
+    "tier": "FOR GOOD",
+    "ar": "خلّصها… وتزيد قدرة تحمّلك للأبد"
+   },
+   {
+    "type": "cta",
+    "from": 23.28,
+    "to": 26.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "SECRET FILE #013 · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.58,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 2.22,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.06,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 4.14,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 4.18,
+    "volume": 0.3
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.7,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.22,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 9.5,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.12,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 11.36,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.06,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 15.4,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.54,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.28,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.08,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.96,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.1,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 20.3,
+    "volume": 0.4
+   },
+   {
+    "src": "trophy.wav",
+    "at": 21.44,
+    "volume": 0.65
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.44,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.21,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.3,
+    "volume": 0.5
+   }
+  ]
+ }
+}

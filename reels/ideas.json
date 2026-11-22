@@ -662,5 +662,110 @@
     "score": 5.1
    }
   ]
+ },
+ {
+  "date": "2026-11-22",
+  "wake_up": "22:41 UTC",
+  "ideas": [
+   {
+    "idea": "The Final Flush: scan a 'don't flush' QR poster with WAiNK, reply TRUTH, meet Dr. Merle at Frank's Waffles (Vice City); a tracker, a toilet and a sewage plant; reward: permanent max stamina",
+    "format": "SECRET FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 8,
+    "chosen": "012-final-flush",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-the-final-flush-meet-at-franks-waffles-walkthrough",
+     "https://gamerant.com/gta-6-the-final-flush-quest-dr-merle-increase-stamina/",
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/dont-flush-qr-code-easter-egg/",
+     "https://outputlag.com/guides/gta-6-the-final-flush-mission/",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-the-final-flush-mission-how-to-get-max-stamina/",
+     "https://www.sportskeeda.com/gta/gta-6-walkthrough-how-complete-no-flushers-side-mission",
+     "https://holdtoreset.com/gta-6-the-final-flush-guide/"
+    ],
+    "note": "Left out: the poster's exact spot (guides name different bathrooms or a notice board), its exact wording ('Don't Flush' vs 'No Flushers'), time of day, and how the last step plays out.",
+    "score": 7.7
+   },
+   {
+    "idea": "PS5 crash error CE-108255-1: no fix or statement from Rockstar yet",
+    "format": "GTA 6 NEWS",
+    "demand": 8,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 8,
+    "visual": 3,
+    "confidence": 7,
+    "why_not": "no fix to give; a reel of bad news with no payoff",
+    "sources": [
+     "https://www.notebookcheck.net/GTA-6-crashes-on-PS5-with-error-CE-108255-1-leaving-players-stuck-between-Sony-and-Rockstar-support.1456098.0.html",
+     "https://pbxscience.com/gta-vi-crash-reports-hit-ps5-owners-error-ce-108255-1-and-the-liquid-metal-debate/"
+    ],
+    "score": 5.8
+   },
+   {
+    "idea": "Rescuing the alien after the UFO abduction gives a permanent health, stamina and Focus boost",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 5,
+    "why_not": "overlaps episode 001; one source for the boost",
+    "sources": [
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/ufo-easter-egg/"
+    ],
+    "score": 6.6
+   },
+   {
+    "idea": "Gold gun icons mark unique weapon variants (permanent for both characters)",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 8,
+    "why_not": "still just under the gate; weak ending",
+    "sources": [
+     "https://www.g2a.com/news/gta-6-news/gta-6-full-weapons-guide/",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-secret-weapons-locations-unlocks/"
+    ],
+    "score": 6.8
+   },
+   {
+    "idea": "User scores vs the 99 Metacritic: review bombing over errands and crashes",
+    "format": "GTA 6 NEWS",
+    "demand": 6,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 7,
+    "visual": 3,
+    "confidence": 6,
+    "why_not": "drama, not useful to players",
+    "sources": [
+     "https://mlq.ai/news/gta-vi-players-give-it-a-mixed-user-score-against-critics-99-as-complaints-over-errands-and-ps5-crashes-pile-up/"
+    ],
+    "score": 5.0
+   },
+   {
+    "idea": "Safe codes list (every code and where to use it)",
+    "format": "MONEY FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 5,
+    "why_not": "one guide; too many codes for one reel; manual reels already used several",
+    "sources": [
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-safe-codes-list/"
+    ],
+    "score": 5.9
+   }
+  ]
  }
 ]
