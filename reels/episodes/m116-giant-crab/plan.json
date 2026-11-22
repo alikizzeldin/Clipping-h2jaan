@@ -1,0 +1,485 @@
+{
+ "manual": true,
+ "episode": 116,
+ "kind": "easter-egg",
+ "topic": "Giant enemy crab (E3 2006 meme): abandoned research outpost in Gullet Marsh, southwest of Pelican Valley; flip the breaker, computer password CLEAVES, a giant mutant crab attacks; safe code 0072 gives the dock building code 0212, where the Crabshack VF5 SMG waits",
+ "title": {
+  "en": "GTA 6 brought back the GIANT ENEMY CRAB 🦀 (and it guards a gun)",
+  "ar": "السلطعون العملاق رجع في GTA 6 🦀"
+ },
+ "summary": "GTA 6 brings back the giant enemy crab meme. At the abandoned research outpost in Gullet Marsh, southwest of Pelican Valley, flip the breaker box outside, then use the computer password CLEAVES and a giant mutant crab attacks. Open the safe with 0072 to get the dock building code 0212, where the Crabshack SMG waits.",
+ "summary_ar": "GTA 6 رجّعت ميم السلطعون العملاق. في مركز الأبحاث المهجور في Gullet Marsh جنوب غرب Pelican Valley، شغّل صندوق القواطع، اكتب باسوورد الكمبيوتر CLEAVES ويهجم عليك سلطعون عملاق. افتح الخزنة بـ0072 وتاخذ كود مبنى الرصيف 0212، وداخله رشاش Crabshack.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEggs",
+  "GiantEnemyCrab",
+  "GTA6Secrets",
+  "GTAVI",
+  "GTA6Codes",
+  "Leonida",
+  "GTA6Weapons",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 9,
+  "retention": 9,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 7,
+  "score": 7.9
+ },
+ "sources": [
+  "https://www.dexerto.com/wikis/gta-6/easter-eggs/giant-crab-easter-egg/",
+  "https://www.thebiglead.com/gta-6-pelican-valley-crab-research-outpost-computer-password-keypad-codes/",
+  "https://www.vicecityhustle.com/guides/gta-6-pelican-valley-outpost",
+  "https://gamerhour.net/guides/gta-6-giant-mutant-crab-puzzle-guide/",
+  "https://gamerhour.net/guides/gta-6-giant-mutant-crab-easter-egg/",
+  "https://gta6hintbook.com/secrets/giant-mutant-crab/",
+  "https://gameshorizon.com/guides/gta-6-monster-crab-easter-egg-guide/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 60.0,
+     "dur": 5.1,
+     "x": 700
+    }
+   ]
+  },
+  "marsh": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 46.6,
+     "dur": 4.2,
+     "x": 900,
+     "slow": 1.3
+    }
+   ]
+  },
+  "pc": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 6.0,
+     "dur": 5.3,
+     "x": 700
+    }
+   ]
+  },
+  "attack": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 1.0,
+     "dur": 2.9,
+     "x": 700
+    }
+   ]
+  },
+  "safe": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 14.0,
+     "dur": 3.2,
+     "x": 700
+    }
+   ]
+  },
+  "dock": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 66.0,
+     "dur": 3.8,
+     "x": 850
+    }
+   ]
+  },
+  "smg": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 70.0,
+     "dur": 2.1,
+     "x": 750
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 4.1,
+     "x": 600
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 98,
+  "seed": 97,
+  "drop": 5.04,
+  "break": 15.66,
+  "back": 16.58,
+  "outro": 27.56
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 31.6,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 5.04,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "THE GIANT ENEMY",
+    "title": [
+     "CRAB"
+    ],
+    "color": "red",
+    "tag": "…and a free gun.",
+    "tagAt": 3.22,
+    "ar": "السلطعون العملاق رجع… ويحرس سلاح مجاني"
+   },
+   {
+    "type": "location",
+    "from": 5.04,
+    "to": 10.36,
+    "broll": {
+     "src": "marsh",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 7
+    },
+    "step": "01",
+    "label": "LOCATION",
+    "place": "PELICAN VALLEY",
+    "target": "RESEARCH OUTPOST",
+    "direction": "SOUTHWEST",
+    "region": "GULLET MARSH · ABANDONED",
+    "ar": "مركز أبحاث مهجور في مستنقعات غوليت… جنوب غرب بيليكان فالي"
+   },
+   {
+    "type": "code",
+    "from": 10.36,
+    "to": 15.66,
+    "broll": {
+     "src": "pc",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 5
+    },
+    "step": "02",
+    "label": "THE COMPUTER",
+    "device": "laptop",
+    "prompt": "PASSWORD",
+    "code": "CLEAVES",
+    "typeAt": 4.42,
+    "typeEnd": 4.9,
+    "doneAt": 5.1,
+    "done": "ACCESS GRANTED",
+    "note": "FLIP THE BREAKER BOX FIRST",
+    "ar": "شغّل الكهرباء من صندوق القواطع… والباسوورد CLEAVES"
+   },
+   {
+    "type": "reveal",
+    "from": 15.66,
+    "to": 18.56,
+    "captions": false,
+    "broll": {
+     "src": "attack",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 4,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "USE IT…",
+    "slamAt": 0.92,
+    "icon": "crab",
+    "color": "red",
+    "lines": [
+     {
+      "text": "A GIANT",
+      "at": 0.92,
+      "size": 140
+     },
+     {
+      "text": "MUTANT CRAB",
+      "at": 1.26,
+      "color": "red",
+      "size": 150
+     },
+     {
+      "text": "ATTACKS!",
+      "at": 1.9,
+      "size": 170
+     }
+    ],
+    "ar": "ويهجم عليك سلطعون عملاق!"
+   },
+   {
+    "type": "code",
+    "from": 18.56,
+    "to": 21.76,
+    "broll": {
+     "src": "safe",
+     "grade": "cold",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "step": "03",
+    "label": "THE SAFE",
+    "device": "keypad",
+    "prompt": "",
+    "code": "0072",
+    "typeAt": 0.96,
+    "typeEnd": 2.78,
+    "doneAt": 3.0,
+    "done": "SAFE OPEN",
+    "ar": "افتح الخزنة بالكود 0072"
+   },
+   {
+    "type": "code",
+    "from": 21.76,
+    "to": 25.52,
+    "broll": {
+     "src": "dock",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "step": "04",
+    "label": "DOCK BUILDING",
+    "device": "keypad",
+    "prompt": "",
+    "code": "0212",
+    "typeAt": 1.58,
+    "typeEnd": 3.26,
+    "doneAt": 3.5,
+    "done": "UNLOCKED",
+    "ar": "وتعطيك كود مبنى الرصيف: 0212"
+   },
+   {
+    "type": "reward",
+    "from": 25.52,
+    "to": 27.56,
+    "broll": {
+     "src": "smg",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "rewardAt": 0.2,
+    "label": "FREE WEAPON",
+    "name": "Crabshack SMG",
+    "tier": "VF5 · UNIQUE",
+    "ar": "وداخله رشاش Crabshack"
+   },
+   {
+    "type": "cta",
+    "from": 27.56,
+    "to": 31.6,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.38,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.16,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.98,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.3,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.3,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.76,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.78,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.96,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.14,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 15.46,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.6,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.58,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 16.6,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.56,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.5,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 19.52,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 20.08,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 20.64,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 21.34,
+    "volume": 0.55
+   },
+   {
+    "src": "ping.wav",
+    "at": 21.56,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.7,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 23.34,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 24.01,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 24.51,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 25.02,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.26,
+    "volume": 0.4
+   },
+   {
+    "src": "trophy.wav",
+    "at": 25.72,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 27.48,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 27.58,
+    "volume": 0.5
+   }
+  ]
+ }
+}

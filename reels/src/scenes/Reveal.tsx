@@ -70,6 +70,37 @@ const Hat: React.FC<{p: number; frame: number}> = ({p, frame}) => {
   );
 };
 
+// A big red crab that scuttles in, claws snapping.
+const Crab: React.FC<{p: number; frame: number}> = ({p, frame}) => {
+  const x = interpolate(p, [0, 1], [-420, 0]);
+  const snap = Math.abs(Math.sin(frame / 4)) * 14;
+  const leg = (i: number, side: number) => {
+    const y = 175 + i * 22;
+    const wig = Math.sin(frame / 3 + i) * 8;
+    return <path key={`${side}${i}`} d={`M${260 + side * 120} ${y} q ${side * 70} ${-30 + wig} ${side * 120} ${30 + wig}`} stroke="#8e1b1b" strokeWidth={14} fill="none" strokeLinecap="round" />;
+  };
+  return (
+    <svg width={560} height={340} viewBox="0 0 520 320" style={{overflow: 'visible', transform: `translateX(${x}px)`}}>
+      {[0, 1, 2].map((i) => leg(i, -1))}
+      {[0, 1, 2].map((i) => leg(i, 1))}
+      <ellipse cx={260} cy={200} rx={150} ry={92} fill="#d8322f" stroke="#7a1414" strokeWidth={8} style={{filter: `drop-shadow(0 0 24px ${C.red})`}} />
+      {[-1, 1].map((side) => (
+        <g key={side}>
+          <path d={`M${260 + side * 110} 140 Q ${260 + side * 170} 80 ${260 + side * 190} 60`} stroke="#b52424" strokeWidth={22} fill="none" strokeLinecap="round" />
+          <path d={`M${260 + side * 190} 60 l ${side * 46} ${-30 - snap} M${260 + side * 190} 60 l ${side * 52} ${10 + snap}`} stroke="#d8322f" strokeWidth={26} strokeLinecap="round" />
+        </g>
+      ))}
+      {[-1, 1].map((side) => (
+        <g key={`e${side}`}>
+          <path d={`M${260 + side * 34} 120 V 88`} stroke="#7a1414" strokeWidth={8} />
+          <circle cx={260 + side * 34} cy={84} r={14} fill="#fff" stroke="#000" strokeWidth={4} />
+          <circle cx={260 + side * 34} cy={86} r={6} fill="#000" />
+        </g>
+      ))}
+    </svg>
+  );
+};
+
 // The payoff: a line typed in the dark, then a slam with big words (no UFO; see Twist for that).
 export const Reveal: React.FC<{s: RevealScene}> = ({s}) => {
   const frame = useCurrentFrame();
@@ -96,7 +127,7 @@ export const Reveal: React.FC<{s: RevealScene}> = ({s}) => {
           <Particles x={100} y={500} w={880} h={1300} count={50} seed="reveal" speed={2} color={color} />
           {s.icon ? (
             <div style={{position: 'absolute', top: 300, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: Math.min(1, icon * 2)}}>
-              {s.icon === 'snake' ? <Snake p={icon} frame={frame} /> : s.icon === 'hat' ? <Hat p={icon} frame={frame} /> : <Knife p={icon} frame={frame} />}
+              {s.icon === 'snake' ? <Snake p={icon} frame={frame} /> : s.icon === 'hat' ? <Hat p={icon} frame={frame} /> : s.icon === 'crab' ? <Crab p={icon} frame={frame} /> : <Knife p={icon} frame={frame} />}
             </div>
           ) : null}
           <div style={{position: 'absolute', top: s.icon ? 720 : 640, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18}}>

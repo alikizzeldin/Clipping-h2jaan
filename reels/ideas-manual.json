@@ -439,5 +439,150 @@
     "why_not": "payouts differ between guides ($10k-$20k, $12k)"
    }
   ]
+ },
+ {
+  "date": "2026-11-22",
+  "wake_up": "10:23 UTC (m114–m117)",
+  "ideas": [
+   {
+    "idea": "Apollo Aggregates warehouse in Hamlet, South Vice-Dale: unguarded loot + office safe, sell to Donnie (~$14,000 a run)",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.5,
+    "chosen": "m114-apollo-warehouse",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-hidden-warehouse-14000-easy-money-location-951211-20261120",
+     "https://www.gtaboom.com/gta-6-apollo-aggregates-warehouse-stash-5820",
+     "https://www.theleonidascene.com/gta-6-apollo-aggregates-warehouse-stash-leroy-rook-card/"
+    ]
+   },
+   {
+    "idea": "RV bunker in the Balsero junkyard (after Building a Life): hatch in the kitchen floor, free Conspiracist Type 9 machine pistol",
+    "format": "SECRET FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.6,
+    "chosen": "m115-rv-bunker",
+    "sources": [
+     "https://gameriv.com/gta-6-how-to-find-the-secret-underground-bunker-hidden-beneath-an-rv/",
+     "https://game8.co/games/GTA-6/archives/639317",
+     "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/",
+     "https://metaforge.app/gta-6/gta-6-unique-weapons-locations",
+     "https://vicepulse.org/gta-6/weapons/weapon-locations",
+     "https://prodigygamers.com/2026/11/20/how-to-get-a-free-rocket-launcher-early-in-gta-6-chapter-1-location-secret-bunker/"
+    ]
+   },
+   {
+    "idea": "Giant enemy crab at the Gullet Marsh research outpost: password CLEAVES, safe 0072, dock code 0212, Crabshack SMG",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 9,
+    "retention": 9,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.9,
+    "chosen": "m116-giant-crab",
+    "sources": [
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/giant-crab-easter-egg/",
+     "https://www.thebiglead.com/gta-6-pelican-valley-crab-research-outpost-computer-password-keypad-codes/",
+     "https://www.vicecityhustle.com/guides/gta-6-pelican-valley-outpost",
+     "https://gamerhour.net/guides/gta-6-giant-mutant-crab-puzzle-guide/",
+     "https://gamerhour.net/guides/gta-6-giant-mutant-crab-easter-egg/",
+     "https://gta6hintbook.com/secrets/giant-mutant-crab/",
+     "https://gameshorizon.com/guides/gta-6-monster-crab-easter-egg-guide/"
+    ]
+   },
+   {
+    "idea": "Get wasted and picked-up guns are lost; only Ammu-Nation guns come back free from your car's trunk or a weapon locker",
+    "format": "DON'T MISS",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.2,
+    "chosen": "m117-lost-guns",
+    "sources": [
+     "https://game8.co/games/GTA-6/archives/638541",
+     "https://techwiser.com/gta-6-what-happens-when-you-die/",
+     "https://gamerant.com/gta-6-wasted-system-explained/",
+     "https://gta.tech4gamers.com/gta-6/guides/recover-lost-weapons/",
+     "https://outputlag.com/guides/gta-6-weapons-keep-guns/",
+     "https://www.theclick.gg/gta-6-what-happens-when-you-die/",
+     "https://leonidastreets.com/gta-6-store-weapons/"
+    ]
+   },
+   {
+    "idea": "Mount Chiliad reference: an NPC line points back to GTA V's mountain mystery",
+    "format": "EASTER EGG",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.4,
+    "why_not": "Below 7.0: only a voice line, nothing to show or do"
+   },
+   {
+    "idea": "Launch streaming record: 7.9M concurrent viewers",
+    "format": "NEWS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 3,
+    "visual": 5,
+    "confidence": 8,
+    "score": 6.2,
+    "why_not": "Older than 48 hours; already covered by the launch-record reel (m107)"
+   },
+   {
+    "idea": "4 more hidden controls (hide in car, railing vault, etc.)",
+    "format": "SETTINGS",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.65,
+    "why_not": "Confidence 5: the railing button differs between outlets; too close to the earlier hidden-controls reel"
+   },
+   {
+    "idea": "Positive Mental Attitude is missable",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 5,
+    "score": 6.45,
+    "why_not": "Outlets disagree on whether it can be missed"
+   },
+   {
+    "idea": "Pilot Pete side gigs pay big",
+    "format": "MONEY FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 5,
+    "score": 6.55,
+    "why_not": "Payout numbers differ between sources"
+   }
+  ]
  }
 ]

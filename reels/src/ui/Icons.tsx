@@ -5,6 +5,18 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
   const common = {fill: 'none', stroke: color, strokeWidth: 6, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const};
   return (
     <svg width={size} height={size} viewBox="0 0 80 80">
+      {name === 'gun' ? (
+        <>
+          <path d="M10 28 H70 V40 H38 L33 64 H20 L24 40 H10 Z" {...common} />
+          <path d="M40 40 Q44 50 52 46" {...common} />
+        </>
+      ) : null}
+      {name === 'lock' ? (
+        <>
+          <rect x="18" y="36" width="44" height="32" rx="6" {...common} />
+          <path d="M28 36 V26 a12 12 0 0 1 24 0 V36" {...common} />
+        </>
+      ) : null}
       {name === 'cash' ? (
         <>
           <rect x="8" y="20" width="64" height="40" rx="6" {...common} />

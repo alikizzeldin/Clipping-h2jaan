@@ -85,7 +85,7 @@ export type ListScene = Base & {
   label: string;
   fromLabel?: string; // e.g. "CHAPTER 1"
   toLabel?: string; // e.g. "CHAPTER 2"
-  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save' | 'ticket' | 'boat' | 'wave'}[];
+  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save' | 'ticket' | 'boat' | 'wave' | 'gun' | 'lock'}[];
   ar?: string;
   arAt?: number;
   cardAt?: number; // when the list card rises (leave the footage clear until then)
@@ -232,7 +232,7 @@ export type RevealScene = Base & {
   pre: string; // typed in the dark first
   slamAt: number;
   lines: {text: string; at: number; color?: string; size?: number}[];
-  icon?: 'snake' | 'knife' | 'hat';
+  icon?: 'snake' | 'knife' | 'hat' | 'crab';
   color?: string; // flash and glow colour
   ar?: string;
 };

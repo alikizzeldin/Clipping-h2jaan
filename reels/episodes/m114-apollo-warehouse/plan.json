@@ -1,0 +1,368 @@
+{
+ "manual": true,
+ "episode": 114,
+ "kind": "money",
+ "topic": "Apollo Aggregates warehouse near Hamlet (South Vice-Dale), by three rectangular pools near the highway: no mission; enter by the gray door next to the Apollo trailer, loot it, check the back-office safe, sell to Donnie (one run paid about $14,400)",
+ "title": {
+  "en": "GTA 6's secret warehouse pays $14,000 💰 (no mission)",
+  "ar": "مستودع سري في GTA 6 يعطيك 14 ألف 💰"
+ },
+ "summary": "Near Hamlet in South Vice-Dale, by three rectangular pools near the highway, the Apollo Aggregates warehouse is full of loot and no mission guards it. Go in through the gray door next to the Apollo trailer, grab everything, check the safe in the back office and sell the loot to Donnie: one documented run paid about $14,400.",
+ "summary_ar": "قرب هاملت في ساوث فايس-ديل، جنب ثلاث برك مستطيلة عند الهاي وي، مستودع Apollo Aggregates مليان غنائم وبدون أي مهمة. ادخل من الباب الرمادي جنب مقطورة Apollo، خذ كل شي، شيّك الخزنة في المكتب الخلفي وبيع الغنائم لدوني: وحدة من المرات جابت حوالي 14,400 دولار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Secrets",
+  "GTA6Tips",
+  "GTAVI",
+  "GTA6Guide",
+  "Leonida",
+  "Hamlet",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 7,
+  "score": 7.5
+ },
+ "sources": [
+  "https://www.gamingbible.com/news/gta-6-hidden-warehouse-14000-easy-money-location-951211-20261120",
+  "https://www.gtaboom.com/gta-6-apollo-aggregates-warehouse-stash-5820",
+  "https://www.theleonidascene.com/gta-6-apollo-aggregates-warehouse-stash-leroy-rook-card/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 11.5,
+     "dur": 4.8,
+     "x": 500
+    }
+   ]
+  },
+  "road": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 24.5,
+     "dur": 5.2,
+     "x": 500
+    }
+   ]
+  },
+  "door": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 14.0,
+     "dur": 3.9,
+     "x": 700,
+     "slow": 1.32
+    }
+   ]
+  },
+  "loot": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 74.0,
+     "dur": 5.3,
+     "x": 600
+    }
+   ]
+  },
+  "cash": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 96.0,
+     "dur": 2.6,
+     "x": 660
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 9.0,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 110,
+  "seed": 83,
+  "drop": 4.72,
+  "break": 19.5,
+  "back": 20.2,
+  "outro": 22.74
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 26.6,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.72,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "GTA 6 HIDES A",
+    "title": [
+     "WAREHOUSE"
+    ],
+    "color": "gold",
+    "tag": "No mission needed.",
+    "tagAt": 2.9,
+    "ar": "مستودع مليان غنائم… بدون أي مهمة"
+   },
+   {
+    "type": "location",
+    "from": 4.72,
+    "to": 9.88,
+    "broll": {
+     "src": "road",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "LOCATION",
+    "place": "HAMLET",
+    "target": "APOLLO",
+    "direction": "HIGHWAY",
+    "region": "SOUTH VICE-DALE · BY 3 POOLS",
+    "ar": "قرب هاملت في ساوث فايس-ديل… جنب ثلاث برك عند الهاي وي"
+   },
+   {
+    "type": "trigger",
+    "from": 9.88,
+    "to": 15.0,
+    "broll": {
+     "src": "door",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.12
+     ]
+    },
+    "step": "02",
+    "label": "GO IN",
+    "title": "GRAY DOOR",
+    "sub": "next to the Apollo trailer",
+    "target": {
+     "x": 540,
+     "y": 1000,
+     "w": 460,
+     "h": 380
+    },
+    "tagText": "NEXT TO THE APOLLO TRAILER",
+    "contact": "GRAY DOOR",
+    "ar": "ادخل من الباب الرمادي جنب مقطورة Apollo"
+   },
+   {
+    "type": "scan",
+    "from": 15.0,
+    "to": 20.2,
+    "broll": {
+     "src": "loot",
+     "grade": "warm",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "03",
+    "label": "THE LOOT",
+    "target": {
+     "x": 540,
+     "y": 860,
+     "w": 760,
+     "h": 600
+    },
+    "checks": [
+     {
+      "text": "GRAB EVERYTHING",
+      "at": 0.24
+     },
+     {
+      "text": "BACK OFFICE SAFE",
+      "at": 1.78
+     },
+     {
+      "text": "SELL TO DONNIE",
+      "at": 4.46
+     }
+    ],
+    "hud": "● LOOTING THE WAREHOUSE…",
+    "ar": "خذ كل شي… شيّك الخزنة… وبيع لدوني"
+   },
+   {
+    "type": "cash",
+    "from": 20.2,
+    "to": 22.74,
+    "captions": false,
+    "broll": {
+     "src": "cash",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "ONE RUN PAID",
+    "amount": "$14,400",
+    "per": "NO MISSION",
+    "amountAt": 0.82,
+    "ar": "وحدة من المرات جابت 14,400 دولار"
+   },
+   {
+    "type": "cta",
+    "from": 22.74,
+    "to": 26.6,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE MONEY FILES SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.42,
+    "volume": 0.45
+   },
+   {
+    "src": "coins.wav",
+    "at": 2.3,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.84,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.66,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.0,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.82,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 10.1,
+    "volume": 0.25
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.58,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.94,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 15.1,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.24,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.78,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 19.46,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.14,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 21.02,
+    "volume": 0.7
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.02,
+    "volume": 0.4
+   },
+   {
+    "src": "coins.wav",
+    "at": 21.2,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.66,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.76,
+    "volume": 0.5
+   }
+  ]
+ }
+}

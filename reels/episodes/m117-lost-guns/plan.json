@@ -1,0 +1,343 @@
+{
+ "manual": true,
+ "episode": 117,
+ "kind": "warning",
+ "topic": "When you die (wasted), guns you picked up are lost for good; only owned guns (bought at Ammu-Nation) come back, free, from your personal vehicle's trunk or an Ammu-Nation weapon locker",
+ "title": {
+  "en": "Die in GTA 6 and these guns are GONE FOREVER ⚠️",
+  "ar": "إذا متّ في GTA 6 هذي الأسلحة تروح للأبد ⚠️"
+ },
+ "summary": "When you get wasted in GTA 6, any gun you picked up off the street is lost. Only owned guns, the ones you buy at Ammu-Nation, come back, for free, from your personal car's trunk or a weapon locker at Ammu-Nation. So before a big fight, buy the guns you love.",
+ "summary_ar": "إذا متّ في GTA 6، أي سلاح لقطته من الشارع يروح. بس الأسلحة اللي تملكها، اللي تشتريها من Ammu-Nation، ترجع لك مجانًا من شنطة سيارتك أو خزانة الأسلحة في Ammu-Nation. فقبل أي معركة كبيرة، اشترِ الأسلحة اللي تحبها.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Weapons",
+  "GTA6Warning",
+  "GTAVI",
+  "GTA6Guide",
+  "AmmuNation",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.2
+ },
+ "sources": [
+  "https://game8.co/games/GTA-6/archives/638541",
+  "https://techwiser.com/gta-6-what-happens-when-you-die/",
+  "https://gamerant.com/gta-6-wasted-system-explained/",
+  "https://gta.tech4gamers.com/gta-6/guides/recover-lost-weapons/",
+  "https://outputlag.com/guides/gta-6-weapons-keep-guns/",
+  "https://www.theclick.gg/gta-6-what-happens-when-you-die/",
+  "https://leonidastreets.com/gta-6-store-weapons/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 2.0,
+     "dur": 4.1,
+     "x": 700
+    }
+   ]
+  },
+  "wasted": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 25.5,
+     "dur": 7.4,
+     "x": 1312
+    }
+   ]
+  },
+  "trunk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 12.0,
+     "dur": 5.8,
+     "x": 500
+    }
+   ]
+  },
+  "fight": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 8.0,
+     "dur": 3.2,
+     "x": 1000
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 20.0,
+     "dur": 3.9,
+     "x": 800
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 122,
+  "seed": 101,
+  "drop": 4.08,
+  "break": 17.24,
+  "back": 18.72,
+  "outro": 20.4
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "duration": 24.2,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.08,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "cold",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "DIE IN GTA 6 AND",
+    "title": [
+     "GUNS"
+    ],
+    "color": "red",
+    "tag": "…are gone forever.",
+    "tagAt": 2.66,
+    "ar": "إذا متّ في اللعبة… بعض أسلحتك تروح للأبد"
+   },
+   {
+    "type": "list",
+    "from": 4.08,
+    "to": 11.5,
+    "broll": {
+     "src": "wasted",
+     "grade": "night",
+     "dim": 0.55,
+     "blur": 13
+    },
+    "chip": "WASTED",
+    "label": "WHAT YOU KEEP",
+    "cardAt": 0.1,
+    "arAt": 0.6,
+    "items": [
+     {
+      "text": "PICKED-UP GUNS",
+      "status": "LOST",
+      "ok": false,
+      "at": 1.7,
+      "icon": "gun"
+     },
+     {
+      "text": "AMMU-NATION GUNS",
+      "status": "KEPT",
+      "ok": true,
+      "at": 3.72,
+      "icon": "gun"
+     }
+    ],
+    "ar": "الأسلحة اللي تلقطها من الشارع تروح… واللي تشتريها من أمو نيشن ترجع"
+   },
+   {
+    "type": "list",
+    "from": 11.5,
+    "to": 17.24,
+    "broll": {
+     "src": "trunk",
+     "grade": "warm",
+     "dim": 0.35,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "FREE",
+    "label": "GET THEM BACK",
+    "cardAt": 0.1,
+    "arAt": 0.6,
+    "items": [
+     {
+      "text": "YOUR CAR'S TRUNK",
+      "status": "FREE",
+      "ok": true,
+      "at": 2.88,
+      "icon": "car"
+     },
+     {
+      "text": "AMMU-NATION LOCKER",
+      "status": "FREE",
+      "ok": true,
+      "at": 4.02,
+      "icon": "lock"
+     }
+    ],
+    "ar": "ترجّعها مجانًا: من شنطة سيارتك أو خزانة أمو نيشن"
+   },
+   {
+    "type": "reveal",
+    "from": 17.24,
+    "to": 20.4,
+    "captions": false,
+    "broll": {
+     "src": "fight",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 2,
+     "zoom": [
+      1.08,
+      1.2
+     ]
+    },
+    "pre": "BIG FIGHT…",
+    "slamAt": 1.48,
+    "color": "green",
+    "lines": [
+     {
+      "text": "BUY THE GUNS",
+      "at": 1.5,
+      "color": "green",
+      "size": 160
+     },
+     {
+      "text": "YOU LOVE",
+      "at": 2.06,
+      "color": "gold",
+      "size": 180
+     }
+    ],
+    "ar": "قبل أي معركة كبيرة… اشترِ الأسلحة اللي تحبها"
+   },
+   {
+    "type": "cta",
+    "from": 20.4,
+    "to": 24.2,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE DON'T-MISS TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.3,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.34,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.02,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 5.78,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.8,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.44,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 14.38,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 15.52,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.18,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 18.72,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 18.74,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.3,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.32,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.42,
+    "volume": 0.5
+   }
+  ]
+ }
+}
