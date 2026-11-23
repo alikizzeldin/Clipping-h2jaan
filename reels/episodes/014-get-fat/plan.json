@@ -1,0 +1,426 @@
+{
+ "episode": 14,
+ "kind": "feature",
+ "topic": "You can get fat in GTA 6, sort of: eat fast food until the Fitness app shows a calorie surplus, sleep, repeat for a few days and skip workouts; to bulk up, lift at the free weights behind Jason's house (Strength raises max health); even maxed out they're nowhere near as big as CJ",
+ "title": {
+  "en": "You CAN get fat in GTA 6… sort of 🍔",
+  "ar": "تقدر تسمن في GTA 6… بس مو مثل CJ 🍔"
+ },
+ "summary": "You can get fat in GTA 6, sort of. Eat fast food until your Fitness app shows a calorie surplus, then sleep; repeat for a few days and skip your workouts, and Jason or Lucia gets heavier. Want to bulk up instead? Lift at the free weights behind Jason's house: Strength raises your max health. The catch: even maxed out, they're nowhere near as big as CJ.",
+ "summary_ar": "تقدر تسمن في GTA 6… نوعًا ما. كل وجبات سريعة لين تطبيق اللياقة يقول سعرات زيادة، وبعدين نام. كررها كم يوم ووقف التمارين، ويزيد وزن جيسون أو لوسيا. تبي عضلات؟ ارفع أوزان ورا بيت جيسون: القوة ترفع صحتك القصوى. بس حتى بأقصى وزن… ما يقربون من حجم CJ.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Fitness",
+  "GTA6Secrets",
+  "GTAVI",
+  "CJ",
+  "SanAndreas",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 7,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.8
+ },
+ "sources": [
+  "https://game8.co/games/GTA-6/archives/639191",
+  "https://game8.co/games/GTA-6/archives/638525",
+  "https://www.ladbible.com/entertainment/gaming/gta-6-lucia-jason-weight-eating-explained-269921-20261119",
+  "https://www.sportskeeda.com/gta/gta-6-lucia-max-weight-how-fat-can-lucia-be",
+  "https://leonidaplayers.com/news/gta-6-players-find-max-weight-caps-on-jason-and-lucia-underwhelming",
+  "https://beebom.com/how-to-increase-stats-in-gta-6/",
+  "https://gamerant.com/gta-6-upgrade-stats-fast-health-stamina-focus/",
+  "https://theleonida.com/guides/gta-6-gyms-how-to-work-out"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 9.4,
+     "dur": 3.7,
+     "x": 650
+    }
+   ]
+  },
+  "bed": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/b6/clip_01M7V77K453AEC9ZM251P9PJHJ/playlist.m3u8",
+     "channel": "cliffsavage",
+     "start": 24.4,
+     "dur": 2.2,
+     "x": 700,
+     "slow": 2.2
+    }
+   ]
+  },
+  "walk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7QBJDMN1VY7V8T20BK39CAC/playlist.m3u8",
+     "channel": "rraenee",
+     "start": 9.8,
+     "dur": 5.3,
+     "x": 340
+    }
+   ]
+  },
+  "deck": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 14.4,
+     "dur": 6.6,
+     "x": 700
+    }
+   ]
+  },
+  "dock": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 56.8,
+     "dur": 4.8,
+     "x": 760
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 102,
+  "seed": 131,
+  "drop": 3.52,
+  "break": 19.92,
+  "back": 20.96,
+  "outro": 24.64
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "episode": 14,
+  "duration": 28.3,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.52,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TESTED",
+    "kicker": "YOU CAN GET",
+    "title": [
+     "FAT"
+    ],
+    "color": "orange",
+    "tag": "…in GTA 6. Sort of.",
+    "tagAt": 1.7,
+    "ar": "تقدر تسمن في GTA 6… نوعًا ما"
+   },
+   {
+    "type": "list",
+    "from": 3.52,
+    "to": 8.24,
+    "broll": {
+     "src": "bed",
+     "grade": "warm",
+     "dim": 0.15,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "STEP 1",
+    "label": "GAIN WEIGHT",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "EAT FAST FOOD",
+      "status": "GO",
+      "ok": true,
+      "at": 0.24,
+      "icon": "cash"
+     },
+     {
+      "text": "FITNESS APP: CALORIE SURPLUS",
+      "status": "✓",
+      "ok": true,
+      "at": 2.72,
+      "icon": "phone"
+     },
+     {
+      "text": "THEN SLEEP",
+      "status": "ZZZ",
+      "ok": true,
+      "at": 3.84,
+      "icon": "house"
+     }
+    ],
+    "ar": "كل وجبات سريعة لين يقول التطبيق سعرات زيادة… ونام"
+   },
+   {
+    "type": "trigger",
+    "from": 8.24,
+    "to": 13.44,
+    "broll": {
+     "src": "walk",
+     "grade": "warm",
+     "dim": 0.1,
+     "zoom": [
+      1.03,
+      1.12
+     ]
+    },
+    "step": "02",
+    "label": "REPEAT",
+    "title": "A FEW DAYS",
+    "sub": "and skip your workouts",
+    "target": {
+     "x": 560,
+     "y": 980,
+     "w": 520,
+     "h": 760
+    },
+    "contact": "HEAVIER",
+    "tagText": "REPEAT · SKIP WORKOUTS",
+    "ar": "كررها كم يوم ووقف التمارين… ويزيد الوزن"
+   },
+   {
+    "type": "scan",
+    "from": 13.44,
+    "to": 19.92,
+    "broll": {
+     "src": "deck",
+     "grade": "warm",
+     "dim": 0.15,
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "03",
+    "label": "BULK UP INSTEAD",
+    "target": {
+     "x": 540,
+     "y": 900,
+     "w": 780,
+     "h": 760
+    },
+    "checks": [
+     {
+      "text": "FREE WEIGHTS · JASON'S HOUSE",
+      "at": 2.6
+     },
+     {
+      "text": "STRENGTH = MAX HEALTH",
+      "at": 4.6
+     }
+    ],
+    "hud": "● FITNESS APP…",
+    "ar": "تبي عضلات؟ ارفع أوزان ورا بيت جيسون… والقوة ترفع صحتك"
+   },
+   {
+    "type": "compare",
+    "from": 19.92,
+    "to": 24.64,
+    "captions": false,
+    "broll": {
+     "src": "dock",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "step": "04",
+    "label": "THE CATCH",
+    "bars": [
+     {
+      "label": "CJ",
+      "sub": "SAN ANDREAS",
+      "value": 100,
+      "display": "",
+      "at": 1.1,
+      "color": "orange"
+     },
+     {
+      "label": "JASON & LUCIA",
+      "sub": "GTA 6, MAXED OUT",
+      "value": 45,
+      "display": "CAPPED",
+      "at": 2.2,
+      "color": "green"
+     }
+    ],
+    "result": {
+     "text": "NOWHERE NEAR CJ",
+     "at": 3.6
+    },
+    "ar": "بس حتى بأقصى وزن… ما يقربون من حجم CJ"
+   },
+   {
+    "type": "cta",
+    "from": 24.64,
+    "to": 28.3,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 0.6,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 2.6,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.46,
+    "volume": 0.5
+   },
+   {
+    "src": "coins.wav",
+    "at": 3.76,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.24,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.36,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.18,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 9.76,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.52,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.38,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 13.6,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.04,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.04,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.86,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 20.2,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.02,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.12,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.62,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 23.66,
+    "volume": 0.3
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.57,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.66,
+    "volume": 0.5
+   }
+  ]
+ }
+}

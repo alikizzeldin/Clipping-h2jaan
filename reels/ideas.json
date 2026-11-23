@@ -873,5 +873,109 @@
     "score": 6.4
    }
   ]
+ },
+ {
+  "date": "2026-11-23",
+  "wake_up": "12:42 UTC",
+  "ideas": [
+   {
+    "idea": "You can get fat in GTA 6 (sort of): fast food until the Fitness app shows a calorie surplus, sleep, repeat, skip workouts; bulk up with the free weights behind Jason's house (Strength = max health); even maxed out they're nowhere near CJ",
+    "format": "HIDDEN FEATURE",
+    "demand": 9,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 8,
+    "chosen": "014-get-fat",
+    "sources": [
+     "https://game8.co/games/GTA-6/archives/639191",
+     "https://game8.co/games/GTA-6/archives/638525",
+     "https://www.ladbible.com/entertainment/gaming/gta-6-lucia-jason-weight-eating-explained-269921-20261119",
+     "https://www.sportskeeda.com/gta/gta-6-lucia-max-weight-how-fat-can-lucia-be",
+     "https://leonidaplayers.com/news/gta-6-players-find-max-weight-caps-on-jason-and-lucia-underwhelming",
+     "https://beebom.com/how-to-increase-stats-in-gta-6/",
+     "https://gamerant.com/gta-6-upgrade-stats-fast-health-stamina-focus/",
+     "https://theleonida.com/guides/gta-6-gyms-how-to-work-out"
+    ],
+    "note": "Left out: player-measured weights (Lucia 142 lb etc.), the 'four fast food items' count (one guide), gym membership prices and decay rates.",
+    "score": 7.8
+   },
+   {
+    "idea": "Strength and Cardio decay if you skip workouts; Focus doesn't",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 8,
+    "why_not": "folded into the chosen reel's angle instead",
+    "sources": [
+     "https://www.g2a.com/news/gta-6-news/gta-6-fitness-guide/",
+     "https://gta6-life.com/en/guides/gta-6-stats/"
+    ],
+    "score": 6.5
+   },
+   {
+    "idea": "Secret submarine",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 2,
+    "why_not": "no GTA 6 source; results are GTA 5",
+    "sources": [],
+    "score": 5.7
+   },
+   {
+    "idea": "Can you adopt a dog?",
+    "format": "HIDDEN FEATURE",
+    "demand": 7,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 5,
+    "visual": 4,
+    "confidence": 6,
+    "why_not": "no: you can only pet dogs; a 'no' answer",
+    "sources": [
+     "https://beebom.com/pet-dogs-and-cats-in-gta-6/",
+     "https://www.gfinityesports.com/article/can-you-pet-the-dog-in-gta-6"
+    ],
+    "score": 5.2
+   },
+   {
+    "idea": "Venus Fitness gym in Vice Beach ($600 membership)",
+    "format": "MONEY FILE",
+    "demand": 5,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 4,
+    "why_not": "one source; free weights at home do the same",
+    "sources": [
+     "https://theleonida.com/guides/gta-6-gyms-how-to-work-out"
+    ],
+    "score": 4.5
+   },
+   {
+    "idea": "Gold gun icons mark unique weapon variants",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 8,
+    "why_not": "third look, still under the gate",
+    "sources": [
+     "https://www.g2a.com/news/gta-6-news/gta-6-full-weapons-guide/"
+    ],
+    "score": 6.8
+   }
+  ]
  }
 ]
