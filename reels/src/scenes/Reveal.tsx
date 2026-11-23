@@ -6,6 +6,7 @@ import {clamp, ease, pop, sec} from '../ui/motion';
 import {Arabic, Flash, GlitchText, Particles} from '../ui/Pieces';
 import {C, F, accent} from '../theme';
 import {RevealScene} from '../types';
+import {PillBottle, PillHead} from './Manual3';
 
 const BODY = 'M40 230 C 120 120, 200 300, 290 200 S 440 90, 520 160';
 
@@ -101,6 +102,32 @@ const Crab: React.FC<{p: number; frame: number}> = ({p, frame}) => {
   );
 };
 
+// A helicopter knocked out of the sky: smoking, tilted, rotor still spinning.
+const Heli: React.FC<{p: number; frame: number}> = ({p, frame}) => {
+  const x = interpolate(p, [0, 1], [360, 0]);
+  const y = interpolate(p, [0, 1], [-260, 0]) + Math.sin(frame / 7) * 6;
+  const tilt = 18 + Math.sin(frame / 5) * 5;
+  const rotor = Math.abs(Math.cos(frame * 0.9));
+  return (
+    <svg width={640} height={360} viewBox="0 0 640 360" style={{overflow: 'visible', transform: `translate(${x}px, ${y}px) rotate(${tilt}deg)`}}>
+      {[0, 1, 2, 3, 4].map((i) => {
+        const t = ((frame + i * 9) % 45) / 45;
+        return <circle key={i} cx={420 + t * 160} cy={120 - t * 150} r={18 + t * 46} fill="#3b3b46" opacity={0.7 * (1 - t)} />;
+      })}
+      <path d="M396 118 q 14 -30 30 -6 q 10 -24 24 4" fill="#ffb03a" opacity={0.6 + 0.4 * Math.abs(Math.sin(frame / 2))} />
+      <path d="M380 150 L600 132 L606 150 L388 176 Z" fill="#2b3442" stroke="#0e1218" strokeWidth={6} />
+      <rect x="586" y="96" width="14" height="70" rx="5" fill="#2b3442" stroke="#0e1218" strokeWidth={5} />
+      <ellipse cx="593" cy="104" rx={34 * rotor + 4} ry="6" fill="rgba(200,210,220,0.55)" />
+      <path d="M120 160 C 120 100 190 76 280 80 L380 92 C 420 100 430 140 420 180 C 400 214 330 222 250 220 C 170 218 120 206 120 160 Z" fill="#33404f" stroke="#0e1218" strokeWidth={7} />
+      <path d="M140 150 C 146 112 186 96 236 98 L250 150 Z" fill="#9fd8ff" stroke="#0e1218" strokeWidth={5} opacity={0.9} />
+      <path d="M170 244 H360 M200 220 V244 M320 220 V244" stroke="#0e1218" strokeWidth={8} strokeLinecap="round" />
+      <rect x="252" y="64" width="40" height="18" rx="5" fill="#0e1218" />
+      <ellipse cx="272" cy="58" rx={250 * rotor + 20} ry="9" fill="rgba(200,210,220,0.5)" />
+      <circle cx="272" cy="60" r="9" fill="#0e1218" />
+    </svg>
+  );
+};
+
 // The payoff: a line typed in the dark, then a slam with big words (no UFO; see Twist for that).
 export const Reveal: React.FC<{s: RevealScene}> = ({s}) => {
   const frame = useCurrentFrame();
@@ -127,7 +154,11 @@ export const Reveal: React.FC<{s: RevealScene}> = ({s}) => {
           <Particles x={100} y={500} w={880} h={1300} count={50} seed="reveal" speed={2} color={color} />
           {s.icon ? (
             <div style={{position: 'absolute', top: 300, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: Math.min(1, icon * 2)}}>
-              {s.icon === 'snake' ? <Snake p={icon} frame={frame} /> : s.icon === 'hat' ? <Hat p={icon} frame={frame} /> : s.icon === 'crab' ? <Crab p={icon} frame={frame} /> : <Knife p={icon} frame={frame} />}
+              {s.icon === 'snake' ? <Snake p={icon} frame={frame} /> : s.icon === 'hat' ? <Hat p={icon} frame={frame} /> : s.icon === 'crab' ? <Crab p={icon} frame={frame} />
+                : s.icon === 'heli' ? <Heli p={icon} frame={frame} />
+                : s.icon === 'pill' ? <div style={{transform: `scale(${0.4 + 0.6 * icon}) rotate(${(1 - icon) * 180}deg)`}}><PillHead size={360} frame={frame} /></div>
+                : s.icon === 'bottle' ? <div style={{transform: `scale(${0.4 + 0.6 * icon}) rotate(${Math.sin(frame / 8) * 6}deg)`, filter: `drop-shadow(0 0 30px ${C.red})`}}><PillBottle size={360} /></div>
+                : <Knife p={icon} frame={frame} />}
             </div>
           ) : null}
           <div style={{position: 'absolute', top: s.icon ? 720 : 640, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18}}>

@@ -17,6 +17,52 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
           <path d="M28 36 V26 a12 12 0 0 1 24 0 V36" {...common} />
         </>
       ) : null}
+      {name === 'shop' ? (
+        <>
+          <path d="M10 30 L16 14 H64 L70 30 Z" {...common} />
+          <path d="M14 30 V68 H66 V30" {...common} />
+          <rect x="24" y="42" width="14" height="26" {...common} />
+          <rect x="46" y="42" width="12" height="12" {...common} />
+        </>
+      ) : null}
+      {name === 'book' ? (
+        <>
+          <rect x="18" y="10" width="44" height="60" rx="4" {...common} />
+          <path d="M26 22 H54 M26 32 H48" {...common} />
+          <path d="M30 58 L40 44 L50 58" {...common} />
+        </>
+      ) : null}
+      {name === 'paper' ? (
+        <>
+          <path d="M20 10 H50 L62 22 V70 H20 Z" {...common} />
+          <path d="M50 10 V22 H62 M28 34 H54 M28 46 H54 M28 58 H44" {...common} />
+        </>
+      ) : null}
+      {name === 'pill' ? (
+        <>
+          <rect x="10" y="28" width="60" height="26" rx="13" transform="rotate(-30 40 41)" {...common} />
+          <path d="M33 26 L47 56" {...common} />
+        </>
+      ) : null}
+      {name === 'barn' ? (
+        <>
+          <path d="M8 34 L40 12 L72 34" {...common} />
+          <path d="M14 30 V68 H66 V30" {...common} />
+          <path d="M30 68 V46 H50 V68 M30 46 L50 68 M50 46 L30 68" {...common} />
+        </>
+      ) : null}
+      {name === 'flask' ? (
+        <>
+          <path d="M32 10 H48 M35 10 V32 L16 66 Q14 70 19 70 H61 Q66 70 64 66 L45 32 V10" {...common} />
+          <path d="M24 54 H56" {...common} />
+        </>
+      ) : null}
+      {name === 'alert' ? (
+        <>
+          <path d="M40 10 L72 66 H8 Z" {...common} />
+          <path d="M40 30 V48 M40 57 V58" {...common} />
+        </>
+      ) : null}
       {name === 'cash' ? (
         <>
           <rect x="8" y="20" width="64" height="40" rx="6" {...common} />

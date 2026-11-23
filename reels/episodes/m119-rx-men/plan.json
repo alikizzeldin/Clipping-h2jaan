@@ -1,0 +1,382 @@
+{
+ "manual": true,
+ "episode": 119,
+ "kind": "easter-egg",
+ "topic": "RX-MEN: an X-Men parody comic (ED Comics, issue 13) on the magazine rack of the 24/7 store in Key Lento; the X became Rx (prescription); the villain Dr. Placebo has a pill-capsule head and wants to wipe out pharmaceuticals; the heroes fight back with big pharma powers",
+ "title": {
+  "en": "GTA 6 made its own X-Men… and the villain is a PILL 💊",
+  "ar": "GTA 6 سوّت نسخة من X-Men… والشرير حبّة دوا 💊"
+ },
+ "summary": "On the magazine rack of the 24/7 store in Key Lento sits RX-MEN, an X-Men parody comic from ED Comics. The X became Rx, like on a prescription. The villain, Dr. Placebo, has a pill-capsule head and wants to wipe out medicine, and the heroes fight back with big pharma powers.",
+ "summary_ar": "على رف المجلات في محل 24/7 في كي لينتو فيه مجلة كوميكس اسمها RX-MEN، تقليد لـX-Men. حرف X صار Rx مثل الوصفة الطبية. الشرير دكتور بلاسيبو راسه كبسولة ويبي يمسح الأدوية، والأبطال يردّون بقوى شركات الأدوية الكبرى.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEgg",
+  "XMen",
+  "GTA6Secrets",
+  "GTAVI",
+  "Marvel",
+  "KeyLento",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 6,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.0
+ },
+ "sources": [
+  "https://fandomwire.com/gta-6-reveals-own-x-men-ahead-of-avengers-doomsday/",
+  "https://criticalhits.com.br/games/gta-6-esconde-uma-parodia-dos-x-men-em-gibi-dentro-do-jogo/",
+  "https://gameoverdrive.com.br/gta-6-easter-egg-x-men-rx-men/",
+  "https://metaforge.app/gta-6/gta-6-magazines-books-comics-locations",
+  "https://www.comicbasics.com/?p=204312",
+  "https://egw.news/gaming/news/38607/red-hulk-and-x-men-how-to-find-marvel-easter-eggs--qCL28k3Xd"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 3.95,
+     "x": 1100
+    }
+   ]
+  },
+  "store": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 35.0,
+     "dur": 3.55,
+     "x": 700,
+     "slow": 1.4
+    }
+   ]
+  },
+  "comic": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 12.0,
+     "dur": 5.5,
+     "x": 700
+    }
+   ]
+  },
+  "villain": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 26.0,
+     "dur": 6.1,
+     "x": 1312
+    }
+   ]
+  },
+  "heroes": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 16.0,
+     "dur": 3.1,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 20.0,
+     "dur": 3.95,
+     "x": 800
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 100,
+  "seed": 119,
+  "drop": 3.88,
+  "break": 14.24,
+  "back": 15.02,
+  "outro": 23.32
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 27.2,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.88,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6 HAS ITS OWN",
+    "title": [
+     "X-MEN"
+    ],
+    "color": "magenta",
+    "tag": "…villain is a pill.",
+    "tagAt": 2.46,
+    "ar": "في GTA 6 نسخة من إكس مِن… والشرير حبّة دوا"
+   },
+   {
+    "type": "list",
+    "from": 3.88,
+    "to": 8.8,
+    "broll": {
+     "src": "store",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "chip": "KEY LENTO",
+    "label": "WHERE TO LOOK",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "24/7 STORE",
+      "status": "KEY LENTO",
+      "ok": true,
+      "at": 0.5,
+      "icon": "shop"
+     },
+     {
+      "text": "MAGAZINE RACK",
+      "status": "CHECK",
+      "ok": true,
+      "at": 3.66,
+      "icon": "book"
+     }
+    ],
+    "ar": "روح لمحل 24/7 في كي لينتو وشيّك رف المجلات"
+   },
+   {
+    "type": "comic",
+    "from": 8.8,
+    "to": 14.24,
+    "broll": {
+     "src": "comic",
+     "grade": "night",
+     "dim": 0.55,
+     "blur": 8
+    },
+    "step": "01",
+    "label": "THE COMIC",
+    "coverAt": 1.4,
+    "callouts": [
+     {
+      "text": "X → Rx",
+      "at": 2.4,
+      "color": "teal"
+     },
+     {
+      "text": "LIKE A PRESCRIPTION",
+      "at": 3.94,
+      "color": "gold"
+     }
+    ],
+    "ar": "مجلة كوميكس اسمها «آر إكس مِن»… والـX صار مثل رمز الوصفة الطبية",
+    "title": "RX-MEN",
+    "publisher": "ED COMICS",
+    "issue": "#13",
+    "price": "$1.25",
+    "cover": "PAGING DR. PLACEBO!"
+   },
+   {
+    "type": "reveal",
+    "from": 14.24,
+    "to": 20.26,
+    "captions": false,
+    "broll": {
+     "src": "villain",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 5
+    },
+    "pre": "THEIR ENEMY…",
+    "slamAt": 0.78,
+    "icon": "pill",
+    "color": "red",
+    "lines": [
+     {
+      "text": "DR. PLACEBO",
+      "at": 0.78,
+      "color": "red",
+      "size": 150
+     },
+     {
+      "text": "A PILL FOR A HEAD",
+      "at": 2.98,
+      "size": 100
+     },
+     {
+      "text": "ANTI-MEDICINE",
+      "at": 5.0,
+      "color": "gold",
+      "size": 120
+     }
+    ],
+    "ar": "عدوهم دكتور بلاسيبو… راسه كبسولة ويبي يمسح الأدوية"
+   },
+   {
+    "type": "comic",
+    "from": 20.26,
+    "to": 23.32,
+    "broll": {
+     "src": "heroes",
+     "grade": "night",
+     "dim": 0.55,
+     "blur": 8
+    },
+    "step": "02",
+    "label": "THE HEROES",
+    "coverAt": 0,
+    "burst": {
+     "text": "BIG PHARMA POWERS!",
+     "at": 1.6
+    },
+    "ar": "والأبطال يردّون بقوى شركات الأدوية الكبرى",
+    "title": "RX-MEN",
+    "publisher": "ED COMICS",
+    "issue": "#13",
+    "price": "$1.25",
+    "cover": "PAGING DR. PLACEBO!"
+   },
+   {
+    "type": "cta",
+    "from": 23.32,
+    "to": 27.2,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.4,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.82,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.3,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.46,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.74,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 11.2,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 12.74,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.18,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 15.02,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 15.04,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.22,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.24,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.2,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.86,
+    "volume": 0.65
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.26,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.34,
+    "volume": 0.5
+   }
+  ]
+ }
+}

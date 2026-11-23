@@ -1,0 +1,402 @@
+{
+ "manual": true,
+ "episode": 118,
+ "kind": "easter-egg",
+ "topic": "Red Hulk parody: Kyle McKittrick's Strangers & Freaks quest (flyers in the Starlet Motel lobby from Chapter 2; McKittrick Farm in Frogswater, Kelly County); in the third mission, Buddy? (Check on Kyle), Kyle has mutated into a red brute who tosses cops and brings down a helicopter, a nod to Captain America: Brave New World",
+ "title": {
+  "en": "GTA 6 has a secret RED HULK 😳 (he takes down a helicopter)",
+  "ar": "في GTA 6 هالك أحمر مخفي 😳 ويطيّح هليكوبتر"
+ },
+ "summary": "From Chapter 2, read the flyers in the Starlet Motel lobby: they lead to McKittrick Farm in Frogswater, Kelly County. Help Kyle through three Strangers & Freaks missions. In the last one, Buddy, Kyle has mutated into a giant red brute who tosses cops and brings down a helicopter, a parody of Red Hulk in Captain America: Brave New World.",
+ "summary_ar": "من الفصل الثاني اقرأ الإعلانات في لوبي موتيل ستارليت: توديك لمزرعة ماكيتريك في فروغزووتر، كيلي كاونتي. ساعد كايل في ثلاث مهمات. في آخر وحدة، Buddy، كايل يتحوّل لوحش أحمر ضخم يرمي الشرطة ويطيّح هليكوبتر، تقليد لـRed Hulk في فيلم كابتن أمريكا الجديد.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEgg",
+  "RedHulk",
+  "GTA6Secrets",
+  "GTAVI",
+  "CaptainAmerica",
+  "Marvel",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 7,
+  "score": 7.7
+ },
+ "sources": [
+  "https://www.dexerto.com/wikis/gta-6/easter-eggs/red-hulk-easter-egg/",
+  "https://beebom.com/gta-6-red-hulk/",
+  "https://screenrant.com/gta-6-buddy-kyle-kill-spare-choice/",
+  "https://showgamer.com/en/guides/8019-kak-nayti-krasnogo-halka-v-gta-6-gde-iskat-mutanta-kayla-i-ego-fermu",
+  "https://gameshorizon.com/guides/gta-6-red-hulk-kyle-full-quest-secrets-all-endings/",
+  "https://www.mensjournal.com/entertainment/gta-6-has-a-red-hulk-in-surprising-marvel-easter-egg-side-mission",
+  "https://www.comicbasics.com/gta-6-sneaks-in-a-red-hulk-parody-with-a-helicopter-moment-straight-out-of-captain-america-brave-new-world/",
+  "https://kotaku.com/are-we-going-too-crazy-heres-why-rockstar-put-a-red-hulk-in-gta-6-2000758505"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 5.0,
+     "dur": 3.0,
+     "x": 800
+    }
+   ]
+  },
+  "motel": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 8.0,
+     "dur": 4.1,
+     "x": 700
+    }
+   ]
+  },
+  "farm": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 46.6,
+     "dur": 3.1,
+     "x": 900,
+     "slow": 1.3
+    }
+   ]
+  },
+  "lot": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 3.0,
+     "dur": 4.9,
+     "x": 700,
+     "slow": 1.45
+    }
+   ]
+  },
+  "heli": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 3.0,
+     "dur": 1.0,
+     "x": 700
+    },
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 0.3,
+     "dur": 6.1,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 3.8,
+     "x": 600
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 98,
+  "seed": 118,
+  "drop": 2.9,
+  "break": 17.94,
+  "back": 18.86,
+  "outro": 24.96
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 28.7,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 2.9,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6 HID A",
+    "title": [
+     "RED HULK"
+    ],
+    "color": "red",
+    "tag": "…on a farm.",
+    "tagAt": 1.66,
+    "ar": "في GTA 6 هالك أحمر مخفي… في مزرعة"
+   },
+   {
+    "type": "list",
+    "from": 2.9,
+    "to": 6.98,
+    "broll": {
+     "src": "motel",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "chip": "CH. 2",
+    "label": "HOW IT STARTS",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "READ THE FLYERS",
+      "status": "CH. 2",
+      "ok": true,
+      "at": 1.6,
+      "icon": "paper"
+     },
+     {
+      "text": "STARLET MOTEL",
+      "status": "LOBBY",
+      "ok": true,
+      "at": 2.32,
+      "icon": "house"
+     }
+    ],
+    "ar": "في الفصل الثاني، اقرأ الإعلانات في لوبي موتيل ستارليت"
+   },
+   {
+    "type": "location",
+    "from": 6.98,
+    "to": 10.92,
+    "broll": {
+     "src": "farm",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 7
+    },
+    "step": "01",
+    "label": "THE FARM",
+    "place": "STARLET MOTEL",
+    "target": "McKITTRICK FARM",
+    "direction": "KELLY CO.",
+    "region": "FROGSWATER · FARM",
+    "ar": "توديك لمزرعة ماكيتريك في فروغزووتر، كيلي كاونتي"
+   },
+   {
+    "type": "list",
+    "from": 10.92,
+    "to": 17.94,
+    "broll": {
+     "src": "lot",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "S&F",
+    "label": "KYLE'S MISSIONS",
+    "cardAt": 0.1,
+    "arAt": 0.6,
+    "items": [
+     {
+      "text": "CHECK OUT THE FARM",
+      "status": "1",
+      "ok": true,
+      "at": 0.76,
+      "icon": "barn"
+     },
+     {
+      "text": "COLLECT CHEMICALS",
+      "status": "2",
+      "ok": true,
+      "at": 1.1,
+      "icon": "flask"
+     },
+     {
+      "text": "BUDDY?",
+      "status": "MUTATED",
+      "ok": false,
+      "alert": true,
+      "at": 3.4,
+      "icon": "alert"
+     }
+    ],
+    "ar": "ساعد كايل في ثلاث مهمات… وفي آخر وحدة يتحوّل لوحش أحمر ضخم"
+   },
+   {
+    "type": "reveal",
+    "from": 17.94,
+    "to": 24.96,
+    "captions": false,
+    "broll": {
+     "src": "heli",
+     "grade": "warm",
+     "dim": 0.3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "HE TOSSES COPS…",
+    "slamAt": 0.92,
+    "icon": "heli",
+    "color": "red",
+    "lines": [
+     {
+      "text": "BRINGS DOWN",
+      "at": 1.2,
+      "size": 130
+     },
+     {
+      "text": "A HELICOPTER",
+      "at": 1.88,
+      "color": "red",
+      "size": 150
+     },
+     {
+      "text": "LIKE RED HULK",
+      "at": 3.42,
+      "color": "gold",
+      "size": 130
+     }
+    ],
+    "ar": "ويطيّح هليكوبتر… مثل هالك الأحمر في فيلم كابتن أمريكا"
+   },
+   {
+    "type": "cta",
+    "from": 24.96,
+    "to": 28.7,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.84,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.46,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.18,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.92,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.86,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 11.62,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 11.96,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 14.26,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.88,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 18.86,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 18.88,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.76,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.3,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.9,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.98,
+    "volume": 0.5
+   }
+  ]
+ }
+}

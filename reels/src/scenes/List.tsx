@@ -47,7 +47,7 @@ export const List: React.FC<{s: ListScene}> = ({s}) => {
           const at = sec(item.at) - 3;
           const show = ease(frame, at, at + 10);
           const stamp = pop(frame, at + 6, 9, 0.45, 260);
-          const strike = item.ok ? 0 : interpolate(frame, [at + 6, at + 16], [0, 1], clamp);
+          const strike = item.ok || item.alert ? 0 : interpolate(frame, [at + 6, at + 16], [0, 1], clamp);
           const tone = item.ok ? C.green : C.red;
           const shown = frame >= at;
           return (

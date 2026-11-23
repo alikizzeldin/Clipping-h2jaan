@@ -1,0 +1,361 @@
+{
+ "manual": true,
+ "episode": 121,
+ "kind": "money",
+ "topic": "Chapter 1 pay goes to Jason's mailbox: sales to Brian or Donnie and job rewards like Lab Fees land in the roadside mailbox outside Jason's house in Key Lento, not your pocket; walk up and press collect (one of Brian's drops was $1,200)",
+ "title": {
+  "en": "Your GTA 6 money might be sitting in a MAILBOX 📬💰",
+  "ar": "فلوسك في GTA 6 ممكن تكون في صندوق البريد 📬💰"
+ },
+ "summary": "In Chapter 1, when you sell to Brian or Donnie, or finish a job like Lab Fees, the money doesn't land in your pocket: it goes to the roadside mailbox outside Jason's house in Key Lento. Walk up and press collect, or it just sits there. One of Brian's drops was $1,200.",
+ "summary_ar": "في الفصل الأول، لما تبيع لبرايان أو دوني أو تخلص مهمة مثل Lab Fees، الفلوس ما تجي جيبك: تروح لصندوق البريد اللي على الشارع قدام بيت جيسون في كي لينتو. روح واضغط Collect وإلا تظل مكانها. وحدة من دفعات برايان كانت 1,200 دولار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Tips",
+  "GTA6Guide",
+  "GTAVI",
+  "KeyLento",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 5,
+  "confidence": 7,
+  "score": 7.2
+ },
+ "sources": [
+  "https://nerdschalk.com/collect-cash-jasons-mailbox-gta-6/",
+  "https://www.videogameschronicle.com/guide/gta-6-lab-fees-mission-walkthrough/",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-lab-fees-mission-walkthrough/",
+  "https://beebom.com/gta-6-fence-locations/",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-money-laundering-explained/",
+  "https://www.pcgamer.com/games/grand-theft-auto/gta-6-fence-locations/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 17.5,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  },
+  "inside": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 8.0,
+     "x": 700
+    }
+   ]
+  },
+  "house": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 1.0,
+     "dur": 4.9,
+     "x": 700
+    }
+   ]
+  },
+  "road": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 12.5,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  },
+  "cash": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 12.0,
+     "dur": 3.2,
+     "x": 1100
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 3.9,
+     "x": 600
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 122,
+  "seed": 121,
+  "drop": 3.82,
+  "break": 16.52,
+  "back": 17.34,
+  "outro": 23.58
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 27.4,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.82,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "DON'T MISS",
+    "kicker": "YOUR PAY IS IN A",
+    "title": [
+     "MAILBOX"
+    ],
+    "color": "gold",
+    "ar": "فلوسك في اللعبة ممكن تكون في صندوق البريد"
+   },
+   {
+    "type": "list",
+    "from": 3.82,
+    "to": 11.72,
+    "broll": {
+     "src": "inside",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "CH. 1",
+    "label": "PAID BY MAIL",
+    "cardAt": 0.1,
+    "arAt": 0.6,
+    "items": [
+     {
+      "text": "SELL TO BRIAN",
+      "status": "MAILBOX",
+      "ok": true,
+      "at": 1.96,
+      "icon": "cash"
+     },
+     {
+      "text": "SELL TO DONNIE",
+      "status": "MAILBOX",
+      "ok": true,
+      "at": 2.66,
+      "icon": "cash"
+     },
+     {
+      "text": "JOBS LIKE LAB FEES",
+      "status": "MAILBOX",
+      "ok": true,
+      "at": 4.72,
+      "icon": "paper"
+     }
+    ],
+    "ar": "لما تبيع لبرايان أو دوني أو تخلص مهمة مثل لاب فيز… الفلوس ما تجي جيبك"
+   },
+   {
+    "type": "trigger",
+    "from": 11.72,
+    "to": 16.52,
+    "broll": {
+     "src": "house",
+     "grade": "warm",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "WHERE",
+    "title": "JASON'S HOUSE",
+    "sub": "roadside mailbox, Key Lento",
+    "target": {
+     "x": 540,
+     "y": 980,
+     "w": 520,
+     "h": 560
+    },
+    "tagText": "ROADSIDE MAILBOX · KEY LENTO",
+    "contact": "JASON'S HOUSE",
+    "ar": "تروح لصندوق البريد اللي على الشارع قدام بيت جيسون في كي لينتو"
+   },
+   {
+    "type": "mailbox",
+    "from": 16.52,
+    "to": 20.4,
+    "broll": {
+     "src": "road",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 6
+    },
+    "step": "02",
+    "label": "COLLECT IT",
+    "flagAt": 0.1,
+    "pressAt": 0.82,
+    "prompt": "COLLECT",
+    "title": "CASH IN HAND",
+    "sub": "MISS IT? IT JUST SITS THERE",
+    "subAt": 1.78,
+    "ar": "روح له واضغط Collect… وإذا نسيته يظل مكانه"
+   },
+   {
+    "type": "cash",
+    "from": 20.4,
+    "to": 23.58,
+    "captions": false,
+    "broll": {
+     "src": "cash",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "ONE OF BRIAN'S DROPS",
+    "amount": "$1,200",
+    "per": "IN THE MAILBOX",
+    "amountAt": 1.08,
+    "ar": "وحدة من دفعات برايان: 1,200 دولار"
+   },
+   {
+    "type": "cta",
+    "from": 23.58,
+    "to": 27.4,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE MONEY TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.76,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.74,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.44,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.5,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 10.4,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.66,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 12.0,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 14.2,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.46,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.66,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.34,
+    "volume": 0.5
+   },
+   {
+    "src": "coins.wav",
+    "at": 17.5,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.34,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 21.48,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.52,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.6,
+    "volume": 0.5
+   }
+  ]
+ }
+}

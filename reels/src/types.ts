@@ -85,7 +85,7 @@ export type ListScene = Base & {
   label: string;
   fromLabel?: string; // e.g. "CHAPTER 1"
   toLabel?: string; // e.g. "CHAPTER 2"
-  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save' | 'ticket' | 'boat' | 'wave' | 'gun' | 'lock'}[];
+  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save' | 'ticket' | 'boat' | 'wave' | 'gun' | 'lock' | 'shop' | 'book' | 'paper' | 'pill' | 'barn' | 'flask' | 'alert'; alert?: boolean}[];
   ar?: string;
   arAt?: number;
   cardAt?: number; // when the list card rises (leave the footage clear until then)
@@ -232,7 +232,7 @@ export type RevealScene = Base & {
   pre: string; // typed in the dark first
   slamAt: number;
   lines: {text: string; at: number; color?: string; size?: number}[];
-  icon?: 'snake' | 'knife' | 'hat' | 'crab';
+  icon?: 'snake' | 'knife' | 'hat' | 'crab' | 'heli' | 'pill' | 'bottle';
   color?: string; // flash and glow colour
   ar?: string;
 };
@@ -362,12 +362,55 @@ export type RadarScene = Base & {
   ar?: string;
 };
 
+export type ComicScene = Base & {
+  type: 'comic';
+  step: string;
+  label: string;
+  title: string; // the masthead, e.g. "RX-MEN"
+  publisher: string;
+  issue: string;
+  price: string;
+  cover: string; // the cover line, e.g. "PAGING DR. PLACEBO!"
+  coverAt?: number;
+  callouts?: {text: string; at: number; color?: string}[];
+  burst?: {text: string; at: number};
+  ar?: string;
+};
+
+export type HealthScene = Base & {
+  type: 'health';
+  step: string;
+  label: string;
+  item: string; // the item picked on the wheel
+  wheelAt: number;
+  pickAt: number;
+  fillAt: number;
+  hpFrom: number; // health before, 0..1
+  hpTo: number; // health after, 0..1
+  title: string;
+  ar?: string;
+};
+
+export type MailboxScene = Base & {
+  type: 'mailbox';
+  step: string;
+  label: string;
+  flagAt: number;
+  pressAt: number;
+  prompt: string; // "COLLECT"
+  title: string;
+  sub?: string;
+  subAt?: number;
+  ar?: string;
+};
+
 export type Scene =
   | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
-  | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene;
+  | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
+  | ComicScene | HealthScene | MailboxScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

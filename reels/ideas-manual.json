@@ -584,5 +584,178 @@
     "why_not": "Payout numbers differ between sources"
    }
   ]
+ },
+ {
+  "date": "2026-11-23",
+  "wake_up": "04:23 UTC (m118–m121); the 20:23 UTC Nov 22 wake-up arrived 8h late and was folded into this one",
+  "ideas": [
+   {
+    "idea": "Red Hulk parody: Kyle McKittrick's Strangers & Freaks quest (Starlet Motel flyers, McKittrick Farm in Frogswater); in Buddy? he mutates and brings down a helicopter",
+    "format": "EASTER EGG",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.7,
+    "chosen": "m118-red-hulk",
+    "sources": [
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/red-hulk-easter-egg/",
+     "https://beebom.com/gta-6-red-hulk/",
+     "https://screenrant.com/gta-6-buddy-kyle-kill-spare-choice/",
+     "https://showgamer.com/en/guides/8019-kak-nayti-krasnogo-halka-v-gta-6-gde-iskat-mutanta-kayla-i-ego-fermu",
+     "https://gameshorizon.com/guides/gta-6-red-hulk-kyle-full-quest-secrets-all-endings/",
+     "https://www.mensjournal.com/entertainment/gta-6-has-a-red-hulk-in-surprising-marvel-easter-egg-side-mission",
+     "https://www.comicbasics.com/gta-6-sneaks-in-a-red-hulk-parody-with-a-helicopter-moment-straight-out-of-captain-america-brave-new-world/",
+     "https://kotaku.com/are-we-going-too-crazy-heres-why-rockstar-put-a-red-hulk-in-gta-6-2000758505"
+    ]
+   },
+   {
+    "idea": "RX-MEN: X-Men parody comic on the magazine rack of the 24/7 store in Key Lento; villain Dr. Placebo has a pill-capsule head",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.0,
+    "chosen": "m119-rx-men",
+    "sources": [
+     "https://fandomwire.com/gta-6-reveals-own-x-men-ahead-of-avengers-doomsday/",
+     "https://criticalhits.com.br/games/gta-6-esconde-uma-parodia-dos-x-men-em-gibi-dentro-do-jogo/",
+     "https://gameoverdrive.com.br/gta-6-easter-egg-x-men-rx-men/",
+     "https://metaforge.app/gta-6/gta-6-magazines-books-comics-locations",
+     "https://www.comicbasics.com/?p=204312",
+     "https://egw.news/gaming/news/38607/red-hulk-and-x-men-how-to-find-marvel-easter-eggs--qCL28k3Xd"
+    ]
+   },
+   {
+    "idea": "Zombix healing pills: shelf empty? the clerk sells them from behind the counter; repeated use weakens each pill for a while",
+    "format": "DON'T MISS",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 7,
+    "score": 7.1,
+    "chosen": "m120-zombix-counter",
+    "sources": [
+     "https://games.gg/grand-theft-auto-vi/guides/gta-6-how-to-heal/",
+     "https://beebom.com/how-to-heal-in-gta-6/",
+     "https://www.gfinityesports.com/article/gta-6-how-to-heal",
+     "https://xboxplay.games/gta-6/gta-6-how-to-heal-regenerate-health-fast-all-ways-77420",
+     "https://nerdschalk.com/get-use-zombix-gone-fishing-gta-6/",
+     "https://playday.one/2026/11/19/gta-6-zombix-adrenaline-locations/",
+     "https://gta.wiki/w/Zombix"
+    ]
+   },
+   {
+    "idea": "Chapter 1 pay (Brian, Donnie, Lab Fees) goes to the roadside mailbox outside Jason's house in Key Lento; walk up and collect it",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 7,
+    "score": 7.2,
+    "chosen": "m121-mailbox-pay",
+    "sources": [
+     "https://nerdschalk.com/collect-cash-jasons-mailbox-gta-6/",
+     "https://www.videogameschronicle.com/guide/gta-6-lab-fees-mission-walkthrough/",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-lab-fees-mission-walkthrough/",
+     "https://beebom.com/gta-6-fence-locations/",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-money-laundering-explained/",
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6-fence-locations/"
+    ]
+   },
+   {
+    "idea": "Loose floorboards in Jason's bedroom: stash cash before banking unlocks",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.85,
+    "why_not": "Below 7.0 and too close to the 'bank your cash' idea already in ideas.json"
+   },
+   {
+    "idea": "Red barn loot respawn 'infinite money' loop (save and reload)",
+    "format": "MONEY FILE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 4,
+    "score": 7.15,
+    "why_not": "Confidence 4: one guide calls it tested, another says no glitch is verified; could be patched"
+   },
+   {
+    "idea": "Map colours: dark blue buildings can be entered, light blue cannot",
+    "format": "SETTINGS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.1,
+    "why_not": "Only one source describes the colour code"
+   },
+   {
+    "idea": "Stash bags: carry two, hand one to your partner, trunks hold 2–6",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 6,
+    "score": 6.75,
+    "why_not": "Below 7.0; details partly from pre-release coverage"
+   },
+   {
+    "idea": "GTA 6 hacker (Arion Kurtaj) sentencing",
+    "format": "NEWS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 4,
+    "confidence": 5,
+    "score": 5.85,
+    "why_not": "The plea was on Nov 16 (older than 48h) and no sentence has been reported yet"
+   },
+   {
+    "idea": "Michael's boat from GTA 5 outside Jason's house",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 4,
+    "score": 6.1,
+    "why_not": "Trailer-era fan speculation; not confirmed in the shipped game"
+   },
+   {
+    "idea": "Snapmatic post mocking the 'We got X before GTA 6' meme",
+    "format": "EASTER EGG",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 4,
+    "score": 5.75,
+    "why_not": "Only one source, no exact wording"
+   }
+  ]
  }
 ]
