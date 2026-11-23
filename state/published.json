@@ -1559,6 +1559,28 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgFb0imDzIG/"
+  },
+  "reel_015": {
+   "video_id": "",
+   "via": "buffer",
+   "link": "",
+   "title": "BREAKING: GTA 6's first patch is out 🛠️ (7 fixes) | عاجل: أول تحديث لـ GTA 6 🛠️ #shorts",
+   "channel": "gta6fied",
+   "source": "reel",
+   "category": "grand-theft-auto-vi",
+   "uploaded_at": "2026-11-23T18:59:20+00:00",
+   "duration": 28,
+   "origin": "reel",
+   "kick_views": 0,
+   "kind": "reel",
+   "episode": 15,
+   "topic": "NEWS Nov 23, 2026: GTA 6's first post-launch update (01.002.002 on PS5, 1.0.2.2 on Xbox) with 7 fixes: story phone calls that never came, crashes, autosave, weather that stopped changing, being unable to lose a wanted level, the gym deadlift bar, partners not handing over bags for fences",
+   "rating": 7.7,
+   "hook": "reel",
+   "status": "instagram_only",
+   "instagram": "6b048d090720ccb673033f3e",
+   "instagram_at": "2026-11-23T18:59:31+00:00",
+   "instagram_title": "BREAKING: GTA 6's first patch is out 🛠️ (7 fixes)"
   }
  },
  "skipped": {
