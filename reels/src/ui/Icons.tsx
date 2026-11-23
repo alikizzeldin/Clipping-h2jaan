@@ -137,6 +137,12 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
           <path d="M8 62 Q18 54 28 62 T48 62 T68 62" {...common} />
         </>
       ) : null}
+      {name === 'fire' ? (
+        <>
+          <path d="M40 72 C22 72 14 60 16 46 C18 34 28 28 28 16 C38 22 44 32 42 42 C48 38 50 32 50 26 C60 34 66 46 64 56 C62 66 54 72 40 72 Z" {...common} />
+          <path d="M40 72 C33 72 30 66 32 60 C34 54 40 52 40 46 C46 52 48 58 46 64 C45 69 43 72 40 72 Z" {...common} />
+        </>
+      ) : null}
     </svg>
   );
 };

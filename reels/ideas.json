@@ -1083,5 +1083,120 @@
     "score": 6.8
    }
   ]
+ },
+ {
+  "date": "2026-11-23",
+  "wake_up": "22:41 UTC",
+  "ideas": [
+   {
+    "format": "SECRET FILE",
+    "idea": "Secret Satan boss fight: at night in north Port Gellhorn find the red-lit open garage of the Circles of Hell house; metalheads Beelzebub and Dave, pick 'Rock On', ride their van to a bonfire, stare into the flames, wake up in Hell, beat the boss on the throne; reward the Hellspawn Comshot 12 shotgun (not sold anywhere), shirt, tattoos; players report a permanent max-health boost",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 7,
+    "score": 7.5,
+    "chosen": "016-satan-boss",
+    "why_not": null,
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-secret-hell-mission-satan-location-rewards-623661-20261123",
+     "https://www.sportskeeda.com/esports/gta-6-secret-satan-boss-guide-how-unlock-permanent-hp-buff-legendary-hellspawn-shotgun",
+     "https://www.sportskeeda.com/esports/gta-6-where-find-satan-and-get-hellspawn-shotgun",
+     "https://www.gtaboom.com/how-to-find-and-beat-satan-in-gta-6-for-the-hellspawn-shotgun-98d3",
+     "https://holdtoreset.com/where-to-find-and-fight-satan-in-gta-6/",
+     "https://thebasedotaku.com/guides/gta-6-hell-and-satan-boss-easter-egg-walkthrough/",
+     "https://gta6bugs.com/easter-eggs/dethrone-the-pretender-satan-ritual-hellspawn-shotgun"
+    ],
+    "note": "Said only what guides agree on: 'late at night' (exact hours differ: midnight-4 AM vs ~10 PM), 'the boss on the throne' (Satan vs 'the Pretender' differs), health boost said as 'players report' (its size is unverified)."
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Collateral (Tom Cruise) hitman random encounter: a man in a suit gets in Jason's car, orders him through a red light, says to ignore Lucia's call, shoots two men at Harborside Park (Vice Beach)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 8,
+    "score": 6.9,
+    "chosen": null,
+    "why_not": "random trigger with no set place to send players, and the payoff is a reference rather than a reward; score under 7.0",
+    "sources": [
+     "https://www.comingsoon.net/games/news/2228502-gta-6-tom-cruise-collateral-easter-egg-npc-mission",
+     "https://onpoint4gamers.com/gta-6-tom-cruise-collateral-npc-hostage/",
+     "https://fandomwire.com/gta-6-how-to-find-tom-cruise-collateral-npc/"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "Bank vaults: Yasmani's optional mission 'That's Where The Money Is…' unlocks 8 vaults; tail the security van, marked bills fenced by Yasmani, up to ~$205,000 a vault, 4 stars at once",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 6,
+    "score": 7.2,
+    "chosen": null,
+    "why_not": "confidence 6: payouts ($65k-$205k), the unlock chapter (4 vs 5) and where Yasmani is differ between guides",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-all-bank-jobs-locations-bank-vaults/",
+     "https://www.dualshockers.com/gta-6-how-to-get-into-bank-vaults/",
+     "https://timesaver.gg/tools/gta-6/money/bank-vaults",
+     "https://happygamer.com/gta-6-how-to-rob-bank-vaults-178241/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Hidden 'Hunger Games' event: kidnapped, locked up, released to be hunted (Manhunt nod)",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 6,
+    "score": 7.0,
+    "chosen": null,
+    "why_not": "still no agreed trigger or place; confidence 6",
+    "sources": [
+     "https://www.gamebyte.com/gta-6-hunger-games-secret/",
+     "https://www.dreadcentral.com/gaming/598519/gta-6-horror-easter-eggs-2/"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "Kenton's treasure dives in the Keys (first wreck about $1,400)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 6,
+    "score": 5.9,
+    "chosen": null,
+    "why_not": "low demand, one source for the payout",
+    "sources": [
+     "https://outputlag.com/guides/gta-6-make-money-fast/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Throw a painted egg from a radio tower for a secret cutscene",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 6,
+    "score": 6.3,
+    "chosen": null,
+    "why_not": "the tower location still differs between guides (fourth time rejected)",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-secret-cutscene-seven-minute-tower-easter-egg-795530-20261119"
+    ]
+   }
+  ]
  }
 ]
