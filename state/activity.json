@@ -1,5 +1,10 @@
 [
  {
+  "time": "2026-11-23T20:48:33+00:00",
+  "type": "info",
+  "text": "Ready to post by hand: “GTA 6 hides a PORTAL back to 2002 Vice City 🌴 (Tommy's shirt + bike)”"
+ },
+ {
   "time": "2026-11-23T20:48:06+00:00",
   "type": "info",
   "text": "Ready to post by hand: “GTA 6 has a HIDDEN first-person view 👀”"
@@ -772,10 +777,5 @@
   "time": "2026-11-18T19:15:53+00:00",
   "type": "published",
   "text": "Published “EagleGaming's first day in GTA 6 🔥 | أول يوم لـ EagleGaming في GTA 6 🔥 #shorts” (cut by the agent)"
- },
- {
-  "time": "2026-11-18T17:29:05+00:00",
-  "type": "error",
-  "text": "Publishing “Maherco's first day in GTA 6 🔥 | أول يوم لـ Maherco في GTA 6 🔥 #shorts” failed: could not reach Buffer: HTTPSConnectionPool(host='api.buffer.com', port=443): Read timed out. (read timeout=120)"
  }
 ]
