@@ -757,5 +757,153 @@
     "why_not": "Only one source, no exact wording"
    }
   ]
+ },
+ {
+  "date": "2026-11-23",
+  "wake_up": "10:23 UTC (m122–m125)",
+  "ideas": [
+   {
+    "idea": "Free Shrewsbury SM-69 sniper on the tower next to Nifty Threads in Key Lento ($1,850 at Ammu-Nation)",
+    "format": "SECRET FILE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.9,
+    "chosen": "m122-free-sniper",
+    "sources": [
+     "https://www.thegamer.com/grand-theft-auto-6-gta6-shrewsbury-sm-69-sniper-rifle-location-guide/",
+     "https://alcasthq.com/gta-6-sniper-rifle-sm-69/",
+     "https://www.gtabase.com/gta-6/articles/how-to-get-a-free-sniper-rifle-early-in-gta-6",
+     "https://www.gtaboom.com/gta-6-sm-69-sniper-location-504f",
+     "https://showgamer.com/en/guides/8066-gde-nayti-besplatnuyu-snayperskuyu-vintovku-shrewsbury-sm-69-v-gta-6",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-secret-sniper-location/"
+    ]
+   },
+   {
+    "idea": "Fast travel by taxi: Paradise Taxi, hail a cab or RydeMe; hold L2 + Triangle to skip the ride for $100",
+    "format": "HIDDEN FEATURE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.7,
+    "chosen": "m123-taxi-skip",
+    "sources": [
+     "https://www.gtabase.com/gta-6/articles/how-to-fast-travel-in-gta-6",
+     "https://dotesports.com/gta/guides/gta-6-fast-travel",
+     "https://beebom.com/gta-6-fast-travel-explained/",
+     "https://fandomwire.com/gta-6-fast-travel-rydeme-app-paradise-taxi/",
+     "https://www.noobfeed.com/articles/gta-6-fast-travel",
+     "https://www.keengamer.com/articles/guides/gta-vi-how-to-fast-travel-and-unlock-rydeme/",
+     "https://techwiser.com/gta-6-fast-travel/"
+    ]
+   },
+   {
+    "idea": "Train Focus (longer slow-mo) for $5 at Rodgers Ranch shooting range: Market Range Beginner, restart and repeat",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 7,
+    "score": 7.4,
+    "chosen": "m124-focus-training",
+    "sources": [
+     "https://www.gfinityesports.com/article/gta-6-how-to-increase-focus",
+     "https://metaforge.app/gta-6/how-to-increase-stats-in-gta-6-strength-cardio-and-focus",
+     "https://techwiser.com/gta-6-character-stats/",
+     "https://www.gamerfuzion.com/gta-6-stats-how-to-increase-strength-cardio-focus/",
+     "https://xboxplay.games/gta-6/gta-6-stats-guide-how-to-max-health-stamina-focus-77428",
+     "https://www.gtabase.com/side-missions/gta-6/shooting-range",
+     "https://www.gtabase.com/articles/gta-6/gta-6-focus-ability-explained-how-it-works-what-it-does"
+    ]
+   },
+   {
+    "idea": "Slim Jim instead of smashing the window: a broken window is damage and fences pay less; tracker cars are worth even less",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 7,
+    "score": 7.3,
+    "chosen": "m125-slim-jim",
+    "sources": [
+     "https://allthings.how/gta-6-how-to-steal-cars-with-a-slim-jim-and-get-away-clean/",
+     "https://www.6cheats.com/en/guides/gta-6-sell-stolen-car-waink-fence-trackers",
+     "https://stealthygaming.com/gta-6-how-to-steal-cars/",
+     "https://www.gtabase.com/articles/gta-6/gta-6-car-stealing-guide-how-to-steal-sell-keep-vehicles",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-money-guide-best-ways-to-make-money-early/",
+     "https://grandtheftauto6wiki.org/gameplay/lockpicking"
+    ]
+   },
+   {
+    "idea": "Maxing Jason and Lucia's relationship gives no perks (4 tiers, check with D-pad right)",
+    "format": "DON'T MISS",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 6,
+    "score": 7.0,
+    "why_not": "Confidence 6: tier names and the menu input differ between guides"
+   },
+   {
+    "idea": "Gym: Strength = max health, Cardio = stamina; one membership covers both; no sleep slows refill",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 6,
+    "score": 6.95,
+    "why_not": "Overlaps the Focus reel in the same batch; sleep and membership details rest on single guides"
+   },
+   {
+    "idea": "Store robbery: check the remaining cash stacks; safes pay more but cost time",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 6,
+    "score": 6.5,
+    "why_not": "Guides disagree on how safe codes work"
+   },
+   {
+    "idea": "Free body armor in some police-car trunks; armor and parachute share one slot",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.0,
+    "why_not": "Thin sourcing; a vest is not guaranteed"
+   },
+   {
+    "idea": "Malibu Club / Pole Position / Lance Vance callbacks",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 3,
+    "score": 5.75,
+    "why_not": "Unconfirmed fan sightings"
+   }
+  ]
  }
 ]

@@ -1,0 +1,337 @@
+{
+ "manual": true,
+ "episode": 122,
+ "kind": "secret",
+ "topic": "Free Shrewsbury SM-69 sniper rifle in Key Lento (Chapter 1): on the balcony of the tall gray tower next to Nifty Threads Islandwear, near Jason's house; over the chain-link gate, through the gray door at the base, up the ladder; costs $1,850 at Ammu-Nation",
+ "title": {
+  "en": "GTA 6's FREE sniper rifle is hiding near Jason's house 🎯",
+  "ar": "قناصة مجانية في GTA 6 مخفية قرب بيت جيسون 🎯"
+ },
+ "summary": "In Key Lento, near Jason's house, a tall gray tower stands next to the clothing store Nifty Threads Islandwear. Climb over the chain-link gate, go through the gray door at its base and take the ladder all the way up: the Shrewsbury SM-69 sniper rifle waits on the balcony at the top. At Ammu-Nation it costs $1,850.",
+ "summary_ar": "في كي لينتو، قرب بيت جيسون، فيه برج رمادي طويل جنب محل الملابس Nifty Threads. نط السور، ادخل من الباب الرمادي تحت، واطلع السلم لآخره: قناصة Shrewsbury SM-69 تنتظرك في البلكونة فوق. في Ammu-Nation سعرها 1,850 دولار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "GTA6Weapons",
+  "GTA6Tips",
+  "GTAVI",
+  "GTA6Guide",
+  "KeyLento",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.9
+ },
+ "sources": [
+  "https://www.thegamer.com/grand-theft-auto-6-gta6-shrewsbury-sm-69-sniper-rifle-location-guide/",
+  "https://alcasthq.com/gta-6-sniper-rifle-sm-69/",
+  "https://www.gtabase.com/gta-6/articles/how-to-get-a-free-sniper-rifle-early-in-gta-6",
+  "https://www.gtaboom.com/gta-6-sm-69-sniper-location-504f",
+  "https://showgamer.com/en/guides/8066-gde-nayti-besplatnuyu-snayperskuyu-vintovku-shrewsbury-sm-69-v-gta-6",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-secret-sniper-location/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 2.5,
+     "dur": 3.2,
+     "x": 700,
+     "slow": 1.4
+    }
+   ]
+  },
+  "house": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 0.5,
+     "dur": 5.0,
+     "x": 700,
+     "slow": 1.25
+    }
+   ]
+  },
+  "climb": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 8.0,
+     "dur": 4.5,
+     "x": 700,
+     "slow": 1.4
+    }
+   ]
+  },
+  "top": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 4.1,
+     "x": 1100
+    }
+   ]
+  },
+  "cash": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 12.0,
+     "dur": 3.8,
+     "x": 1100
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 8.0,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 98,
+  "seed": 122,
+  "drop": 4.46,
+  "break": 16.92,
+  "back": 18.74,
+  "outro": 24.76
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "duration": 28.6,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.46,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "cold",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "GTA 6 HIDES A FREE",
+    "title": [
+     "SNIPER"
+    ],
+    "color": "green",
+    "tag": "…near Jason's house.",
+    "tagAt": 2.58,
+    "ar": "قناصة مجانية مخفية… قرب بيت جيسون"
+   },
+   {
+    "type": "location",
+    "from": 4.46,
+    "to": 10.62,
+    "broll": {
+     "src": "house",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 6
+    },
+    "step": "01",
+    "label": "THE SPOT",
+    "place": "JASON'S HOUSE",
+    "target": "NIFTY THREADS",
+    "direction": "KEY LENTO",
+    "region": "TALL GRAY TOWER NEXT DOOR",
+    "ar": "في كي لينتو، جنب محل الملابس نيفتي ثريدز… فيه برج رمادي طويل"
+   },
+   {
+    "type": "list",
+    "from": 10.62,
+    "to": 16.92,
+    "broll": {
+     "src": "climb",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "chip": "ROUTE",
+    "label": "THE CLIMB",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "CHAIN-LINK GATE",
+      "status": "OVER",
+      "ok": true,
+      "at": 0.58,
+      "icon": "lock"
+     },
+     {
+      "text": "GRAY DOOR AT THE BASE",
+      "status": "IN",
+      "ok": true,
+      "at": 2.5,
+      "icon": "house"
+     },
+     {
+      "text": "THE LADDER",
+      "status": "TO THE TOP",
+      "ok": true,
+      "at": 4.2,
+      "icon": "ladder"
+     }
+    ],
+    "ar": "نط السور، ادخل من الباب الرمادي تحت، واطلع السلم لآخره"
+   },
+   {
+    "type": "reward",
+    "from": 16.92,
+    "to": 21.0,
+    "broll": {
+     "src": "top",
+     "grade": "night",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "rewardAt": 1.82,
+    "label": "FREE SNIPER",
+    "name": "Shrewsbury SM-69",
+    "tier": "BALCONY · TOP OF THE TOWER",
+    "ar": "فوق في البلكونة: قناصة شروزبري SM-69"
+   },
+   {
+    "type": "cash",
+    "from": 21.0,
+    "to": 24.76,
+    "captions": false,
+    "broll": {
+     "src": "cash",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "AMMU-NATION PRICE",
+    "amount": "$1,850",
+    "per": "YOURS FOR FREE",
+    "amountAt": 1.62,
+    "ar": "في أمو نيشن سعرها 1,850 دولار… وهنا ببلاش"
+   },
+   {
+    "type": "cta",
+    "from": 24.76,
+    "to": 28.6,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRETS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.5,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.4,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.7,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.56,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 11.2,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.12,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 14.82,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.86,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 18.74,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.94,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 22.62,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.7,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.78,
+    "volume": 0.5
+   }
+  ]
+ }
+}

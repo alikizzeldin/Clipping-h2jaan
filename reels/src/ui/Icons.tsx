@@ -63,6 +63,12 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
           <path d="M40 30 V48 M40 57 V58" {...common} />
         </>
       ) : null}
+      {name === 'ladder' ? (
+        <>
+          <path d="M24 8 V72 M56 8 V72" {...common} />
+          <path d="M24 20 H56 M24 34 H56 M24 48 H56 M24 62 H56" {...common} />
+        </>
+      ) : null}
       {name === 'cash' ? (
         <>
           <rect x="8" y="20" width="64" height="40" rx="6" {...common} />

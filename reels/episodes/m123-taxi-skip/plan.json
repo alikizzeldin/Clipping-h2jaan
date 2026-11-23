@@ -1,0 +1,302 @@
+{
+ "manual": true,
+ "episode": 123,
+ "kind": "hidden-feature",
+ "topic": "Fast travel hidden in taxis: call Paradise Taxi from Contacts, hail a cab or book RydeMe; pick any spot a car can reach; inside, hold L2 to focus the driver and press Triangle (Xbox: LT + Y) to skip the trip for an extra $100",
+ "title": {
+  "en": "GTA 6 HAS fast travel… it's hidden in a taxi 🚕",
+  "ar": "GTA 6 فيها تنقل سريع… مخفي في التاكسي 🚕"
+ },
+ "summary": "GTA 6 has no map teleport, but you can fast travel by taxi. Call Paradise Taxi from your phone contacts, hail a cab or book a ride in the RydeMe app, and pick any spot a car can reach. Once inside, hold L2 to focus on the driver and press Triangle to skip the trip (Xbox: LT and Y). The skip costs an extra $100.",
+ "summary_ar": "GTA 6 ما فيها انتقال من الخريطة، بس تقدر تتنقل بسرعة بالتاكسي. اتصل بـParadise Taxi من جهات الاتصال، أو أوقف تاكسي من الشارع، أو احجز من تطبيق RydeMe، واختار أي مكان توصله السيارة. وأنت داخل، اضغط مطولًا L2 على السواق واضغط مثلث عشان تتخطى المشوار (إكس بوكس: LT وY). التخطي يكلف 100 دولار زيادة.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6FastTravel",
+  "GTA6Guide",
+  "GTAVI",
+  "HiddenFeature",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.7
+ },
+ "sources": [
+  "https://www.gtabase.com/gta-6/articles/how-to-fast-travel-in-gta-6",
+  "https://dotesports.com/gta/guides/gta-6-fast-travel",
+  "https://beebom.com/gta-6-fast-travel-explained/",
+  "https://fandomwire.com/gta-6-fast-travel-rydeme-app-paradise-taxi/",
+  "https://www.noobfeed.com/articles/gta-6-fast-travel",
+  "https://www.keengamer.com/articles/guides/gta-vi-how-to-fast-travel-and-unlock-rydeme/",
+  "https://techwiser.com/gta-6-fast-travel/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 4.4,
+     "x": 1000
+    }
+   ]
+  },
+  "ride": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 8.95,
+     "x": 1000
+    }
+   ]
+  },
+  "skip": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 115.5,
+     "dur": 6.2,
+     "x": 1000
+    }
+   ]
+  },
+  "cash": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 8.0,
+     "dur": 2.8,
+     "x": 1100
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 3.9,
+     "x": 600
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 120,
+  "seed": 123,
+  "drop": 4.28,
+  "break": 13.2,
+  "back": 17.5,
+  "outro": 22.1
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "duration": 25.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.28,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "GTA 6 HAS",
+    "title": [
+     "FAST",
+     "TRAVEL"
+    ],
+    "color": "gold",
+    "tag": "…hidden in a taxi.",
+    "tagAt": 2.28,
+    "ar": "فيه تنقل سريع في اللعبة… مخفي في التاكسي"
+   },
+   {
+    "type": "list",
+    "from": 4.28,
+    "to": 13.2,
+    "broll": {
+     "src": "ride",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "chip": "3 WAYS",
+    "label": "GET A RIDE",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "PARADISE TAXI",
+      "status": "CALL",
+      "ok": true,
+      "at": 0.52,
+      "icon": "phone"
+     },
+     {
+      "text": "HAIL A CAB",
+      "status": "STREET",
+      "ok": true,
+      "at": 2.64,
+      "icon": "car"
+     },
+     {
+      "text": "RYDEME APP",
+      "status": "BOOK",
+      "ok": true,
+      "at": 5.54,
+      "icon": "phone"
+     }
+    ],
+    "ar": "اتصل بالتاكسي، أو أوقف واحد من الشارع، أو احجز من تطبيق رايد مي… وروح لأي مكان"
+   },
+   {
+    "type": "control",
+    "from": 13.2,
+    "to": 19.36,
+    "broll": {
+     "src": "skip",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "rank": "",
+    "label": "SKIP THE RIDE",
+    "title": "SKIP THE TRIP",
+    "button": "TRIANGLE",
+    "taps": 1,
+    "pressAt": 4.3,
+    "chip": "HOLD L2 FIRST",
+    "ar": "وأنت داخل: اضغط مطولًا L2 على السواق، وبعدها مثلث"
+   },
+   {
+    "type": "cash",
+    "from": 19.36,
+    "to": 22.1,
+    "captions": false,
+    "broll": {
+     "src": "cash",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "THE SKIP COSTS",
+    "amount": "+$100",
+    "per": "AND YOU'RE THERE",
+    "amountAt": 1.5,
+    "ar": "التخطي يكلف 100 دولار زيادة"
+   },
+   {
+    "type": "cta",
+    "from": 22.1,
+    "to": 25.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE HIDDEN FEATURES SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.3,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.22,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.76,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.9,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 9.8,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.14,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.7,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.5,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.3,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 20.86,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.04,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.12,
+    "volume": 0.5
+   }
+  ]
+ }
+}

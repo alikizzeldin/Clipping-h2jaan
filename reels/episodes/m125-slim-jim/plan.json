@@ -1,0 +1,363 @@
+{
+ "manual": true,
+ "episode": 125,
+ "kind": "money",
+ "topic": "Stealing cars: Slim Jim vs Smash Window; a broken window counts as damage and fences pay less for damaged cars; the Slim Jim takes a few seconds longer but leaves the car intact; cars with a tracker are worth even less",
+ "title": {
+  "en": "Stop smashing car windows in GTA 6… it's costing you 💸",
+  "ar": "وقف تكسير شبابيك السيارات في GTA 6… تخسر فلوس 💸"
+ },
+ "summary": "When you steal a car in GTA 6 you get two options: Slim Jim or Smash Window. Smashing is faster, but a broken window counts as damage, and fences pay less for damaged cars. The Slim Jim takes a few seconds longer but leaves the car intact. And skip cars with a tracker: they're worth even less.",
+ "summary_ar": "لما تسرق سيارة في GTA 6 عندك خيارين: Slim Jim أو تكسير الشباك. التكسير أسرع، بس الشباك المكسور يُحسب ضرر، والمشترين يدفعون أقل للسيارة المضروبة. الـSlim Jim ياخذ ثواني زيادة بس السيارة تظل سليمة. وابتعد عن السيارات اللي فيها جهاز تتبع: قيمتها أقل بعد.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Tips",
+  "GTA6Cars",
+  "GTAVI",
+  "GTA6Guide",
+  "SlimJim",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 7,
+  "confidence": 7,
+  "score": 7.3
+ },
+ "sources": [
+  "https://allthings.how/gta-6-how-to-steal-cars-with-a-slim-jim-and-get-away-clean/",
+  "https://www.6cheats.com/en/guides/gta-6-sell-stolen-car-waink-fence-trackers",
+  "https://stealthygaming.com/gta-6-how-to-steal-cars/",
+  "https://www.gtabase.com/articles/gta-6/gta-6-car-stealing-guide-how-to-steal-sell-keep-vehicles",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-money-guide-best-ways-to-make-money-early/",
+  "https://grandtheftauto6wiki.org/gameplay/lockpicking"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 4.7,
+     "x": 1000
+    }
+   ]
+  },
+  "prompt": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 38.1,
+     "dur": 2.0,
+     "x": 700,
+     "slow": 1.5
+    },
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 40.1,
+     "dur": 1.9,
+     "x": 700
+    }
+   ]
+  },
+  "pick": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 41.0,
+     "dur": 5.5,
+     "x": 700,
+     "slow": 2.0
+    }
+   ]
+  },
+  "tracker": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 12.5,
+     "dur": 3.4,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 12.0,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "stills": {
+  "options.png": {
+   "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+   "channel": "affiwillcarry",
+   "at": 39.25,
+   "crop": [
+    800,
+    450,
+    600,
+    450
+   ],
+   "width": 960
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 122,
+  "seed": 125,
+  "drop": 4.64,
+  "break": 20.46,
+  "back": 21.48,
+  "outro": 23.78
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 27.5,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.64,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "STOP SMASHING CAR",
+    "title": [
+     "WINDOWS"
+    ],
+    "color": "red",
+    "tag": "…it costs money.",
+    "tagAt": 3.2,
+    "ar": "وقف تكسير شبابيك السيارات… تخسر فلوس"
+   },
+   {
+    "type": "proof",
+    "from": 4.64,
+    "to": 9.52,
+    "broll": {
+     "src": "prompt",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "step": "01",
+    "label": "TWO OPTIONS",
+    "proof": {
+     "src": "options.png",
+     "at": 0.2,
+     "caption": "REAL IN-GAME PROMPT",
+     "highlights": [
+      {
+       "x": 34,
+       "y": 56,
+       "w": 34,
+       "h": 9,
+       "color": "green"
+      },
+      {
+       "x": 34,
+       "y": 65,
+       "w": 36,
+       "h": 10,
+       "color": "red"
+      }
+     ]
+    },
+    "title": "SLIM JIM OR SMASH",
+    "sub": "two ways into a locked car",
+    "titleAt": 2.68,
+    "ar": "لما تسرق سيارة عندك خيارين: سليم جيم أو تكسير الشباك"
+   },
+   {
+    "type": "compare",
+    "from": 9.52,
+    "to": 20.46,
+    "broll": {
+     "src": "pick",
+     "grade": "warm",
+     "dim": 0.55,
+     "blur": 7
+    },
+    "step": "02",
+    "label": "AT THE FENCE",
+    "bars": [
+     {
+      "label": "SMASH",
+      "sub": "FASTER · DAMAGED",
+      "value": 55,
+      "display": "LESS $",
+      "at": 4.4,
+      "color": "red"
+     },
+     {
+      "label": "SLIM JIM",
+      "sub": "INTACT",
+      "value": 100,
+      "display": "MORE $",
+      "at": 9.9,
+      "color": "green"
+     }
+    ],
+    "ar": "الشباك المكسور يُحسب ضرر… والمشترين يدفعون أقل للسيارة المضروبة"
+   },
+   {
+    "type": "reveal",
+    "from": 20.46,
+    "to": 23.78,
+    "captions": false,
+    "broll": {
+     "src": "tracker",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "pre": "TRACKERS?",
+    "slamAt": 1.02,
+    "color": "red",
+    "lines": [
+     {
+      "text": "TRACKER",
+      "at": 1.02,
+      "color": "red",
+      "size": 190
+     },
+     {
+      "text": "= EVEN LESS",
+      "at": 2.18,
+      "color": "gold",
+      "size": 140
+     }
+    ],
+    "ar": "والسيارات اللي فيها جهاز تتبع… قيمتها أقل بعد"
+   },
+   {
+    "type": "cta",
+    "from": 23.78,
+    "to": 27.5,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE MONEY TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.3,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 3.2,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.58,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 5.0,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.32,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.02,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.46,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 13.92,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.42,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.4,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.48,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 21.5,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.64,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.72,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.8,
+    "volume": 0.5
+   }
+  ]
+ }
+}
