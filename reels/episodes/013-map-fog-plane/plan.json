@@ -1,0 +1,480 @@
+{
+ "episode": 13,
+ "kind": "feature",
+ "topic": "Clear the map fog fast: after Gone Fishing take the free crop duster (Bottcher Duster) from the small airstrip off Boundary Road near Jason's house (no license needed), fly south to north to unfog each area, land and grab another plane when fuel runs low, and save Mile Zero for last",
+ "title": {
+  "en": "Clear GTA 6's map fog in MINUTES ✈️ (free plane)",
+  "ar": "اكشف خريطة GTA 6 بدقايق ✈️"
+ },
+ "summary": "Clear GTA 6's map fog in minutes with a free plane. After the mission Gone Fishing, find a small airstrip off Boundary Road near Jason's house: a crop duster waits there, no license needed. Fly it from south to north and every area you pass gets unfogged. Low on fuel? Land and grab another, or you'll go down. And save the Mile Zero military base for last.",
+ "summary_ar": "اكشف ضباب خريطة GTA 6 بدقايق بطيارة مجانية. بعد مهمة Gone Fishing روح مدرج صغير على Boundary Road قريب من بيت جيسون: فيه طيارة رش مبيدات، وما تحتاج رخصة. طير فيها من الجنوب للشمال وكل منطقة تمر فوقها تنكشف. الوقود قل؟ انزل وخذ طيارة ثانية وإلا بتطيح. وخلّ قاعدة Mile Zero العسكرية آخر شي.",
+ "keywords": [
+  "GTA6",
+  "GTA6Map",
+  "GTA6Tips",
+  "GTA6Plane",
+  "GTAVI",
+  "BottcherDuster",
+  "Leonida",
+  "GTA6Secrets",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 7,
+  "confidence": 8,
+  "score": 7.9
+ },
+ "sources": [
+  "https://www.engadget.com/2323145/full-gta-6-map-reveal-plane-trick/",
+  "https://www.powerpyx.com/gta-6-how-to-unfog-the-map-fast-best-plane/",
+  "https://www.pcgamer.com/games/grand-theft-auto/gta-6-first-plane-and-helicopter/",
+  "https://beebom.com/how-to-get-plane-in-gta-6/",
+  "https://www.theclick.gg/gta-6-how-to-unfog-the-map/",
+  "https://egamers.io/how-to-clear-the-gta-6-map-fog-fast-fly-a-crop-duster-across-leonida/",
+  "https://gamesfuze.com/locations/best-early-plane-location-in-gta-6-unlock-map-fast/",
+  "https://stealthygaming.com/gta-6-plane-jet/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 15.4,
+     "dur": 3.2,
+     "x": 700
+    }
+   ]
+  },
+  "card": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 57.0,
+     "dur": 3.9,
+     "x": 760
+    }
+   ]
+  },
+  "coast": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 18.6,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  },
+  "duster": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 1.0,
+     "dur": 3.2,
+     "x": 700
+    }
+   ]
+  },
+  "aerial": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 9.6,
+     "dur": 4.6,
+     "x": 700
+    }
+   ]
+  },
+  "stunt": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7b/clip_01M7VRW5RA71X4HP9C6P4KQ7KT/playlist.m3u8",
+     "channel": "paymoneywubby",
+     "start": 0.6,
+     "dur": 3.6,
+     "x": 650
+    }
+   ]
+  },
+  "base": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 4.2,
+     "dur": 3.2,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {
+  "duster.png": {
+   "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+   "at": 23.0,
+   "crop": [
+    1320,
+    560,
+    100,
+    470
+   ],
+   "width": 1040
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 108,
+  "seed": 127,
+  "drop": 3.12,
+  "break": 22.08,
+  "back": 22.8,
+  "outro": 25.28
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "episode": 13,
+  "duration": 28.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.12,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.15,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "PRO TIP",
+    "kicker": "CLEAR GTA 6'S",
+    "title": [
+     "MAP FOG",
+     "IN MINUTES"
+    ],
+    "color": "green",
+    "tag": "…with a free plane.",
+    "tagAt": 2.4,
+    "ar": "اكشف خريطة GTA 6 بدقايق… بطيارة مجانية"
+   },
+   {
+    "type": "proof",
+    "from": 3.12,
+    "to": 6.96,
+    "broll": {
+     "src": "card",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "step": "01",
+    "label": "THE PLANE",
+    "proof": {
+     "src": "duster.png",
+     "at": 0.1,
+     "caption": "REAL IN-GAME FOOTAGE",
+     "highlights": [
+      {
+       "x": 1,
+       "y": 52,
+       "w": 15,
+       "h": 13,
+       "color": "gold"
+      }
+     ]
+    },
+    "title": "FREE PLANE",
+    "sub": "after the mission Gone Fishing",
+    "titleAt": 0.72,
+    "ar": "كل اللي تحتاجه طيارة مجانية… بعد مهمة Gone Fishing"
+   },
+   {
+    "type": "location",
+    "from": 6.96,
+    "to": 10.8,
+    "broll": {
+     "src": "coast",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "02",
+    "label": "THE AIRSTRIP",
+    "place": "JASON'S HOUSE",
+    "target": "AIRSTRIP",
+    "direction": "FLY",
+    "region": "BOUNDARY ROAD · MARIANA COUNTY",
+    "ar": "روح مدرج صغير على Boundary Road قريب من بيت جيسون"
+   },
+   {
+    "type": "trigger",
+    "from": 10.8,
+    "to": 13.92,
+    "broll": {
+     "src": "duster",
+     "grade": "warm",
+     "dim": 0.05,
+     "zoom": [
+      1.03,
+      1.12
+     ]
+    },
+    "step": "03",
+    "label": "THE DUSTER",
+    "title": "A CROP DUSTER",
+    "sub": "no license needed",
+    "target": {
+     "x": 520,
+     "y": 900,
+     "w": 640,
+     "h": 480
+    },
+    "contact": "DUSTER",
+    "tagText": "NO LICENSE NEEDED",
+    "ar": "فيه طيارة رش مبيدات… وما تحتاج رخصة"
+   },
+   {
+    "type": "scan",
+    "from": 13.92,
+    "to": 18.48,
+    "broll": {
+     "src": "aerial",
+     "grade": "warm",
+     "dim": 0.1,
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "04",
+    "label": "THE ROUTE",
+    "target": {
+     "x": 540,
+     "y": 900,
+     "w": 800,
+     "h": 760
+    },
+    "checks": [
+     {
+      "text": "FLY SOUTH → NORTH",
+      "at": 0.72
+     },
+     {
+      "text": "EVERY AREA YOU PASS UNFOGS",
+      "at": 3.44
+     }
+    ],
+    "hud": "● REVEALING THE MAP…",
+    "ar": "طير من الجنوب للشمال… وكل منطقة تنكشف"
+   },
+   {
+    "type": "trigger",
+    "from": 18.48,
+    "to": 22.08,
+    "broll": {
+     "src": "stunt",
+     "grade": "cold",
+     "dim": 0.1,
+     "zoom": [
+      1.03,
+      1.12
+     ]
+    },
+    "step": "05",
+    "label": "FUEL",
+    "title": "LOW ON FUEL?",
+    "sub": "land and swap planes",
+    "target": {
+     "x": 540,
+     "y": 1000,
+     "w": 620,
+     "h": 460
+    },
+    "contact": "LOW FUEL",
+    "tagText": "LAND · GRAB ANOTHER PLANE",
+    "ar": "الوقود قل؟ انزل وخذ طيارة ثانية… وإلا بتطيح"
+   },
+   {
+    "type": "reveal",
+    "from": 22.08,
+    "to": 25.28,
+    "captions": false,
+    "broll": {
+     "src": "base",
+     "grade": "night",
+     "dim": 0.2,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "ONE WARNING…",
+    "slamAt": 0.7,
+    "color": "red",
+    "lines": [
+     {
+      "text": "MILE ZERO",
+      "at": 0.72,
+      "color": "red",
+      "size": 200
+     },
+     {
+      "text": "FOR LAST",
+      "at": 2.16,
+      "size": 180
+     }
+    ],
+    "ar": "وخلّ قاعدة Mile Zero العسكرية آخر شي"
+   },
+   {
+    "type": "cta",
+    "from": 25.28,
+    "to": 28.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE TRICKS TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.4,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.06,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 3.84,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.9,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 9.2,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.74,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 12.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.86,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 14.1,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.64,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.36,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.42,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 18.9,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.02,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.8,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 22.84,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.24,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.21,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.3,
+    "volume": 0.5
+   }
+  ]
+ }
+}

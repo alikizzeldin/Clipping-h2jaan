@@ -767,5 +767,111 @@
     "score": 5.9
    }
   ]
+ },
+ {
+  "date": "2026-11-23",
+  "wake_up": "08:41 UTC",
+  "ideas": [
+   {
+    "idea": "Clear the map fog in minutes: take the free crop duster (Bottcher Duster) from the airstrip off Boundary Road near Jason's house after Gone Fishing (no license), fly south to north; land for a fresh plane when fuel runs low; leave Mile Zero for last",
+    "format": "HIDDEN FEATURE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 8,
+    "chosen": "013-map-fog-plane",
+    "sources": [
+     "https://www.engadget.com/2323145/full-gta-6-map-reveal-plane-trick/",
+     "https://www.powerpyx.com/gta-6-how-to-unfog-the-map-fast-best-plane/",
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6-first-plane-and-helicopter/",
+     "https://beebom.com/how-to-get-plane-in-gta-6/",
+     "https://www.theclick.gg/gta-6-how-to-unfog-the-map/",
+     "https://egamers.io/how-to-clear-the-gta-6-map-fog-fast-fly-a-crop-duster-across-leonida/",
+     "https://gamesfuze.com/locations/best-early-plane-location-in-gta-6-unlock-map-fast/",
+     "https://stealthygaming.com/gta-6-plane-jet/"
+    ],
+    "note": "Left out: the early helicopter (one source), whether the reveal is temporary (guides disagree), the map trophy and the exact wanted level at Mile Zero.",
+    "score": 7.9
+   },
+   {
+    "idea": "Mount Kalaga firewatch tower: code on the tower opens the shed below; a logbook about a mysterious creature",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 5,
+    "why_not": "the code differs between guides (69185 vs 691865) and the payoff is only a logbook",
+    "sources": [
+     "https://www.sportskeeda.com/esports/all-secret-locations-gta-6",
+     "https://techwiser.com/gta-6-doors-codes-locations/"
+    ],
+    "score": 6.3
+   },
+   {
+    "idea": "Five underwater research facilities run by Burg Industries (meteorite messages)",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 3,
+    "why_not": "one written source only",
+    "sources": [
+     "https://www.sportskeeda.com/gta/all-hidden-underwater-facilities-gta-6"
+    ],
+    "score": 6.7
+   },
+   {
+    "idea": "GTA 6 hacker Arion Kurtaj sentencing at Woolwich Crown Court today",
+    "format": "GTA 6 NEWS",
+    "demand": 7,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 9,
+    "visual": 3,
+    "confidence": 5,
+    "why_not": "no outcome reported yet",
+    "sources": [
+     "https://notebookcheck.net/Hacker-behind-2022-GTA-6-leaks-pleads-guilty-sentencing-set-for-November-23.1452228.0.html",
+     "https://www.tweaktown.com/news/114727/gta-6-hacker-pleads-guilty-to-all-charges-sentencing-set-days-after-launch/index.html"
+    ],
+    "score": 5.7
+   },
+   {
+    "idea": "How many endings: a choice before the final mission, and the game sends you back to it",
+    "format": "DON'T MISS",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 3,
+    "confidence": 4,
+    "why_not": "guides disagree on the endings; heavy spoilers",
+    "sources": [
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-endings-choices-and-consequences/"
+    ],
+    "score": 6.1
+   },
+   {
+    "idea": "Early Maverick helicopter on a private dock near Mile Zero",
+    "format": "SECRET FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 4,
+    "why_not": "one guide only",
+    "sources": [
+     "https://gamesfuze.com/guides/gta-6-how-to-get-a-helicopter-early/"
+    ],
+    "score": 6.4
+   }
+  ]
  }
 ]
