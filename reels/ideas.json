@@ -977,5 +977,111 @@
     "score": 6.8
    }
   ]
+ },
+ {
+  "date": "2026-11-23",
+  "wake_up": "18:41 UTC",
+  "ideas": [
+   {
+    "idea": "NEWS (Nov 23): first post-launch update 01.002.002 (PS5) / 1.0.2.2 (Xbox) with 7 fixes: missing story phone calls, crashes, autosave, weather stuck, can't lose wanted level, gym deadlift bar, partners not handing over bags for fences",
+    "format": "GTA 6 NEWS",
+    "demand": 9,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 10,
+    "visual": 5,
+    "confidence": 9,
+    "chosen": "015-first-patch",
+    "sources": [
+     "https://www.vice.com/en/article/gta-6-update-01-002-002-patch-notes/",
+     "https://www.vice.com/en/article/gta-6-patch-notes-update-phone-call-fix/",
+     "https://gamerant.com/new-gta-6-update-patch-notes-november-23-2026/",
+     "https://www.pushsquare.com/news/2026/11/first-gta-6-ps5-patch-live-now-get-all-the-details-here",
+     "https://www.destructoid.com/gta-6-patch-notes-nov-23-launch/",
+     "https://www.gtabase.com/gta-6/articles/gta-6-update-01-002-002-patch-notes",
+     "https://rockstarintel.com/new-gta-vi-update-01-002-002-patch-notes-released/"
+    ],
+    "note": "Left out: download sizes (sources differ slightly), whether missed calls arrive on affected saves (not stated), and claims about money glitches or the Xbox 60 FPS trick (one source).",
+    "score": 7.7
+   },
+   {
+    "idea": "Hidden 'Hunger Games' event: kidnapped, locked up, released to be hunted (Manhunt nod)",
+    "format": "SECRET FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 6,
+    "why_not": "trigger unknown and details (place, hunters) differ between reports",
+    "sources": [
+     "https://www.gamebyte.com/gta-6-hunger-games-secret/",
+     "https://www.dreadcentral.com/gaming/598519/gta-6-horror-easter-eggs-2/"
+    ],
+    "score": 7.2
+   },
+   {
+    "idea": "Confirmed side activities: mini-golf, billiards, scuba, base jumping, air boats, zoos",
+    "format": "HIDDEN FEATURE",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 4,
+    "fresh": 4,
+    "visual": 5,
+    "confidence": 6,
+    "why_not": "lists mix pre-release reports; no payoff",
+    "sources": [
+     "https://insider-gaming.com/new-gta-6-activities-confirmed/",
+     "https://www.gfinityesports.com/article/gta-6-activities-guide-all-confirmed-mini-games-and-sports"
+    ],
+    "score": 5.1
+   },
+   {
+    "idea": "Veteran Hunted (Bret) hunting side job",
+    "format": "SECRET FILE",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 7,
+    "why_not": "a normal stranger job; lower interest",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-veteran-hunted-meet-bret-walkthrough/",
+     "https://www.gtabase.com/gta-6/strangers/veteran-hunted"
+    ],
+    "score": 5.8
+   },
+   {
+    "idea": "Leonida map in a Selfridges window shows Southwind, Pelican Valley, Lummox County",
+    "format": "GTA 6 NEWS",
+    "demand": 5,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 3,
+    "visual": 4,
+    "confidence": 6,
+    "why_not": "old pre-release story",
+    "sources": [
+     "https://gamerant.com/gta-6-map-leonida-map-leak/"
+    ],
+    "score": 4.5
+   },
+   {
+    "idea": "Gold gun icons mark unique weapon variants",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 8,
+    "why_not": "still under the gate",
+    "sources": [
+     "https://www.g2a.com/news/gta-6-news/gta-6-full-weapons-guide/"
+    ],
+    "score": 6.8
+   }
+  ]
  }
 ]
