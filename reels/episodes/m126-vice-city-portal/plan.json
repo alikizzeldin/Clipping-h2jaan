@@ -1,0 +1,497 @@
+{
+ "manual": true,
+ "episode": 126,
+ "kind": "easter-egg",
+ "topic": "Vice City portal Easter egg (solved Nov 2026 by YouTuber Memeio): in Key Lento climb the Badger radio tower and flip the power switch (Malibu Club logo on the TV); visit all 12 LPL substations without fast travel; their letters spell the old Vice City cheat LIFE IS PASSING ME BY; between 7 PM and 6 AM go to Reactor Two at Turtle Head power station; a portal leads to the PS2-era Malibu Club; reward Tommy Vercetti's shirt and bike",
+ "title": {
+  "en": "GTA 6 hides a PORTAL back to 2002 Vice City 🌴 (Tommy's shirt + bike)",
+  "ar": "في GTA 6 بوابة سرية لفايس سيتي 2002 🌴 (قميص تومي ودبابه)"
+ },
+ "summary": "A player solved GTA 6's biggest Easter egg yet: climb the radio tower in Key Lento and flip the power switch, then visit all 12 LPL substations without fast travel. Their letters spell the old Vice City cheat LIFE IS PASSING ME BY. Between 7 PM and 6 AM, go to Reactor Two at Turtle Head power station: a portal opens into the 2002 Malibu Club, and you leave with Tommy Vercetti's shirt and bike.",
+ "summary_ar": "لاعب حل أكبر إيستر إيق في GTA 6: اطلع برج الراديو في كي لينتو وشغّل مفتاح الكهرباء، وبعدها زور 12 محطة كهرباء LPL بدون تنقل سريع. حروفها تكتب كود فايس سيتي القديم LIFE IS PASSING ME BY. بين 7 المسا و6 الصبح روح للمفاعل رقم 2 في محطة تيرتل هيد: تنفتح بوابة لنادي ماليبو من 2002، وتطلع بقميص تومي فيرسيتي ودبابه.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEgg",
+  "ViceCity",
+  "TommyVercetti",
+  "GTAVI",
+  "GTA6Secrets",
+  "MalibuClub",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 10,
+  "payoff": 9,
+  "retention": 9,
+  "fresh": 10,
+  "visual": 5,
+  "confidence": 8,
+  "score": 8.8
+ },
+ "sources": [
+  "https://kotaku.com/gta-6-contains-a-very-hidden-secret-that-teleports-you-back-in-time-to-vice-city-on-the-ps2-2000759500",
+  "https://www.forbes.com/sites/paultassi/2026/11/23/a-gta-6-player-finds-tommy-vercettis-shirt-portal-to-original-vice-city/",
+  "https://www.gamespot.com/articles/how-to-get-tommy-vercettis-shirt-and-bike-in-gta-6/",
+  "https://www.pcgamesn.com/grand-theft-auto-vi/tommy-vercetti-easter-egg",
+  "https://beebom.com/gta-6-old-vice-city-portal-easter-egg/",
+  "https://insider-gaming.com/tommy-vercetti-gta-6-easter-egg/",
+  "https://dotesports.com/gta/news/gta-6-portal-vice-city-easter-egg-tommy-vercetti-time-travel",
+  "https://www.vice.com/en/article/gta-6-tommy-vercetti-shirt-vice-city-easter-egg/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 8.0,
+     "dur": 4.55,
+     "x": 1100
+    }
+   ]
+  },
+  "tower": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 6.5,
+     "dur": 4.15,
+     "x": 800
+    }
+   ]
+  },
+  "subs": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 4.0,
+     "dur": 4.4,
+     "x": 700
+    }
+   ]
+  },
+  "spell": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 12.0,
+     "dur": 3.8,
+     "x": 1100
+    }
+   ]
+  },
+  "night": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 46.6,
+     "dur": 3.5,
+     "x": 900
+    }
+   ]
+  },
+  "portal": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 26.0,
+     "dur": 3.3,
+     "x": 1312
+    }
+   ]
+  },
+  "bike": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 2.7,
+     "x": 1000
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 20.0,
+     "dur": 3.8,
+     "x": 800
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 100,
+  "seed": 126,
+  "drop": 4.52,
+  "break": 12.98,
+  "back": 14.98,
+  "outro": 26.14
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 29.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.52,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6 HIDES A",
+    "title": [
+     "PORTAL"
+    ],
+    "color": "pink",
+    "tag": "…to 2002 Vice City.",
+    "tagAt": 2.42,
+    "ar": "بوابة سرية في اللعبة… ترجعك لفايس سيتي 2002"
+   },
+   {
+    "type": "list",
+    "from": 4.52,
+    "to": 8.62,
+    "broll": {
+     "src": "tower",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "chip": "KEY LENTO",
+    "label": "STEP 1",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "CLIMB THE RADIO TOWER",
+      "status": "KEY LENTO",
+      "ok": true,
+      "at": 1.12,
+      "icon": "ladder"
+     },
+     {
+      "text": "POWER SWITCH",
+      "status": "FLIP",
+      "ok": true,
+      "at": 2.56,
+      "icon": "alert"
+     }
+    ],
+    "ar": "في كي لينتو اطلع برج الراديو وشغّل مفتاح الكهرباء"
+   },
+   {
+    "type": "list",
+    "from": 8.62,
+    "to": 12.98,
+    "broll": {
+     "src": "subs",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "12 STOPS",
+    "label": "LPL SUBSTATIONS",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "ALL 12 SUBSTATIONS",
+      "status": "VISIT",
+      "ok": true,
+      "at": 0.76,
+      "icon": "house"
+     },
+     {
+      "text": "FAST TRAVEL",
+      "status": "NO",
+      "ok": false,
+      "at": 3.02,
+      "icon": "car"
+     }
+    ],
+    "ar": "زور كل محطات الكهرباء الـ12… بدون تنقل سريع"
+   },
+   {
+    "type": "reveal",
+    "from": 12.98,
+    "to": 16.76,
+    "captions": false,
+    "broll": {
+     "src": "spell",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "THE LETTERS…",
+    "slamAt": 2.0,
+    "color": "pink",
+    "lines": [
+     {
+      "text": "LIFE IS",
+      "at": 2.0,
+      "size": 150
+     },
+     {
+      "text": "PASSING",
+      "at": 2.46,
+      "color": "pink",
+      "size": 160
+     },
+     {
+      "text": "ME BY",
+      "at": 3.08,
+      "color": "gold",
+      "size": 160
+     }
+    ],
+    "ar": "حروفها تكتب كود فايس سيتي القديم"
+   },
+   {
+    "type": "time",
+    "from": 16.76,
+    "to": 20.24,
+    "broll": {
+     "src": "night",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 6
+    },
+    "step": "02",
+    "label": "AT NIGHT",
+    "times": [
+     "6:58",
+     "6:59",
+     "7:00"
+    ],
+    "suffix": "PM",
+    "note": "REACTOR 2 · UNTIL 6 AM",
+    "ar": "بالليل: المفاعل 2، تيرتل هيد"
+   },
+   {
+    "type": "reveal",
+    "from": 20.24,
+    "to": 23.52,
+    "captions": false,
+    "broll": {
+     "src": "portal",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 4,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "pre": "A PORTAL…",
+    "slamAt": 1.86,
+    "color": "pink",
+    "lines": [
+     {
+      "text": "MALIBU CLUB",
+      "at": 1.86,
+      "color": "pink",
+      "size": 150
+     },
+     {
+      "text": "2002",
+      "at": 2.3,
+      "color": "gold",
+      "size": 190
+     }
+    ],
+    "ar": "تنفتح بوابة… لنادي ماليبو من 2002"
+   },
+   {
+    "type": "reward",
+    "from": 23.52,
+    "to": 26.14,
+    "broll": {
+     "src": "bike",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "rewardAt": 0.4,
+    "label": "VICE CITY REWARD",
+    "name": "Tommy's shirt + bike",
+    "tier": "TOMMY VERCETTI",
+    "ar": "وتطلع بقميص تومي فيرسيتي ودبابه"
+   },
+   {
+    "type": "cta",
+    "from": 26.14,
+    "to": 29.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.4,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.46,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.6,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.04,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.56,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 9.36,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 11.62,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.92,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.98,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 15.0,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 15.44,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.06,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.7,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.4,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.0,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 18.6,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.18,
+    "volume": 0.5
+   },
+   {
+    "src": "ufo.wav",
+    "at": 21.0,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.1,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 22.12,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.46,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 23.92,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 26.08,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 26.16,
+    "volume": 0.5
+   }
+  ]
+ }
+}

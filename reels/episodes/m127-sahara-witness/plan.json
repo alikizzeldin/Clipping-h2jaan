@@ -1,0 +1,329 @@
+{
+ "manual": true,
+ "episode": 127,
+ "kind": "money",
+ "topic": "Random encounter: a Sahara delivery truck hits a sedan in front of you and drives off; the driver decides to sue Sahara and asks you to testify; agree and he wires you a few thousand dollars, or blackmail him",
+ "title": {
+  "en": "GTA 6 pays you for WATCHING a crash 💸 (secret encounter)",
+  "ar": "GTA 6 تدفع لك لأنك شفت حادث 💸"
+ },
+ "summary": "While driving around Leonida, watch for a Sahara delivery truck: it smashes into a sedan right in front of you and drives off. Talk to the driver: he decides to sue Sahara and asks you to be his witness. Agree to testify and he wires you a few thousand dollars, or try to blackmail him instead.",
+ "summary_ar": "وأنت تسوق في ليونيدا، انتبه لشاحنة توصيل Sahara: تصدم سيدان قدامك وتهرب. كلّم السواق: يقرر يرفع قضية على Sahara ويطلب منك تكون شاهد. وافق وتشهد ويحوّل لك كم ألف دولار، أو ابتزّه بدالها.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Secrets",
+  "GTA6Tips",
+  "GTAVI",
+  "RandomEvent",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 9,
+  "visual": 4,
+  "confidence": 7,
+  "score": 7.6
+ },
+ "sources": [
+  "https://www.tweaktown.com/news/114772/gta-6-npc-gets-hit-by-car-calls-lawyer-and-player-gets-a-payout-for-being-a-witness/index.html",
+  "https://www.ladbible.com/entertainment/gaming/gta-6-npc-interactions-107298-20261119",
+  "https://www.vicecityhustle.com/guides/gta-6-random-events",
+  "https://gtaviceguides.com/guides/gta-6-sahara-lawsuit-burning-car-event/",
+  "https://www.youtube.com/watch?v=Jud24uzPwck"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 3.8,
+     "x": 1000
+    }
+   ]
+  },
+  "traffic": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 7.65,
+     "x": 1000
+    }
+   ]
+  },
+  "driver": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 12.5,
+     "dur": 5.2,
+     "x": 700
+    }
+   ]
+  },
+  "choice": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 12.0,
+     "dur": 6.2,
+     "x": 1100
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 3.9,
+     "x": 600
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 122,
+  "seed": 127,
+  "drop": 3.72,
+  "break": 11.3,
+  "back": 13.42,
+  "outro": 22.6
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 26.4,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.72,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "GTA 6 PAYS YOU FOR",
+    "title": [
+     "A CRASH"
+    ],
+    "color": "gold",
+    "ar": "اللعبة تدفع لك… بس لأنك شفت حادث"
+   },
+   {
+    "type": "list",
+    "from": 3.72,
+    "to": 11.3,
+    "broll": {
+     "src": "traffic",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "chip": "RANDOM",
+    "label": "THE CRASH",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "SAHARA TRUCK",
+      "status": "HIT & RUN",
+      "ok": false,
+      "alert": true,
+      "at": 2.1,
+      "icon": "car"
+     },
+     {
+      "text": "A SEDAN",
+      "status": "WRECKED",
+      "ok": false,
+      "alert": true,
+      "at": 4.62,
+      "icon": "car"
+     }
+    ],
+    "ar": "شاحنة توصيل Sahara تصدم سيدان قدامك… وتهرب"
+   },
+   {
+    "type": "reveal",
+    "from": 11.3,
+    "to": 16.44,
+    "captions": false,
+    "broll": {
+     "src": "driver",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "pre": "THE DRIVER…",
+    "slamAt": 2.12,
+    "color": "red",
+    "lines": [
+     {
+      "text": "SUES SAHARA",
+      "at": 2.12,
+      "color": "red",
+      "size": 150
+     },
+     {
+      "text": "NEEDS A WITNESS",
+      "at": 4.0,
+      "color": "gold",
+      "size": 110
+     }
+    ],
+    "ar": "السواق يرفع قضية على الشركة… ويبيك شاهد"
+   },
+   {
+    "type": "list",
+    "from": 16.44,
+    "to": 22.6,
+    "broll": {
+     "src": "choice",
+     "grade": "green",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "chip": "CHOICE",
+    "label": "YOUR CALL",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "TESTIFY",
+      "status": "$ FEW THOUSAND",
+      "ok": true,
+      "at": 0.34,
+      "icon": "cash"
+     },
+     {
+      "text": "BLACKMAIL HIM",
+      "status": "YOUR CALL",
+      "ok": false,
+      "alert": true,
+      "at": 3.98,
+      "icon": "alert"
+     }
+    ],
+    "ar": "اشهد ويحوّل لك كم ألف دولار… أو ابتزّه، القرار لك"
+   },
+   {
+    "type": "cta",
+    "from": 22.6,
+    "to": 26.4,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE MONEY TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "cash.wav",
+    "at": 2.9,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.66,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 5.8,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 7.42,
+    "volume": 0.6
+   },
+   {
+    "src": "error.wav",
+    "at": 8.32,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.24,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 13.42,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 13.44,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 15.3,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.38,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 16.8,
+    "volume": 0.55
+   },
+   {
+    "src": "error.wav",
+    "at": 20.4,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.54,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.62,
+    "volume": 0.5
+   }
+  ]
+ }
+}

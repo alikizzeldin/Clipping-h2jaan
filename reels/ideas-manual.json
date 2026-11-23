@@ -905,5 +905,143 @@
     "why_not": "Unconfirmed fan sightings"
    }
   ]
+ },
+ {
+  "date": "2026-11-23",
+  "wake_up": "20:23 UTC (m126–m129)",
+  "ideas": [
+   {
+    "idea": "Vice City portal (solved Nov 23): Key Lento radio tower switch, 12 LPL substations spell LIFE IS PASSING ME BY, Reactor Two at night opens a portal to the 2002 Malibu Club; Tommy's shirt and bike",
+    "format": "EASTER EGG",
+    "demand": 10,
+    "payoff": 9,
+    "retention": 9,
+    "fresh": 10,
+    "visual": 5,
+    "confidence": 8,
+    "score": 8.8,
+    "chosen": "m126-vice-city-portal",
+    "sources": [
+     "https://kotaku.com/gta-6-contains-a-very-hidden-secret-that-teleports-you-back-in-time-to-vice-city-on-the-ps2-2000759500",
+     "https://www.forbes.com/sites/paultassi/2026/11/23/a-gta-6-player-finds-tommy-vercettis-shirt-portal-to-original-vice-city/",
+     "https://www.gamespot.com/articles/how-to-get-tommy-vercettis-shirt-and-bike-in-gta-6/",
+     "https://www.pcgamesn.com/grand-theft-auto-vi/tommy-vercetti-easter-egg",
+     "https://beebom.com/gta-6-old-vice-city-portal-easter-egg/",
+     "https://insider-gaming.com/tommy-vercetti-gta-6-easter-egg/",
+     "https://dotesports.com/gta/news/gta-6-portal-vice-city-easter-egg-tommy-vercetti-time-travel",
+     "https://www.vice.com/en/article/gta-6-tommy-vercetti-shirt-vice-city-easter-egg/"
+    ]
+   },
+   {
+    "idea": "Sahara truck hit-and-run encounter: testify for the driver's lawsuit and get a few thousand dollars, or blackmail him",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.6,
+    "chosen": "m127-sahara-witness",
+    "sources": [
+     "https://www.tweaktown.com/news/114772/gta-6-npc-gets-hit-by-car-calls-lawyer-and-player-gets-a-payout-for-being-a-witness/index.html",
+     "https://www.ladbible.com/entertainment/gaming/gta-6-npc-interactions-107298-20261119",
+     "https://www.vicecityhustle.com/guides/gta-6-random-events",
+     "https://gtaviceguides.com/guides/gta-6-sahara-lawsuit-burning-car-event/",
+     "https://www.youtube.com/watch?v=Jud24uzPwck"
+    ]
+   },
+   {
+    "idea": "Hidden first-person view: L2 + R3 standing still, scoped guns while aiming, phone out while driving",
+    "format": "HIDDEN FEATURE",
+    "demand": 9,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.2,
+    "chosen": "m128-first-person",
+    "sources": [
+     "https://game8.co/games/GTA-6/archives/638527",
+     "https://www.powerpyx.com/gta-6-how-to-play-in-first-person-view/",
+     "https://www.keengamer.com/articles/guides/can-you-play-gta-6-in-first-person-mode/",
+     "https://www.g2a.com/news/gta-6-news/gta-6-first-person-mode/",
+     "https://metaforge.app/gta-6/gta-6-first-person-view",
+     "https://www.gamerfuzion.com/gta-6-first-person-mode-how-to-l2-r3/",
+     "https://www.videogameschronicle.com/guide/gta-6-first-person-mode-explained-does-gta-6-have-a-first-person-mode/",
+     "https://www.dexerto.com/gta/gta-6s-new-dangerous-driving-and-doomscrolling-feature-spawns-hilarious-memes-3429850/"
+    ]
+   },
+   {
+    "idea": "Checking Out ends Chapter 2 (needs all other Ch. 2 missions + $15,000); the Starlet Motel is gone; grab Vicki's card and save first",
+    "format": "DON'T MISS",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.2,
+    "chosen": "m129-checking-out",
+    "sources": [
+     "https://thegameswiki.com/gta6/wiki/missable-content-and-points-of-no-return",
+     "https://metaforge.app/gta-6/gta-6-chapter-2-missables-point-of-no-return",
+     "https://happygamer.com/gta-6-checking-out-15000-motel-176322/",
+     "https://www.theclick.gg/gta-6-checking-out-point-of-no-return/",
+     "https://techwiser.com/gta-6-chapter-2-before-you-finish/",
+     "https://egamers.io/gta-6-checking-out-guide-the-point-of-no-return-and-how-to-avoid-the-bike-chase-bug/",
+     "https://www.magicgameworld.com/gta-6-checking-out-walkthrough-chapter-2-point-of-no-return/"
+    ]
+   },
+   {
+    "idea": "Driving while doomscrolling wrecks your handling",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.7,
+    "why_not": "Below 7.0 on its own; used as the closing line of the first-person reel"
+   },
+   {
+    "idea": "Collateral (Tom Cruise) NPC nod",
+    "format": "EASTER EGG",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 4,
+    "score": 5.95,
+    "why_not": "Only a live-blog mention, no details"
+   },
+   {
+    "idea": "Businesses / passive income",
+    "format": "MONEY FILE",
+    "demand": 9,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 3,
+    "score": 5.95,
+    "why_not": "Nothing confirmed for story mode"
+   },
+   {
+    "idea": "Social feed trending posts unlock hidden missions",
+    "format": "HIDDEN FEATURE",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 4,
+    "score": 5.85,
+    "why_not": "Pre-release retailer-listing claim"
+   }
+  ]
  }
 ]

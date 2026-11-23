@@ -1,0 +1,337 @@
+{
+ "manual": true,
+ "episode": 129,
+ "kind": "warning",
+ "topic": "Checking Out, the Chapter 2 point of no return: appears once every other Chapter 2 main mission is done and you have $15,000; starting it ends Chapter 2 and the Starlet Motel is gone as a home; first grab what's left at the motel (e.g. Vicki's trading card in the office) and make a manual save in a separate slot",
+ "title": {
+  "en": "DON'T start 'Checking Out' in GTA 6 until you see this ⚠️",
+  "ar": "لا تبدأ مهمة Checking Out في GTA 6 قبل ما تشوف هذا ⚠️"
+ },
+ "summary": "Checking Out ends Chapter 2 of GTA 6. It only appears once every other Chapter 2 mission is done and you've saved $15,000, and once you start it the Starlet Motel is gone as your home for good. Before you start it, grab anything left at the motel, like Vicki's trading card in the office, and make a manual save in a separate slot.",
+ "summary_ar": "مهمة Checking Out تنهي الفصل الثاني في GTA 6. ما تطلع إلا بعد ما تخلص كل مهمات الفصل الثاني وتجمع 15,000 دولار، وأول ما تبدأها يروح موتيل ستارليت كبيت لك للأبد. قبلها خذ أي شي باقي في الموتيل، مثل كرت فيكي في المكتب، وسوّ حفظ يدوي في خانة منفصلة.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Warning",
+  "GTA6Guide",
+  "GTAVI",
+  "Chapter2",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.2
+ },
+ "sources": [
+  "https://thegameswiki.com/gta6/wiki/missable-content-and-points-of-no-return",
+  "https://metaforge.app/gta-6/gta-6-chapter-2-missables-point-of-no-return",
+  "https://happygamer.com/gta-6-checking-out-15000-motel-176322/",
+  "https://www.theclick.gg/gta-6-checking-out-point-of-no-return/",
+  "https://techwiser.com/gta-6-chapter-2-before-you-finish/",
+  "https://egamers.io/gta-6-checking-out-guide-the-point-of-no-return-and-how-to-avoid-the-bike-chase-bug/",
+  "https://www.magicgameworld.com/gta-6-checking-out-walkthrough-chapter-2-point-of-no-return/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 8.0,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  },
+  "unlock": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 8.2,
+     "x": 700
+    }
+   ]
+  },
+  "motel": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 3.0,
+     "dur": 4.0,
+     "x": 700
+    }
+   ]
+  },
+  "before": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 17.5,
+     "dur": 3.6,
+     "x": 700
+    },
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 12.0,
+     "dur": 5.5,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 12.0,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 96,
+  "seed": 129,
+  "drop": 3.86,
+  "break": 11.98,
+  "back": 12.82,
+  "outro": 25.0
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "duration": 28.8,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.86,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "DON'T START",
+    "title": [
+     "CHECKING",
+     "OUT"
+    ],
+    "color": "red",
+    "tag": "…hear this first.",
+    "tagAt": 2.12,
+    "ar": "لا تبدأ مهمة Checking Out… قبل ما تسمع هذا"
+   },
+   {
+    "type": "list",
+    "from": 3.86,
+    "to": 11.98,
+    "broll": {
+     "src": "unlock",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "CH. 2",
+    "label": "IT UNLOCKS WHEN",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "EVERY OTHER CH. 2 MISSION",
+      "status": "DONE",
+      "ok": true,
+      "at": 3.68,
+      "icon": "trophy"
+     },
+     {
+      "text": "YOU'VE SAVED",
+      "status": "$15,000",
+      "ok": true,
+      "at": 6.22,
+      "icon": "cash"
+     }
+    ],
+    "ar": "تطلع بس لما تخلص باقي مهمات الفصل الثاني… وتجمع 15,000 دولار"
+   },
+   {
+    "type": "reveal",
+    "from": 11.98,
+    "to": 15.96,
+    "captions": false,
+    "broll": {
+     "src": "motel",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "pre": "START IT…",
+    "slamAt": 0.84,
+    "color": "red",
+    "lines": [
+     {
+      "text": "STARLET MOTEL",
+      "at": 0.84,
+      "size": 130
+     },
+     {
+      "text": "GONE FOR GOOD",
+      "at": 2.26,
+      "color": "red",
+      "size": 140
+     }
+    ],
+    "ar": "أول ما تبدأها… يروح موتيل ستارليت للأبد"
+   },
+   {
+    "type": "list",
+    "from": 15.96,
+    "to": 25.0,
+    "broll": {
+     "src": "before",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "chip": "BEFORE",
+    "label": "DO THIS FIRST",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "VICKI'S TRADING CARD",
+      "status": "MOTEL OFFICE",
+      "ok": true,
+      "at": 3.92,
+      "icon": "ticket"
+     },
+     {
+      "text": "MANUAL SAVE",
+      "status": "NEW SLOT",
+      "ok": true,
+      "at": 6.64,
+      "icon": "save"
+     }
+    ],
+    "ar": "قبلها: خذ كرت فيكي من مكتب الموتيل… وسوّ حفظ في خانة جديدة"
+   },
+   {
+    "type": "cta",
+    "from": 25.0,
+    "to": 28.8,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE DON'T-MISS TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.3,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.1,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.8,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.5,
+    "volume": 0.45
+   },
+   {
+    "src": "cash.wav",
+    "at": 10.06,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.92,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.82,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 12.84,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 14.24,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.9,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.86,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 22.58,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.94,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.02,
+    "volume": 0.5
+   }
+  ]
+ }
+}
