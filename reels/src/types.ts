@@ -32,6 +32,21 @@ export type LocationScene = Base & {
   direction: string;
   region?: string;
   ar?: string;
+  // The map's look (default hud). "image" puts the pin on a real picture: `image` names a file from
+  // plan.stills or plan.media (an in-game map screenshot, a photo…), `pin` is where, in % of the card.
+  style?: 'hud' | 'gps' | 'paper' | 'neon' | 'radar' | 'image';
+  image?: string;
+  pin?: {x: number; y: number};
+};
+// Real photos/screenshots from the web (Reddit posts, store pages, old games…) as taped cards over b-roll.
+// Each src names a file from plan.media or plan.stills; x/y/w are px on the 1080x1920 frame, rot in degrees.
+export type PhotosScene = Base & {
+  type: 'photos';
+  kicker?: string; // a small line on top, e.g. "REAL PLAYERS' NOTES"
+  title?: string; // a big line under the photos
+  titleAt?: number;
+  photos: {src: string; at: number; x: number; y: number; w: number; rot: number; caption?: string; credit?: string}[];
+  ar?: string;
 };
 export type TimeScene = Base & {
   type: 'time';
@@ -447,7 +462,7 @@ export type LoopScene = Base & {
 };
 
 export type Scene =
-  | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
+  | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene

@@ -301,6 +301,11 @@ def build(folder: Path, cache: Path, preset: str = "medium") -> Path:
             scene["proof"]["src"] = local(scene["proof"]["src"])
         if isinstance(scene.get("shot"), str):
             scene["shot"] = local(scene["shot"])
+        if isinstance(scene.get("image"), str):
+            scene["image"] = local(scene["image"])
+        if scene.get("type") == "photos":
+            for item in scene.get("photos") or []:
+                item["src"] = local(item["src"])
         if isinstance(scene.get("app"), dict) and scene["app"].get("src"):
             scene["app"]["src"] = local(scene["app"]["src"])
         for era in scene.get("eras") or []:

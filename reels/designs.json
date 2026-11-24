@@ -1,0 +1,37 @@
+{
+  "about": "One entry per scene that uses a variant or a new design. Studios read it to avoid repeating a variant used by either of the last two episodes with that scene (PLAYBOOK step 6¾).",
+  "entries": [
+    {
+      "date": "2026-11-24",
+      "episode": "-",
+      "scene": "location",
+      "variant": "gps, paper, neon, radar, image",
+      "new": true,
+      "note": "new map styles (hud stays the default); image = pin on a real picture from stills/media"
+    },
+    {
+      "date": "2026-11-24",
+      "episode": "-",
+      "scene": "photos",
+      "variant": "taped prints",
+      "new": true,
+      "note": "real web pictures (Reddit, store pages…) as taped prints over b-roll"
+    },
+    {
+      "date": "2026-11-21",
+      "episode": "005-cheats-nostalgia",
+      "scene": "era",
+      "variant": "live footage + photos",
+      "new": true,
+      "note": "old-game footage inside the TV, handwritten cheat sheets from Reddit, phone dialing"
+    },
+    {
+      "date": "2026-11-21",
+      "episode": "007-60fps-trick",
+      "scene": "consoles, chain, fgapp, boost, alt",
+      "variant": "default",
+      "new": true,
+      "note": "60 FPS reel scenes; fgapp/alt show real app screenshots from media"
+    }
+  ]
+}

@@ -28,6 +28,12 @@ differences:
    reels.
 4. **Check each reel** with `python -m clipper reel <folder> --dry-run --stills …`
    and look at the frames before committing it.
+   Steps 6¾ (design the scenes for the topic, fresh variants, new designs in code)
+   and 6⅞ (real pictures from the web, credited) of the playbook apply to you too:
+   make at least one fresh design per batch, log every variant in
+   `reels/designs.json`, and pull right before editing the shared `types.ts` and
+   `Reel.tsx` (the main studio edits them too). Add `reels/designs.json` (and
+   `reels/src` when you designed something) to the commit below.
 5. **Commit and render all 4 together:**
    ```bash
    git add reels/episodes/m1* reels/ideas-manual.json

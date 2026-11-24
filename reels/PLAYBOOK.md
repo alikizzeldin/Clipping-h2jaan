@@ -208,6 +208,80 @@ film finish, colour grade, cuts and title style, designed by you and built in co
 Every reel made today sets `"style": "<today's look id>"` in `plan.reel`. The format
 still decides the scenes and the series label; the look decides how it all looks.
 
+## 6¾. Design the scenes for THIS topic
+
+The look of the day dresses the whole reel; the scenes themselves must also feel
+made for the story, never stamped from the same mould. Before writing the plan,
+picture how a top motion designer would show THIS secret, then:
+
+- **Use what fits, in a fresh variant.** Many scenes have variants: the `location`
+  map has `style` hud · gps (in-game minimap) · paper (hand-drawn treasure map with an
+  X) · neon (Vice City synthwave) · radar (a sweep that finds the spot) · image (a pin
+  on a real picture: an in-game map screenshot from `stills`, or a picture from
+  `media`, with `pin: {x, y}` in % of the card). Read `reels/designs.json` and never
+  reuse a variant that either of the last two episodes with that scene used.
+- **When nothing fits, design it.** A swamp trail-cam map for a Bigfoot hunt, a
+  blueprint for a heist, a pawn-shop receipt for a money trick, a police scanner for a
+  wanted-level secret, a stock ticker for an investment tip: write it in code. Either
+  a NEW `style` for an existing scene (a new name in its union in
+  `reels/src/types.ts`, drawn in its own branch) or a NEW scene type
+  (`reels/src/scenes/<Name>.tsx`, its type in `types.ts`, a `case` in
+  `reels/src/Reel.tsx`). At least one fresh design every day across your reels, more
+  when the topic asks for it.
+- **Never change what already exists.** An existing scene without the new field must
+  draw exactly as before: older episodes and the other studio rely on it. Add, never
+  rewrite. `types.ts` and `Reel.tsx` are shared with the other studio: pull right
+  before you edit them, edit with the Edit tool (never rewrite a whole file from a
+  script), and push soon after. `cd reels && npx tsc --noEmit` must pass.
+- **Check it like everything else**: stills of the new design (step 7's layout check),
+  and a short video around it if it moves a lot.
+- **Log it** in `reels/designs.json`: `{date, episode, scene, variant, new: true|false,
+  note}` for every scene with a variant or a new design.
+
+## 6⅞. Real pictures from the web (when they beat motion graphics)
+
+A real photo is often the strongest proof or the strongest feeling: players'
+handwritten cheat sheets for a nostalgia reel, a Reddit find of a hidden detail, an
+official store screenshot of an app, old-game footage of a cheat working, a real map
+screenshot. Use them when they are better than anything we could draw; skip them when
+they are not.
+
+```bash
+python reels/tools/web.py reddit "gta 6 hidden detail"     # Reddit image posts (score, subreddit, author, link)
+python reels/tools/web.py archive "vice city ps2 gameplay" # Archive.org videos, then:
+python reels/tools/web.py files <identifier>               # its video files and download links
+python reels/tools/web.py steam <appid>                    # a Steam app's official screenshots
+python reels/tools/web.py sheet URL URL …                  # download and LOOK: out/web/sheet.jpg
+python reels/tools/web.py vsheet URL --start 30 --every 2  # frames of a video with their times
+```
+
+Put what you choose in plan.json under `media` (the build downloads, trims and crops
+it; its `credit` is added to the description by itself):
+
+```json
+"media": {
+  "notebook.jpg": {"url": "https://i.redd.it/….jpeg", "crop": [w, h, x, y], "width": 900,
+                   "credit": "photo shared by u/name on Reddit"},
+  "sa_cheat.mp4": {"url": "https://archive.org/download/…/….mp4", "start": 44.3, "dur": 1.5,
+                   "crop": [440, 330, 30, 50], "width": 760, "credit": "San Andreas footage: G4TV (Archive.org)"}
+}
+```
+
+`crop` is in the source's own pixels. Use the files in: `photos` (taped prints over
+b-roll: `{src, at, x, y, w, rot, caption?, credit?}`), `proof` (`proof.src`),
+`location` (`style: "image"`, `image`), `era` (`media` played inside the old TV,
+`photos` under it; see episode 005), `fgapp` (`app.src`) and `alt` (`shot`).
+
+Rules:
+- Open the sheet and look at every picture first: Reddit posts get deleted (the
+  archive still lists them, the link answers 404), and titles lie.
+- Credit every one (`credit`). Crop out watermarks, channel logos, TV logos and
+  facecams. No faces of private people, no names, addresses or other personal
+  details, nothing NSFW, and no other creator's edited video (raw footage only).
+- Keep clips short (1–3 s each) and inside our own design (a TV, a card, a print).
+- Never pass off an edited or fan-made picture as official or as proof.
+- YouTube refuses this server with a "not a bot" check: don't try to get around it.
+
 ## 7. The plan (`plan.json`) and a layout check
 
 Copy the structure of `reels/episodes/002-chapter-1-money/plan.json`:
@@ -219,13 +293,14 @@ musicVolume: 0.42, style: "<today's look id>", scenes, sfx}`.
 
 Scenes (fields in `reels/src/types.ts`; each has `from`/`to` in seconds and a `broll`
 naming a footage shot): `hook` (stamp + kicker + giant title; `ufo` or `counter`
-extras), `list` (wiped/safe checklist), `location` (map, route and pin), `time`
+extras), `list` (wiped/safe checklist), `location` (map, route and pin; `style` variants, see 6¾), `time`
 (rolling clock), `trigger` (light beam + target brackets), `scan` (HUD scan + check
 rows), `phone` (banking app transfer), `twist` (blackout then slam), `reward`
 (trophy card), `cash` (in-game proof card then a big payout), `control` (a countdown item: big
 rank number + an animated controller button pressed on the word, or a car flipping back over),
-`cta` (logo + follow).
-Mix them to fit the story; new scene types may be added in `reels/src/scenes/`.
+`cta` (logo + follow), `photos` (real pictures from the web as taped prints, see 6⅞),
+and every scene the studios have added since (read the `Scene` union in `types.ts`).
+Mix them to fit the story, and design new ones when the topic asks (6¾).
 
 Timing: a scene starts when the narrator starts its sentence; titles land on the
 word they show. `captions: false` where a big title already shows the words.
@@ -263,6 +338,7 @@ frames from it.
 ```bash
 git add reels/episodes/NNN-slug reels/ideas.json
 git add reels/looks.json reels/src reels/public/fonts reels/public/textures   # a new look, if you made one
+git add reels/designs.json   # every reel (and reels/src if you designed something new)
 git commit -m "Reels: episode NNN — <topic>"
 git fetch -q origin ccr-cceae731-x5d03t && git merge -q --no-edit origin/ccr-cceae731-x5d03t
 git push origin HEAD:ccr-cceae731-x5d03t
@@ -287,7 +363,8 @@ out, a failed run).
 - Facts: two independent sources for every claim; nothing invented; no leaks.
 - No content that helps cheating in online play, piracy or exploits that harm
   other players. Single-player tips, secrets and money methods are fine.
-- Gameplay footage only from Kick clips of GTA 6 (credited automatically).
+- GTA 6 gameplay footage only from Kick clips (credited automatically). Other real
+  pictures and old-game footage only through `media`, credited, under the rules in 6⅞.
   No copyrighted music: the music is composed in code by `reels/tools/music.py`.
 - Never post more than one reel per wake-up. Never edit the clip agent's
   settings (`config.yaml`), the dashboard, or other workflows from here.
