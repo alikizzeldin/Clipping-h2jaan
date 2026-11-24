@@ -1,0 +1,382 @@
+{
+ "episode": 19,
+ "kind": "missable",
+ "topic": "Chapter 1 mission Don Gone: before destroying Donnie's red car, open its trunk: a gas can (for burning it) and Donnie's H&L .38, a unique, missable revolver; once the car is gone it can't be recovered (no mission replay)",
+ "title": {
+  "en": "DON'T burn Donnie's car yet in GTA 6 🔥",
+  "ar": "لا تحرق سيارة دوني بسرعة 🔥"
+ },
+ "summary": "In GTA 6's Chapter 1 mission Don Gone you have to destroy Donnie's red car, but open the trunk first: next to the gas can for the fire is Donnie's own revolver, the H&L .38, a unique gun. Burn the car first and it's gone for good, because there's no mission replay.",
+ "summary_ar": "بمهمة «دون غون» بالفصل الأول لازم تتخلص من سيارة دوني الحمرا، بس افتح الشنطة أول: جنب جالون البنزين فيه مسدس دوني الخاص H&L .38، سلاح فريد. إذا حرقت السيارة قبل، يروح للأبد لأن ما فيه إعادة للمهمات.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Missables",
+  "DonGone",
+  "GTA6Weapons",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 8,
+  "fresh": 7,
+  "visual": 6,
+  "confidence": 8,
+  "score": 7.5
+ },
+ "sources": [
+  "https://www.powerpyx.com/gta-6-don-gone-head-to-donnies-trailer-walkthrough/",
+  "https://wantedlevelguide.com/guides/gta-6-chapter-1-trunk-donnies-gun-missables/",
+  "https://egamers.io/gta-6-don-gone-guide-how-to-clear-out-donnies-trailer-and-get-the-missable-38/",
+  "https://space4games.com/en/games-en/gta-6-unique-weapons-locations-stats/",
+  "https://gta6pocket.com/en/missables/",
+  "https://gta6notebook.com/walkthrough/don-gone/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 3.0,
+     "dur": 2.4,
+     "x": 1000
+    }
+   ]
+  },
+  "rural": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 11.8,
+     "dur": 4.8,
+     "x": 560
+    }
+   ]
+  },
+  "trunkbg": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 15.0,
+     "dur": 4.5,
+     "x": 560
+    },
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 7.0,
+     "dur": 4.3,
+     "x": 600
+    }
+   ]
+  },
+  "night": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 8.5,
+     "dur": 4.8,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 100,
+  "seed": 191,
+  "drop": 2.16,
+  "break": 15.36,
+  "back": 17.0,
+  "outro": 20.0
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "episode": 19,
+  "duration": 23.6,
+  "musicVolume": 0.42,
+  "style": "leonida-sunset",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 2.16,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "DON'T BURN",
+    "title": [
+     "DONNIE'S",
+     "CAR YET"
+    ],
+    "color": "red",
+    "ar": "لا تحرق سيارة دوني… مو الحين"
+   },
+   {
+    "type": "scan",
+    "from": 2.16,
+    "to": 6.76,
+    "broll": {
+     "src": "rural",
+     "grade": "warm",
+     "dim": 0.15,
+     "zoom": [
+      1.03,
+      1.12
+     ]
+    },
+    "step": "01",
+    "label": "CHAPTER 1",
+    "target": {
+     "x": 540,
+     "y": 790,
+     "w": 760,
+     "h": 480
+    },
+    "checks": [
+     {
+      "text": "MISSION: DON GONE",
+      "at": 1.36
+     },
+     {
+      "text": "DESTROY HIS RED CAR",
+      "at": 2.88
+     }
+    ],
+    "hud": "● OBJECTIVE",
+    "ar": "بمهمة «دون غون» لازم تتخلص من سيارته"
+   },
+   {
+    "type": "trunk",
+    "from": 6.76,
+    "to": 15.36,
+    "captions": false,
+    "broll": {
+     "src": "trunkbg",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 4
+    },
+    "step": "02",
+    "label": "THE TRUNK",
+    "title": "OPEN IT FIRST",
+    "titleAt": 0.2,
+    "openAt": 0.6,
+    "items": [
+     {
+      "name": "GAS CAN",
+      "sub": "FOR THE FIRE",
+      "icon": "gascan",
+      "at": 2.04
+     },
+     {
+      "name": "H&L .38",
+      "sub": "DONNIE'S REVOLVER",
+      "icon": "revolver",
+      "at": 4.64,
+      "hero": true
+     }
+    ],
+    "heroChip": {
+     "text": "UNIQUE",
+     "at": 7.24
+    },
+    "ar": "افتح الشنطة أول… فيها مسدس دوني"
+   },
+   {
+    "type": "trunk",
+    "from": 15.36,
+    "to": 20.0,
+    "captions": false,
+    "broll": {
+     "src": "night",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 3
+    },
+    "step": "03",
+    "label": "BURN IT FIRST?",
+    "title": "BURN IT FIRST?",
+    "titleAt": 0.1,
+    "openAt": 0,
+    "items": [
+     {
+      "name": "GAS CAN",
+      "sub": "FOR THE FIRE",
+      "icon": "gascan",
+      "at": -1
+     },
+     {
+      "name": "H&L .38",
+      "sub": "DONNIE'S REVOLVER",
+      "icon": "revolver",
+      "at": -1,
+      "hero": true
+     }
+    ],
+    "burnAt": 0.64,
+    "gone": {
+     "text": "GONE FOR GOOD",
+     "at": 1.64
+    },
+    "note": {
+     "text": "NO MISSION REPLAY",
+     "at": 2.68
+    },
+    "ar": "إذا حرقتها قبل… راح للأبد"
+   },
+   {
+    "type": "cta",
+    "from": 20.0,
+    "to": 23.6,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 0.56,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 0.96,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.1,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 2.3,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 3.52,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 5.04,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 5.1,
+    "volume": 0.3
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.7,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 7.36,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.8,
+    "volume": 0.45
+   },
+   {
+    "src": "trophy.wav",
+    "at": 11.4,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.0,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.3,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.0,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 16.02,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.0,
+    "volume": 0.6
+   },
+   {
+    "src": "error.wav",
+    "at": 18.04,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.94,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.02,
+    "volume": 0.5
+   }
+  ]
+ }
+}

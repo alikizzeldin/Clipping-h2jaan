@@ -1429,5 +1429,119 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-24",
+  "wake_up": "22:41 UTC",
+  "ideas": [
+   {
+    "format": "DON'T MISS",
+    "idea": "Chapter 1 mission Don Gone: before destroying Donnie's red car, open its trunk: a gas can (for burning it) and Donnie's H&L .38, a unique, missable revolver; once the car is gone it can't be recovered (no mission replay)",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 8,
+    "score": 7.5,
+    "chosen": "019-donnie-trunk",
+    "why_not": null,
+    "sources": [
+     "https://www.powerpyx.com/gta-6-don-gone-head-to-donnies-trailer-walkthrough/",
+     "https://wantedlevelguide.com/guides/gta-6-chapter-1-trunk-donnies-gun-missables/",
+     "https://egamers.io/gta-6-don-gone-guide-how-to-clear-out-donnies-trailer-and-get-the-missable-38/",
+     "https://space4games.com/en/games-en/gta-6-unique-weapons-locations-stats/",
+     "https://gta6pocket.com/en/missables/",
+     "https://gta6notebook.com/walkthrough/don-gone/"
+    ],
+    "note": "Left out the sunglasses by the trailer sink (guides disagree whether they are missable) and what happens to Donnie (story spoiler)."
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Hourglass icons on the map mark time-limited optional missions (e.g. Race Against Yago in Chapter 3): do them at once or they disappear",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.2,
+    "chosen": null,
+    "why_not": "score 6.2; deadlines and trophy impact differ between guides",
+    "sources": [
+     "https://retrobroker.com/en-US/us/blog/gta-6-map-icons-legend-guide",
+     "https://gta.tech4gamers.com/gta-6/gameplay/optional-missions/",
+     "https://www.gtabase.com/gta-6/strangers/race-against-yago"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Sell stolen goods at Donnie's trailer fence before the mission Swamped closes it",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 4,
+    "confidence": 6,
+    "score": 5.5,
+    "chosen": null,
+    "why_not": "overlaps the manual studio's fence reel (m133) and one guide says goods can still be recovered",
+    "sources": [
+     "https://beebom.com/gta-6-chapter-1-missable-items-activities/",
+     "https://www.theclick.gg/save-donnie-in-gta-6/"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "Rockstar shut down the Project Leonida Discord trying to build an unofficial PC port; no PC version announced",
+    "demand": 6,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 6,
+    "visual": 3,
+    "confidence": 7,
+    "score": 5.1,
+    "chosen": null,
+    "why_not": "piracy-adjacent and thin; nothing to show",
+    "sources": [
+     "https://opencritic.com/news/40281/gta-6-pc-port-officially-shut-down-by-rockstar",
+     "https://www.dexerto.com/gta/rockstar-shuts-down-discord-server-trying-to-make-gta-6-pc-port-3430905/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Collateral hitman random encounter",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 8,
+    "score": 6.8,
+    "chosen": null,
+    "why_not": "score 6.8; random trigger",
+    "sources": [
+     "https://www.comingsoon.net/games/news/2228502-gta-6-tom-cruise-collateral-easter-egg-npc-mission",
+     "https://onpoint4gamers.com/gta-6-tom-cruise-collateral-npc-hostage/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Hidden trophy Let's Go Bowling (Hit Kingpin Bowling)",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "score 6.6",
+    "sources": [
+     "https://www.truetrophies.com/t1155348/lets-go-bowling-trophy",
+     "https://metaforge.app/gta-6/gta-6-hit-kingpin-bowling-walkthrough"
+    ]
+   }
+  ]
  }
 ]

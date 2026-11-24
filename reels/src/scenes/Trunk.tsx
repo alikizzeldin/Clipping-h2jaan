@@ -59,12 +59,16 @@ const ICONS = {gascan: GasCan, revolver: Revolver, cash: Cash};
 
 const Flames: React.FC<{frame: number; heat: number}> = ({frame, heat}) => {
   if (heat <= 0) return null;
-  const tongues = Array.from({length: 11}).map((_, i) => {
-    const x = CAR_X + 40 + (i / 10) * (W - 80);
-    const n = noise2D(`f${i}`, frame / 7, i);
-    const h = (220 + 200 * Math.abs(Math.sin(i * 1.7)) + 90 * n) * heat;
-    const w = 120 + 40 * Math.abs(Math.cos(i * 2.1));
-    return {x, h, w, sway: noise2D(`s${i}`, frame / 9, 0) * 26};
+  // two layers of tongues: tall uneven ones at the back, short quick ones in front
+  const tongues = Array.from({length: 18}).map((_, i) => {
+    const back = i < 10;
+    const k = back ? i : i - 10;
+    const x = CAR_X + 30 + (back ? k / 9 : (k + 0.5) / 8) * (W - 60);
+    const n = noise2D(`f${i}`, frame / (back ? 8 : 5), i);
+    const tall = back ? 260 + 260 * Math.abs(Math.sin(i * 2.3)) : 120 + 120 * Math.abs(Math.cos(i * 1.3));
+    const h = Math.max(20, (tall + (back ? 110 : 70) * n) * heat);
+    const w = (back ? 130 : 90) + 50 * Math.abs(Math.cos(i * 2.1));
+    return {x, h, w, sway: noise2D(`s${i}`, frame / 9, 0) * (back ? 34 : 18)};
   });
   return (
     <svg width={1080} height={1920} style={{position: 'absolute', left: 0, top: 0, mixBlendMode: 'screen'}}>
@@ -76,8 +80,9 @@ const Flames: React.FC<{frame: number; heat: number}> = ({frame, heat}) => {
           <stop offset="1" stopColor="#ff1e00" stopOpacity={0} />
         </linearGradient>
       </defs>
+      <ellipse cx={CAR_X + W / 2} cy={CAR_Y + 220} rx={520 * heat} ry={300 * heat} fill="#ff6a00" opacity={0.28 * heat} style={{filter: 'blur(40px)'}} />
       {tongues.map((t, i) => {
-        const base = CAR_Y + 300;
+        const base = CAR_Y + (i < 10 ? 300 : 340);
         return (
           <path
             key={i}
@@ -96,8 +101,7 @@ export const Trunk: React.FC<{s: TrunkScene}> = ({s}) => {
   const open = s.openAt <= 0 ? 1 : interpolate(frame, [openAt, openAt + 14], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 3)});
   const lidDown = interpolate(open, [0, 0.5], [1, 0], clamp);
   const lidUp = interpolate(open, [0.5, 1], [0, 1], clamp);
-  const burnAt = s.burnAt !== undefined ? sec(s.burnAt) : Infinity;
-  const heat = interpolate(frame, [burnAt, burnAt + 24], [0, 1], clamp);
+  const heat = s.burnAt !== undefined ? interpolate(frame, [sec(s.burnAt), sec(s.burnAt) + 24], [0, 1], clamp) : 0;
   const carColor = C[(s.color ?? 'red') as keyof typeof C] ?? C.red;
   const title = s.title ? pop(frame, sec(s.titleAt ?? 0) - 2, 12, 0.5, 200) : 0;
   const glowLight = open * (1 - heat);
@@ -198,7 +202,7 @@ export const Trunk: React.FC<{s: TrunkScene}> = ({s}) => {
       ) : null}
       {s.gone ? <Stamp text={s.gone.text} delay={sec(s.gone.at)} top={640} color={C.red} rotate={-8} /> : null}
       {s.note && frame >= sec(s.note.at) ? (
-        <div style={{position: 'absolute', top: 840, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: ease(frame, sec(s.note.at), sec(s.note.at) + 8)}}>
+        <div style={{position: 'absolute', top: 1500, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: ease(frame, sec(s.note.at), sec(s.note.at) + 8)}}>
           <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 34, letterSpacing: 4, color: '#fff', background: 'rgba(0,0,0,0.75)', border: `2px solid ${C.red}`,
             padding: '10px 22px', borderRadius: 10}}>{s.note.text}</div>
         </div>

@@ -3,6 +3,30 @@
   "entries": [
     {
       "date": "2026-11-24",
+      "episode": "019-donnie-trunk",
+      "scene": "trunk",
+      "variant": "car trunk opens, items rise out, then the car burns",
+      "new": true,
+      "note": "drawn red car from behind; lid swings open, gas can + hero revolver cards rise out (UNIQUE chip); second use: flames, cards turn grey, GONE FOR GOOD stamp, NO MISSION REPLAY chip"
+    },
+    {
+      "date": "2026-11-24",
+      "episode": "018-barn-glitch",
+      "scene": "loop",
+      "variant": "save/reload cycle ring",
+      "new": true,
+      "note": "steps round a ring light up on the words (SAVE, RELOAD, BAGS STAY, BARN REFILLS), the ring fills, REPEAT lands in the middle with a spinning arrow (logged after the fact)"
+    },
+    {
+      "date": "2026-11-24",
+      "episode": "017-criminal-profile",
+      "scene": "profile",
+      "variant": "dossier cards + Professional-to-Psycho gauge",
+      "new": true,
+      "note": "two profile cards with mini gauges (Jason, Lucia), then one big gauge whose needle slides to PSYCHO with a red flash (logged after the fact)"
+    },
+    {
+      "date": "2026-11-24",
       "episode": "m134-little-sam",
       "scene": "credits",
       "variant": "rolling end credits",
