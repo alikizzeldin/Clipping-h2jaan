@@ -1169,5 +1169,102 @@
     "why_not": "Overlaps the main studio's 60fps episode"
    }
   ]
+ },
+ {
+  "date": "2026-11-24",
+  "wake_up": "10:23 UTC (m133–m135; only 3 ideas passed the gate)",
+  "ideas": [
+   {
+    "idea": "Fence rates for jewelry: Brian and Donnie pay very low, Moses low, Tyrone medium, Yasmani (Little Cuba, unlocks in Chapter 3) high for jewelry and marked bills; hold the best loot for him and check fence rates on the map",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.1,
+    "chosen": "m133-best-fence",
+    "sources": [
+     "https://beebom.com/gta-6-fence-locations/",
+     "https://bloxodes.com/articles/gta-6-best-fence-to-sell",
+     "https://bloxodes.com/wiki/gta-6/fences",
+     "https://metaforge.app/gta-6/gta-6-fence-locations-where-to-sell-stolen-goods",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-fences-where-to-sell-stolen-jewelry/",
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6-fence-locations/",
+     "https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/"
+    ]
+   },
+   {
+    "idea": "Little Sam: a silent old man sweeping the club floor in the Chapter 3 mission Boobie Time, wearing a Rockstar Games shirt, credited as 'Himself'; Rockstar's Rob Nelson would neither confirm nor deny it is company president Sam Houser and said he wouldn't be surprised",
+    "format": "EASTER EGG",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.7,
+    "chosen": "m134-little-sam",
+    "sources": [
+     "https://kotaku.com/rockstar-wouldnt-confirm-or-deny-if-thats-studio-president-sam-houser-in-gta-6-2000758489",
+     "https://www.gamespot.com/articles/gta-6-has-a-surprise-cameo-from-someone-you-probably-didnt-expect/",
+     "https://www.notebookcheck.net/GTA-6-s-Little-Sam-looks-a-lot-like-Sam-Houser-and-Rockstar-is-enjoying-the-mystery.1456044.0.html",
+     "https://vgtimes.com/gaming-news/175160-gta-6-fans-spot-a-possible-sam-houser-cameo-called-little-sam.html",
+     "https://leonidainteractive.com/news/gta-6-little-sam-houser-cameo/",
+     "https://gtaviceguides.com/guides/gta-6-little-sam-sam-houser-cameo/"
+    ]
+   },
+   {
+    "idea": "Two stars most players miss: Bad Bunny hosts Cocoteo FM as El Martillo (three of his songs play there) and the credits also list him as a club dancer called Mítico Mario; Oscar winner Jeremy Irons is DJ Dicky on Kaleidoscope FM, his first video game",
+    "format": "SECRET FILE",
+    "demand": 9,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.3,
+    "chosen": "m135-star-djs",
+    "sources": [
+     "https://www.latintimes.com/bad-bunny-gta-vi-cast-cocoteo-fm-miami-launch-601577",
+     "https://onpoint4gamers.com/gta-6-bad-bunny-cocoteo-fm-super-bowl/",
+     "https://www.theclick.gg/gta-6-celebrity-cameos/",
+     "https://britbrief.co.uk/entertainment/gaming/gta-6-credits-reveal-irons-bad-bunny-weird-al-cameos.html",
+     "https://www.theclick.gg/jeremy-irons-in-gta-6/",
+     "https://gta6-life.com/en/guides/gta-6-celebrities/",
+     "https://movieweb.com/gta-6-cast-guide/"
+    ]
+   },
+   {
+    "idea": "Scooter Bros / Joey bring your car back after it's towed",
+    "why_not": "overlaps ideas.json 'mechanic can bring repairs'"
+   },
+   {
+    "idea": "Dye Pack Jammer for marked bills",
+    "why_not": "overlaps the main studio's bank-vault idea"
+   },
+   {
+    "idea": "Ghost ship off the Leonida Keys",
+    "why_not": "confidence below 7 (single forum source)"
+   },
+   {
+    "idea": "Kill or spare Arnold",
+    "why_not": "overlaps criminal-profile episode 017"
+   },
+   {
+    "idea": "Hurricanes and weather events",
+    "why_not": "gameplay not confirmed by two sources"
+   },
+   {
+    "idea": "Jeremy Irons as DJ Dicky alone",
+    "why_not": "score 6.55, below the 7.0 gate; folded into m135",
+    "score": 6.55
+   },
+   {
+    "idea": "Weird Al cameo",
+    "why_not": "already in ideas.json"
+   }
+  ]
  }
 ]

@@ -1,0 +1,365 @@
+{
+ "manual": true,
+ "episode": 133,
+ "kind": "money",
+ "topic": "Fence rates for jewelry: Brian and Donnie pay very low, Moses low, Tyrone medium, Yasmani (Little Cuba, unlocks in Chapter 3) high for jewelry and marked bills; hold the best loot for him and check fence rates on the map",
+ "title": {
+  "en": "Stop selling your jewelry to Donnie in GTA 6 💎 (who pays the most)",
+  "ar": "لا تبيع مجوهراتك لدوني في GTA 6 💎 مين يدفع أكثر؟"
+ },
+ "summary": "Every fence in GTA 6 pays different rates. For jewelry, Brian and Donnie pay very low, Moses low and Tyrone medium, while Yasmani in Little Cuba pays high for jewelry and marked bills. He unlocks in Chapter 3, so hold your best loot until then, and check each fence's rates on the map before you sell.",
+ "summary_ar": "كل مشتري مسروقات في GTA 6 يدفع غير. للمجوهرات: برايان ودوني يدفعون قليل جدًا، موزس قليل، تايرون متوسط، وياسماني في ليتل كوبا يدفع عالي للمجوهرات والفلوس المعلّمة. يفتح في الفصل الثالث، فخلّ أغلى غنايمك له، وشيّك أسعار كل واحد في الخريطة قبل ما تبيع.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Tips",
+  "GTA6Guide",
+  "GTAVI",
+  "Fence",
+  "LittleCuba",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 7,
+  "score": 7.1
+ },
+ "sources": [
+  "https://beebom.com/gta-6-fence-locations/",
+  "https://bloxodes.com/articles/gta-6-best-fence-to-sell",
+  "https://bloxodes.com/wiki/gta-6/fences",
+  "https://metaforge.app/gta-6/gta-6-fence-locations-where-to-sell-stolen-goods",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-fences-where-to-sell-stolen-jewelry/",
+  "https://www.pcgamer.com/games/grand-theft-auto/gta-6-fence-locations/",
+  "https://www.keengamer.com/articles/guides/how-to-fence-stolen-goods-in-gta-6-all-fence-locations-and-marked-bills/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 3.85,
+     "x": 1000
+    }
+   ]
+  },
+  "rates": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 3.0,
+     "dur": 8.1,
+     "x": 700
+    }
+   ]
+  },
+  "yasmani": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 4.45,
+     "x": 1100
+    }
+   ]
+  },
+  "tips": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 8.15,
+     "x": 1000
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 12.0,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 120,
+  "seed": 133,
+  "drop": 3.82,
+  "break": 11.88,
+  "back": 12.8,
+  "outro": 24.38
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 28.1,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.82,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "STOP SELLING TO",
+    "title": [
+     "DONNIE"
+    ],
+    "color": "red",
+    "tag": "…next to nothing.",
+    "tagAt": 2.22,
+    "ar": "لا تبيع مجوهراتك لدوني… يدفع شبه ولا شي"
+   },
+   {
+    "type": "list",
+    "from": 3.82,
+    "to": 11.88,
+    "broll": {
+     "src": "rates",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "JEWELRY",
+    "label": "WHO PAYS WHAT",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "BRIAN & DONNIE",
+      "status": "VERY LOW",
+      "ok": false,
+      "alert": true,
+      "at": 2.26,
+      "icon": "cash"
+     },
+     {
+      "text": "MOSES",
+      "status": "LOW",
+      "ok": false,
+      "alert": true,
+      "at": 4.46,
+      "icon": "cash"
+     },
+     {
+      "text": "TYRONE",
+      "status": "MEDIUM",
+      "ok": true,
+      "at": 6.4,
+      "icon": "cash"
+     }
+    ],
+    "ar": "كل واحد يدفع غير: برايان ودوني قليل جدًا، موزس قليل، تايرون متوسط"
+   },
+   {
+    "type": "reveal",
+    "from": 11.88,
+    "to": 16.28,
+    "captions": false,
+    "broll": {
+     "src": "yasmani",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 2,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "BUT…",
+    "slamAt": 0.92,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "YASMANI",
+      "at": 0.92,
+      "color": "gold",
+      "size": 190
+     },
+     {
+      "text": "PAYS HIGH",
+      "at": 1.96,
+      "color": "green",
+      "size": 150
+     },
+     {
+      "text": "JEWELRY + MARKED BILLS",
+      "at": 2.54,
+      "size": 80
+     }
+    ],
+    "ar": "بس ياسماني في ليتل كوبا يدفع عالي للمجوهرات والفلوس المعلّمة"
+   },
+   {
+    "type": "list",
+    "from": 16.28,
+    "to": 24.38,
+    "broll": {
+     "src": "tips",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "chip": "TIP",
+    "label": "PRO MOVE",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "YASMANI UNLOCKS",
+      "status": "CHAPTER 3",
+      "ok": true,
+      "at": 0.88,
+      "icon": "lock"
+     },
+     {
+      "text": "HOLD YOUR BEST LOOT",
+      "status": "WAIT",
+      "ok": true,
+      "at": 2.84,
+      "icon": "save"
+     },
+     {
+      "text": "CHECK RATES",
+      "status": "ON THE MAP",
+      "ok": true,
+      "at": 4.86,
+      "icon": "paper"
+     }
+    ],
+    "ar": "يفتح في الفصل الثالث… خلّ أغلى غنايمك له، وشيّك الأسعار في الخريطة"
+   },
+   {
+    "type": "cta",
+    "from": 24.38,
+    "to": 28.1,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE MONEY TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.3,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.2,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.76,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 6.06,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 8.26,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.2,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.82,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.8,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 12.82,
+    "volume": 0.4
+   },
+   {
+    "src": "cash.wav",
+    "at": 13.84,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.22,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 17.14,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.1,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 21.12,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.32,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.4,
+    "volume": 0.5
+   }
+  ]
+ }
+}

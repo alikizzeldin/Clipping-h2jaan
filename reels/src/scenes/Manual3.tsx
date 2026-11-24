@@ -4,7 +4,7 @@ import {Background} from '../ui/Background';
 import {clamp, ease, pop, sec} from '../ui/motion';
 import {Arabic, Flash, Particles, SceneIn, StepLabel} from '../ui/Pieces';
 import {C, F, accent} from '../theme';
-import {ComicScene, HealthScene, MailboxScene} from '../types';
+import {ComicScene, CreditsScene, HealthScene, MailboxScene, RadioScene} from '../types';
 
 // ------------------------------------------------------------------ shared art
 // A grumpy pill capsule with a face (a villain's head).
@@ -269,6 +269,110 @@ export const Mailbox: React.FC<{s: MailboxScene}> = ({s}) => {
           letterSpacing: 3, opacity: ease(frame, subAt, subAt + 10)}}>{s.sub}</div>
       ) : null}
       <Arabic text={s.ar} delay={pressAt + 16} top={1290} size={52} />
+    </AbsoluteFill>
+  );
+};
+
+// ------------------------------------------------------------------ credits
+// End credits roll past; one line lights up and the roll stops on it.
+export const Credits: React.FC<{s: CreditsScene}> = ({s}) => {
+  const frame = useCurrentFrame();
+  const hiAt = sec(s.highlightAt);
+  const rowH = 86;
+  const stopY = 330 - s.highlight * rowH; // the highlighted row ends centred in the window
+  const startY = stopY + 360;
+  const y = interpolate(frame, [0, hiAt], [startY, stopY], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 2)});
+  const lit = frame >= hiAt;
+  const glow = pop(frame, hiAt, 9, 0.45, 240);
+  const panel = pop(frame, 2, 12, 0.6, 150);
+  const mask = 'linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%)';
+  return (
+    <AbsoluteFill>
+      <SceneIn><Background broll={s.broll} /></SceneIn>
+      <AbsoluteFill style={{background: 'rgba(2,2,8,0.78)'}} />
+      <StepLabel step={s.step} label={s.label} />
+      <div style={{position: 'absolute', top: 380, left: 60, width: 960, height: 740, overflow: 'hidden', opacity: Math.min(1, panel * 1.5),
+        maskImage: mask, WebkitMaskImage: mask}}>
+        <div style={{position: 'absolute', left: 0, right: 0, top: y}}>
+          {s.lines.map((l, i) => {
+            const hi = i === s.highlight && lit;
+            return (
+              <div key={i} style={{height: rowH, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 34,
+                transform: hi ? `scale(${1 + 0.12 * glow})` : 'none'}}>
+                <div style={{width: 400, textAlign: 'right', fontFamily: F.mono, fontWeight: 700, fontSize: 30, letterSpacing: 3,
+                  color: hi ? C.gold : 'rgba(255,255,255,0.55)'}}>{l.role}</div>
+                <div style={{width: 400, textAlign: 'left', fontFamily: F.brand, fontWeight: 800, fontSize: 36,
+                  color: hi ? '#fff' : 'rgba(255,255,255,0.8)', textShadow: hi ? `0 0 24px ${C.gold}` : 'none'}}>{l.name}</div>
+              </div>
+            );
+          })}
+        </div>
+        {lit ? (
+          <div style={{position: 'absolute', left: 20, right: 20, top: 336, height: rowH - 12, borderRadius: 16,
+            border: `4px solid ${C.gold}`, boxShadow: `0 0 40px ${C.gold}88`, opacity: Math.min(1, glow * 2)}} />
+        ) : null}
+      </div>
+      {lit ? <Flash at={hiAt} length={8} color={C.gold} strength={0.35} /> : null}
+      <Arabic text={s.ar} delay={hiAt + 10} top={1180} size={54} />
+    </AbsoluteFill>
+  );
+};
+
+// ------------------------------------------------------------------ radio
+// A car stereo tunes from station to station; each shows its host.
+export const Radio: React.FC<{s: RadioScene}> = ({s}) => {
+  const frame = useCurrentFrame();
+  const panel = pop(frame, 2, 12, 0.6, 150);
+  const idx = s.stations.reduce((acc, st, i) => (frame >= sec(st.at) - 6 ? i : acc), -1);
+  const st = idx >= 0 ? s.stations[idx] : null;
+  const since = st ? frame - (sec(st.at) - 6) : 0;
+  const tuning = st ? since < 8 : true;
+  const show = st ? pop(frame, sec(st.at) - 2, 10, 0.5, 220) : 0;
+  const tone = accent(st?.color ?? 'pink');
+  const noise = (k: number) => ((Math.sin(frame * 12.9898 + k * 78.233) * 43758.5453) % 1 + 1) % 1;
+  return (
+    <AbsoluteFill>
+      <SceneIn><Background broll={s.broll} /></SceneIn>
+      <AbsoluteFill style={{background: 'rgba(5,4,14,0.55)'}} />
+      <StepLabel step={s.step} label={s.label} />
+      <div style={{position: 'absolute', top: 400, left: 70, width: 940, height: 560, borderRadius: 40, padding: 30, boxSizing: 'border-box',
+        background: 'linear-gradient(180deg, #1b1b2a, #0b0b14)', border: '3px solid rgba(255,255,255,0.16)',
+        boxShadow: '0 40px 90px rgba(0,0,0,0.7)', opacity: Math.min(1, panel * 1.5), transform: `translateY(${(1 - panel) * 80}px)`}}>
+        <div style={{position: 'relative', height: 330, borderRadius: 24, overflow: 'hidden', padding: '26px 34px', boxSizing: 'border-box',
+          background: '#06140f', border: `3px solid ${tone}66`, boxShadow: `inset 0 0 60px ${tone}33`}}>
+          {tuning ? (
+            <div style={{position: 'absolute', inset: 0, opacity: 0.5,
+              backgroundImage: 'repeating-linear-gradient(0deg, rgba(255,255,255,0.12) 0 2px, transparent 2px 5px)',
+              transform: `translateY(${noise(1) * 10}px)`}} />
+          ) : null}
+          <div style={{display: 'flex', alignItems: 'baseline', gap: 16}}>
+            <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 88, color: tone, textShadow: `0 0 24px ${tone}`, letterSpacing: 2}}>
+              {tuning || !st ? (88 + noise(2) * 20).toFixed(1) : st.freq}
+            </div>
+            <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 34, color: `${tone}aa`}}>FM</div>
+          </div>
+          {st && !tuning ? (
+            <div style={{opacity: Math.min(1, show * 2), transform: `translateX(${(1 - show) * 40}px)`}}>
+              <div style={{fontFamily: F.display, fontSize: 92, color: '#fff', lineHeight: 1.05, marginTop: 8}}>{st.name}</div>
+              <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 32, color: tone, letterSpacing: 3, marginTop: 6}}>HOST · {st.host}</div>
+            </div>
+          ) : (
+            <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 34, color: `${tone}88`, letterSpacing: 6, marginTop: 30}}>TUNING…</div>
+          )}
+        </div>
+        <div style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: 10, height: 120, marginTop: 30}}>
+          {Array.from({length: 22}).map((_, i) => {
+            const h = tuning ? 10 : 20 + Math.abs(Math.sin(frame / (4 + (i % 5)) + i)) * 90;
+            return <div key={i} style={{width: 26, height: h, borderRadius: 6, background: `linear-gradient(180deg, ${tone}, ${tone}44)`}} />;
+          })}
+        </div>
+      </div>
+      {st && st.note && !tuning ? (
+        <div style={{position: 'absolute', top: 1000, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: ease(frame, sec(st.at) + 8, sec(st.at) + 18)}}>
+          <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 32, color: '#06060F', background: C.gold, padding: '8px 20px', borderRadius: 10, letterSpacing: 2}}>{st.note}</div>
+        </div>
+      ) : null}
+      <Arabic text={s.ar} delay={16} top={1100} size={54} />
     </AbsoluteFill>
   );
 };

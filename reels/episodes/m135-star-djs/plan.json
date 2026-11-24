@@ -1,0 +1,316 @@
+{
+ "manual": true,
+ "episode": 135,
+ "kind": "secret",
+ "topic": "Two stars most players miss: Bad Bunny hosts Cocoteo FM as El Martillo (three of his songs play there) and the credits also list him as a club dancer called Mítico Mario; Oscar winner Jeremy Irons is DJ Dicky on Kaleidoscope FM, his first video game",
+ "title": {
+  "en": "2 huge stars are hiding in GTA 6 🎙️ (most players miss them)",
+  "ar": "نجمين كبار مخفيين في GTA 6 🎙️"
+ },
+ "summary": "Bad Bunny hosts GTA 6's Latin station Cocoteo FM as El Martillo, and three of his songs play there; the credits also list him as a club dancer called Mítico Mario. And Oscar winner Jeremy Irons is DJ Dicky on Kaleidoscope FM, his first video game role.",
+ "summary_ar": "باد باني يقدّم محطة Cocoteo FM اللاتينية باسم El Martillo، وفيها ثلاث من أغانيه، والكريدتس كمان تذكره كراقص في نادي اسمه Mítico Mario. والممثل الحائز على الأوسكار جيريمي آيرونز هو DJ Dicky على Kaleidoscope FM، وهذي أول لعبة له.",
+ "keywords": [
+  "GTA6",
+  "BadBunny",
+  "JeremyIrons",
+  "GTA6Radio",
+  "GTAVI",
+  "GTA6Secrets",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 7,
+  "score": 7.3
+ },
+ "sources": [
+  "https://www.latintimes.com/bad-bunny-gta-vi-cast-cocoteo-fm-miami-launch-601577",
+  "https://onpoint4gamers.com/gta-6-bad-bunny-cocoteo-fm-super-bowl/",
+  "https://www.theclick.gg/gta-6-celebrity-cameos/",
+  "https://britbrief.co.uk/entertainment/gaming/gta-6-credits-reveal-irons-bad-bunny-weird-al-cameos.html",
+  "https://www.theclick.gg/jeremy-irons-in-gta-6/",
+  "https://gta6-life.com/en/guides/gta-6-celebrities/",
+  "https://movieweb.com/gta-6-cast-guide/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 4.95,
+     "x": 1000
+    }
+   ]
+  },
+  "drive": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 6.4,
+     "x": 1000
+    }
+   ]
+  },
+  "credits": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 4.7,
+     "x": 1100
+    }
+   ]
+  },
+  "drive2": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 115.5,
+     "dur": 7.45,
+     "x": 1000
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 3.8,
+     "x": 600
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 118,
+  "seed": 135,
+  "drop": 4.9,
+  "break": 15.92,
+  "back": 18.36,
+  "outro": 23.34
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "duration": 27.1,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.9,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "TWO BIG STARS",
+    "title": [
+     "HIDING"
+    ],
+    "color": "pink",
+    "tag": "…that most miss.",
+    "tagAt": 3.04,
+    "ar": "نجمين كبار مخفيين في اللعبة… وأغلب اللاعبين ما انتبهوا"
+   },
+   {
+    "type": "radio",
+    "from": 4.9,
+    "to": 11.26,
+    "broll": {
+     "src": "drive",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "step": "01",
+    "label": "TUNE IN",
+    "stations": [
+     {
+      "freq": "ON AIR",
+      "name": "COCOTEO FM",
+      "host": "EL MARTILLO · BAD BUNNY",
+      "note": "3 OF HIS SONGS PLAY HERE",
+      "at": 1.68,
+      "color": "pink"
+     }
+    ],
+    "ar": "باد باني يقدّم محطة كوكوتيو إف إم باسم إل مارتيو"
+   },
+   {
+    "type": "credits",
+    "from": 11.26,
+    "to": 15.92,
+    "broll": {
+     "src": "credits",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 6
+    },
+    "step": "02",
+    "label": "THE CREDITS",
+    "lines": [
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     },
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     },
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     },
+     {
+      "role": "MITICO MARIO",
+      "name": "BAD BUNNY"
+     },
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     },
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     }
+    ],
+    "highlight": 3,
+    "highlightAt": 2.9,
+    "ar": "والكريدتس تذكره كمان كراقص في نادي"
+   },
+   {
+    "type": "radio",
+    "from": 15.92,
+    "to": 23.34,
+    "broll": {
+     "src": "drive2",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "step": "03",
+    "label": "TUNE IN",
+    "stations": [
+     {
+      "freq": "ON AIR",
+      "name": "KALEIDOSCOPE FM",
+      "host": "DJ DICKY · JEREMY IRONS",
+      "note": "HIS FIRST VIDEO GAME",
+      "at": 2.44,
+      "color": "teal"
+     }
+    ],
+    "ar": "والحائز على الأوسكار جيريمي آيرونز… مذيع على كاليدوسكوب إف إم، وأول لعبة له"
+   },
+   {
+    "type": "cta",
+    "from": 23.34,
+    "to": 27.1,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRETS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 3.0,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.84,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 5.3,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.58,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.2,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.0,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.16,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.86,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 16.4,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 18.36,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.28,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.36,
+    "volume": 0.5
+   }
+  ]
+ }
+}

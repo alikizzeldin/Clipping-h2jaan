@@ -24,7 +24,7 @@ import {Reveal} from './scenes/Reveal';
 import {Proof} from './scenes/Proof';
 import {Chat} from './scenes/Chat';
 import {Compare, Headline, Heat, Radar, Saves} from './scenes/Manual2';
-import {Comic, Health, Mailbox} from './scenes/Manual3';
+import {Comic, Credits, Health, Mailbox, Radio} from './scenes/Manual3';
 import {Alt, Boost, Chain, Consoles, FgApp} from './scenes/Fps';
 import {Profile} from './scenes/Profile';
 import {Reel as ReelProps, Scene} from './types';
@@ -69,6 +69,8 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'comic': return <Comic s={s} />;
     case 'health': return <Health s={s} />;
     case 'mailbox': return <Mailbox s={s} />;
+    case 'credits': return <Credits s={s} />;
+    case 'radio': return <Radio s={s} />;
     case 'profile': return <Profile s={s} />;
   }
 };

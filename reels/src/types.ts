@@ -418,13 +418,31 @@ export type ProfileScene = Base & {
   ar?: string;
 };
 
+export type CreditsScene = Base & {
+  type: 'credits';
+  step: string;
+  label: string;
+  lines: {role: string; name: string}[];
+  highlight: number; // index of the line that lights up
+  highlightAt: number;
+  ar?: string;
+};
+
+export type RadioScene = Base & {
+  type: 'radio';
+  step: string;
+  label: string;
+  stations: {freq: string; name: string; host: string; note?: string; at: number; color?: string}[];
+  ar?: string;
+};
+
 export type Scene =
   | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

@@ -1,0 +1,377 @@
+{
+ "manual": true,
+ "episode": 134,
+ "kind": "easter-egg",
+ "topic": "Little Sam: a silent old man sweeping the club floor in the Chapter 3 mission Boobie Time, wearing a Rockstar Games shirt, credited as 'Himself'; Rockstar's Rob Nelson would neither confirm nor deny it is company president Sam Houser and said he wouldn't be surprised",
+ "title": {
+  "en": "Is Rockstar's BOSS hiding in GTA 6? 👀 (Little Sam)",
+  "ar": "مدير روكستار مخفي في GTA 6؟ 👀"
+ },
+ "summary": "In the Chapter 3 mission Boobie Time, a quiet old man sweeps the club floor. His name is Little Sam, he never says a word, and he wears a Rockstar Games shirt. In the credits, Little Sam is played by 'Himself'. Rockstar's Rob Nelson would neither confirm nor deny it's company president Sam Houser, but said he wouldn't be surprised.",
+ "summary_ar": "في مهمة الفصل الثالث Boobie Time، فيه رجل كبير ساكت يكنس أرضية النادي. اسمه ليتل سام، ما يقول ولا كلمة، ولابس تيشيرت روكستار. وفي الكريدتس، ليتل سام يأدي دوره «نفسه». روب نيلسون من روكستار ما أكد ولا نفى إنه رئيس الشركة سام هاوزر، بس قال ما راح يستغرب.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEgg",
+  "RockstarGames",
+  "SamHouser",
+  "GTAVI",
+  "GTA6Secrets",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 9,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.7
+ },
+ "sources": [
+  "https://kotaku.com/rockstar-wouldnt-confirm-or-deny-if-thats-studio-president-sam-houser-in-gta-6-2000758489",
+  "https://www.gamespot.com/articles/gta-6-has-a-surprise-cameo-from-someone-you-probably-didnt-expect/",
+  "https://www.notebookcheck.net/GTA-6-s-Little-Sam-looks-a-lot-like-Sam-Houser-and-Rockstar-is-enjoying-the-mystery.1456044.0.html",
+  "https://vgtimes.com/gaming-news/175160-gta-6-fans-spot-a-possible-sam-houser-cameo-called-little-sam.html",
+  "https://leonidainteractive.com/news/gta-6-little-sam-houser-cameo/",
+  "https://gtaviceguides.com/guides/gta-6-little-sam-sam-houser-cameo/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 3.3,
+     "x": 1100
+    }
+   ]
+  },
+  "club": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 5.6,
+     "x": 700
+    }
+   ]
+  },
+  "sam": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 12.0,
+     "dur": 5.85,
+     "x": 700
+    }
+   ]
+  },
+  "credits": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 12.0,
+     "dur": 3.1,
+     "x": 1100
+    }
+   ]
+  },
+  "nelson": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 6.55,
+     "x": 1000
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 20.0,
+     "dur": 3.8,
+     "x": 800
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 98,
+  "seed": 134,
+  "drop": 3.24,
+  "break": 8.78,
+  "back": 9.44,
+  "outro": 24.14
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 27.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.24,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "ROCKSTAR'S",
+    "title": [
+     "BOSS"
+    ],
+    "color": "gold",
+    "tag": "…hiding in GTA 6?",
+    "tagAt": 1.34,
+    "ar": "مدير روكستار يمكن مخفي في اللعبة"
+   },
+   {
+    "type": "list",
+    "from": 3.24,
+    "to": 8.78,
+    "broll": {
+     "src": "club",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "CH. 3",
+    "label": "THE MISSION",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "BOOBIE TIME",
+      "status": "CHAPTER 3",
+      "ok": true,
+      "at": 1.2,
+      "icon": "trophy"
+     },
+     {
+      "text": "OLD MAN SWEEPING",
+      "status": "THE CLUB",
+      "ok": true,
+      "at": 3.94,
+      "icon": "alert"
+     }
+    ],
+    "ar": "في مهمة الفصل الثالث… ناظر الرجل الكبير اللي يكنس أرضية النادي"
+   },
+   {
+    "type": "reveal",
+    "from": 8.78,
+    "to": 14.56,
+    "captions": false,
+    "broll": {
+     "src": "sam",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "pre": "HIS NAME…",
+    "slamAt": 0.66,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "LITTLE SAM",
+      "at": 0.66,
+      "color": "gold",
+      "size": 170
+     },
+     {
+      "text": "NEVER SAYS A WORD",
+      "at": 1.96,
+      "size": 100
+     },
+     {
+      "text": "ROCKSTAR SHIRT",
+      "at": 4.08,
+      "color": "pink",
+      "size": 120
+     }
+    ],
+    "ar": "اسمه ليتل سام… ما يتكلم أبدًا، ولابس تيشيرت روكستار"
+   },
+   {
+    "type": "credits",
+    "from": 14.56,
+    "to": 17.64,
+    "broll": {
+     "src": "credits",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 6
+    },
+    "step": "01",
+    "label": "THE CREDITS",
+    "lines": [
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     },
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     },
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     },
+     {
+      "role": "LITTLE SAM",
+      "name": "HIMSELF"
+     },
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     },
+     {
+      "role": "· · ·",
+      "name": "· · ·"
+     }
+    ],
+    "highlight": 3,
+    "highlightAt": 2.1,
+    "ar": "وفي الكريدتس: ليتل سام… يأدي دوره «نفسه»"
+   },
+   {
+    "type": "headline",
+    "from": 17.64,
+    "to": 24.14,
+    "broll": {
+     "src": "nelson",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "tag": "ROCKSTAR SAYS",
+    "source": "ROB NELSON · ROCKSTAR",
+    "date": "NOV 2026",
+    "headline": "Can neither confirm nor deny it's Sam Houser… but \"wouldn't be surprised\"",
+    "typeAt": 0.3,
+    "ar": "روكستار ما أكدت ولا نفت إنه سام هاوزر… بس قالوا ما راح نستغرب"
+   },
+   {
+    "type": "cta",
+    "from": 24.14,
+    "to": 27.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.3,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.18,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.4,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 7.14,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.72,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 9.44,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 9.46,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.86,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.5,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.2,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.66,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.58,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.0,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.08,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.16,
+    "volume": 0.5
+   }
+  ]
+ }
+}
