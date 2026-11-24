@@ -1,5 +1,10 @@
 [
  {
+  "time": "2026-11-24T18:48:43+00:00",
+  "type": "published",
+  "text": "Published reel “GTA 6's money glitch STILL works 💰”"
+ },
+ {
   "time": "2026-11-24T13:00:35+00:00",
   "type": "error",
   "text": "Publishing reel “GTA 6's money glitch STILL works 💰 (the patch missed it)” failed: Buffer refused the post (InvalidInputError): Invalid post: YouTube title cannot exceed 100 characters."
@@ -773,10 +778,5 @@
   "time": "2026-11-18T21:22:23+00:00",
   "type": "published",
   "text": "Published “Tepki did NOT expect this in GTA 6 😳 | ولا أحد توقع هذا… Tepki في GTA 6 😳 #shorts” (cut by the agent)"
- },
- {
-  "time": "2026-11-18T21:20:20+00:00",
-  "type": "published",
-  "text": "Published “Sa3dola's craziest GTA 6 moment 🤯 | أقوى لحظة لـ Sa3dola في GTA 6 🤯 #shorts” (cut by the agent)"
  }
 ]
