@@ -28,6 +28,8 @@ import {Comic, Health, Mailbox} from './scenes/Manual3';
 import {Alt, Boost, Chain, Consoles, FgApp} from './scenes/Fps';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
+import {applyLook, look} from './looks/state';
+import {CUT_LENGTH, CutFx, LEAD} from './looks/fx/cuts';
 
 const render = (s: Scene, words: ReelProps['words']) => {
   switch (s.type) {
@@ -70,7 +72,9 @@ const render = (s: Scene, words: ReelProps['words']) => {
 };
 
 export const Reel: React.FC<ReelProps> = (props) => {
+  applyLook(props.style, props.series);
   const {scenes, words, sfx} = props;
+  const cut = look().cut;
   const quiet = scenes.filter((s) => s.captions === false);
   const voiceEnd = words.length ? words[words.length - 1].end : 0;
   const total = sec(props.duration);
@@ -82,6 +86,13 @@ export const Reel: React.FC<ReelProps> = (props) => {
           {render(s, words)}
         </Sequence>
       ))}
+      {cut !== 'none'
+        ? scenes.slice(1).map((s, i) => (
+            <Sequence key={`cut${i}`} from={Math.max(0, sec(s.from) - LEAD)} durationInFrames={CUT_LENGTH} name={`cut ${i + 2}`}>
+              <CutFx kind={cut} />
+            </Sequence>
+          ))
+        : null}
       <Captions words={words} hidden={(t) => quiet.some((s) => t >= s.from && t < s.to)} />
       <Hud series={props.series} episode={props.episode} />
       <Finish />

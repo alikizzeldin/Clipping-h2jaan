@@ -2,9 +2,15 @@ import React from 'react';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, F} from '../theme';
 import {ease} from './motion';
+import {lookHud} from '../looks/fx/hud';
 
 // The top bar on every frame: brand, file number, a REC light and progress.
 export const Hud: React.FC<{series: string; episode: number}> = ({series, episode}) => {
+  const Styled = lookHud();
+  return Styled ? <Styled series={series} episode={episode} /> : <BarHud series={series} episode={episode} />;
+};
+
+const BarHud: React.FC<{series: string; episode: number}> = ({series, episode}) => {
   const frame = useCurrentFrame();
   const {durationInFrames} = useVideoConfig();
   const enter = ease(frame, 4, 22);

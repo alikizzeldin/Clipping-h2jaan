@@ -2,6 +2,8 @@ import React from 'react';
 import {AbsoluteFill, random, useCurrentFrame} from 'remotion';
 import {C, F} from '../theme';
 import {clamp, ease, pop} from './motion';
+import {look, widthScale} from '../looks/state';
+import {lookTitle} from '../looks/fx/titles';
 import {interpolate} from 'remotion';
 
 // "STEP 02 / TIME" with a line that draws out.
@@ -14,7 +16,7 @@ export const StepLabel: React.FC<{step: string; label: string; delay?: number; t
       <div style={{display: 'flex', alignItems: 'center', gap: 18}}>
         <div
           style={{
-            fontFamily: F.mono, fontWeight: 800, fontSize: 26, color: '#06060F', background: C.green,
+            fontFamily: F.mono, fontWeight: 800, fontSize: 26, color: look().ink, background: C.green,
             padding: '6px 14px', borderRadius: 6, letterSpacing: 2,
           }}
         >
@@ -47,8 +49,11 @@ export const Arabic: React.FC<{text?: string; delay?: number; top: number; size?
 };
 
 // Headline text with an RGB split that jitters while it glitches.
-export const GlitchText: React.FC<{text: string; size: number; color: string; glitch: number; style?: React.CSSProperties}> = ({text, size, color, glitch, style}) => {
+export const GlitchText: React.FC<{text: string; size: number; color: string; glitch: number; style?: React.CSSProperties}> = ({text, size: asked, color, glitch, style}) => {
   const frame = useCurrentFrame();
+  const size = Math.round(asked * widthScale());
+  const Styled = lookTitle();
+  if (Styled) return <Styled text={text} size={size} color={color} glitch={glitch} style={style} />;
   const jx = (random(`gx${frame}`) - 0.5) * 22 * glitch;
   const jy = (random(`gy${frame}`) - 0.5) * 8 * glitch;
   const base: React.CSSProperties = {fontFamily: F.display, fontSize: size, lineHeight: 0.92, textTransform: 'uppercase', whiteSpace: 'nowrap'};
@@ -124,6 +129,17 @@ export const Particles: React.FC<{count?: number; x: number; y: number; w: numbe
 export const SceneIn: React.FC<{children: React.ReactNode; length?: number}> = ({children, length = 9}) => {
   const frame = useCurrentFrame();
   const p = ease(frame, 0, length);
+  const enter = look().enter;
+  if (enter === 'slide') {
+    return <AbsoluteFill style={{transform: `translateX(${(1 - p) * 120}px)`, filter: `blur(${(1 - p) * 6}px)`, opacity: Math.min(1, 0.2 + p)}}>{children}</AbsoluteFill>;
+  }
+  if (enter === 'rise') {
+    return <AbsoluteFill style={{transform: `translateY(${(1 - p) * 90}px) scale(${1.04 - 0.04 * p})`, opacity: Math.min(1, 0.2 + p)}}>{children}</AbsoluteFill>;
+  }
+  if (enter === 'snap') {
+    const q = ease(frame, 0, 4);
+    return <AbsoluteFill style={{transform: `scale(${1.06 - 0.06 * q})`}}>{children}</AbsoluteFill>;
+  }
   return (
     <AbsoluteFill style={{transform: `scale(${1.12 - 0.12 * p})`, filter: `blur(${(1 - p) * 14}px)`, opacity: Math.min(1, 0.3 + p)}}>
       {children}

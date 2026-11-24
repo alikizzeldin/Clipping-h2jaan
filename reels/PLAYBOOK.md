@@ -165,6 +165,46 @@ overlays, burned-in subtitles and sponsor logos. In-game proof (a menu, a scan
 result, a trophy pop-up) is gold: put it in a `proof` card (see episode 002).
 x = left edge of the 9:16 crop in a 1920×1080 frame (608 px wide).
 
+## 6½. The look of the day
+
+Every UTC day the reels wear a NEW look: its own colours, fonts, captions, top bar,
+film finish, colour grade, cuts and title style, designed by you and built in code
+(`reels/src/looks/`; read `reels/src/looks/README.md` for the kit). Open
+`reels/looks.json`:
+
+- **Today already has a look** (an entry in `days` with today's UTC date): use its id.
+- **Otherwise** (normally the first wake-up of the day) design today's look before the plan:
+  1. **Concept.** Pick an idea not used in the last 14 days (read the `days` log).
+     Draw on the GTA 6 world and its eras, never on real brands, TV channels,
+     newspapers or Rockstar's own pages. For example: a pawn-shop VHS tape, a Florida
+     tabloid, a detective's case file, golden hour on the Keys, motel neon, a police
+     thermal camera, a swamp night-vision trail cam, an 80s arcade cabinet, a Y2K chrome
+     music video, a true-crime documentary, a sports broadcast, a racing HUD, a
+     comic-book page, a luxury yacht brochure. The looks in `ready` (made, never used)
+     may be your starting point.
+  2. **Code.** Write `reels/src/looks/catalog/<id>.ts`: palette, fonts (from the table
+     in the README; the Arabic font from its Arabic list), `displayWidth`, captions,
+     hud, finish, grade, cut, enter, title, and `series` tweaks for at least
+     `GTA 6 NEWS`. Then write **at least one new piece of code of your own** for it in
+     `reels/src/looks/fx/`: a new caption style, top bar, finish, cut, title style, or
+     a new skin for a scene's cards. Add it as a NEW option (a new name in the union
+     in `looks/types.ts` and in its fx map): never change what an existing option
+     draws, and never change the classic path (no `style`), which the manual studio's
+     reels and every older episode use. Register the look in `reels/src/looks/index.ts`.
+  3. **Check.** `cd reels && npx tsc --noEmit` must pass. Then
+     `python reels/tools/look.py <id>` renders the newest episode in the new look
+     (`out/looks/<id>.jpg`), and `--frames 96,98,100,102,104` shows a cut. Look at every
+     frame like a layout check: readable captions (the spoken word must stand out),
+     big words not cut off, Arabic readable, top bar clean, effects subtle enough
+     that the footage still reads. Fix and check again until it is clean.
+  4. **Log.** Add `{date, id, name, mood, new_code: [...]}` to `days` in
+     `reels/looks.json` (and take the id out of `ready` if it was there).
+  If a new look can't be made clean, use the newest earlier look (not classic) and
+  say so in the report.
+
+Every reel made today sets `"style": "<today's look id>"` in `plan.reel`. The format
+still decides the scenes and the series label; the look decides how it all looks.
+
 ## 7. The plan (`plan.json`) and a layout check
 
 Copy the structure of `reels/episodes/002-chapter-1-money/plan.json`:
@@ -172,7 +212,7 @@ Copy the structure of `reels/episodes/002-chapter-1-money/plan.json`:
 `rating`, `sources`, `footage {name: {parts: [{url, channel, start, dur, x, slow?}]}}`,
 `stills {file.png: {url, at, crop: [w, h, x, y], width}}`, `music {style: mystery|money,
 bpm, seed, drop, break, back, outro}`, and `reel {series: "SECRET FILE", duration,
-musicVolume: 0.42, scenes, sfx}`.
+musicVolume: 0.42, style: "<today's look id>", scenes, sfx}`.
 
 Scenes (fields in `reels/src/types.ts`; each has `from`/`to` in seconds and a `broll`
 naming a footage shot): `hook` (stamp + kicker + giant title; `ufo` or `counter`
@@ -194,7 +234,7 @@ Retention in the edit:
   a card, a zoom, a stamp or a sound.
 - Build to the payoff: the most striking visual (proof card, trophy, payout,
   twist) is saved for the last third, with an impact sound when it lands.
-- Vary the look between episodes: not the same scene order every time, and a
+- Vary the edit between episodes: not the same scene order every time, and a
   music style and seed that differ from the last two episodes. For news, a
   breaking-news style hook (a red "BREAKING" stamp) is fine.
 Sound effects (in `reels/public/sfx/`: whoosh, impact, glitch, riser, ufo, tick,
@@ -219,20 +259,23 @@ frames from it.
 
 ```bash
 git add reels/episodes/NNN-slug reels/ideas.json
+git add reels/looks.json reels/src reels/public/fonts reels/public/textures   # a new look, if you made one
 git commit -m "Reels: episode NNN — <topic>"
 git fetch -q origin ccr-cceae731-x5d03t && git merge -q --no-edit origin/ccr-cceae731-x5d03t
 git push origin HEAD:ccr-cceae731-x5d03t
 ```
 
 Commit only the plan folder's small files (plan.json, script.txt, voice.mp3,
-alignment.json, any .png) — never rendered video or audio. Then start the
+alignment.json, any .png) and, on a new look's day, its code, fonts and textures —
+never rendered video or audio. The workflow renders from the pushed branch, so the
+look must be pushed before the workflow starts. Then start the
 workflow with the GitHub tools: run workflow `reel.yml` in
 `alikizzeldin/Clipping-h2jaan` on ref `ccr-cceae731-x5d03t` with input
 `episode` = the folder name. Record `queued_at` in the folder's `status.json`.
 
 ## 9. Report
 
-End with three lines: the reel made (title, format, score, voice engine), what
+End with three lines: the reel made (title, format, score, voice engine, look), what
 was posted or queued, and anything that needs the owner (an allowance running
 out, a failed run).
 
@@ -245,3 +288,5 @@ out, a failed run).
   No copyrighted music: the music is composed in code by `reels/tools/music.py`.
 - Never post more than one reel per wake-up. Never edit the clip agent's
   settings (`config.yaml`), the dashboard, or other workflows from here.
+- Never change how the classic look renders (reels without a `style`): the manual
+  studio's reels and every older episode depend on it.

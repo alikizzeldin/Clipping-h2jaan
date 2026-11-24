@@ -416,6 +416,7 @@ export type Sfx = {src: string; at: number; volume?: number};
 
 export type Reel = {
   series: string; // e.g. "SECRET FILE"
+  style?: string; // the day's look (reels/src/looks/catalog); none = classic
   episode: number;
   duration: number; // seconds
   voice: string;

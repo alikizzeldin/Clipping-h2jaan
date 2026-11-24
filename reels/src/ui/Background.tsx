@@ -4,6 +4,8 @@ import {noise2D} from '@remotion/noise';
 import {Broll} from '../types';
 import {clamp} from './motion';
 import {interpolate} from 'remotion';
+import {look} from '../looks/state';
+import {FinishStack} from '../looks/fx/finish';
 
 const GRADES: Record<string, string> = {
   night: 'linear-gradient(180deg, rgba(10,8,40,0.55) 0%, rgba(30,0,60,0.15) 45%, rgba(5,5,20,0.8) 100%)',
@@ -17,6 +19,7 @@ export const Background: React.FC<{broll?: Broll; shake?: number}> = ({broll, sh
   const frame = useCurrentFrame();
   const {durationInFrames} = useVideoConfig();
   if (!broll) return <AbsoluteFill style={{background: '#06060F'}} />;
+  const grade = look().grade;
   const [z0, z1] = broll.zoom ?? [1.06, 1.16];
   const zoom = interpolate(frame, [0, durationInFrames], [z0, z1], clamp);
   const dx = noise2D('x', frame / 14, 0) * shake;
@@ -26,7 +29,7 @@ export const Background: React.FC<{broll?: Broll; shake?: number}> = ({broll, sh
       <AbsoluteFill
         style={{
           transform: `translate(${dx}px, ${dy}px) scale(${zoom})`,
-          filter: `${broll.blur ? `blur(${broll.blur}px) ` : ''}saturate(1.15) contrast(1.05)`,
+          filter: `${broll.blur ? `blur(${broll.blur}px) ` : ''}${grade.duotone ? 'grayscale(1) contrast(1.2)' : 'saturate(1.15) contrast(1.05)'} ${grade.filter ?? ''}`,
         }}
       >
         <OffthreadVideo
@@ -36,6 +39,13 @@ export const Background: React.FC<{broll?: Broll; shake?: number}> = ({broll, sh
           style={{width: '100%', height: '100%', objectFit: 'cover'}}
         />
       </AbsoluteFill>
+      {grade.duotone ? (
+        <>
+          <AbsoluteFill style={{background: grade.duotone[1], mixBlendMode: 'multiply'}} />
+          <AbsoluteFill style={{background: grade.duotone[0], mixBlendMode: 'screen'}} />
+        </>
+      ) : null}
+      {grade.tint ? <AbsoluteFill style={{background: grade.tint, mixBlendMode: (grade.blend ?? 'soft-light') as React.CSSProperties['mixBlendMode'], opacity: grade.amount ?? 0.35}} /> : null}
       <AbsoluteFill style={{background: GRADES[broll.grade ?? 'night']}} />
       {broll.dim ? <AbsoluteFill style={{background: `rgba(0,0,0,${broll.dim})`}} /> : null}
     </AbsoluteFill>
@@ -45,6 +55,8 @@ export const Background: React.FC<{broll?: Broll; shake?: number}> = ({broll, sh
 // Film grain, vignette and faint scanlines over everything: the "premium" finish.
 export const Finish: React.FC = () => {
   const frame = useCurrentFrame();
+  const fx = look().finish;
+  if (look().id !== 'classic') return <FinishStack fx={fx} />;
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
       <AbsoluteFill

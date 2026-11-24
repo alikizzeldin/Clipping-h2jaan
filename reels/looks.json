@@ -1,0 +1,22 @@
+{
+ "note": "One look per UTC day (reels/PLAYBOOK.md, 'The look of the day'). 'days' is the log, newest last. 'ready' lists looks made but not used yet.",
+ "days": [
+  {
+   "date": "2026-11-24",
+   "id": "leonida-sunset",
+   "name": "Leonida Sunset",
+   "mood": "Golden hour on the Keys: amber-to-pink gradients, chrome titles, light leaking into the lens, whip pans.",
+   "new_code": [
+    "the look engine (reels/src/looks: types, state, registry; reels.style in plan.json)",
+    "captions: box, karaoke, tape, stack",
+    "top bars: tape, case, ticker, minimal",
+    "finishes: vhs, halftone, paper, lightleak, dust, crt, bloom",
+    "cuts: flash, shutter, whip, glitch, iris, ink; scene entries: slide, rise, snap",
+    "titles: chrome, outline, neon, print",
+    "27 new open-licence fonts (display, mono, Arabic)",
+    "reels/tools/look.py (preview) and reels/tools/textures.py (paper texture)"
+   ]
+  }
+ ],
+ "ready": ["vice-tape", "leonida-herald", "evidence-locker"]
+}
