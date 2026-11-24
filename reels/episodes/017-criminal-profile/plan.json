@@ -1,0 +1,470 @@
+{
+ "episode": 17,
+ "kind": "feature",
+ "topic": "Criminal Profile: GTA 6 tracks what kind of criminal you are, separately for Jason and Lucia; hurting people who didn't need hurting pushes it from Professional toward Psycho; self-defense and a wanted level alone don't count; it changes how Focus refills and how aggressive the police are; at the worst profiles you can no longer surrender",
+ "title": {
+  "en": "GTA 6 is SECRETLY judging how you play 👀",
+  "ar": "GTA 6 تحكم عليك بالسر 👀"
+ },
+ "summary": "GTA 6 keeps a Criminal Profile on you, and Jason and Lucia each have their own. Hurt people who didn't need hurting and it slides from Professional toward Psycho; self-defense doesn't count, and a wanted level alone doesn't either. Your profile changes how Focus refills and how hard the police come for you, and push it too far and surrendering is off the table.",
+ "summary_ar": "قراند 6 تحفظ لك «ملف إجرامي»، ولكل من جيسون ولوسيا ملفه. إذا أذيت ناس ما يستاهلون، ينزلق ملفك من «محترف» لين «سايكو». الدفاع عن النفس ما ينحسب، ولا النجوم لحالها. الملف يغيّر كيف يتعبى الفوكس وكيف تهجم عليك الشرطة، وإذا زودتها… ما تقدر تستسلم.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6CriminalProfile",
+  "GTA6Secrets",
+  "JasonAndLucia",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 6,
+  "visual": 7,
+  "confidence": 7,
+  "score": 7.2
+ },
+ "sources": [
+  "https://www.redbull.com/us-en/gta-6-criminal-profile-levels-explained",
+  "https://www.dexerto.com/wikis/gta-6/criminal-profile-system/",
+  "https://beebom.com/gta-6-criminal-profile-explained/",
+  "https://www.g2a.com/news/gta-6-news/gta-6-criminal-profiles-explained/",
+  "https://metaforge.app/gta-6/gta-6-criminal-profile-explained-all-5-levels-and-how-to-change-them",
+  "https://meowdb.com/gta6/criminal-profile",
+  "https://www.sportskeeda.com/esports/what-happens-become-irredeemable-gta-6-can-come-back-it"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 17.4,
+     "dur": 3.5,
+     "x": 450
+    }
+   ]
+  },
+  "walk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 10.4,
+     "dur": 4.8,
+     "x": 500
+    }
+   ]
+  },
+  "fight": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 1.5,
+     "dur": 5.4,
+     "x": 760
+    }
+   ]
+  },
+  "drive": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 100.0,
+     "dur": 4.3,
+     "x": 700
+    }
+   ]
+  },
+  "swat": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 12.6,
+     "dur": 4.4,
+     "x": 700
+    }
+   ]
+  },
+  "kneel": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 8.8,
+     "dur": 3.7,
+     "x": 760
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.9,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 104,
+  "seed": 163,
+  "drop": 3.32,
+  "break": 21.55,
+  "back": 23.12,
+  "outro": 25.12
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "episode": 17,
+  "duration": 28.9,
+  "musicVolume": 0.42,
+  "style": "leonida-sunset",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.32,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "HIDDEN SYSTEM",
+    "kicker": "GTA 6 IS SECRETLY",
+    "title": [
+     "JUDGING",
+     "YOU"
+    ],
+    "color": "red",
+    "tag": "…every move.",
+    "tagAt": 2.7,
+    "ar": "اللعبة تحكم عليك… بالسر"
+   },
+   {
+    "type": "profile",
+    "from": 3.32,
+    "to": 7.92,
+    "broll": {
+     "src": "walk",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "THE SYSTEM",
+    "title": "CRIMINAL PROFILE",
+    "titleAt": 0.6,
+    "left": "PROFESSIONAL",
+    "right": "PSYCHO",
+    "people": [
+     {
+      "name": "Jason",
+      "at": 2.2,
+      "value": 0.22
+     },
+     {
+      "name": "Lucia",
+      "at": 2.64,
+      "value": 0.38
+     }
+    ],
+    "ar": "لكل من جيسون ولوسيا ملفه الخاص"
+   },
+   {
+    "type": "profile",
+    "from": 7.92,
+    "to": 13.12,
+    "broll": {
+     "src": "fight",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "step": "02",
+    "label": "THE SCALE",
+    "title": "HURT PEOPLE?",
+    "titleAt": 0.15,
+    "left": "PROFESSIONAL",
+    "right": "PSYCHO",
+    "needle": {
+     "from": 0.1,
+     "to": 0.95,
+     "startAt": 2.1,
+     "endAt": 4.08
+    },
+    "ar": "تأذي ناس ما يستاهلون؟ ينزلق ملفك لسايكو"
+   },
+   {
+    "type": "scan",
+    "from": 13.12,
+    "to": 17.28,
+    "broll": {
+     "src": "drive",
+     "grade": "warm",
+     "dim": 0.15,
+     "zoom": [
+      1.03,
+      1.12
+     ]
+    },
+    "step": "03",
+    "label": "DOESN'T COUNT",
+    "target": {
+     "x": 540,
+     "y": 790,
+     "w": 760,
+     "h": 480
+    },
+    "checks": [
+     {
+      "text": "SELF-DEFENSE",
+      "at": 0.9
+     },
+     {
+      "text": "A WANTED LEVEL ALONE",
+      "at": 3.1
+     }
+    ],
+    "hud": "● NOT HELD AGAINST YOU",
+    "ar": "الدفاع عن النفس ما ينحسب… ولا النجوم لحالها"
+   },
+   {
+    "type": "list",
+    "from": 17.28,
+    "to": 21.55,
+    "broll": {
+     "src": "swat",
+     "grade": "night",
+     "dim": 0.15,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "IT CHANGES",
+    "label": "YOUR PROFILE",
+    "cardAt": 0.08,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "HOW FOCUS REFILLS",
+      "status": "CHANGES",
+      "ok": false,
+      "alert": true,
+      "at": 1.12,
+      "icon": "eye"
+     },
+     {
+      "text": "HOW HARD COPS COME",
+      "status": "CHANGES",
+      "ok": false,
+      "alert": true,
+      "at": 2.88,
+      "icon": "siren"
+     }
+    ],
+    "ar": "ويغيّر الفوكس… وقوة هجوم الشرطة"
+   },
+   {
+    "type": "reveal",
+    "from": 21.55,
+    "to": 25.12,
+    "captions": false,
+    "broll": {
+     "src": "kneel",
+     "grade": "night",
+     "dim": 0.2,
+     "blur": 2,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "PUSH IT TOO FAR…",
+    "slamAt": 1.57,
+    "color": "red",
+    "lines": [
+     {
+      "text": "YOU CAN'T",
+      "at": 1.57,
+      "size": 170
+     },
+     {
+      "text": "SURRENDER",
+      "at": 2.01,
+      "color": "red",
+      "size": 220
+     }
+    ],
+    "ar": "وإذا زودتها… ما تقدر تستسلم"
+   },
+   {
+    "type": "cta",
+    "from": 25.12,
+    "to": 28.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.84,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 2.4,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 2.7,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.26,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 3.92,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.52,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.96,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.86,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 10.0,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.0,
+    "volume": 0.6
+   },
+   {
+    "src": "error.wav",
+    "at": 12.02,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.06,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 13.3,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.02,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.22,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.22,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 18.4,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 20.16,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.5,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.12,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 23.14,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.56,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.06,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.14,
+    "volume": 0.5
+   }
+  ]
+ }
+}

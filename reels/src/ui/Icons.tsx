@@ -150,6 +150,18 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
           <path d="M40 72 C33 72 30 66 32 60 C34 54 40 52 40 46 C46 52 48 58 46 64 C45 69 43 72 40 72 Z" {...common} />
         </>
       ) : null}
+      {name === 'eye' ? (
+        <>
+          <path d="M6 40 C18 20 30 14 40 14 C50 14 62 20 74 40 C62 60 50 66 40 66 C30 66 18 60 6 40 Z" {...common} />
+          <circle cx="40" cy="40" r="11" {...common} />
+        </>
+      ) : null}
+      {name === 'siren' ? (
+        <>
+          <path d="M20 60 V42 C20 30 29 22 40 22 C51 22 60 30 60 42 V60" {...common} />
+          <path d="M12 66 H68 M40 8 V14 M16 18 L21 23 M64 18 L59 23" {...common} />
+        </>
+      ) : null}
     </svg>
   );
 };

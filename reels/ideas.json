@@ -1198,5 +1198,123 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-24",
+  "wake_up": "08:41 UTC",
+  "ideas": [
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "Criminal Profile: GTA 6 tracks what kind of criminal you are, separately for Jason and Lucia; hurting people who didn't need hurting pushes it from Professional toward Psycho; self-defense and a wanted level alone don't count; it changes how Focus refills and how aggressive the police are; at the worst profiles you can no longer surrender",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 7,
+    "score": 7.2,
+    "chosen": "017-criminal-profile",
+    "why_not": null,
+    "sources": [
+     "https://www.redbull.com/us-en/gta-6-criminal-profile-levels-explained",
+     "https://www.dexerto.com/wikis/gta-6/criminal-profile-system/",
+     "https://beebom.com/gta-6-criminal-profile-explained/",
+     "https://www.g2a.com/news/gta-6-news/gta-6-criminal-profiles-explained/",
+     "https://metaforge.app/gta-6/gta-6-criminal-profile-explained-all-5-levels-and-how-to-change-them",
+     "https://meowdb.com/gta6/criminal-profile",
+     "https://www.sportskeeda.com/esports/what-happens-become-irredeemable-gta-6-can-come-back-it"
+    ],
+    "note": "Tier names differ between guides: only 'Professional' and 'Psycho' (in every list) are said. Left out: how to reset it and the ending effects (sources disagree)."
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Hidden trophy Let's Go Bowling: in the Hit Kingpin Bowling robbery (Kolt & Associates, Port Gellhorn) take the luxury watch, the Gutterball Moreland 850 shotgun and the safe (code 0300), then lose the cops",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "score under 7.0 and two SECRET FILEs in a row; no bowling-alley footage",
+    "sources": [
+     "https://www.truetrophies.com/t1155348/lets-go-bowling-trophy",
+     "https://metaforge.app/gta-6/gta-6-hit-kingpin-bowling-walkthrough",
+     "https://insider-gaming.com/complete-gta-6-trophy-list-how-to-get-all-trophies-achievements/"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Dubious Provenance (Chapter 3): give Halifax the statue (Crowex watch), trust him, spare him for the Vapid '32 Hustler and ~$2,500",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.7,
+    "chosen": null,
+    "why_not": "confidence 5: guides disagree on what each choice gives and whether the rest of the mission is lost",
+    "sources": [
+     "https://www.videogameschronicle.com/guide/gta-6-dubious-provenance-walkthrough-should-you-trust-halifax/",
+     "https://game8.co/games/GTA-6/archives/639213",
+     "https://gamerant.com/gta-6-halifax-give-statue-trust-choices/",
+     "https://howtovideogame.com/gta-6-can-you-trust-halifax/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Terminator 2 nod: in the hospital escape at the end of Chapter 1 a gunman walks in with a box of roses hiding a shotgun",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "story spoiler, no footage, score 6.1",
+    "sources": [
+     "https://www.comingsoon.net/games/news/2229679-gta-6-arnold-schwarzenegger-easter-egg",
+     "https://www.dreadcentral.com/gaming/598519/gta-6-horror-easter-eggs-2/",
+     "https://comicbook.com/gaming/list/5-of-the-best-movie-tv-easter-eggs-in-gta-6-including-a-tribute-to-paul-walker/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Scarface chainsaw bathroom: Apartment 3C in an Ocean Beach motel",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 5,
+    "score": 5.7,
+    "chosen": null,
+    "why_not": "only small guide sites; the address differs",
+    "sources": [
+     "https://gmtreks.com/gta6/page/01M7VYV9B4MK0MZNV5A9XQVE3S",
+     "https://gtavispot.com/map/easter-eggs/"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "GTA 6 hacker Arion Kurtaj pleaded guilty (Nov 16); sentencing was due Nov 23",
+    "demand": 5,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 4,
+    "visual": 3,
+    "confidence": 7,
+    "score": 4.6,
+    "chosen": null,
+    "why_not": "the plea is older than 48 hours and no sentencing report found from two major outlets",
+    "sources": [
+     "https://www.pcgamer.com/games/grand-theft-auto/grand-theft-auto-6-hacker-pleads-guilty-to-all-charges/",
+     "https://www.shacknews.com/article/151372/gta-6-hacker-guilty-plea"
+    ]
+   }
+  ]
  }
 ]

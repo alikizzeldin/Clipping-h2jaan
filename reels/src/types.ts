@@ -85,7 +85,7 @@ export type ListScene = Base & {
   label: string;
   fromLabel?: string; // e.g. "CHAPTER 1"
   toLabel?: string; // e.g. "CHAPTER 2"
-  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save' | 'ticket' | 'boat' | 'wave' | 'gun' | 'lock' | 'shop' | 'book' | 'paper' | 'pill' | 'barn' | 'flask' | 'alert' | 'ladder' | 'fire' | 'fish'; alert?: boolean}[];
+  items: {text: string; status: string; ok: boolean; at: number; icon: 'cash' | 'house' | 'bank' | 'car' | 'phone' | 'trophy' | 'save' | 'ticket' | 'boat' | 'wave' | 'gun' | 'lock' | 'shop' | 'book' | 'paper' | 'pill' | 'barn' | 'flask' | 'alert' | 'ladder' | 'fire' | 'fish' | 'eye' | 'siren'; alert?: boolean}[];
   ar?: string;
   arAt?: number;
   cardAt?: number; // when the list card rises (leave the footage clear until then)
@@ -404,13 +404,27 @@ export type MailboxScene = Base & {
   ar?: string;
 };
 
+export type ProfileScene = Base & {
+  type: 'profile';
+  step: string;
+  label: string;
+  title: string;
+  titleAt: number;
+  left: string; // the calm end of the scale, e.g. "PROFESSIONAL"
+  right: string; // the extreme end, e.g. "PSYCHO"
+  people?: {name: string; at: number; value: number}[]; // dossier cards, each with a mini gauge (value 0..1)
+  needle?: {from: number; to: number; startAt: number; endAt: number}; // one big gauge whose needle slides
+  flag?: {text: string; at: number}; // a stamp, e.g. when the needle hits the end
+  ar?: string;
+};
+
 export type Scene =
   | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
