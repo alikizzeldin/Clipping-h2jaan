@@ -1,5 +1,10 @@
 [
  {
+  "time": "2026-11-24T13:00:35+00:00",
+  "type": "error",
+  "text": "Publishing reel “GTA 6's money glitch STILL works 💰 (the patch missed it)” failed: Buffer refused the post (InvalidInputError): Invalid post: YouTube title cannot exceed 100 characters."
+ },
+ {
   "time": "2026-11-24T10:48:34+00:00",
   "type": "info",
   "text": "Ready to post by hand: “Is Rockstar's BOSS hiding in GTA 6? 👀 (Little Sam)”"
@@ -773,10 +778,5 @@
   "time": "2026-11-18T21:20:20+00:00",
   "type": "published",
   "text": "Published “Sa3dola's craziest GTA 6 moment 🤯 | أقوى لحظة لـ Sa3dola في GTA 6 🤯 #shorts” (cut by the agent)"
- },
- {
-  "time": "2026-11-18T21:09:51+00:00",
-  "type": "error",
-  "text": "Buffer could not publish “Hype's first day in GTA 6 🔥 | أول يوم لـ Hype في GTA 6 🔥 #shorts”: You've hit the daily video upload limit for an unverified YouTube account. Verify your account and retry sharing your post."
  }
 ]
