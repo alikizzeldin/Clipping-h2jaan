@@ -1266,5 +1266,104 @@
     "why_not": "already in ideas.json"
    }
   ]
+ },
+ {
+  "date": "2026-11-24",
+  "wake_up": "20:23 UTC (m136–m137; only 2 ideas passed the gate)",
+  "ideas": [
+   {
+    "idea": "Mandy serial-killer clues: in the Chapter 1 mission Pipework Jason pulls what looks like a human finger out of her blocked kitchen sink; after the mission the trunk of the green car in her driveway holds a cleaver, duct tape and pruning shears; Rockstar has never confirmed she is a killer",
+    "format": "SECRET FILE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 8,
+    "score": 8.0,
+    "chosen": "m136-mandy-clues",
+    "sources": [
+     "https://www.gamespot.com/articles/gta-6s-mandy-could-be-hiding-a-killer-secret/",
+     "https://beebom.com/gta-6-mandy-serial-killer/",
+     "https://fandomwire.com/gta-6-hidden-detail-why-you-shouldnt-trust-mandy/",
+     "https://www.technerdiness.com/gta/gta-6-mandy-serial-killer-theory/",
+     "https://www.dexerto.com/gta/gta-6-players-are-thirsting-over-character-who-might-actually-be-a-serial-killer-3429730/",
+     "https://www.keengamer.com/articles/news/gta-6s-mandy-goes-viral-on-launch-day-after-pipework-scene/",
+     "https://www.videogameschronicle.com/guide/gta-6-pipework-mission-walkthrough/"
+    ]
+   },
+   {
+    "idea": "Randy's Wish List: unlocks halfway through Chapter 3 after you steal a car for Randy; a listed car in perfect condition pays $30,000 or more (Pay 'n' Spray pays a few thousand), damage lowers the price, and 16 to 18 cars on the list add up to about half a million dollars",
+    "format": "MONEY FILE",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 7.5,
+    "chosen": "m137-randy-wishlist",
+    "sources": [
+     "https://timesaver.gg/tools/gta-6/money/randy-wish-list",
+     "https://timesaver.gg/tools/gta-6/money/pay-n-spray",
+     "https://www.gtabase.com/articles/gta-6/how-to-make-money-in-gta-6-full-money-making-guide",
+     "https://fandomwire.com/best-ways-to-make-money-quickly-in-gta-6-ranked/",
+     "https://www.powerpyx.com/?p=371138",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-car-contracts-guide-tools-trackers/"
+    ]
+   },
+   {
+    "idea": "WAiNK app: scan a parked car before stealing it (tracker, security tier, tool needed, fence value, registration cost)",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.95,
+    "why_not": "6.95, just under the 7.0 gate; guides list different scan fields"
+   },
+   {
+    "idea": "Auto-drive to a waypoint",
+    "why_not": "already in ideas.json"
+   },
+   {
+    "idea": "Sleep and diet tracking punish Jason and Lucia",
+    "why_not": "pre-release interview; the actual effects are not confirmed; close to episode 014"
+   },
+   {
+    "idea": "Seinfeld ASSMAN plate on Jason's car",
+    "why_not": "confidence 5: only one source places it in the game"
+   },
+   {
+    "idea": "WWE lookalikes (Seth Rollins backyard wrestler, Rhea Ripley dancer)",
+    "why_not": "single sources each; fan resemblance only"
+   },
+   {
+    "idea": "Jason's house repairs before Lucia returns",
+    "why_not": "low payoff (relationship only, no perks); guides disagree on 4 or 5 repairs"
+   },
+   {
+    "idea": "Free Kingfisher W-22 rifle at the Kingfisher Compound",
+    "why_not": "guides disagree on weapon names; weak gun, low payoff"
+   },
+   {
+    "idea": "Jewelry store robberies pay $10,000-$25,000",
+    "why_not": "too close to m133 (fences for jewelry); payout figures unconfirmed"
+   },
+   {
+    "idea": "Lucia's Chapter 1 meditation is missable",
+    "why_not": "already in ideas.json (Positive Mental Attitude)"
+   },
+   {
+    "idea": "Yago's street-race questline",
+    "why_not": "one payout figure from one guide; low payoff"
+   },
+   {
+    "idea": "Rocket launcher for $16,000 at Ammu-Nation",
+    "why_not": "single source"
+   }
+  ]
  }
 ]

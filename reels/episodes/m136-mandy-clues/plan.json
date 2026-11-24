@@ -1,0 +1,457 @@
+{
+ "manual": true,
+ "episode": 136,
+ "kind": "secret",
+ "topic": "Mandy serial-killer clues: in the Chapter 1 mission Pipework Jason pulls what looks like a human finger out of her blocked kitchen sink; after the mission the trunk of the green car in her driveway holds a cleaver, duct tape and pruning shears; Rockstar has never confirmed she is a killer",
+ "title": {
+  "en": "Don't trust Mandy in GTA 6 🔪 (the clues are everywhere)",
+  "ar": "لا تثق في ماندي في GTA 6 🔪 الأدلة في كل مكان"
+ },
+ "summary": "In the Chapter 1 mission Pipework, Jason fixes Mandy's blocked kitchen sink and pulls out what looks like a human finger. After the mission, the trunk of the green car in her driveway holds a cleaver, duct tape and pruning shears. Rockstar has never said she's a killer, but players are convinced.",
+ "summary_ar": "في مهمة الفصل الأول Pipework، جيسون يصلّح مغسلة مطبخ ماندي ويطلع منها شي يشبه إصبع إنسان. وبعد المهمة، شنطة السيارة الخضراء اللي قدام بيتها فيها ساطور وشريط لاصق ومقص تقليم. روكستار ما قالت أبدًا إنها قاتلة، بس اللاعبين مقتنعين.",
+ "keywords": [
+  "GTA6",
+  "GTA6Mandy",
+  "GTA6Secrets",
+  "GTA6Theory",
+  "GTAVI",
+  "Pipework",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 9,
+  "visual": 4,
+  "confidence": 8,
+  "score": 8.0
+ },
+ "sources": [
+  "https://www.gamespot.com/articles/gta-6s-mandy-could-be-hiding-a-killer-secret/",
+  "https://beebom.com/gta-6-mandy-serial-killer/",
+  "https://fandomwire.com/gta-6-hidden-detail-why-you-shouldnt-trust-mandy/",
+  "https://www.technerdiness.com/gta/gta-6-mandy-serial-killer-theory/",
+  "https://www.dexerto.com/gta/gta-6-players-are-thirsting-over-character-who-might-actually-be-a-serial-killer-3429730/",
+  "https://www.keengamer.com/articles/news/gta-6s-mandy-goes-viral-on-launch-day-after-pipework-scene/",
+  "https://www.videogameschronicle.com/guide/gta-6-pipework-mission-walkthrough/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 1.0,
+     "dur": 4.1,
+     "x": 700
+    }
+   ]
+  },
+  "mission": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 4.6,
+     "x": 700
+    }
+   ]
+  },
+  "sink": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 12.0,
+     "dur": 3.2,
+     "x": 700
+    }
+   ]
+  },
+  "trunk": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 3.0,
+     "dur": 4.0,
+     "x": 700
+    }
+   ]
+  },
+  "items": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 7.5,
+     "dur": 3.0,
+     "x": 700
+    }
+   ]
+  },
+  "verdict": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 46.6,
+     "dur": 4.0,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 6.0,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 96,
+  "seed": 136,
+  "drop": 4.04,
+  "break": 8.56,
+  "back": 10.76,
+  "outro": 22.42
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "duration": 26.2,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.04,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "DON'T TRUST",
+    "title": [
+     "MANDY"
+    ],
+    "color": "red",
+    "tag": "…clues everywhere.",
+    "tagAt": 2.38,
+    "ar": "لا تثق في ماندي… الأدلة في كل مكان"
+   },
+   {
+    "type": "list",
+    "from": 4.04,
+    "to": 8.56,
+    "broll": {
+     "src": "mission",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "CH. 1",
+    "label": "THE MISSION",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "PIPEWORK",
+      "status": "CHAPTER 1",
+      "ok": true,
+      "at": 1.24,
+      "icon": "book"
+     },
+     {
+      "text": "FIX HER SINK",
+      "status": "BLOCKED",
+      "ok": false,
+      "alert": true,
+      "at": 3.4,
+      "icon": "alert"
+     }
+    ],
+    "ar": "في مهمة الفصل الأول «بايبورك»… جيسون يصلّح مغسلة مطبخها"
+   },
+   {
+    "type": "evidence",
+    "from": 8.56,
+    "to": 11.64,
+    "broll": {
+     "src": "sink",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 6
+    },
+    "step": "01",
+    "label": "THE SINK",
+    "caseTitle": "CASE FILE · MANDY",
+    "items": [
+     {
+      "n": 1,
+      "name": "HUMAN FINGER?",
+      "where": "KITCHEN SINK",
+      "icon": "finger",
+      "at": 2.2
+     }
+    ],
+    "ar": "ويطلع من المغسلة… شي يشبه إصبع إنسان"
+   },
+   {
+    "type": "list",
+    "from": 11.64,
+    "to": 15.58,
+    "broll": {
+     "src": "trunk",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "AFTER",
+    "label": "GO BACK",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "MISSION DONE",
+      "status": "GO BACK",
+      "ok": true,
+      "at": 0.3,
+      "icon": "house"
+     },
+     {
+      "text": "OPEN THE TRUNK",
+      "status": "LOOK",
+      "ok": true,
+      "at": 1.42,
+      "icon": "eye"
+     },
+     {
+      "text": "GREEN CAR",
+      "status": "HER DRIVEWAY",
+      "ok": true,
+      "at": 2.16,
+      "icon": "car"
+     }
+    ],
+    "ar": "بعد المهمة، افتح شنطة السيارة الخضراء اللي قدام بيتها"
+   },
+   {
+    "type": "evidence",
+    "from": 15.58,
+    "to": 18.48,
+    "broll": {
+     "src": "items",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 6
+    },
+    "step": "02",
+    "label": "THE TRUNK",
+    "caseTitle": "CASE FILE · MANDY",
+    "items": [
+     {
+      "n": 2,
+      "name": "CLEAVER",
+      "where": "CAR TRUNK",
+      "icon": "cleaver",
+      "at": 0.1
+     },
+     {
+      "n": 3,
+      "name": "DUCT TAPE",
+      "where": "CAR TRUNK",
+      "icon": "tape",
+      "at": 0.8
+     },
+     {
+      "n": 4,
+      "name": "PRUNING SHEARS",
+      "where": "CAR TRUNK",
+      "icon": "shears",
+      "at": 1.66
+     }
+    ],
+    "ar": "ساطور، شريط لاصق، ومقص تقليم"
+   },
+   {
+    "type": "reveal",
+    "from": 18.48,
+    "to": 22.42,
+    "captions": false,
+    "broll": {
+     "src": "verdict",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "pre": "IS SHE A KILLER?",
+    "slamAt": 1.48,
+    "color": "red",
+    "lines": [
+     {
+      "text": "NOT CONFIRMED",
+      "at": 1.48,
+      "color": "gold",
+      "size": 140
+     },
+     {
+      "text": "PLAYERS: CONVINCED",
+      "at": 2.96,
+      "color": "red",
+      "size": 100
+     }
+    ],
+    "ar": "روكستار ما قالت أبدًا إنها قاتلة… بس اللاعبين مقتنعين"
+   },
+   {
+    "type": "cta",
+    "from": 22.42,
+    "to": 26.2,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRETS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.5,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.36,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.98,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.26,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 7.42,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.5,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 10.76,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 10.78,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.58,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.94,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.06,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.8,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.52,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 15.68,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.38,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.24,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.42,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.96,
+    "volume": 0.65
+   },
+   {
+    "src": "error.wav",
+    "at": 21.44,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.36,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.44,
+    "volume": 0.5
+   }
+  ]
+ }
+}

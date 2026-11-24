@@ -1,0 +1,376 @@
+{
+ "manual": true,
+ "episode": 137,
+ "kind": "money",
+ "topic": "Randy's Wish List: unlocks halfway through Chapter 3 after you steal a car for Randy; a listed car in perfect condition pays $30,000 or more (Pay 'n' Spray pays a few thousand), damage lowers the price, and 16 to 18 cars on the list add up to about half a million dollars",
+ "title": {
+  "en": "Stop selling stolen cars at Pay 'n' Spray in GTA 6 🚗 (Randy pays $30K)",
+  "ar": "لا تبيع سياراتك المسروقة بالرخيص في GTA 6 🚗 راندي يدفع 30 ألف"
+ },
+ "summary": "Pay 'n' Spray only pays a few thousand dollars per stolen car. Halfway through Chapter 3, after you steal a car for Randy, his Wish List unlocks: a car from the list in perfect condition pays $30,000 or more, every scratch lowers the price, and with 16 to 18 cars on the list that's about half a million dollars.",
+ "summary_ar": "Pay 'n' Spray يدفع بس كم ألف دولار للسيارة المسروقة. في منتصف الفصل الثالث، بعد ما تسرق سيارة لراندي، تنفتح قائمة طلباته: سيارة من القائمة بحالة ممتازة تجيب ثلاثين ألف دولار أو أكثر، وكل خدش ينقص السعر، ومع ١٦ إلى ١٨ سيارة في القائمة يعني حوالي نص مليون دولار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Tips",
+  "GTA6Cars",
+  "GTAVI",
+  "RandyWishList",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 7,
+  "score": 7.5
+ },
+ "sources": [
+  "https://timesaver.gg/tools/gta-6/money/randy-wish-list",
+  "https://timesaver.gg/tools/gta-6/money/pay-n-spray",
+  "https://www.gtabase.com/articles/gta-6/how-to-make-money-in-gta-6-full-money-making-guide",
+  "https://fandomwire.com/best-ways-to-make-money-quickly-in-gta-6-ranked/",
+  "https://www.powerpyx.com/?p=371138",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-car-contracts-guide-tools-trackers/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 4.55,
+     "x": 1000
+    }
+   ]
+  },
+  "unlock": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 5.55,
+     "x": 1000
+    }
+   ]
+  },
+  "receipt": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 2.0,
+     "dur": 4.4,
+     "x": 700
+    },
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 8.0,
+     "dur": 4.9,
+     "x": 700
+    }
+   ]
+  },
+  "total": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 4.8,
+     "x": 1100
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 14.0,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 122,
+  "seed": 137,
+  "drop": 4.52,
+  "break": 19.24,
+  "back": 22.36,
+  "outro": 23.98
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 27.7,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.52,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "STOP SELLING YOUR",
+    "title": [
+     "STOLEN",
+     "CARS"
+    ],
+    "color": "red",
+    "tag": "…for a few thousand.",
+    "tagAt": 2.7,
+    "ar": "لا تبيع سياراتك المسروقة بكم ألف دولار"
+   },
+   {
+    "type": "list",
+    "from": 4.52,
+    "to": 10.02,
+    "broll": {
+     "src": "unlock",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "CH. 3",
+    "label": "HOW IT UNLOCKS",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "HALFWAY THROUGH",
+      "status": "CHAPTER 3",
+      "ok": true,
+      "at": 0.58,
+      "icon": "book"
+     },
+     {
+      "text": "STEAL A CAR",
+      "status": "FOR RANDY",
+      "ok": true,
+      "at": 2.14,
+      "icon": "car"
+     },
+     {
+      "text": "WISH LIST",
+      "status": "UNLOCKED",
+      "ok": true,
+      "at": 4.16,
+      "icon": "paper"
+     }
+    ],
+    "ar": "في منتصف الفصل الثالث… بعد ما تسرق سيارة لراندي، تنفتح قائمة طلباته"
+   },
+   {
+    "type": "receipt",
+    "from": 10.02,
+    "to": 19.24,
+    "broll": {
+     "src": "receipt",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 5
+    },
+    "step": "$$",
+    "label": "RANDY PAYS",
+    "title": "RANDY'S WISH LIST",
+    "lines": [
+     {
+      "text": "1 CAR FROM THE LIST",
+      "at": 0.44
+     },
+     {
+      "text": "CONDITION",
+      "amount": "PERFECT",
+      "at": 1.88,
+      "color": "green"
+     },
+     {
+      "text": "YOU GET",
+      "amount": "$30,000+",
+      "at": 3.48,
+      "color": "green",
+      "big": true
+     },
+     {
+      "text": "EVERY SCRATCH",
+      "amount": "- LESS",
+      "at": 6.32,
+      "color": "red"
+     }
+    ],
+    "stamp": {
+     "text": "DRIVE CAREFULLY",
+     "at": 8.14,
+     "color": "red"
+    },
+    "ar": "سيارة من القائمة بحالة ممتازة = ثلاثين ألف دولار أو أكثر… وكل خدش ينقص السعر"
+   },
+   {
+    "type": "reveal",
+    "from": 19.24,
+    "to": 23.98,
+    "captions": false,
+    "broll": {
+     "src": "total",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 2,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "16-18 CARS…",
+    "slamAt": 3.12,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "HALF A MILLION",
+      "at": 3.12,
+      "color": "gold",
+      "size": 130
+     },
+     {
+      "text": "ABOUT $500,000",
+      "at": 3.74,
+      "color": "green",
+      "size": 90
+     }
+    ],
+    "ar": "من ١٦ إلى ١٨ سيارة في القائمة… يعني حوالي نص مليون دولار"
+   },
+   {
+    "type": "cta",
+    "from": 23.98,
+    "to": 27.7,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE MONEY TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.82,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.68,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.46,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.1,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.66,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.68,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.96,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.46,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.9,
+    "volume": 0.35
+   },
+   {
+    "src": "cash.wav",
+    "at": 13.5,
+    "volume": 0.55
+   },
+   {
+    "src": "error.wav",
+    "at": 16.34,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 18.16,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.18,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.36,
+    "volume": 0.65
+   },
+   {
+    "src": "coins.wav",
+    "at": 22.4,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.92,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.0,
+    "volume": 0.5
+   }
+  ]
+ }
+}

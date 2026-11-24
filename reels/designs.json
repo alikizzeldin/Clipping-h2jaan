@@ -3,6 +3,38 @@
   "entries": [
     {
       "date": "2026-11-24",
+      "episode": "m134-little-sam",
+      "scene": "credits",
+      "variant": "rolling end credits",
+      "new": true,
+      "note": "credits roll and stop on one highlighted line (logged after the fact; designs.json did not exist yet)"
+    },
+    {
+      "date": "2026-11-24",
+      "episode": "m135-star-djs",
+      "scene": "radio, credits",
+      "variant": "car stereo tuner; rolling end credits",
+      "new": true,
+      "note": "radio: LCD tunes through static to a station with host and a note chip (logged after the fact)"
+    },
+    {
+      "date": "2026-11-24",
+      "episode": "m136-mandy-clues",
+      "scene": "evidence",
+      "variant": "case file + evidence bags",
+      "new": true,
+      "note": "manila case-file tab, evidence bags with drawn exhibits (finger, cleaver, duct tape, shears), numbered yellow markers and a camera flash; one exhibit = big centred bag"
+    },
+    {
+      "date": "2026-11-24",
+      "episode": "m137-randy-wishlist",
+      "scene": "receipt",
+      "variant": "thermal receipt + rubber stamp",
+      "new": true,
+      "note": "receipt hangs from a printer slot and grows line by line (torn edge at the bottom), big total row, a rubber stamp lands at the end"
+    },
+    {
+      "date": "2026-11-24",
       "episode": "-",
       "scene": "location",
       "variant": "gps, paper, neon, radar, image",

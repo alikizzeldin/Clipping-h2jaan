@@ -451,6 +451,28 @@ export type RadioScene = Base & {
   ar?: string;
 };
 
+// A case file of evidence bags, each with a numbered marker, photographed one by one.
+export type EvidenceScene = Base & {
+  type: 'evidence';
+  step: string;
+  label: string;
+  caseTitle: string; // e.g. "CASE FILE · MANDY"
+  items: {n: number; name: string; where: string; icon: 'finger' | 'cleaver' | 'tape' | 'shears'; at: number}[];
+  ar?: string;
+};
+
+// A thermal receipt prints line by line from a slot; an optional rubber stamp lands on it.
+export type ReceiptScene = Base & {
+  type: 'receipt';
+  step: string;
+  label: string;
+  title: string;
+  sub?: string;
+  lines: {text: string; amount?: string; at: number; color?: string; big?: boolean}[];
+  stamp?: {text: string; at: number; color?: string};
+  ar?: string;
+};
+
 export type LoopScene = Base & {
   type: 'loop';
   step: string;
@@ -467,7 +489,7 @@ export type Scene =
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
