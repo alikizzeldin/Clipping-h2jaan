@@ -30,6 +30,7 @@ import {Alt, Boost, Chain, Consoles, FgApp} from './scenes/Fps';
 import {Photos} from './scenes/Photos';
 import {Profile} from './scenes/Profile';
 import {Loop} from './scenes/Loop';
+import {Trunk} from './scenes/Trunk';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 import {applyLook, look} from './looks/state';
@@ -78,6 +79,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'receipt': return <Receipt s={s} />;
     case 'profile': return <Profile s={s} />;
     case 'loop': return <Loop s={s} />;
+    case 'trunk': return <Trunk s={s} />;
     case 'photos': return <Photos s={s} />;
   }
 };

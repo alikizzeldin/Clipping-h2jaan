@@ -483,13 +483,30 @@ export type LoopScene = Base & {
   ar?: string;
 };
 
+// A car seen from behind: the trunk opens, what's inside rises out as cards; optionally it burns.
+export type TrunkScene = Base & {
+  type: 'trunk';
+  step: string;
+  label: string;
+  title?: string;
+  titleAt?: number;
+  color?: string; // palette slot for the car (default red)
+  openAt: number; // seconds into the scene; 0 or less = already open
+  items: {name: string; sub?: string; icon: 'gascan' | 'revolver' | 'cash'; at: number; hero?: boolean}[];
+  heroChip?: {text: string; at: number}; // e.g. UNIQUE, on the hero card
+  burnAt?: number; // the car goes up in flames, the cards turn grey
+  gone?: {text: string; at: number}; // a stamp over the cards
+  note?: {text: string; at: number}; // a chip under the cards
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
