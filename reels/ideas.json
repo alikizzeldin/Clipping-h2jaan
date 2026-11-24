@@ -1316,5 +1316,118 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-24",
+  "wake_up": "12:41 UTC",
+  "ideas": [
+   {
+    "format": "MONEY FILE",
+    "idea": "Single-player money glitch that update 01.002.002 did not fix: the abandoned red barn northeast of Hamlet (South Vice-Dale); fill stash bags with its cocaine and cash, load up to four into your car's trunk, save and reload: the bags stay, the barn's loot comes back; $8,000+ a run",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 7,
+    "score": 7.7,
+    "chosen": "018-barn-glitch",
+    "why_not": null,
+    "sources": [
+     "https://www.notebookcheck.net/New-GTA-6-update-leaves-infinite-money-glitch-untouched.1457986.0.html",
+     "https://comicbook.com/gaming/news/gta-6-money-infinite-glitch-bug-update/",
+     "https://www.tweaktown.com/news/114814/gta-6-already-has-an-infinite-money-glitch-but-many-players-are-skipping-it/index.html",
+     "https://www.ladbible.com/entertainment/gaming/gta-6-infinite-money-glitch-jason-994211-20261121",
+     "https://insider-gaming.com/gta-6-infinite-money-glitch/",
+     "https://leonipedia.com/guides/money-glitch/"
+    ],
+    "note": "Single-player only (no online play to harm). Payout said as '$8,000 or more' (sources give $8k-$11k); left out which chapter it opens in (sources disagree) and where to sell."
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "Take-Two: 32.5 million units sold through launch day, $3.79 billion day-one sales",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 3,
+    "visual": 4,
+    "confidence": 9,
+    "score": 6.0,
+    "chosen": null,
+    "why_not": "announced Nov 20 (over 48 hours ago) and the manual studio covered the record launch (m107)",
+    "sources": [
+     "https://www.cnbc.com/2026/11/20/take-two-sales-as-gta-vi-launches-to-massive-fanfare.html",
+     "https://www.gamespot.com/articles/gta-6-hit-32-5-million-copies-sold-and-almost-4-billion-on-day-one/"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "Bank vaults: Yasmani's 'That's Where The Money Is…' unlocks big vaults (up to ~$205,000)",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 6,
+    "score": 7.2,
+    "chosen": null,
+    "why_not": "still confidence 6: payouts, unlock chapter and Yasmani's location differ",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-all-bank-jobs-locations-bank-vaults/",
+     "https://timesaver.gg/tools/gta-6/money/bank-vaults"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Collateral hitman random encounter (Harborside Park, Vice Beach)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 8,
+    "score": 6.8,
+    "chosen": null,
+    "why_not": "score 6.8: random trigger, nothing to go and find",
+    "sources": [
+     "https://www.comingsoon.net/games/news/2228502-gta-6-tom-cruise-collateral-easter-egg-npc-mission",
+     "https://onpoint4gamers.com/gta-6-tom-cruise-collateral-npc-hostage/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Hidden trophy Let's Go Bowling (Hit Kingpin Bowling: watch, Gutterball shotgun, safe 0300)",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "score 6.6; no footage of the bowling alley",
+    "sources": [
+     "https://www.truetrophies.com/t1155348/lets-go-bowling-trophy",
+     "https://metaforge.app/gta-6/gta-6-hit-kingpin-bowling-walkthrough"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "NPCs in an early mission talk about GTA 5's Mount Chiliad mystery",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 5,
+    "visual": 3,
+    "confidence": 7,
+    "score": 5.4,
+    "chosen": null,
+    "why_not": "only a voice line, nothing to show",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-gta-5-mount-chiliad-mystery-easter-egg-802897-20261120",
+     "https://www.gamingbible.com/news/gta-6-easter-eggs-778903-20261120"
+    ]
+   }
+  ]
  }
 ]

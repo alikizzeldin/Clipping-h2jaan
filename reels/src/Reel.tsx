@@ -27,6 +27,7 @@ import {Compare, Headline, Heat, Radar, Saves} from './scenes/Manual2';
 import {Comic, Credits, Health, Mailbox, Radio} from './scenes/Manual3';
 import {Alt, Boost, Chain, Consoles, FgApp} from './scenes/Fps';
 import {Profile} from './scenes/Profile';
+import {Loop} from './scenes/Loop';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 import {applyLook, look} from './looks/state';
@@ -72,6 +73,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'credits': return <Credits s={s} />;
     case 'radio': return <Radio s={s} />;
     case 'profile': return <Profile s={s} />;
+    case 'loop': return <Loop s={s} />;
   }
 };
 

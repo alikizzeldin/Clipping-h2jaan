@@ -436,13 +436,23 @@ export type RadioScene = Base & {
   ar?: string;
 };
 
+export type LoopScene = Base & {
+  type: 'loop';
+  step: string;
+  label: string;
+  nodes: {text: string; at: number}[]; // steps round a ring, clockwise from the top; each lights up at `at`
+  center: string; // the word in the middle, e.g. "REPEAT"
+  centerAt: number;
+  ar?: string;
+};
+
 export type Scene =
   | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

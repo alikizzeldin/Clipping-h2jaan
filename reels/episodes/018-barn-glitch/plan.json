@@ -1,0 +1,466 @@
+{
+ "episode": 18,
+ "kind": "money",
+ "topic": "Single-player money glitch that update 01.002.002 did not fix: the abandoned red barn northeast of Hamlet (South Vice-Dale); fill stash bags with its cocaine and cash, load up to four into your car's trunk, save and reload: the bags stay, the barn's loot comes back; $8,000+ a run",
+ "title": {
+  "en": "GTA 6's money glitch STILL works 💰 (the patch missed it)",
+  "ar": "ثغرة الفلوس في GTA 6 لسا شغالة 💰"
+ },
+ "summary": "Rockstar's first GTA 6 update (01.002.002) didn't fix the single-player money glitch. Drive to the abandoned red barn northeast of Hamlet, fill stash bags with the cocaine and cash inside, load up to four bags into your car's trunk, then save and reload: the bags stay in your trunk and the barn fills up again. That's $8,000 or more every run, until Rockstar patches it.",
+ "summary_ar": "أول تحديث لقراند 6 ما صلّح ثغرة الفلوس في القصة. روح للحظيرة الحمرا المهجورة شمال شرق هاملت، عبّي شنط بالكوكايين والكاش اللي فيها، حط لين أربع شنط بشنطة سيارتك، وبعدين احفظ وأعد التحميل: الشنط تبقى والحظيرة تتعبى من جديد. يعني ٨ آلاف دولار أو أكثر كل مرة… لين ما تصلحها روكستار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6MoneyGlitch",
+  "GTA6Tips",
+  "MoneyGlitch",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 6,
+  "visual": 6,
+  "confidence": 7,
+  "score": 7.7
+ },
+ "sources": [
+  "https://www.notebookcheck.net/New-GTA-6-update-leaves-infinite-money-glitch-untouched.1457986.0.html",
+  "https://comicbook.com/gaming/news/gta-6-money-infinite-glitch-bug-update/",
+  "https://www.tweaktown.com/news/114814/gta-6-already-has-an-infinite-money-glitch-but-many-players-are-skipping-it/index.html",
+  "https://www.ladbible.com/entertainment/gaming/gta-6-infinite-money-glitch-jason-994211-20261121",
+  "https://insider-gaming.com/gta-6-infinite-money-glitch/",
+  "https://leonipedia.com/guides/money-glitch/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 11.8,
+     "dur": 4.4,
+     "x": 560
+    }
+   ]
+  },
+  "news": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 14.0,
+     "dur": 2.7,
+     "x": 900
+    }
+   ]
+  },
+  "rural": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 7.4,
+     "dur": 3.3,
+     "x": 600
+    }
+   ]
+  },
+  "bags": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 26.0,
+     "dur": 2.6,
+     "x": 480
+    },
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 47.4,
+     "dur": 3.5,
+     "x": 330
+    }
+   ]
+  },
+  "street": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 57.5,
+     "dur": 5.8,
+     "x": 760
+    }
+   ]
+  },
+  "truck": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 15.6,
+     "dur": 3.6,
+     "x": 560
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.8,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 108,
+  "seed": 181,
+  "drop": 4.24,
+  "break": 16.08,
+  "back": 21.79,
+  "outro": 25.28
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "episode": 18,
+  "duration": 28.95,
+  "musicVolume": 0.42,
+  "style": "leonida-sunset",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.24,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "UNPATCHED",
+    "kicker": "GTA 6'S",
+    "title": [
+     "MONEY",
+     "GLITCH"
+    ],
+    "color": "gold",
+    "tag": "…still works.",
+    "tagAt": 3.6,
+    "ar": "ثغرة الفلوس… لسا شغالة"
+   },
+   {
+    "type": "headline",
+    "from": 4.24,
+    "to": 6.8,
+    "broll": {
+     "src": "news",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "tag": "PATCH NOTES",
+    "source": "UPDATE 01.002.002",
+    "date": "NOV 23, 2026",
+    "headline": "7 fixes. The money glitch isn't one of them.",
+    "typeAt": 0.1,
+    "ar": "التحديث الأول ما صلّحها"
+   },
+   {
+    "type": "location",
+    "from": 6.8,
+    "to": 10.0,
+    "broll": {
+     "src": "rural",
+     "grade": "warm",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "THE BARN",
+    "place": "HAMLET",
+    "target": "RED BARN",
+    "direction": "NORTHEAST",
+    "region": "ABANDONED · SOUTH VICE-DALE",
+    "ar": "روح للحظيرة الحمرا شمال شرق هاملت"
+   },
+   {
+    "type": "list",
+    "from": 10.0,
+    "to": 16.08,
+    "broll": {
+     "src": "bags",
+     "grade": "warm",
+     "dim": 0.12,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "THE LOAD",
+    "label": "STEP 02",
+    "cardAt": 0.1,
+    "arAt": 0.6,
+    "items": [
+     {
+      "text": "FILL STASH BAGS",
+      "status": "1",
+      "ok": true,
+      "at": 0.44,
+      "icon": "barn"
+     },
+     {
+      "text": "UP TO 4 BAGS",
+      "status": "2",
+      "ok": true,
+      "at": 3.96,
+      "icon": "cash"
+     },
+     {
+      "text": "INTO YOUR CAR'S TRUNK",
+      "status": "3",
+      "ok": true,
+      "at": 5.24,
+      "icon": "car"
+     }
+    ],
+    "ar": "عبّي الشنط… وحطها بشنطة السيارة"
+   },
+   {
+    "type": "loop",
+    "from": 16.08,
+    "to": 21.79,
+    "broll": {
+     "src": "street",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 3
+    },
+    "step": "03",
+    "label": "THE TRICK",
+    "nodes": [
+     {
+      "text": "SAVE",
+      "at": 0.32
+     },
+     {
+      "text": "RELOAD",
+      "at": 1.52
+     },
+     {
+      "text": "BAGS STAY",
+      "at": 2.56
+     },
+     {
+      "text": "BARN REFILLS",
+      "at": 4.4
+     }
+    ],
+    "center": "REPEAT",
+    "centerAt": 5.0,
+    "ar": "احفظ وأعد التحميل: الشنط تبقى… والحظيرة تتعبى"
+   },
+   {
+    "type": "cash",
+    "from": 21.79,
+    "to": 25.28,
+    "captions": false,
+    "broll": {
+     "src": "truck",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 2
+    },
+    "title": "EVERY RUN",
+    "amount": "$8,000+",
+    "per": "drugs + cash",
+    "amountAt": 0.61,
+    "repeat": "REPEAT",
+    "repeatAt": 2.2,
+    "ar": "يعني ٨ آلاف دولار أو أكثر… كل مرة"
+   },
+   {
+    "type": "cta",
+    "from": 25.28,
+    "to": 28.95,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 1.96,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 3.12,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 3.36,
+    "volume": 0.45
+   },
+   {
+    "src": "glitch.wav",
+    "at": 3.38,
+    "volume": 0.3
+   },
+   {
+    "src": "ping.wav",
+    "at": 3.6,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.18,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 4.5,
+    "volume": 0.3
+   },
+   {
+    "src": "tick.wav",
+    "at": 4.9,
+    "volume": 0.3
+   },
+   {
+    "src": "tick.wav",
+    "at": 5.3,
+    "volume": 0.3
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.74,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.08,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.94,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.44,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.96,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.24,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.02,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 16.4,
+    "volume": 0.45
+   },
+   {
+    "src": "glitch.wav",
+    "at": 17.6,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 18.64,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 20.48,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.08,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.73,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 22.4,
+    "volume": 0.55
+   },
+   {
+    "src": "coins.wav",
+    "at": 22.45,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.0,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.22,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.3,
+    "volume": 0.5
+   }
+  ]
+ }
+}
