@@ -192,8 +192,10 @@ film finish, colour grade, cuts and title style, designed by you and built in co
      draws, and never change the classic path (no `style`), which the manual studio's
      reels and every older episode use. Register the look in `reels/src/looks/index.ts`.
   3. **Check.** `cd reels && npx tsc --noEmit` must pass. Then
-     `python reels/tools/look.py <id>` renders the newest episode in the new look
-     (`out/looks/<id>.jpg`), and `--frames 96,98,100,102,104` shows a cut. Look at every
+     `python reels/tools/look.py <id> --video 90-170` renders the newest episode in
+     the new look: stills (`out/looks/<id>.jpg`) and a short real video around the
+     first cut (`out/looks/<id>-video.jpg`; some effects, like text filled with a
+     gradient, draw differently in video than in a still). Look at every
      frame like a layout check: readable captions (the spoken word must stand out),
      big words not cut off, Arabic readable, top bar clean, effects subtle enough
      that the footage still reads. Fix and check again until it is clean.

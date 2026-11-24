@@ -64,11 +64,14 @@ export const KaraokeCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) =>
     <Row y={y} enter={enter} gap="0 22px">
       {words.map((w, i) => {
         const p = interpolate(t, [w.start - 0.02, Math.max(w.start + 0.05, w.end)], [0, 100], clamp);
-        const fill = `linear-gradient(90deg, ${accent} 0%, ${C.pink} ${p}%, rgba(255,255,255,0.95) ${p}%, rgba(255,255,255,0.95) 100%)`;
+        const fill = `linear-gradient(90deg, ${accent}, ${C.pink})`;
         return (
           <span key={i} style={{position: 'relative', display: 'inline-block', fontFamily: fontOf(), fontSize: size, lineHeight: 1.05, textTransform: 'uppercase'}}>
-            <span style={{position: 'absolute', inset: 0, color: 'transparent', WebkitTextStroke: '12px #000', filter: 'drop-shadow(0 6px 0 #000)'}}>{clean(w)}</span>
-            <span style={{position: 'relative', background: fill, WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent'}}>{clean(w)}</span>
+            <span style={{position: 'absolute', inset: 0, display: 'block', color: 'transparent', WebkitTextStroke: '12px #000', filter: 'drop-shadow(0 6px 0 #000)'}}>{clean(w)}</span>
+            <span style={{position: 'relative', display: 'block', color: 'rgba(255,255,255,0.95)'}}>{clean(w)}</span>
+            {/* the spoken part: a gradient copy revealed left to right (clip-path, not a hard gradient stop, which breaks text clipping in video renders) */}
+            <span style={{position: 'absolute', inset: 0, display: 'block', background: fill, WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent',
+              clipPath: `inset(-20% ${100 - p}% -20% 0)`}}>{clean(w)}</span>
           </span>
         );
       })}
