@@ -1,0 +1,345 @@
+{
+ "manual": true,
+ "episode": 132,
+ "kind": "money",
+ "topic": "Fishing pays nothing: unlike Red Dead 2, GTA 6 fishing is catch and release; nothing goes into your inventory (can't keep, eat or sell fish, not even rare ones); for money from the wild, go hunting, where animals can be sold",
+ "title": {
+  "en": "Fishing for money in GTA 6? You're wasting your time 🎣",
+  "ar": "تصيد سمك عشان الفلوس في GTA 6؟ تضيّع وقتك 🎣"
+ },
+ "summary": "Unlike Red Dead 2, fishing in GTA 6 is catch and release: nothing goes into your inventory, so you can't keep, eat or sell fish, not even the rare ones. If you want cash from the wild, go hunting instead: the animals you hunt can be sold.",
+ "summary_ar": "عكس ريد ديد 2، الصيد في GTA 6 تصيد وترجّع: ما يدخل شي في الشنطة، فما تقدر تحتفظ بالسمك ولا تاكله ولا تبيعه، حتى النادر. إذا تبي فلوس من البرية، روح صيد حيوانات: تقدر تبيع اللي تصيده.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Fishing",
+  "GTA6Tips",
+  "GTAVI",
+  "GTA6Guide",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 5,
+  "confidence": 8,
+  "score": 7.3
+ },
+ "sources": [
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-fishing-guide/",
+  "https://allthings.how/gta-6-how-fishing-and-hunting-work-catch-and-release-explained/",
+  "https://www.notebookcheck.net/Fishing-in-GTA-6-will-be-as-extensive-as-in-RDR2-but-there-s-a-catch.1391730.0.html",
+  "https://beebom.com/gta-6-fishing-and-hunting-will-be-more-detailed-but-have-a-weird-twist/",
+  "https://www.shacknews.com/article/151389/how-to-go-fishing-gta6",
+  "https://thegameswiki.com/gta6/wiki/fishing"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 70.0,
+     "dur": 4.25,
+     "x": 890
+    }
+   ]
+  },
+  "vs": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 17.5,
+     "dur": 3.6,
+     "x": 700
+    }
+   ]
+  },
+  "dock": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 60.0,
+     "dur": 6.5,
+     "x": 700
+    }
+   ]
+  },
+  "hunt": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 3.0,
+     "dur": 6.45,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 3.8,
+     "x": 600
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 124,
+  "seed": 132,
+  "drop": 4.2,
+  "break": 14.22,
+  "back": 16.18,
+  "outro": 20.64
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 24.4,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.2,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "FISHING FOR MONEY?",
+    "title": [
+     "STOP"
+    ],
+    "color": "red",
+    "tag": "…it pays $0.",
+    "tagAt": 2.48,
+    "ar": "تصيد سمك عشان الفلوس؟ تضيّع وقتك"
+   },
+   {
+    "type": "compare",
+    "from": 4.2,
+    "to": 7.76,
+    "broll": {
+     "src": "vs",
+     "grade": "warm",
+     "dim": 0.55,
+     "blur": 7
+    },
+    "step": "01",
+    "label": "VS RED DEAD 2",
+    "bars": [
+     {
+      "label": "RDR2",
+      "sub": "SELL FISH",
+      "value": 100,
+      "display": "$$$",
+      "at": 0.4,
+      "color": "green"
+     },
+     {
+      "label": "GTA 6",
+      "sub": "CATCH & RELEASE",
+      "value": 3,
+      "display": "$0",
+      "at": 2.12,
+      "color": "red"
+     }
+    ],
+    "ar": "عكس ريد ديد 2… هنا تصيد وترجّع السمكة"
+   },
+   {
+    "type": "list",
+    "from": 7.76,
+    "to": 14.22,
+    "broll": {
+     "src": "dock",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "chip": "INVENTORY",
+    "label": "NOTHING KEPT",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "KEEP THE FISH",
+      "status": "NO",
+      "ok": false,
+      "at": 2.5,
+      "icon": "fish"
+     },
+     {
+      "text": "EAT THEM",
+      "status": "NO",
+      "ok": false,
+      "at": 3.24,
+      "icon": "fish"
+     },
+     {
+      "text": "SELL THEM",
+      "status": "NO",
+      "ok": false,
+      "at": 3.96,
+      "icon": "cash"
+     }
+    ],
+    "ar": "ما تقدر تحتفظ بالسمك ولا تاكله ولا تبيعه… حتى النادر"
+   },
+   {
+    "type": "reveal",
+    "from": 14.22,
+    "to": 20.64,
+    "captions": false,
+    "broll": {
+     "src": "hunt",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "WANT CASH?",
+    "slamAt": 1.96,
+    "color": "green",
+    "lines": [
+     {
+      "text": "GO HUNTING",
+      "at": 1.96,
+      "color": "green",
+      "size": 170
+     },
+     {
+      "text": "SELL WHAT YOU HUNT",
+      "at": 4.74,
+      "color": "gold",
+      "size": 100
+     }
+    ],
+    "ar": "تبي فلوس من البرية؟ روح صيد حيوانات… وبيع اللي تصيده"
+   },
+   {
+    "type": "cta",
+    "from": 20.64,
+    "to": 24.4,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE MONEY TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.3,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.48,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.14,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.6,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 6.32,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.7,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 10.26,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 11.0,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 11.72,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.16,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.18,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 16.2,
+    "volume": 0.4
+   },
+   {
+    "src": "cash.wav",
+    "at": 18.96,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.58,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.66,
+    "volume": 0.5
+   }
+  ]
+ }
+}

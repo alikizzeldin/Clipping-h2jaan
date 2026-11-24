@@ -128,6 +128,22 @@ const Heli: React.FC<{p: number; frame: number}> = ({p, frame}) => {
   );
 };
 
+// A see-through floating block with a question mark; it bumps up as if hit from below.
+const Block: React.FC<{p: number; frame: number}> = ({p, frame}) => {
+  const bob = Math.sin(frame / 10) * 10;
+  const bump = Math.max(0, Math.sin(Math.min(1, p) * Math.PI)) * -40;
+  const glow = 0.6 + 0.4 * Math.abs(Math.sin(frame / 7));
+  return (
+    <svg width={340} height={340} viewBox="0 0 340 340" style={{overflow: 'visible', transform: `translateY(${bob + bump}px) scale(${0.5 + 0.5 * p})`}}>
+      <rect x="40" y="40" width="260" height="260" rx="26" fill="rgba(255,200,87,0.18)" stroke={C.gold} strokeWidth={10}
+        style={{filter: `drop-shadow(0 0 ${30 * glow}px ${C.gold})`}} />
+      <rect x="62" y="62" width="216" height="216" rx="16" fill="none" stroke="rgba(255,255,255,0.35)" strokeWidth={4} strokeDasharray="10 12" />
+      {[[70, 70], [270, 70], [70, 270], [270, 270]].map(([x, y]) => <circle key={`${x}${y}`} cx={x} cy={y} r={9} fill={C.gold} opacity={0.8} />)}
+      <text x="170" y="222" textAnchor="middle" fontFamily="Anton, Impact, sans-serif" fontSize="170" fill="#fff" opacity={0.85 * glow}>?</text>
+    </svg>
+  );
+};
+
 // The payoff: a line typed in the dark, then a slam with big words (no UFO; see Twist for that).
 export const Reveal: React.FC<{s: RevealScene}> = ({s}) => {
   const frame = useCurrentFrame();
@@ -156,6 +172,7 @@ export const Reveal: React.FC<{s: RevealScene}> = ({s}) => {
             <div style={{position: 'absolute', top: 300, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: Math.min(1, icon * 2)}}>
               {s.icon === 'snake' ? <Snake p={icon} frame={frame} /> : s.icon === 'hat' ? <Hat p={icon} frame={frame} /> : s.icon === 'crab' ? <Crab p={icon} frame={frame} />
                 : s.icon === 'heli' ? <Heli p={icon} frame={frame} />
+                : s.icon === 'block' ? <Block p={icon} frame={frame} />
                 : s.icon === 'pill' ? <div style={{transform: `scale(${0.4 + 0.6 * icon}) rotate(${(1 - icon) * 180}deg)`}}><PillHead size={360} frame={frame} /></div>
                 : s.icon === 'bottle' ? <div style={{transform: `scale(${0.4 + 0.6 * icon}) rotate(${Math.sin(frame / 8) * 6}deg)`, filter: `drop-shadow(0 0 30px ${C.red})`}}><PillBottle size={360} /></div>
                 : <Knife p={icon} frame={frame} />}

@@ -69,6 +69,13 @@ export const Icon: React.FC<{name: string; color: string; size?: number}> = ({na
           <path d="M24 20 H56 M24 34 H56 M24 48 H56 M24 62 H56" {...common} />
         </>
       ) : null}
+      {name === 'fish' ? (
+        <>
+          <path d="M12 40 C 24 22, 50 20, 62 40 C 50 60, 24 58, 12 40 Z" {...common} />
+          <path d="M62 40 L74 28 V52 Z" {...common} />
+          <circle cx="26" cy="37" r="2.5" fill={color} />
+        </>
+      ) : null}
       {name === 'cash' ? (
         <>
           <rect x="8" y="20" width="64" height="40" rx="6" {...common} />

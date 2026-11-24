@@ -1043,5 +1043,131 @@
     "why_not": "Pre-release retailer-listing claim"
    }
   ]
+ },
+ {
+  "date": "2026-11-24",
+  "wake_up": "04:23 UTC (m130–m132; only 3 ideas passed the gate)",
+  "ideas": [
+   {
+    "idea": "Mario & Luigi block at the ruined paper mill in south Moreau (Lummox County): J and L caps",
+    "format": "EASTER EGG",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 8,
+    "score": 8.0,
+    "chosen": "m130-mario-caps",
+    "sources": [
+     "https://kotaku.com/gta-6-includes-a-mario-and-luigi-easter-egg-2000759536",
+     "https://www.tweaktown.com/news/114843/gta-6-has-a-hidden-mario-and-luigi-easter-egg-that-lets-jason-and-lucia-dress-like-nintendos-iconic-plumbers/index.html",
+     "https://consequence.net/2026/11/grand-theft-auto-vi-super-mario-bros-hats/",
+     "https://www.nintendolife.com/news/2026/11/random-gta-6-hides-an-adorable-mario-and-luigi-easter-egg-in-its-massive-world",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-mario-easter-egg-location-j-and-l-hats/",
+     "https://holdtoreset.com/where-to-find-the-super-mario-easter-egg-in-gta-6/"
+    ]
+   },
+   {
+    "idea": "Ultimate Edition: the free Ganado Retro Build only works in Chapter 1 (Coastal Auto Care, Key Lento, Pro Builds)",
+    "format": "DON'T MISS",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.1,
+    "chosen": "m131-ultimate-retro",
+    "sources": [
+     "https://www.slashgear.com/2322507/gta-6-best-early-car-upgrade-chapter-1/",
+     "https://www.redbull.com/int-en/gta-6-ultimate-edition-bonuses",
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6-ultimate-edition-bonuses/",
+     "https://www.gamesradar.com/games/grand-theft-auto/gta-6-ultimate-edition-pre-order-bonuses/",
+     "https://www.gtabase.com/gta-6/articles/how-to-claim-ultimate-edition-benefits-in-gta-6",
+     "https://gta.tech4gamers.com/gta-6/vehicles/vapid-ganado/"
+    ]
+   },
+   {
+    "idea": "Fishing is catch and release: fish can't be kept, eaten or sold; hunting is the money",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.3,
+    "chosen": "m132-fishing-money",
+    "sources": [
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-fishing-guide/",
+     "https://allthings.how/gta-6-how-fishing-and-hunting-work-catch-and-release-explained/",
+     "https://www.notebookcheck.net/Fishing-in-GTA-6-will-be-as-extensive-as-in-RDR2-but-there-s-a-catch.1391730.0.html",
+     "https://beebom.com/gta-6-fishing-and-hunting-will-be-more-detailed-but-have-a-weird-twist/",
+     "https://www.shacknews.com/article/151389/how-to-go-fishing-gta6",
+     "https://thegameswiki.com/gta6/wiki/fishing"
+    ]
+   },
+   {
+    "idea": "GTA VI: The Album (Deluxe Edition) adds 23 tracks (Rockstar Newswire, Nov 23)",
+    "format": "GTA 6 NEWS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 10,
+    "visual": 4,
+    "confidence": 9,
+    "score": 6.9,
+    "why_not": "Score 6.9: soundtrack news has lower pull"
+   },
+   {
+    "idea": "Ghost ship at St. Lucia Lighthouse and a Cursed Knife",
+    "format": "SECRET FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 4,
+    "score": 7.0,
+    "why_not": "Confidence 4: steps and the knife reward are unconfirmed"
+   },
+   {
+    "idea": "Hidden trophy Let's Go Bowling: take all 3 valuables in Hit Kingpin Bowling",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.8,
+    "why_not": "Below 7.0"
+   },
+   {
+    "idea": "Photo Studio in the pause menu (no weather/time change); selfies via phone",
+    "format": "HIDDEN FEATURE",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.3,
+    "why_not": "Below 7.0"
+   },
+   {
+    "idea": "No 60 fps mode, even on PS5 Pro",
+    "format": "GTA 6 NEWS",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.35,
+    "why_not": "Overlaps the main studio's 60fps episode"
+   }
+  ]
  }
 ]

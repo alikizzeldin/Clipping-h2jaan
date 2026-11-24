@@ -1,0 +1,352 @@
+{
+ "manual": true,
+ "episode": 131,
+ "kind": "warning",
+ "topic": "Ultimate Edition bonus that only works in Chapter 1: a free Retro Build for Jason's Vapid Ganado; finish Just a Scratch, find Coastal Auto Care in Key Lento (map > Vehicles index > Mod Shops), Pro Builds/Full Kits in the mod menu; gone once Chapter 1 ends",
+ "title": {
+  "en": "Ultimate Edition owners: claim THIS before Chapter 1 ends ⚠️",
+  "ar": "عندك Ultimate Edition؟ خذ هذا قبل ما يخلص الفصل الأول ⚠️"
+ },
+ "summary": "One Ultimate Edition bonus only works in Chapter 1: a free Retro Build for Jason's pickup, the Vapid Ganado. Finish the mission Just a Scratch, open the map's Vehicles index, find Coastal Auto Care in Key Lento, and open Pro Builds in the mod menu: the Retro Build is free there. Once Chapter 1 ends, it's gone.",
+ "summary_ar": "فيه هدية من Ultimate Edition تشتغل بس في الفصل الأول: Retro Build مجاني لبيك أب جيسون Vapid Ganado. خلّص مهمة Just a Scratch، افتح فهرس المركبات في الخريطة، لقِ Coastal Auto Care في كي لينتو، وافتح Pro Builds في قائمة التعديل: البيلد مجاني. وإذا خلص الفصل الأول، راح.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "UltimateEdition",
+  "GTA6Cars",
+  "GTAVI",
+  "GTA6Guide",
+  "KeyLento",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.1
+ },
+ "sources": [
+  "https://www.slashgear.com/2322507/gta-6-best-early-car-upgrade-chapter-1/",
+  "https://www.redbull.com/int-en/gta-6-ultimate-edition-bonuses",
+  "https://www.pcgamer.com/games/grand-theft-auto/gta-6-ultimate-edition-bonuses/",
+  "https://www.gamesradar.com/games/grand-theft-auto/gta-6-ultimate-edition-pre-order-bonuses/",
+  "https://www.gtabase.com/gta-6/articles/how-to-claim-ultimate-edition-benefits-in-gta-6",
+  "https://gta.tech4gamers.com/gta-6/vehicles/vapid-ganado/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 12.5,
+     "dur": 5.1,
+     "x": 700
+    }
+   ]
+  },
+  "pickup": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 4.0,
+     "dur": 4.45,
+     "x": 700
+    }
+   ]
+  },
+  "claim": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 8.3,
+     "x": 1000
+    }
+   ]
+  },
+  "mod": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/f6/clip_01M7W22AM19F7R996QK4RSCEC5/playlist.m3u8",
+     "channel": "affiwillcarry",
+     "start": 35.0,
+     "dur": 4.45,
+     "x": 700
+    }
+   ]
+  },
+  "gone": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 8.0,
+     "dur": 2.6,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 8.0,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 118,
+  "seed": 131,
+  "drop": 5.08,
+  "break": 22.2,
+  "back": 23.82,
+  "outro": 24.74
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "duration": 28.5,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 5.08,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "DON'T MISS",
+    "kicker": "BOUGHT THE",
+    "title": [
+     "ULTIMATE"
+    ],
+    "color": "gold",
+    "tag": "…Chapter 1 only.",
+    "tagAt": 4.16,
+    "ar": "اشتريت الإصدار الألتميت؟ فيه هدية للفصل الأول بس"
+   },
+   {
+    "type": "reward",
+    "from": 5.08,
+    "to": 9.52,
+    "broll": {
+     "src": "pickup",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "rewardAt": 0.54,
+    "label": "ULTIMATE EDITION BONUS",
+    "name": "Ganado Retro Build",
+    "tier": "FREE · JASON'S VAPID GANADO",
+    "ar": "ريترو بيلد مجاني لبيك أب جيسون"
+   },
+   {
+    "type": "list",
+    "from": 9.52,
+    "to": 17.8,
+    "broll": {
+     "src": "claim",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "chip": "HOW",
+    "label": "CLAIM IT",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "JUST A SCRATCH",
+      "status": "FINISH",
+      "ok": true,
+      "at": 1.06,
+      "icon": "trophy"
+     },
+     {
+      "text": "COASTAL AUTO CARE",
+      "status": "KEY LENTO",
+      "ok": true,
+      "at": 5.74,
+      "icon": "car"
+     }
+    ],
+    "ar": "خلّص مهمة جست أ سكراتش، وروح لمحل التعديل في كي لينتو"
+   },
+   {
+    "type": "list",
+    "from": 17.8,
+    "to": 22.2,
+    "broll": {
+     "src": "mod",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 5
+    },
+    "chip": "MOD MENU",
+    "label": "PRO BUILDS",
+    "cardAt": 0.05,
+    "arAt": 0.4,
+    "items": [
+     {
+      "text": "PRO BUILDS",
+      "status": "OPEN",
+      "ok": true,
+      "at": 1.4,
+      "icon": "car"
+     },
+     {
+      "text": "RETRO BUILD",
+      "status": "FREE",
+      "ok": true,
+      "at": 3.5,
+      "icon": "cash"
+     }
+    ],
+    "ar": "افتح برو بيلدز في قائمة التعديل… والبيلد مجاني"
+   },
+   {
+    "type": "reveal",
+    "from": 22.2,
+    "to": 24.74,
+    "captions": false,
+    "broll": {
+     "src": "gone",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "pre": "AFTER CHAPTER 1…",
+    "slamAt": 1.62,
+    "color": "red",
+    "lines": [
+     {
+      "text": "GONE",
+      "at": 1.62,
+      "color": "red",
+      "size": 220
+     }
+    ],
+    "ar": "وإذا خلص الفصل الأول… راح"
+   },
+   {
+    "type": "cta",
+    "from": 24.74,
+    "to": 28.5,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE DON'T-MISS TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 4.1,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.02,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 5.62,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.46,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.58,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 15.26,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.74,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.2,
+    "volume": 0.45
+   },
+   {
+    "src": "cash.wav",
+    "at": 21.3,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.14,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.82,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 23.84,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.68,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.76,
+    "volume": 0.5
+   }
+  ]
+ }
+}

@@ -1,0 +1,356 @@
+{
+ "manual": true,
+ "episode": 130,
+ "kind": "easter-egg",
+ "topic": "Mario & Luigi Easter egg: at the ruined Lawton Co. Paper Mill on the river in south Moreau (Lummox County), use the bong by the water wheel; while tripping, look up to see a see-through block over the ruins; jump into it and two caps drop (J for Jason, L for Lucia)",
+ "title": {
+  "en": "GTA 6 hides a MARIO block 🍄 (free J & L caps)",
+  "ar": "في GTA 6 بلوك ماريو مخفي 🍄 وقبعات مجانية"
+ },
+ "summary": "At the ruined paper mill on the river in south Moreau, Lummox County, use the bong by the water wheel. While your character trips, look up: a see-through block floats over the ruins. Jump into it like Mario and two caps drop out: a J for Jason and an L for Lucia.",
+ "summary_ar": "في مصنع الورق المهجور على النهر جنوب مورو في لاموكس كاونتي، استخدم البونق جنب الساقية. وشخصيتك مسطولة، ناظر فوق: فيه بلوك شفاف طاير فوق الأطلال. انقز فيه مثل ماريو وتطيح قبعتين: حرف J لجيسون وحرف L للوسيا.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEgg",
+  "Mario",
+  "Luigi",
+  "Nintendo",
+  "GTAVI",
+  "GTA6Secrets",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 9,
+  "visual": 4,
+  "confidence": 8,
+  "score": 8.0
+ },
+ "sources": [
+  "https://kotaku.com/gta-6-includes-a-mario-and-luigi-easter-egg-2000759536",
+  "https://www.tweaktown.com/news/114843/gta-6-has-a-hidden-mario-and-luigi-easter-egg-that-lets-jason-and-lucia-dress-like-nintendos-iconic-plumbers/index.html",
+  "https://consequence.net/2026/11/grand-theft-auto-vi-super-mario-bros-hats/",
+  "https://www.nintendolife.com/news/2026/11/random-gta-6-hides-an-adorable-mario-and-luigi-easter-egg-in-its-massive-world",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-mario-easter-egg-location-j-and-l-hats/",
+  "https://holdtoreset.com/where-to-find-the-super-mario-easter-egg-in-gta-6/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 60.0,
+     "dur": 4.6,
+     "x": 890
+    }
+   ]
+  },
+  "ruins": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 3.0,
+     "dur": 4.85,
+     "x": 700
+    }
+   ]
+  },
+  "wheel": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 17.5,
+     "dur": 3.3,
+     "x": 700
+    }
+   ]
+  },
+  "sky": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0.0,
+     "dur": 5.45,
+     "x": 600
+    }
+   ]
+  },
+  "caps": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 66.0,
+     "dur": 4.25,
+     "x": 850
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 20.0,
+     "dur": 3.8,
+     "x": 800
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 102,
+  "seed": 130,
+  "drop": 4.52,
+  "break": 12.56,
+  "back": 13.62,
+  "outro": 22.14
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 25.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.52,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CLASSIFIED",
+    "kicker": "GTA 6 HIDES A",
+    "title": [
+     "MARIO",
+     "BLOCK"
+    ],
+    "color": "red",
+    "tag": "…that drops hats.",
+    "tagAt": 2.64,
+    "ar": "في اللعبة بلوك ماريو مخفي… يطيّح قبعات"
+   },
+   {
+    "type": "location",
+    "from": 4.52,
+    "to": 9.3,
+    "broll": {
+     "src": "ruins",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 6
+    },
+    "step": "01",
+    "label": "THE RUINS",
+    "place": "MOREAU",
+    "target": "PAPER MILL",
+    "direction": "SOUTH",
+    "region": "LUMMOX COUNTY · ON THE RIVER",
+    "ar": "روح لمصنع الورق المهجور على النهر جنوب مورو"
+   },
+   {
+    "type": "list",
+    "from": 9.3,
+    "to": 12.56,
+    "broll": {
+     "src": "wheel",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "chip": "STEP 2",
+    "label": "BY THE RIVER",
+    "cardAt": 0.05,
+    "arAt": 0.4,
+    "items": [
+     {
+      "text": "THE WATER WHEEL",
+      "status": "GO",
+      "ok": true,
+      "at": 0.3,
+      "icon": "wave"
+     },
+     {
+      "text": "THE BONG",
+      "status": "USE",
+      "ok": true,
+      "at": 1.34,
+      "icon": "alert"
+     }
+    ],
+    "ar": "جنب الساقية… استخدم البونق"
+   },
+   {
+    "type": "reveal",
+    "from": 12.56,
+    "to": 17.96,
+    "captions": false,
+    "broll": {
+     "src": "sky",
+     "grade": "warm",
+     "dim": 0.35,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "LOOK UP…",
+    "slamAt": 1.06,
+    "icon": "block",
+    "color": "gold",
+    "lines": [
+     {
+      "text": "SEE-THROUGH",
+      "at": 1.06,
+      "size": 120
+     },
+     {
+      "text": "BLOCK",
+      "at": 1.48,
+      "color": "gold",
+      "size": 170
+     },
+     {
+      "text": "JUMP INTO IT",
+      "at": 3.6,
+      "color": "red",
+      "size": 120
+     }
+    ],
+    "ar": "ناظر فوق: بلوك شفاف… انقز فيه مثل ماريو"
+   },
+   {
+    "type": "reward",
+    "from": 17.96,
+    "to": 22.14,
+    "broll": {
+     "src": "caps",
+     "grade": "warm",
+     "zoom": [
+      1.04,
+      1.14
+     ]
+    },
+    "rewardAt": 0.5,
+    "label": "SECRET HATS",
+    "name": "J + L caps",
+    "tier": "JASON & LUCIA · PLUMBER STYLE",
+    "ar": "وتطيح قبعتين: وحدة لجيسون ووحدة للوسيا"
+   },
+   {
+    "type": "cta",
+    "from": 22.14,
+    "to": 25.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.6,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.46,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.7,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.24,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 9.58,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.64,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.5,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 13.62,
+    "volume": 0.65
+   },
+   {
+    "src": "glitch.wav",
+    "at": 13.64,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.16,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.9,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 18.46,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.08,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.16,
+    "volume": 0.5
+   }
+  ]
+ }
+}
