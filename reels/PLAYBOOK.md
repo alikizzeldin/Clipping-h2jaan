@@ -126,7 +126,8 @@ write why in ideas.json and stop.
 - Say only what your sources agree on. Leave out disputed details ("$1,000 or
   more", not a disputed exact figure). Never present rumours or leaks as fact.
   Avoid saying names you can't pronounce for sure; show them on screen.
-- **Title (English | Arabic):** curiosity, never the answer. "GTA 6 has a
+- **Title (English | Arabic):** at most 85 characters together, counting each emoji as 2
+  (YouTube refuses titles over 100, and " #shorts" is added). Curiosity, never the answer. "GTA 6 has a
   HIDDEN UFO 👽 and it can take you", not "How to find the UFO". The first
   frame repeats the hook in big text, so it works as the thumbnail too.
 - Also write a one-paragraph summary (English and Arabic) and 10 keywords.
