@@ -1,141 +1,173 @@
 {
-  "about": "One entry per scene that uses a variant or a new design. Studios read it to avoid repeating a variant used by either of the last two episodes with that scene (PLAYBOOK step 6¾).",
-  "entries": [
-    {
-      "date": "2026-11-25",
-      "episode": "m140-skip-to-night",
-      "scene": "sleep",
-      "variant": "bedroom window + sleep menu + blink",
-      "new": true,
-      "note": "window shows the day sky, a SLEEP UNTIL menu steps down to the chosen time, eyelids blink shut and open on a night sky with moon and stars"
-    },
-    {
-      "date": "2026-11-25",
-      "episode": "020-six-star-escape",
-      "scene": "portal",
-      "variant": "neon ring tunnel + rolling year counter",
-      "new": true,
-      "note": "rings pour outwards from a glowing core, sparks spiral in, the year rolls 2026 to 2002 and lands gold with a flash (glow drawn as double strokes: SVG blur filters were 2x slower)"
-    },
-    {
-      "date": "2026-11-25",
-      "episode": "020-six-star-escape",
-      "scene": "heat",
-      "variant": "default, 6 stars, used twice (stars on, then cleared)",
-      "new": false,
-      "note": "first heat: six stars and three heat icons; second: icons tick off and the title flips to STARS GONE"
-    },
-    {
-      "date": "2026-11-25",
-      "episode": "m138-niko-returns",
-      "scene": "redacted",
-      "variant": "typed dossier + redaction bars",
-      "new": true,
-      "note": "cream dossier sheet; each value hides under a black bar that peels off on its cue, one row stays redacted with a red NOT LISTED note, highlighter mark, stamp under the sheet"
-    },
-    {
-      "date": "2026-11-25",
-      "episode": "m139-pennywise-clown",
-      "scene": "elevator",
-      "variant": "hotel elevators + clown scare",
-      "new": true,
-      "note": "two elevators: OUT OF ORDER sign with a red balloon, the other car opens full of balloons, lights flicker out and a clown face flashes, then gone"
-    },
-    {
-      "date": "2026-11-25",
-      "episode": "m139-pennywise-clown",
-      "scene": "location",
-      "variant": "neon",
-      "new": false,
-      "note": "Vice Beach at night; the last location episodes used hud"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "019-donnie-trunk",
-      "scene": "trunk",
-      "variant": "car trunk opens, items rise out, then the car burns",
-      "new": true,
-      "note": "drawn red car from behind; lid swings open, gas can + hero revolver cards rise out (UNIQUE chip); second use: flames, cards turn grey, GONE FOR GOOD stamp, NO MISSION REPLAY chip"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "018-barn-glitch",
-      "scene": "loop",
-      "variant": "save/reload cycle ring",
-      "new": true,
-      "note": "steps round a ring light up on the words (SAVE, RELOAD, BAGS STAY, BARN REFILLS), the ring fills, REPEAT lands in the middle with a spinning arrow (logged after the fact)"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "017-criminal-profile",
-      "scene": "profile",
-      "variant": "dossier cards + Professional-to-Psycho gauge",
-      "new": true,
-      "note": "two profile cards with mini gauges (Jason, Lucia), then one big gauge whose needle slides to PSYCHO with a red flash (logged after the fact)"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "m134-little-sam",
-      "scene": "credits",
-      "variant": "rolling end credits",
-      "new": true,
-      "note": "credits roll and stop on one highlighted line (logged after the fact; designs.json did not exist yet)"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "m135-star-djs",
-      "scene": "radio, credits",
-      "variant": "car stereo tuner; rolling end credits",
-      "new": true,
-      "note": "radio: LCD tunes through static to a station with host and a note chip (logged after the fact)"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "m136-mandy-clues",
-      "scene": "evidence",
-      "variant": "case file + evidence bags",
-      "new": true,
-      "note": "manila case-file tab, evidence bags with drawn exhibits (finger, cleaver, duct tape, shears), numbered yellow markers and a camera flash; one exhibit = big centred bag"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "m137-randy-wishlist",
-      "scene": "receipt",
-      "variant": "thermal receipt + rubber stamp",
-      "new": true,
-      "note": "receipt hangs from a printer slot and grows line by line (torn edge at the bottom), big total row, a rubber stamp lands at the end"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "-",
-      "scene": "location",
-      "variant": "gps, paper, neon, radar, image",
-      "new": true,
-      "note": "new map styles (hud stays the default); image = pin on a real picture from stills/media"
-    },
-    {
-      "date": "2026-11-24",
-      "episode": "-",
-      "scene": "photos",
-      "variant": "taped prints",
-      "new": true,
-      "note": "real web pictures (Reddit, store pages…) as taped prints over b-roll"
-    },
-    {
-      "date": "2026-11-21",
-      "episode": "005-cheats-nostalgia",
-      "scene": "era",
-      "variant": "live footage + photos",
-      "new": true,
-      "note": "old-game footage inside the TV, handwritten cheat sheets from Reddit, phone dialing"
-    },
-    {
-      "date": "2026-11-21",
-      "episode": "007-60fps-trick",
-      "scene": "consoles, chain, fgapp, boost, alt",
-      "variant": "default",
-      "new": true,
-      "note": "60 FPS reel scenes; fgapp/alt show real app screenshots from media"
-    }
-  ]
+ "about": "One entry per scene that uses a variant or a new design. Studios read it to avoid repeating a variant used by either of the last two episodes with that scene (PLAYBOOK step 6¾).",
+ "entries": [
+  {
+   "date": "2026-11-25",
+   "episode": "m140-skip-to-night",
+   "scene": "sleep",
+   "variant": "bedroom window + sleep menu + blink",
+   "new": true,
+   "note": "window shows the day sky, a SLEEP UNTIL menu steps down to the chosen time, eyelids blink shut and open on a night sky with moon and stars"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "020-six-star-escape",
+   "scene": "portal",
+   "variant": "neon ring tunnel + rolling year counter",
+   "new": true,
+   "note": "rings pour outwards from a glowing core, sparks spiral in, the year rolls 2026 to 2002 and lands gold with a flash (glow drawn as double strokes: SVG blur filters were 2x slower)"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "020-six-star-escape",
+   "scene": "heat",
+   "variant": "default, 6 stars, used twice (stars on, then cleared)",
+   "new": false,
+   "note": "first heat: six stars and three heat icons; second: icons tick off and the title flips to STARS GONE"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "m138-niko-returns",
+   "scene": "redacted",
+   "variant": "typed dossier + redaction bars",
+   "new": true,
+   "note": "cream dossier sheet; each value hides under a black bar that peels off on its cue, one row stays redacted with a red NOT LISTED note, highlighter mark, stamp under the sheet"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "m139-pennywise-clown",
+   "scene": "elevator",
+   "variant": "hotel elevators + clown scare",
+   "new": true,
+   "note": "two elevators: OUT OF ORDER sign with a red balloon, the other car opens full of balloons, lights flicker out and a clown face flashes, then gone"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "m139-pennywise-clown",
+   "scene": "location",
+   "variant": "neon",
+   "new": false,
+   "note": "Vice Beach at night; the last location episodes used hud"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "019-donnie-trunk",
+   "scene": "trunk",
+   "variant": "car trunk opens, items rise out, then the car burns",
+   "new": true,
+   "note": "drawn red car from behind; lid swings open, gas can + hero revolver cards rise out (UNIQUE chip); second use: flames, cards turn grey, GONE FOR GOOD stamp, NO MISSION REPLAY chip"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "018-barn-glitch",
+   "scene": "loop",
+   "variant": "save/reload cycle ring",
+   "new": true,
+   "note": "steps round a ring light up on the words (SAVE, RELOAD, BAGS STAY, BARN REFILLS), the ring fills, REPEAT lands in the middle with a spinning arrow (logged after the fact)"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "017-criminal-profile",
+   "scene": "profile",
+   "variant": "dossier cards + Professional-to-Psycho gauge",
+   "new": true,
+   "note": "two profile cards with mini gauges (Jason, Lucia), then one big gauge whose needle slides to PSYCHO with a red flash (logged after the fact)"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "m134-little-sam",
+   "scene": "credits",
+   "variant": "rolling end credits",
+   "new": true,
+   "note": "credits roll and stop on one highlighted line (logged after the fact; designs.json did not exist yet)"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "m135-star-djs",
+   "scene": "radio, credits",
+   "variant": "car stereo tuner; rolling end credits",
+   "new": true,
+   "note": "radio: LCD tunes through static to a station with host and a note chip (logged after the fact)"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "m136-mandy-clues",
+   "scene": "evidence",
+   "variant": "case file + evidence bags",
+   "new": true,
+   "note": "manila case-file tab, evidence bags with drawn exhibits (finger, cleaver, duct tape, shears), numbered yellow markers and a camera flash; one exhibit = big centred bag"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "m137-randy-wishlist",
+   "scene": "receipt",
+   "variant": "thermal receipt + rubber stamp",
+   "new": true,
+   "note": "receipt hangs from a printer slot and grows line by line (torn edge at the bottom), big total row, a rubber stamp lands at the end"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "-",
+   "scene": "location",
+   "variant": "gps, paper, neon, radar, image",
+   "new": true,
+   "note": "new map styles (hud stays the default); image = pin on a real picture from stills/media"
+  },
+  {
+   "date": "2026-11-24",
+   "episode": "-",
+   "scene": "photos",
+   "variant": "taped prints",
+   "new": true,
+   "note": "real web pictures (Reddit, store pages…) as taped prints over b-roll"
+  },
+  {
+   "date": "2026-11-21",
+   "episode": "005-cheats-nostalgia",
+   "scene": "era",
+   "variant": "live footage + photos",
+   "new": true,
+   "note": "old-game footage inside the TV, handwritten cheat sheets from Reddit, phone dialing"
+  },
+  {
+   "date": "2026-11-21",
+   "episode": "007-60fps-trick",
+   "scene": "consoles, chain, fgapp, boost, alt",
+   "variant": "default",
+   "new": true,
+   "note": "60 FPS reel scenes; fgapp/alt show real app screenshots from media"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "021-bunker-tank",
+   "scene": "code",
+   "variant": "safe (steel door with keypad swings open, items inside)",
+   "new": true,
+   "note": "device 'safe': steel body, LCD and 3x4 keypad on the door, bolts and a handle wheel; after the code the door swings open in 3D and gold-bordered tags pop up from inside (inside[])"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "021-bunker-tank",
+   "scene": "code",
+   "variant": "keypad",
+   "new": false,
+   "note": "president's birthday 010317, ACCESS GRANTED"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "021-bunker-tank",
+   "scene": "location",
+   "variant": "gps",
+   "new": false,
+   "note": "Friends of Freedom Memorial, Catalan Blvd"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "021-bunker-tank",
+   "scene": "location",
+   "variant": "paper",
+   "new": false,
+   "note": "Sharktooth Island, north of Waning Sands"
+  }
+ ]
 }

@@ -1,0 +1,469 @@
+{
+ "episode": 21,
+ "kind": "secret",
+ "topic": "President Russo's bunkers: veteran Jose Bermudez at the Friends of Freedom memorial (Downtown Vice City) -> his Little Cuba apartment (NW 4th Ave) -> clues to Sharktooth Island (north of Waning Sands) -> bunker code 010317 (Russo's birthday) -> safe 2975 (Russo's 1922 pistol + a photo with the last code 085355) -> second bunker, big red button -> Hauners Ridgway tank",
+ "title": {
+  "en": "GTA 6 hides a FREE TANK behind 3 codes 🔐",
+  "ar": "دبابة مخفية في GTA 6 وراء ٣ أكواد 🔐"
+ },
+ "summary": "GTA 6 hides a tank behind three codes. Find the veteran at the Friends of Freedom memorial in Downtown Vice City; his Little Cuba apartment points to Sharktooth Island, north of Waning Sands. Bunker one's code is President Russo's birthday, 010317. The safe inside opens with 2975 and holds a photo with the last code (085355). Find the second bunker, press the big red button, and the Hauners Ridgway tank is yours.",
+ "summary_ar": "قراند 6 تخبي دبابة وراء ٣ أكواد. لاقِ المحارب القديم عند نصب «فريندز أوف فريدم» في داون تاون فايس سيتي؛ شقته في ليتل كيوبا تدلك على جزيرة شاركتوث شمال وانينغ ساندز. كود المخبأ الأول هو عيد ميلاد الرئيس روسو: 010317. الخزنة جوّا تنفتح بـ 2975 وفيها صورة بالكود الأخير (085355). روح للمخبأ الثاني، اضغط الزر الأحمر الكبير، والدبابة لك.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "GTA6Tank",
+  "GTA6Bunker",
+  "GTA6Codes",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 9,
+  "retention": 8,
+  "fresh": 6,
+  "visual": 6,
+  "confidence": 7,
+  "score": 7.9
+ },
+ "sources": [
+  "https://beebom.com/gta-6-free-tank-secret-bunker-location/",
+  "https://gamerant.com/gta-6-president-bunker-location-all-codes/",
+  "https://www.keengamer.com/articles/guides/gta-6-how-to-get-a-tank-secret-bunker-quest/",
+  "https://khelnow.com/gaming/gta-6-secret-bunker-free-tank-guide-202611",
+  "https://pro-gamer.gg/gta-6-secret-bunkers-guide-codes-010317-2975-085355-free-tank/",
+  "https://www.theclick.gg/gta-6-russos-1922-pistol-location/",
+  "https://npcwire.com/news/gta-6-president-russo-bunker-codes"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 12.6,
+     "dur": 3.7,
+     "x": 700
+    }
+   ]
+  },
+  "downtown": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 118.0,
+     "dur": 3.9,
+     "x": 900
+    }
+   ]
+  },
+  "rural": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 7.2,
+     "dur": 3.5,
+     "x": 600
+    }
+   ]
+  },
+  "night": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 8.6,
+     "dur": 5.4,
+     "x": 700
+    }
+   ]
+  },
+  "hall": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7e/clip_01M7R0QK1J4DQEYC9MC3GJW9M8/playlist.m3u8",
+     "channel": "djmariio",
+     "start": 151.0,
+     "dur": 5.4,
+     "x": 1200
+    }
+   ]
+  },
+  "police": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 1.0,
+     "dur": 5.0,
+     "x": 600
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.9,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 104,
+  "seed": 211,
+  "drop": 3.52,
+  "break": 20.96,
+  "back": 24.4,
+  "outro": 25.84
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "episode": 21,
+  "duration": 29.6,
+  "musicVolume": 0.42,
+  "style": "vice-tape",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.52,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "GTA 6 HIDES A",
+    "title": [
+     "TANK"
+    ],
+    "color": "gold",
+    "tag": "…behind 3 codes.",
+    "tagAt": 2.8,
+    "ar": "دبابة مخفية… وراء ٣ أكواد"
+   },
+   {
+    "type": "location",
+    "from": 3.52,
+    "to": 7.24,
+    "style": "gps",
+    "broll": {
+     "src": "downtown",
+     "grade": "night",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "THE VETERAN",
+    "place": "DOWNTOWN VICE CITY",
+    "target": "FRIENDS OF FREEDOM",
+    "direction": "MEMORIAL",
+    "region": "CATALAN BLVD",
+    "ar": "لاقِ المحارب القديم عند النصب التذكاري"
+   },
+   {
+    "type": "location",
+    "from": 7.24,
+    "to": 10.56,
+    "style": "paper",
+    "broll": {
+     "src": "rural",
+     "grade": "warm",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "02",
+    "label": "THE CLUES",
+    "place": "LITTLE CUBA",
+    "target": "SHARKTOOTH ISLAND",
+    "direction": "GO NORTH",
+    "region": "NORTH OF WANING SANDS",
+    "ar": "شقته في ليتل كيوبا… تدلك على جزيرة شاركتوث"
+   },
+   {
+    "type": "code",
+    "from": 10.56,
+    "to": 15.76,
+    "captions": false,
+    "broll": {
+     "src": "night",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 4
+    },
+    "step": "03",
+    "label": "BUNKER 1",
+    "device": "keypad",
+    "prompt": "PRESIDENT'S BIRTHDAY",
+    "code": "010317",
+    "typeAt": 2.72,
+    "typeEnd": 4.48,
+    "done": "ACCESS GRANTED",
+    "doneAt": 4.75,
+    "note": "SHARKTOOTH ISLAND · PRESIDENT'S BIRTHDAY",
+    "ar": "الكود: عيد ميلاد الرئيس"
+   },
+   {
+    "type": "code",
+    "from": 15.76,
+    "to": 20.96,
+    "captions": false,
+    "broll": {
+     "src": "hall",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "04",
+    "label": "THE SAFE",
+    "device": "safe",
+    "prompt": "SAFE",
+    "code": "2975",
+    "typeAt": 1.4,
+    "typeEnd": 2.36,
+    "done": "OPEN",
+    "doneAt": 2.55,
+    "inside": [
+     {
+      "text": "RUSSO'S 1922 PISTOL",
+      "at": 3.0
+     },
+     {
+      "text": "A PHOTO: THE LAST CODE",
+      "at": 3.36
+     }
+    ],
+    "ar": "الخزنة: ٢٩٧٥… وفيها صورة بالكود الأخير"
+   },
+   {
+    "type": "reveal",
+    "from": 20.96,
+    "to": 25.84,
+    "captions": false,
+    "broll": {
+     "src": "police",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "BUNKER 2 · CODE 085355",
+    "slamAt": 3.44,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "THE TANK",
+      "at": 3.44,
+      "color": "gold",
+      "size": 230
+     },
+     {
+      "text": "IS YOURS",
+      "at": 3.9,
+      "size": 160
+     },
+     {
+      "text": "HAUNERS RIDGWAY",
+      "at": 4.2,
+      "color": "teal",
+      "size": 70
+     }
+    ],
+    "ar": "المخبأ الثاني… اضغط الزر الأحمر والدبابة لك"
+   },
+   {
+    "type": "cta",
+    "from": 25.84,
+    "to": 29.6,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.6,
+    "volume": 0.55
+   },
+   {
+    "src": "ping.wav",
+    "at": 2.8,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.46,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.2,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.18,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 9.04,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.5,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.28,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.6,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.12,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.52,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.76,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.04,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 15.31,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.7,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.16,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.48,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.8,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.12,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 18.31,
+    "volume": 0.55
+   },
+   {
+    "src": "ping.wav",
+    "at": 18.76,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.12,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.9,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.04,
+    "volume": 0.5
+   },
+   {
+    "src": "trophy.wav",
+    "at": 24.4,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.42,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.78,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.86,
+    "volume": 0.5
+   }
+  ]
+ }
+}
