@@ -26,6 +26,56 @@ const Bill: React.FC<{i: number; frame: number}> = ({i, frame}) => {
   );
 };
 
+// The optional fence lead-in: a stack of banded bundles is stamped (e.g. MARKED), then slides
+// down into a buyer chip; it all clears away just before the payout lands.
+const FenceLead: React.FC<{f: NonNullable<CashScene['fence']>; frame: number; end: number}> = ({f, frame, end}) => {
+  const at = sec(f.at);
+  const toAt = sec(f.toAt);
+  const card = pop(frame, at, 12, 0.6, 160);
+  const stamp = pop(frame, at + 6, 9, 0.5, 260);
+  const slide = interpolate(frame, [toAt - 4, toAt + 12], [0, 1], {...clamp, easing: (t) => t * t * (3 - 2 * t)});
+  const chip = pop(frame, toAt, 10, 0.5, 220);
+  const out = ease(frame, end - 8, end);
+  if (out >= 1) return null;
+  return (
+    <AbsoluteFill style={{opacity: 1 - out}}>
+      <div style={{position: 'absolute', top: 420, left: 0, right: 0, display: 'flex', justifyContent: 'center',
+        opacity: Math.min(1, card * 1.5) * (1 - slide),
+        transform: `translateY(${slide * 520}px) scale(${(0.8 + 0.2 * card) * (1 - 0.6 * slide)})`}}>
+        <div style={{position: 'relative', width: 620, height: 430}}>
+          {[0, 1, 2].map((i) => (
+            <div key={i} style={{position: 'absolute', left: 30 + (i % 2) * 24, top: 40 + i * 120, width: 540, height: 126, borderRadius: 14,
+              background: 'linear-gradient(135deg, #8fd694, #2f7a3a)', border: '4px solid #cdeccc', boxShadow: '0 14px 30px rgba(0,0,0,0.55)'}}>
+              <div style={{position: 'absolute', left: 230, top: 0, width: 80, height: '100%', background: '#e8dcb0', borderLeft: '3px solid #b9a970',
+                borderRight: '3px solid #b9a970'}} />
+              <div style={{position: 'absolute', left: 40, top: 18, fontFamily: F.display, fontSize: 80, color: '#e7f7e4', lineHeight: 1}}>$</div>
+              <div style={{position: 'absolute', right: 40, top: 18, fontFamily: F.display, fontSize: 80, color: '#e7f7e4', lineHeight: 1}}>$</div>
+            </div>
+          ))}
+          {frame >= at + 6 ? (
+            <div style={{position: 'absolute', left: 0, right: 0, top: 150, display: 'flex', justifyContent: 'center',
+              transform: `rotate(-11deg) scale(${interpolate(stamp, [0, 1], [2.2, 1])})`, opacity: Math.min(1, stamp * 2)}}>
+              <div style={{fontFamily: F.display, fontSize: 130, lineHeight: 1, letterSpacing: 8, color: C.red, padding: '8px 34px',
+                border: `10px solid ${C.red}`, borderRadius: 18, background: 'rgba(20,0,4,0.55)', textShadow: '0 4px 0 #000'}}>{f.stamp}</div>
+            </div>
+          ) : null}
+        </div>
+      </div>
+      {frame >= toAt ? (
+        <div style={{position: 'absolute', top: 960, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center',
+          transform: `scale(${chip})`}}>
+          {f.label ? (
+            <div style={{fontFamily: F.brand, fontWeight: 900, fontSize: 46, letterSpacing: 10, color: '#fff', marginBottom: 18,
+              textShadow: '0 3px 14px #000'}}>{f.label}</div>
+          ) : null}
+          <div style={{fontFamily: F.display, fontSize: 120, lineHeight: 1, letterSpacing: 6, color: '#fff', padding: '18px 54px', borderRadius: 26,
+            background: 'rgba(6,6,15,0.8)', border: `6px solid ${C.gold}`, boxShadow: `0 0 50px ${C.gold}88`}}>{f.to}</div>
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
 // Proof from the game first (a screenshot with the key lines marked), then the payout.
 export const Cash: React.FC<{s: CashScene}> = ({s}) => {
   const frame = useCurrentFrame();
@@ -42,6 +92,7 @@ export const Cash: React.FC<{s: CashScene}> = ({s}) => {
         <Background broll={s.broll} />
       </SceneIn>
       {frame >= amountAt ? Array.from({length: 22}).map((_, i) => <Bill key={i} i={i} frame={frame - amountAt} />) : null}
+      {s.fence ? <FenceLead f={s.fence} frame={frame} end={amountAt} /> : null}
       {proof && pOut < 1 ? (
         <div
           style={{

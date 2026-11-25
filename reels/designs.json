@@ -168,6 +168,30 @@
    "variant": "paper",
    "new": false,
    "note": "Sharktooth Island, north of Waning Sands"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "022-bank-vaults",
+   "scene": "vault",
+   "variant": "security-camera bank vault (round steel door, guard delivery, door swings open)",
+   "new": true,
+   "note": "new scene type 'vault': CAM 04 frame with REC, a guard silhouette walks in with a cash bag, the 12 bolts slide back and the wheel spins, the door swings open (3D) on banded cash and gold bars; status pill LOCKED / DELIVERY IN PROGRESS / VAULT OPEN; a 'that's your window' bar drains"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "022-bank-vaults",
+   "scene": "cash",
+   "variant": "fence lead-in (bundle stamped MARKED drops into a buyer chip), then the payout",
+   "new": true,
+   "note": "new optional field cash.fence {stamp, to, label, at, toAt}; without it the cash scene draws exactly as before"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "022-bank-vaults",
+   "scene": "location",
+   "variant": "radar",
+   "new": false,
+   "note": "tail the security van to a big bank"
   }
  ]
 }

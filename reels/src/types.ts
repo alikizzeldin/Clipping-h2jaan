@@ -133,6 +133,9 @@ export type CashScene = Base & {
   amountAt: number;
   repeat?: string;
   repeatAt?: number;
+  // Optional lead-in before the payout: a cash bundle gets a rubber stamp (`stamp`, e.g. "MARKED"), then
+  // slides over to a buyer chip (`to`, e.g. "YASMANI") under a small `label` (e.g. "SELL TO"). Seconds into the scene.
+  fence?: {stamp: string; to: string; label?: string; at: number; toAt: number};
   ar?: string;
 };
 

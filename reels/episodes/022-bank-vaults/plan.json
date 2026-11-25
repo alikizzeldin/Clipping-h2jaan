@@ -1,0 +1,467 @@
+{
+ "episode": 22,
+ "kind": "money",
+ "topic": "Bank vaults: Yasmani's optional mission 'That's Where The Money Is…' unlocks the vaults of the 8 big banks; tail a security van to one, the vault opens while the guard carries the cash in; vault cash is marked bills, sold to Yasmani; the best vaults pay up to $205,000",
+ "title": {
+  "en": "GTA 6's vaults only open for ONE van 🚚",
+  "ar": "خزائن GTA 6 ما تنفتح إلا لشاحنة وحدة 🚚"
+ },
+ "summary": "GTA 6's bank vaults stay shut until one van shows up. First finish Yasmani's side mission, That's Where The Money Is: it unlocks the vaults in eight big banks. Tail a security van to one of them; when the guard carries the cash in, the vault opens, and that's your window. Sell the marked bills to Yasmani: the best vaults pay up to $205,000.",
+ "summary_ar": "خزائن البنوك في GTA 6 مقفلة لين توصل شاحنة الأموال. أول شي خلّص مهمة ياسماني الجانبية That's Where The Money Is، وتفتح لك خزائن ٨ بنوك كبيرة. لاحق شاحنة الأمن لين البنك، ولما الحارس يدخّل الفلوس تنفتح الخزنة وهذي فرصتك. بيع الفلوس المعلّمة لياسماني: أفضل الخزائن تعطي لين ٢٠٥ آلاف دولار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Heist",
+  "GTA6BankVault",
+  "GTA6Tips",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 6,
+  "visual": 8,
+  "confidence": 8,
+  "score": 7.8
+ },
+ "sources": [
+  "https://www.dualshockers.com/gta-6-how-to-get-into-bank-vaults/",
+  "https://www.thebiglead.com/how-to-get-into-bank-vaults-gta-6/",
+  "https://gameshorizon.com/guides/gta-6-how-to-open-vaults/",
+  "https://happygamer.com/gta-6-how-to-rob-bank-vaults-178241/",
+  "https://timesaver.gg/tools/gta-6/money/bank-vaults",
+  "https://www.gta6heists.com/robberies/how-to-open-bank-vaults",
+  "https://gta.tech4gamers.com/gta-6/guides/bank-vault-armored-trucks/",
+  "https://pro-gamer.gg/gta-6-bank-robbery-guide-how-to-get-into-bank-vaults-locations-payouts/",
+  "https://www.powerpyx.com/gta-6-all-bank-jobs-locations-bank-vaults/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 103.0,
+     "dur": 3.7,
+     "x": 480
+    }
+   ]
+  },
+  "skyline": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 19.0,
+     "dur": 2.5,
+     "x": 900
+    }
+   ]
+  },
+  "overpass": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 158.0,
+     "dur": 4.2,
+     "x": 1000
+    }
+   ]
+  },
+  "city": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 11.0,
+     "dur": 2.9,
+     "x": 1000
+    }
+   ]
+  },
+  "street": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 98.5,
+     "dur": 2.4,
+     "x": 1000
+    }
+   ]
+  },
+  "safe": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 0.0,
+     "dur": 1.15,
+     "x": 400,
+     "slow": 3.9
+    }
+   ]
+  },
+  "drive": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 162.5,
+     "dur": 6.3,
+     "x": 1000
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 107.0,
+     "dur": 3.8,
+     "x": 1000
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 98,
+  "seed": 227,
+  "drop": 3.52,
+  "break": 21.4,
+  "back": 22.72,
+  "outro": 25.36
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "episode": 22,
+  "duration": 29.0,
+  "musicVolume": 0.42,
+  "style": "vice-tape",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.52,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "VAULT ACCESS",
+    "kicker": "GTA 6'S VAULTS OPEN FOR",
+    "title": [
+     "ONE VAN"
+    ],
+    "color": "gold",
+    "ar": "خزائن GTA 6 ما تنفتح إلا لشاحنة وحدة"
+   },
+   {
+    "type": "twist",
+    "from": 3.52,
+    "to": 5.84,
+    "captions": false,
+    "broll": {
+     "src": "skyline",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 4,
+     "zoom": [
+      1.1,
+      1.2
+     ]
+    },
+    "pre": "AND THE PAYOUT IS…",
+    "slamAt": 1.2,
+    "lines": [
+     {
+      "text": "HUGE",
+      "at": 1.2,
+      "color": "gold",
+      "size": 280
+     },
+     {
+      "text": "$ ???,???",
+      "at": 1.6,
+      "color": "green",
+      "size": 120
+     }
+    ],
+    "ar": "والمبلغ… ضخم"
+   },
+   {
+    "type": "list",
+    "from": 5.84,
+    "to": 9.92,
+    "broll": {
+     "src": "overpass",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "STEP 1",
+    "label": "FINISH THIS FIRST",
+    "cardAt": 0.2,
+    "arAt": 0.6,
+    "items": [
+     {
+      "text": "YASMANI",
+      "status": "SIDE MISSION",
+      "ok": true,
+      "at": 1.0,
+      "icon": "phone"
+     },
+     {
+      "text": "THAT'S WHERE THE MONEY IS…",
+      "status": "DONE",
+      "ok": true,
+      "at": 2.56,
+      "icon": "bank"
+     }
+    ],
+    "ar": "أول شي: خلّص مهمة ياسماني الجانبية"
+   },
+   {
+    "type": "stat",
+    "from": 9.92,
+    "to": 12.64,
+    "captions": false,
+    "broll": {
+     "src": "city",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "kicker": "IT UNLOCKS THE VAULTS IN",
+    "value": 8,
+    "countAt": 1.28,
+    "label": "BIG BANKS",
+    "sub": "VAULTS UNLOCKED",
+    "ar": "وتفتح لك خزائن ٨ بنوك كبيرة"
+   },
+   {
+    "type": "location",
+    "from": 12.64,
+    "to": 14.8,
+    "style": "radar",
+    "broll": {
+     "src": "street",
+     "grade": "night",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "02",
+    "label": "TAIL THE VAN",
+    "place": "VICE CITY",
+    "target": "SECURITY VAN",
+    "direction": "TAIL IT",
+    "region": "TO A BIG BANK",
+    "ar": "لاحق شاحنة الأمن لين البنك"
+   },
+   {
+    "type": "vault",
+    "from": 14.8,
+    "to": 19.2,
+    "broll": {
+     "src": "safe",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 4
+    },
+    "step": "03",
+    "label": "THE WINDOW",
+    "guardAt": 0.24,
+    "openAt": 2.16,
+    "windowAt": 3.08,
+    "ar": "لما الحارس يدخّل الفلوس… تنفتح الخزنة"
+   },
+   {
+    "type": "cash",
+    "from": 19.2,
+    "to": 25.36,
+    "captions": false,
+    "broll": {
+     "src": "drive",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "SELL TO YASMANI",
+    "amount": "$205,000",
+    "per": "up to · best vaults",
+    "amountAt": 3.52,
+    "ar": "بيعها لياسماني… لين ٢٠٥ آلاف دولار",
+    "fence": {
+     "stamp": "MARKED",
+     "label": "SELL TO",
+     "to": "YASMANI",
+     "at": 0.2,
+     "toAt": 1.08
+    }
+   },
+   {
+    "type": "cta",
+    "from": 25.36,
+    "to": 29.0,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 2.48,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.46,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 4.72,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 5.78,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.84,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.4,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.86,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 11.2,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.58,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 12.9,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.74,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.6,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.76,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.96,
+    "volume": 0.6
+   },
+   {
+    "src": "ping.wav",
+    "at": 17.88,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.14,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 19.6,
+    "volume": 0.45
+   },
+   {
+    "src": "riser.wav",
+    "at": 21.4,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.72,
+    "volume": 0.65
+   },
+   {
+    "src": "cash.wav",
+    "at": 22.74,
+    "volume": 0.6
+   },
+   {
+    "src": "coins.wav",
+    "at": 22.85,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 25.3,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 25.38,
+    "volume": 0.5
+   }
+  ]
+ }
+}
