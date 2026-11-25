@@ -1,0 +1,448 @@
+{
+ "episode": 23,
+ "kind": "feature",
+ "topic": "Steal a whole ATM: fit a winch at a Mod Shop (or take a tow truck from a police impound), back up to an outdoor ATM, hook it and drive off to rip it out of the wall; the cash is marked (Dye Pack Jammer needed) and goes to a fence; some ATMs pay over $10,000",
+ "title": {
+  "en": "You can steal a WHOLE ATM in GTA 6 🏧",
+  "ar": "تقدر تسرق صرّاف كامل في GTA 6 🏧"
+ },
+ "summary": "GTA 6 lets you steal a whole ATM. Get a winch fitted at a Mod Shop, or take a tow truck from the police impound. Find an outdoor ATM, back up and hook it, then floor it and the machine rips out of the wall. The cash inside is marked, so you need the Dye Pack Jammer and a fence. Some ATMs pay over $10,000.",
+ "summary_ar": "في GTA 6 تقدر تسرق صرّاف آلي كامل. ركّب ونش من محل التعديل أو خذ سحّابة من حجز الشرطة. دوّر صرّاف برّا، ارجع عليه وعلّق الخطاف، ودعس وينخلع الصرّاف من الجدار. الفلوس معلّمة، فتحتاج مشوّش الصبغة وتاجر يصرّفها. بعض الصرّافات فيها أكثر من ١٠ آلاف دولار.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6ATM",
+  "GTA6Tips",
+  "GTA6HiddenFeature",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 8,
+  "confidence": 8,
+  "score": 7.7
+ },
+ "sources": [
+  "https://www.pcgamer.com/games/grand-theft-auto/gta-6-atm-winched-vehicle/",
+  "https://www.dualshockers.com/gta-6-how-to-rob-atm-machines/",
+  "https://www.gamersheroes.com/game-guides/how-to-rob-atm-machines-in-gta-6/",
+  "https://powerupgaming.co.uk/2026/11/21/gta-6-how-to-rob-security-trucks-and-steal-atms/",
+  "https://www.gtasixmap.com/blog/how-to-rob-atms",
+  "https://games.gg/grand-theft-auto-vi/guides/gta-6-how-to-open-a-stolen-atm-and-rob-atms-with-a-winch/",
+  "https://happygamer.com/gta-6-how-to-rob-atm-178845/",
+  "https://thehypdgamer.com/gaming-news/gta-6/gta-6-atm-heists-how-to-steal-cash-machines-for-big-rewards/",
+  "https://web.matrixnews.in/news/eh5llxn3chba4/gta-6-players-are-pulling-off-challenging-heists"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 13.6,
+     "dur": 3.5,
+     "x": 560
+    }
+   ]
+  },
+  "night": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 9.5,
+     "dur": 1.8,
+     "x": 1000
+    }
+   ]
+  },
+  "intersection": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 80.5,
+     "dur": 3.6,
+     "x": 1000
+    }
+   ]
+  },
+  "dark": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 23.0,
+     "dur": 6.3,
+     "x": 1000
+    }
+   ]
+  },
+  "downtown": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 90.5,
+     "dur": 4.1,
+     "x": 1050
+    }
+   ]
+  },
+  "pickup": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 17.2,
+     "dur": 3.2,
+     "x": 800
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 13.5,
+     "dur": 3.8,
+     "x": 1000
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 108,
+  "seed": 233,
+  "drop": 3.36,
+  "break": 17.52,
+  "back": 19.84,
+  "outro": 21.52
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "episode": 23,
+  "duration": 25.2,
+  "musicVolume": 0.42,
+  "style": "vice-tape",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.36,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WINCH TRICK",
+    "kicker": "GTA 6: STEAL A WHOLE",
+    "title": [
+     "ATM"
+    ],
+    "color": "pink",
+    "ar": "في GTA 6 تقدر تسرق صرّاف كامل"
+   },
+   {
+    "type": "reveal",
+    "from": 3.36,
+    "to": 4.96,
+    "captions": false,
+    "broll": {
+     "src": "night",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 4,
+     "zoom": [
+      1.1,
+      1.2
+     ]
+    },
+    "pre": "AND SOME ARE…",
+    "slamAt": 0.72,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "LOADED",
+      "at": 0.72,
+      "color": "gold",
+      "size": 250
+     },
+     {
+      "text": "$ $ $",
+      "at": 1.0,
+      "color": "green",
+      "size": 120
+     }
+    ],
+    "ar": "وبعضها مليان فلوس"
+   },
+   {
+    "type": "list",
+    "from": 4.96,
+    "to": 8.4,
+    "broll": {
+     "src": "intersection",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "STEP 1",
+    "label": "GET A WINCH",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "MOD SHOP",
+      "status": "FIT A WINCH",
+      "ok": true,
+      "at": 0.72,
+      "icon": "car"
+     },
+     {
+      "text": "POLICE IMPOUND",
+      "status": "TOW TRUCK",
+      "ok": true,
+      "at": 1.84,
+      "icon": "lock"
+     }
+    ],
+    "ar": "ونش من محل التعديل… أو سحّابة من الحجز"
+   },
+   {
+    "type": "winch",
+    "from": 8.4,
+    "to": 14.56,
+    "broll": {
+     "src": "dark",
+     "grade": "night",
+     "dim": 0.6,
+     "blur": 4
+    },
+    "step": "02",
+    "label": "RIP IT OUT",
+    "backAt": 1.88,
+    "hookAt": 2.48,
+    "pullAt": 3.36,
+    "ripAt": 4.72,
+    "ar": "ارجع عليه، علّق الخطاف… ودعس"
+   },
+   {
+    "type": "receipt",
+    "from": 14.56,
+    "to": 18.48,
+    "broll": {
+     "src": "downtown",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "03",
+    "label": "BEFORE YOU SPEND",
+    "title": "ATM RECEIPT",
+    "sub": "OUTDOOR MACHINE · TOWED",
+    "lines": [
+     {
+      "text": "CASH INSIDE",
+      "amount": "MARKED",
+      "at": 0.84,
+      "color": "red"
+     },
+     {
+      "text": "DYE PACK JAMMER",
+      "amount": "NEEDED",
+      "at": 2.0
+     },
+     {
+      "text": "CASH OUT VIA",
+      "amount": "A FENCE",
+      "at": 2.96
+     }
+    ],
+    "stamp": {
+     "text": "MARKED",
+     "at": 1.1,
+     "color": "red"
+    },
+    "ar": "الفلوس معلّمة… تحتاج مشوّش الصبغة وتاجر يصرّفها"
+   },
+   {
+    "type": "cash",
+    "from": 18.48,
+    "to": 21.52,
+    "broll": {
+     "src": "pickup",
+     "grade": "green",
+     "dim": 0.35,
+     "blur": 2
+    },
+    "title": "SOME ATMS PAY",
+    "amount": "$10,000+",
+    "per": "per machine",
+    "amountAt": 1.36,
+    "ar": "بعض الصرّافات فيها أكثر من ١٠ آلاف دولار"
+   },
+   {
+    "type": "cta",
+    "from": 21.52,
+    "to": 25.2,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "night",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 2.24,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.3,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 4.08,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.9,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.68,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.8,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.34,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.28,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.5,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.88,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 11.76,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 13.12,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 13.14,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.5,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 15.4,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 16.56,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 17.52,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.42,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.84,
+    "volume": 0.65
+   },
+   {
+    "src": "cash.wav",
+    "at": 19.86,
+    "volume": 0.6
+   },
+   {
+    "src": "coins.wav",
+    "at": 19.95,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.46,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.54,
+    "volume": 0.5
+   }
+  ]
+ }
+}

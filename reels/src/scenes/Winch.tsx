@@ -10,7 +10,7 @@ import {WinchScene} from '../types';
 // on, the truck floors it, the cable snaps taut, cracks run through the wall and the whole machine
 // tears out in a burst of debris and dust, leaving a hole.
 
-const GROUND = 1210;
+const GROUND = 1130;
 const ATM_X = 730; // left face of the machine
 const ATM_W = 170;
 const ATM_H = 300;
@@ -184,12 +184,12 @@ export const Winch: React.FC<{s: WinchScene}> = ({s}) => {
       </div>
       <StepLabel step={s.step} label={s.label} />
       {/* status chip and the tension meter */}
-      <div style={{position: 'absolute', top: 1300, left: 0, right: 0, display: 'flex', justifyContent: 'center', transform: `scale(${0.85 + 0.15 * sp})`}}>
+      <div style={{position: 'absolute', top: 1222, left: 0, right: 0, display: 'flex', justifyContent: 'center', transform: `scale(${0.85 + 0.15 * sp})`}}>
         <div style={{fontFamily: F.brand, fontWeight: 900, fontSize: 42, letterSpacing: 4, color: '#06060F', background: tone, padding: '12px 34px',
           borderRadius: 14, boxShadow: `0 0 34px ${tone}aa`}}>{status}</div>
       </div>
       {frame >= pullAt ? (
-        <div style={{position: 'absolute', top: 1392, left: 190, right: 190, opacity: ease(frame, pullAt, pullAt + 6)}}>
+        <div style={{position: 'absolute', top: 1306, left: 190, right: 190, opacity: ease(frame, pullAt, pullAt + 6)}}>
           <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: F.mono, fontWeight: 800, fontSize: 24, letterSpacing: 4, color: '#fff', marginBottom: 8}}>
             <span>WINCH TENSION</span>
             <span style={{color: ripped ? C.green : C.pink}}>{ripped ? 'SNAP' : `${Math.round(strain * 100)}%`}</span>
@@ -199,7 +199,7 @@ export const Winch: React.FC<{s: WinchScene}> = ({s}) => {
           </div>
         </div>
       ) : null}
-      <Arabic text={s.ar} delay={16} top={1470} size={50} />
+      <Arabic text={s.ar} delay={16} top={1396} size={50} />
     </AbsoluteFill>
   );
 };

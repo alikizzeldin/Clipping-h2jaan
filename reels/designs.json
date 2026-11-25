@@ -192,6 +192,22 @@
    "variant": "radar",
    "new": false,
    "note": "tail the security van to a big bank"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "023-atm-winch",
+   "scene": "winch",
+   "variant": "night street side view: pickup winches an ATM out of a wall",
+   "new": true,
+   "note": "new scene type 'winch': lit ATM sign in a brick wall under a street lamp; the pickup reverses in, a hook latches on, FLOOR IT fills a winch-tension meter while cracks spread, the machine tears out with debris, dust and a camera shake and is dragged off, leaving a hole; status chip FIND / BACK UP / HOOKED / FLOOR IT / RIPPED OUT"
+  },
+  {
+   "date": "2026-11-25",
+   "episode": "023-atm-winch",
+   "scene": "cash",
+   "variant": "default (payout with raining bills)",
+   "new": false,
+   "note": "$10,000+ per machine"
   }
  ]
 }
