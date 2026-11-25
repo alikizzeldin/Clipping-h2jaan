@@ -560,13 +560,29 @@ export type PortalScene = Base & {
   ar?: string;
 };
 
+// A bank vault on a security camera: a round steel door stays shut until a guard walks in with the
+// cash; then the bolts slide back, the wheel spins, the door swings open and a "window" bar drains.
+export type VaultScene = Base & {
+  type: 'vault';
+  step: string;
+  label: string;
+  guardAt: number; // seconds into the scene: the guard walks in with the cash bag
+  openAt: number; // the door unlocks and swings open
+  windowAt?: number; // the "window" bar appears and starts draining
+  lockedText?: string; // status pill texts (defaults: LOCKED / DELIVERY IN PROGRESS / VAULT OPEN)
+  deliveryText?: string;
+  openText?: string;
+  windowText?: string; // default "THAT'S YOUR WINDOW"
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
