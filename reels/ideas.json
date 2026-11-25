@@ -1653,5 +1653,117 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "wake_up": "12:41 UTC",
+  "ideas": [
+   {
+    "format": "SECRET FILE",
+    "idea": "President Russo's bunkers: veteran Jose Bermudez at the Friends of Freedom memorial (Downtown Vice City) -> his Little Cuba apartment (NW 4th Ave) -> clues to Sharktooth Island (north of Waning Sands) -> bunker code 010317 (Russo's birthday) -> safe 2975 (Russo's 1922 pistol + a photo with the last code 085355) -> second bunker, big red button -> Hauners Ridgway tank",
+    "demand": 9,
+    "payoff": 9,
+    "retention": 8,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 7,
+    "score": 7.9,
+    "chosen": "021-bunker-tank",
+    "why_not": null,
+    "sources": [
+     "https://beebom.com/gta-6-free-tank-secret-bunker-location/",
+     "https://gamerant.com/gta-6-president-bunker-location-all-codes/",
+     "https://www.keengamer.com/articles/guides/gta-6-how-to-get-a-tank-secret-bunker-quest/",
+     "https://khelnow.com/gaming/gta-6-secret-bunker-free-tank-guide-202611",
+     "https://pro-gamer.gg/gta-6-secret-bunkers-guide-codes-010317-2975-085355-free-tank/",
+     "https://www.theclick.gg/gta-6-russos-1922-pistol-location/",
+     "https://npcwire.com/news/gta-6-president-russo-bunker-codes"
+    ],
+    "note": "The second bunker's location differs between guides (NW of Grassrivers by Big Pine vs a hatch south of the Ammu-Nation in North Mariana County): not said. Audio tape vs phone video: said only 'points to'."
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Teenage Mutant Ninja Turtles nod: four tiny turtles, pizza boxes, green slime and a rat in a storm drain near Millport",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 6,
+    "score": 6.3,
+    "chosen": null,
+    "why_not": "exact location not pinned down yet; confidence 6",
+    "sources": [
+     "https://www.complex.com/pop-culture/a/markelibert/gta-6-teenage-mutant-ninja-turtles-easter-egg",
+     "https://vgtimes.com/gaming-news/175706-gta-6-players-discover-teenage-mutant-ninja-turtles-easter-egg-featuring-green-mutagen-pizza-and-splinter.html"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "SAW-inspired trap on Hyde Island (trending on X)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 8,
+    "visual": 3,
+    "confidence": 4,
+    "score": 5.6,
+    "chosen": null,
+    "why_not": "one trending post, no guide yet",
+    "sources": [
+     "https://x.com/i/trending/2125137003687903377"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Collateral hitman random encounter",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 8,
+    "score": 6.7,
+    "chosen": null,
+    "why_not": "score 6.7",
+    "sources": [
+     "https://www.comingsoon.net/games/news/2228502-gta-6-tom-cruise-collateral-easter-egg-npc-mission",
+     "https://onpoint4gamers.com/gta-6-tom-cruise-collateral-npc-hostage/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Hidden trophy Let's Go Bowling (Hit Kingpin Bowling)",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "score 6.6",
+    "sources": [
+     "https://www.truetrophies.com/t1155348/lets-go-bowling-trophy",
+     "https://metaforge.app/gta-6/gta-6-hit-kingpin-bowling-walkthrough"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Secret cutscene: throw a painted egg from the radio tower after a seven-minute climb",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 4,
+    "visual": 5,
+    "confidence": 6,
+    "score": 5.9,
+    "chosen": null,
+    "why_not": "tower location still differs",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-secret-cutscene-seven-minute-tower-easter-egg-795530-20261119"
+    ]
+   }
+  ]
  }
 ]
