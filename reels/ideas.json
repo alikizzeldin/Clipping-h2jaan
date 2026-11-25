@@ -1765,5 +1765,132 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "wake_up": "18:41 UTC",
+  "ideas": [
+   {
+    "format": "MONEY FILE",
+    "idea": "Bank vaults: Yasmani's optional mission 'That's Where The Money Is…' unlocks the vaults of the 8 big banks; tail a security van to one, the vault opens while the guard carries the cash in; vault cash is marked bills, fenced to Yasmani (best rate); the best vaults pay up to $205,000",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 6,
+    "visual": 8,
+    "confidence": 8,
+    "score": 7.8,
+    "chosen": "022-bank-vaults",
+    "why_not": null,
+    "sources": [
+     "https://www.dualshockers.com/gta-6-how-to-get-into-bank-vaults/",
+     "https://www.thebiglead.com/how-to-get-into-bank-vaults-gta-6/",
+     "https://gameshorizon.com/guides/gta-6-how-to-open-vaults/",
+     "https://happygamer.com/gta-6-how-to-rob-bank-vaults-178241/",
+     "https://timesaver.gg/tools/gta-6/money/bank-vaults",
+     "https://www.gta6heists.com/robberies/how-to-open-bank-vaults",
+     "https://gta.tech4gamers.com/gta-6/guides/bank-vault-armored-trucks/",
+     "https://pro-gamer.gg/gta-6-bank-robbery-guide-how-to-get-into-bank-vaults-locations-payouts/",
+     "https://www.powerpyx.com/gta-6-all-bank-jobs-locations-bank-vaults/"
+    ],
+    "note": "Not said (sources disagree or only one says it): whether the mission is missable before Sunset, the chapter it unlocks in, a $10,000 van tip from Yasmani, the instant 4-star wanted level, the Dye Pack Jammer. Payout said only as the agreed top figure 'up to $205,000'."
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "GTA 6 hacker Arion Kurtaj sentenced to seven years at Woolwich Crown Court (Nov 23) and released on licence the same day (time served), with a five-year Serious Crime Prevention Order (no Telegram or Discord)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 4,
+    "visual": 4,
+    "confidence": 9,
+    "score": 5.9,
+    "chosen": null,
+    "why_not": "over 48 hours old (sentenced Nov 23); a real person's court and health case, not a game reel",
+    "sources": [
+     "https://www.helpnetsecurity.com/2026/11/24/gta-vi-hacker-sentenced-seven-years-released-on-licence/",
+     "https://www.neowin.net/news/gta-6-hacker-sentenced-to-seven-years-in-prison-but-released-on-the-same-day/",
+     "https://www.heise.de/en/news/GTA-6-leak-Hacker-sentenced-released-the-same-day-11535539.html"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Teenage Mutant Ninja Turtles nod in a storm drain",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 4,
+    "score": 5.7,
+    "chosen": null,
+    "why_not": "search today found no second source for the location; confidence 4",
+    "sources": [
+     "https://www.complex.com/pop-culture/a/markelibert/gta-6-teenage-mutant-ninja-turtles-easter-egg"
+    ]
+   },
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "More hidden controls: hold Circle/B to sit on grass or sand, crouch-run with a rifle out",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 6,
+    "score": 5.5,
+    "chosen": null,
+    "why_not": "close to episode 003 (hidden controls); low payoff",
+    "sources": [
+     "https://www.playstationtrophies.org/game/grand-theft-auto-6/guide/gta-6-heres-11-cool-hidden-tips-and-tricks-the-game-doesnt-tell-you-about",
+     "https://www.pcgamer.com/games/grand-theft-auto/15-hidden-gta-6-controls-and-features-you-should-know-about/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Collateral hitman random encounter",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 7,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "score under 7 again; bank vaults are in higher demand today",
+    "sources": []
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Five underwater research facilities run by Burg Industries (meteorite messages)",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 7,
+    "score": 6.7,
+    "chosen": null,
+    "why_not": "score under 7",
+    "sources": []
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Secret cutscene: throw a painted egg from the radio tower after a seven-minute climb",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 6,
+    "fresh": 4,
+    "visual": 6,
+    "confidence": 8,
+    "score": 5.9,
+    "chosen": null,
+    "why_not": "everywhere since launch day; small payoff",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-secret-cutscene-seven-minute-tower-easter-egg-795530-20261119",
+     "https://www.ibtimes.co.uk/gta-6-player-discovers-literal-easter-egg-leonida-1833342"
+    ]
+   }
+  ]
  }
 ]
