@@ -77,7 +77,32 @@ const Flash: React.FC<{f: number}> = ({f}) => {
   return o > 0 ? <AbsoluteFill style={{background: '#fff', opacity: o}} /> : null;
 };
 
-const CUTS: Record<Exclude<CutStyle, 'none'>, React.FC<{f: number}>> = {shutter: Shutter, whip: Whip, glitch: Glitch, iris: Iris, ink: Ink, flash: Flash};
+// A VHS tape losing tracking at the cut: a band of static rolls up the screen, the picture
+// above it smears into colour streaks, and a black head-switch bar chases it.
+const Tracking: React.FC<{f: number}> = ({f}) => {
+  const p = interpolate(f, [-LEAD, 7], [0, 1], clamp);
+  if (p <= 0 || p >= 1) return null;
+  const y = interpolate(p, [0, 1], [1980, -260]);
+  const band = 200;
+  const lines = Array.from({length: 14}).map((_, i) => ({
+    top: y + random(`tr${f}-${i}`) * band,
+    h: 2 + random(`th${f}-${i}`) * 7,
+    x: (random(`tx${f}-${i}`) - 0.5) * 180,
+    o: 0.25 + random(`to${f}-${i}`) * 0.6,
+  }));
+  return (
+    <AbsoluteFill style={{overflow: 'hidden'}}>
+      <div style={{position: 'absolute', left: 0, right: 0, top: y - 140, height: 140, background: `linear-gradient(180deg, transparent, ${C.pink}22 40%, ${C.teal}33)`, mixBlendMode: 'screen'}} />
+      <div style={{position: 'absolute', left: 0, right: 0, top: y, height: band, background: 'rgba(200,200,210,0.18)', mixBlendMode: 'screen'}} />
+      {lines.map((l, i) => (
+        <div key={i} style={{position: 'absolute', left: l.x, right: -l.x, top: l.top, height: l.h, background: '#fff', opacity: l.o, mixBlendMode: 'screen'}} />
+      ))}
+      <div style={{position: 'absolute', left: 0, right: 0, top: y + band, height: 34, background: '#000', opacity: 0.85}} />
+    </AbsoluteFill>
+  );
+};
+
+const CUTS: Record<Exclude<CutStyle, 'none'>, React.FC<{f: number}>> = {shutter: Shutter, whip: Whip, glitch: Glitch, iris: Iris, ink: Ink, flash: Flash, tracking: Tracking};
 
 export const CutFx: React.FC<{kind: CutStyle}> = ({kind}) => {
   const frame = useCurrentFrame();

@@ -4,7 +4,7 @@ import {C, F, FPS} from '../theme';
 import {Word} from '../types';
 import {pop} from './motion';
 import {look, widthScale} from '../looks/state';
-import {BoxCaptions, KaraokeCaptions, StackCaptions, TapeCaptions} from '../looks/fx/captions';
+import {BoxCaptions, CcCaptions, KaraokeCaptions, StackCaptions, TapeCaptions} from '../looks/fx/captions';
 
 type Chunk = {words: Word[]; start: number; end: number};
 
@@ -35,7 +35,7 @@ export const Captions: React.FC<{words: Word[]; hidden: (t: number) => boolean; 
   const enter = pop(frame, Math.round((chunk.start - 0.05) * FPS), 13, 0.5, 220);
   const cap = look().captions;
   const top = cap.y ?? y;
-  const Variant = {box: BoxCaptions, karaoke: KaraokeCaptions, tape: TapeCaptions, stack: StackCaptions}[cap.style as string];
+  const Variant = {box: BoxCaptions, karaoke: KaraokeCaptions, tape: TapeCaptions, stack: StackCaptions, cc: CcCaptions}[cap.style as string];
   if (Variant) {
     return (
       <AbsoluteFill style={{pointerEvents: 'none'}}>

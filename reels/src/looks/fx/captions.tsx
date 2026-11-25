@@ -105,6 +105,31 @@ export const TapeCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => {
   );
 };
 
+// 1980s closed captions: blocky mono letters, white on solid black bars, one bar per chunk;
+// the word being said turns the accent colour and gets a blinking block cursor after it.
+export const CcCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => {
+  const size = look().captions.size ?? 84;
+  const accent = accentOf();
+  const font = look().captions.font ?? F.mono;
+  const blink = Math.floor(t * 4) % 2 === 0;
+  return (
+    <div style={{position: 'absolute', top: y, left: 50, right: 50, display: 'flex', justifyContent: 'center', opacity: Math.min(1, enter * 2)}}>
+      <div style={{background: '#000', padding: '8px 22px 4px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0 0.45em',
+        fontFamily: font, fontSize: size, lineHeight: 1.08, textTransform: 'uppercase', letterSpacing: 2, boxShadow: '0 0 0 4px #000'}}>
+        {words.map((w, i) => {
+          const on = isActive(w, t);
+          return (
+            <span key={i} style={{color: on ? accent : '#fff', textShadow: on ? `0 0 18px ${accent}aa` : 'none'}}>
+              {clean(w)}
+              {on && blink ? <span style={{display: 'inline-block', width: '0.5em', height: '0.85em', marginLeft: 6, background: accent, verticalAlign: '-0.08em'}} /> : null}
+            </span>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 // Words stacked one per line, the active one big and bright: a slow, punchy read.
 export const StackCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => {
   const size = sizeOf(88);

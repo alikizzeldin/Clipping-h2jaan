@@ -16,7 +16,20 @@
     "27 new open-licence fonts (display, mono, Arabic)",
     "reels/tools/look.py (preview) and reels/tools/textures.py (paper texture)"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "id": "vice-tape",
+   "name": "Vice Tape",
+   "mood": "A 1986 camcorder tape found in a Vice City pawn shop: neon on black, tracking lines, a tape counter, closed captions.",
+   "new_code": [
+    "captions: cc (1980s closed captions: white mono on black bars, accent word with a blinking block cursor)",
+    "cuts: tracking (a VHS tracking roll: static band rolls up the frame with a head-switch bar)"
+   ]
   }
  ],
- "ready": ["vice-tape", "leonida-herald", "evidence-locker"]
+ "ready": [
+  "leonida-herald",
+  "evidence-locker"
+ ]
 }
