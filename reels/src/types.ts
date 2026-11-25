@@ -231,7 +231,8 @@ export type CodeScene = Base & {
   type: 'code';
   step: string;
   label: string;
-  device: 'laptop' | 'keypad';
+  device: 'laptop' | 'keypad' | 'safe'; // safe: a steel safe door with a keypad that swings open
+  inside?: {text: string; at: number}[]; // safe only: what's revealed inside, seconds into the scene
   prompt: string; // "PASSWORD", "ENTER CODE"
   code: string; // what gets typed
   typeAt: number; // seconds into the scene: first character
