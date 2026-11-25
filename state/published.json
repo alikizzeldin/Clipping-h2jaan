@@ -1693,6 +1693,27 @@
    "error": "The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgJFifPEQaL/"
+  },
+  "reel_020": {
+   "video_id": "6b06a40e22dfb7833a96cf66",
+   "via": "buffer",
+   "link": "",
+   "title": "Someone ESCAPED GTA 6's 6-star wanted level 🚨 | واحد هرب من ٦ نجوم في GTA 6 🚨 #shorts",
+   "channel": "gta6fied",
+   "source": "reel",
+   "category": "grand-theft-auto-vi",
+   "uploaded_at": "2026-11-25T09:02:08+00:00",
+   "duration": 26,
+   "origin": "reel",
+   "kick_views": 0,
+   "kind": "reel",
+   "episode": 20,
+   "topic": "NEWS (reported Nov 24): Japanese VTuber Haigure Tamao escaped GTA 6's 'impossible' six-star wanted level by entering the Vice City portal (Tommy Vercetti Easter egg); in retro Vice City the stars vanished and he came back with none; unclear if Rockstar intended it",
+   "rating": 8.0,
+   "hook": "reel",
+   "instagram": "6b06a41122dfb7833a96d538",
+   "instagram_at": "2026-11-25T09:02:19+00:00",
+   "instagram_title": "Someone ESCAPED GTA 6's 6-star wanted level 🚨"
   }
  },
  "skipped": {
