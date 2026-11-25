@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-24T21:09:05+00:00",
- "measured_clips": 28,
+ "updated_at": "2026-11-25T17:10:33+00:00",
+ "measured_clips": 29,
  "needed_clips": 8,
  "rules": [
   {
@@ -10,35 +10,9 @@
    "factor": 0.6,
    "text": "Clips from gta6fied usually get fewer views than the rest",
    "evidence": {
-    "clips": 6,
-    "avg_views": 4,
+    "clips": 7,
+    "avg_views": 7,
     "baseline": 12
-   },
-   "created_at": "2026-11-23T23:09:44+00:00"
-  },
-  {
-   "id": "auto-duration-30-60s",
-   "kind": "duration",
-   "target": "30–60s",
-   "factor": 1.6,
-   "text": "Clips that are 30–60s usually get more views",
-   "evidence": {
-    "clips": 23,
-    "avg_views": 11,
-    "baseline": 3
-   },
-   "created_at": "2026-11-23T23:09:44+00:00"
-  },
-  {
-   "id": "auto-duration-under-30s",
-   "kind": "duration",
-   "target": "Under 30s",
-   "factor": 0.6,
-   "text": "Clips that are under 30s usually get fewer views",
-   "evidence": {
-    "clips": 5,
-    "avg_views": 3,
-    "baseline": 11
    },
    "created_at": "2026-11-23T23:09:44+00:00"
   },
@@ -59,12 +33,12 @@
    "id": "auto-language-spanish",
    "kind": "language",
    "target": "Spanish",
-   "factor": 0.8,
+   "factor": 0.6,
    "text": "Clips in Spanish usually get fewer views",
    "evidence": {
     "clips": 3,
     "avg_views": 7,
-    "baseline": 9
+    "baseline": 12
    },
    "created_at": "2026-11-24T21:09:05+00:00"
   },
@@ -72,12 +46,12 @@
    "id": "auto-language-turkish",
    "kind": "language",
    "target": "Turkish",
-   "factor": 0.8,
+   "factor": 0.6,
    "text": "Clips in Turkish usually get fewer views",
    "evidence": {
     "clips": 3,
     "avg_views": 7,
-    "baseline": 9
+    "baseline": 12
    },
    "created_at": "2026-11-24T21:09:05+00:00"
   },

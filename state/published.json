@@ -1,6 +1,6 @@
 {
  "version": 1,
- "metrics_checked_at": "2026-11-24T21:09:05+00:00",
+ "metrics_checked_at": "2026-11-25T17:10:33+00:00",
  "published": {
   "auto_138529992_1794999955": {
    "video_id": "6afd8ac727a97c2bc6371f9c",
@@ -1225,7 +1225,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/Df-m8qHDlxC/",
-   "views": 3,
+   "views": 4,
    "likes": 1,
    "comments": 0
   },
@@ -1360,7 +1360,7 @@
    "error": "",
    "youtube_at": "2026-11-22T08:44:42+00:00",
    "youtube_retried": "2026-11-22T08:44:42+00:00",
-   "views": 6,
+   "views": 7,
    "likes": 0,
    "comments": 0
   },
@@ -1535,7 +1535,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgFAHfRiZBO/",
-   "views": 9,
+   "views": 15,
    "likes": 0,
    "comments": 0
   },
@@ -1562,7 +1562,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgFb0imDzIG/",
-   "views": 9,
+   "views": 12,
    "likes": 0,
    "comments": 0
   },
@@ -1638,8 +1638,8 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgHlIUmkjQU/",
-   "views": 3,
-   "likes": 0,
+   "views": 6,
+   "likes": 1,
    "comments": 0
   },
   "reel_018": {
@@ -1665,7 +1665,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgIotjHkyoE/",
-   "views": 0,
+   "views": 35,
    "likes": 0,
    "comments": 0
   },
@@ -1716,7 +1716,10 @@
    "instagram_title": "Someone ESCAPED GTA 6's 6-star wanted level 🚨",
    "status": "sent",
    "instagram_status": "sent",
-   "instagram_link": "https://www.instagram.com/reel/DgKKcUKOJYG/"
+   "instagram_link": "https://www.instagram.com/reel/DgKKcUKOJYG/",
+   "views": 1,
+   "likes": 0,
+   "comments": 0
   },
   "reel_021": {
    "video_id": "6b06dbf75f4bdd9b86ba680f",
