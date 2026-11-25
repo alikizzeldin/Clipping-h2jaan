@@ -1892,5 +1892,121 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "wake_up": "22:41 UTC",
+  "ideas": [
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "Steal a whole ATM: fit a winch at a Mod Shop (or take a tow truck from a police impound), back up to an outdoor ATM, hook it and drive off to rip it out of the wall; the cash is marked bills (needs the Dye Pack Jammer, from Credit Check) and goes to a fence; some ATMs pay over $10,000",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 8,
+    "confidence": 8,
+    "score": 7.7,
+    "chosen": "023-atm-winch",
+    "why_not": null,
+    "sources": [
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6-atm-winched-vehicle/",
+     "https://www.dualshockers.com/gta-6-how-to-rob-atm-machines/",
+     "https://www.gamersheroes.com/game-guides/how-to-rob-atm-machines-in-gta-6/",
+     "https://powerupgaming.co.uk/2026/11/21/gta-6-how-to-rob-security-trucks-and-steal-atms/",
+     "https://www.gtasixmap.com/blog/how-to-rob-atms",
+     "https://games.gg/grand-theft-auto-vi/guides/gta-6-how-to-open-a-stolen-atm-and-rob-atms-with-a-winch/",
+     "https://happygamer.com/gta-6-how-to-rob-atm-178845/",
+     "https://thehypdgamer.com/gaming-news/gta-6/gta-6-atm-heists-how-to-steal-cash-machines-for-big-rewards/",
+     "https://web.matrixnews.in/news/eh5llxn3chba4/gta-6-players-are-pulling-off-challenging-heists"
+    ],
+    "note": "Labelled HIDDEN FEATURE (the winch) so the feed doesn't run two MONEY FILEs in a row. Not said: how to open the ATM (a sticky-bomb method is only from a GTA 5 mod), which chapter it unlocks (sources disagree: 2 vs 3), exact payout (reports range ~$4,000 to $14,400; 'over $10,000' is backed by PC Gamer ~11k, a 10-13k guide figure and HYPD's $14,400)."
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Bad Driver! (Chapter 4, Andrea): find Felipe in Millport; kill him for $20,000 or spare him to unlock Collect Felipe's Gift (his car); gone once you start Power Play",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.2,
+    "chosen": null,
+    "why_not": "passes, but the ATM winch scores higher; keep for a later wake-up",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-bad-driver-find-felipe-walkthrough/",
+     "https://rarethief.com/gta-vi-bad-driver-walkthrough/",
+     "https://hintatlas.com/gta-6/kill-or-spare-felipe/",
+     "https://www.theclick.gg/gta-6-bad-driver-walkthrough/"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Vanessa's pink Growler: free, but gone if you leave Chapter 3 without it (garage code 92665)",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 4,
+    "visual": 7,
+    "confidence": 8,
+    "score": 7.1,
+    "chosen": null,
+    "why_not": "the manual studio already made it (m102-free-garage-car)",
+    "sources": [
+     "https://www.gtaboom.com/gta-6-vanessas-garage-and-pink-growler-7339",
+     "https://beebom.com/gta-6-vanessas-growler-pink-porsche-location-stats/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "A statue near Manifest Canyon with four horses and strange symbols (Reddit)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 8,
+    "visual": 5,
+    "confidence": 4,
+    "score": 5.8,
+    "chosen": null,
+    "why_not": "one source only; nothing explained yet",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-easter-eggs-778903-20261120"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Positive Mental Attitude: meditation on Jason's balcony, said to be the only missable trophy (Chapter 1)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 6,
+    "score": 6.2,
+    "chosen": null,
+    "why_not": "guides disagree on whether it is missable",
+    "sources": [
+     "https://beebom.com/gta-6-chapter-1-missable-items-activities/",
+     "https://outputlag.com/guides/gta-6-missables/"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "GTA VI: The Album deluxe edition adds 23 tracks (announced Nov 23)",
+    "demand": 5,
+    "payoff": 5,
+    "retention": 4,
+    "fresh": 5,
+    "visual": 4,
+    "confidence": 7,
+    "score": 5.0,
+    "chosen": null,
+    "why_not": "over 48 hours old; low payoff",
+    "sources": [
+     "https://digg.com/gaming/fr774mnd"
+    ]
+   }
+  ]
  }
 ]
