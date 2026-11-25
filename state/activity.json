@@ -1,5 +1,11 @@
 [
  {
+  "time": "2026-11-25T22:24:32+00:00",
+  "type": "info",
+  "text": "Live on Instagram: “GTA 6's vaults only open for ONE van 🚚”",
+  "link": "https://www.instagram.com/reel/DgLPxZ2zVp1/"
+ },
+ {
   "time": "2026-11-25T19:08:59+00:00",
   "type": "info",
   "text": "Live on YouTube: “GTA 6's vaults only open for ONE van 🚚 | خزائن GTA 6 ما تنفتح إلا لشاحنة وحدة 🚚 #shorts”",
@@ -780,10 +786,5 @@
   "time": "2026-11-19T07:30:13+00:00",
   "type": "error",
   "text": "Publishing “Only in GTA 6… Cuffem's reaction 😂 | بس في GTA 6… ردة فعل Cuffem 😂 #shorts” failed: could not reach Buffer: HTTPSConnectionPool(host='api.buffer.com', port=443): Read timed out. (read timeout=120)"
- },
- {
-  "time": "2026-11-19T07:27:30+00:00",
-  "type": "skipped",
-  "text": "Skipped a clip from westcol: the same scene was posted recently (90% alike)"
  }
 ]
