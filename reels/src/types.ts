@@ -579,13 +579,29 @@ export type VaultScene = Base & {
   ar?: string;
 };
 
+// Side view of a street at night: a pickup reverses up to an ATM in a wall, a winch hook latches on,
+// the truck floors it, cracks spread and the machine tears out of the wall (seconds into the scene).
+export type WinchScene = Base & {
+  type: 'winch';
+  step: string;
+  label: string;
+  backAt: number; // the truck reverses in
+  hookAt: number; // the hook latches on
+  pullAt: number; // the truck floors it, cable taut, tension meter fills
+  ripAt: number; // the machine tears out
+  find?: string; // status before the truck arrives (default "FIND AN OUTDOOR ATM")
+  sign?: string; // the lit sign over the machine (default "ATM")
+  done?: string; // status after the rip (default "RIPPED OUT")
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
