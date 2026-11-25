@@ -1,0 +1,371 @@
+{
+ "manual": true,
+ "episode": 138,
+ "kind": "secret",
+ "topic": "Niko Bellic cameo: GTA 4's hero appears in GTA 6 in Chapter 5's mission Taking Liberties, in cutscenes only (not playable); the credits never name him: Michael Hollick, Niko's original voice actor, is credited as 'The Hitman'",
+ "title": {
+  "en": "Niko Bellic is in GTA 6 👀 (spoiler: Chapter 5)",
+  "ar": "نيكو بيليك موجود في GTA 6 👀 (حرق: الفصل الخامس)"
+ },
+ "summary": "Spoiler: GTA 4's Niko Bellic shows up in GTA 6, in Chapter 5's mission Taking Liberties. He's only in cutscenes, so you can't play as him, and the credits never use his name: Michael Hollick, Niko's original voice actor, is listed as 'The Hitman'. Eighteen years after GTA 4.",
+ "summary_ar": "حرق: نيكو بيليك بطل GTA 4 يظهر في GTA 6، في مهمة الفصل الخامس Taking Liberties. يظهر بس في المشاهد السينمائية وما تقدر تلعب فيه، والكريدتس ما تذكر اسمه أبدًا: مايكل هوليك، صوت نيكو الأصلي، مكتوب باسم «The Hitman». بعد ١٨ سنة من GTA 4.",
+ "keywords": [
+  "GTA6",
+  "NikoBellic",
+  "GTA4",
+  "GTA6Secrets",
+  "GTAVI",
+  "GTA6EasterEgg",
+  "Rockstar",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 10,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 9,
+  "visual": 4,
+  "confidence": 8,
+  "score": 8.2
+ },
+ "sources": [
+  "https://www.technerdiness.com/gta/is-niko-bellic-in-gta-6/",
+  "https://esports.gg/guides/grand-theft-auto-6/niko-bellic-gta-6-returns/",
+  "https://pixeltwelve.com/articles/is-niko-bellic-in-gta-6",
+  "https://pro-gamer.gg/is-niko-bellic-in-gta-6-chapter-5-taking-liberties-cameo-michael-hollick-the-hitman/",
+  "https://www.tech2geek.net/is-niko-bellic-in-gta-6-his-cameo-mission-and-voice-actor-explained/",
+  "https://www.keengamer.com/articles/news/previous-major-gta-voice-actor-returns-in-gta-6/",
+  "https://techwiser.com/gta-6-niko-bellic-the-hitman-mission/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 3.85,
+     "x": 1100
+    }
+   ]
+  },
+  "where": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 16.0,
+     "dur": 9.0,
+     "x": 800
+    }
+   ]
+  },
+  "credits": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 6.8,
+     "x": 700
+    }
+   ]
+  },
+  "years": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 46.6,
+     "dur": 4.0,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 18.0,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 100,
+  "seed": 138,
+  "drop": 3.8,
+  "break": 12.78,
+  "back": 15.2,
+  "outro": 23.48
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "duration": 27.2,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.8,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "SPOILER",
+    "kicker": "GTA IV'S HERO",
+    "title": [
+     "NIKO",
+     "BELLIC"
+    ],
+    "color": "gold",
+    "tag": "…is in GTA 6.",
+    "tagAt": 2.04,
+    "ar": "حرق: نيكو بيليك موجود في GTA 6"
+   },
+   {
+    "type": "list",
+    "from": 3.8,
+    "to": 12.78,
+    "broll": {
+     "src": "where",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "CH. 5",
+    "label": "WHERE HE SHOWS UP",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "CHAPTER 5",
+      "status": "LATE STORY",
+      "ok": true,
+      "at": 2.84,
+      "icon": "book"
+     },
+     {
+      "text": "TAKING LIBERTIES",
+      "status": "MISSION",
+      "ok": true,
+      "at": 4.34,
+      "icon": "trophy"
+     },
+     {
+      "text": "CUTSCENES ONLY",
+      "status": "NOT PLAYABLE",
+      "ok": false,
+      "alert": true,
+      "at": 6.38,
+      "icon": "eye"
+     }
+    ],
+    "ar": "يظهر في الفصل الخامس، مهمة «تيكنغ ليبرتيز»… بس في المشاهد، وما تقدر تلعب فيه"
+   },
+   {
+    "type": "redacted",
+    "from": 12.78,
+    "to": 20.0,
+    "broll": {
+     "src": "credits",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 6
+    },
+    "step": "02",
+    "label": "THE CREDITS",
+    "docTitle": "GTA VI · CAST",
+    "lines": [
+     {
+      "label": "CHARACTER",
+      "value": "NIKO BELLIC",
+      "keep": true,
+      "note": "NOT LISTED",
+      "at": 1.12
+     },
+     {
+      "label": "ACTOR",
+      "value": "MICHAEL HOLLICK",
+      "at": 2.42
+     },
+     {
+      "label": "VOICE OF",
+      "value": "NIKO · GTA IV",
+      "at": 2.96
+     },
+     {
+      "label": "CREDITED AS",
+      "value": "\"THE HITMAN\"",
+      "at": 5.36,
+      "hi": true
+     }
+    ],
+    "stamp": {
+     "text": "IT'S HIM",
+     "at": 5.75,
+     "color": "red"
+    },
+    "ar": "الكريدتس ما تذكر اسمه: مايكل هوليك، صوت نيكو الأصلي، مكتوب «ذا هيتمان»"
+   },
+   {
+    "type": "reveal",
+    "from": 20.0,
+    "to": 23.48,
+    "captions": false,
+    "broll": {
+     "src": "years",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "pre": "GTA IV…",
+    "slamAt": 0.2,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "18 YEARS LATER",
+      "at": 0.2,
+      "color": "gold",
+      "size": 130
+     },
+     {
+      "text": "DID YOU SPOT HIM?",
+      "at": 2.28,
+      "size": 96
+     }
+    ],
+    "ar": "بعد ١٨ سنة من GTA 4… انتبهت له؟"
+   },
+   {
+    "type": "cta",
+    "from": 23.48,
+    "to": 27.2,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRETS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 0.9,
+    "volume": 0.5
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.02,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.74,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.64,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.14,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.18,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 11.62,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.72,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 13.9,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.2,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 15.74,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.04,
+    "volume": 0.6
+   },
+   {
+    "src": "glitch.wav",
+    "at": 19.06,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.44,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.18,
+    "volume": 0.65
+   },
+   {
+    "src": "ping.wav",
+    "at": 22.28,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.42,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.5,
+    "volume": 0.5
+   }
+  ]
+ }
+}

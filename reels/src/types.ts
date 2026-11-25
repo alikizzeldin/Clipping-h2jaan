@@ -473,6 +473,34 @@ export type ReceiptScene = Base & {
   ar?: string;
 };
 
+// A typed dossier sheet: each value sits under a black redaction bar that peels off on its cue.
+// keep: the bar never lifts (a small red note can sit beside it); hi: a highlighter mark once revealed.
+export type RedactedScene = Base & {
+  type: 'redacted';
+  step: string;
+  label: string;
+  docTitle: string;
+  lines: {label: string; value: string; at?: number; keep?: boolean; note?: string; hi?: boolean}[];
+  stamp?: {text: string; at: number; color?: string};
+  ar?: string;
+};
+
+// Two elevator doors: an out-of-order sign with a red balloon, the other car opens full of balloons,
+// the lights die and a clown face flashes in the dark.
+export type ElevatorScene = Base & {
+  type: 'elevator';
+  step: string;
+  label: string;
+  sign: string; // the paper sign on the broken door, e.g. "OUT OF ORDER"
+  signAt: number;
+  callAt: number;
+  openAt: number;
+  darkAt?: number;
+  clownAt?: number;
+  goneAt?: number;
+  ar?: string;
+};
+
 export type LoopScene = Base & {
   type: 'loop';
   step: string;
@@ -506,7 +534,7 @@ export type Scene =
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

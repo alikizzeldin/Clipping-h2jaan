@@ -1,0 +1,329 @@
+{
+ "manual": true,
+ "episode": 139,
+ "kind": "easter-egg",
+ "topic": "IT / Pennywise killer-clown Easter egg: Haymarket Hotel in the far west of Vice Beach, late at night; one elevator has an Out of Order sign with a red balloon, the other opens full of balloons, the lights go out and the clown appears for a moment, then vanishes; no reward",
+ "title": {
+  "en": "There's a killer clown hiding in GTA 6 🎈 (Haymarket Hotel)",
+  "ar": "مهرج قاتل مخفي في GTA 6 🎈"
+ },
+ "summary": "Go to the Haymarket Hotel in the far west of Vice Beach late at night. One elevator says Out of Order, with a red balloon next to it. Call the other one: it's full of balloons. The lights go out, Pennywise appears for a second, then vanishes. No reward, just the scare.",
+ "summary_ar": "روح فندق هايماركت في أقصى غرب فايس بيتش بالليل المتأخر. مصعد مكتوب عليه «خربان» وجنبه بالونة حمرا. اطلب المصعد الثاني: مليان بالونات. الأنوار تطفي، ويظهر بيني وايز لثانية ويختفي. ما فيه جايزة… بس الرعبة.",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEgg",
+  "Pennywise",
+  "GTA6Secrets",
+  "GTAVI",
+  "ViceCity",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 7,
+  "retention": 8,
+  "fresh": 9,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.8
+ },
+ "sources": [
+  "https://www.vice.com/en/article/gta-6-pennywise-it-easter-egg/",
+  "https://www.dexerto.com/wikis/gta-6/easter-eggs/pennywise-killer-clown-easter-egg/",
+  "https://gamerant.com/gta-6-it-the-clown-easter-egg-secret-location-find/",
+  "https://www.sportskeeda.com/gta/where-find-it-pennywise-gta-6-easter-egg-location",
+  "https://nerdschalk.com/pennywise-easter-egg-location-gta-6",
+  "https://gta6.house/guides/gta-6-killer-clown-elevator-easter-egg-haymarket"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 46.6,
+     "dur": 3.1,
+     "x": 900
+    }
+   ]
+  },
+  "map": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 4.75,
+     "x": 1000
+    }
+   ]
+  },
+  "hall": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 11.35,
+     "x": 700
+    }
+   ]
+  },
+  "reward": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 2.25,
+     "x": 1100
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 6.0,
+     "dur": 3.5,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 92,
+  "seed": 139,
+  "drop": 3.0,
+  "break": 14.82,
+  "back": 15.8,
+  "outro": 21.12
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 24.6,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.0,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.3,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "THERE'S A KILLER",
+    "title": [
+     "CLOWN"
+    ],
+    "color": "red",
+    "tag": "…hiding in GTA 6.",
+    "tagAt": 0.92,
+    "ar": "فيه مهرج قاتل مخفي في GTA 6"
+   },
+   {
+    "type": "location",
+    "from": 3.0,
+    "to": 7.68,
+    "style": "neon",
+    "broll": {
+     "src": "map",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 6
+    },
+    "step": "01",
+    "label": "THE PLACE",
+    "place": "VICE BEACH",
+    "target": "HAYMARKET HOTEL",
+    "direction": "FAR WEST",
+    "region": "VICE CITY · LATE AT NIGHT",
+    "ar": "روح فندق هايماركت في أقصى غرب فايس بيتش… بالليل المتأخر"
+   },
+   {
+    "type": "elevator",
+    "from": 7.68,
+    "to": 18.94,
+    "broll": {
+     "src": "hall",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 8
+    },
+    "step": "02",
+    "label": "THE ELEVATORS",
+    "sign": "OUT OF ORDER",
+    "signAt": 1.94,
+    "callAt": 4.7,
+    "openAt": 5.54,
+    "darkAt": 7.14,
+    "clownAt": 8.12,
+    "goneAt": 10.2,
+    "ar": "مصعد خربان وجنبه بالونة حمرا… اطلب الثاني"
+   },
+   {
+    "type": "reveal",
+    "from": 18.94,
+    "to": 21.12,
+    "captions": false,
+    "broll": {
+     "src": "reward",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "pre": "REWARD:",
+    "slamAt": 0.3,
+    "color": "red",
+    "lines": [
+     {
+      "text": "NONE",
+      "at": 0.3,
+      "color": "red",
+      "size": 190
+     },
+     {
+      "text": "JUST THE SCARE",
+      "at": 0.94,
+      "size": 100
+     }
+    ],
+    "ar": "ما فيه جايزة… بس الرعبة"
+   },
+   {
+    "type": "cta",
+    "from": 21.12,
+    "to": 24.6,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 0.54,
+    "volume": 0.45
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.9,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.94,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 3.4,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 3.84,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.62,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 9.62,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 12.38,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.22,
+    "volume": 0.45
+   },
+   {
+    "src": "riser.wav",
+    "at": 13.6,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 14.82,
+    "volume": 0.55
+   },
+   {
+    "src": "error.wav",
+    "at": 15.02,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 15.8,
+    "volume": 0.75
+   },
+   {
+    "src": "glitch.wav",
+    "at": 15.82,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.88,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.88,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.16,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.06,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.14,
+    "volume": 0.5
+   }
+  ]
+ }
+}

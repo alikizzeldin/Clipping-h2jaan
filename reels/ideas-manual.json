@@ -1365,5 +1365,112 @@
     "why_not": "single source"
    }
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "wake_up": "04:23 UTC (m138–m139; only 2 ideas passed the gate)",
+  "ideas": [
+   {
+    "idea": "Niko Bellic cameo: GTA 4's hero appears in GTA 6 in Chapter 5's mission Taking Liberties, in cutscenes only (not playable); the credits never name him: Michael Hollick, Niko's original voice actor, is credited as 'The Hitman'",
+    "format": "SECRET FILE",
+    "demand": 10,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 8,
+    "score": 8.2,
+    "chosen": "m138-niko-returns",
+    "sources": [
+     "https://www.technerdiness.com/gta/is-niko-bellic-in-gta-6/",
+     "https://esports.gg/guides/grand-theft-auto-6/niko-bellic-gta-6-returns/",
+     "https://pixeltwelve.com/articles/is-niko-bellic-in-gta-6",
+     "https://pro-gamer.gg/is-niko-bellic-in-gta-6-chapter-5-taking-liberties-cameo-michael-hollick-the-hitman/",
+     "https://www.tech2geek.net/is-niko-bellic-in-gta-6-his-cameo-mission-and-voice-actor-explained/",
+     "https://www.keengamer.com/articles/news/previous-major-gta-voice-actor-returns-in-gta-6/",
+     "https://techwiser.com/gta-6-niko-bellic-the-hitman-mission/"
+    ]
+   },
+   {
+    "idea": "IT / Pennywise killer-clown Easter egg: Haymarket Hotel in the far west of Vice Beach, late at night; one elevator has an Out of Order sign with a red balloon, the other opens full of balloons, the lights go out and the clown appears for a moment, then vanishes; no reward",
+    "format": "EASTER EGG",
+    "demand": 9,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.8,
+    "chosen": "m139-pennywise-clown",
+    "sources": [
+     "https://www.vice.com/en/article/gta-6-pennywise-it-easter-egg/",
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/pennywise-killer-clown-easter-egg/",
+     "https://gamerant.com/gta-6-it-the-clown-easter-egg-secret-location-find/",
+     "https://www.sportskeeda.com/gta/where-find-it-pennywise-gta-6-easter-egg-location",
+     "https://nerdschalk.com/pennywise-easter-egg-location-gta-6",
+     "https://gta6.house/guides/gta-6-killer-clown-elevator-easter-egg-haymarket"
+    ]
+   },
+   {
+    "idea": "Rappers in GTA 6: Denzel Curry voices DWNPLY, Freddie Gibbs plays Freddie, Gucci Mane as himself",
+    "format": "SECRET FILE",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.8,
+    "why_not": "6.8, under the gate; roles of N.O.R.E. and DJ EFN differ between the two sources"
+   },
+   {
+    "idea": "Cunning Stunts: 250 stunts from 4 types (130 stunt jumps, under-bridge flights, knife flights, base jumps)",
+    "format": "LIST",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.6,
+    "why_not": "6.6; stunt-jump guides are still incomplete"
+   },
+   {
+    "idea": "Juice WRLD lookalike NPC with the handle badlife999",
+    "why_not": "one source only; fan resemblance"
+   },
+   {
+    "idea": "Free parachute at base-jump sites instead of buying one",
+    "why_not": "low payoff ($250-300); prices differ between guides"
+   },
+   {
+    "idea": "$250,000 money cheat after the story",
+    "why_not": "too close to episode 005 (cheats turn off saving)"
+   },
+   {
+    "idea": "Infinite ammo cheat unlock challenge",
+    "why_not": "guides disagree on the challenge (25 silver or 25 gold medals); close to episode 005"
+   },
+   {
+    "idea": "Vintage Vice City pre-order pack is claimed in Chapter 3",
+    "why_not": "claim timing and the Stanier step each have one source"
+   },
+   {
+    "idea": "Michael's boat from GTA 5 outside Jason's house",
+    "why_not": "still trailer-era speculation; already rejected before"
+   },
+   {
+    "idea": "Lester or Packie return in GTA 6",
+    "why_not": "not confirmed by any source"
+   },
+   {
+    "idea": "Satanic ritual warehouse in Capri",
+    "why_not": "not found in a second source"
+   },
+   {
+    "idea": "You can only buy garages, not houses",
+    "why_not": "sources conflict; some predate launch"
+   }
+  ]
  }
 ]
