@@ -528,13 +528,28 @@ export type TrunkScene = Base & {
   ar?: string;
 };
 
+// A time portal: a neon ring tunnel, sparks sucked in, a year counter rolling between two years.
+export type PortalScene = Base & {
+  type: 'portal';
+  step: string;
+  label: string;
+  title: string; // the destination, big (e.g. "VICE CITY")
+  titleAt: number;
+  sub?: string; // a small line above the title
+  fromYear: number;
+  toYear: number;
+  rollAt: number; // seconds into the scene: the counter starts rolling
+  rollEnd: number; // ...and lands (with a flash)
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
