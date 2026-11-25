@@ -3,6 +3,22 @@
   "entries": [
     {
       "date": "2026-11-25",
+      "episode": "020-six-star-escape",
+      "scene": "portal",
+      "variant": "neon ring tunnel + rolling year counter",
+      "new": true,
+      "note": "rings pour outwards from a glowing core, sparks spiral in, the year rolls 2026 to 2002 and lands gold with a flash (glow drawn as double strokes: SVG blur filters were 2x slower)"
+    },
+    {
+      "date": "2026-11-25",
+      "episode": "020-six-star-escape",
+      "scene": "heat",
+      "variant": "default, 6 stars, used twice (stars on, then cleared)",
+      "new": false,
+      "note": "first heat: six stars and three heat icons; second: icons tick off and the title flips to STARS GONE"
+    },
+    {
+      "date": "2026-11-25",
       "episode": "m138-niko-returns",
       "scene": "redacted",
       "variant": "typed dossier + redaction bars",

@@ -46,10 +46,15 @@ export const Portal: React.FC<{s: PortalScene}> = ({s}) => {
           const r = 30 + Math.pow(phase, 1.6) * 760;
           const o = Math.sin(phase * Math.PI) * 0.9;
           const rot = (frame * (i % 2 ? 0.6 : -0.8) * speed + i * 26) % 360;
+          // glow = a wide faint stroke under a thin bright one (SVG blur filters are too slow per frame)
+          const dash = i % 3 === 0 ? `${r * 0.6} ${r * 0.25}` : undefined;
           return (
-            <ellipse key={i} cx={CX} cy={CY} rx={r} ry={r * 0.62} fill="none" stroke={colors[i % colors.length]} strokeWidth={2 + phase * 10}
-              opacity={o} transform={`rotate(${rot} ${CX} ${CY})`} strokeDasharray={i % 3 === 0 ? `${r * 0.6} ${r * 0.25}` : undefined}
-              style={{filter: `drop-shadow(0 0 ${8 + phase * 14}px ${colors[i % colors.length]})`}} />
+            <g key={i} transform={`rotate(${rot} ${CX} ${CY})`} opacity={o}>
+              <ellipse cx={CX} cy={CY} rx={r} ry={r * 0.62} fill="none" stroke={colors[i % colors.length]} strokeWidth={10 + phase * 26}
+                opacity={0.22} strokeDasharray={dash} />
+              <ellipse cx={CX} cy={CY} rx={r} ry={r * 0.62} fill="none" stroke={colors[i % colors.length]} strokeWidth={2 + phase * 8}
+                strokeDasharray={dash} />
+            </g>
           );
         })}
         {Array.from({length: 36}).map((_, i) => {

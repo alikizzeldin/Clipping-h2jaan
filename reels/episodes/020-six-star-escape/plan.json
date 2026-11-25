@@ -1,0 +1,457 @@
+{
+ "episode": 20,
+ "kind": "news",
+ "topic": "NEWS (reported Nov 24): Japanese VTuber Haigure Tamao escaped GTA 6's 'impossible' six-star wanted level by entering the Vice City portal (Tommy Vercetti Easter egg); in retro Vice City the stars vanished and he came back with none; unclear if Rockstar intended it",
+ "title": {
+  "en": "Someone ESCAPED GTA 6's 6-star wanted level 🚨",
+  "ar": "واحد هرب من ٦ نجوم في GTA 6 🚨"
+ },
+ "summary": "News (reported November 24, 2026): a Japanese VTuber, Haigure Tamao, escaped GTA 6's 'impossible' six-star wanted level. With all six stars on him he jumped into the hidden portal from the Vice City Easter egg that sends you back to 2002; in old Vice City his stars vanished, and when he came back to Leonida he had none. Rockstar hasn't said whether that's intended.",
+ "summary_ar": "خبر (٢٤ نوفمبر ٢٠٢٦): فيتيوبر ياباني اسمه هايغوري تاماو هرب من مستوى المطاردة «المستحيل» بست نجوم في قراند 6. نط في البوابة السرية من بيضة فايس سيتي اللي ترجعك لـ ٢٠٠٢، وهناك اختفت النجوم، ولما رجع لليونيدا ما كان عليه ولا نجمة. روكستار ما علّقت إذا هذا مقصود.",
+ "keywords": [
+  "GTA6",
+  "GTA6News",
+  "GTA6WantedLevel",
+  "ViceCity",
+  "GTA6EasterEgg",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 9,
+  "visual": 7,
+  "confidence": 8,
+  "score": 8.0
+ },
+ "sources": [
+  "https://www.dexerto.com/gta/japanese-vtuber-actually-escapes-gta-6s-impossible-6-star-wanted-level-3431071/",
+  "https://powerupgaming.co.uk/2026/11/24/japanese-vtuber-escapes-gta-6s-six-star-wanted-level-by-teleporting-to-vice-city/",
+  "https://beebom.com/gta-6-players-escape-six-star-wanted-level/",
+  "https://vgtimes.com/gaming-news/175662-gta-6-vtuber-erases-six-star-wanted-level-through-vice-city-easter-egg.html"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 12.6,
+     "dur": 4.0,
+     "x": 700
+    }
+   ]
+  },
+  "police": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 1.0,
+     "dur": 3.2,
+     "x": 600
+    }
+   ]
+  },
+  "kneel": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 8.8,
+     "dur": 2.0,
+     "x": 760
+    }
+   ]
+  },
+  "city": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 3.0,
+     "dur": 5.9,
+     "x": 1000
+    }
+   ]
+  },
+  "oldcity": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 9.0,
+     "dur": 2.9,
+     "x": 700
+    }
+   ]
+  },
+  "leonida": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 120.0,
+     "dur": 6.0,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 0,
+     "dur": 3.4,
+     "x": 660
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 112,
+  "seed": 203,
+  "drop": 3.8,
+  "break": 8.72,
+  "back": 13.08,
+  "outro": 23.2
+ },
+ "reel": {
+  "series": "GTA 6 NEWS",
+  "episode": 20,
+  "duration": 26.4,
+  "musicVolume": 0.42,
+  "style": "vice-tape",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.8,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "BREAKING",
+    "kicker": "SOMEONE ESCAPED",
+    "title": [
+     "SIX-STAR",
+     "WANTED LEVEL"
+    ],
+    "color": "red",
+    "tag": "…here's how.",
+    "tagAt": 3.2,
+    "ar": "واحد هرب من ست نجوم!"
+   },
+   {
+    "type": "headline",
+    "from": 3.8,
+    "to": 6.88,
+    "broll": {
+     "src": "police",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "tag": "GTA 6 NEWS",
+    "source": "DEXERTO · POWER UP GAMING",
+    "date": "NOV 24, 2026",
+    "headline": "Japanese VTuber escapes GTA 6's 'impossible' six-star wanted level",
+    "typeAt": 0.1,
+    "ar": "هالأسبوع: فيتيوبر ياباني كشف الطريقة"
+   },
+   {
+    "type": "heat",
+    "from": 6.88,
+    "to": 8.72,
+    "broll": {
+     "src": "kneel",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 2
+    },
+    "step": "01",
+    "label": "SIX STARS",
+    "stars": 6,
+    "icons": [
+     {
+      "icon": "car",
+      "label": "VEHICLE",
+      "at": 0.3
+     },
+     {
+      "icon": "face",
+      "label": "FACE",
+      "at": 0.45
+     },
+     {
+      "icon": "outfit",
+      "label": "OUTFIT",
+      "at": 0.6
+     }
+    ],
+    "title": "ALL SIX STARS",
+    "ar": "عليه ست نجوم… ونط في البوابة"
+   },
+   {
+    "type": "portal",
+    "from": 8.72,
+    "to": 14.48,
+    "captions": false,
+    "broll": {
+     "src": "city",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "step": "02",
+    "label": "THE PORTAL",
+    "sub": "THE EASTER EGG",
+    "title": "VICE CITY",
+    "titleAt": 2.24,
+    "fromYear": 2026,
+    "toYear": 2002,
+    "rollAt": 3.4,
+    "rollEnd": 4.36,
+    "ar": "بوابة فايس سيتي… ترجعك لـ ٢٠٠٢"
+   },
+   {
+    "type": "heat",
+    "from": 14.48,
+    "to": 17.31,
+    "broll": {
+     "src": "oldcity",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 2
+    },
+    "step": "03",
+    "label": "OLD VICE CITY",
+    "stars": 6,
+    "icons": [
+     {
+      "icon": "car",
+      "label": "VEHICLE",
+      "at": 0.1,
+      "clearAt": 1.6
+     },
+     {
+      "icon": "face",
+      "label": "FACE",
+      "at": 0.15,
+      "clearAt": 1.75
+     },
+     {
+      "icon": "outfit",
+      "label": "OUTFIT",
+      "at": 0.2,
+      "clearAt": 1.9
+     }
+    ],
+    "title": "IN 2002…",
+    "doneTitle": "STARS GONE",
+    "ar": "في فايس سيتي القديمة… النجوم اختفت"
+   },
+   {
+    "type": "reveal",
+    "from": 17.31,
+    "to": 23.2,
+    "captions": false,
+    "broll": {
+     "src": "leonida",
+     "grade": "warm",
+     "dim": 0.25,
+     "blur": 2,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "BACK IN LEONIDA…",
+    "slamAt": 1.97,
+    "color": "green",
+    "lines": [
+     {
+      "text": "ZERO",
+      "at": 1.97,
+      "color": "green",
+      "size": 280
+     },
+     {
+      "text": "STARS",
+      "at": 2.37,
+      "size": 190
+     },
+     {
+      "text": "INTENDED? ROCKSTAR HASN'T SAID",
+      "at": 4.5,
+      "color": "gold",
+      "size": 64
+     }
+    ],
+    "ar": "رجع لليونيدا… بدون ولا نجمة"
+   },
+   {
+    "type": "cta",
+    "from": 23.2,
+    "to": 26.4,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "Every day's",
+    "line2": "GTA 6 news",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم أخبار GTA 6",
+    "next": "MORE NEWS TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 2.08,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 2.64,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 3.2,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.74,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 4.0,
+    "volume": 0.3
+   },
+   {
+    "src": "tick.wav",
+    "at": 4.4,
+    "volume": 0.3
+   },
+   {
+    "src": "tick.wav",
+    "at": 4.8,
+    "volume": 0.3
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.82,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 7.2,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.66,
+    "volume": 0.5
+   },
+   {
+    "src": "ufo.wav",
+    "at": 8.8,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 10.96,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 12.1,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 13.08,
+    "volume": 0.7
+   },
+   {
+    "src": "glitch.wav",
+    "at": 13.1,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.42,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 16.08,
+    "volume": 0.45
+   },
+   {
+    "src": "trophy.wav",
+    "at": 16.4,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 17.25,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.28,
+    "volume": 0.7
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.68,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 21.8,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.14,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.22,
+    "volume": 0.5
+   }
+  ]
+ }
+}

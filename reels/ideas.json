@@ -1543,5 +1543,115 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "wake_up": "08:41 UTC",
+  "ideas": [
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "NEWS (reported Nov 24): Japanese VTuber Haigure Tamao escaped GTA 6's 'impossible' six-star wanted level by entering the Vice City portal (Tommy Vercetti Easter egg); in retro Vice City the stars vanished and he came back with none; unclear if Rockstar intended it",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 7,
+    "confidence": 8,
+    "score": 8.0,
+    "chosen": "020-six-star-escape",
+    "why_not": null,
+    "sources": [
+     "https://www.dexerto.com/gta/japanese-vtuber-actually-escapes-gta-6s-impossible-6-star-wanted-level-3431071/",
+     "https://powerupgaming.co.uk/2026/11/24/japanese-vtuber-escapes-gta-6s-six-star-wanted-level-by-teleporting-to-vice-city/",
+     "https://beebom.com/gta-6-players-escape-six-star-wanted-level/",
+     "https://vgtimes.com/gaming-news/175662-gta-6-vtuber-erases-six-star-wanted-level-through-vice-city-easter-egg.html"
+    ],
+    "note": "Different angle from the manual studio's portal reel (m126, how to open it): this is the news of the wanted-level escape. Left out the tank-bunker method (one source) and 'first ever' (sources hedge)."
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "The Vice City portal also works with Lucia (Purexbox update)",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 6,
+    "score": 5.5,
+    "chosen": null,
+    "why_not": "the manual studio covered the portal (m126)",
+    "sources": [
+     "https://www.purexbox.com/news/2026/11/gta-6s-most-spectacular-easter-egg-so-far-has-just-been-discovered"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "Update 01.002.002 size: ~604 MB on PS5, ~1.6 GB on Xbox; phased rollout",
+    "demand": 5,
+    "payoff": 3,
+    "retention": 3,
+    "fresh": 3,
+    "visual": 3,
+    "confidence": 7,
+    "score": 4.1,
+    "chosen": null,
+    "why_not": "covered by 015; nothing new",
+    "sources": [
+     "https://gamerant.com/new-gta-6-update-patch-notes-november-23-2026/",
+     "https://insider-gaming.com/gta-6-new-update-releasing-in-phases-size-revealed/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Scarface chainsaw bathroom in a Key Lento house (alarm trips the cops)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 5,
+    "score": 5.7,
+    "chosen": null,
+    "why_not": "location still differs (Ocean Beach motel vs Key Lento house)",
+    "sources": [
+     "https://www.bgr.com/2327391/gta-6-hidden-events-secrets-you-might-miss/",
+     "https://gmtreks.com/gta6/page/01M7VYV9B4MK0MZNV5A9XQVE3S"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Collateral hitman random encounter",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 8,
+    "score": 6.7,
+    "chosen": null,
+    "why_not": "score 6.7; random trigger",
+    "sources": [
+     "https://www.comingsoon.net/games/news/2228502-gta-6-tom-cruise-collateral-easter-egg-npc-mission",
+     "https://onpoint4gamers.com/gta-6-tom-cruise-collateral-npc-hostage/"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Hourglass icons mark time-limited optional missions (Race Against Yago)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.2,
+    "chosen": null,
+    "why_not": "score 6.2",
+    "sources": [
+     "https://retrobroker.com/en-US/us/blog/gta-6-map-icons-legend-guide",
+     "https://gta.tech4gamers.com/gta-6/gameplay/optional-missions/"
+    ]
+   }
+  ]
  }
 ]
