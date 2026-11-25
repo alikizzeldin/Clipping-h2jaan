@@ -4,7 +4,7 @@ import {Background} from '../ui/Background';
 import {clamp, ease, pop, sec} from '../ui/motion';
 import {Arabic, Flash, SceneIn, StepLabel} from '../ui/Pieces';
 import {C, F, accent} from '../theme';
-import {ElevatorScene, RedactedScene} from '../types';
+import {ElevatorScene, RedactedScene, SleepScene} from '../types';
 
 const INK = '#16121a';
 
@@ -206,6 +206,125 @@ export const Elevator: React.FC<{s: ElevatorScene}> = ({s}) => {
       {frame >= clownAt && frame < clownAt + 8 ? <Flash at={clownAt} length={8} color={C.red} strength={0.35} /> : null}
       {frame >= goneAt && frame < goneAt + 6 ? <Flash at={goneAt} length={6} color="#fff" strength={0.3} /> : null}
       <Arabic text={s.ar} delay={16} top={DOOR_TOP + DOOR_H + 80} size={52} />
+    </AbsoluteFill>
+  );
+};
+
+// ------------------------------------------------------------------ sleep
+const TimeIcon: React.FC<{icon: SleepScene['options'][number]['icon']; size: number}> = ({icon, size}) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" style={{overflow: 'visible'}}>
+    {icon === 'moon' ? (
+      <path d="M62 14 A38 38 0 1 0 86 70 A30 30 0 1 1 62 14 Z" fill="#e9e6ff" />
+    ) : (
+      <>
+        {icon !== 'sun' ? <line x1="6" y1="70" x2="94" y2="70" stroke="#ffd27a" strokeWidth={6} strokeLinecap="round" /> : null}
+        {Array.from({length: 8}).map((_, i) => {
+          const a = (i / 8) * Math.PI * 2;
+          const cy = icon === 'sun' ? 50 : 70;
+          if (icon !== 'sun' && Math.sin(a) > 0.1) return null;
+          return <line key={i} x1={50 + Math.cos(a) * 30} y1={cy + Math.sin(a) * 30} x2={50 + Math.cos(a) * 42} y2={cy + Math.sin(a) * 42}
+            stroke={icon === 'sunset' ? '#ff8a3d' : '#ffd23a'} strokeWidth={6} strokeLinecap="round" />;
+        })}
+        {icon === 'sun' ? <circle cx="50" cy="50" r="20" fill="#ffd23a" /> : <path d="M28 70 A22 22 0 0 1 72 70 Z" fill={icon === 'sunset' ? '#ff8a3d' : '#ffd23a'} />}
+      </>
+    )}
+  </svg>
+);
+
+// A bedroom window over the day sky, a sleep menu whose cursor lands on one wake-up time, a blink,
+// and the window opens on that time (night: moon and stars).
+export const Sleep: React.FC<{s: SleepScene}> = ({s}) => {
+  const frame = useCurrentFrame();
+  const enter = pop(frame, 2, 12, 0.6, 150);
+  const menuAt = sec(s.menuAt);
+  const pickAt = sec(s.pickAt);
+  const wakeAt = sec(s.wakeAt);
+  const menu = pop(frame, menuAt, 12, 0.55, 170);
+  // the cursor steps down one row at a time between the menu opening and the pick
+  const steps = Math.max(1, s.pick);
+  const cursor = frame < menuAt + 6 ? 0 : Math.min(s.pick, Math.floor(((frame - menuAt - 6) / Math.max(1, pickAt - menuAt - 6)) * steps + 0.0001));
+  const picked = frame >= pickAt;
+  const pickPop = picked ? pop(frame, pickAt, 9, 0.45, 260) : 0;
+  const night = frame >= wakeAt;
+  const close = interpolate(frame, [wakeAt - 12, wakeAt], [0, 1], clamp);
+  const reopen = interpolate(frame, [wakeAt + 4, wakeAt + 18], [1, 0], clamp);
+  const lid = frame < wakeAt ? close : reopen;
+  const chosen = s.options[s.pick];
+  const nightSky = chosen?.icon === 'moon';
+  const WIN_TOP = 380;
+  const WIN_H = 420;
+  const ROW = 84;
+  const MENU_TOP = 850;
+  const twinkle = (k: number) => 0.4 + 0.6 * Math.abs(Math.sin(frame / (9 + (k % 4)) + k));
+  return (
+    <AbsoluteFill>
+      <SceneIn><Background broll={s.broll} /></SceneIn>
+      <AbsoluteFill style={{background: 'rgba(6,6,14,0.7)'}} />
+      <StepLabel step={s.step} label={s.label} />
+      {/* the window */}
+      <div style={{position: 'absolute', top: WIN_TOP, left: 90, width: 900, height: WIN_H, borderRadius: 20, overflow: 'hidden',
+        border: '14px solid #3a2c22', boxShadow: '0 30px 70px rgba(0,0,0,0.6), inset 0 0 40px rgba(0,0,0,0.4)',
+        opacity: Math.min(1, enter * 1.5), transform: `scale(${0.94 + 0.06 * enter})`}}>
+        {!night || !nightSky ? (
+          <AbsoluteFill style={{background: 'linear-gradient(180deg, #6ec3ff, #bfe6ff 60%, #ffe2a8)'}}>
+            <div style={{position: 'absolute', right: 140, top: 70, width: 120, height: 120, borderRadius: 60, background: '#ffd23a',
+              boxShadow: '0 0 60px #ffd23a'}} />
+            {[[120, 120, 160], [420, 70, 120], [600, 200, 180]].map(([x, y, w], i) => (
+              <div key={i} style={{position: 'absolute', left: x + Math.sin(frame / 60 + i) * 10, top: y, width: w, height: w * 0.36, borderRadius: 40,
+                background: 'rgba(255,255,255,0.85)'}} />
+            ))}
+          </AbsoluteFill>
+        ) : (
+          <AbsoluteFill style={{background: 'linear-gradient(180deg, #070b26, #1b1145 60%, #3a1a5a)'}}>
+            {Array.from({length: 26}).map((_, k) => (
+              <div key={k} style={{position: 'absolute', left: (k * 137) % 860, top: (k * 71) % 300, width: 5, height: 5, borderRadius: 3,
+                background: '#fff', opacity: twinkle(k)}} />
+            ))}
+            <div style={{position: 'absolute', right: 130, top: 60 + (1 - ease(frame, wakeAt + 6, wakeAt + 30)) * 120}}>
+              <TimeIcon icon="moon" size={150} />
+            </div>
+          </AbsoluteFill>
+        )}
+        {/* window bars */}
+        <div style={{position: 'absolute', left: '50%', top: 0, bottom: 0, width: 14, marginLeft: -7, background: '#3a2c22'}} />
+        <div style={{position: 'absolute', top: '50%', left: 0, right: 0, height: 14, marginTop: -7, background: '#3a2c22'}} />
+        {night && s.wakeText ? (
+          <div style={{position: 'absolute', left: 30, bottom: 26, fontFamily: F.mono, fontWeight: 800, fontSize: 30, color: '#06060F',
+            background: C.gold, padding: '6px 16px', borderRadius: 10, letterSpacing: 2, opacity: ease(frame, wakeAt + 14, wakeAt + 24)}}>{s.wakeText}</div>
+        ) : null}
+      </div>
+      {/* the sleep menu */}
+      {frame >= menuAt - 2 ? (
+        <div style={{position: 'absolute', top: MENU_TOP, left: 160, width: 760, borderRadius: 22, overflow: 'hidden',
+          background: 'linear-gradient(180deg, rgba(20,20,34,0.96), rgba(10,10,18,0.96))', border: '3px solid rgba(255,255,255,0.18)',
+          boxShadow: '0 30px 60px rgba(0,0,0,0.6)', opacity: Math.min(1, menu * 1.5), transform: `translateY(${(1 - menu) * 60}px)`}}>
+          <div style={{height: 70, display: 'flex', alignItems: 'center', padding: '0 30px', fontFamily: F.mono, fontWeight: 800, fontSize: 30,
+            color: 'rgba(255,255,255,0.7)', letterSpacing: 4, borderBottom: '2px solid rgba(255,255,255,0.12)'}}>{s.title}</div>
+          {s.options.map((o, i) => {
+            const on = i === cursor;
+            const isPick = picked && i === s.pick;
+            return (
+              <div key={i} style={{position: 'relative', height: ROW, display: 'flex', alignItems: 'center', gap: 24, padding: '0 30px',
+                background: on ? (isPick ? 'rgba(255,200,87,0.22)' : 'rgba(255,255,255,0.08)') : 'transparent',
+                transform: isPick ? `scale(${1 + 0.04 * pickPop})` : 'none'}}>
+                {on ? <div style={{position: 'absolute', left: 0, top: 10, bottom: 10, width: 8, borderRadius: 4, background: isPick ? C.gold : '#fff'}} /> : null}
+                <TimeIcon icon={o.icon} size={52} />
+                <div style={{fontFamily: F.display, fontSize: 52, color: isPick ? C.gold : on ? '#fff' : 'rgba(255,255,255,0.6)'}}>{o.text}</div>
+                {isPick ? <div style={{marginLeft: 'auto', fontFamily: F.mono, fontWeight: 800, fontSize: 26, color: '#06060F', background: C.gold,
+                  padding: '4px 12px', borderRadius: 8}}>✓</div> : null}
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
+      {/* the blink */}
+      {lid > 0 ? (
+        <>
+          <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 960 * lid, background: '#000'}} />
+          <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 960 * lid, background: '#000'}} />
+        </>
+      ) : null}
+      <Arabic text={s.ar} delay={16} top={MENU_TOP + 70 + s.options.length * ROW + 50} size={52} />
     </AbsoluteFill>
   );
 };

@@ -1,0 +1,482 @@
+{
+ "manual": true,
+ "episode": 140,
+ "kind": "hidden-feature",
+ "topic": "Skip to night by sleeping: one in-game day lasts about 144 real minutes, so for night-only secrets sleep in a bed at one of your own safehouses and pick Night (morning, noon, evening or night); hotels and random beds don't work",
+ "title": {
+  "en": "Stop waiting for night in GTA 6 🌙 (skip time in 5 seconds)",
+  "ar": "لا تنتظر الليل في GTA 6 🌙 اقلب الوقت بثواني"
+ },
+ "summary": "One in-game day in GTA 6 lasts about two and a half real hours. When a secret only shows up late at night, go to one of your safehouses, sleep in your bed and pick Night. Hotels and random beds don't work, only your own safehouses. Perfect for the UFO, the killer clown and every night-only secret.",
+ "summary_ar": "يوم واحد في GTA 6 يطول حوالي ساعتين ونص حقيقية. إذا السر ما يطلع إلا بالليل، روح لأحد بيوتك الآمنة ونام في سريرك واختار «الليل». الفنادق والأسرّة العشوائية ما تنفع، بس بيوتك. مثالية للـUFO والمهرج القاتل وكل سر ليلي.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Secrets",
+  "GTA6Guide",
+  "GTAVI",
+  "Leonida",
+  "ViceCity",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.4
+ },
+ "sources": [
+  "https://www.videogameschronicle.com/guide/how-to-change-the-time-of-day-in-gta-6/",
+  "https://www.keengamer.com/articles/guides/how-to-skip-time-and-sleep-in-gta-6-day-length-and-best-time-for-crimes/",
+  "https://www.theclick.gg/gta-6-how-to-pass-time/",
+  "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-how-to-skip-time-sleep-day-length/",
+  "https://gamertweak.com/how-to-change-time-in-gta-6/",
+  "https://thedroidguy.com/gta-6-sleep-pass-time-1293341",
+  "https://beebom.com/gta-6-day-and-night-cycle/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 2.9,
+     "x": 1000
+    }
+   ]
+  },
+  "day": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 3.45,
+     "x": 1000
+    }
+   ]
+  },
+  "late": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 2.75,
+     "x": 1100
+    }
+   ]
+  },
+  "bed": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 5.7,
+     "x": 700
+    }
+   ]
+  },
+  "beds": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 16.0,
+     "dur": 4.2,
+     "x": 800
+    }
+   ]
+  },
+  "secrets": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 46.6,
+     "dur": 4.5,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 10.0,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 104,
+  "seed": 140,
+  "drop": 2.82,
+  "break": 12.0,
+  "back": 12.76,
+  "outro": 23.18
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "duration": 26.9,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 2.82,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "PRO TIP",
+    "kicker": "STOP WAITING FOR",
+    "title": [
+     "NIGHT"
+    ],
+    "color": "teal",
+    "tag": "…sleep it off.",
+    "tagAt": 1.34,
+    "ar": "لا تنتظر الليل في GTA 6"
+   },
+   {
+    "type": "reveal",
+    "from": 2.82,
+    "to": 6.24,
+    "captions": false,
+    "broll": {
+     "src": "day",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "pre": "1 DAY = ABOUT",
+    "slamAt": 1.6,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "2.5 HOURS",
+      "at": 1.6,
+      "color": "gold",
+      "size": 170
+     },
+     {
+      "text": "OF REAL TIME",
+      "at": 2.22,
+      "size": 96
+     }
+    ],
+    "ar": "يوم واحد في اللعبة = حوالي ساعتين ونص حقيقية"
+   },
+   {
+    "type": "time",
+    "from": 6.24,
+    "to": 8.94,
+    "broll": {
+     "src": "late",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "step": "01",
+    "label": "NIGHT-ONLY",
+    "times": [
+     "11:57",
+     "11:58",
+     "11:59"
+    ],
+    "suffix": "PM",
+    "note": "LATE-NIGHT SECRETS",
+    "ar": "بعض الأسرار ما تطلع إلا بالليل"
+   },
+   {
+    "type": "sleep",
+    "from": 8.94,
+    "to": 14.58,
+    "broll": {
+     "src": "bed",
+     "grade": "warm",
+     "dim": 0.5,
+     "blur": 6
+    },
+    "step": "02",
+    "label": "YOUR SAFEHOUSE BED",
+    "title": "SLEEP UNTIL…",
+    "options": [
+     {
+      "text": "MORNING",
+      "icon": "sunrise"
+     },
+     {
+      "text": "NOON",
+      "icon": "sun"
+     },
+     {
+      "text": "EVENING",
+      "icon": "sunset"
+     },
+     {
+      "text": "NIGHT",
+      "icon": "moon"
+     }
+    ],
+    "menuAt": 1.9,
+    "pick": 3,
+    "pickAt": 3.06,
+    "wakeAt": 3.7,
+    "wakeText": "WOKE UP · NIGHT",
+    "ar": "نام في سرير بيتك الآمن… واختار «الليل»"
+   },
+   {
+    "type": "list",
+    "from": 14.58,
+    "to": 18.74,
+    "broll": {
+     "src": "beds",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "BEDS",
+    "label": "WHERE IT WORKS",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "HOTELS",
+      "status": "NO",
+      "ok": false,
+      "alert": true,
+      "at": 0.1,
+      "icon": "house"
+     },
+     {
+      "text": "RANDOM BEDS",
+      "status": "NO",
+      "ok": false,
+      "alert": true,
+      "at": 0.9,
+      "icon": "alert"
+     },
+     {
+      "text": "YOUR SAFEHOUSES",
+      "status": "YES",
+      "ok": true,
+      "at": 2.72,
+      "icon": "house"
+     }
+    ],
+    "ar": "الفنادق والأسرّة العشوائية ما تنفع… بس بيوتك الآمنة"
+   },
+   {
+    "type": "reveal",
+    "from": 18.74,
+    "to": 23.18,
+    "captions": false,
+    "broll": {
+     "src": "secrets",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "pre": "PERFECT FOR…",
+    "slamAt": 0.68,
+    "color": "teal",
+    "lines": [
+     {
+      "text": "THE UFO",
+      "at": 0.68,
+      "color": "green",
+      "size": 150
+     },
+     {
+      "text": "THE KILLER CLOWN",
+      "at": 2.0,
+      "color": "red",
+      "size": 100
+     },
+     {
+      "text": "EVERY NIGHT SECRET",
+      "at": 2.94,
+      "size": 84
+     }
+    ],
+    "ar": "مثالية للـUFO، والمهرج القاتل، وكل سر ليلي"
+   },
+   {
+    "type": "cta",
+    "from": 23.18,
+    "to": 26.9,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRETS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 0.8,
+    "volume": 0.5
+   },
+   {
+    "src": "glitch.wav",
+    "at": 1.32,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 2.76,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 4.42,
+    "volume": 0.6
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.04,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.18,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 6.6,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 7.4,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 8.2,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.88,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.84,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.3,
+    "volume": 0.3
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.6,
+    "volume": 0.3
+   },
+   {
+    "src": "ping.wav",
+    "at": 12.0,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.5,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 12.9,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.52,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 14.68,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 15.48,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 17.3,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.68,
+    "volume": 0.5
+   },
+   {
+    "src": "ufo.wav",
+    "at": 19.42,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.74,
+    "volume": 0.55
+   },
+   {
+    "src": "ping.wav",
+    "at": 21.68,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.12,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.2,
+    "volume": 0.5
+   }
+  ]
+ }
+}

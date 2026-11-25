@@ -501,6 +501,22 @@ export type ElevatorScene = Base & {
   ar?: string;
 };
 
+// A bedroom window shows the day sky; a sleep menu lists wake-up times, the cursor lands on one,
+// the eyes blink shut and the window opens on the new time (night: moon and stars).
+export type SleepScene = Base & {
+  type: 'sleep';
+  step: string;
+  label: string;
+  title: string; // the menu header, e.g. "SLEEP UNTIL…"
+  options: {text: string; icon: 'sunrise' | 'sun' | 'sunset' | 'moon'}[];
+  menuAt: number;
+  pick: number; // index of the chosen option
+  pickAt: number;
+  wakeAt: number; // the blink; the window shows the chosen time after it
+  wakeText?: string; // a chip on the window after waking, e.g. "WOKE UP · NIGHT"
+  ar?: string;
+};
+
 export type LoopScene = Base & {
   type: 'loop';
   step: string;
@@ -549,7 +565,7 @@ export type Scene =
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

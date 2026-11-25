@@ -3,6 +3,14 @@
   "entries": [
     {
       "date": "2026-11-25",
+      "episode": "m140-skip-to-night",
+      "scene": "sleep",
+      "variant": "bedroom window + sleep menu + blink",
+      "new": true,
+      "note": "window shows the day sky, a SLEEP UNTIL menu steps down to the chosen time, eyelids blink shut and open on a night sky with moon and stars"
+    },
+    {
+      "date": "2026-11-25",
       "episode": "020-six-star-escape",
       "scene": "portal",
       "variant": "neon ring tunnel + rolling year counter",

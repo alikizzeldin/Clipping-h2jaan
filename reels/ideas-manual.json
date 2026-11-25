@@ -1472,5 +1472,76 @@
     "why_not": "sources conflict; some predate launch"
    }
   ]
+ },
+ {
+  "date": "2026-11-25",
+  "wake_up": "10:23 UTC (m140; only 1 idea passed the gate)",
+  "ideas": [
+   {
+    "idea": "Skip to night by sleeping: one in-game day lasts about 144 real minutes, so for night-only secrets sleep in a bed at one of your own safehouses and pick Night (morning, noon, evening or night); hotels and random beds don't work",
+    "format": "HIDDEN FEATURE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.4,
+    "chosen": "m140-skip-to-night",
+    "sources": [
+     "https://www.videogameschronicle.com/guide/how-to-change-the-time-of-day-in-gta-6/",
+     "https://www.keengamer.com/articles/guides/how-to-skip-time-and-sleep-in-gta-6-day-length-and-best-time-for-crimes/",
+     "https://www.theclick.gg/gta-6-how-to-pass-time/",
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-how-to-skip-time-sleep-day-length/",
+     "https://gamertweak.com/how-to-change-time-in-gta-6/",
+     "https://thedroidguy.com/gta-6-sleep-pass-time-1293341",
+     "https://beebom.com/gta-6-day-and-night-cycle/"
+    ]
+   },
+   {
+    "idea": "Teenage Mutant Ninja Turtles origin scene in a storm drain (four baby turtles, green ooze, pizza boxes, a rat)",
+    "format": "EASTER EGG",
+    "demand": 9,
+    "payoff": 6,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 6,
+    "score": 7.25,
+    "why_not": "confidence 6: the location (storm drain near Millport) comes from one guide; Rockstar unconfirmed. Retry when a second source pins it"
+   },
+   {
+    "idea": "Random events you finish never spawn again (Rockstar interview)",
+    "format": "DON'T MISS",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 7,
+    "score": 6.6,
+    "why_not": "6.6; the total number of events differs between sources"
+   },
+   {
+    "idea": "Hyde Island Saw/Manhunt hunt",
+    "why_not": "same event as the 'Hunger Games' idea in ideas.json"
+   },
+   {
+    "idea": "Secret supercars (Infernus in a Crosstown police garage, Vitello in a Waning Sands villa, Zorrusso at Gellhorn Raceway)",
+    "why_not": "no second source for any location"
+   },
+   {
+    "idea": "Jason and Lucia can break up but stay partners",
+    "why_not": "sources conflict (Insider Gaming vs GamesRadar headline)"
+   },
+   {
+    "idea": "Easy trophies: Master of None, Whip It Good",
+    "why_not": "low demand; gamerscore values differ"
+   },
+   {
+    "idea": "GTA 6 sold about 17 million copies on day one",
+    "why_not": "analyst estimate only (Sensor Tower), no official figure"
+   }
+  ]
  }
 ]
