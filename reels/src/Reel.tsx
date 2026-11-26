@@ -37,6 +37,7 @@ import {Vault} from './scenes/Vault';
 import {Winch} from './scenes/Winch';
 import {Poster} from './scenes/Poster';
 import {Storm} from './scenes/Storm';
+import {Choice} from './scenes/Choice';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 import {applyLook, look} from './looks/state';
@@ -97,6 +98,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'winch': return <Winch s={s} />;
     case 'poster': return <Poster s={s} />;
     case 'storm': return <Storm s={s} />;
+    case 'choice': return <Choice s={s} />;
   }
 };
 

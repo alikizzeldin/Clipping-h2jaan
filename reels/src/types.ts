@@ -662,13 +662,25 @@ export type StormScene = Base & {
   ar?: string;
 };
 
+// A choice the game makes you take: two option cards stacked with an OR badge between them; each
+// lights up at its `at` (seconds into the scene) and its reward flips from ??? to the prize.
+export type ChoiceScene = Base & {
+  type: 'choice';
+  step: string;
+  label: string;
+  question: string; // e.g. "FELIPE'S FATE"
+  options: {title: string; reward: string; sub?: string; icon: 'crosshair' | 'car' | 'cash' | 'hand'; at: number; color?: 'red' | 'green' | 'gold' | 'teal' | 'pink'}[]; // two
+  or?: string; // the badge between the cards (default "OR")
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
