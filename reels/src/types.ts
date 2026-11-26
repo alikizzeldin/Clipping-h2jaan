@@ -669,7 +669,7 @@ export type ChoiceScene = Base & {
   step: string;
   label: string;
   question: string; // e.g. "FELIPE'S FATE"
-  options: {title: string; reward: string; sub?: string; icon: 'crosshair' | 'car' | 'cash' | 'hand'; at: number; color?: 'red' | 'green' | 'gold' | 'teal' | 'pink'}[]; // two
+  options: {title: string; reward: string; sub?: string; icon: 'crosshair' | 'car' | 'cash' | 'hand'; at: number; rewardAt?: number; color?: 'red' | 'green' | 'gold' | 'teal' | 'pink'}[]; // two; rewardAt: when the prize flips in (default: at)
   or?: string; // the badge between the cards (default "OR")
   ar?: string;
 };

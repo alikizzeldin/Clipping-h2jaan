@@ -50,8 +50,9 @@ export const Choice: React.FC<{s: ChoiceScene}> = ({s}) => {
   const q = pop(frame, 2, 12, 0.5, 200);
   const cards = [a, b].map((o, i) => {
     const at = sec(o.at);
-    const shown = frame >= at;
-    const flip = ease(frame, at, at + 8);
+    const rAt = sec(o.rewardAt ?? o.at);
+    const shown = frame >= rAt;
+    const flip = ease(frame, rAt, rAt + 8);
     const isOn = active === i;
     const dim = active === -1 ? 0.85 : isOn ? 1 : 0.5;
     const tone = C[o.color ?? (i === 0 ? 'red' : 'green')];
@@ -65,7 +66,7 @@ export const Choice: React.FC<{s: ChoiceScene}> = ({s}) => {
         <div style={{display: 'flex', flexDirection: 'column', gap: 14, flex: 1}}>
           <div style={{fontFamily: F.display, fontSize: 92, lineHeight: 0.95, color: '#fff', textTransform: 'uppercase'}}>{o.title}</div>
           <div style={{alignSelf: 'flex-start', fontFamily: F.brand, fontWeight: 900, fontSize: 44, letterSpacing: 2, padding: '8px 20px', borderRadius: 12,
-            color: shown ? '#0b0b0b' : 'rgba(255,255,255,0.6)', background: shown ? tone : 'rgba(255,255,255,0.1)',
+            color: shown ? (o.color === 'red' || o.color === 'pink' || (!o.color && i === 0) ? '#fff' : '#0b0b0b') : 'rgba(255,255,255,0.6)', background: shown ? tone : 'rgba(255,255,255,0.1)',
             transform: `perspective(600px) rotateX(${shown ? (1 - flip) * 90 : 0}deg)`}}>{shown ? o.reward : '? ? ?'}</div>
           {o.sub && shown ? (
             <div style={{fontFamily: F.mono, fontSize: 26, letterSpacing: 4, color: 'rgba(255,255,255,0.8)', opacity: flip}}>{o.sub}</div>

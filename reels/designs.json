@@ -3,6 +3,22 @@
  "entries": [
   {
    "date": "2026-11-26",
+   "episode": "026-felipe-choice",
+   "scene": "choice",
+   "variant": "two stacked option cards + OR badge, rewards flip in",
+   "new": true,
+   "note": "new scene type 'choice': a question over two cards (icon, title, reward chip, small line); a card lights up and the other dims on its cue, the reward flips from ??? to the prize on its own cue (rewardAt); an OR badge spins in between"
+  },
+  {
+   "date": "2026-11-26",
+   "episode": "026-felipe-choice",
+   "scene": "location",
+   "variant": "neon",
+   "new": false,
+   "note": "last location episodes used paper (025) and radar (m142)"
+  },
+  {
+   "date": "2026-11-26",
    "episode": "025-hurricanes",
    "scene": "storm",
    "variant": "bunker TV hurricane alert (spinning storm over the coast, banner, ticker, rain, unlock stamp)",

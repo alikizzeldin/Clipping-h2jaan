@@ -1,0 +1,355 @@
+{
+ "episode": 26,
+ "kind": "missable",
+ "topic": "Bad Driver! (Chapter 4): Andrea sends you to find Felipe in Millport; kill him and Andrea pays $20,000, spare him and he sends you his car (Collect Felipe's Gift); finish it before Power Play or it's gone",
+ "title": {
+  "en": "Do this before Power Play in GTA 6 ⏳ (cash or car?)",
+  "ar": "سوّها قبل باور بلاي في GTA 6 ⏳"
+ },
+ "summary": "Do this before Power Play, or lose it forever. In Chapter 4, Andrea sends you to find Felipe in Millport, and the game makes you choose: kill him and Andrea pays you $20,000, or spare him and Felipe sends you a gift, his own car. Finish it before Power Play, or it's gone for good. Cash or car?",
+ "summary_ar": "سوّها قبل مهمة باور بلاي أو تروح عليك. في الفصل الرابع أندريا ترسلك تدوّر فيليبي في ميلبورت، واللعبة تخيّرك: اقتله وأندريا تدفع لك ٢٠ ألف دولار، أو اتركه وفيليبي يهديك سيارته. خلّصها قبل باور بلاي وإلا تختفي. فلوس ولا سيارة؟",
+ "keywords": [
+  "GTA6",
+  "GTA6Missable",
+  "GTA6Tips",
+  "GTA6Chapter4",
+  "GTA6Money",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 7,
+  "payoff": 7,
+  "retention": 8,
+  "fresh": 7,
+  "visual": 6,
+  "confidence": 8,
+  "score": 7.3
+ },
+ "sources": [
+  "https://www.powerpyx.com/gta-6-bad-driver-find-felipe-walkthrough/",
+  "https://www.gtabase.com/gta-6/strangers/bad-driver",
+  "https://rarethief.com/gta-vi-bad-driver-walkthrough/",
+  "https://hintatlas.com/gta-6/kill-or-spare-felipe/",
+  "https://metaforge.app/gta-6/gta-6-chapter-4-missables-point-of-no-return",
+  "https://thetab.com/2026/11/24/an-easy-25k-and-all-the-other-things-you-cant-miss-before-finishing-gta-6-chapter-4"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7b/clip_01M7VRW5RA71X4HP9C6P4KQ7KT/playlist.m3u8",
+     "channel": "paymoneywubby",
+     "start": 0.0,
+     "dur": 3.7,
+     "x": 700
+    }
+   ]
+  },
+  "water": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 58.5,
+     "dur": 4.2,
+     "x": 400
+    }
+   ]
+  },
+  "choice": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/11/clip_01M7WZ18VJJHYGG9M9ZES4XG4H/playlist.m3u8",
+     "channel": "gustavocsgo",
+     "start": 8.0,
+     "dur": 5.2,
+     "x": 800
+    },
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 56.5,
+     "dur": 5.5,
+     "x": 1000
+    }
+   ]
+  },
+  "dark": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 19.0,
+     "dur": 3.5,
+     "x": 1000
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7b/clip_01M7VRW5RA71X4HP9C6P4KQ7KT/playlist.m3u8",
+     "channel": "paymoneywubby",
+     "start": 3.7,
+     "dur": 6.6,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 104,
+  "seed": 263,
+  "drop": 3.6,
+  "break": 17.04,
+  "back": 18.4,
+  "outro": 21.84
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "episode": 26,
+  "duration": 28.4,
+  "musicVolume": 0.42,
+  "style": "leonida-herald",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.6,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "DON'T MISS",
+    "kicker": "DO THIS BEFORE",
+    "title": [
+     "POWER",
+     "PLAY"
+    ],
+    "color": "gold",
+    "tag": "…or lose it forever.",
+    "tagAt": 1.92,
+    "ar": "سوّها قبل مهمة باور بلاي"
+   },
+   {
+    "type": "location",
+    "from": 3.6,
+    "to": 7.76,
+    "style": "neon",
+    "broll": {
+     "src": "water",
+     "grade": "night",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "ANDREA'S JOB",
+    "place": "MILLPORT",
+    "target": "FIND FELIPE",
+    "direction": "FIND HIM",
+    "region": "CHAPTER 4",
+    "ar": "أندريا ترسلك تدوّر فيليبي"
+   },
+   {
+    "type": "choice",
+    "from": 7.76,
+    "to": 18.4,
+    "broll": {
+     "src": "choice",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 4
+    },
+    "step": "02",
+    "label": "THE CHOICE",
+    "question": "FELIPE'S FATE",
+    "options": [
+     {
+      "title": "KILL HIM",
+      "reward": "$20,000",
+      "sub": "PAID BY ANDREA",
+      "icon": "crosshair",
+      "at": 2.72,
+      "rewardAt": 4.64,
+      "color": "red"
+     },
+     {
+      "title": "SPARE HIM",
+      "reward": "HIS CAR",
+      "sub": "A GIFT FROM FELIPE",
+      "icon": "car",
+      "at": 6.4,
+      "rewardAt": 9.28,
+      "color": "green"
+     }
+    ],
+    "ar": "اقتله وتاخذ ٢٠ ألف… أو اتركه وتاخذ سيارته"
+   },
+   {
+    "type": "twist",
+    "from": 18.4,
+    "to": 21.84,
+    "captions": false,
+    "broll": {
+     "src": "dark",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 4,
+     "zoom": [
+      1.1,
+      1.2
+     ]
+    },
+    "pre": "FINISH IT BEFORE POWER PLAY…",
+    "slamAt": 2.16,
+    "lines": [
+     {
+      "text": "GONE",
+      "at": 2.16,
+      "color": "red",
+      "size": 240
+     },
+     {
+      "text": "FOR GOOD",
+      "at": 2.56,
+      "size": 160
+     }
+    ],
+    "ar": "خلّصها قبل باور بلاي… وإلا تختفي"
+   },
+   {
+    "type": "cta",
+    "from": 21.84,
+    "to": 28.4,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "warm",
+     "dim": 0.3
+    },
+    "line1": "Cash or car?",
+    "line2": "comment",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "فلوس ولا سيارة؟ اكتب اختيارك",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 0.96,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.28,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 2.0,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 2.5,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.54,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.88,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.7,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 10.48,
+    "volume": 0.55
+   },
+   {
+    "src": "cash.wav",
+    "at": 12.4,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.16,
+    "volume": 0.55
+   },
+   {
+    "src": "trophy.wav",
+    "at": 17.04,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.34,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 19.0,
+    "volume": 0.3
+   },
+   {
+    "src": "tick.wav",
+    "at": 19.6,
+    "volume": 0.3
+   },
+   {
+    "src": "impact.wav",
+    "at": 20.56,
+    "volume": 0.65
+   },
+   {
+    "src": "error.wav",
+    "at": 20.6,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.78,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.86,
+    "volume": 0.5
+   }
+  ]
+ }
+}
