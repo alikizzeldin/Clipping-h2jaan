@@ -2329,5 +2329,112 @@
     "sources": []
    }
   ]
+ },
+ {
+  "date": "2026-11-26",
+  "wake_up": "22:41 UTC",
+  "ideas": [
+   {
+    "format": "SECRET FILE",
+    "idea": "1010 mural giveaway: photograph five different 1010 murals in Vice City (Collections > 1010 Murals); the fifth photo gives a clue to a storage garage; code 1010 opens it: a '95 Grotti Cheetah with a one-off 1010 finish",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 8,
+    "confidence": 8,
+    "score": 7.9,
+    "chosen": "027-mural-cheetah",
+    "why_not": null,
+    "sources": [
+     "https://gamerant.com/gta-6-1010-murals-locations-grotti-cheetah-free-garage/",
+     "https://gta.tech4gamers.com/gta-6/collectibles/1010-murals/",
+     "https://gta6.house/guides/gta-6-secret-supercar-giveaway-1010-grotti-cheetah",
+     "https://cutscenewire.com/games/gta-6/collectibles/gta-6-all-1010-mural-locations-and-how-to-unlock-the-1010/",
+     "https://gta6bugs.com/collectibles/1010-murals",
+     "https://www.theclick.gg/gta-6-1010-mural-locations/"
+    ],
+    "note": "Not said: the towing company's name next to the garage (spelled Slator / Saltor), the garage's exact place, that it's only in one chapter (Game Rant only), that the garage becomes a property (one guide). '1010' is said 'ten-ten'; the code is said digit by digit."
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Charred Toros: a gold rare car parked, unlocked and tracker-free, in front of a gang house in La Perle",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 6,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "guides list it but without matching details",
+    "sources": [
+     "https://gtaculture.com/guides/gta-6-rare-cars-locations",
+     "https://fandomwire.com/rarest-cars-in-gta-6-you-can-get-for-free-ranked/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "'Dom's Charger' in a Grayson shed is really the Bravado DriveShaft Gauntlet",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 6,
+    "score": 6.3,
+    "chosen": null,
+    "why_not": "viral graphic, details differ; Fast & Furious already covered by m101",
+    "sources": [
+     "https://www.ezg.com/blog/gta-6-free-cars-locations-real-or-fake"
+    ]
+   },
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "Hidden trophy Capital Offense: crash out of a vehicle showroom (method unconfirmed)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 4,
+    "score": 5.7,
+    "chosen": null,
+    "why_not": "method unconfirmed",
+    "sources": [
+     "https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Vercetti Estate nods (trailer shot, Ultimate Edition reward)",
+    "demand": 7,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 4,
+    "visual": 5,
+    "confidence": 5,
+    "score": 5.4,
+    "chosen": null,
+    "why_not": "pre-launch marketing readings",
+    "sources": [
+     "https://www.dexerto.com/gta/gtas-6s-vice-city-easter-eggs-have-fans-split-after-fresh-sightings-3218650"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Alien Dream easter egg: a hidden planet in the dark of the planets room",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 8,
+    "visual": 7,
+    "confidence": 4,
+    "score": 6.3,
+    "chosen": null,
+    "why_not": "still one X post",
+    "sources": []
+   }
+  ]
  }
 ]
