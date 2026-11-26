@@ -2008,5 +2008,112 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-26",
+  "wake_up": "08:41 UTC",
+  "ideas": [
+   {
+    "format": "EASTER EGG",
+    "idea": "Michael and Jimmy De Santa are credited as producers on an in-game poster for the film 'Righteous Slaughter: Overkill' (GTA's Call of Duty spoof; Jimmy played Righteous Slaughter 7 in GTA 5); Michael never appears in person",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 8,
+    "visual": 7,
+    "confidence": 7,
+    "score": 7.4,
+    "chosen": "024-michael-jimmy",
+    "why_not": null,
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-confirms-what-happened-michael-jimmy-after-gta-5-easter-egg-585546-20261125",
+     "https://www.primetimer.com/features/gta-6-easter-egg-hints-at-a-surprising-reunion-between-michael-and-jimmy-after-gta-5",
+     "https://gta6.house/library/characters/michael-de-santa",
+     "https://gta.fandom.com/wiki/Righteous_Slaughter_7"
+    ],
+    "note": "Found by an X user on Nov 24 (poster screenshot, zoomed billing block). Not said: where the poster is (no source gives a place), any 'reunion' story (Primetimer's framing), Jimmy's own role in GTA 6 (one source only). The billing block is redrawn with only the producer line readable; no invented names."
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Bad Driver! (Chapter 4, Andrea): kill Felipe for $20,000 or spare him for his car; gone once Power Play starts",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.2,
+    "chosen": null,
+    "why_not": "passes; the Michael and Jimmy find is fresher and scores higher",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-bad-driver-find-felipe-walkthrough/",
+     "https://rarethief.com/gta-vi-bad-driver-walkthrough/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Teenage Mutant Ninja Turtles nod: storm drain near Tallaloko Dam (green ooze, four tiny turtles, pizza boxes, a rat)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "the dam location has one source only; another search found nothing",
+    "sources": [
+     "https://vgtimes.com/gaming-news/175706-gta-6-players-discover-teenage-mutant-ninja-turtles-easter-egg-featuring-green-mutagen-pizza-and-splinter.html"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "A South Park reference spotted by a Reddit user",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 4,
+    "score": 5.2,
+    "chosen": null,
+    "why_not": "suspected, not confirmed",
+    "sources": [
+     "https://gamerant.com/gta-6-south-park-easter-egg/"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "Unofficial GTA 6 PC ports progress; Rockstar has not announced a PC version; fake PC-port downloads are scams",
+    "demand": 7,
+    "payoff": 5,
+    "retention": 4,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 7,
+    "score": 5.6,
+    "chosen": null,
+    "why_not": "no Rockstar news; a piracy-adjacent topic",
+    "sources": [
+     "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/GTA-6-on-PC-The-open-world-now-runs-too-1561102/"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "Players report being stuck in Chapter 2 after the patch",
+    "demand": 6,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 6,
+    "visual": 3,
+    "confidence": 5,
+    "score": 4.8,
+    "chosen": null,
+    "why_not": "aggregator snippet only; no date or fix",
+    "sources": [
+     "https://www.newsnow.co.uk/h/Technology/Gaming/GTA+6"
+    ]
+   }
+  ]
  }
 ]
