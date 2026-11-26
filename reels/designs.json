@@ -3,6 +3,30 @@
  "entries": [
   {
    "date": "2026-11-26",
+   "episode": "027-mural-cheetah",
+   "scene": "snap",
+   "variant": "phone camera photographing tagged murals (counter, strip of five shots)",
+   "new": true,
+   "note": "new scene type 'snap': a phone in photo mode, a painted wall with the tag in the viewfinder; each shot flashes, the counter ticks, a thumbnail drops into the strip and the next mural (new palette) slides in; optional done chip"
+  },
+  {
+   "date": "2026-11-26",
+   "episode": "027-mural-cheetah",
+   "scene": "garage",
+   "variant": "storage unit keypad + roll-up door reveal",
+   "new": true,
+   "note": "new scene type 'garage': lit STORAGE sign, the code typed on a wall keypad (LCD turns OPEN, light goes green), the slatted door rolls up on a warm bay with a 90s supercar silhouette, then a name chip"
+  },
+  {
+   "date": "2026-11-26",
+   "episode": "027-mural-cheetah",
+   "scene": "location",
+   "variant": "gps",
+   "new": false,
+   "note": "last location episodes used neon (026) and paper (025)"
+  },
+  {
+   "date": "2026-11-26",
    "episode": "026-felipe-choice",
    "scene": "choice",
    "variant": "two stacked option cards + OR badge, rewards flip in",

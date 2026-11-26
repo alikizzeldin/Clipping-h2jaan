@@ -1,0 +1,450 @@
+{
+ "episode": 27,
+ "kind": "secret",
+ "topic": "1010 mural giveaway: photograph five different 1010 murals in Vice City; the fifth photo gives a clue to a storage garage; code 1010 opens it: a '95 Grotti Cheetah with a one-off 1010 finish",
+ "title": {
+  "en": "GTA 6 hides a FREE supercar behind murals 🎨",
+  "ar": "سيارة مجانية في GTA 6 ورا الجداريات 🎨"
+ },
+ "summary": "GTA 6 hides a free supercar behind five murals. In Vice City, find the 1010 murals and take a photo of each one: five different murals, not the same one five times. After the fifth photo you get a clue to a storage garage. Punch in the code 1010, the door rolls up, and inside is a '95 Grotti Cheetah with a one-of-a-kind 1010 paint job.",
+ "summary_ar": "في GTA 6 سيارة خارقة مجانية ورا خمس جداريات. في فايس سيتي دوّر جداريات 1010 وصوّر كل وحدة: خمس جداريات مختلفة، مو نفس الوحدة خمس مرات. بعد الصورة الخامسة يجيك تلميح لكراج تخزين. اكتب الكود 1010، الباب ينفتح، وداخله غروتي شيتا 95 بصبغة 1010 ما لها مثيل.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "GTA6Cars",
+  "GTA6FreeCar",
+  "GrottiCheetah",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 7,
+  "visual": 8,
+  "confidence": 8,
+  "score": 7.9
+ },
+ "sources": [
+  "https://gamerant.com/gta-6-1010-murals-locations-grotti-cheetah-free-garage/",
+  "https://gta.tech4gamers.com/gta-6/collectibles/1010-murals/",
+  "https://gta6.house/guides/gta-6-secret-supercar-giveaway-1010-grotti-cheetah",
+  "https://cutscenewire.com/games/gta-6/collectibles/gta-6-all-1010-mural-locations-and-how-to-unlock-the-1010/",
+  "https://gta6bugs.com/collectibles/1010-murals",
+  "https://www.theclick.gg/gta-6-1010-mural-locations/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 99.0,
+     "dur": 4.4,
+     "x": 1000
+    }
+   ]
+  },
+  "aerial": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 9.5,
+     "dur": 2.9,
+     "x": 1000
+    }
+   ]
+  },
+  "street": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 103.5,
+     "dur": 5.6,
+     "x": 1000
+    }
+   ]
+  },
+  "dark": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 19.0,
+     "dur": 3.6,
+     "x": 1000
+    }
+   ]
+  },
+  "overpass": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 160.0,
+     "dur": 7.4,
+     "x": 1000
+    }
+   ]
+  },
+  "hood": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 56.0,
+     "dur": 3.0,
+     "x": 1000
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 89.5,
+     "dur": 3.8,
+     "x": 1050
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 102,
+  "seed": 271,
+  "drop": 4.24,
+  "break": 15.2,
+  "back": 16.08,
+  "outro": 26.24
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "episode": 27,
+  "duration": 29.9,
+  "musicVolume": 0.42,
+  "style": "leonida-herald",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.24,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "GTA 6 HIDES A FREE",
+    "title": [
+     "SUPERCAR"
+    ],
+    "color": "gold",
+    "tag": "…behind five murals.",
+    "tagAt": 2.48,
+    "ar": "سيارة خارقة مجانية… ورا خمس جداريات"
+   },
+   {
+    "type": "location",
+    "from": 4.24,
+    "to": 7.04,
+    "style": "gps",
+    "broll": {
+     "src": "aerial",
+     "grade": "night",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "THE MURALS",
+    "place": "VICE CITY",
+    "target": "1010 MURALS",
+    "direction": "FIND 5",
+    "region": "PHOTO EACH ONE",
+    "ar": "دوّر جداريات 1010 في فايس سيتي"
+   },
+   {
+    "type": "snap",
+    "from": 7.04,
+    "to": 12.56,
+    "broll": {
+     "src": "street",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "step": "02",
+    "label": "PHOTO ALL 5",
+    "tag": "1010",
+    "shots": [
+     {
+      "at": 0.52
+     },
+     {
+      "at": 1.92
+     },
+     {
+      "at": 2.56
+     },
+     {
+      "at": 3.84
+     },
+     {
+      "at": 4.56
+     }
+    ],
+    "ar": "صوّر خمس جداريات مختلفة"
+   },
+   {
+    "type": "twist",
+    "from": 12.56,
+    "to": 16.08,
+    "captions": false,
+    "broll": {
+     "src": "dark",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 4,
+     "zoom": [
+      1.1,
+      1.2
+     ]
+    },
+    "pre": "AFTER THE FIFTH PHOTO…",
+    "slamAt": 1.76,
+    "lines": [
+     {
+      "text": "A CLUE",
+      "at": 1.76,
+      "color": "gold",
+      "size": 220
+     },
+     {
+      "text": "TO A STORAGE GARAGE",
+      "at": 2.24,
+      "size": 90
+     }
+    ],
+    "ar": "بعد الصورة الخامسة… تلميح لكراج"
+   },
+   {
+    "type": "garage",
+    "from": 16.08,
+    "to": 23.36,
+    "broll": {
+     "src": "overpass",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 3
+    },
+    "step": "03",
+    "label": "THE GARAGE",
+    "code": "1010",
+    "typeAt": 1.36,
+    "typeEnd": 2.48,
+    "openAt": 3.52,
+    "car": "'95 GROTTI CHEETAH",
+    "carSub": "FREE · IN THE GARAGE",
+    "carAt": 6.4,
+    "ar": "الكود 1010… والباب ينفتح"
+   },
+   {
+    "type": "reveal",
+    "from": 23.36,
+    "to": 26.24,
+    "captions": false,
+    "broll": {
+     "src": "hood",
+     "grade": "warm",
+     "dim": 0.3,
+     "blur": 3,
+     "zoom": [
+      1.05,
+      1.15
+     ]
+    },
+    "pre": "'95 GROTTI CHEETAH…",
+    "slamAt": 0.4,
+    "color": "gold",
+    "lines": [
+     {
+      "text": "ONE OF A KIND",
+      "at": 0.4,
+      "color": "gold",
+      "size": 170
+     },
+     {
+      "text": "1010 PAINT JOB",
+      "at": 1.12,
+      "size": 120
+     }
+    ],
+    "ar": "بصبغة 1010 ما لها مثيل"
+   },
+   {
+    "type": "cta",
+    "from": 26.24,
+    "to": 29.9,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.84,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.18,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.96,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.98,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 7.56,
+    "volume": 0.35
+   },
+   {
+    "src": "scan.wav",
+    "at": 8.96,
+    "volume": 0.35
+   },
+   {
+    "src": "scan.wav",
+    "at": 9.6,
+    "volume": 0.35
+   },
+   {
+    "src": "scan.wav",
+    "at": 10.88,
+    "volume": 0.35
+   },
+   {
+    "src": "scan.wav",
+    "at": 11.6,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.5,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.32,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.02,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.44,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 17.92,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.28,
+    "volume": 0.45
+   },
+   {
+    "src": "tick.wav",
+    "at": 18.56,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.2,
+    "volume": 0.45
+   },
+   {
+    "src": "riser.wav",
+    "at": 19.6,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.48,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.3,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.76,
+    "volume": 0.65
+   },
+   {
+    "src": "trophy.wav",
+    "at": 23.8,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 26.18,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 26.26,
+    "volume": 0.5
+   }
+  ]
+ }
+}

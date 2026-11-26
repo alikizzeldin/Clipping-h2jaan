@@ -100,7 +100,7 @@ export const Garage: React.FC<{s: GarageScene}> = ({s}) => {
       </div>
       {/* the name chip */}
       {frame >= carAt ? (
-        <div style={{position: 'absolute', left: 0, right: 0, top: 1240, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, transform: `scale(${chip})`}}>
+        <div style={{position: 'absolute', left: 0, right: 0, top: 1196, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, transform: `scale(${chip})`}}>
           <div style={{fontFamily: F.display, fontSize: 74, letterSpacing: 3, color: '#0b0b0b', background: C.gold, padding: '8px 30px', borderRadius: 14,
             boxShadow: '0 12px 0 rgba(0,0,0,0.55)'}}>{s.car}</div>
           {s.carSub ? <div style={{fontFamily: F.mono, fontSize: 28, letterSpacing: 5, color: '#fff', textShadow: '0 3px 10px #000'}}>{s.carSub}</div> : null}
