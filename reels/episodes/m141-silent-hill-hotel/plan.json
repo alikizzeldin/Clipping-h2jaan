@@ -1,0 +1,383 @@
+{
+ "manual": true,
+ "episode": 141,
+ "kind": "easter-egg",
+ "topic": "Silent Hill Easter egg: the abandoned Marbelle Hotel in south Crosstown (Vice City), near the Nine1Nine club; front door locked, enter by the back door; on the top floor the lights die, red symbols cover the walls and whispers play, then the roof door opens on a fog-covered city; an old note on the roof has a safe code (955214)",
+ "title": {
+  "en": "There's a Silent Hill hotel hiding in GTA 6 🌫️ (Marbelle Hotel)",
+  "ar": "فندق سايلنت هيل مخفي في GTA 6 🌫️"
+ },
+ "summary": "Go to the abandoned Marbelle Hotel in Crosstown, Vice City, near the Nine1Nine club. The front door is locked, so use the back door. On the top floor the lights die, red symbols cover the walls and you hear whispers; then the roof door opens on a city lost in fog. An old note up there has a safe code (955214).",
+ "summary_ar": "روح فندق ماربيل المهجور في كروس تاون بفايس سيتي، قريب من نادي Nine1Nine. الباب الأمامي مقفل، ادخل من الباب الخلفي. في الدور الأخير الأنوار تطفي، رموز حمرا تغطي الجدران، وتسمع همسات… وبعدين باب السطح ينفتح على مدينة غرقانة في الضباب. وفي السطح ورقة قديمة فيها رمز خزنة (955214).",
+ "keywords": [
+  "GTA6",
+  "GTA6EasterEgg",
+  "SilentHill",
+  "GTA6Secrets",
+  "GTAVI",
+  "ViceCity",
+  "Horror",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 7,
+  "retention": 8,
+  "fresh": 9,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.8
+ },
+ "sources": [
+  "https://www.videogameschronicle.com/guide/gta-6-marbelle-hotel-location-and-safe-code-how-to-find-the-silent-hill-easter-egg/",
+  "https://game8.co/games/GTA-6/archives/640138",
+  "https://www.dexerto.com/wikis/gta-6/easter-eggs/marbelle-hotel--silent-hill-easter-egg/",
+  "https://gamerant.com/gta-6-silent-hill-easter-egg-haunted-hotel-location/",
+  "https://beebom.com/gta-6-marbelle-hotel-safe-code/",
+  "https://holdtoreset.com/gta-6-marbelle-hotel-guide-silent-hill-easter-egg/",
+  "https://www.theclick.gg/gta-6-silent-hill-easter-egg/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 3.7,
+     "x": 1100
+    }
+   ]
+  },
+  "map": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 5.35,
+     "x": 1000
+    }
+   ]
+  },
+  "door": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 1.0,
+     "dur": 3.0,
+     "x": 700
+    }
+   ]
+  },
+  "hall": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 9.4,
+     "x": 700
+    }
+   ]
+  },
+  "note": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/69/clip_01M7V4R5D2JMNRNZQH6KCMJ224/master.m3u8",
+     "channel": "bananirou",
+     "start": 46.6,
+     "dur": 2.75,
+     "x": 900
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 2.0,
+     "dur": 3.7,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "mystery",
+  "bpm": 90,
+  "seed": 141,
+  "drop": 3.64,
+  "break": 13.8,
+  "back": 14.84,
+  "outro": 23.94
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "duration": 27.6,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.64,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.3,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "A SILENT HILL",
+    "title": [
+     "HOTEL"
+    ],
+    "color": "red",
+    "tag": "…hiding in GTA 6.",
+    "tagAt": 1.82,
+    "ar": "فندق سايلنت هيل مخفي في اللعبة"
+   },
+   {
+    "type": "location",
+    "from": 3.64,
+    "to": 8.94,
+    "broll": {
+     "src": "map",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 6
+    },
+    "step": "01",
+    "label": "THE HOTEL",
+    "place": "CROSSTOWN",
+    "target": "MARBELLE HOTEL",
+    "direction": "SOUTH",
+    "region": "VICE CITY · NEAR NINE1NINE",
+    "ar": "فندق ماربيل المهجور في كروس تاون… قريب من نادي ناين وان ناين"
+   },
+   {
+    "type": "list",
+    "from": 8.94,
+    "to": 11.9,
+    "broll": {
+     "src": "door",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "ENTRY",
+    "label": "GET INSIDE",
+    "cardAt": 0.1,
+    "arAt": 0.4,
+    "items": [
+     {
+      "text": "FRONT DOOR",
+      "status": "LOCKED",
+      "ok": false,
+      "alert": true,
+      "at": 0.68,
+      "icon": "lock"
+     },
+     {
+      "text": "BACK DOOR",
+      "status": "OPEN",
+      "ok": true,
+      "at": 1.96,
+      "icon": "house"
+     }
+    ],
+    "ar": "الباب الأمامي مقفل… ادخل من الخلفي"
+   },
+   {
+    "type": "hallway",
+    "from": 11.9,
+    "to": 21.24,
+    "broll": {
+     "src": "hall",
+     "grade": "night",
+     "dim": 0.6,
+     "blur": 8
+    },
+    "step": "02",
+    "label": "THE TOP FLOOR",
+    "floor": "TOP FLOOR",
+    "darkAt": 2.14,
+    "symbolsAt": 2.94,
+    "whisperAt": 4.76,
+    "doorAt": 6.26,
+    "fogAt": 8.1,
+    "fogText": "FOG",
+    "ar": "الأنوار تطفي، رموز حمرا، همسات… وباب السطح ينفتح على الضباب"
+   },
+   {
+    "type": "reveal",
+    "from": 21.24,
+    "to": 23.94,
+    "captions": false,
+    "broll": {
+     "src": "note",
+     "grade": "night",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "pre": "OLD NOTE…",
+    "slamAt": 1.48,
+    "color": "red",
+    "lines": [
+     {
+      "text": "955214",
+      "at": 1.48,
+      "color": "red",
+      "size": 170
+     },
+     {
+      "text": "SAFE CODE",
+      "at": 1.9,
+      "size": 90
+     }
+    ],
+    "ar": "وفي السطح ورقة قديمة فيها رمز خزنة"
+   },
+   {
+    "type": "cta",
+    "from": 23.94,
+    "to": 27.6,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE EASTER EGGS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.92,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 1.82,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.58,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 4.0,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.6,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.88,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 9.62,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.9,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.84,
+    "volume": 0.5
+   },
+   {
+    "src": "glitch.wav",
+    "at": 13.5,
+    "volume": 0.4
+   },
+   {
+    "src": "glitch.wav",
+    "at": 13.8,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.04,
+    "volume": 0.55
+   },
+   {
+    "src": "ufo.wav",
+    "at": 14.84,
+    "volume": 0.45
+   },
+   {
+    "src": "riser.wav",
+    "at": 16.4,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.16,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 18.4,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 21.18,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.72,
+    "volume": 0.6
+   },
+   {
+    "src": "tick.wav",
+    "at": 22.92,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.88,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.96,
+    "volume": 0.5
+   }
+  ]
+ }
+}

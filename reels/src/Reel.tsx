@@ -26,7 +26,7 @@ import {Chat} from './scenes/Chat';
 import {Compare, Headline, Heat, Radar, Saves} from './scenes/Manual2';
 import {Comic, Credits, Health, Mailbox, Radio} from './scenes/Manual3';
 import {Evidence, Receipt} from './scenes/Manual4';
-import {Elevator, Redacted, Sleep} from './scenes/Manual5';
+import {Elevator, Hallway, Redacted, Sleep} from './scenes/Manual5';
 import {Alt, Boost, Chain, Consoles, FgApp} from './scenes/Fps';
 import {Photos} from './scenes/Photos';
 import {Profile} from './scenes/Profile';
@@ -84,6 +84,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'redacted': return <Redacted s={s} />;
     case 'elevator': return <Elevator s={s} />;
     case 'sleep': return <Sleep s={s} />;
+    case 'hallway': return <Hallway s={s} />;
     case 'profile': return <Profile s={s} />;
     case 'loop': return <Loop s={s} />;
     case 'trunk': return <Trunk s={s} />;

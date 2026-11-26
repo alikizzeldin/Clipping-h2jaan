@@ -521,6 +521,22 @@ export type SleepScene = Base & {
   ar?: string;
 };
 
+// A hotel corridor in one-point perspective: the ceiling lights flicker and die, red symbols glow on
+// the walls, a whisper caption drifts in, and the far door swings open on white fog.
+export type HallwayScene = Base & {
+  type: 'hallway';
+  step: string;
+  label: string;
+  floor?: string; // a sign by the door, e.g. "TOP FLOOR"
+  darkAt: number;
+  symbolsAt: number;
+  whisperAt?: number;
+  doorAt: number;
+  fogAt?: number;
+  fogText?: string;
+  ar?: string;
+};
+
 export type LoopScene = Base & {
   type: 'loop';
   step: string;
@@ -601,7 +617,7 @@ export type Scene =
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

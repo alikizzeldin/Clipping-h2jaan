@@ -1543,5 +1543,77 @@
     "why_not": "analyst estimate only (Sensor Tower), no official figure"
    }
   ]
+ },
+ {
+  "date": "2026-11-26",
+  "wake_up": "04:23 UTC (m141–m142; only 2 ideas passed the gate; the 20:23 UTC wake-up of Nov 25 did not run)",
+  "ideas": [
+   {
+    "idea": "Silent Hill Easter egg: the abandoned Marbelle Hotel in south Crosstown (Vice City), near the Nine1Nine club; front door locked, enter by the back door; on the top floor the lights die, red symbols cover the walls and whispers play, then the roof door opens on a fog-covered city; an old note on the roof has a safe code (955214)",
+    "format": "EASTER EGG",
+    "demand": 9,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.8,
+    "chosen": "m141-silent-hill-hotel",
+    "sources": [
+     "https://www.videogameschronicle.com/guide/gta-6-marbelle-hotel-location-and-safe-code-how-to-find-the-silent-hill-easter-egg/",
+     "https://game8.co/games/GTA-6/archives/640138",
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/marbelle-hotel--silent-hill-easter-egg/",
+     "https://gamerant.com/gta-6-silent-hill-easter-egg-haunted-hotel-location/",
+     "https://beebom.com/gta-6-marbelle-hotel-safe-code/",
+     "https://holdtoreset.com/gta-6-marbelle-hotel-guide-silent-hill-easter-egg/",
+     "https://www.theclick.gg/gta-6-silent-hill-easter-egg/"
+    ]
+   },
+   {
+    "idea": "Manatee Motel: a Kingfishers gang hideout south of Hamlet with a tiger loose in the rooms; shoot the tiger first, then the gang backup; in the room next to the tiger's a gun case holds the Laird 350, a unique sniper you keep; then loot the cash, the safe and the drugs",
+    "format": "MONEY FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 8,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.6,
+    "chosen": "m142-tiger-motel",
+    "sources": [
+     "https://www.gtaboom.com/gta-6-early-money-motel-tiger-attack-614c",
+     "https://www.gta6heists.com/robberies/manatee-motel",
+     "https://gta6.house/library/locations/manatee-motel",
+     "https://thegameswiki.com/gta6/wiki/manatee-motel",
+     "https://games.gg/grand-theft-auto-vi/guides/how-to-rob-manatee-motel-rooms-grand-theft-auto-6/",
+     "https://insider-gaming.com/gta-6-early-game-locations-make-money/",
+     "https://bloxodes.com/wiki/gta-6/robberies"
+    ]
+   },
+   {
+    "idea": "Teenage Mutant Ninja Turtles storm drain",
+    "why_not": "taken by the main studio (ideas.json) since the last wake-up"
+   },
+   {
+    "idea": "Hyde Island Saw/Manhunt hunt",
+    "why_not": "same event as an idea in ideas.json"
+   },
+   {
+    "idea": "Plane crash sites in Grassrivers drop loot",
+    "why_not": "one source only"
+   },
+   {
+    "idea": "Kingfishers run 3 operations; 9 gangs and the Pest Control trophy",
+    "why_not": "partial lists from one guide; safe codes are random per run"
+   },
+   {
+    "idea": "Scarface chainsaw bathroom (apartment 3C)",
+    "why_not": "already in ideas.json"
+   },
+   {
+    "idea": "Fixed safe codes (Brian's Lockup 7700 and others)",
+    "why_not": "already in ideas.json (safe codes list)"
+   }
+  ]
  }
 ]

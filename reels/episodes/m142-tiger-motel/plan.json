@@ -1,0 +1,388 @@
+{
+ "manual": true,
+ "episode": 142,
+ "kind": "money",
+ "topic": "Manatee Motel: a Kingfishers gang hideout south of Hamlet with a tiger loose in the rooms; shoot the tiger first, then the gang backup; in the room next to the tiger's a gun case holds the Laird 350, a unique sniper you keep; then loot the cash, the safe and the drugs",
+ "title": {
+  "en": "A tiger guards free loot in GTA 6 🐅 (unique sniper inside)",
+  "ar": "نمر يحرس غنيمة مجانية في GTA 6 🐅"
+ },
+ "summary": "South of Hamlet, the Manatee Motel is a Kingfishers gang hideout with a tiger loose in the rooms. Bring a gun, take the tiger down first, then the gang that shows up. In the room next to the tiger's, a gun case holds the Laird 350, a unique sniper rifle you keep for good. Then grab the cash, the safe and the drugs.",
+ "summary_ar": "جنوب هاملت، موتيل ماناتي وكر لعصابة الكينغفيشرز وفيه نمر سايب في الغرف. خذ سلاح واقتل النمر أول، وبعدين العصابة اللي توصل. في الغرفة اللي جنب غرفة النمر، صندوق سلاح فيه قناصة Laird 350 فريدة تبقى لك للأبد. وبعدها خذ الكاش والخزنة والمخدرات.",
+ "keywords": [
+  "GTA6",
+  "GTA6Money",
+  "GTA6Tips",
+  "GTA6Weapons",
+  "GTAVI",
+  "Hamlet",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 8,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.6
+ },
+ "sources": [
+  "https://www.gtaboom.com/gta-6-early-money-motel-tiger-attack-614c",
+  "https://www.gta6heists.com/robberies/manatee-motel",
+  "https://gta6.house/library/locations/manatee-motel",
+  "https://thegameswiki.com/gta6/wiki/manatee-motel",
+  "https://games.gg/grand-theft-auto-vi/guides/how-to-rob-manatee-motel-rooms-grand-theft-auto-6/",
+  "https://insider-gaming.com/gta-6-early-game-locations-make-money/",
+  "https://bloxodes.com/wiki/gta-6/robberies"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 3.0,
+     "dur": 3.2,
+     "x": 700
+    }
+   ]
+  },
+  "map": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 4.55,
+     "x": 1000
+    }
+   ]
+  },
+  "plan": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 8.0,
+     "dur": 6.3,
+     "x": 700
+    }
+   ]
+  },
+  "case": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 5.15,
+     "x": 1100
+    }
+   ]
+  },
+  "loot": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 16.0,
+     "dur": 5.75,
+     "x": 800
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 14.0,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 118,
+  "seed": 142,
+  "drop": 3.18,
+  "break": 13.96,
+  "back": 17.2,
+  "outro": 24.78
+ },
+ "reel": {
+  "series": "MONEY FILE",
+  "duration": 28.5,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.18,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.25,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "A TIGER GUARDS",
+    "title": [
+     "FREE",
+     "LOOT"
+    ],
+    "color": "orange",
+    "tag": "…bring a gun.",
+    "tagAt": 1.9,
+    "ar": "نمر يحرس غنيمة مجانية في GTA 6"
+   },
+   {
+    "type": "location",
+    "from": 3.18,
+    "to": 7.7,
+    "style": "radar",
+    "broll": {
+     "src": "map",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 6
+    },
+    "step": "01",
+    "label": "THE HIDEOUT",
+    "place": "HAMLET",
+    "target": "MANATEE MOTEL",
+    "direction": "SOUTH",
+    "region": "KINGFISHERS GANG HIDEOUT",
+    "ar": "جنوب هاملت… موتيل ماناتي، وكر عصابة"
+   },
+   {
+    "type": "list",
+    "from": 7.7,
+    "to": 13.96,
+    "broll": {
+     "src": "plan",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "TIGER",
+    "label": "THE PLAN",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "TIGER LOOSE",
+      "status": "IN THE ROOMS",
+      "ok": false,
+      "alert": true,
+      "at": 0.72,
+      "icon": "alert"
+     },
+     {
+      "text": "BRING A GUN",
+      "status": "SHOOT FIRST",
+      "ok": true,
+      "at": 2.7,
+      "icon": "gun"
+     },
+     {
+      "text": "THEN THE GANG",
+      "status": "BACKUP",
+      "ok": true,
+      "at": 4.86,
+      "icon": "siren"
+     }
+    ],
+    "ar": "النمر سايب في الغرف… خذ سلاح واقتله أول، وبعدين العصابة"
+   },
+   {
+    "type": "reward",
+    "from": 13.96,
+    "to": 19.08,
+    "broll": {
+     "src": "case",
+     "grade": "night",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "later": "NEXT ROOM…",
+    "rewardAt": 3.24,
+    "label": "UNIQUE SNIPER",
+    "name": "Laird 350",
+    "tier": "GUN CASE · YOURS FOR GOOD",
+    "ar": "في الغرفة اللي جنب النمر: قناصة فريدة"
+   },
+   {
+    "type": "list",
+    "from": 19.08,
+    "to": 24.78,
+    "broll": {
+     "src": "loot",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "LOOT",
+    "label": "THEN GRAB",
+    "cardAt": 0.1,
+    "arAt": 0.5,
+    "items": [
+     {
+      "text": "LAIRD 350",
+      "status": "KEEP FOR GOOD",
+      "ok": true,
+      "at": 1.74,
+      "icon": "gun"
+     },
+     {
+      "text": "CASH + SAFE",
+      "status": "GRAB",
+      "ok": true,
+      "at": 3.42,
+      "icon": "cash"
+     },
+     {
+      "text": "THE DRUGS",
+      "status": "SELL",
+      "ok": true,
+      "at": 4.74,
+      "icon": "flask"
+     }
+    ],
+    "ar": "القناصة تبقى لك… وخذ الكاش والخزنة والمخدرات"
+   },
+   {
+    "type": "cta",
+    "from": 24.78,
+    "to": 28.5,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE MONEY TIPS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 0.98,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.28,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.12,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 3.5,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.6,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.64,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 8.42,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.4,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 12.56,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 13.9,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.2,
+    "volume": 0.3
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.2,
+    "volume": 0.6
+   },
+   {
+    "src": "trophy.wav",
+    "at": 17.24,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 19.02,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 20.82,
+    "volume": 0.45
+   },
+   {
+    "src": "cash.wav",
+    "at": 22.5,
+    "volume": 0.55
+   },
+   {
+    "src": "ping.wav",
+    "at": 23.82,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.72,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.8,
+    "volume": 0.5
+   }
+  ]
+ }
+}

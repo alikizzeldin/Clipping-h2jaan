@@ -4,7 +4,7 @@ import {Background} from '../ui/Background';
 import {clamp, ease, pop, sec} from '../ui/motion';
 import {Arabic, Flash, SceneIn, StepLabel} from '../ui/Pieces';
 import {C, F, accent} from '../theme';
-import {ElevatorScene, RedactedScene, SleepScene} from '../types';
+import {ElevatorScene, HallwayScene, RedactedScene, SleepScene} from '../types';
 
 const INK = '#16121a';
 
@@ -325,6 +325,136 @@ export const Sleep: React.FC<{s: SleepScene}> = ({s}) => {
         </>
       ) : null}
       <Arabic text={s.ar} delay={16} top={MENU_TOP + 70 + s.options.length * ROW + 50} size={52} />
+    </AbsoluteFill>
+  );
+};
+
+// ------------------------------------------------------------------ hallway
+const Sigil: React.FC<{size: number; glow: number}> = ({size, glow}) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" style={{overflow: 'visible', filter: `drop-shadow(0 0 ${10 * glow}px #ff1a2e)`}}>
+    <circle cx="50" cy="50" r="44" fill="none" stroke="#c8102e" strokeWidth={5} />
+    <circle cx="50" cy="50" r="30" fill="none" stroke="#c8102e" strokeWidth={3} />
+    <path d="M50 8 L86 72 L14 72 Z" fill="none" stroke="#c8102e" strokeWidth={4} />
+    <path d="M50 20 V92 M18 40 H82" stroke="#c8102e" strokeWidth={3} />
+    <circle cx="50" cy="50" r="6" fill="#c8102e" />
+  </svg>
+);
+
+// A corridor in one-point perspective: lights flicker and die, red symbols glow, a whisper caption,
+// then the far door swings open on white fog.
+export const Hallway: React.FC<{s: HallwayScene}> = ({s}) => {
+  const frame = useCurrentFrame();
+  const enter = pop(frame, 2, 12, 0.6, 150);
+  const darkAt = sec(s.darkAt);
+  const symbolsAt = sec(s.symbolsAt);
+  const whisperAt = s.whisperAt !== undefined ? sec(s.whisperAt) : 99999;
+  const doorAt = sec(s.doorAt);
+  const fogAt = s.fogAt !== undefined ? sec(s.fogAt) : doorAt + 20;
+  // lights: steady, a flicker run, then off
+  const flicker = frame >= darkAt - 14 && frame < darkAt ? ((frame * 7) % 5 < 2 ? 0.25 : 1) : 1;
+  const lit = frame < darkAt ? flicker : 0;
+  const dark = frame < darkAt ? (1 - lit) * 0.5 : 0.78;
+  const sig = ease(frame, symbolsAt, symbolsAt + 16);
+  const pulse = 0.7 + 0.3 * Math.sin(frame / 5);
+  const open = ease(frame, doorAt, doorAt + 16);
+  const fog = ease(frame, doorAt + 8, doorAt + 46);
+  const fogTextIn = ease(frame, fogAt, fogAt + 14);
+  const W = 940;
+  const H = 860;
+  const TOP = 380;
+  const LEFT = 70;
+  const far = {l: 360, t: 260, r: 580, b: 600};
+  const door = {l: 420, t: 390, w: 100, h: 210};
+  const lights = [0.18, 0.5, 0.78];
+  return (
+    <AbsoluteFill>
+      <SceneIn><Background broll={s.broll} /></SceneIn>
+      <AbsoluteFill style={{background: 'rgba(4,3,3,0.85)'}} />
+      <StepLabel step={s.step} label={s.label} />
+      <div style={{position: 'absolute', top: TOP, left: LEFT, width: W, height: H, overflow: 'hidden', borderRadius: 18,
+        opacity: Math.min(1, enter * 1.5), transform: `scale(${0.95 + 0.05 * enter})`, boxShadow: '0 30px 80px rgba(0,0,0,0.7)'}}>
+        <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{position: 'absolute', inset: 0}}>
+          <defs>
+            <linearGradient id="hw-wall-l" x1="0" x2="1"><stop offset="0%" stopColor="#5b4d40" /><stop offset="100%" stopColor="#2e2620" /></linearGradient>
+            <linearGradient id="hw-wall-r" x1="1" x2="0"><stop offset="0%" stopColor="#5b4d40" /><stop offset="100%" stopColor="#2e2620" /></linearGradient>
+            <linearGradient id="hw-floor" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stopColor="#4a2f26" /><stop offset="100%" stopColor="#1e1410" /></linearGradient>
+          </defs>
+          <polygon points={`0,0 ${W},0 ${far.r},${far.t} ${far.l},${far.t}`} fill="#2a2420" />
+          <polygon points={`0,${H} ${W},${H} ${far.r},${far.b} ${far.l},${far.b}`} fill="url(#hw-floor)" />
+          {[0.2, 0.4, 0.6, 0.8].map((t, i) => (
+            <line key={i} x1={far.l + (0 - far.l) * t} y1={far.b + (H - far.b) * t} x2={far.r + (W - far.r) * t} y2={far.b + (H - far.b) * t}
+              stroke="rgba(0,0,0,0.35)" strokeWidth={3} />
+          ))}
+          <polygon points={`0,0 ${far.l},${far.t} ${far.l},${far.b} 0,${H}`} fill="url(#hw-wall-l)" />
+          <polygon points={`${W},0 ${far.r},${far.t} ${far.r},${far.b} ${W},${H}`} fill="url(#hw-wall-r)" />
+          {/* side doors */}
+          {[0.25, 0.6].map((t, i) => {
+            const x = far.l * t;
+            const w = 70 * (1 - t) + 20;
+            const top = far.t * t + 120 * (1 - t);
+            const bot = far.b + (H - far.b) * (1 - t) - 10;
+            return (
+              <g key={i}>
+                <rect x={x + 20} y={top + 60} width={w} height={bot - top - 60} fill="#3b2418" opacity={0.8} />
+                <rect x={W - x - 20 - w} y={top + 60} width={w} height={bot - top - 60} fill="#3b2418" opacity={0.8} />
+              </g>
+            );
+          })}
+          <rect x={far.l} y={far.t} width={far.r - far.l} height={far.b - far.t} fill="#3a3028" />
+          {/* light behind the far door */}
+          <rect x={door.l} y={door.t} width={door.w} height={door.h} fill="#f4f2ee" />
+          {/* the door, hinged on the left */}
+          <rect x={door.l} y={door.t} width={door.w * (1 - 0.88 * open)} height={door.h} fill="#4a2b1c" stroke="#1a0e08" strokeWidth={3} />
+          {/* ceiling lights */}
+          {lights.map((t, i) => {
+            const y = far.t * t;
+            const w = 300 * (1 - t) + 60;
+            return (
+              <g key={i}>
+                <rect x={W / 2 - w / 2} y={y + 8} width={w} height={12 * (1 - t) + 6} rx={4} fill={lit > 0.5 ? '#fff6d6' : '#3a3630'} />
+                {lit > 0.5 ? <ellipse cx={W / 2} cy={y + 60} rx={w * 0.9} ry={90 * (1 - t) + 30} fill="rgba(255,240,200,0.12)" /> : null}
+              </g>
+            );
+          })}
+        </svg>
+        <AbsoluteFill style={{background: '#000', opacity: dark}} />
+        {/* symbols glow in the dark */}
+        {frame >= symbolsAt ? (
+          <>
+            {[[60, 250, 150], [230, 380, 90], [W - 210, 250, 150], [W - 320, 380, 90], [W / 2 - 40, 170, 80]].map(([x, y, sz], i) => (
+              <div key={i} style={{position: 'absolute', left: x, top: y, opacity: sig * pulse, transform: `scale(${0.8 + 0.2 * sig}) rotate(${i * 17}deg)`}}>
+                <Sigil size={sz} glow={pulse} />
+              </div>
+            ))}
+          </>
+        ) : null}
+        {s.floor ? (
+          <div style={{position: 'absolute', left: far.r + 14, top: far.t + 40, fontFamily: F.mono, fontWeight: 800, fontSize: 22, color: '#d8cfc0',
+            background: 'rgba(0,0,0,0.6)', padding: '4px 10px', letterSpacing: 3, opacity: frame < darkAt ? 1 : 0.4}}>{s.floor}</div>
+        ) : null}
+        {/* the fog spilling out of the door */}
+        {fog > 0 ? (
+          <AbsoluteFill style={{opacity: fog,
+            background: `radial-gradient(circle at ${(door.l + door.w / 2) / W * 100}% ${(door.t + door.h / 2) / H * 100}%, rgba(245,245,240,0.98) ${10 + fog * 30}%, rgba(220,220,215,0.9) ${30 + fog * 40}%, rgba(200,200,195,${0.5 + fog * 0.4}) 100%)`}}>
+            {[0, 1, 2, 3].map((k) => (
+              <div key={k} style={{position: 'absolute', left: ((frame * (0.6 + k * 0.2) + k * 260) % (W + 400)) - 300, top: 120 + k * 170, width: 420, height: 160,
+                borderRadius: 80, background: 'rgba(255,255,255,0.35)', filter: 'blur(18px)'}} />
+            ))}
+          </AbsoluteFill>
+        ) : null}
+        {s.fogText && frame >= fogAt ? (
+          <div style={{position: 'absolute', left: 0, right: 0, top: H / 2 - 70, textAlign: 'center', fontFamily: F.display, fontSize: 120,
+            color: 'rgba(60,58,56,0.85)', letterSpacing: 4, opacity: fogTextIn, transform: `scale(${0.9 + 0.1 * fogTextIn})`}}>{s.fogText}</div>
+        ) : null}
+      </div>
+      {frame >= whisperAt && frame < doorAt ? (
+        <div style={{position: 'absolute', top: TOP + H - 90, left: 0, right: 0, textAlign: 'center', fontFamily: F.body, fontStyle: 'italic',
+          fontSize: 38, color: 'rgba(230,220,210,0.85)', letterSpacing: 3, opacity: ease(frame, whisperAt, whisperAt + 10) * (0.7 + 0.3 * Math.sin(frame / 3))}}>
+          [ whispers ]
+        </div>
+      ) : null}
+      {frame >= darkAt && frame < darkAt + 5 ? <Flash at={darkAt} length={4} color="#fff" strength={0.2} /> : null}
+      <Arabic text={s.ar} delay={16} top={TOP + H + 40} size={52} />
     </AbsoluteFill>
   );
 };
