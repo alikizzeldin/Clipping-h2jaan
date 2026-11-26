@@ -102,7 +102,40 @@ const Tracking: React.FC<{f: number}> = ({f}) => {
   );
 };
 
-const CUTS: Record<Exclude<CutStyle, 'none'>, React.FC<{f: number}>> = {shutter: Shutter, whip: Whip, glitch: Glitch, iris: Iris, ink: Ink, flash: Flash, tracking: Tracking};
+
+// A newspaper page turns over the cut: a sheet of newsprint (columns, a headline, a photo box)
+// sweeps in from the right with a curled, shadowed edge, covers the frame at the cut, and leaves left.
+const Pageturn: React.FC<{f: number}> = ({f}) => {
+  const p = interpolate(f, [-LEAD, 0, 9], [0, 0.5, 1], clamp);
+  if (p <= 0 || p >= 1) return null;
+  const x = interpolate(p, [0, 0.5, 1], [1120, -230, -1700]);
+  const lines = Array.from({length: 26});
+  return (
+    <AbsoluteFill style={{overflow: 'hidden'}}>
+      <div style={{position: 'absolute', top: -60, bottom: -60, left: x, width: 1540, transform: 'rotate(-2deg)', background: '#ece4cf',
+        boxShadow: '-40px 0 60px rgba(0,0,0,0.55)'}}>
+        {/* the curl: a fold highlight and a shadow along the leading edge */}
+        <div style={{position: 'absolute', top: 0, bottom: 0, left: 0, width: 120, background: 'linear-gradient(90deg, #fffaf0 0%, #d9cfb6 45%, rgba(0,0,0,0.25) 100%)'}} />
+        <div style={{position: 'absolute', top: 300, left: 190, width: 1100, height: 120, background: '#141210', display: 'flex', alignItems: 'center',
+          paddingLeft: 40, fontFamily: "'Playfair Display Black', serif", fontSize: 76, color: '#ece4cf', letterSpacing: 2}}>THE LEONIDA HERALD</div>
+        <div style={{position: 'absolute', top: 442, left: 190, width: 760, height: 46, background: '#141210', opacity: 0.85}} />
+        <div style={{position: 'absolute', top: 540, left: 190, width: 520, height: 420, background: '#8f8775'}} />
+        {[0, 1].map((c) =>
+          lines.map((_, i) => (
+            <div key={`${c}-${i}`} style={{position: 'absolute', top: 540 + i * 46, left: 750 + c * 290, width: 250 - (i % 5 === 4 ? 90 : 0), height: 14,
+              background: '#5f584a', opacity: 0.55}} />
+          )),
+        )}
+        {lines.slice(0, 20).map((_, i) => (
+          <div key={`b${i}`} style={{position: 'absolute', top: 1010 + i * 46, left: 190, width: 520 - (i % 4 === 3 ? 140 : 0), height: 14, background: '#5f584a', opacity: 0.55}} />
+        ))}
+        <div style={{position: 'absolute', top: 1960, left: 190, width: 1100, height: 10, background: C.red}} />
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const CUTS: Record<Exclude<CutStyle, 'none'>, React.FC<{f: number}>> = {shutter: Shutter, whip: Whip, glitch: Glitch, iris: Iris, ink: Ink, flash: Flash, tracking: Tracking, pageturn: Pageturn};
 
 export const CutFx: React.FC<{kind: CutStyle}> = ({kind}) => {
   const frame = useCurrentFrame();

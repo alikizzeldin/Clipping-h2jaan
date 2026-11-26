@@ -1,5 +1,5 @@
 import React from 'react';
-import {interpolate} from 'remotion';
+import {interpolate, random} from 'remotion';
 import {C, F} from '../../theme';
 import {Word} from '../../types';
 import {clamp} from '../../ui/motion';
@@ -157,5 +157,41 @@ export const StackCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => {
         );
       })}
     </div>
+  );
+};
+
+// Ransom-note captions: every letter is cut from a different page (its own font, paper and tilt),
+// pasted in a row. The word being said is pasted on the accent paper and lifts off the page.
+const RANSOM_FONTS = ["'Oswald Bold'", "'Playfair Display Black'", 'Anton', "'Archivo Black'", "'Bebas Neue'", "'Special Elite'", "'Black Ops One'", "'Big Shoulders Black'"];
+const RANSOM_PAPERS: [string, string][] = [['#f4efe2', '#111'], ['#111', '#f4efe2'], ['#ffe14d', '#111'], ['#e9e2cf', '#b3001b'], ['#ffffff', '#111'], ['#d8d2c2', '#111']];
+
+export const RansomCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => {
+  const size = look().captions.size ?? 72;
+  const accent = accentOf();
+  return (
+    <Row y={y} enter={enter} gap="18px 44px">
+      {words.map((w, i) => {
+        const on = isActive(w, t);
+        const key = `${w.start.toFixed(2)}`;
+        const letters = clean(w).toUpperCase().split('');
+        return (
+          <span key={i} style={{display: 'inline-flex', alignItems: 'center', gap: 3,
+            transform: `translateY(${on ? -8 : 0}px) scale(${on ? 1.1 : 1})`, filter: on ? 'drop-shadow(0 12px 0 rgba(0,0,0,0.55))' : 'drop-shadow(0 6px 0 rgba(0,0,0,0.5))'}}>
+            {letters.map((ch, j) => {
+              const r = (n: string) => random(`rn${key}-${j}-${n}`);
+              const [paper, ink] = on && j % 2 === 0 ? [accent, look().ink] : RANSOM_PAPERS[Math.floor(r('p') * RANSOM_PAPERS.length)];
+              const font = RANSOM_FONTS[Math.floor(r('f') * RANSOM_FONTS.length)];
+              return (
+                <span key={j} style={{display: 'inline-block', fontFamily: font, fontSize: size * (0.86 + r('s') * 0.3), lineHeight: 1,
+                  padding: '6px 6px 2px', background: paper, color: ink, transform: `rotate(${(r('r') - 0.5) * 14}deg) translateY(${(r('y') - 0.5) * 10}px)`,
+                  clipPath: `polygon(${r('a') * 6}% 0, 100% ${r('b') * 8}%, ${100 - r('c') * 6}% 100%, 0 ${100 - r('d') * 8}%)`}}>
+                  {ch === ' ' ? '\u00a0' : ch}
+                </span>
+              );
+            })}
+          </span>
+        );
+      })}
+    </Row>
   );
 };

@@ -26,10 +26,19 @@
     "captions: cc (1980s closed captions: white mono on black bars, accent word with a blinking block cursor)",
     "cuts: tracking (a VHS tracking roll: static band rolls up the frame with a head-switch bar)"
    ]
+  },
+  {
+   "date": "2026-11-26",
+   "id": "leonida-herald",
+   "name": "Leonida Herald",
+   "mood": "A trashy Florida tabloid's front page: gameplay printed as two-tone newsprint, ransom-note captions cut letter by letter from other pages, red ink, a newspaper page turning over every cut.",
+   "new_code": [
+    "captions: ransom (each letter cut from a different page: its own font, paper colour, tilt and torn edge; the spoken word lifts off on the accent paper)",
+    "cuts: pageturn (a newsprint page with a masthead, headline bars, a photo box and columns sweeps in with a curled edge, covers the cut and leaves left)"
+   ]
   }
  ],
  "ready": [
-  "leonida-herald",
   "evidence-locker"
  ]
 }
