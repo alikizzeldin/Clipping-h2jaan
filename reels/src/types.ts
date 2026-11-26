@@ -611,13 +611,31 @@ export type WinchScene = Base & {
   ar?: string;
 };
 
+// A film poster from the game world, redrawn (explosion sky, soldier, title, billing block). On
+// `zoomAt` the camera zooms into the billing block; each name lifts off its grey bar under a
+// highlighter at its `at`. Every other billing line stays an unreadable bar (no invented names).
+export type PosterScene = Base & {
+  type: 'poster';
+  step: string;
+  label: string;
+  title: string; // the film's title on the poster
+  subtitle?: string; // a second title line in red
+  credit: string; // the readable credit, e.g. "PRODUCED BY"
+  names: {text: string; at: number}[]; // seconds into the scene
+  notes?: {text: string; at: number}[]; // sticky notes pinned over the poster (they leave on the zoom)
+  zoomAt?: number;
+  zoomTo?: number; // zoom scale (default 1.85)
+  redraw?: string; // the small honesty chip (default "REDRAWN")
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
