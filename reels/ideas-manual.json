@@ -1615,5 +1615,76 @@
     "why_not": "already in ideas.json (safe codes list)"
    }
   ]
+ },
+ {
+  "date": "2026-11-26",
+  "wake_up": "10:23 UTC (m143; only 1 idea passed the gate)",
+  "ideas": [
+   {
+    "idea": "Rodgers Ranch shooting range (northeast of Port Gellhorn, $5 waiver): six courses with four levels each; gold on all 24 makes the counter sell the Nightmare KZ-59 unique assault rifle, and also gives a permanent Focus increase and a tattoo design",
+    "format": "REWARD FILE",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 4,
+    "confidence": 8,
+    "score": 7.3,
+    "chosen": "m143-gold-rifle",
+    "sources": [
+     "https://www.dexerto.com/wikis/gta-6/weapons/assault-rifles/nightmare-kz-59/",
+     "https://www.gtaboss.gg/gta-6/guides/gta-6-shooting-ranges",
+     "https://game8.co/games/GTA-6/archives/640404",
+     "https://gta.tech4gamers.com/gta-6/properties/rodgers-ranch-and-shooting-range/",
+     "https://gtaviceguides.com/guides/gta-6-advanced-guide/",
+     "https://gta6pocket.com/en/shooting-range/",
+     "https://guided.news/en/guides/gta-6-shooting-ranges-42-gold-medals/"
+    ]
+   },
+   {
+    "idea": "Kyle Busch tribute: a No. 18 stock car in the Gellhorn Raceway paddock",
+    "format": "EASTER EGG",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 9,
+    "visual": 4,
+    "confidence": 6,
+    "score": 6.55,
+    "why_not": "fan reading of a car number; Rockstar unconfirmed"
+   },
+   {
+    "idea": "Leonida is about twice the size of GTA 5's map",
+    "format": "NEWS",
+    "demand": 8,
+    "payoff": 6,
+    "retention": 7,
+    "fresh": 5,
+    "visual": 4,
+    "confidence": 8,
+    "score": 6.7,
+    "why_not": "known since before launch; 6.7"
+   },
+   {
+    "idea": "Turnt Nipper .38 on a crashed paratrike in a tree at Bobcat Bight",
+    "why_not": "one source only"
+   },
+   {
+    "idea": "Satanic ritual circle and ghosts (Bloody Disgusting)",
+    "why_not": "no location given; a ghost idea is already in ideas.json"
+   },
+   {
+    "idea": "Kill or spare Arnold",
+    "why_not": "overlaps episode 017 and was rejected before"
+   },
+   {
+    "idea": "Early-game mistakes list (saves, cash, stolen cars)",
+    "why_not": "each point already covered by earlier reels"
+   },
+   {
+    "idea": "A South Park reference (Reddit)",
+    "why_not": "already in ideas.json"
+   }
+  ]
  }
 ]

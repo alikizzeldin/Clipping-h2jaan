@@ -537,6 +537,23 @@ export type HallwayScene = Base & {
   ar?: string;
 };
 
+// A medal board: rows x columns of empty slots fill with gold medals one by one, a counter climbs,
+// and an UNLOCKED-style banner lands once the board is full.
+export type MedalsScene = Base & {
+  type: 'medals';
+  step: string;
+  label: string;
+  rows: string[];
+  cols: string[];
+  rowsAt?: number;
+  colsAt?: number;
+  fillFrom: number;
+  fillTo: number;
+  counter?: string; // the word after the count, e.g. "GOLD"
+  banner?: {text: string; at: number};
+  ar?: string;
+};
+
 export type LoopScene = Base & {
   type: 'loop';
   step: string;
@@ -635,7 +652,7 @@ export type Scene =
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

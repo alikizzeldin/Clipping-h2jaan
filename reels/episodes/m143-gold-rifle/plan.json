@@ -1,0 +1,392 @@
+{
+ "manual": true,
+ "episode": 143,
+ "kind": "reward",
+ "topic": "Rodgers Ranch shooting range (northeast of Port Gellhorn, $5 waiver): six courses with four levels each; gold on all 24 makes the counter sell the Nightmare KZ-59 unique assault rifle, and also gives a permanent Focus increase and a tattoo design",
+ "title": {
+  "en": "This rifle stays locked in GTA 6 until you're perfect 🎯 (Nightmare KZ-59)",
+  "ar": "رشاش مقفل في GTA 6 لين تصير محترف 🎯"
+ },
+ "summary": "At Rodgers Ranch, northeast of Port Gellhorn, pay the $5 waiver: six shooting courses, each with four levels. Get gold on all 24 and the counter starts selling the Nightmare KZ-59, a unique assault rifle. You also get a permanent Focus boost and a new tattoo design.",
+ "summary_ar": "في رودجرز رانش شمال شرق بورت جيلهورن، ادفع رسوم ٥ دولار: ست ساحات رماية، كل وحدة فيها أربع مستويات. خذ ذهبية في الـ٢٤ كلها، ويبدأ الكاونتر يبيع لك Nightmare KZ-59، رشاش فريد. وكمان تاخذ زيادة دائمة في Focus وتصميم وشم جديد.",
+ "keywords": [
+  "GTA6",
+  "GTA6Weapons",
+  "GTA6Tips",
+  "GTA6Secrets",
+  "GTAVI",
+  "ShootingRange",
+  "Leonida",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 7,
+  "visual": 4,
+  "confidence": 8,
+  "score": 7.3
+ },
+ "sources": [
+  "https://www.dexerto.com/wikis/gta-6/weapons/assault-rifles/nightmare-kz-59/",
+  "https://www.gtaboss.gg/gta-6/guides/gta-6-shooting-ranges",
+  "https://game8.co/games/GTA-6/archives/640404",
+  "https://gta.tech4gamers.com/gta-6/properties/rodgers-ranch-and-shooting-range/",
+  "https://gtaviceguides.com/guides/gta-6-advanced-guide/",
+  "https://gta6pocket.com/en/shooting-range/",
+  "https://guided.news/en/guides/gta-6-shooting-ranges-42-gold-medals/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/da/clip_01M7X21XEN4AG89S03FJ21NV01/playlist.m3u8",
+     "channel": "rdjavi",
+     "start": 5.0,
+     "dur": 4.35,
+     "x": 800
+    }
+   ]
+  },
+  "map": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 112.0,
+     "dur": 5.4,
+     "x": 1000
+    }
+   ]
+  },
+  "board": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 7.0,
+     "dur": 6.0,
+     "x": 1100
+    }
+   ]
+  },
+  "rifle": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 141.0,
+     "dur": 4.9,
+     "x": 1000
+    }
+   ]
+  },
+  "bonus": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/95/clip_01M7W0NSVHX5DC0WQ4QW5Y56J7/playlist.m3u8",
+     "channel": "erlizzy",
+     "start": 7.0,
+     "dur": 4.3,
+     "x": 700
+    }
+   ]
+  },
+  "plane": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/ee/clip_01M7WYYTNRS4Z48JXTFXT6STA7/playlist.m3u8",
+     "channel": "paulinholokobr",
+     "start": 8.0,
+     "dur": 3.7,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "music": {
+  "style": "money",
+  "bpm": 120,
+  "seed": 143,
+  "drop": 4.3,
+  "break": 14.6,
+  "back": 16.6,
+  "outro": 24.7
+ },
+ "reel": {
+  "series": "REWARD FILE",
+  "duration": 28.4,
+  "musicVolume": 0.42,
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.3,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.3,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "THIS RIFLE STAYS",
+    "title": [
+     "LOCKED"
+    ],
+    "color": "gold",
+    "tag": "…until you're perfect.",
+    "tagAt": 2.54,
+    "ar": "هالرشاش مقفل… لين تصير محترف"
+   },
+   {
+    "type": "location",
+    "from": 4.3,
+    "to": 9.64,
+    "style": "gps",
+    "broll": {
+     "src": "map",
+     "grade": "warm",
+     "dim": 0.4,
+     "blur": 6
+    },
+    "step": "01",
+    "label": "THE RANGE",
+    "place": "PORT GELLHORN",
+    "target": "RODGERS RANCH",
+    "direction": "NE",
+    "region": "SHOOTING RANGE · $5 WAIVER",
+    "ar": "روح رودجرز رانش شمال شرق بورت جيلهورن… وادفع ٥ دولار"
+   },
+   {
+    "type": "medals",
+    "from": 9.64,
+    "to": 15.6,
+    "broll": {
+     "src": "board",
+     "grade": "night",
+     "dim": 0.5,
+     "blur": 6
+    },
+    "step": "02",
+    "label": "GET ALL THE GOLDS",
+    "rows": [
+     "COURSE 1",
+     "COURSE 2",
+     "COURSE 3",
+     "COURSE 4",
+     "COURSE 5",
+     "COURSE 6"
+    ],
+    "cols": [
+     "BEGINNER",
+     "INTERMED.",
+     "ADVANCED",
+     "MASTER"
+    ],
+    "rowsAt": 0.46,
+    "colsAt": 2.14,
+    "fillFrom": 3.34,
+    "fillTo": 4.4,
+    "counter": "GOLD",
+    "banner": {
+     "text": "UNLOCKED",
+     "at": 4.9
+    },
+    "ar": "ست ساحات × أربع مستويات… خذ الذهبية في الـ٢٤ كلها"
+   },
+   {
+    "type": "reward",
+    "from": 15.6,
+    "to": 20.46,
+    "broll": {
+     "src": "rifle",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "later": "AT THE COUNTER…",
+    "rewardAt": 1.0,
+    "label": "UNIQUE ASSAULT RIFLE",
+    "name": "Nightmare KZ-59",
+    "tier": "RODGERS RANCH · LOCKED UNTIL 24 GOLDS",
+    "ar": "والكاونتر يبدأ يبيع لك رشاش فريد"
+   },
+   {
+    "type": "list",
+    "from": 20.46,
+    "to": 24.7,
+    "broll": {
+     "src": "bonus",
+     "grade": "warm",
+     "dim": 0.45,
+     "blur": 4
+    },
+    "chip": "BONUS",
+    "label": "ALSO UNLOCKED",
+    "cardAt": 0.1,
+    "arAt": 0.4,
+    "items": [
+     {
+      "text": "FOCUS",
+      "status": "PERMANENT BOOST",
+      "ok": true,
+      "at": 1.1,
+      "icon": "eye"
+     },
+     {
+      "text": "TATTOO DESIGN",
+      "status": "NEW",
+      "ok": true,
+      "at": 2.88,
+      "icon": "trophy"
+     }
+    ],
+    "ar": "وكمان: زيادة دائمة في الفوكس وتصميم وشم جديد"
+   },
+   {
+    "type": "cta",
+    "from": 24.7,
+    "to": 28.4,
+    "captions": false,
+    "broll": {
+     "src": "plane",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "MORE SECRETS SOON"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 1.0,
+    "volume": 0.45
+   },
+   {
+    "src": "glitch.wav",
+    "at": 2.52,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.24,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 4.7,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.4,
+    "volume": 0.45
+   },
+   {
+    "src": "cash.wav",
+    "at": 8.14,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.58,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 10.1,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.78,
+    "volume": 0.35
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.0,
+    "volume": 0.35
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.3,
+    "volume": 0.35
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.6,
+    "volume": 0.35
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.9,
+    "volume": 0.35
+   },
+   {
+    "src": "trophy.wav",
+    "at": 14.54,
+    "volume": 0.6
+   },
+   {
+    "src": "impact.wav",
+    "at": 14.56,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.54,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 16.6,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.4,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 21.56,
+    "volume": 0.45
+   },
+   {
+    "src": "ping.wav",
+    "at": 23.34,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 24.64,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.72,
+    "volume": 0.5
+   }
+  ]
+ }
+}

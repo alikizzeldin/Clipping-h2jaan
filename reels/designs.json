@@ -3,6 +3,22 @@
  "entries": [
   {
    "date": "2026-11-26",
+   "episode": "m143-gold-rifle",
+   "scene": "medals",
+   "variant": "medal board + counter + banner",
+   "new": true,
+   "note": "rows x columns of dashed slots fill with gold medals one by one, a big counter climbs to 24/24, an UNLOCKED banner lands"
+  },
+  {
+   "date": "2026-11-26",
+   "episode": "m143-gold-rifle",
+   "scene": "location",
+   "variant": "gps",
+   "new": false,
+   "note": "last location episodes used radar (m142) and hud (m141)"
+  },
+  {
+   "date": "2026-11-26",
    "episode": "024-michael-jimmy",
    "scene": "poster",
    "variant": "redrawn film poster + zoom into the billing block + highlighter names",

@@ -4,7 +4,7 @@ import {Background} from '../ui/Background';
 import {clamp, ease, pop, sec} from '../ui/motion';
 import {Arabic, Flash, SceneIn, StepLabel} from '../ui/Pieces';
 import {C, F, accent} from '../theme';
-import {ElevatorScene, HallwayScene, RedactedScene, SleepScene} from '../types';
+import {ElevatorScene, HallwayScene, MedalsScene, RedactedScene, SleepScene} from '../types';
 
 const INK = '#16121a';
 
@@ -455,6 +455,87 @@ export const Hallway: React.FC<{s: HallwayScene}> = ({s}) => {
       ) : null}
       {frame >= darkAt && frame < darkAt + 5 ? <Flash at={darkAt} length={4} color="#fff" strength={0.2} /> : null}
       <Arabic text={s.ar} delay={16} top={TOP + H + 40} size={52} />
+    </AbsoluteFill>
+  );
+};
+
+// ------------------------------------------------------------------ medals
+const Medal: React.FC<{size: number; on: number}> = ({size, on}) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" style={{overflow: 'visible'}}>
+    {on > 0 ? (
+      <g transform={`scale(${0.6 + 0.4 * on}) translate(${(1 - (0.6 + 0.4 * on)) * 50 / (0.6 + 0.4 * on)} ${(1 - (0.6 + 0.4 * on)) * 50 / (0.6 + 0.4 * on)})`}>
+        <path d="M30 4 L44 40 L56 40 L70 4 Z" fill={C.red} />
+        <circle cx="50" cy="62" r="32" fill="#ffc23a" stroke="#8a5a00" strokeWidth={5} />
+        <circle cx="50" cy="62" r="22" fill="none" stroke="#fff2b0" strokeWidth={3} opacity={0.8} />
+        <path d="M50 46 L55 57 L67 58 L58 66 L61 78 L50 71 L39 78 L42 66 L33 58 L45 57 Z" fill="#fff6cc" />
+      </g>
+    ) : (
+      <circle cx="50" cy="62" r="30" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth={5} strokeDasharray="6 6" />
+    )}
+  </svg>
+);
+
+// A board of empty medal slots fills with gold one by one; a counter climbs; a banner lands when it's full.
+export const Medals: React.FC<{s: MedalsScene}> = ({s}) => {
+  const frame = useCurrentFrame();
+  const enter = pop(frame, 2, 12, 0.6, 150);
+  const total = s.rows.length * s.cols.length;
+  const from = sec(s.fillFrom);
+  const to = sec(s.fillTo);
+  const filled = frame < from ? 0 : Math.min(total, Math.floor(((frame - from) / Math.max(1, to - from)) * total) + 1);
+  const rowsAt = sec(s.rowsAt ?? 0);
+  const colsAt = sec(s.colsAt ?? 0);
+  const bannerAt = s.banner ? sec(s.banner.at) : 99999;
+  const banner = pop(frame, bannerAt, 9, 0.45, 240);
+  const ROW = 92;
+  const TOP = 380;
+  const LABEL_W = 250;
+  const CELL_W = (940 - 60 - LABEL_W) / s.cols.length;
+  const HEAD = 118;
+  return (
+    <AbsoluteFill>
+      <SceneIn><Background broll={s.broll} /></SceneIn>
+      <AbsoluteFill style={{background: 'rgba(5,5,12,0.72)'}} />
+      <StepLabel step={s.step} label={s.label} />
+      <div style={{position: 'absolute', top: TOP, left: 70, width: 940, borderRadius: 24, padding: '20px 30px 26px', boxSizing: 'border-box',
+        background: 'linear-gradient(180deg, rgba(24,22,34,0.96), rgba(12,11,20,0.96))', border: '3px solid rgba(255,200,87,0.35)',
+        boxShadow: '0 30px 70px rgba(0,0,0,0.6)', opacity: Math.min(1, enter * 1.5), transform: `translateY(${(1 - enter) * 50}px)`}}>
+        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 16, height: HEAD, lineHeight: 1.1, paddingTop: 6, boxSizing: 'border-box'}}>
+          <div style={{fontFamily: F.display, fontSize: 92, color: filled >= total ? C.gold : '#fff', textShadow: filled >= total ? `0 0 30px ${C.gold}` : 'none'}}>
+            {filled}/{total}</div>
+          {s.counter ? <div style={{fontFamily: F.mono, fontWeight: 800, fontSize: 34, color: C.gold, letterSpacing: 4}}>{s.counter}</div> : null}
+        </div>
+        <div style={{display: 'flex', paddingLeft: LABEL_W, height: 44, opacity: ease(frame, colsAt, colsAt + 10)}}>
+          {s.cols.map((c, j) => (
+            <div key={j} style={{width: CELL_W, textAlign: 'center', fontFamily: F.mono, fontWeight: 800, fontSize: 22, color: 'rgba(255,255,255,0.6)', letterSpacing: 2}}>{c}</div>
+          ))}
+        </div>
+        {s.rows.map((r, i) => (
+          <div key={i} style={{display: 'flex', alignItems: 'center', height: ROW, borderTop: '2px solid rgba(255,255,255,0.07)',
+            opacity: ease(frame, rowsAt + i * 3, rowsAt + i * 3 + 10)}}>
+            <div style={{width: LABEL_W, fontFamily: F.mono, fontWeight: 800, fontSize: 28, color: '#fff', letterSpacing: 2}}>{r}</div>
+            {s.cols.map((_, j) => {
+              const k = i * s.cols.length + j;
+              const at = from + ((to - from) * k) / total;
+              const on = k < filled ? pop(frame, at, 10, 0.4, 260) : 0;
+              return (
+                <div key={j} style={{width: CELL_W, display: 'flex', justifyContent: 'center'}}>
+                  <Medal size={70} on={Math.min(1, on)} />
+                </div>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+      {s.banner && frame >= bannerAt ? (
+        <div style={{position: 'absolute', top: TOP + HEAD + 44 + 20 + (s.rows.length * ROW) / 2 - 60, left: 0, right: 0, display: 'flex', justifyContent: 'center'}}>
+          <div style={{fontFamily: F.display, fontSize: 96, color: '#06060F', background: C.gold, padding: '8px 40px', borderRadius: 14,
+            boxShadow: `0 0 60px ${C.gold}`, transform: `rotate(-4deg) scale(${interpolate(banner, [0, 1], [1.6, 1], clamp)})`, opacity: Math.min(1, banner * 1.5)}}>
+            {s.banner.text}</div>
+        </div>
+      ) : null}
+      {s.banner && frame >= bannerAt ? <Flash at={bannerAt} length={7} color={C.gold} strength={0.3} /> : null}
+      <Arabic text={s.ar} delay={16} top={TOP + 20 + HEAD + 44 + s.rows.length * ROW + 26 + 40} size={52} />
     </AbsoluteFill>
   );
 };
