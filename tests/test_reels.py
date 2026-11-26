@@ -107,3 +107,12 @@ def test_manual_reels_are_kept_apart_and_merge(tmp_path):
     theirs = {"items": {"manual_101": {"id": "manual_101", "created_at": "1"}, "manual_103": {"id": "manual_103", "created_at": "3"}}}
     ours = {"items": {"manual_101": {"id": "manual_101", "created_at": "1"}, "manual_104": {"id": "manual_104", "created_at": "4"}}}
     assert list(merge_manual(theirs, ours)["items"]) == ["manual_101", "manual_103", "manual_104"]
+
+
+def test_kept_manual_reels_survive_an_older_copy():
+    from clipper.statesync import merge_manual
+
+    theirs = {"items": {"manual_101": {"id": "manual_101", "created_at": "1", "hosted_until": "", "kept": True, "video_url": "new"}}}
+    ours = {"items": {"manual_101": {"id": "manual_101", "created_at": "1", "hosted_until": "2026-11-25T00:00:00+00:00", "video_url": "old"}}}
+    merged = merge_manual(theirs, ours)["items"]["manual_101"]
+    assert merged["kept"] and merged["hosted_until"] == "" and merged["video_url"] == "new"

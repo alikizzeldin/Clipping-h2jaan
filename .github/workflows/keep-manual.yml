@@ -1,0 +1,99 @@
+name: Keep manual reels
+run-name: Keep the hand-posted reels forever
+
+# Pins every reel on the dashboard's Manual publish page so it never expires:
+# each video and cover gets a permanent branch keep/<id> (pointing at the same
+# commit, so links stay the same; a file GitHub already dropped is uploaded
+# again). Then the page stops counting down for them (hosted_until = "").
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: state-manual
+  cancel-in-progress: false
+
+jobs:
+  keep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      BRANCH: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -q -r requirements.txt
+
+      - name: Pin every video and cover
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 - <<'PY'
+          import json, os, re, tempfile
+          from pathlib import Path
+          import requests
+          from clipper.hosting import GitMediaHost
+
+          repo, token = os.environ["REPO"], os.environ["GH_TOKEN"]
+          api = f"https://api.github.com/repos/{repo}/git"
+          head = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+          path = Path("state/manual.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          host = GitMediaHost(".", prefix="keep", keep_hours=10**9)
+          kept = reupload = 0
+          for rid, item in sorted(data["items"].items()):
+              ok = True
+              for key, name in (("video_url", rid), ("cover_url", f"{rid}-cover")):
+                  url = item.get(key) or ""
+                  m = re.match(r"https://raw\.githubusercontent\.com/[^/]+/[^/]+/([0-9a-f]{40})/(.+)$", url)
+                  if not m:
+                      print(f"{rid}: no hosted {key}"); ok = False; continue
+                  sha = m.group(1)
+                  ref = f"refs/heads/keep/{name}"
+                  r = requests.post(f"{api}/refs", headers=head, json={"ref": ref, "sha": sha}, timeout=30)
+                  if r.status_code == 201:
+                      continue
+                  have = requests.get(f"{api}/{ref.replace('refs/', 'ref/', 1)}", headers=head, timeout=30)
+                  if have.status_code == 200 and have.json().get("object", {}).get("sha") == sha:
+                      continue  # already kept
+                  # GitHub no longer has that commit: download the file and host it again.
+                  print(f"{rid}: {key} could not be pinned ({r.status_code} {r.text[:120]}); uploading it again")
+                  got = requests.get(url, timeout=300)
+                  if got.status_code != 200:
+                      print(f"{rid}: {key} is gone ({got.status_code}); it cannot be kept"); ok = False; continue
+                  tmp = Path(tempfile.mkdtemp()) / (name + Path(m.group(2)).suffix)
+                  tmp.write_bytes(got.content)
+                  new_url, _ = host.upload(tmp, name)
+                  item[key] = new_url
+                  reupload += 1
+              if ok:
+                  item["hosted_until"] = ""
+                  item["kept"] = True
+                  kept += 1
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+          print(f"kept {kept} of {len(data['items'])} reels ({reupload} files uploaded again)")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+              f.write(f"Kept {kept} of {len(data['items'])} hand-posted reels forever ({reupload} files uploaded again)\n")
+          PY
+
+      - name: Save the page
+        run: |
+          git add state/manual.json
+          git commit -q -m "Manual reels: keep the current ones forever" || { echo "Nothing changed"; exit 0; }
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin "$BRANCH" && git push -q origin "HEAD:$BRANCH" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

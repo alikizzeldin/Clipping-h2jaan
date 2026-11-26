@@ -63,7 +63,11 @@ def merge_history(theirs: list, ours: list) -> list:
 def merge_manual(theirs: dict, ours: dict) -> dict:
     """Reels for posting by hand: every run's records together (several run side by side)."""
     items = dict((theirs or {}).get("items") or {})
-    items.update((ours or {}).get("items") or {})
+    for rid, item in ((ours or {}).get("items") or {}).items():
+        saved = items.get(rid)
+        if saved and saved.get("kept") and not item.get("kept"):
+            continue  # kept forever since this run began: an older copy must not bring the countdown back
+        items[rid] = item
     ordered = sorted(items.items(), key=lambda kv: kv[1].get("created_at", ""))[-200:]
     return {"version": 1, "items": dict(ordered)}
 
