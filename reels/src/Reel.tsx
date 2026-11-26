@@ -38,6 +38,8 @@ import {Winch} from './scenes/Winch';
 import {Poster} from './scenes/Poster';
 import {Storm} from './scenes/Storm';
 import {Choice} from './scenes/Choice';
+import {Snap} from './scenes/Snap';
+import {Garage} from './scenes/Garage';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 import {applyLook, look} from './looks/state';
@@ -99,6 +101,8 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'poster': return <Poster s={s} />;
     case 'storm': return <Storm s={s} />;
     case 'choice': return <Choice s={s} />;
+    case 'snap': return <Snap s={s} />;
+    case 'garage': return <Garage s={s} />;
   }
 };
 

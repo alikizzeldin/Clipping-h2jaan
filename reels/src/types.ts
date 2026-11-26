@@ -674,13 +674,43 @@ export type ChoiceScene = Base & {
   ar?: string;
 };
 
+// A phone camera hunting for murals: a painted wall with a tag in the viewfinder; each shot flashes,
+// ticks the counter, drops a thumbnail into the strip and slides in the next mural (seconds into the scene).
+export type SnapScene = Base & {
+  type: 'snap';
+  step: string;
+  label: string;
+  tag: string; // the tag painted on every mural, e.g. "1010"
+  shots: {at: number}[];
+  mode?: string; // the camera mode label (default "PHOTO")
+  done?: {text: string; at: number}; // a chip after the last shot, e.g. "CLUE UNLOCKED"
+  ar?: string;
+};
+
+// A storage garage at night: a code is typed on the keypad by a roll-up door, the door rolls up on a
+// lit bay with a supercar silhouette, then a name chip pops (seconds into the scene).
+export type GarageScene = Base & {
+  type: 'garage';
+  step: string;
+  label: string;
+  code: string;
+  typeAt: number;
+  typeEnd: number;
+  openAt: number;
+  car: string; // the name chip, e.g. "'95 GROTTI CHEETAH"
+  carSub?: string;
+  carAt: number;
+  sign?: string; // the lit sign over the door (default "STORAGE")
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
