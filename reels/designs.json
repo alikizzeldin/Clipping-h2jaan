@@ -3,6 +3,14 @@
  "entries": [
   {
    "date": "2026-11-26",
+   "episode": "024-michael-jimmy",
+   "scene": "poster",
+   "variant": "redrawn film poster + zoom into the billing block + highlighter names",
+   "new": true,
+   "note": "new scene type 'poster': taped poster (explosion sky, soldier silhouette, title, red subtitle, REDRAWN chip), sticky notes pinned on cue; a second entry zooms into the billing block where every line is an unreadable bar except the credit line, and each name lifts off its bar under a yellow highlighter; everything above the credits darkens on the zoom"
+  },
+  {
+   "date": "2026-11-26",
    "episode": "m141-silent-hill-hotel",
    "scene": "hallway",
    "variant": "perspective corridor + sigils + fog door",

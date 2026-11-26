@@ -42,7 +42,7 @@ export const Poster: React.FC<{s: PosterScene}> = ({s}) => {
   const z = interpolate(frame, [zoomAt, zoomAt + 22], [0, 1], {...clamp, easing: (t) => t * t * (3 - 2 * t)});
   const scale = 1 + ((s.zoomTo ?? 1.85) - 1) * z;
   const originY = BILL_Y + 70;
-  const lift = interpolate(z, [0, 1], [0, 700 - originY]); // bring the billing block up to the middle of the frame
+  const lift = interpolate(z, [0, 1], [0, 880 - originY]); // bring the billing block up to the middle of the frame
   return (
     <AbsoluteFill>
       <SceneIn>
@@ -60,10 +60,10 @@ export const Poster: React.FC<{s: PosterScene}> = ({s}) => {
             background: 'radial-gradient(ellipse at 50% 60%, #ffd27a 0%, #ff7a1a 25%, rgba(140,30,10,0.6) 55%, rgba(0,0,0,0) 75%)'}} />
           <Soldier />
           {/* the title */}
-          <div style={{position: 'absolute', left: 0, right: 0, top: 560, textAlign: 'center', fontFamily: F.display, fontSize: 92, lineHeight: 0.9,
+          <div style={{position: 'absolute', left: 0, right: 0, top: 500, textAlign: 'center', fontFamily: F.display, fontSize: 88, lineHeight: 0.95,
             color: '#f2ede2', letterSpacing: 2, textShadow: '0 6px 0 #000'}}>{s.title}</div>
           {s.subtitle ? (
-            <div style={{position: 'absolute', left: 0, right: 0, top: 660, textAlign: 'center', fontFamily: F.display, fontSize: 64, letterSpacing: 18,
+            <div style={{position: 'absolute', left: 0, right: 0, top: 682, textAlign: 'center', fontFamily: F.display, fontSize: 56, lineHeight: 1, letterSpacing: 18,
               color: C.red, textShadow: '0 4px 0 #000'}}>{s.subtitle}</div>
           ) : null}
           {/* the billing block: condensed lines, only the credit line is readable */}
@@ -112,11 +112,13 @@ export const Poster: React.FC<{s: PosterScene}> = ({s}) => {
         const p = pop(frame, at, 10, 0.5, 220);
         const out = 1 - z;
         return (
-          <div key={`n${i}`} style={{position: 'absolute', left: i % 2 ? 470 : 110, top: i % 2 ? 1000 : 520, maxWidth: 520, opacity: out,
+          <div key={`n${i}`} style={{position: 'absolute', left: i % 2 ? 250 : 110, top: i % 2 ? 1240 : 520, whiteSpace: 'nowrap', opacity: out,
             transform: `rotate(${i % 2 ? 3 : -4}deg) scale(${p})`, fontFamily: F.brand, fontWeight: 900, fontSize: 40, lineHeight: 1.1, color: '#0b0b0b',
             background: i % 2 ? '#fff' : C.gold, padding: '14px 22px', boxShadow: '0 12px 0 rgba(0,0,0,0.5)'}}>{n.text}</div>
         );
       })}
+      {/* on the zoom, darken everything above the credits so the eye lands on the names */}
+      {z > 0 ? <AbsoluteFill style={{opacity: z, background: 'linear-gradient(180deg, rgba(5,5,6,0.96) 0%, rgba(5,5,6,0.9) 34%, rgba(5,5,6,0) 41%)'}} /> : null}
       <StepLabel step={s.step} label={s.label} />
       <Arabic text={s.ar} delay={16} top={1392} size={52} />
     </AbsoluteFill>
