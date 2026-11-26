@@ -2223,5 +2223,111 @@
     "sources": []
    }
   ]
+ },
+ {
+  "date": "2026-11-26",
+  "wake_up": "18:41 UTC",
+  "ideas": [
+   {
+    "format": "DON'T MISS",
+    "idea": "Bad Driver! (Chapter 4): Andrea sends you to find Felipe in Millport; kill him and Andrea pays $20,000, spare him and he sends you his car (optional mission Collect Felipe's Gift); finish it before Power Play or it's gone",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 8,
+    "score": 7.3,
+    "chosen": "026-felipe-choice",
+    "why_not": null,
+    "sources": [
+     "https://www.powerpyx.com/gta-6-bad-driver-find-felipe-walkthrough/",
+     "https://www.gtabase.com/gta-6/strangers/bad-driver",
+     "https://rarethief.com/gta-vi-bad-driver-walkthrough/",
+     "https://hintatlas.com/gta-6/kill-or-spare-felipe/",
+     "https://metaforge.app/gta-6/gta-6-chapter-4-missables-point-of-no-return",
+     "https://thetab.com/2026/11/24/an-easy-25k-and-all-the-other-things-you-cant-miss-before-finishing-gta-6-chapter-4"
+    ],
+    "note": "Not said: the car's model and sale value (one source), a Criminal Profile effect (gta6.house only), whether starting or finishing Power Play closes it (said 'finish it before Power Play')."
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Alien Dream easter egg: walk into the darkness of the planets room to find a hidden planet (xGarbett on X)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 9,
+    "visual": 7,
+    "confidence": 4,
+    "score": 6.4,
+    "chosen": null,
+    "why_not": "one X post, today; no second source yet",
+    "sources": [
+     "https://x.com/xGarbett/status/2125791854507811145"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Clone theory: a scientist storyline and a bunker with earlier versions of the Jason and Lucia models",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 3,
+    "score": 5.8,
+    "chosen": null,
+    "why_not": "a fan theory, not a fact",
+    "sources": [
+     "https://www.dualshockers.com/hidden-secrets-in-gta-6-you-may-have-missed/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Assassin Nipper .38 on a beached wreck in the Permit Keys",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "score under 7",
+    "sources": [
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-assassin-pistol-smuggler-shotgun-locations/"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Hidden Charges (Chapter 3): each explosive buys time in The Cartel Heist",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "score under 7",
+    "sources": [
+     "https://www.videogameschronicle.com/guide/gta-6-hidden-charges-walkthrough-how-to-plant-all-three-explosives/"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "39 Illegal Gang Operations you can loot again",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 6,
+    "score": 6.2,
+    "chosen": null,
+    "why_not": "one list only",
+    "sources": []
+   }
+  ]
  }
 ]
