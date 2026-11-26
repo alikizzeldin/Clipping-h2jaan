@@ -1,6 +1,6 @@
 {
  "version": 1,
- "metrics_checked_at": "2026-11-25T17:10:33+00:00",
+ "metrics_checked_at": "2026-11-26T13:10:38+00:00",
  "published": {
   "auto_138529992_1794999955": {
    "video_id": "6afd8ac727a97c2bc6371f9c",
@@ -1749,7 +1749,7 @@
   "reel_022": {
    "video_id": "6b0731fcb1da0f86e4962380",
    "via": "buffer",
-   "link": "https://www.youtube.com/watch?v=84yo-syCwnI",
+   "link": "https://www.youtube.com/shorts/84yo-syCwnI",
    "title": "GTA 6's vaults only open for ONE van 🚚 | خزائن GTA 6 ما تنفتح إلا لشاحنة وحدة 🚚 #shorts",
    "channel": "gta6fied",
    "source": "reel",
@@ -1768,7 +1768,10 @@
    "instagram_title": "GTA 6's vaults only open for ONE van 🚚",
    "status": "sent",
    "instagram_status": "sent",
-   "instagram_link": "https://www.instagram.com/reel/DgLPxZ2zVp1/"
+   "instagram_link": "https://www.instagram.com/reel/DgLPxZ2zVp1/",
+   "views": 0,
+   "likes": 0,
+   "comments": 0
   },
   "reel_023": {
    "video_id": "6b07685cb8e2338b856d8119",
@@ -1817,7 +1820,10 @@
    "instagram_title": "Rockstar hid Michael & Jimmy in GTA 6 🎬",
    "status": "sent",
    "instagram_status": "sent",
-   "instagram_link": "https://www.instagram.com/reel/DgMveqlhHwK/"
+   "instagram_link": "https://www.instagram.com/reel/DgMveqlhHwK/",
+   "views": 0,
+   "likes": 0,
+   "comments": 0
   },
   "reel_025": {
    "video_id": "",
@@ -1839,7 +1845,9 @@
    "status": "instagram_only",
    "instagram": "6b082d1127cb5162e5f53470",
    "instagram_at": "2026-11-26T12:59:08+00:00",
-   "instagram_title": "GTA 6 has HURRICANES… but they're locked 🌀"
+   "instagram_title": "GTA 6 has HURRICANES… but they're locked 🌀",
+   "instagram_status": "sent",
+   "instagram_link": "https://www.instagram.com/reel/DgNKQL9yazD/"
   }
  },
  "skipped": {
