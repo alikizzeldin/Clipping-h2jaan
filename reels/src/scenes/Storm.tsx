@@ -108,7 +108,7 @@ export const Storm: React.FC<{s: StormScene}> = ({s}) => {
       {frame >= unlockAt ? (
         <div style={{position: 'absolute', left: 0, right: 0, top: TV.y + 250, display: 'flex', justifyContent: 'center',
           transform: `rotate(-7deg) scale(${interpolate(stamp, [0, 1], [2.3, 1])})`, opacity: Math.min(1, stamp * 2)}}>
-          <div style={{fontFamily: F.display, fontSize: 104, lineHeight: 1, letterSpacing: 4, color: C.gold, padding: '12px 36px',
+          <div style={{fontFamily: F.display, fontSize: 86, lineHeight: 1, letterSpacing: 4, color: C.gold, padding: '10px 30px', maxWidth: 760, textAlign: 'center',
             border: `10px solid ${C.gold}`, borderRadius: 18, background: 'rgba(8,6,2,0.78)', textShadow: '0 5px 0 #000'}}>{s.stamp ?? 'HURRICANES UNLOCKED'}</div>
         </div>
       ) : null}

@@ -1,0 +1,427 @@
+{
+ "episode": 25,
+ "kind": "secret",
+ "topic": "Unlock hurricanes: hidden side mission 'Retest Freddie's Defenses' at Freddie's bunker (north side of Lake Leonida); break in once, he says come back after he upgrades his defenses; wait a few in-game days for his text; the second visit has mines by the intercom and drone waves; a hurricane alert then hits his TV; stay or leave, hurricanes are unlocked",
+ "title": {
+  "en": "GTA 6 has HURRICANES… but they're locked 🌀",
+  "ar": "في GTA 6 أعاصير… بس مقفلة 🌀"
+ },
+ "summary": "GTA 6 has hurricanes, but they're locked. Find Freddie's bunker on the north side of Lake Leonida and break in once: Freddie says come back after he upgrades his defenses. Wait a few days for his text, then go back: this time there are mines by the intercom and waves of drones. Survive, and a hurricane alert hits his TV. Stay or leave, it doesn't matter: hurricanes can now hit Leonida.",
+ "summary_ar": "في GTA 6 أعاصير بس مقفلة. روح ملجأ فريدي شمال بحيرة ليونيدا واقتحمه مرة: فريدي يقول ارجع بعد ما يقوّي دفاعاته. انتظر كم يوم لين تجيك رسالته وارجع: هالمرة ألغام عند الإنتركم وموجات درونز. انجُ، ويطلع تنبيه إعصار على تلفزيونه. سواء بقيت أو طلعت، الأعاصير صارت تضرب ليونيدا.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "GTA6Hurricane",
+  "GTA6Weather",
+  "GTA6Tips",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 9,
+  "retention": 8,
+  "fresh": 7,
+  "visual": 8,
+  "confidence": 8,
+  "score": 8.1
+ },
+ "sources": [
+  "https://www.thegamer.com/grand-theft-auto-6-hurricane-weather-storm-unlock-freddie-gta-guide/",
+  "https://www.igeeksblog.com/how-to-unlock-hurricanes-gta-6/",
+  "https://khelnow.com/gaming/unlock-hurricane-weather-in-gta-6-202611",
+  "https://gta6.house/guides/gta-6-unlock-hurricanes-retest-freddies-defenses",
+  "https://gtaculture.com/guides/gta-6-hurricane-freddie-bunker",
+  "https://duuro.net/blog/gta-6-unlock-hurricanes"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 6.0,
+     "dur": 3.8,
+     "x": 600
+    }
+   ]
+  },
+  "lake": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 56.4,
+     "dur": 3.6,
+     "x": 420
+    }
+   ]
+  },
+  "door": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 4.4,
+     "dur": 4.6,
+     "x": 560
+    }
+   ]
+  },
+  "lot": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 37.8,
+     "dur": 3.1,
+     "x": 1100
+    }
+   ]
+  },
+  "back": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 17.0,
+     "dur": 4.3,
+     "x": 560
+    }
+   ]
+  },
+  "storm": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 9.0,
+     "dur": 8.0,
+     "x": 600
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 34.0,
+     "dur": 3.8,
+     "x": 1100
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 100,
+  "seed": 251,
+  "drop": 3.6,
+  "break": 18.56,
+  "back": 19.6,
+  "outro": 26.48
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "episode": 25,
+  "duration": 30.2,
+  "musicVolume": 0.42,
+  "style": "leonida-herald",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.6,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "cold",
+     "dim": 0.1,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "TOP SECRET",
+    "kicker": "GTA 6 HAS",
+    "title": [
+     "HURRICANES"
+    ],
+    "color": "gold",
+    "tag": "…but they're locked.",
+    "tagAt": 2.32,
+    "ar": "في GTA 6 أعاصير… بس مقفلة"
+   },
+   {
+    "type": "location",
+    "from": 3.6,
+    "to": 7.04,
+    "style": "paper",
+    "broll": {
+     "src": "lake",
+     "grade": "warm",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "FREDDIE'S BUNKER",
+    "place": "LAKE LEONIDA",
+    "target": "FREDDIE'S BUNKER",
+    "direction": "NORTH SIDE",
+    "region": "NORTH OF THE LAKE",
+    "ar": "ملجأ فريدي… شمال بحيرة ليونيدا"
+   },
+   {
+    "type": "list",
+    "from": 7.04,
+    "to": 11.44,
+    "broll": {
+     "src": "door",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "chip": "STEP 02",
+    "label": "FIRST VISIT",
+    "cardAt": 0.2,
+    "arAt": 0.6,
+    "items": [
+     {
+      "text": "BREAK IN ONCE",
+      "status": "VISIT 1",
+      "ok": true,
+      "at": 0.48,
+      "icon": "lock"
+     },
+     {
+      "text": "FREDDIE: COME BACK",
+      "status": "LATER",
+      "ok": true,
+      "at": 1.2,
+      "icon": "phone"
+     }
+    ],
+    "ar": "أول مرة… فريدي يقول ارجع بعدين"
+   },
+   {
+    "type": "time",
+    "from": 11.44,
+    "to": 14.4,
+    "broll": {
+     "src": "lot",
+     "grade": "cold",
+     "dim": 0.4,
+     "blur": 4
+    },
+    "step": "03",
+    "label": "WAIT",
+    "times": [
+     "TODAY",
+     "+1 DAY",
+     "LATER…"
+    ],
+    "suffix": "",
+    "note": "WAIT FOR FREDDIE'S TEXT",
+    "ar": "انتظر رسالته… وارجع"
+   },
+   {
+    "type": "scan",
+    "from": 14.4,
+    "to": 18.56,
+    "broll": {
+     "src": "back",
+     "grade": "cold",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "04",
+    "label": "SECOND VISIT",
+    "target": {
+     "x": 540,
+     "y": 790,
+     "w": 760,
+     "h": 480
+    },
+    "checks": [
+     {
+      "text": "MINES BY THE INTERCOM",
+      "at": 1.04
+     },
+     {
+      "text": "WAVES OF DRONES",
+      "at": 2.64
+     }
+    ],
+    "hud": "● DEFENSES UPGRADED",
+    "ar": "ألغام عند الإنتركم… ودرونز"
+   },
+   {
+    "type": "storm",
+    "from": 18.56,
+    "to": 26.48,
+    "broll": {
+     "src": "storm",
+     "grade": "cold",
+     "dim": 0.4,
+     "blur": 3
+    },
+    "step": "05",
+    "label": "THE ALERT",
+    "alertAt": 1.04,
+    "unlockAt": 5.52,
+    "ar": "تنبيه إعصار… والأعاصير صارت تضرب ليونيدا"
+   },
+   {
+    "type": "cta",
+    "from": 26.48,
+    "to": 30.2,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "cold",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.2,
+    "volume": 0.55
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.54,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 4.4,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 6.98,
+    "volume": 0.5
+   },
+   {
+    "src": "error.wav",
+    "at": 7.52,
+    "volume": 0.35
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.24,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.38,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.0,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.6,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 13.2,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.34,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 14.6,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 15.44,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 17.04,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 18.5,
+    "volume": 0.5
+   },
+   {
+    "src": "glitch.wav",
+    "at": 19.6,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.62,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 22.4,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.08,
+    "volume": 0.7
+   },
+   {
+    "src": "trophy.wav",
+    "at": 24.12,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 26.42,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 26.5,
+    "volume": 0.5
+   }
+  ]
+ }
+}

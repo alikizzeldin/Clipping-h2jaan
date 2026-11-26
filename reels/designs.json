@@ -3,6 +3,22 @@
  "entries": [
   {
    "date": "2026-11-26",
+   "episode": "025-hurricanes",
+   "scene": "storm",
+   "variant": "bunker TV hurricane alert (spinning storm over the coast, banner, ticker, rain, unlock stamp)",
+   "new": true,
+   "note": "new scene type 'storm': a CRT in a wood-and-steel case shows a calm weather map, then a red HURRICANE ALERT banner flashes, a four-arm spiral storm rolls up and spins over the coast, a ticker scrolls, rain streaks the whole frame, and lightning drops a HURRICANES UNLOCKED stamp"
+  },
+  {
+   "date": "2026-11-26",
+   "episode": "025-hurricanes",
+   "scene": "location",
+   "variant": "paper",
+   "new": false,
+   "note": "last location episodes used radar (m142) and hud (m141)"
+  },
+  {
+   "date": "2026-11-26",
    "episode": "m143-gold-rifle",
    "scene": "medals",
    "variant": "medal board + counter + banner",
