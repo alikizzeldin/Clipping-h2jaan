@@ -2115,5 +2115,113 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-26",
+  "wake_up": "12:41 UTC",
+  "ideas": [
+   {
+    "format": "SECRET FILE",
+    "idea": "Unlock hurricanes: hidden side mission 'Retest Freddie's Defenses' at Freddie's bunker (north side of Lake Leonida); break in once, Freddie says come back after he upgrades his defenses; wait a few in-game days for his text; second visit has mines by the intercom and drone waves; then a hurricane alert on his TV; stay or leave, hurricanes are unlocked as random weather",
+    "demand": 8,
+    "payoff": 9,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 8,
+    "confidence": 8,
+    "score": 8.1,
+    "chosen": "025-hurricanes",
+    "why_not": null,
+    "sources": [
+     "https://www.thegamer.com/grand-theft-auto-6-hurricane-weather-storm-unlock-freddie-gta-guide/",
+     "https://www.igeeksblog.com/how-to-unlock-hurricanes-gta-6/",
+     "https://khelnow.com/gaming/unlock-hurricane-weather-in-gta-6-202611",
+     "https://gta6.house/guides/gta-6-unlock-hurricanes-retest-freddies-defenses",
+     "https://gtaculture.com/guides/gta-6-hurricane-freddie-bunker",
+     "https://duuro.net/blog/gta-6-unlock-hurricanes"
+    ],
+    "note": "Not said: the cash and car rewards (guides disagree: $7,500 + Dubsta vs about $6,000 vs $10,000), the exact wait (2-3 vs 4+ days: said 'a few days'), whether the unlock is permanent (one guide marks it unconfirmed)."
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Bad Driver! (Chapter 4): kill Felipe for $20,000 or spare him for his car; gone once Power Play starts",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 8,
+    "score": 7.2,
+    "chosen": null,
+    "why_not": "passes; hurricanes score higher",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-bad-driver-find-felipe-walkthrough/",
+     "https://rarethief.com/gta-vi-bad-driver-walkthrough/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Assassin Nipper .38: a unique pistol on a beached wreck at the southern tip of the southeastern Permit Keys island (with an Old Note)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "score under 7",
+    "sources": [
+     "https://games.gg/grand-theft-auto-vi/guides/grand-theft-auto-6-assassin-pistol-smuggler-shotgun-locations/",
+     "https://www.gtabase.com/gta-6/weapons/assassin-nipper-38"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Hidden Charges (Chapter 3): every explosive planted buys more time in The Cartel Heist",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "score under 7",
+    "sources": [
+     "https://www.videogameschronicle.com/guide/gta-6-hidden-charges-walkthrough-how-to-plant-all-three-explosives/"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "39 Illegal Gang Operations: rival hideouts you can loot again after clearing them",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 6,
+    "score": 6.2,
+    "chosen": null,
+    "why_not": "one list only; payouts unknown",
+    "sources": [
+     "https://fandomwire.com/best-ways-to-make-money-quickly-in-gta-6-ranked/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Teenage Mutant Ninja Turtles nod near Tallaloko Dam",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.0,
+    "chosen": null,
+    "why_not": "still one source for the place",
+    "sources": []
+   }
+  ]
  }
 ]
