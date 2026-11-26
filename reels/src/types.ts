@@ -646,13 +646,29 @@ export type PosterScene = Base & {
   ar?: string;
 };
 
+// A bunker TV breaks into a hurricane alert: a satellite map with a spinning storm over the coast,
+// a flashing red banner, a ticker, rain over the frame; on `unlockAt` lightning and a stamp.
+export type StormScene = Base & {
+  type: 'storm';
+  step: string;
+  label: string;
+  alertAt: number; // seconds into the scene: the alert breaks in and the storm rolls up
+  unlockAt?: number; // the stamp lands
+  alert?: string; // banner text (default "HURRICANE ALERT")
+  stamp?: string; // default "HURRICANES UNLOCKED"
+  ticker?: string; // the scrolling line (ends with a separator; it repeats)
+  channel?: string; // shown before the alert (default "CH 01 · WEATHER")
+  region?: string; // the label on the land (default "LEONIDA")
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
