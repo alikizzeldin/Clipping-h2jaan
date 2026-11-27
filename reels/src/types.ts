@@ -715,6 +715,9 @@ export type ScopeScene = Base & {
   dogAt?: number; // a chip below the lens
   dogText?: string; // default "+ TRACKING DOG"
   zoom?: string; // the small readout (default "ZOOM 8×")
+  target?: 'runner' | 'croc'; // what crosses the lens (default the running figure)
+  shotAt?: number; // a muzzle flash in the lens and a recoil kick; the target stops
+  chipIcon?: 'paw' | 'round'; // the chip's icon (default the paw)
   ar?: string;
 };
 
@@ -747,13 +750,30 @@ export type HelipadScene = Base & {
   ar?: string;
 };
 
+// A quality gauge in three tiers (only the top one named, e.g. PRISTINE): the needle sweeps up on
+// `needleAt`, a buyer chip pops, then a price counter rolls up to the top figure (seconds into the scene).
+export type QualityScene = Base & {
+  type: 'quality';
+  step: string;
+  label: string;
+  title: string; // over the gauge, e.g. "CONDITION"
+  topLabel: string; // e.g. "PRISTINE"
+  needleAt: number;
+  buyer?: {text: string; at: number}; // e.g. "BRET PAYS"
+  price: number; // the top figure, e.g. 28250
+  priceLabel?: string; // e.g. "UP TO"
+  priceAt: number;
+  countFor?: number; // seconds the counter rolls (default 0.8)
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene | QualityScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

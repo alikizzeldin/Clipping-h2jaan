@@ -30,6 +30,29 @@ const Runner: React.FC<{x: number; y: number; step: number}> = ({x, y, step}) =>
   );
 };
 
+// A white-hot crocodile swimming at the surface (head at x, y; the body trails to the left).
+const Croc: React.FC<{x: number; y: number; t: number; hit: number}> = ({x, y, t, hit}) => {
+  const wag = Math.sin(t / 5) * (1 - hit) * 14;
+  return (
+    <svg width={420} height={160} viewBox="0 0 420 160" style={{position: 'absolute', left: x - 400, top: y - 80, filter: 'blur(1px)', overflow: 'visible'}}>
+      <g fill="#f4fff6" stroke="#bfffd6" strokeWidth={2} strokeLinejoin="round">
+        <path d={`M20 ${80 + wag} Q80 ${76 - wag * 0.5} 150 74 L160 86 Q90 ${90 + wag * 0.4} 20 ${84 + wag} Z`} />
+        <path d="M150 66 Q230 56 300 66 Q330 72 340 80 Q330 90 300 94 Q230 104 150 94 Z" />
+        <path d="M330 72 L398 76 Q404 80 398 84 L330 90 Z" />
+        <circle cx={334} cy={70} r={7} />
+        {[180, 220, 260].map((k) => <path key={k} d={`M${k} 64 l8 -8 l8 8`} fill="none" strokeWidth={4} />)}
+        <path d={`M200 96 l-18 ${18 + wag * 0.3}`} strokeWidth={9} fill="none" strokeLinecap="round" />
+        <path d={`M280 96 l14 ${18 - wag * 0.3}`} strokeWidth={9} fill="none" strokeLinecap="round" />
+      </g>
+      {/* ripples on the water around it */}
+      {[0, 1].map((k) => {
+        const ph = ((t / 24) + k / 2) % 1;
+        return <ellipse key={k} cx={300} cy={92} rx={120 + ph * 160} ry={14 + ph * 18} fill="none" stroke="#bfffd6" strokeWidth={3} opacity={(1 - ph) * 0.5} />;
+      })}
+    </svg>
+  );
+};
+
 export const Scope: React.FC<{s: ScopeScene}> = ({s}) => {
   const frame = useCurrentFrame();
   const lockAt = sec(s.lockAt);
@@ -37,13 +60,21 @@ export const Scope: React.FC<{s: ScopeScene}> = ({s}) => {
   const locked = frame >= lockAt;
   const open = interpolate(frame, [0, 12], [0.2, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 3)});
   const r = LR * open;
-  // the runner zig-zags across the lens
-  const tx = LX - 220 + ((frame * 4.2) % 460);
-  const ty = LY + 120 + Math.sin(frame / 9) * 30;
+  const croc = s.target === 'croc';
+  const shotAt = s.shotAt !== undefined ? sec(s.shotAt) : 99999;
+  const shot = frame >= shotAt;
+  // after the shot the crocodile stops and the scope kicks up with the recoil
+  const ft = Math.min(frame, shotAt);
+  const kick = shot ? Math.max(0, 1 - (frame - shotAt) / 10) * 46 : 0;
+  // the runner zig-zags across the lens (the crocodile glides slowly left to right)
+  const tx = croc ? LX - 20 + ft * 1.6 : LX - 220 + ((frame * 4.2) % 460);
+  const ty = croc ? LY + 60 + Math.sin(ft / 14) * 10 : LY + 120 + Math.sin(frame / 9) * 30;
   // the crosshair lags behind until it locks
   const lag = locked ? 0 : 26;
-  const cx = LX - 220 + (((frame - lag) * 4.2) % 460 + 460) % 460 + (locked ? 0 : 40 * Math.sin(frame / 7));
-  const cy = (locked ? ty - 70 : LY + 40 + Math.sin(frame / 11) * 60);
+  const cx = croc
+    ? (locked ? tx - 66 : tx - 66 - 120 + 40 * Math.sin(frame / 7))
+    : LX - 220 + (((frame - lag) * 4.2) % 460 + 460) % 460 + (locked ? 0 : 40 * Math.sin(frame / 7));
+  const cy = croc ? (locked ? ty - 10 : ty - 80 + Math.sin(frame / 11) * 50) - kick : (locked ? ty - 70 : LY + 40 + Math.sin(frame / 11) * 60);
   const tone = locked ? C.red : '#d9ffe6';
   const lockPop = pop(frame, lockAt, 9, 0.5, 240);
   const dog = pop(frame, dogAt, 10, 0.5, 220);
@@ -55,7 +86,9 @@ export const Scope: React.FC<{s: ScopeScene}> = ({s}) => {
       {/* night-vision tint inside the lens */}
       <AbsoluteFill style={{background: 'rgba(60,255,140,0.22)', mixBlendMode: 'overlay', clipPath: `circle(${r}px at ${LX}px ${LY}px)`}} />
       <AbsoluteFill style={{background: 'repeating-linear-gradient(180deg, rgba(0,0,0,0.12) 0 2px, rgba(0,0,0,0) 2px 4px)', clipPath: `circle(${r}px at ${LX}px ${LY}px)`}} />
-      <Runner x={tx} y={ty} step={frame / 2.5} />
+      {croc ? <Croc x={tx} y={ty} t={ft} hit={shot ? 1 : 0} /> : <Runner x={tx} y={ty} step={frame / 2.5} />}
+      {/* the muzzle flash fills the lens for a few frames */}
+      {shot ? <AbsoluteFill style={{background: '#f4fff6', opacity: interpolate(frame, [shotAt, shotAt + 1, shotAt + 6], [0, 0.9, 0], clamp), clipPath: `circle(${r}px at ${LX}px ${LY}px)`}} /> : null}
       {/* everything outside the lens is black */}
       <AbsoluteFill style={{background: `radial-gradient(circle at ${LX}px ${LY}px, rgba(0,0,0,0) ${r - 4}px, rgba(0,0,0,0.92) ${r + 2}px, #000 ${r + 80}px)`}} />
       <svg width={1080} height={1920} style={{position: 'absolute', left: 0, top: 0}}>
@@ -94,7 +127,11 @@ export const Scope: React.FC<{s: ScopeScene}> = ({s}) => {
         <div style={{position: 'absolute', left: 0, right: 0, top: LY + LR + 34, display: 'flex', justifyContent: 'center', transform: `scale(${dog})`}}>
           <div style={{display: 'flex', alignItems: 'center', gap: 16, fontFamily: F.brand, fontSize: 44, letterSpacing: 3, color: '#0b0b0b', background: C.gold,
             padding: '10px 28px', borderRadius: 14}}>
-            <svg width={46} height={46} viewBox="0 0 40 40"><g fill="#0b0b0b"><circle cx={20} cy={26} r={9} /><circle cx={9} cy={15} r={4.5} /><circle cx={16} cy={9} r={4.5} /><circle cx={24} cy={9} r={4.5} /><circle cx={31} cy={15} r={4.5} /></g></svg>
+            {s.chipIcon === 'round' ? (
+              <svg width={46} height={46} viewBox="0 0 40 40"><g fill="#0b0b0b"><path d="M16 4 Q20 -1 24 4 L24 12 L16 12 Z" /><rect x={15} y={13} width={10} height={20} rx={1} /><rect x={13.5} y={33} width={13} height={4} rx={1} /></g></svg>
+            ) : (
+              <svg width={46} height={46} viewBox="0 0 40 40"><g fill="#0b0b0b"><circle cx={20} cy={26} r={9} /><circle cx={9} cy={15} r={4.5} /><circle cx={16} cy={9} r={4.5} /><circle cx={24} cy={9} r={4.5} /><circle cx={31} cy={15} r={4.5} /></g></svg>
+            )}
             {s.dogText ?? '+ TRACKING DOG'}
           </div>
         </div>
