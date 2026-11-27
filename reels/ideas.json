@@ -2436,5 +2436,105 @@
     "sources": []
    }
   ]
+ },
+ {
+  "date": "2026-11-27",
+  "wake_up": "08:41 UTC",
+  "ideas": [
+   {
+    "format": "EASTER EGG",
+    "idea": "Hyde Island hunt: explore Hyde Island alone as Jason or Lucia until a tranquilizer dart drops you; you wake in a container with no gear while a hunter with a sniper rifle and a tracking dog hunts you; kill him for the Island-Poacher sniper rifle and cash, die and you lose money (a Manhunt / Saw nod)",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 8,
+    "score": 7.8,
+    "chosen": "028-hyde-island-hunt",
+    "why_not": null,
+    "sources": [
+     "https://www.gamespot.com/articles/gta-6-has-a-secret-mission-that-feels-like-hard-target-meets-saw/",
+     "https://www.powerpyx.com/gta-6-hyde-island-kidnapping-easter-egg/",
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/hyde-island-hunt-easter-egg-manhuntsaw/",
+     "https://thedroidguy.com/gta-6-hyde-island-hunt-1299017"
+    ],
+    "note": "Not said: the explosive necklace (one account), the couch-loading random route (PowerPyx only), that it's a confirmed Manhunt nod (Rockstar hasn't said). Replaces the earlier unconfirmed 'Hunger Games' idea."
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "Weather still gets stuck for some players after update 01.002.002 (Insider Gaming fix guide)",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 4,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 6,
+    "score": 5.2,
+    "chosen": null,
+    "why_not": "a bug guide, low payoff",
+    "sources": [
+     "https://insider-gaming.com/fix-weather-bug-gta-6-rain-storms"
+    ]
+   },
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "Swing the car door as a weapon",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 3,
+    "score": 5.2,
+    "chosen": null,
+    "why_not": "no source confirms it",
+    "sources": []
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Rescue the tiny alien: reward is 'alien cow milk' (one list)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 4,
+    "score": 5.7,
+    "chosen": null,
+    "why_not": "reward differs between sources; UFO already covered by 001",
+    "sources": [
+     "https://futurepositive.org/gta-6-players-uncover-five-wildest-secret-missions-just-days-after-release"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Charred Toros: a gold rare car in La Perle",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 6,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "details don't match between guides",
+    "sources": []
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Hidden Charges (Chapter 3): explosives buy time in The Cartel Heist",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.0,
+    "chosen": null,
+    "why_not": "score under 7",
+    "sources": []
+   }
+  ]
  }
 ]
