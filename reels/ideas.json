@@ -2745,5 +2745,115 @@
     "sources": []
    }
   ]
+ },
+ {
+  "date": "2026-11-27",
+  "wake_up": "22:41 UTC",
+  "ideas": [
+   {
+    "format": "MONEY FILE",
+    "idea": "The legendary (unique) Crocodile: on a marshy island between Wetman Bay and Cottonmouth Lake, south of Hamlet (boat needed); hunting runs through Bret Vogel; a pristine (clean-kill) carcass pays the top price, up to $28,250, the most of any legendary animal",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 8,
+    "score": 7.8,
+    "chosen": "031-legendary-croc",
+    "why_not": null,
+    "sources": [
+     "https://insider-gaming.com/every-snapmatic-animal-location-gta-6-hunting-legendary-animals/",
+     "https://www.videogameschronicle.com/guide/gta-6-all-unique-snapmatic-animal-locations-bret/",
+     "https://pro-gamer.gg/all-snapmatic-animal-locations-gta-6-legendary-animals-bret-clues-rewards-guide/",
+     "https://mobalytics.gg/gamebase/guides/grand-theft-auto-6-unique-animal-locations",
+     "https://gtaculture.com/guides/gta-6-animals-wildlife",
+     "https://www.gtavl.com/news/gta-6-legendary-animals/",
+     "https://outputlag.com/guides/gta-6-hunting-bret-vogel/"
+    ],
+    "note": "Not said: the low end of the price range (16,250 vs 14,250), the 'Snapmatic' name and any photo step (GTAculture calls them unverified), the exact one-shot rule (one guide), the recommended rifle."
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Pelican Valley crab research outpost code puzzle (CLEAVES, 0072, 0212) for cash and marked bills",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 6,
+    "score": 6.8,
+    "chosen": null,
+    "why_not": "codes vary between guides; close to the 021 three-code reel",
+    "sources": [
+     "https://outputlag.com/guides/gta-6-money-stash-locations/",
+     "https://gta6collectiblesmap.com/articles/gta-6-hidden-money-locations"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "The Vault secret radio station: scan the poster in The Vault nightclub with WAiNK",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 6,
+    "score": 6.2,
+    "chosen": null,
+    "why_not": "too close to episode 010 (secret radio station via WAiNK posters)",
+    "sources": [
+     "https://everythingedinburgh.com/games/gaming/gta-6-hidden-features/"
+    ]
+   },
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "Hold D-pad up to open WAiNK; hold Circle/B to hang up",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 5,
+    "score": 5.3,
+    "chosen": null,
+    "why_not": "one guide; close to 003",
+    "sources": [
+     "https://www.keengamer.com/articles/guides/gta-6-all-hidden-controls-and-features-ps5-xbox/"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "'$21.6 million in five secret stashes' viral list",
+    "demand": 7,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 1,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "debunked: none confirmed",
+    "sources": [
+     "https://duuro.net/blog/gta-6-secret-stashes"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Gang Panther: a secret legendary animal on the southeast side of the Frampton Islands",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 5,
+    "score": 6.2,
+    "chosen": null,
+    "why_not": "one source for the place",
+    "sources": [
+     "https://pro-gamer.gg/all-snapmatic-animal-locations-gta-6-legendary-animals-bret-clues-rewards-guide/"
+    ]
+   }
+  ]
  }
 ]
