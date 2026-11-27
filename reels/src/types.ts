@@ -731,13 +731,29 @@ export type HangScene = Base & {
   ar?: string;
 };
 
+// Top-down over the water: a pier, a deck with a helipad and a parked helicopter; the rotors spin up
+// at `spinAt`, it lifts at `liftAt` (shadow slides away, downwash rings), a name chip at `nameAt`.
+export type HelipadScene = Base & {
+  type: 'helipad';
+  step: string;
+  label: string;
+  spinAt: number;
+  liftAt: number;
+  nameAt: number;
+  name: string; // e.g. "BUCKINGHAM MAVERICK"
+  nameSub?: string;
+  spinText?: string; // default "ROTORS SPINNING UP"
+  liftText?: string; // default "LIFT OFF"
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

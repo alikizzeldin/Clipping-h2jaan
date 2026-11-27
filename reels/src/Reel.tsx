@@ -42,6 +42,7 @@ import {Snap} from './scenes/Snap';
 import {Garage} from './scenes/Garage';
 import {Scope} from './scenes/Scope';
 import {Hang} from './scenes/Hang';
+import {Helipad} from './scenes/Helipad';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 import {applyLook, look} from './looks/state';
@@ -107,6 +108,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'garage': return <Garage s={s} />;
     case 'scope': return <Scope s={s} />;
     case 'hang': return <Hang s={s} />;
+    case 'helipad': return <Helipad s={s} />;
   }
 };
 
