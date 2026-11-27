@@ -34,7 +34,7 @@ const Runner: React.FC<{x: number; y: number; step: number}> = ({x, y, step}) =>
 const Croc: React.FC<{x: number; y: number; t: number; hit: number}> = ({x, y, t, hit}) => {
   const wag = Math.sin(t / 5) * (1 - hit) * 14;
   return (
-    <svg width={420} height={160} viewBox="0 0 420 160" style={{position: 'absolute', left: x - 400, top: y - 80, filter: 'blur(1px)', overflow: 'visible'}}>
+    <svg width={630} height={240} viewBox="0 0 420 160" style={{position: 'absolute', left: x - 600, top: y - 120, filter: 'blur(1px)', overflow: 'visible'}}>
       <g fill="#f4fff6" stroke="#bfffd6" strokeWidth={2} strokeLinejoin="round">
         <path d={`M20 ${80 + wag} Q80 ${76 - wag * 0.5} 150 74 L160 86 Q90 ${90 + wag * 0.4} 20 ${84 + wag} Z`} />
         <path d="M150 66 Q230 56 300 66 Q330 72 340 80 Q330 90 300 94 Q230 104 150 94 Z" />
@@ -67,14 +67,14 @@ export const Scope: React.FC<{s: ScopeScene}> = ({s}) => {
   const ft = Math.min(frame, shotAt);
   const kick = shot ? Math.max(0, 1 - (frame - shotAt) / 10) * 46 : 0;
   // the runner zig-zags across the lens (the crocodile glides slowly left to right)
-  const tx = croc ? LX - 20 + ft * 1.6 : LX - 220 + ((frame * 4.2) % 460);
+  const tx = croc ? LX + 60 + ft * 1.6 : LX - 220 + ((frame * 4.2) % 460);
   const ty = croc ? LY + 60 + Math.sin(ft / 14) * 10 : LY + 120 + Math.sin(frame / 9) * 30;
   // the crosshair lags behind until it locks
   const lag = locked ? 0 : 26;
   const cx = croc
-    ? (locked ? tx - 66 : tx - 66 - 120 + 40 * Math.sin(frame / 7))
+    ? (locked ? tx - 100 : tx - 100 - 120 + 40 * Math.sin(frame / 7))
     : LX - 220 + (((frame - lag) * 4.2) % 460 + 460) % 460 + (locked ? 0 : 40 * Math.sin(frame / 7));
-  const cy = croc ? (locked ? ty - 10 : ty - 80 + Math.sin(frame / 11) * 50) - kick : (locked ? ty - 70 : LY + 40 + Math.sin(frame / 11) * 60);
+  const cy = croc ? (locked ? ty - 15 : ty - 80 + Math.sin(frame / 11) * 50) - kick : (locked ? ty - 70 : LY + 40 + Math.sin(frame / 11) * 60);
   const tone = locked ? C.red : '#d9ffe6';
   const lockPop = pop(frame, lockAt, 9, 0.5, 240);
   const dog = pop(frame, dogAt, 10, 0.5, 220);

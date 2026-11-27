@@ -3,6 +3,38 @@
  "entries": [
   {
    "date": "2026-11-27",
+   "episode": "031-legendary-croc",
+   "scene": "quality",
+   "variant": "three-tier condition gauge, needle sweeps to the named top tier, buyer chip, price counter rolls up",
+   "new": true,
+   "note": "new scene type 'quality': a dark radial vignette over the footage, an arc gauge in grey/brass/gold tiers with tick marks, only the top tier named (PRISTINE, with a leader line); the needle wobbles low then sweeps up and settles on its cue; a white buyer chip (BRET PAYS) pops, then a gold price counter rolls up to the top figure over countFor seconds and lands with a flash"
+  },
+  {
+   "date": "2026-11-27",
+   "episode": "031-legendary-croc",
+   "scene": "scope",
+   "variant": "croc in the lens: a white-hot crocodile glides at the surface, lock, round-icon chip, shot with a lens flash and recoil",
+   "new": true,
+   "note": "added optional target 'croc', shotAt and chipIcon 'round' to the scope scene (defaults unchanged); 028 used the running-figure variant"
+  },
+  {
+   "date": "2026-11-27",
+   "episode": "031-legendary-croc",
+   "scene": "location",
+   "variant": "hud",
+   "new": false,
+   "note": "last location episodes used paper + gps (030) and radar (029)"
+  },
+  {
+   "date": "2026-11-27",
+   "episode": "031-legendary-croc",
+   "scene": "redacted",
+   "variant": "typed dossier: bars peel off on cue, highlighter, rubber stamp",
+   "new": false,
+   "note": "HUNTING FILE: species, buyer, WANTED stamp; only m138 used it before"
+  },
+  {
+   "date": "2026-11-27",
    "episode": "030-free-helicopter",
    "scene": "helipad",
    "variant": "top-down pier and helipad, rotors spin up, lift-off",

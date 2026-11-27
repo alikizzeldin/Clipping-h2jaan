@@ -65,7 +65,10 @@ export const Quality: React.FC<{s: QualityScene}> = ({s}) => {
             })}
           </g>
         ))}
-        <text x={GX + Math.cos(Math.PI * 1.8) * (GR + 90)} y={GY + Math.sin(Math.PI * 1.8) * (GR + 90)} textAnchor="middle"
+        {/* the top tier's name sits above the arc's right end, with a short leader line */}
+        <line x1={GX + Math.cos(Math.PI * 1.8) * (GR + 36)} y1={GY + Math.sin(Math.PI * 1.8) * (GR + 36)} x2={930} y2={612}
+          stroke={top ? C.gold : 'rgba(255,255,255,0.5)'} strokeWidth={4} />
+        <text x={1010} y={600} textAnchor="end"
           fontFamily="'Black Ops One', Anton, sans-serif" fontSize={46} fill={top ? C.gold : 'rgba(255,255,255,0.6)'}>{s.topLabel}</text>
         {/* the needle */}
         <g transform={`rotate(${deg} ${GX} ${GY})`}>
