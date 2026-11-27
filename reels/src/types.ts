@@ -718,13 +718,26 @@ export type ScopeScene = Base & {
   ar?: string;
 };
 
+// A couch strung up in a tree outside a trailer: a crosshair shoots each rope (the first tips it,
+// the second drops it with dust), a prompt pulses on the couch, then a reward card pops.
+export type HangScene = Base & {
+  type: 'hang';
+  step: string;
+  label: string;
+  shots: {at: number}[]; // two: rope 1, rope 2 (seconds into the scene)
+  sitAt: number; // the prompt appears
+  prompt?: string; // default "SIT"
+  item: {name: string; sub?: string; at: number}; // the reward card (a revolver icon)
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
