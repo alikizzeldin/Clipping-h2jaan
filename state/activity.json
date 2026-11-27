@@ -1,5 +1,10 @@
 [
  {
+  "time": "2026-11-27T09:01:08+00:00",
+  "type": "published",
+  "text": "Published reel “GTA 6 has a secret hunt… and YOU are the prey 🎯”"
+ },
+ {
   "time": "2026-11-26T23:09:43+00:00",
   "type": "info",
   "text": "Live on Instagram: “GTA 6 hides a FREE supercar behind murals 🎨”",
@@ -783,10 +788,5 @@
   "time": "2026-11-20T09:09:55+00:00",
   "type": "learned",
   "text": "Learned: clips from maherco usually get fewer views than the rest"
- },
- {
-  "time": "2026-11-20T09:09:51+00:00",
-  "type": "error",
-  "text": "Buffer could not publish “xQc's craziest GTA 6 moment 🤯 | أقوى لحظة لـ xQc في GTA 6 🤯 #shorts”: The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later."
  }
 ]
