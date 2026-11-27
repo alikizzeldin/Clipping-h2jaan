@@ -2536,5 +2536,111 @@
     "sources": []
    }
   ]
+ },
+ {
+  "date": "2026-11-27",
+  "wake_up": "12:41 UTC",
+  "ideas": [
+   {
+    "format": "SECRET FILE",
+    "idea": "Couch Potato Mustang .357: a unique revolver in a couch hanging from a tree outside a mobile home off Tanglewood Lane, Port Gellhorn; shoot the ropes to drop the couch, sit on it, and the gun is added to your arsenal (free-roam pickup, no mission)",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 8,
+    "confidence": 8,
+    "score": 7.3,
+    "chosen": "029-couch-revolver",
+    "why_not": null,
+    "sources": [
+     "https://www.gtabase.com/gta-6/weapons/couch-potato-mustang-357",
+     "https://www.keengamer.com/articles/guides/gta-6-all-8-legendary-weapon-locations-in-port-gellhorn/",
+     "https://metaforge.app/gta-6/database/weapons/couch-potato-mustang-357",
+     "https://beebom.com/gta-6-legendary-weapons/",
+     "https://www.sportskeeda.com/gta/all-hidden-legendary-weapons-locations-gta-6",
+     "https://games.gg/grand-theft-auto-vi/guides/all-legendary-weapons-locations-in-gta-6/"
+    ],
+    "note": "Not said: stats (fan databases), magazine size, that it can't be bought (some unique variants are sold at Ammu-Nation)."
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Conspiracist Type 9 SMG in an underground armory under a Balsero mobile home",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 5,
+    "score": 6.5,
+    "chosen": null,
+    "why_not": "one source",
+    "sources": [
+     "https://www.gtabase.com/gta-6/weapons/conspiracist-type-9"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Turnt Nipper .38 on a crashed paratrike stuck in a tree at the northern tip of Bobcat Bay",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 5,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "wording differs between guides (paratrike vs paraglider)",
+    "sources": [
+     "https://www.keengamer.com/articles/guides/gta-6-best-early-game-unique-weapon-locations/"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "Biggest single side-job payouts: Billy's Mall Rats and Pilot Pete's first job ($12,000 each)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.0,
+    "chosen": null,
+    "why_not": "one source",
+    "sources": [
+     "https://lootmapped.com/gta-6/walkthrough/side-missions/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Charred Toros: a gold rare car in La Perle",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 6,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "details differ",
+    "sources": []
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "A Leonida-shaped painting in GTA Online (pre-launch Reddit find)",
+    "demand": 5,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 3,
+    "visual": 4,
+    "confidence": 5,
+    "score": 4.3,
+    "chosen": null,
+    "why_not": "old, pre-launch",
+    "sources": [
+     "https://techradar.com/gaming/gta-6-fans-waiting-for-trailer-3-are-convinced-theyve-spotted-an-easter-egg-in-gta-online-referencing-the-games-map"
+    ]
+   }
+  ]
  }
 ]
