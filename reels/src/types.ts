@@ -704,13 +704,27 @@ export type GarageScene = Base & {
   ar?: string;
 };
 
+// Through a hunter's rifle scope: a round night-vision lens over the footage, a white-hot figure
+// running across it, the crosshair drifting after it until it locks (seconds into the scene).
+export type ScopeScene = Base & {
+  type: 'scope';
+  step: string;
+  label: string;
+  lockAt: number; // the crosshair locks on, red, with the lock text
+  lockText?: string; // default "TARGET: YOU"
+  dogAt?: number; // a chip below the lens
+  dogText?: string; // default "+ TRACKING DOG"
+  zoom?: string; // the small readout (default "ZOOM 8×")
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

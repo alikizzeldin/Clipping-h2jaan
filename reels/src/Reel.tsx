@@ -40,6 +40,7 @@ import {Storm} from './scenes/Storm';
 import {Choice} from './scenes/Choice';
 import {Snap} from './scenes/Snap';
 import {Garage} from './scenes/Garage';
+import {Scope} from './scenes/Scope';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 import {applyLook, look} from './looks/state';
@@ -103,6 +104,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'choice': return <Choice s={s} />;
     case 'snap': return <Snap s={s} />;
     case 'garage': return <Garage s={s} />;
+    case 'scope': return <Scope s={s} />;
   }
 };
 
