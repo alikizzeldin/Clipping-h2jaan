@@ -3,6 +3,22 @@
  "entries": [
   {
    "date": "2026-11-27",
+   "episode": "029-couch-revolver",
+   "scene": "hang",
+   "variant": "couch hung in a tree: crosshair shoots the ropes, it drops, SIT prompt, reward card",
+   "new": true,
+   "note": "new scene type 'hang': dusk yard with a trailer and a tree; a couch sways on two ropes, a red crosshair travels to each rope and fires (muzzle flash): the first tips it onto one rope, the second drops it with dust; a pulsing SIT prompt, then a revolver reward card"
+  },
+  {
+   "date": "2026-11-27",
+   "episode": "029-couch-revolver",
+   "scene": "location",
+   "variant": "radar",
+   "new": false,
+   "note": "last location episodes used hud (028) and gps (027)"
+  },
+  {
+   "date": "2026-11-27",
    "episode": "028-hyde-island-hunt",
    "scene": "scope",
    "variant": "hunter's rifle scope (night-vision lens, running figure, crosshair lock, dog chip)",

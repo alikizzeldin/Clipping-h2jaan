@@ -10,10 +10,10 @@ import {HangScene} from '../types';
 // the first shot tips the couch, the second drops it with a puff of dust. A SIT prompt pulses, then
 // the reward card pops (e.g. a unique revolver).
 
-const GROUND = 1170;
-const BRANCH_Y = 520;
+const GROUND = 1240;
+const BRANCH_Y = 650;
 const ROPES = [400, 660];
-const COUCH = {w: 380, h: 170, top: 760};
+const COUCH = {w: 380, h: 170, top: 890};
 
 const Couch: React.FC = () => (
   <svg width={COUCH.w} height={COUCH.h} viewBox="0 0 380 170">
@@ -84,7 +84,7 @@ export const Hang: React.FC<{s: HangScene}> = ({s}) => {
           {/* the tree */}
           <path d={`M860 ${GROUND} L850 ${BRANCH_Y + 40} L900 ${BRANCH_Y - 120} L940 ${BRANCH_Y + 40} L930 ${GROUND} Z`} fill="#3b2a1c" stroke="#1d140c" strokeWidth={4} />
           <path d={`M880 ${BRANCH_Y + 20} Q620 ${BRANCH_Y - 20} 300 ${BRANCH_Y + 10} L300 ${BRANCH_Y + 34} Q620 ${BRANCH_Y + 10} 880 ${BRANCH_Y + 56} Z`} fill="#3b2a1c" stroke="#1d140c" strokeWidth={4} />
-          {[[880, 360, 150], [720, 400, 130], [560, 420, 120], [980, 470, 110], [420, 440, 100], [800, 300, 110]].map(([x, y, r], i) => (
+          {[[880, 490, 150], [720, 530, 130], [560, 550, 120], [980, 600, 110], [420, 570, 100], [800, 430, 110]].map(([x, y, r], i) => (
             <circle key={i} cx={x} cy={y} r={r} fill={i % 2 ? '#1f3a24' : '#27462b'} opacity={0.95} />
           ))}
           <rect x={0} y={GROUND} width={1080} height={120} fill="#1c1812" />
@@ -132,7 +132,7 @@ export const Hang: React.FC<{s: HangScene}> = ({s}) => {
       </div>
       {/* the reward card */}
       {frame >= itemAt ? (
-        <div style={{position: 'absolute', left: 90, right: 90, top: 1196, display: 'flex', alignItems: 'center', gap: 22, padding: '16px 26px', borderRadius: 18,
+        <div style={{position: 'absolute', left: 90, right: 90, top: 1262, display: 'flex', alignItems: 'center', gap: 22, padding: '12px 26px', borderRadius: 18,
           background: 'rgba(8,8,10,0.9)', border: `4px solid ${C.gold}`, boxShadow: `0 0 40px ${C.gold}66`, transform: `scale(${item})`}}>
           <Revolver color={C.gold} />
           <div style={{display: 'flex', flexDirection: 'column', gap: 6}}>
@@ -144,7 +144,7 @@ export const Hang: React.FC<{s: HangScene}> = ({s}) => {
       <AbsoluteFill style={{background: '#fff4d6', opacity: flash * 0.35}} />
       <Flash at={s2 + 14} length={6} color="#c8b496" strength={0.3} />
       <StepLabel step={s.step} label={s.label} />
-      <Arabic text={s.ar} delay={16} top={1400} size={50} />
+      <Arabic text={s.ar} delay={16} top={1410} size={50} />
     </AbsoluteFill>
   );
 };
