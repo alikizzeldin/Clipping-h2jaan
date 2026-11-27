@@ -195,3 +195,33 @@ export const RansomCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => 
     </Row>
   );
 };
+
+// Label-maker captions: each word punched into its own strip of glossy plastic tape, raised white
+// letters, notched ends. The word being said is on accent tape and lifts; the rest sit on black tape.
+const DYMO_TAPES = ['#141414', '#1b2a4a', '#141414', '#3a1418'];
+
+export const DymoCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => {
+  const size = look().captions.size ?? 66;
+  const accent = accentOf();
+  const font = look().captions.font ?? "'Space Mono Bold', monospace";
+  return (
+    <Row y={y} enter={enter} gap="16px 14px">
+      {words.map((w, i) => {
+        const on = isActive(w, t);
+        const tape = on ? accent : DYMO_TAPES[i % DYMO_TAPES.length];
+        const ink = on ? look().ink : '#f4f4f0';
+        return (
+          <span key={i} style={{position: 'relative', display: 'inline-block', fontFamily: font, fontSize: size, lineHeight: 1, letterSpacing: '0.08em',
+            textTransform: 'uppercase', padding: '14px 26px 10px', color: ink, background: tape,
+            backgroundImage: 'linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.05) 38%, rgba(0,0,0,0.12) 100%)',
+            textShadow: on ? '0 1px 0 rgba(255,255,255,0.35), 0 -1px 0 rgba(0,0,0,0.35)' : '0 2px 0 rgba(0,0,0,0.65), 0 -1px 0 rgba(255,255,255,0.25)',
+            clipPath: 'polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%)',
+            transform: `rotate(${[-1.6, 1.2, -0.8, 1.8][i % 4]}deg) translateY(${on ? -8 : 0}px) scale(${on ? 1.08 : 1})`,
+            filter: on ? 'drop-shadow(0 12px 0 rgba(0,0,0,0.55))' : 'drop-shadow(0 6px 0 rgba(0,0,0,0.55))'}}>
+            {clean(w)}
+          </span>
+        );
+      })}
+    </Row>
+  );
+};

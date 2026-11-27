@@ -135,15 +135,36 @@ const Pageturn: React.FC<{f: number}> = ({f}) => {
   );
 };
 
-const CUTS: Record<Exclude<CutStyle, 'none'>, React.FC<{f: number}>> = {shutter: Shutter, whip: Whip, glitch: Glitch, iris: Iris, ink: Ink, flash: Flash, tracking: Tracking, pageturn: Pageturn};
+// A crime-scene photographer's cut: a flashbulb pops over the cut and a numbered yellow evidence
+// marker (a little tent) slides up into the corner, then everything fades. `n` is the cut's number.
+const Marker: React.FC<{f: number; n?: number}> = ({f, n = 1}) => {
+  const flash = interpolate(f, [-2, 0, 5], [0, 0.7, 0], clamp);
+  const rise = interpolate(f, [-LEAD, -1], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 3)});
+  const out = interpolate(f, [5, 9], [1, 0], clamp);
+  if (rise <= 0 && flash <= 0) return null;
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{background: '#fffaf0', opacity: flash}} />
+      <div style={{position: 'absolute', left: 70, bottom: 380 - 220 * (1 - rise), width: 230, height: 190, opacity: out}}>
+        <svg width={230} height={190} viewBox="0 0 230 190">
+          <polygon points="20,180 115,14 210,180" fill="#f6c600" stroke="#1a1a1a" strokeWidth={6} strokeLinejoin="round" />
+          <polygon points="115,14 210,180 230,170 132,6" fill="#b48f00" />
+          <text x={115} y={150} textAnchor="middle" fontFamily="'Barlow Condensed ExtraBold', Anton, sans-serif" fontSize={92} fill="#111">{n}</text>
+        </svg>
+      </div>
+    </AbsoluteFill>
+  );
+};
 
-export const CutFx: React.FC<{kind: CutStyle}> = ({kind}) => {
+const CUTS: Record<Exclude<CutStyle, 'none'>, React.FC<{f: number; n?: number}>> = {shutter: Shutter, whip: Whip, glitch: Glitch, iris: Iris, ink: Ink, flash: Flash, tracking: Tracking, pageturn: Pageturn, marker: Marker};
+
+export const CutFx: React.FC<{kind: CutStyle; n?: number}> = ({kind, n}) => {
   const frame = useCurrentFrame();
   if (kind === 'none') return null;
   const Part = CUTS[kind];
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
-      <Part f={frame - LEAD} />
+      <Part f={frame - LEAD} n={n} />
     </AbsoluteFill>
   );
 };

@@ -124,7 +124,7 @@ export const Reel: React.FC<ReelProps> = (props) => {
       {cut !== 'none'
         ? scenes.slice(1).map((s, i) => (
             <Sequence key={`cut${i}`} from={Math.max(0, sec(s.from) - LEAD)} durationInFrames={CUT_LENGTH} name={`cut ${i + 2}`}>
-              <CutFx kind={cut} />
+              <CutFx kind={cut} n={i + 1} />
             </Sequence>
           ))
         : null}
