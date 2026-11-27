@@ -145,7 +145,7 @@ const Marker: React.FC<{f: number; n?: number}> = ({f, n = 1}) => {
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{background: '#fffaf0', opacity: flash}} />
-      <div style={{position: 'absolute', left: 70, bottom: 380 - 220 * (1 - rise), width: 230, height: 190, opacity: out}}>
+      <div style={{position: 'absolute', left: 70, bottom: 600 - 220 * (1 - rise), width: 230, height: 190, opacity: out}}>
         <svg width={230} height={190} viewBox="0 0 230 190">
           <polygon points="20,180 115,14 210,180" fill="#f6c600" stroke="#1a1a1a" strokeWidth={6} strokeLinejoin="round" />
           <polygon points="115,14 210,180 230,170 132,6" fill="#b48f00" />

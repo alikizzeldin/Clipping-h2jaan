@@ -1,0 +1,415 @@
+{
+ "episode": 28,
+ "kind": "easter-egg",
+ "topic": "Hyde Island hunt: explore Hyde Island alone as Jason or Lucia until a tranquilizer dart drops you; you wake in a container with no gear while a hunter with a sniper rifle and a tracking dog hunts you; kill him for the Island-Poacher sniper rifle and cash, die and you lose money",
+ "title": {
+  "en": "GTA 6 has a secret hunt… and YOU are the prey 🎯",
+  "ar": "في GTA 6 صيد سري… وأنت الفريسة 🎯"
+ },
+ "summary": "GTA 6 has a secret hunt, and you're the prey. Go to Hyde Island alone, as Jason or Lucia, and explore. Out of nowhere a tranquilizer dart drops you, and you wake up in a container with no weapons and no gear. Then the hunt starts: a hunter with a sniper rifle and a tracking dog. Die and you lose cash; take him down and you get his Island-Poacher sniper, plus cash.",
+ "summary_ar": "في GTA 6 صيد سري وأنت الفريسة. روح جزيرة هايد لحالك، بجيسون أو لوسيا، واستكشف. فجأة سهم مخدّر يطيّحك، وتصحى داخل حاوية بدون سلاح ولا عدة. بعدها يبدأ الصيد: صياد معه قناصة وكلب تتبّع. إذا متّ تخسر فلوس، وإذا قتلته تاخذ قناصته Island-Poacher وفلوس.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "GTA6EasterEgg",
+  "HydeIsland",
+  "Manhunt",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 8,
+  "fresh": 7,
+  "visual": 7,
+  "confidence": 8,
+  "score": 7.8
+ },
+ "sources": [
+  "https://www.gamespot.com/articles/gta-6-has-a-secret-mission-that-feels-like-hard-target-meets-saw/",
+  "https://www.powerpyx.com/gta-6-hyde-island-kidnapping-easter-egg/",
+  "https://www.dexerto.com/wikis/gta-6/easter-eggs/hyde-island-hunt-easter-egg-manhuntsaw/",
+  "https://thedroidguy.com/gta-6-hyde-island-hunt-1299017"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/8f/clip_01M7X5S5DVDB21E21NCEWJEYNT/playlist.m3u8",
+     "channel": "eray",
+     "start": 23.5,
+     "dur": 4.4,
+     "x": 600
+    }
+   ]
+  },
+  "water": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 57.5,
+     "dur": 4.6,
+     "x": 420
+    }
+   ]
+  },
+  "shack": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 4.6,
+     "dur": 3.5,
+     "x": 560
+    }
+   ]
+  },
+  "dark": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 19.0,
+     "dur": 3.9,
+     "x": 1000
+    }
+   ]
+  },
+  "trees": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/a3/clip_01M7YYEE0WX1G8CCFBMAV1C796/playlist.m3u8",
+     "channel": "viruslivehai",
+     "start": 13.6,
+     "dur": 4.9,
+     "x": 700
+    }
+   ]
+  },
+  "night": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 34.0,
+     "dur": 6.7,
+     "x": 1100
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 56.0,
+     "dur": 3.7,
+     "x": 420
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 98,
+  "seed": 281,
+  "drop": 4.24,
+  "break": 20.56,
+  "back": 24.32,
+  "outro": 27.12
+ },
+ "reel": {
+  "series": "EASTER EGG",
+  "episode": 28,
+  "duration": 30.7,
+  "musicVolume": 0.42,
+  "style": "evidence-locker",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.24,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CASE FILE",
+    "kicker": "GTA 6 HAS A SECRET",
+    "title": [
+     "HUNT"
+    ],
+    "color": "red",
+    "tag": "…and you're the prey.",
+    "tagAt": 2.68,
+    "ar": "في GTA 6 صيد سري… وأنت الفريسة"
+   },
+   {
+    "type": "location",
+    "from": 4.24,
+    "to": 8.72,
+    "style": "hud",
+    "broll": {
+     "src": "water",
+     "grade": "night",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "HYDE ISLAND",
+    "place": "HYDE ISLAND",
+    "target": "GO ALONE",
+    "direction": "EXPLORE",
+    "region": "AS JASON OR LUCIA",
+    "ar": "روح جزيرة هايد لحالك"
+   },
+   {
+    "type": "trigger",
+    "from": 8.72,
+    "to": 12.08,
+    "broll": {
+     "src": "shack",
+     "grade": "night",
+     "zoom": [
+      1.03,
+      1.1
+     ]
+    },
+    "step": "02",
+    "label": "OUT OF NOWHERE",
+    "title": "TRANQ DART",
+    "sub": "IT DROPS YOU",
+    "target": {
+     "x": 540,
+     "y": 900,
+     "w": 520,
+     "h": 640
+    },
+    "contact": "INCOMING",
+    "ar": "فجأة… سهم مخدّر يطيّحك",
+    "tagText": "TRANQUILIZER DART"
+   },
+   {
+    "type": "twist",
+    "from": 12.08,
+    "to": 15.84,
+    "captions": false,
+    "broll": {
+     "src": "dark",
+     "grade": "night",
+     "dim": 0.3,
+     "blur": 4,
+     "zoom": [
+      1.1,
+      1.2
+     ]
+    },
+    "pre": "YOU WAKE UP…",
+    "slamAt": 0.84,
+    "lines": [
+     {
+      "text": "IN A CONTAINER",
+      "at": 0.84,
+      "size": 140
+     },
+     {
+      "text": "NO WEAPONS · NO GEAR",
+      "at": 2.04,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "ar": "تصحى في حاوية… بلا سلاح"
+   },
+   {
+    "type": "scope",
+    "from": 15.84,
+    "to": 20.56,
+    "broll": {
+     "src": "trees",
+     "grade": "night",
+     "dim": 0.15
+    },
+    "step": "03",
+    "label": "THE HUNT",
+    "lockAt": 1.76,
+    "dogAt": 3.36,
+    "ar": "صياد معه قناصة… وكلب تتبّع"
+   },
+   {
+    "type": "reward",
+    "from": 20.56,
+    "to": 27.12,
+    "broll": {
+     "src": "night",
+     "grade": "night",
+     "dim": 0.35,
+     "blur": 3
+    },
+    "later": "DIE = LOSE CASH",
+    "rewardAt": 3.76,
+    "label": "TAKE HIM DOWN",
+    "name": "Island-Poacher",
+    "tier": "SNIPER RIFLE + CASH",
+    "ar": "إذا قتلته… قناصته لك وفلوس"
+   },
+   {
+    "type": "cta",
+    "from": 27.12,
+    "to": 30.7,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "night",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.84,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.18,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.36,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 8.66,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 9.2,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 10.72,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.02,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.92,
+    "volume": 0.55
+   },
+   {
+    "src": "error.wav",
+    "at": 14.12,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 14.88,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.78,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.4,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 16.9,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.6,
+    "volume": 0.6
+   },
+   {
+    "src": "error.wav",
+    "at": 17.62,
+    "volume": 0.35
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.2,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.5,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 22.6,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.32,
+    "volume": 0.65
+   },
+   {
+    "src": "trophy.wav",
+    "at": 24.36,
+    "volume": 0.5
+   },
+   {
+    "src": "cash.wav",
+    "at": 26.0,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 27.06,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 27.14,
+    "volume": 0.5
+   }
+  ]
+ }
+}

@@ -2,6 +2,22 @@
  "about": "One entry per scene that uses a variant or a new design. Studios read it to avoid repeating a variant used by either of the last two episodes with that scene (PLAYBOOK step 6¾).",
  "entries": [
   {
+   "date": "2026-11-27",
+   "episode": "028-hyde-island-hunt",
+   "scene": "scope",
+   "variant": "hunter's rifle scope (night-vision lens, running figure, crosshair lock, dog chip)",
+   "new": true,
+   "note": "new scene type 'scope': a round lens with a night-vision tint over the footage and the rest black; a white-hot figure runs across, the mil-dot reticle drifts after it and locks red with TARGET: YOU; a tracking-dog chip pops below"
+  },
+  {
+   "date": "2026-11-27",
+   "episode": "028-hyde-island-hunt",
+   "scene": "location",
+   "variant": "hud",
+   "new": false,
+   "note": "last location episodes used gps (027) and neon (026)"
+  },
+  {
    "date": "2026-11-26",
    "episode": "027-mural-cheetah",
    "scene": "snap",
