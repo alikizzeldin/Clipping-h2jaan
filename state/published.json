@@ -1953,7 +1953,7 @@
   "reel_030": {
    "video_id": "6b09d600819e60b3bdccae98",
    "via": "buffer",
-   "link": "",
+   "link": "https://www.youtube.com/shorts/mvmvrxdQuPw",
    "title": "GTA 6 hides a FREE helicopter near you 🚁 | هليكوبتر مجانية قريب بيتك في GTA 6 🚁 #shorts",
    "channel": "gta6fied",
    "source": "reel",
@@ -1969,7 +1969,10 @@
    "hook": "reel",
    "instagram": "6b09d60b819e60b3bdccb097",
    "instagram_at": "2026-11-27T19:12:21+00:00",
-   "instagram_title": "GTA 6 hides a FREE helicopter near you 🚁"
+   "instagram_title": "GTA 6 hides a FREE helicopter near you 🚁",
+   "status": "sent",
+   "instagram_status": "sent",
+   "instagram_link": "https://www.instagram.com/reel/DgQZx-dAQUY/"
   },
   "reel_031": {
    "video_id": "6b0a0c5eeada83daa6a712d3",
@@ -1990,7 +1993,11 @@
    "hook": "reel",
    "instagram": "6b0a0c6023fb5b7700fcdeba",
    "instagram_at": "2026-11-27T23:04:11+00:00",
-   "instagram_title": "GTA 6's legendary croc is worth $28,250 🐊"
+   "instagram_title": "GTA 6's legendary croc is worth $28,250 🐊",
+   "status": "error",
+   "error": "The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
+   "instagram_status": "sent",
+   "instagram_link": "https://www.instagram.com/reel/DgQ0X4WRknL/"
   }
  },
  "skipped": {
