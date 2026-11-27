@@ -1917,7 +1917,11 @@
    "hook": "reel",
    "instagram": "6b0946d4e94385a8fd8cba94",
    "instagram_at": "2026-11-27T09:01:19+00:00",
-   "instagram_title": "GTA 6 has a secret hunt… and YOU are the prey 🎯"
+   "instagram_title": "GTA 6 has a secret hunt… and YOU are the prey 🎯",
+   "status": "error",
+   "error": "The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
+   "instagram_status": "sent",
+   "instagram_link": "https://www.instagram.com/reel/DgPT2oxqnYw/"
   }
  },
  "skipped": {
