@@ -1,0 +1,344 @@
+{
+ "episode": 30,
+ "kind": "secret",
+ "topic": "Free early helicopter: a Buckingham Maverick on the helipad at the end of a dock in Southwind, about 2.5 miles from Jason's house in Key Lento (west on the highway through Abismo Key); open gate, ignore the sign; no mission, no guards, no wanted level",
+ "title": {
+  "en": "GTA 6 hides a FREE helicopter near you 🚁",
+  "ar": "هليكوبتر مجانية قريب بيتك في GTA 6 🚁"
+ },
+ "summary": "GTA 6 hides a free helicopter near your house. From Jason's house in Key Lento, drive west on the highway through Abismo Key and cross the long bridges into Southwind. At the docks, walk through the open gate and ignore the sign: at the end of the pier there's a Buckingham Maverick. No mission, no guards, no wanted level. Just take off.",
+ "summary_ar": "في GTA 6 هليكوبتر مجانية قريب بيتك. من بيت جيسون في كي لينتو، سوق غرب على الهايوي عبر أبيسمو كي واقطع الجسور الطويلة لين ساوثويند. عند المرسى ادخل من البوابة المفتوحة وطنّش اللوحة: آخر الرصيف فيه باكنغهام مافريك. بلا مهمة ولا حراس ولا مطاردة. بس طِر.",
+ "keywords": [
+  "GTA6",
+  "GTA6Secrets",
+  "GTA6Helicopter",
+  "GTA6FreeVehicle",
+  "GTA6Tips",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 9,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 6,
+  "visual": 7,
+  "confidence": 8,
+  "score": 7.8
+ },
+ "sources": [
+  "https://www.pcgamer.com/games/grand-theft-auto/gta-6-first-plane-and-helicopter/",
+  "https://readdork.com/features/where-steal-first-plane-helicopter-gta-6",
+  "https://gta6.house/library/vehicles/buckingham-maverick",
+  "https://www.6cheats.com/en/guides/gta-6-first-helicopter-plane-location-early",
+  "https://gamesfuze.com/guides/gta-6-how-to-get-a-helicopter-early/",
+  "https://gta6-japan.com/en/tips/early-helicopter-southwind-maverick/",
+  "https://thebestmods.com/gta-6/helicopter-locations/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7b/clip_01M7VRW5RA71X4HP9C6P4KQ7KT/playlist.m3u8",
+     "channel": "paymoneywubby",
+     "start": 0.0,
+     "dur": 4.5,
+     "x": 700
+    }
+   ]
+  },
+  "drive": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 99.0,
+     "dur": 5.1,
+     "x": 1000
+    }
+   ]
+  },
+  "bridge": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7b/clip_01M7VRW5RA71X4HP9C6P4KQ7KT/playlist.m3u8",
+     "channel": "paymoneywubby",
+     "start": 4.5,
+     "dur": 2.6,
+     "x": 700
+    }
+   ]
+  },
+  "docks": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/09/clip_01M7Q6529T4FAM3XK3FBXA5MJY/playlist.m3u8",
+     "channel": "eray",
+     "start": 57.0,
+     "dur": 3.9,
+     "x": 420
+    }
+   ]
+  },
+  "air": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 9.0,
+     "dur": 7.4,
+     "x": 1000
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7b/clip_01M7VRW5RA71X4HP9C6P4KQ7KT/playlist.m3u8",
+     "channel": "paymoneywubby",
+     "start": 7.0,
+     "dur": 3.8,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 110,
+  "seed": 307,
+  "drop": 4.4,
+  "break": 15.76,
+  "back": 17.28,
+  "outro": 23.04
+ },
+ "reel": {
+  "series": "SECRET FILE",
+  "episode": 30,
+  "duration": 26.7,
+  "musicVolume": 0.42,
+  "style": "evidence-locker",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 4.4,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.2,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "CASE FILE",
+    "kicker": "GTA 6 HIDES A FREE",
+    "title": [
+     "HELICOPTER"
+    ],
+    "color": "gold",
+    "tag": "…near your house.",
+    "tagAt": 2.96,
+    "ar": "هليكوبتر مجانية… قريب بيتك"
+   },
+   {
+    "type": "location",
+    "from": 4.4,
+    "to": 9.44,
+    "style": "paper",
+    "broll": {
+     "src": "drive",
+     "grade": "warm",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "01",
+    "label": "DRIVE WEST",
+    "place": "KEY LENTO",
+    "target": "ABISMO KEY",
+    "direction": "GO WEST",
+    "region": "FROM JASON'S HOUSE",
+    "ar": "من بيت جيسون… سوق غرب"
+   },
+   {
+    "type": "location",
+    "from": 9.44,
+    "to": 11.92,
+    "style": "gps",
+    "broll": {
+     "src": "bridge",
+     "grade": "warm",
+     "dim": 0.3,
+     "zoom": [
+      1.02,
+      1.1
+     ]
+    },
+    "step": "02",
+    "label": "THE BRIDGES",
+    "place": "ABISMO KEY",
+    "target": "SOUTHWIND",
+    "direction": "CROSS",
+    "region": "OVER THE LONG BRIDGES",
+    "ar": "اقطع الجسور لين ساوثويند"
+   },
+   {
+    "type": "trigger",
+    "from": 11.92,
+    "to": 15.76,
+    "broll": {
+     "src": "docks",
+     "grade": "warm",
+     "zoom": [
+      1.03,
+      1.1
+     ],
+     "dim": 0.35
+    },
+    "step": "03",
+    "label": "THE DOCKS",
+    "title": "OPEN GATE",
+    "sub": "IGNORE THE SIGN",
+    "target": {
+     "x": 540,
+     "y": 900,
+     "w": 560,
+     "h": 620
+    },
+    "contact": "OPEN GATE",
+    "tagText": "IGNORE THE SIGN",
+    "ar": "ادخل من البوابة… وطنّش اللوحة"
+   },
+   {
+    "type": "helipad",
+    "from": 15.76,
+    "to": 23.04,
+    "broll": {
+     "src": "air",
+     "grade": "night",
+     "dim": 0.3
+    },
+    "step": "04",
+    "label": "END OF THE PIER",
+    "spinAt": 2.96,
+    "liftAt": 6.04,
+    "nameAt": 1.52,
+    "name": "BUCKINGHAM MAVERICK",
+    "nameSub": "FREE · NO MISSION · NO WANTED LEVEL",
+    "ar": "باكنغهام مافريك… بس طِر"
+   },
+   {
+    "type": "cta",
+    "from": 23.04,
+    "to": 26.7,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW FILE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.84,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 4.34,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 6.96,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 9.38,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 10.24,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.86,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 12.2,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 14.52,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 15.7,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 17.28,
+    "volume": 0.6
+   },
+   {
+    "src": "riser.wav",
+    "at": 18.72,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.8,
+    "volume": 0.65
+   },
+   {
+    "src": "trophy.wav",
+    "at": 21.84,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 22.98,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.06,
+    "volume": 0.5
+   }
+  ]
+ }
+}

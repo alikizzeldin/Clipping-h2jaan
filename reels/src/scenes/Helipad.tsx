@@ -48,7 +48,7 @@ export const Helipad: React.FC<{s: HelipadScene}> = ({s}) => {
   const rot = 6 * t + 0.9 * t * t;
   const blur = interpolate(frame, [spinAt + 8, spinAt + 30], [0, 1], clamp);
   const lift = interpolate(frame, [liftAt, liftAt + 40], [0, 1], {...clamp, easing: (x) => x * x * (3 - 2 * x)});
-  const scale = 0.78 + 0.42 * lift;
+  const scale = 1.12 + 0.4 * lift;
   const card = pop(frame, 3, 13, 0.6, 150);
   const chip = pop(frame, nameAt, 10, 0.5, 220);
   const shake = frame >= spinAt && lift < 0.2 ? (random(`hp${frame}`) - 0.5) * 3 * blur : 0;

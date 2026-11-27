@@ -3,6 +3,30 @@
  "entries": [
   {
    "date": "2026-11-27",
+   "episode": "030-free-helicopter",
+   "scene": "helipad",
+   "variant": "top-down pier and helipad, rotors spin up, lift-off",
+   "new": true,
+   "note": "new scene type 'helipad': water with drifting wave lines, a plank pier to a deck with a yellow H pad and a top-down helicopter; rotors spin up and blur into a disc, then it lifts (grows, shadow slides off, downwash rings ripple); name chip"
+  },
+  {
+   "date": "2026-11-27",
+   "episode": "030-free-helicopter",
+   "scene": "location",
+   "variant": "paper",
+   "new": false,
+   "note": "last location episodes used radar (029) and hud (028)"
+  },
+  {
+   "date": "2026-11-27",
+   "episode": "030-free-helicopter",
+   "scene": "location",
+   "variant": "gps",
+   "new": false,
+   "note": "second map: over the bridges into Southwind"
+  },
+  {
+   "date": "2026-11-27",
    "episode": "029-couch-revolver",
    "scene": "hang",
    "variant": "couch hung in a tree: crosshair shoots the ropes, it drops, SIT prompt, reward card",
