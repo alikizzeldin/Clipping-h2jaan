@@ -2642,5 +2642,108 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-27",
+  "wake_up": "18:41 UTC",
+  "ideas": [
+   {
+    "format": "SECRET FILE",
+    "idea": "Free early helicopter: a Buckingham Maverick on the helipad at the end of a dock in Southwind, about 2.5 miles from Jason's house in Key Lento (west on the highway through Abismo Key); walk through the open gate, ignore the sign; no mission, no guards, no wanted level",
+    "demand": 9,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 8,
+    "score": 7.8,
+    "chosen": "030-free-helicopter",
+    "why_not": null,
+    "sources": [
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6-first-plane-and-helicopter/",
+     "https://readdork.com/features/where-steal-first-plane-helicopter-gta-6",
+     "https://gta6.house/library/vehicles/buckingham-maverick",
+     "https://www.6cheats.com/en/guides/gta-6-first-helicopter-plane-location-early",
+     "https://gamesfuze.com/guides/gta-6-how-to-get-a-helicopter-early/",
+     "https://gta6-japan.com/en/tips/early-helicopter-southwind-maverick/",
+     "https://thebestmods.com/gta-6/helicopter-locations/"
+    ],
+    "note": "Not said: whether it always spawns (guides disagree), the Dodo seaplanes (one guide), the business names near the dock, the other heli east of Hamlet (GameRant/GamerHour describe a different spot)."
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "Launch glitches go viral (flying cars, disappearing characters)",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 6,
+    "score": 5.5,
+    "chosen": null,
+    "why_not": "low payoff; older",
+    "sources": [
+     "https://gulfnews.com/technology/gaming/gta-6-glitches-go-viral-flying-cars-disappearing-characters-and-police-encounter-issues-spark-cyberpunk-2077-comparisons-1.500752989"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "Which properties to buy (garages only?)",
+    "demand": 7,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 3,
+    "score": 5.2,
+    "chosen": null,
+    "why_not": "sources contradict each other",
+    "sources": [
+     "https://gtabase.com/gta-6/properties/"
+    ]
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Conspiracist Type 9 SMG under a Balsero mobile home",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 5,
+    "score": 6.5,
+    "chosen": null,
+    "why_not": "one source",
+    "sources": []
+   },
+   {
+    "format": "SECRET FILE",
+    "idea": "Charred Toros gold car in La Perle",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 6,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "details differ",
+    "sources": []
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Hidden Charges (Chapter 3)",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 5,
+    "confidence": 7,
+    "score": 6.0,
+    "chosen": null,
+    "why_not": "score under 7",
+    "sources": []
+   }
+  ]
  }
 ]
