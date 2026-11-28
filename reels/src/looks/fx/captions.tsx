@@ -225,3 +225,40 @@ export const DymoCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => {
     </Row>
   );
 };
+
+// An 80s arcade marquee: each word in chunky white letters extruded with stacked pixel shadows
+// (magenta then violet). The word being said turns the accent colour and pops up in two hard steps,
+// as sprites do, and a small "+score" floats off it in a pixel font.
+const ARCADE_EXTRUDE = (a: string, b: string) =>
+  [1, 2, 3, 4, 5, 6].map((k) => `${k}px ${k}px 0 ${k <= 3 ? a : b}`).join(', ') + ', 8px 10px 0 rgba(0,0,0,0.6)';
+
+export const ArcadeCaptions: React.FC<CaptionProps> = ({words, t, enter, y}) => {
+  const size = sizeOf(96);
+  const accent = accentOf();
+  return (
+    <Row y={y} enter={enter} gap="12px 34px">
+      {words.map((w, i) => {
+        const on = isActive(w, t);
+        const age = t - (w.start - 0.03);
+        // two hard steps instead of a smooth ease: 1 → 1.06 → 1.1
+        const step = !on ? 1 : age < 0.034 ? 1.06 : 1.1;
+        const lift = on ? Math.min(1, age / 0.5) : 0;
+        return (
+          <span key={i} style={{position: 'relative', display: 'inline-block'}}>
+            <span style={{display: 'inline-block', fontFamily: fontOf(), fontSize: size, lineHeight: 1.05, textTransform: 'uppercase', letterSpacing: '0.02em',
+              color: on ? accent : '#ffffff', textShadow: ARCADE_EXTRUDE(on ? C.pink : C.magenta, on ? '#2a0a3a' : C.teal),
+              transform: `scale(${step}) translateY(${on ? -4 : 0}px)`}}>
+              {clean(w)}
+            </span>
+            {on ? (
+              <span style={{position: 'absolute', left: '50%', top: -16 - 16 * lift, transform: 'translateX(-50%)', fontFamily: "'Press Start 2P', monospace", fontSize: 28,
+                color: C.teal, textShadow: '3px 3px 0 #000', opacity: 1 - lift * 0.7, whiteSpace: 'nowrap'}}>
+                +{(clean(w).replace(/[^\w]/g, '').length || 1) * 10}
+              </span>
+            ) : null}
+          </span>
+        );
+      })}
+    </Row>
+  );
+};

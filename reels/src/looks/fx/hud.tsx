@@ -107,5 +107,43 @@ export const MinimalHud: React.FC<HudProps> = ({series, episode}) => {
   );
 };
 
-export const HUDS: Record<string, React.FC<HudProps>> = {tape: TapeHud, case: CaseHud, ticker: TickerHud, minimal: MinimalHud};
+// An arcade cabinet's score line: 1UP blinking over a running score, the brand as the HI-SCORE
+// holder, the series and episode as the stage, and the reel's progress as a row of pixel blocks.
+export const ArcadeHud: React.FC<HudProps> = ({series, episode}) => {
+  const {frame, enter, progress} = useEnter();
+  const score = String(Math.floor(frame * 4.3) * 10).padStart(6, '0');
+  const blink = Math.floor(frame / 15) % 2 === 0;
+  const px = "'Press Start 2P', monospace";
+  const label: React.CSSProperties = {fontFamily: px, fontSize: 22, color: C.red, letterSpacing: 2};
+  const value: React.CSSProperties = {fontFamily: px, fontSize: 30, color: '#fff', letterSpacing: 2, textShadow: '3px 3px 0 #000'};
+  const blocks = 24;
+  const lit = Math.round(progress * blocks);
+  return (
+    <AbsoluteFill style={{pointerEvents: 'none', opacity: enter}}>
+      {/* a dark band behind the score line, like the cabinet's bezel, so it reads on bright footage */}
+      <div style={{position: 'absolute', top: 0, left: 0, right: 0, height: 300, background: 'linear-gradient(180deg, rgba(10,4,32,0.78) 0%, rgba(10,4,32,0.55) 70%, rgba(10,4,32,0) 100%)'}} />
+      <div style={{position: 'absolute', top: 118, left: 56, right: 56, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start'}}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
+          <div style={{...label, opacity: blink ? 1 : 0}}>1UP</div>
+          <div style={value}>{score}</div>
+        </div>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8}}>
+          <div style={label}>HI-SCORE</div>
+          <div style={{fontFamily: F.brand, fontSize: 36, color: C.gold, letterSpacing: 2, textShadow: `3px 3px 0 ${C.magenta}`}}>GTA6FIED</div>
+        </div>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 10}}>
+          <div style={{...label, color: C.teal}}>STAGE {num(episode)}</div>
+          <div style={{...value, fontSize: 18, color: '#fff'}}>{series}</div>
+        </div>
+      </div>
+      <div style={{position: 'absolute', top: 222, left: 56, right: 56, display: 'flex', gap: 6}}>
+        {Array.from({length: blocks}).map((_, i) => (
+          <div key={i} style={{flex: 1, height: 12, background: i < lit ? (i % 3 === 2 ? C.pink : C.gold) : 'rgba(255,255,255,0.18)'}} />
+        ))}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+export const HUDS: Record<string, React.FC<HudProps>> = {tape: TapeHud, case: CaseHud, ticker: TickerHud, minimal: MinimalHud, arcade: ArcadeHud};
 export const lookHud = () => HUDS[look().hud.style];

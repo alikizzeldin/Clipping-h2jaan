@@ -46,6 +46,17 @@
     "captions: dymo (each word punched in raised white letters on its own strip of glossy label-maker tape with notched ends; the spoken word sits on accent tape and lifts)",
     "cuts: marker (a flashbulb pops over the cut while a numbered yellow evidence tent slides up; Reel.tsx now passes each cut its number)"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "id": "leonida-arcade",
+   "name": "Leonida Arcade",
+   "mood": "An 80s arcade cabinet on a Vice Beach boardwalk: punchy gameplay behind CRT glass, marquee captions extruded in pixels with score pops, a 1UP / HI-SCORE line, and a pixel-block stage wipe on every cut.",
+   "new_code": [
+    "captions: arcade (marquee words extruded with stacked pixel shadows; the spoken word turns yellow, pops up in two hard sprite steps and throws off a small '+score' in a pixel font)",
+    "hud: arcade (1UP blinking over a running score, GTA6FIED as the HI-SCORE holder, STAGE = episode, the reel's progress as a row of pixel blocks, over a dark bezel band)",
+    "cuts: pixels (square pixel blocks in the palette fill the frame in a diagonal sweep, hide the cut, then clear in the same order)"
+   ]
   }
  ],
  "ready": []

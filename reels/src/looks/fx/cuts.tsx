@@ -156,7 +156,33 @@ const Marker: React.FC<{f: number; n?: number}> = ({f, n = 1}) => {
   );
 };
 
-const CUTS: Record<Exclude<CutStyle, 'none'>, React.FC<{f: number; n?: number}>> = {shutter: Shutter, whip: Whip, glitch: Glitch, iris: Iris, ink: Ink, flash: Flash, tracking: Tracking, pageturn: Pageturn, marker: Marker};
+// An arcade stage change: square pixel blocks in the palette colours fill the frame in a diagonal
+// sweep from the top left, hide the cut, then clear in the same order.
+const PX = 120;
+const PCOLS = Math.ceil(1080 / PX);
+const PROWS = Math.ceil(1920 / PX);
+const Pixels: React.FC<{f: number}> = ({f}) => {
+  if (f < -LEAD || f > 9) return null;
+  const colors = [C.magenta, C.pink, C.teal, C.navy];
+  const span = PCOLS + PROWS - 2;
+  const cells: React.ReactNode[] = [];
+  for (let r = 0; r < PROWS; r++) {
+    for (let c = 0; c < PCOLS; c++) {
+      const d = (c + r) / span; // 0 at the top left, 1 at the bottom right
+      const inAt = -LEAD + d * (LEAD - 1);
+      const outAt = 1 + d * 7;
+      if (f < inAt || f >= outAt) continue;
+      const color = colors[Math.floor(random(`px${c}-${r}`) * colors.length)];
+      cells.push(
+        <div key={`${c}-${r}`} style={{position: 'absolute', left: c * PX, top: r * PX, width: PX, height: PX, background: color,
+          boxShadow: 'inset 8px 8px 0 rgba(255,255,255,0.22), inset -8px -8px 0 rgba(0,0,0,0.3)'}} />,
+      );
+    }
+  }
+  return <AbsoluteFill>{cells}</AbsoluteFill>;
+};
+
+const CUTS: Record<Exclude<CutStyle, 'none'>, React.FC<{f: number; n?: number}>> = {shutter: Shutter, whip: Whip, glitch: Glitch, iris: Iris, ink: Ink, flash: Flash, tracking: Tracking, pageturn: Pageturn, marker: Marker, pixels: Pixels};
 
 export const CutFx: React.FC<{kind: CutStyle; n?: number}> = ({kind, n}) => {
   const frame = useCurrentFrame();

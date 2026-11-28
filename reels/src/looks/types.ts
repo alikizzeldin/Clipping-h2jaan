@@ -14,13 +14,13 @@ export type Palette = {
 export type Fonts = {display: string; brand: string; mono: string; arabic: string; hand: string; body: string};
 
 // Caption styles (looks/fx/captions.tsx).
-export type CaptionStyle = 'stroke' | 'box' | 'karaoke' | 'tape' | 'stack' | 'cc' | 'ransom' | 'dymo';
+export type CaptionStyle = 'stroke' | 'box' | 'karaoke' | 'tape' | 'stack' | 'cc' | 'ransom' | 'dymo' | 'arcade';
 // Top bars (looks/fx/hud.tsx).
-export type HudStyle = 'bar' | 'tape' | 'case' | 'ticker' | 'minimal';
+export type HudStyle = 'bar' | 'tape' | 'case' | 'ticker' | 'minimal' | 'arcade';
 // Full-frame finishes, drawn in order over everything (looks/fx/finish.tsx).
 export type FinishFx = 'vignette' | 'scanlines' | 'grain' | 'vhs' | 'halftone' | 'paper' | 'lightleak' | 'dust' | 'crt' | 'bloom';
 // What happens on every cut between scenes (looks/fx/cuts.tsx).
-export type CutStyle = 'none' | 'flash' | 'shutter' | 'whip' | 'glitch' | 'iris' | 'ink' | 'tracking' | 'pageturn' | 'marker';
+export type CutStyle = 'none' | 'flash' | 'shutter' | 'whip' | 'glitch' | 'iris' | 'ink' | 'tracking' | 'pageturn' | 'marker' | 'pixels';
 // How a scene's own content arrives (ui/Pieces.tsx SceneIn).
 export type EnterStyle = 'zoomblur' | 'slide' | 'rise' | 'snap';
 // How big words (hook titles, twists, reveals) are drawn (looks/fx/titles.tsx).

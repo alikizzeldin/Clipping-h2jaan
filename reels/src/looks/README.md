@@ -13,11 +13,11 @@ manual studio's reels and every older episode use it).
 | `fonts` | `display` (big words, captions), `brand` (kickers, top bar, card names), `mono` (labels, chips), `arabic` | the table below |
 | `displayWidth` | letter width of the display font; big words shrink to fit | the table below |
 | `ink` | text on accent chips | dark if the accent is light |
-| `captions` | `style`, `size`, `y`, `font`, `active` (palette slot) | `stroke` `box` `karaoke` `tape` `stack` `cc` `ransom` `dymo` |
-| `hud` | the top bar | `bar` `tape` `case` `ticker` `minimal` |
+| `captions` | `style`, `size`, `y`, `font`, `active` (palette slot) | `stroke` `box` `karaoke` `tape` `stack` `cc` `ransom` `dymo` `arcade` |
+| `hud` | the top bar | `bar` `tape` `case` `ticker` `minimal` `arcade` |
 | `finish` | full-frame overlays, in order | `vignette` `scanlines` `grain` `vhs` `halftone` `paper` `lightleak` `dust` `crt` `bloom` |
 | `grade` | the gameplay's colour: `filter`, `tint`+`blend`+`amount`, `duotone` | CSS |
-| `cut` | an overlay on every cut between scenes | `none` `flash` `shutter` `whip` `glitch` `iris` `ink` `tracking` `pageturn` `marker` |
+| `cut` | an overlay on every cut between scenes | `none` `flash` `shutter` `whip` `glitch` `iris` `ink` `tracking` `pageturn` `marker` `pixels` |
 | `enter` | how a scene's content arrives | `zoomblur` `slide` `rise` `snap` |
 | `title` | how big words are drawn | `glitch` `chrome` `outline` `neon` `print` |
 | `series` | tweaks per format, e.g. `{"GTA 6 NEWS": {hud: {style: 'ticker'}}}` | any of the above |
