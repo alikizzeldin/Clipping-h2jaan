@@ -3,6 +3,38 @@
  "entries": [
   {
    "date": "2026-11-28",
+   "episode": "034-missing-persons-softlock",
+   "scene": "switchwheel",
+   "variant": "lock: side-case card with COMPLETE stamp and chapter chip, character wheel opens, one portrait greys under a padlock, selector bounces red, STORY bar stops",
+   "new": true,
+   "note": "new scene type 'switchwheel' (modes lock / unlock): two silhouette portraits on a dark ring"
+  },
+  {
+   "date": "2026-11-28",
+   "episode": "034-missing-persons-softlock",
+   "scene": "switchwheel",
+   "variant": "unlock: LOAD OLDER MANUAL SAVE bar fills, the portrait gets its colour back and the padlock drops, SWITCH UNLOCKED chip",
+   "new": true,
+   "note": "second mode of the new scene"
+  },
+  {
+   "date": "2026-11-28",
+   "episode": "034-missing-persons-softlock",
+   "scene": "loop",
+   "variant": "ring of 4 nodes with a centre word (PATCH: NO FIX → AUTOSAVE → LOAD → STILL GREY · STUCK)",
+   "new": false,
+   "note": "only 018 used it before"
+  },
+  {
+   "date": "2026-11-28",
+   "episode": "034-missing-persons-softlock",
+   "scene": "saves",
+   "variant": "15 manual + 1 auto slot grid, slot 4 saved",
+   "new": false,
+   "note": "only m108 used it before; '15 manual + 1 autosave' re-checked (IBTimes, GamerFuzion)"
+  },
+  {
+   "date": "2026-11-28",
    "episode": "033-armor-parachute",
    "scene": "loadout",
    "variant": "equip: drawn item wheel, HOLD L1 / R1 chips, WEAPONS→ITEMS tabs, vest slot lights with an equip prompt, blue armor bar over the health bar",

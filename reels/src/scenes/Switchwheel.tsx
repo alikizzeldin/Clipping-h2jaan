@@ -77,7 +77,7 @@ const Lock: React.FC<{s: SwitchwheelScene; frame: number}> = ({s, frame}) => {
   return (
     <>
       {/* the side-case card */}
-      <div style={{position: 'absolute', left: 90, right: 90, top: 380, height: 190, borderRadius: 18, background: 'rgba(10,10,16,0.88)', border: '3px solid rgba(255,255,255,0.22)',
+      <div style={{position: 'absolute', left: 90, right: 90, top: 380, height: 240, borderRadius: 18, background: 'rgba(10,10,16,0.88)', border: '3px solid rgba(255,255,255,0.22)',
         padding: '22px 30px', transform: `scale(${card})`, opacity: Math.min(1, card * 1.4), boxShadow: '0 24px 60px rgba(0,0,0,0.5)'}}>
         <div style={{fontFamily: F.mono, fontSize: 26, letterSpacing: 5, color: C.gold}}>{s.caseLabel ?? 'SIDE CASE'}</div>
         <div style={{marginTop: 10, fontFamily: F.display, fontSize: 84, lineHeight: 1, color: '#fff', letterSpacing: 2}}>{s.caseTitle}</div>
@@ -86,7 +86,7 @@ const Lock: React.FC<{s: SwitchwheelScene; frame: number}> = ({s, frame}) => {
             borderRadius: 10, transform: `scale(${chip})`}}>{s.chapter ?? 'CHAPTER 3'}</div>
         ) : null}
         {frame >= doneAt ? (
-          <div style={{position: 'absolute', right: 40, bottom: 18, fontFamily: F.display, fontSize: 58, letterSpacing: 3, color: C.green, border: `5px solid ${C.green}`, padding: '0 16px',
+          <div style={{position: 'absolute', right: 36, bottom: 14, fontFamily: F.display, fontSize: 58, letterSpacing: 3, color: C.green, border: `5px solid ${C.green}`, padding: '0 16px',
             borderRadius: 10, transform: `rotate(-8deg) scale(${2.2 - 1.2 * stamp})`, opacity: Math.min(1, stamp * 1.6)}}>{s.doneText ?? 'COMPLETE'}</div>
         ) : null}
       </div>

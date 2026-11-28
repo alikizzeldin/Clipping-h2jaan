@@ -1,0 +1,377 @@
+{
+ "episode": 34,
+ "kind": "missable",
+ "topic": "Chapter 3 softlock: finishing the side case 'Missing Persons' early in Chapter 3 can leave Jason greyed out on the character wheel; the first patch did not fix it and the autosave can trap you; make a manual save in a new slot first, or load an older manual save",
+ "title": {
+  "en": "Don't finish this GTA 6 side case early 🔒",
+  "ar": "لا تخلّصها بدري في GTA 6 🔒"
+ },
+ "summary": "Don't finish this GTA 6 side case too early. It's called Missing Persons: finish it early in Chapter 3 and Jason can turn grey on the character wheel, so you can't switch and the story stops. The first patch didn't fix it, and the autosave can lock you right back in. Before you start it, make a manual save in a new slot. Already stuck? Load an older manual save.",
+ "summary_ar": "لا تخلّص هالمهمة الجانبية بدري في GTA 6. اسمها Missing Persons: لو خلصتها بدري في الفصل الثالث ممكن جيسون يصير رمادي في عجلة الشخصيات، فما تقدر تبدّل والقصة توقف. أول باتش ما صلّحها، والحفظ التلقائي ممكن يرجعك للمشكلة. قبل ما تبدأها، سوّ حفظ يدوي في خانة جديدة. وإذا علقت؟ حمّل حفظ يدوي أقدم.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Glitch",
+  "GTA6Chapter3",
+  "GTA6Save",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 8,
+  "retention": 7,
+  "fresh": 6,
+  "visual": 6,
+  "confidence": 7,
+  "score": 7.3
+ },
+ "sources": [
+  "https://www.gamingbible.com/news/gta-6-missing-persons-softlock-glitch-838670-20261123",
+  "https://gta6bugs.com/bugs/gta-6-chapter-3-jason-greyed-out-softlock-after-missing-persons",
+  "https://rockstarreport.com/news/gta-6-jason-softlock-first-patch",
+  "https://leonidahub.org/en/news/known-gta-6-bugs-and-how-to-fix-them-the-chapter-3-soft-lock-error-ce-108255-1-and-what-patch-01-002-002-fixed",
+  "https://gtacheatsheet.com/gta-6/fixes/gta-6-jason-greyed-out-cant-switch-chapter-3-missing-persons",
+  "https://happygamer.com/gta-6-missing-persons-softlock-jason-greyed-out-181328/",
+  "https://www.player.one/gta-6-softlock-bug-prevents-players-finishing-games-main-story-164649"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 0.0,
+     "dur": 3.6,
+     "x": 500
+    }
+   ]
+  },
+  "wheel": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 3.6,
+     "dur": 8.8,
+     "x": 500
+    }
+   ]
+  },
+  "loop": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 9.5,
+     "dur": 4.6,
+     "x": 900
+    }
+   ]
+  },
+  "saves": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 8.6,
+     "dur": 3.9,
+     "x": 500
+    }
+   ]
+  },
+  "unlock": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 12.6,
+     "dur": 3.1,
+     "x": 500
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 16.0,
+     "dur": 3.7,
+     "x": 1000
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 104,
+  "seed": 347,
+  "drop": 3.6,
+  "break": 12.32,
+  "back": 16.88,
+  "outro": 23.68
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "episode": 34,
+  "duration": 27.4,
+  "musicVolume": 0.42,
+  "style": "leonida-arcade",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.6,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.5,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "DON'T FINISH THIS CASE",
+    "title": [
+     "TOO",
+     "EARLY"
+    ],
+    "color": "gold",
+    "ar": "لا تخلّص هالمهمة الجانبية بدري"
+   },
+   {
+    "type": "switchwheel",
+    "from": 3.6,
+    "to": 12.32,
+    "broll": {
+     "src": "wheel",
+     "grade": "warm",
+     "dim": 0.3
+    },
+    "step": "01",
+    "label": "THE BUG",
+    "mode": "lock",
+    "caseTitle": "MISSING PERSONS",
+    "chapter": "CHAPTER 3",
+    "cardAt": 0.08,
+    "doneAt": 1.52,
+    "chapterAt": 2.4,
+    "wheelAt": 3.44,
+    "greyAt": 3.6,
+    "tryAt": 6.32,
+    "stopAt": 7.36,
+    "ar": "جيسون يصير رمادي… وما تقدر تبدّل"
+   },
+   {
+    "type": "loop",
+    "from": 12.32,
+    "to": 16.88,
+    "broll": {
+     "src": "loop",
+     "grade": "night",
+     "dim": 0.35
+    },
+    "step": "02",
+    "label": "THE TRAP",
+    "nodes": [
+     {
+      "text": "PATCH: NO FIX",
+      "at": 0.56
+     },
+     {
+      "text": "AUTOSAVE",
+      "at": 2.08
+     },
+     {
+      "text": "LOAD",
+      "at": 2.92
+     },
+     {
+      "text": "STILL GREY",
+      "at": 3.4
+     }
+    ],
+    "center": "STUCK",
+    "centerAt": 3.84,
+    "ar": "الباتش ما صلّحها… والحفظ التلقائي يرجعك"
+   },
+   {
+    "type": "saves",
+    "from": 16.88,
+    "to": 20.68,
+    "broll": {
+     "src": "saves",
+     "grade": "warm",
+     "dim": 0.35
+    },
+    "step": "03",
+    "label": "SAVE FIRST",
+    "title": "SAVE GAME",
+    "slots": 15,
+    "slot": 3,
+    "countAt": 0.24,
+    "saveAt": 2.16,
+    "usedText": "SAVED",
+    "savedText": "BEFORE THE CASE",
+    "autoText": "can trap you",
+    "ar": "قبل ما تبدأها… احفظ يدوي في خانة جديدة"
+   },
+   {
+    "type": "switchwheel",
+    "from": 20.68,
+    "to": 23.68,
+    "broll": {
+     "src": "unlock",
+     "grade": "warm",
+     "dim": 0.3
+    },
+    "step": "04",
+    "label": "ALREADY STUCK?",
+    "mode": "unlock",
+    "loadAt": 1.0,
+    "fixAt": 2.12,
+    "ar": "علقت؟ حمّل حفظ يدوي أقدم"
+   },
+   {
+    "type": "cta",
+    "from": 23.68,
+    "to": 27.4,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "night",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW STAGE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "error.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 2.32,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.54,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 3.68,
+    "volume": 0.4
+   },
+   {
+    "src": "impact.wav",
+    "at": 5.12,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 6.0,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 7.04,
+    "volume": 0.4
+   },
+   {
+    "src": "scan.wav",
+    "at": 7.3,
+    "volume": 0.3
+   },
+   {
+    "src": "error.wav",
+    "at": 10.2,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 10.96,
+    "volume": 0.5
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 12.26,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 12.88,
+    "volume": 0.35
+   },
+   {
+    "src": "tick.wav",
+    "at": 14.4,
+    "volume": 0.35
+   },
+   {
+    "src": "error.wav",
+    "at": 16.16,
+    "volume": 0.4
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 16.82,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 19.04,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 20.62,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 21.68,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.8,
+    "volume": 0.65
+   },
+   {
+    "src": "trophy.wav",
+    "at": 22.84,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.62,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.7,
+    "volume": 0.5
+   }
+  ]
+ }
+}
