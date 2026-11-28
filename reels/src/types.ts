@@ -767,13 +767,42 @@ export type QualityScene = Base & {
   ar?: string;
 };
 
+// A top-down city map in two blues (times in seconds into the scene).
+// legend: zooms into a block; dark-blue buildings glow with door ticks on `darkAt`, light-blue ones
+// fade with a cross on `lightAt`. door: a round minimap close-up; a white line draws on the doorway
+// on `doorAt`. count: a wall of tiny buildings fills as a counter rolls to `total` (`totalAt`), then
+// some turn dark blue as a second counter rolls to `open` (`openAt`); a big percentage on `pctAt`.
+export type CitymapScene = Base & {
+  type: 'citymap';
+  step: string;
+  label: string;
+  mode: 'legend' | 'door' | 'count';
+  zoomTo?: number;
+  darkAt?: number;
+  darkText?: string; // default "DARK BLUE = ENTER"
+  lightAt?: number;
+  lightText?: string; // default "LIGHT BLUE = SCENERY"
+  doorAt?: number;
+  doorText?: string; // default "WHITE LINE = DOOR"
+  question?: string; // default "HOW MANY CAN YOU ENTER?"
+  totalAt?: number;
+  total?: number;
+  totalLabel?: string;
+  openAt?: number;
+  open?: number;
+  openLabel?: string;
+  pctAt?: number;
+  pct?: string; // default: open / total, rounded
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene | QualityScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene | QualityScene | CitymapScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 

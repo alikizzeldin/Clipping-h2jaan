@@ -44,6 +44,7 @@ import {Scope} from './scenes/Scope';
 import {Hang} from './scenes/Hang';
 import {Helipad} from './scenes/Helipad';
 import {Quality} from './scenes/Quality';
+import {Citymap} from './scenes/Citymap';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 import {applyLook, look} from './looks/state';
@@ -111,6 +112,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'hang': return <Hang s={s} />;
     case 'helipad': return <Helipad s={s} />;
     case 'quality': return <Quality s={s} />;
+    case 'citymap': return <Citymap s={s} />;
   }
 };
 
