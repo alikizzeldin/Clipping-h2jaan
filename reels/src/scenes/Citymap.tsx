@@ -22,9 +22,9 @@ const STREET = '#1d2c48';
 
 // the map card
 const MX = 40;
-const MY = 330;
+const MY = 390;
 const MW = 1000;
-const MH = 900;
+const MH = 850;
 
 type B = {x: number; y: number; w: number; h: number; dark: boolean};
 const buildMap = (): B[] => {
@@ -105,8 +105,8 @@ const Legend: React.FC<{s: CitymapScene; frame: number}> = ({s, frame}) => {
         </svg>
         <div style={{position: 'absolute', left: 22, top: 18, fontFamily: F.mono, fontSize: 24, letterSpacing: 4, color: 'rgba(255,255,255,0.75)'}}>MAP · ZOOM {zoom.toFixed(1)}×</div>
       </div>
-      {dark ? <Chip color={DARK} ink="#fff" text={s.darkText ?? 'DARK BLUE = ENTER'} s={chip1} icon="door" top={MY + MH - 190} /> : null}
-      {light ? <Chip color={LIGHT} ink="#0c1424" text={s.lightText ?? 'LIGHT BLUE = SCENERY'} s={chip2} icon="x" top={MY + MH - 100} /> : null}
+      {dark ? <Chip color={DARK} ink="#fff" text={s.darkText ?? 'DARK BLUE = ENTER'} s={chip1} icon="door" top={MY + MH - 180} /> : null}
+      {light ? <Chip color={LIGHT} ink="#0c1424" text={s.lightText ?? 'LIGHT BLUE = SCENERY'} s={chip2} icon="x" top={MY + MH - 92} /> : null}
     </>
   );
 };
@@ -148,7 +148,7 @@ const Door: React.FC<{s: CitymapScene; frame: number}> = ({s, frame}) => {
           {/* the enterable building */}
           <rect x={bx} y={by} width={bw} height={bh} rx={8} fill={DARK} stroke="rgba(255,255,255,0.25)" strokeWidth={4} />
           {/* the doorway: a white line drawn from the middle out */}
-          <line x1={RX - 70 * line} y1={doorY} x2={RX + 70 * line} y2={doorY} stroke="#fff" strokeWidth={12} strokeLinecap="round" opacity={line > 0 ? pulse : 0}
+          <line x1={RX - 95 * line} y1={doorY} x2={RX + 95 * line} y2={doorY} stroke="#fff" strokeWidth={16} strokeLinecap="round" opacity={line > 0 ? pulse : 0}
             style={{filter: 'drop-shadow(0 0 10px #fff)'}} />
           {/* the player arrow */}
           <g transform={`translate(${RX} ${walk})`}>
@@ -189,8 +189,8 @@ const Count: React.FC<{s: CitymapScene; frame: number}> = ({s, frame}) => {
   const opened = s.open ?? 0;
   const share = total ? opened / total : 0;
   const n = COLS * ROWS;
-  const fill = interpolate(frame, [totalAt, totalAt + 30], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 2)});
-  const lit = interpolate(frame, [openAt, openAt + 36], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 2)});
+  const fill = interpolate(frame, [totalAt, totalAt + Math.max(6, sec(s.totalFor ?? 1))], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 2)});
+  const lit = interpolate(frame, [openAt, openAt + Math.max(6, sec(s.openFor ?? 1.2))], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 2)});
   const q = ease(frame, 2, 12);
   const pct = pop(frame, pctAt, 10, 0.45, 220);
   const shown = Math.floor(fill * n);

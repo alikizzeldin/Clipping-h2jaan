@@ -2,6 +2,30 @@
  "about": "One entry per scene that uses a variant or a new design. Studios read it to avoid repeating a variant used by either of the last two episodes with that scene (PLAYBOOK step 6¾).",
  "entries": [
   {
+   "date": "2026-11-28",
+   "episode": "032-map-blue-buildings",
+   "scene": "citymap",
+   "variant": "legend: two-blue city blocks, zoom, dark-blue glow with door ticks, light-blue fade with crosses, legend chips",
+   "new": true,
+   "note": "new scene type 'citymap' (modes legend / door / count): a top-down city map in the pause map's two blues on a navy street grid"
+  },
+  {
+   "date": "2026-11-28",
+   "episode": "032-map-blue-buildings",
+   "scene": "citymap",
+   "variant": "door: round minimap close-up, player arrow walks up, a white line draws on the doorway",
+   "new": true,
+   "note": "second mode of the new scene"
+  },
+  {
+   "date": "2026-11-28",
+   "episode": "032-map-blue-buildings",
+   "scene": "citymap",
+   "variant": "count: a wall of tiny buildings fills with a rolling counter, some turn dark blue with a second counter, a big percentage stamp",
+   "new": true,
+   "note": "third mode; counters roll over totalFor / openFor seconds so they land with the narrator"
+  },
+  {
    "date": "2026-11-27",
    "episode": "031-legendary-croc",
    "scene": "quality",

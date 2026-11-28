@@ -1,0 +1,310 @@
+{
+ "episode": 32,
+ "kind": "feature",
+ "topic": "The map's colour code: dark-blue buildings can be entered, light-blue ones are scenery; up close the minimap marks the door with a white line. One player counted all 5,588 buildings: 1,563 can be entered, about 28%",
+ "title": {
+  "en": "GTA 6's map has a hidden color code 🏢",
+  "ar": "خريطة GTA 6 فيها كود ألوان سري 🏢"
+ },
+ "summary": "GTA 6's map has a hidden color code. Look closely at any city block: dark blue buildings can be entered, light blue ones are just scenery. Get close and the minimap marks the door with a white line. One player counted all 5,588 buildings in Leonida: 1,563 of them open up, about 28%.",
+ "summary_ar": "خريطة GTA 6 فيها كود ألوان سري. شوف أي بلوك في المدينة: المباني الزرقاء الغامقة تقدر تدخلها، والزرقاء الفاتحة مجرد ديكور. قرّب والخريطة الصغيرة تعلّم الباب بخط أبيض. لاعب عدّ كل مباني ليونيدا، 5,588 مبنى: 1,563 منها تنفتح، تقريبًا 28%.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Map",
+  "GTA6Secrets",
+  "GTA6Hidden",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 7,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 6,
+  "visual": 8,
+  "confidence": 8,
+  "score": 7.2
+ },
+ "sources": [
+  "https://gameriv.com/gta-6-how-to-find-buildings-you-can-enter-using-the-map/",
+  "https://www.redbull.com/gb-en/gta-6-beginners-guide",
+  "https://www.digit.in/features/gaming/gta-6-6-gameplay-tricks-that-can-make-your-time-in-leonida-easier.html",
+  "https://www.pcgamer.com/games/grand-theft-auto/someone-counted-all-5-588-buildings-in-gta-6-and-it-turns-out-you-can-go-inside-28-percent-of-them/",
+  "https://www.tweaktown.com/news/114890/28-percent-of-gta-6-buildings-can-be-entered-according-to-player-findings/index.html",
+  "https://www.notebookcheck.net/GTA-6-Fan-counts-enterable-buildings-results-exceed-wildest-expectations.1459672.0.html",
+  "https://vgtimes.com/gaming-news/175720-gta-6-has-1563-enterable-buildings-nearly-28-of-leonidas-total.html"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 26.0,
+     "dur": 3.3,
+     "x": 760
+    }
+   ]
+  },
+  "map": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/21/clip_01M7YDWGMPGGCFS07SZDEWD473/playlist.m3u8",
+     "channel": "8bit_rusherwow",
+     "start": 62.5,
+     "dur": 7.6,
+     "x": 760
+    }
+   ]
+  },
+  "door": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/93/clip_01M7RP0WZYS0W8VVWWZ4CR5M7B/playlist.m3u8",
+     "channel": "adinross",
+     "start": 17.4,
+     "dur": 3.7,
+     "x": 760
+    }
+   ]
+  },
+  "count": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 6.0,
+     "dur": 11.7,
+     "x": 900
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 18.0,
+     "dur": 3.9,
+     "x": 1000
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "mystery",
+  "bpm": 116,
+  "seed": 319,
+  "drop": 3.28,
+  "break": 14.48,
+  "back": 16.88,
+  "outro": 26.08
+ },
+ "reel": {
+  "series": "HIDDEN FEATURE",
+  "episode": 32,
+  "duration": 29.9,
+  "musicVolume": 0.42,
+  "style": "leonida-arcade",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.28,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "warm",
+     "dim": 0.35,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "MAP INTEL",
+    "kicker": "GTA 6'S MAP HAS A HIDDEN",
+    "title": [
+     "COLOR",
+     "CODE"
+    ],
+    "color": "teal",
+    "ar": "خريطة GTA 6 فيها كود ألوان سري"
+   },
+   {
+    "type": "citymap",
+    "from": 3.28,
+    "to": 10.8,
+    "broll": {
+     "src": "map",
+     "grade": "warm",
+     "dim": 0.3
+    },
+    "step": "01",
+    "label": "READ THE MAP",
+    "mode": "legend",
+    "zoomTo": 1.5,
+    "darkAt": 2.4,
+    "lightAt": 5.28,
+    "ar": "الأزرق الغامق تدخله… والفاتح مجرد ديكور"
+   },
+   {
+    "type": "citymap",
+    "from": 10.8,
+    "to": 14.48,
+    "broll": {
+     "src": "door",
+     "grade": "warm",
+     "dim": 0.3
+    },
+    "step": "02",
+    "label": "GET CLOSE",
+    "mode": "door",
+    "doorAt": 2.56,
+    "ar": "الخط الأبيض على الخريطة = الباب"
+   },
+   {
+    "type": "citymap",
+    "from": 14.48,
+    "to": 26.08,
+    "broll": {
+     "src": "count",
+     "grade": "night",
+     "dim": 0.3
+    },
+    "step": "03",
+    "label": "THE COUNT",
+    "mode": "count",
+    "question": "HOW MANY CAN YOU ENTER?",
+    "totalAt": 2.4,
+    "total": 5588,
+    "totalFor": 3.4,
+    "totalLabel": "FAN COUNT · BUILDINGS",
+    "openAt": 6.8,
+    "open": 1563,
+    "openFor": 2.2,
+    "openLabel": "YOU CAN ENTER",
+    "pctAt": 10.2,
+    "pct": "28%",
+    "ar": "لاعب عدّها: 1,563 من 5,588… تقريبًا 28%"
+   },
+   {
+    "type": "cta",
+    "from": 26.08,
+    "to": 29.9,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "night",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW STAGE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "glitch.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 2.16,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.22,
+    "volume": 0.5
+   },
+   {
+    "src": "scan.wav",
+    "at": 3.5,
+    "volume": 0.3
+   },
+   {
+    "src": "ping.wav",
+    "at": 5.68,
+    "volume": 0.45
+   },
+   {
+    "src": "error.wav",
+    "at": 8.56,
+    "volume": 0.35
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 10.74,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 11.9,
+    "volume": 0.35
+   },
+   {
+    "src": "ping.wav",
+    "at": 13.36,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 14.42,
+    "volume": 0.5
+   },
+   {
+    "src": "riser.wav",
+    "at": 16.88,
+    "volume": 0.35
+   },
+   {
+    "src": "coins.wav",
+    "at": 17.0,
+    "volume": 0.3
+   },
+   {
+    "src": "impact.wav",
+    "at": 21.28,
+    "volume": 0.55
+   },
+   {
+    "src": "tick.wav",
+    "at": 22.84,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 24.68,
+    "volume": 0.7
+   },
+   {
+    "src": "trophy.wav",
+    "at": 24.72,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 26.02,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 26.1,
+    "volume": 0.5
+   }
+  ]
+ }
+}

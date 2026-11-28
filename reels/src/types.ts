@@ -788,9 +788,11 @@ export type CitymapScene = Base & {
   totalAt?: number;
   total?: number;
   totalLabel?: string;
+  totalFor?: number; // seconds the wall fills and the first counter rolls (default 1)
   openAt?: number;
   open?: number;
   openLabel?: string;
+  openFor?: number; // seconds the second counter rolls (default 1.2)
   pctAt?: number;
   pct?: string; // default: open / total, rounded
   ar?: string;
