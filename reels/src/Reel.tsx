@@ -46,6 +46,7 @@ import {Helipad} from './scenes/Helipad';
 import {Quality} from './scenes/Quality';
 import {Citymap} from './scenes/Citymap';
 import {Loadout} from './scenes/Loadout';
+import {Switchwheel} from './scenes/Switchwheel';
 import {Reel as ReelProps, Scene} from './types';
 import {FPS} from './theme';
 import {applyLook, look} from './looks/state';
@@ -115,6 +116,7 @@ const render = (s: Scene, words: ReelProps['words']) => {
     case 'quality': return <Quality s={s} />;
     case 'citymap': return <Citymap s={s} />;
     case 'loadout': return <Loadout s={s} />;
+    case 'switchwheel': return <Switchwheel s={s} />;
   }
 };
 

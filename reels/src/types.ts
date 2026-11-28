@@ -824,13 +824,45 @@ export type LoadoutScene = Base & {
   ar?: string;
 };
 
+// The character switch wheel, drawn (times in seconds into the scene). lock: a side-case card
+// (`cardAt`) with a COMPLETE stamp (`doneAt`) and a chapter chip (`chapterAt`); the wheel opens
+// (`wheelAt`), one portrait greys under a padlock (`greyAt`), the selector bounces off it
+// (`tryAt`), a STORY bar stops (`stopAt`). unlock: a LOAD bar fills (`loadAt`), then the
+// portrait gets its colour back and the padlock drops (`fixAt`).
+export type SwitchwheelScene = Base & {
+  type: 'switchwheel';
+  step: string;
+  label: string;
+  mode: 'lock' | 'unlock';
+  subject?: string; // the portrait that locks (default "JASON")
+  other?: string; // default "LUCIA"
+  caseLabel?: string; // default "SIDE CASE"
+  caseTitle?: string;
+  chapter?: string; // default "CHAPTER 3"
+  doneText?: string; // default "COMPLETE"
+  failText?: string; // default "CAN'T SWITCH"
+  stopText?: string; // default "STOPPED"
+  cardAt?: number;
+  doneAt?: number;
+  chapterAt?: number;
+  wheelAt?: number;
+  greyAt?: number;
+  tryAt?: number;
+  stopAt?: number;
+  loadText?: string; // default "LOAD OLDER MANUAL SAVE"
+  fixText?: string; // default "SWITCH UNLOCKED"
+  loadAt?: number;
+  fixAt?: number;
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene | QualityScene | CitymapScene | LoadoutScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene | QualityScene | CitymapScene | LoadoutScene | SwitchwheelScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
