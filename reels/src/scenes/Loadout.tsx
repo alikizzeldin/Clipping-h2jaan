@@ -152,10 +152,13 @@ const Slot: React.FC<{s: LoadoutScene; frame: number}> = ({s, frame}) => {
   const fan = interpolate(frame, [shareAt, shareAt + 10], [0, 1], {...clamp, easing: (t) => 1 - Math.pow(1 - t, 3)});
   const flip = interpolate(frame, [swapAt, swapAt + 12], [0, 1], {...clamp, easing: (t) => t * t * (3 - 2 * t)});
   const swapped = flip >= 0.5;
-  const chip = pop(frame, shareAt, 10, 0.5, 220);
+  const chipAt = s.chipAt !== undefined ? sec(s.chipAt) : shareAt;
+  const chip = pop(frame, chipAt, 10, 0.5, 220);
   const r2 = pop(frame, swapAt - 8, 9, 0.5, 220);
   const r2Press = interpolate(frame, [swapAt - 2, swapAt, swapAt + 5], [0, 1, 0], clamp);
   const done = pop(frame, doneAt, 10, 0.45, 220);
+  const warnAt = s.warnAt !== undefined ? sec(s.warnAt) : 99999;
+  const warn = pop(frame, warnAt, 10, 0.5, 220);
   const W = 380;
   const front = swapped ? 'chute' : 'vest';
   // the front card turns away (0 → 90°), then the other card turns in (90° → 0)
@@ -173,14 +176,14 @@ const Slot: React.FC<{s: LoadoutScene; frame: number}> = ({s, frame}) => {
       <div style={{position: 'absolute', top: 380, left: 0, right: 0, textAlign: 'center', fontFamily: F.mono, fontSize: 28, letterSpacing: 5, color: 'rgba(255,255,255,0.8)',
         opacity: ease(frame, 4, 14)}}>{s.slotLabel ?? 'ITEMS · BOTTOM-LEFT SLOT'}</div>
       {/* the card behind */}
-      <div style={{position: 'absolute', left: WX - W / 2 + 150 * fan, top: 470 - 30 * fan, transform: `scale(${inn * (0.86)}) rotate(${8 * fan}deg)`, opacity: fan}}>
+      <div style={{position: 'absolute', left: WX - W / 2 + 210 * fan, top: 470 - 20 * fan, transform: `scale(${inn * (0.86)}) rotate(${6 * fan}deg)`, opacity: fan}}>
         {card(front === 'vest' ? 'chute' : 'vest', false)}
       </div>
       {/* the card in front */}
-      <div style={{position: 'absolute', left: WX - W / 2 - 60 * fan, top: 500, transform: `scale(${inn}) perspective(1200px) rotateY(${turn}deg)`}}>
+      <div style={{position: 'absolute', left: WX - W / 2 - 130 * fan, top: 500, transform: `scale(${inn}) perspective(1200px) rotateY(${turn}deg)`}}>
         {card(front, true)}
       </div>
-      {frame >= shareAt ? (
+      {frame >= chipAt ? (
         <div style={{position: 'absolute', top: 930, left: 0, right: 0, display: 'flex', justifyContent: 'center', transform: `scale(${chip})`}}>
           <div style={{fontFamily: F.brand, fontSize: 44, letterSpacing: 3, color: '#0b0b0b', background: C.gold, padding: '10px 30px', borderRadius: 12, boxShadow: '0 10px 0 rgba(0,0,0,0.5)'}}>
             {s.shareText ?? '1 SLOT · ONLY ONE ON'}
@@ -191,6 +194,14 @@ const Slot: React.FC<{s: LoadoutScene; frame: number}> = ({s, frame}) => {
         <div style={{position: 'absolute', top: 1040, left: 0, right: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 18}}>
           <Btn text="R2" s={r2} press={r2Press} />
           <div style={{fontFamily: F.mono, fontSize: 30, letterSpacing: 4, color: '#fff', opacity: r2}}>{s.swapText ?? 'SWAP'}</div>
+        </div>
+      ) : null}
+      {frame >= warnAt && frame < doneAt ? (
+        <div style={{position: 'absolute', top: 1160, left: 0, right: 0, display: 'flex', justifyContent: 'center', transform: `scale(${warn})`}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 16, fontFamily: F.brand, fontSize: 46, letterSpacing: 3, color: '#fff', background: C.red, padding: '10px 30px',
+            borderRadius: 12, boxShadow: '0 10px 0 rgba(0,0,0,0.5)', opacity: 0.75 + 0.25 * Math.sin((frame - warnAt) / 3)}}>
+            <span style={{fontSize: 44}}>⚠</span>{s.warnText ?? 'BEFORE YOU JUMP'}
+          </div>
         </div>
       ) : null}
       {frame >= doneAt ? (

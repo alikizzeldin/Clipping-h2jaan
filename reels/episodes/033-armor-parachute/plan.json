@@ -1,0 +1,280 @@
+{
+ "episode": 33,
+ "kind": "missable",
+ "topic": "Armor and parachute share one item-wheel slot: with the vest on, the chute is off. Hold L1 for the wheel, Items tab, select the vest (a blue bar over health); before a jump press R2 on that slot to swap to the parachute",
+ "title": {
+  "en": "Stop jumping with armor on in GTA 6 🪂",
+  "ar": "لا تنط وأنت لابس الدرع في GTA 6 🪂"
+ },
+ "summary": "Stop jumping with armor on in GTA 6. Hold L1 for the wheel and switch to the Items tab; select the vest and a blue bar shows above your health. But armor and the parachute share the same slot, so only one can be on at a time. Before you leap off a roof or a chopper, press R2 on that slot to swap to the chute. Then jump.",
+ "summary_ar": "لا تنط وأنت لابس الدرع في GTA 6. اضغط مطوّل على L1 للعجلة وروح لتبويب Items؛ اختار السترة ويطلع لك شريط أزرق فوق الصحة. بس الدرع والباراشوت يتشاركون نفس الخانة، يعني واحد بس يشتغل. قبل ما تنط من سطح أو هليكوبتر، اضغط R2 على الخانة عشان تبدّل للباراشوت. بعدها نط.",
+ "keywords": [
+  "GTA6",
+  "GTA6Tips",
+  "GTA6Parachute",
+  "GTA6Armor",
+  "GTA6Hidden",
+  "GTAVI",
+  "Rockstar",
+  "PS5",
+  "قراند6",
+  "جي_تي_اي_6"
+ ],
+ "rating": {
+  "demand": 8,
+  "payoff": 7,
+  "retention": 7,
+  "fresh": 6,
+  "visual": 8,
+  "confidence": 8,
+  "score": 7.4
+ },
+ "sources": [
+  "https://www.powerpyx.com/gta-6-how-to-equip-body-armor/",
+  "https://game8.co/games/GTA-6/archives/637166",
+  "https://allthings.how/gta-6-body-armor-how-to-equip-take-off-buy/",
+  "https://beebom.com/gta-6-parachute-guide/",
+  "https://www.theclick.gg/?p=119126",
+  "https://www.dexerto.com/wikis/gta-6/equipment/parachute-bag/",
+  "https://www.pcgamer.com/games/grand-theft-auto/gta-6-parachute-how-to-get/"
+ ],
+ "footage": {
+  "hook": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 21.0,
+     "dur": 3.12,
+     "x": 760
+    }
+   ]
+  },
+  "wheel": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 0.0,
+     "dur": 8.32,
+     "x": 700
+    }
+   ]
+  },
+  "slot": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7c/clip_01M7XRSJ2ZSJY4HAQHF3M4EY55/playlist.m3u8",
+     "channel": "xqc",
+     "start": 8.4,
+     "dur": 12.0,
+     "x": 900
+    }
+   ]
+  },
+  "outro": {
+   "parts": [
+    {
+     "url": "https://clips.kick.com/clips/7b/clip_01M7VRW5RA71X4HP9C6P4KQ7KT/playlist.m3u8",
+     "channel": "paymoneywubby",
+     "start": 0.0,
+     "dur": 3.9,
+     "x": 700
+    }
+   ]
+  }
+ },
+ "stills": {},
+ "music": {
+  "style": "money",
+  "bpm": 108,
+  "seed": 331,
+  "drop": 3.12,
+  "break": 16.64,
+  "back": 19.52,
+  "outro": 23.44
+ },
+ "reel": {
+  "series": "DON'T MISS",
+  "episode": 33,
+  "duration": 27.3,
+  "musicVolume": 0.42,
+  "style": "leonida-arcade",
+  "scenes": [
+   {
+    "type": "hook",
+    "from": 0,
+    "to": 3.12,
+    "captions": false,
+    "broll": {
+     "src": "hook",
+     "grade": "night",
+     "dim": 0.3,
+     "zoom": [
+      1.05,
+      1.2
+     ]
+    },
+    "stamp": "WARNING",
+    "kicker": "STOP JUMPING WITH",
+    "title": [
+     "ARMOR",
+     "ON"
+    ],
+    "color": "red",
+    "ar": "لا تنط وأنت لابس الدرع"
+   },
+   {
+    "type": "loadout",
+    "from": 3.12,
+    "to": 11.44,
+    "broll": {
+     "src": "wheel",
+     "grade": "night",
+     "dim": 0.3
+    },
+    "step": "01",
+    "label": "PUT IT ON",
+    "mode": "equip",
+    "openAt": 1.2,
+    "tabAt": 3.2,
+    "pickAt": 4.88,
+    "barAt": 6.16,
+    "ar": "افتح العجلة… وروح لتبويب الأغراض"
+   },
+   {
+    "type": "loadout",
+    "from": 11.44,
+    "to": 23.44,
+    "broll": {
+     "src": "slot",
+     "grade": "night",
+     "dim": 0.3
+    },
+    "step": "02",
+    "label": "THE CATCH",
+    "mode": "slot",
+    "shareAt": 0.72,
+    "warnAt": 5.2,
+    "swapAt": 8.08,
+    "swapText": "SWAP TO THE CHUTE",
+    "doneAt": 10.8,
+    "ar": "الدرع والباراشوت في نفس الخانة",
+    "chipAt": 2.96
+   },
+   {
+    "type": "cta",
+    "from": 23.44,
+    "to": 27.3,
+    "captions": false,
+    "broll": {
+     "src": "outro",
+     "grade": "warm",
+     "dim": 0.25
+    },
+    "line1": "A new GTA 6 secret",
+    "line2": "every day",
+    "button": "FOLLOW @GTA6FIED",
+    "ar": "تابعنا… كل يوم سر جديد في GTA 6",
+    "next": "NEW STAGE · TOMORROW"
+   }
+  ],
+  "sfx": [
+   {
+    "src": "impact.wav",
+    "at": 0.0,
+    "volume": 0.55
+   },
+   {
+    "src": "error.wav",
+    "at": 0.1,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 1.12,
+    "volume": 0.6
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 3.06,
+    "volume": 0.5
+   },
+   {
+    "src": "tick.wav",
+    "at": 4.2,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 6.2,
+    "volume": 0.4
+   },
+   {
+    "src": "ping.wav",
+    "at": 8.0,
+    "volume": 0.45
+   },
+   {
+    "src": "scan.wav",
+    "at": 9.28,
+    "volume": 0.3
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 11.38,
+    "volume": 0.5
+   },
+   {
+    "src": "impact.wav",
+    "at": 12.16,
+    "volume": 0.5
+   },
+   {
+    "src": "ping.wav",
+    "at": 14.4,
+    "volume": 0.4
+   },
+   {
+    "src": "error.wav",
+    "at": 16.64,
+    "volume": 0.4
+   },
+   {
+    "src": "tick.wav",
+    "at": 19.3,
+    "volume": 0.45
+   },
+   {
+    "src": "impact.wav",
+    "at": 19.52,
+    "volume": 0.6
+   },
+   {
+    "src": "riser.wav",
+    "at": 20.2,
+    "volume": 0.35
+   },
+   {
+    "src": "impact.wav",
+    "at": 22.24,
+    "volume": 0.7
+   },
+   {
+    "src": "trophy.wav",
+    "at": 22.3,
+    "volume": 0.45
+   },
+   {
+    "src": "whoosh.wav",
+    "at": 23.38,
+    "volume": 0.55
+   },
+   {
+    "src": "impact.wav",
+    "at": 23.46,
+    "volume": 0.5
+   }
+  ]
+ }
+}

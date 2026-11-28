@@ -814,8 +814,11 @@ export type LoadoutScene = Base & {
   slotLabel?: string; // default "ITEMS · BOTTOM-LEFT SLOT"
   shareAt?: number;
   shareText?: string; // default "1 SLOT · ONLY ONE ON"
+  chipAt?: number; // when that chip pops (default shareAt)
   swapAt?: number;
   swapText?: string; // default "SWAP"
+  warnAt?: number; // a red warning banner until doneAt
+  warnText?: string; // default "BEFORE YOU JUMP"
   doneAt?: number;
   doneText?: string; // default "NOW JUMP"
   ar?: string;

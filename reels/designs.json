@@ -3,6 +3,22 @@
  "entries": [
   {
    "date": "2026-11-28",
+   "episode": "033-armor-parachute",
+   "scene": "loadout",
+   "variant": "equip: drawn item wheel, HOLD L1 / R1 chips, WEAPONS→ITEMS tabs, vest slot lights with an equip prompt, blue armor bar over the health bar",
+   "new": true,
+   "note": "new scene type 'loadout' (modes equip / slot)"
+  },
+  {
+   "date": "2026-11-28",
+   "episode": "033-armor-parachute",
+   "scene": "loadout",
+   "variant": "slot: one slot close up, vest card with a parachute card fanned behind, '1 SLOT' chip, red warning, R2 press flips the cards (3D turn), NOW JUMP stamp",
+   "new": true,
+   "note": "second mode of the new scene; card flip checked in a real video render"
+  },
+  {
+   "date": "2026-11-28",
    "episode": "032-map-blue-buildings",
    "scene": "citymap",
    "variant": "legend: two-blue city blocks, zoom, dark-blue glow with door ticks, light-blue fade with crosses, legend chips",
