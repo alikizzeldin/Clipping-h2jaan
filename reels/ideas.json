@@ -3158,5 +3158,117 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-28",
+  "wake_up": "18:41 UTC",
+  "ideas": [
+   {
+    "format": "DON'T MISS",
+    "idea": "Chapter 3 softlock: finishing the side case 'Missing Persons' early in Chapter 3 can leave Jason greyed out on the character wheel (no switching, story stuck); the Nov 23 patch did not fix it; the autosave can load you back into it; make a manual save in a new slot before starting it; if stuck, load an older manual save",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 7,
+    "score": 7.3,
+    "chosen": "034-missing-persons-softlock",
+    "why_not": null,
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-missing-persons-softlock-glitch-838670-20261123",
+     "https://gta6bugs.com/bugs/gta-6-chapter-3-jason-greyed-out-softlock-after-missing-persons",
+     "https://rockstarreport.com/news/gta-6-jason-softlock-first-patch",
+     "https://leonidahub.org/en/news/known-gta-6-bugs-and-how-to-fix-them-the-chapter-3-soft-lock-error-ce-108255-1-and-what-patch-01-002-002-fixed",
+     "https://gtacheatsheet.com/gta-6/fixes/gta-6-jason-greyed-out-cant-switch-chapter-3-missing-persons",
+     "https://happygamer.com/gta-6-missing-persons-softlock-jason-greyed-out-181328/",
+     "https://www.player.one/gta-6-softlock-bug-prevents-players-finishing-games-main-story-164649"
+    ],
+    "note": "Not said: where the case starts (sources name Port Gellhorn or Kelly County), the exact trigger state, Dealer's Choice or calling Dunk (less verified), Rockstar Support tickets."
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Toy Story nod: the trunk of the Fast & Furious tribute car in a Vespucci Island villa garage releases a snake ('snake in my boot')",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 7,
+    "score": 6.3,
+    "chosen": null,
+    "why_not": "score 6.3; same spot as the manual studio's m101 and the car's model is disputed",
+    "sources": [
+     "https://insider-gaming.com/paul-walker-gta-6-easter-egg/",
+     "https://criticalhits.com.br/games/gta-6-esconde-carro-de-paul-walker-e-referencia-a-toy-story"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "A second softlock about 72% into the story: Lucia never gets Raul's call during 'Raul's Plan' (do Yasmani's jewelry jobs first)",
+    "demand": 6,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 5,
+    "confidence": 5,
+    "score": 6.1,
+    "chosen": null,
+    "why_not": "confidence 5: one outlet",
+    "sources": [
+     "https://sureno.ai/news/2026-11-27/major-gta-6-glitch-is-locking-players-out-of-finishing-the-story"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "An unofficial GTA 6 PC multiplayer build reportedly runs at 25-30fps",
+    "demand": 6,
+    "payoff": 5,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 4,
+    "score": 5.1,
+    "chosen": null,
+    "why_not": "rumour from one site; the PC port topic is covered",
+    "sources": [
+     "https://emergent.sh/news/gta-6-unofficial-pc-multiplayer-reportedly"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Kraken statue on a sunken ship off Vice City (re-checked)",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 6,
+    "score": 6.7,
+    "chosen": null,
+    "why_not": "confidence 6: location disputed",
+    "sources": [
+     "https://www.dualshockers.com/gta-6-how-to-find-the-kraken/",
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/kraken-easter-egg/"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Mount Chiliad bar conversation (re-checked)",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 7,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "score 6.6",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-gta-5-mount-chiliad-mystery-easter-egg-802897-20261120",
+     "https://gta6bugs.com/easter-eggs/mount-chiliad-bar-talk"
+    ]
+   }
+  ]
  }
 ]
