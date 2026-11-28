@@ -798,13 +798,36 @@ export type CitymapScene = Base & {
   ar?: string;
 };
 
+// A drawn item wheel (times in seconds into the scene). equip: HOLD L1 opens the wheel (`openAt`),
+// R1 flips to ITEMS (`tabAt`), the vest slot lights (`pickAt`), the blue armor bar fills over the
+// health bar (`barAt`). slot: the one slot close up, a vest card with a parachute card behind it;
+// `shareAt` fans them out under a chip, `swapAt` presses R2 and flips them, `doneAt` stamps a line.
+export type LoadoutScene = Base & {
+  type: 'loadout';
+  step: string;
+  label: string;
+  mode: 'equip' | 'slot';
+  openAt?: number;
+  tabAt?: number;
+  pickAt?: number;
+  barAt?: number;
+  slotLabel?: string; // default "ITEMS · BOTTOM-LEFT SLOT"
+  shareAt?: number;
+  shareText?: string; // default "1 SLOT · ONLY ONE ON"
+  swapAt?: number;
+  swapText?: string; // default "SWAP"
+  doneAt?: number;
+  doneText?: string; // default "NOW JUMP"
+  ar?: string;
+};
+
 export type Scene =
   | PhotosScene | ConsolesScene | ChainScene | AppScene | BoostScene | AltScene
   | HookScene | LocationScene | TimeScene | TriggerScene | TwistScene | RewardScene | CtaScene
   | ListScene | PhoneScene | ScanScene | CashScene | ControlScene
   | EraScene | DialScene | StatScene | ComboScene | MenuScene
   | SettingScene | CodeScene | RevealScene | ProofScene | ChatScene | CompareScene | SavesScene | RadarScene | HeadlineScene | HeatScene
-  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene | QualityScene | CitymapScene;
+  | ComicScene | HealthScene | MailboxScene | ProfileScene | CreditsScene | RadioScene | LoopScene | EvidenceScene | ReceiptScene | TrunkScene | RedactedScene | ElevatorScene | PortalScene | SleepScene | VaultScene | WinchScene | HallwayScene | PosterScene | MedalsScene | StormScene | ChoiceScene | SnapScene | GarageScene | ScopeScene | HangScene | HelipadScene | QualityScene | CitymapScene | LoadoutScene;
 
 export type Sfx = {src: string; at: number; volume?: number};
 
