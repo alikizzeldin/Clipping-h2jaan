@@ -2855,5 +2855,192 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-28",
+  "wake_up": "08:41 UTC",
+  "ideas": [
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "The map's colour code: dark-blue buildings can be entered, light-blue ones are scenery; up close the minimap marks the door with a white line. One player (Reddit, Aileos) counted all 5,588 buildings: 1,563 can be entered, about 28%",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 8,
+    "confidence": 8,
+    "score": 7.2,
+    "chosen": "032-map-blue-buildings",
+    "why_not": null,
+    "sources": [
+     "https://gameriv.com/gta-6-how-to-find-buildings-you-can-enter-using-the-map/",
+     "https://www.redbull.com/gb-en/gta-6-beginners-guide",
+     "https://www.digit.in/features/gaming/gta-6-6-gameplay-tricks-that-can-make-your-time-in-leonida-easier.html",
+     "https://www.pcgamer.com/games/grand-theft-auto/someone-counted-all-5-588-buildings-in-gta-6-and-it-turns-out-you-can-go-inside-28-percent-of-them/",
+     "https://www.tweaktown.com/news/114890/28-percent-of-gta-6-buildings-can-be-entered-according-to-player-findings/index.html",
+     "https://www.notebookcheck.net/GTA-6-Fan-counts-enterable-buildings-results-exceed-wildest-expectations.1459672.0.html",
+     "https://vgtimes.com/gaming-news/175720-gta-6-has-1563-enterable-buildings-nearly-28-of-leonidas-total.html"
+    ],
+    "note": "The count is a fan tally, said as 'one player counted'. Not said: that some dark-blue buildings only open a small shop or corridor, mission-only interiors, the 20-building spot check."
+   },
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "Body armour is not on until you equip it from the item wheel (hold L1/LB, R1/RB to Items, X/A); a blue bar appears over health; it shares a slot with the parachute",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 8,
+    "confidence": 8,
+    "score": 7.0,
+    "chosen": null,
+    "why_not": "passes (7.0) but no real payoff at the end; map colours scores higher",
+    "sources": [
+     "https://www.powerpyx.com/gta-6-how-to-equip-body-armor/",
+     "https://game8.co/games/GTA-6/archives/637166",
+     "https://allthings.how/gta-6-body-armor-how-to-equip-take-off-buy/"
+    ],
+    "note": "Guides differ on the wheel controls (toggle vs hold-and-release) and where it is sold."
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "BuckMe account full: the deposit cap only rises with the main story (Rockstar Support); $15,000 at the start, $2,000,000 from Chapter 4",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 7,
+    "score": 6.9,
+    "chosen": null,
+    "why_not": "score 6.9; the middle tiers' triggers are disputed and it sits close to episode 002's money warning",
+    "sources": [
+     "https://support.rockstargames.com/articles/5hSbxodEFeNbU1wARy1p4X/cannot-put-any-more-money-in-my-buckme-account-in-grand-theft-auto-vi",
+     "https://www.sportskeeda.com/esports/gta-6-how-upgrade-buckme-account",
+     "https://gta6.house/guides/gta-6-buckme-limit-increase"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "A Looney Tunes painted tunnel on a solid wall in Vice City's Decor District that drivers crash into (Wile E. Coyote nod)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 9,
+    "confidence": 8,
+    "score": 6.9,
+    "chosen": null,
+    "why_not": "score 6.9; the exact spot comes from one guide and the reveal has no payoff at the end",
+    "sources": [
+     "https://kotaku.com/everyones-getting-trolled-by-gta-6s-looney-toons-tunnel-2001000177",
+     "https://gamerant.com/gta-6-trolling-players-best-way/",
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/looney-tunes-easter-egg/"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "NielsenIQ (Nov 26): GTA VI made about £32m in UK boxed sales in 3 days though the box holds only a download code; UK boxed software up 409%",
+    "demand": 5,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 8,
+    "score": 6.2,
+    "chosen": null,
+    "why_not": "score 6.2; low player interest and close to the covered record launch",
+    "sources": [
+     "https://nielseniq.com/global/en/news-center/2026/gta-vi-sends-uk-games-retail-sales-soaring-99-to-142m-in-launch-week/",
+     "https://www.videogameschronicle.com/news/despite-being-a-code-in-a-box-gta-6s-physical-release-broke-sales-records/",
+     "https://www.thegamebusiness.com/p/no-disc-no-problem-gta-6-is-the-biggest"
+    ]
+   },
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "Stealing a Coil (electric car) locks you in and drives you to the police; smash a window to escape",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 4,
+    "visual": 9,
+    "confidence": 6,
+    "score": 6.8,
+    "chosen": null,
+    "why_not": "confidence 6: all reports trace back to one outlet's test",
+    "sources": [
+     "https://consequence.net/2026/11/gta-6-steal-tesla-coil-car/",
+     "https://vgtimes.com/gaming-news/175559-gta-6s-coil-cars-can-trap-carjackers-and-drive-them-to-the-police.html"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Race Against Yago: a timed Chapter 3 street race (hourglass marker), Freeway Run pays $3,800 and leads to Yago's Elegy",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 7,
+    "score": 6.4,
+    "chosen": null,
+    "why_not": "score 6.4; mostly guide sites, and what missing it costs is disputed",
+    "sources": [
+     "https://www.gtabase.com/gta-6/strangers/race-against-yago",
+     "https://egamers.io/gta-6-race-against-yago-guide-how-to-start-it-the-time-limit-and-the-3800-payout/"
+    ]
+   },
+   {
+    "format": "HIDDEN FEATURE",
+    "idea": "WAiNK scans of hidden style magazines unlock hairstyles and makeup",
+    "demand": 6,
+    "payoff": 6,
+    "retention": 5,
+    "fresh": 6,
+    "visual": 7,
+    "confidence": 6,
+    "score": 5.9,
+    "chosen": null,
+    "why_not": "confidence 6: counts and rewards differ between guides",
+    "sources": [
+     "https://www.notebookcheck.net/GTA-6-Waink-app-unlocks-new-hairstyles-and-makeup-for-Jason-and-Lucia.1458943.0.html",
+     "https://thetab.com/2026/11/24/unlockable-hairstyles-and-four-other-handy-things-you-can-use-the-waink-app-in-gta-6-for"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Vanessa's pink Growler (garage code 92665) is lost after Chapter 3",
+    "demand": 8,
+    "payoff": 8,
+    "retention": 8,
+    "fresh": 5,
+    "visual": 9,
+    "confidence": 8,
+    "score": 7.8,
+    "chosen": null,
+    "why_not": "already made by the manual studio (m102-free-garage-car)",
+    "sources": [
+     "https://www.gtaboom.com/gta-6-vanessas-garage-and-pink-growler-7339",
+     "https://beebom.com/gta-6-vanessas-growler-pink-porsche-location-stats/"
+    ]
+   },
+   {
+    "format": "GTA 6 NEWS",
+    "idea": "Rockstar UK staff vote against IWGB union recognition (75.3% no, Nov 26)",
+    "demand": 4,
+    "payoff": 4,
+    "retention": 4,
+    "fresh": 6,
+    "visual": 4,
+    "confidence": 9,
+    "score": 5.0,
+    "chosen": null,
+    "why_not": "score 4.9; not a gameplay story",
+    "sources": [
+     "https://kotaku.com/rockstar-games-union-vote-fails-as-75-percent-of-devs-vote-no-2001000621",
+     "https://www.gamesradar.com/games/grand-theft-auto/following-gta-6-release-rockstar-workers-vote-against-union-recognition-deal-but-those-in-favor-vow-to-keep-fighting/"
+    ]
+   }
+  ]
  }
 ]
