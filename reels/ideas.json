@@ -3042,5 +3042,121 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-28",
+  "wake_up": "12:41 UTC",
+  "ideas": [
+   {
+    "format": "DON'T MISS",
+    "idea": "Armor and parachute share one item-wheel slot: with the vest on, the chute is off. Hold L1, Items tab, pick the vest (blue bar over health); before a jump press R2 on that slot to swap to the parachute",
+    "demand": 8,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 6,
+    "visual": 8,
+    "confidence": 8,
+    "score": 7.4,
+    "chosen": "033-armor-parachute",
+    "why_not": null,
+    "sources": [
+     "https://www.powerpyx.com/gta-6-how-to-equip-body-armor/",
+     "https://game8.co/games/GTA-6/archives/637166",
+     "https://allthings.how/gta-6-body-armor-how-to-equip-take-off-buy/",
+     "https://beebom.com/gta-6-parachute-guide/",
+     "https://www.theclick.gg/?p=119126",
+     "https://www.dexerto.com/wikis/gta-6/equipment/parachute-bag/",
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6-parachute-how-to-get/"
+    ],
+    "note": "The morning's armour idea, re-rated with the parachute catch as the end payoff. Not said: prices, where the vest is bought, whether shop purchases go to the trunk (guides differ), the exact wheel gesture beyond hold L1 / Items tab."
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "A Kraken statue coiled around a sunken ship on the seabed off Vice City",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 7,
+    "visual": 7,
+    "confidence": 6,
+    "score": 6.7,
+    "chosen": null,
+    "why_not": "confidence 6: guides disagree on the spot (south-east of Gloriana Key vs south of Catalan Bay); no reward",
+    "sources": [
+     "https://www.dualshockers.com/gta-6-how-to-find-the-kraken/",
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/kraken-easter-egg/",
+     "https://gtaculture.com/guides/gta-6-kraken"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Two NPCs in a bar (early Chapter 1) talk about GTA 5's Mount Chiliad mystery: a bunker under the mountain with jetpacks, eggs and aliens",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 6,
+    "confidence": 7,
+    "score": 6.6,
+    "chosen": null,
+    "why_not": "score 6.6; no footage of the bar and no reward at the end",
+    "sources": [
+     "https://www.gamingbible.com/news/gta-6-gta-5-mount-chiliad-mystery-easter-egg-802897-20261120",
+     "https://gta6bugs.com/easter-eggs/mount-chiliad-bar-talk",
+     "https://outputlag.com/guides/gta-6-easter-eggs/"
+    ]
+   },
+   {
+    "format": "DON'T MISS",
+    "idea": "Chapter 1's point of no return is Tourist Trap: finish the Key Lento house jobs first and keep a manual save",
+    "demand": 5,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 5,
+    "visual": 6,
+    "confidence": 6,
+    "score": 5.7,
+    "chosen": null,
+    "why_not": "confidence 6: what is lost is disputed; most players are past Chapter 1",
+    "sources": [
+     "https://www.videogameschronicle.com/guide/gta-6-chapter-1-warning-read-this-before-finishing-chapter-1-of-gta-6/",
+     "https://bloxodes.com/articles/gta-6-missable-trophies-and-missions"
+    ]
+   },
+   {
+    "format": "EASTER EGG",
+    "idea": "Looney Tunes painted tunnel in the Decor District (re-checked)",
+    "demand": 7,
+    "payoff": 6,
+    "retention": 6,
+    "fresh": 6,
+    "visual": 9,
+    "confidence": 8,
+    "score": 6.9,
+    "chosen": null,
+    "why_not": "score 6.9 (no end payoff); kept from the morning",
+    "sources": [
+     "https://kotaku.com/everyones-getting-trolled-by-gta-6s-looney-toons-tunnel-2001000177",
+     "https://www.dexerto.com/wikis/gta-6/easter-eggs/looney-tunes-easter-egg/"
+    ]
+   },
+   {
+    "format": "MONEY FILE",
+    "idea": "BuckMe deposit cap rises only with the story (re-checked)",
+    "demand": 7,
+    "payoff": 7,
+    "retention": 7,
+    "fresh": 7,
+    "visual": 6,
+    "confidence": 7,
+    "score": 6.9,
+    "chosen": null,
+    "why_not": "score 6.9; kept from the morning",
+    "sources": [
+     "https://support.rockstargames.com/articles/5hSbxodEFeNbU1wARy1p4X/cannot-put-any-more-money-in-my-buckme-account-in-grand-theft-auto-vi",
+     "https://www.sportskeeda.com/esports/gta-6-how-upgrade-buckme-account"
+    ]
+   }
+  ]
  }
 ]
