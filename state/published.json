@@ -1535,7 +1535,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgFAHfRiZBO/",
-   "views": 23,
+   "views": 17,
    "likes": 0,
    "comments": 0
   },
@@ -1562,7 +1562,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgFb0imDzIG/",
-   "views": 25,
+   "views": 15,
    "likes": 0,
    "comments": 0
   },
@@ -1665,7 +1665,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgIotjHkyoE/",
-   "views": 57,
+   "views": 52,
    "likes": 0,
    "comments": 0
   },
@@ -1769,7 +1769,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgLPxZ2zVp1/",
-   "views": 57,
+   "views": 38,
    "likes": 1,
    "comments": 0
   },
@@ -1821,8 +1821,8 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgMveqlhHwK/",
-   "views": 1216,
-   "likes": 41,
+   "views": 1061,
+   "likes": 37,
    "comments": 0
   },
   "reel_025": {
@@ -1872,9 +1872,9 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgN0zcOCaCo/",
-   "views": 894,
-   "likes": 11,
-   "comments": 1
+   "views": 0,
+   "likes": 0,
+   "comments": 0
   },
   "reel_027": {
    "video_id": "6b08b98b8899c4e779f61616",
@@ -2004,6 +2004,27 @@
    "error": "The daily posting limit for this channel has been reached! Please try reducing the amount of times per day in your schedule and try again later.",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgQ0X4WRknL/"
+  },
+  "reel_032": {
+   "video_id": "6b0a9b93ae4c52c1cb549ba5",
+   "via": "buffer",
+   "link": "",
+   "title": "GTA 6's map has a hidden color code 🏢 | خريطة GTA 6 فيها كود ألوان سري 🏢 #shorts",
+   "channel": "gta6fied",
+   "source": "reel",
+   "category": "grand-theft-auto-vi",
+   "uploaded_at": "2026-11-28T09:15:00+00:00",
+   "duration": 30,
+   "origin": "reel",
+   "kick_views": 0,
+   "kind": "reel",
+   "episode": 32,
+   "topic": "The map's colour code: dark-blue buildings can be entered, light-blue ones are scenery; up close the minimap marks the door with a white line. One player counted all 5,588 buildings: 1,563 can be entered, about 28%",
+   "rating": 7.2,
+   "hook": "reel",
+   "instagram": "6b0a9b9442da3f93b80196d0",
+   "instagram_at": "2026-11-28T09:15:11+00:00",
+   "instagram_title": "GTA 6's map has a hidden color code 🏢"
   }
  },
  "skipped": {

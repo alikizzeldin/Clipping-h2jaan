@@ -1,18 +1,18 @@
 {
- "updated_at": "2026-11-28T09:09:41+00:00",
- "measured_clips": 34,
+ "updated_at": "2026-11-27T11:09:41+00:00",
+ "measured_clips": 32,
  "needed_clips": 8,
  "rules": [
   {
    "id": "auto-channel-maherco",
    "kind": "channel",
    "target": "maherco",
-   "factor": 0.7,
+   "factor": 0.8,
    "text": "Clips from maherco usually get fewer views than the rest",
    "evidence": {
     "clips": 4,
     "avg_views": 9,
-    "baseline": 13
+    "baseline": 12
    },
    "created_at": "2026-11-26T13:10:38+00:00"
   },
@@ -20,11 +20,11 @@
    "id": "auto-channel-gta6fied",
    "kind": "channel",
    "target": "gta6fied",
-   "factor": 1.6,
+   "factor": 1.4,
    "text": "Clips from gta6fied usually get more views than the rest",
    "evidence": {
-    "clips": 12,
-    "avg_views": 41,
+    "clips": 10,
+    "avg_views": 16,
     "baseline": 12
    },
    "created_at": "2026-11-23T23:09:44+00:00"
@@ -38,7 +38,7 @@
    "evidence": {
     "clips": 23,
     "avg_views": 11,
-    "baseline": 57
+    "baseline": 17
    },
    "created_at": "2026-11-26T13:10:38+00:00"
   },
@@ -46,11 +46,11 @@
    "id": "auto-duration-under-30s",
    "kind": "duration",
    "target": "Under 30s",
-   "factor": 1.6,
+   "factor": 1.5,
    "text": "Clips that are under 30s usually get more views",
    "evidence": {
-    "clips": 11,
-    "avg_views": 57,
+    "clips": 9,
+    "avg_views": 17,
     "baseline": 11
    },
    "created_at": "2026-11-26T13:10:38+00:00"
@@ -77,7 +77,7 @@
    "evidence": {
     "clips": 3,
     "avg_views": 7,
-    "baseline": 14
+    "baseline": 12
    },
    "created_at": "2026-11-24T21:09:05+00:00"
   },
@@ -90,7 +90,7 @@
    "evidence": {
     "clips": 3,
     "avg_views": 7,
-    "baseline": 14
+    "baseline": 12
    },
    "created_at": "2026-11-24T21:09:05+00:00"
   }
