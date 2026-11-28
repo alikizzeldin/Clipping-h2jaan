@@ -1,6 +1,6 @@
 {
  "version": 1,
- "metrics_checked_at": "2026-11-27T11:09:41+00:00",
+ "metrics_checked_at": "2026-11-28T09:09:41+00:00",
  "published": {
   "auto_138529992_1794999955": {
    "video_id": "6afd8ac727a97c2bc6371f9c",
@@ -1535,7 +1535,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgFAHfRiZBO/",
-   "views": 17,
+   "views": 23,
    "likes": 0,
    "comments": 0
   },
@@ -1562,7 +1562,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgFb0imDzIG/",
-   "views": 15,
+   "views": 25,
    "likes": 0,
    "comments": 0
   },
@@ -1665,7 +1665,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgIotjHkyoE/",
-   "views": 52,
+   "views": 57,
    "likes": 0,
    "comments": 0
   },
@@ -1769,7 +1769,7 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgLPxZ2zVp1/",
-   "views": 38,
+   "views": 57,
    "likes": 1,
    "comments": 0
   },
@@ -1821,8 +1821,8 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgMveqlhHwK/",
-   "views": 1061,
-   "likes": 37,
+   "views": 1216,
+   "likes": 41,
    "comments": 0
   },
   "reel_025": {
@@ -1872,9 +1872,9 @@
    "status": "sent",
    "instagram_status": "sent",
    "instagram_link": "https://www.instagram.com/reel/DgN0zcOCaCo/",
-   "views": 0,
-   "likes": 0,
-   "comments": 0
+   "views": 894,
+   "likes": 11,
+   "comments": 1
   },
   "reel_027": {
    "video_id": "6b08b98b8899c4e779f61616",
@@ -1948,7 +1948,10 @@
    "instagram_title": "GTA 6 hid a gun inside a hanging COUCH 🛋️",
    "status": "sent",
    "instagram_status": "sent",
-   "instagram_link": "https://www.instagram.com/reel/DgPu4R8zSO5/"
+   "instagram_link": "https://www.instagram.com/reel/DgPu4R8zSO5/",
+   "views": 1075,
+   "likes": 31,
+   "comments": 1
   },
   "reel_030": {
    "video_id": "6b09d600819e60b3bdccae98",
@@ -1972,7 +1975,10 @@
    "instagram_title": "GTA 6 hides a FREE helicopter near you 🚁",
    "status": "sent",
    "instagram_status": "sent",
-   "instagram_link": "https://www.instagram.com/reel/DgQZx-dAQUY/"
+   "instagram_link": "https://www.instagram.com/reel/DgQZx-dAQUY/",
+   "views": 192,
+   "likes": 2,
+   "comments": 0
   },
   "reel_031": {
    "video_id": "6b0a0c5eeada83daa6a712d3",
